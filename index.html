@@ -170,6 +170,86 @@
             transform: scale(1.03);
         }
 
+        .news-section {
+            padding: clamp(1.75rem, 4vw, 3.5rem) 0;
+        }
+
+        .news-layout {
+            display: grid;
+            grid-template-columns: minmax(7rem, 0.28fr) 1fr;
+            gap: clamp(1.5rem, 5vw, 5rem);
+            align-items: start;
+        }
+
+        .news-heading {
+            font-size: clamp(1.5rem, 3vw, 2.25rem);
+            line-height: 1;
+        }
+
+        .news-list {
+            border-top: 1px solid #D1D5DB;
+        }
+
+        .news-item {
+            display: grid;
+            grid-template-columns: 8rem 6rem minmax(0, 1fr);
+            gap: 1rem;
+            align-items: baseline;
+            padding: 1.25rem 0;
+            border-bottom: 1px solid #D1D5DB;
+        }
+
+        .news-date {
+            font-family: 'Poppins', sans-serif;
+            font-size: 0.875rem;
+            color: #4B5563;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .news-label {
+            justify-self: start;
+            color: var(--accent);
+            border: 1px solid var(--accent);
+            padding: 0.1rem 0.55rem;
+            font-size: 0.75rem;
+            font-weight: 700;
+            line-height: 1.5;
+        }
+
+        .news-title {
+            min-width: 0;
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        #vision, #services, #projects, #news, #contact {
+            scroll-margin-top: 6rem;
+        }
+
+        .mobile-nav summary {
+            list-style: none;
+        }
+
+        .mobile-nav summary::-webkit-details-marker {
+            display: none;
+        }
+
+        @media (max-width: 767px) {
+            .news-layout {
+                grid-template-columns: 1fr;
+                gap: 1.25rem;
+            }
+
+            .news-item {
+                grid-template-columns: auto 1fr;
+                gap: 0.5rem 1rem;
+            }
+
+            .news-title {
+                grid-column: 1 / -1;
+            }
+        }
+
         @media print {
             .section {
                 page-break-inside: avoid;
@@ -187,19 +267,27 @@
                     <span class="en">MOBILITY</span><br>
                     <span class="en">DESIGN LAB</span>
                 </a>
-                <nav class="header-nav hidden md:flex space-x-8 font-medium">
+                <nav class="header-nav hidden md:flex space-x-5 lg:space-x-8 font-medium">
                     <a href="#vision" class="hover:text-gray-900 transition-colors">VISION</a>
                     <a href="#services" class="hover:text-gray-900 transition-colors">SERVICES</a>
                     <a href="#projects" class="hover:text-gray-900 transition-colors">PROJECTS</a>
+                    <a href="#news" class="hover:text-gray-900 transition-colors">NEWS</a>
                     <a href="#contact" class="hover:text-gray-900 transition-colors">CONTACT</a>
                 </nav>
-                <div class="block md:hidden">
-                    <button class="p-2">
+                <details class="mobile-nav relative md:hidden">
+                    <summary class="p-2 cursor-pointer" aria-label="メニューを開く">
                         <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
                         </svg>
-                    </button>
-                </div>
+                    </summary>
+                    <nav class="absolute right-0 mt-3 w-48 bg-white border border-gray-200 shadow-lg py-2 font-medium" aria-label="モバイルメニュー">
+                        <a href="#vision" class="block px-5 py-3 hover:bg-gray-50">VISION</a>
+                        <a href="#services" class="block px-5 py-3 hover:bg-gray-50">SERVICES</a>
+                        <a href="#projects" class="block px-5 py-3 hover:bg-gray-50">PROJECTS</a>
+                        <a href="#news" class="block px-5 py-3 hover:bg-gray-50">NEWS</a>
+                        <a href="#contact" class="block px-5 py-3 hover:bg-gray-50">CONTACT</a>
+                    </nav>
+                </details>
             </div>
         </div>
     </header>
@@ -216,6 +304,22 @@
                 モビリティを活用し、人と人のつながりをデザインすることで、<br class="hidden md:block">
                 地方活性化に貢献する。
             </p>
+        </div>
+    </section>
+
+    <!-- News Section -->
+    <section id="news" class="news-section section-border" aria-labelledby="news-heading">
+        <div class="container-custom">
+            <div class="news-layout">
+                <h2 id="news-heading" class="en news-heading">NEWS</h2>
+                <ul class="news-list" role="list">
+                    <li class="news-item">
+                        <time class="news-date" datetime="2026-08-17">2026.08.17</time>
+                        <span class="news-label">お知らせ</span>
+                        <p class="news-title">サービス紹介のビジュアルを更新しました。</p>
+                    </li>
+                </ul>
+            </div>
         </div>
     </section>
 
