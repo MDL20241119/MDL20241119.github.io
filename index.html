@@ -214,12 +214,43 @@
             font-size: 0.75rem;
             font-weight: 700;
             line-height: 1.5;
+            white-space: nowrap;
         }
 
         .news-title {
             min-width: 0;
             font-size: 1rem;
             line-height: 1.7;
+            line-break: strict;
+            word-break: normal;
+            overflow-wrap: anywhere;
+        }
+
+        .news-link {
+            color: inherit;
+            text-decoration: underline;
+            text-decoration-color: #9CA3AF;
+            text-underline-offset: 0.2em;
+            transition: color 0.2s ease, text-decoration-color 0.2s ease;
+        }
+
+        .news-link:hover {
+            color: var(--accent);
+            text-decoration-color: currentColor;
+        }
+
+        .news-link:focus-visible {
+            outline: 2px solid var(--accent);
+            outline-offset: 4px;
+            border-radius: 2px;
+        }
+
+        .news-arrow {
+            display: inline-block;
+            margin-left: 0.35rem;
+            color: var(--accent);
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
         }
 
         #vision, #services, #projects, #news, #contact {
@@ -314,9 +345,25 @@
                 <h2 id="news-heading" class="en news-heading">NEWS</h2>
                 <ul class="news-list" role="list">
                     <li class="news-item">
-                        <time class="news-date" datetime="2026-08-17">2026.08.17</time>
-                        <span class="news-label">お知らせ</span>
-                        <p class="news-title">サービス紹介のビジュアルを更新しました。</p>
+                        <time class="news-date" datetime="2025-07-29" aria-label="イベント開催日 2025年7月29日">2025.07.29</time>
+                        <span class="news-label">国土交通省</span>
+                        <a class="news-title news-link" href="https://www.mlit.go.jp/commmmons/event/02/" target="_blank" rel="noopener noreferrer" aria-label="不便な未来はなくせるか。エモい移動体験から習い事送迎まで地方の「移動の足」問題を解決するスタートアップたちの挑戦（外部サイトを新しいタブで開きます）">
+                            不便な未来はなくせるか。エモい移動体験から習い事送迎まで地方の「移動の足」問題を解決するスタートアップたちの挑戦<span class="news-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date" datetime="2025-03-28" aria-label="研究会開催日 2025年3月28日">2025.03.28</time>
+                        <span class="news-label">JCoMaaS</span>
+                        <a class="news-title news-link" href="https://www.jcomaas.org/posts/56600898/" target="_blank" rel="noopener noreferrer" aria-label="2025年3月 JCoMaaS 研究会を開催しました（外部サイトを新しいタブで開きます）">
+                            2025年3月 JCoMaaS 研究会を開催しました<span class="news-arrow" aria-hidden="true">↗</span>
+                        </a>
+                    </li>
+                    <li class="news-item">
+                        <time class="news-date" datetime="2025-03-05" aria-label="イベント開催日 2025年3月5日">2025.03.05</time>
+                        <span class="news-label">ReVision</span>
+                        <a class="news-title news-link" href="https://rev-m.com/event_schedule/mo2025/speakers/" target="_blank" rel="noopener noreferrer" aria-label="ReVisionモビリティサミット 2025 登壇者一覧（外部サイトを新しいタブで開きます）">
+                            ReVisionモビリティサミット 2025 登壇者一覧<span class="news-arrow" aria-hidden="true">↗</span>
+                        </a>
                     </li>
                 </ul>
             </div>
