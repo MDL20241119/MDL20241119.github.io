@@ -10,6 +10,12 @@ All application files and datasets are committed in this repository. GitHub Page
 
 The initial transfer preserves the public output of Oita atlas version 7 (source commit `2c9e226d90ed057c6555f7cb8ade44537d1e83c4`) and adds links back to the company site. Public source metadata, analysis qualifications and third-party notices remain in the application. Browser-saved settings from another domain must be exported there and imported here.
 
+## Neo Swiss design
+
+The atlas now carries the Neo Swiss design published in Sites version 8 (source `5871c5c826ac9271a7b8540567954d6e96236aac`). A shared `oita-mobility/assets/neo-swiss.css` theme supplies paper-white surfaces, ruled grids, large collection counts and cyan/pink/yellow tool accents across all five pages. Mobile entry cards and map controls use the same hierarchy. The directory counts describe the current bundled coverage: 199 destinations, 18 municipalities, 15 transport-resource examples and 16 public GTFS files.
+
+GitHub Pages links, contact URLs, privacy disclosures and storage-domain instructions remain specific to `mobilitydlab.com/oita-mobility/`. The existing analytical engines, data, sharing safeguards and source notices are retained. Validation covers local page references, existing element IDs, identical stylesheet delivery and `node tests/publication.mjs`.
+
 ## Public demo positioning
 
 The atlas is presented as a public demo, with its existing functionality and datasets unchanged. Each of the four pages displays the demo label and links to a prefilled email to info@mobilitydlab.com for production-development inquiries. Contact addresses are also visible in the footer. No inquiry is sent or stored by the website; visitors send from their email application. The company NEWS describes the tool as a demo.
