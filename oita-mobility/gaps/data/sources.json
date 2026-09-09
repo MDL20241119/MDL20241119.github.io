@@ -13,7 +13,9 @@
     "projectionForProcessing": "JGD2011 / Japan Plane Rectangular CS II（EPSG:6670）",
     "processing": "市町村コードで統合。表示版は投影座標の数値誤差を1mm単位に揃え、coverage_simplify tolerance=20m、隣接界を共有して簡略化。島・穴の削除なし。未簡略化版も保存。",
     "note": "行政界・海岸線内の区域であり居住地ポリゴンではない。境界確定・測量用途ではない。内水面や山林等を含む。",
-    "archiveSha256": "ffadc50ce908fc97610d3f438a3e06413e5847bd6e8fe2f629b03622c57fde12"
+    "archiveSha256": "ffadc50ce908fc97610d3f438a3e06413e5847bd6e8fe2f629b03622c57fde12",
+    "legalNote": "原典の使用許諾はCC BY 4.0。提供ページには二次利用時に国土地理院への申請等が必要な場合があるとの記載あり。本デモの行政界の加工・公開配布形態について測量法上の手続の要否は未確認。",
+    "legalGuidanceUrl": "https://www.gsi.go.jp/LAW/2930-qa.html"
   },
   "population": {
     "title": "国土数値情報 500mメッシュ別将来推計人口データ（R6国政局推計）・2020年基準人口",

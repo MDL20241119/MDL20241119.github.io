@@ -41,3 +41,6 @@ body.atlas{font-size:16px;line-height:1.8;color:var(--ink);background:var(--pape
 .atlas footer .demo-footer-contact{display:inline-block;margin:8px 0 0 14px;font-size:14px;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
 @media(max-width:700px){.atlas .demo-notice{padding:8px 15px;gap:10px}.atlas .demo-description>span{display:none}.atlas .demo-contact{padding:8px 11px}.atlas footer .demo-footer-contact{display:block;margin:8px 0 0}}
 @media print{.atlas .demo-notice{padding:5px 0;border-bottom:1px solid #999;background:white}.atlas .demo-contact,.atlas .demo-footer-contact{display:none}}
+
+/* Publication information stays reachable on every screen. */
+.atlas footer .usage-footer-link{display:inline-block;margin:8px 0 0 14px;font-size:14px;text-decoration:underline;text-underline-offset:3px}.atlas .privacy-hint{padding:13px 15px;background:#fff8e7;border-left:3px solid #d09312;border-radius:4px 9px 9px 4px;font-size:14px;line-height:1.8}@media(max-width:700px){.atlas footer .usage-footer-link{display:block;margin:8px 0 0}}

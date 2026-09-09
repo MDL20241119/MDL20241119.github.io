@@ -1,0 +1,44 @@
+# 公開管理メモ
+
+点検日：2026年9月9日。対象：MDLのGitHub Pages公開デモ `/oita-mobility/`。
+これはソース・公開資料・配布物の限定的な点検記録です。契約上の権利帰属や、規約適合・法令適合を確定する審査ではありません。
+
+## 確認したこと
+
+- GTFS 16ファイルが属する11カタログと、公共施設4カタログのBODIKメタデータでCC BY 4.0を確認。病院データは厚生労働省のPDL1.0、国土数値情報の行政区域・人口データは個別ページでCC BY 4.0を確認。元ファイルの出典・取得日・ハッシュと加工内容を保持。
+- LeafletのBSD 2-Clause Licenseを同梱。パンフレット写真・図版はデモに収録していない。公式サービス・監修の誤認を避ける説明を追加。
+- 入力・ファイルの計算はブラウザー内で行う。GitHub Pagesと地理院タイルへの通信、ブラウザー保存、出力ファイル、メール送信は別に説明。
+- 新しい共有URLから、目的地検索語、交通空白の条件名・根拠、任意の追加項目を除外。数値条件等の共有とローカル保存は維持。過去に共有済みのURLの回収はできない。
+- 今回の修正前（`c142057`まで）に取得できた全Git履歴26コミット・120個の一意なblobと、ZIP/XLSX内315エントリーを、秘密鍵・GitHub/AWS/Slack/OpenAI/Google APIキー・認証情報付きURLの既知パターンで点検し、該当なし。これは任意形式の秘密情報や個人情報の不在を保証しない。サーバー側の到達不能履歴・他者のfork・過去のデプロイは範囲外。
+- GTFS ZIP内は時刻表関連のテキストファイル。公開PDFは12ページ、添付ファイル・カタログの自動実行指定なし。XLSXにマクロ・外部ブックリンク・文書プロパティなし。収録画像にEXIFなし。画像の著作権や契約まで検証したという意味ではない。
+- 共有URLからの自由記述除外、条件維持、GTFSの出典通知の保持と再読込、16個の元ZIPのハッシュ不変をテスト。HTMLの参照先と変更したJavaScriptの構文を点検。ブラウザーでの操作確認や網羅的な脆弱性診断は実施していない。
+- `.gitignore` と [SECURITY.md](SECURITY.md) を追加。既存履歴の削除やGitHubの管理設定の変更を行ったという意味ではない。
+
+## 運営者による確認が残る事項
+
+| 優先 | 論点・現状 | 確認先と完了条件 |
+| --- | --- | --- |
+| 高 | GitHub Pagesはオンライン事業や商取引を主目的にした無料ホスティングとしての利用を制限する。「無料デモ」という表記やメール問い合わせだけで適合とは断定できない。現在の企業サイトと本番開発への導線を含めた目的の確認が必要。 | MDL運営者がGitHub Supportへ現状のURL・無料機能・本番開発への案内を示して確認し、回答を非公開の運営記録に保管する。またはサイト配信を商用利用に適したホストへ移し、GitHubはコード公開に使用。現時点で照会・承認・移行は未実施。 |
+| 高 | 国土数値情報N03はCC BY 4.0に加え、原典の基本測量成果に関する二次利用手続の注意がある。行政界の統合・20m簡略化、座標付きGeoJSON配布、メッシュの切抜き、地図表示を行っている。 | MDL運営者が国土地理院へこの具体的な加工・配布形態での申請要否を確認。必要なら承認取得・所定表記を行うか、手続を満たせるデータへ差し替える。背景タイルのリアルタイム表示に対する申請不要の案内を、行政界データ配布の根拠に流用しない。 |
+| 高 | 公式店舗サイト等の所在地・営業時間・送迎条件は事実として整理したが、全提供元の再配布条件を確認済みではない。店舗の概略位置には埋込地図の中心等から得た値がある。 | MDL運営者・データ担当者が個別の利用条件と座標の由来を確認。必要な許諾を得るか、再配布可能なオープンデータ・独自調査に置換。画像・説明文の丸ごとの転載へ広げない。 |
+| 中 | MDL独自コード・解説に公開ライセンス未設定。既存企業サイトの写真等、第三者素材や勤務先・委託契約の権利は未確認。 | 権利帰属を確認した独自コードに限ってMIT等、独自解説はCC BY等の適用範囲を決定。ルート企業サイト・第三者データ・商標を一括で再ライセンスしない。公開だけで「何でも再利用可能」と宣伝しない。 |
+| 中 | mainのAPIは `protected: false` を返した。Secret scanningのアラート状態、リポジトリのpush protection、二要素認証・権限の詳細は未確認。APIで設定項目が返らなかったことは無効である証拠ではない。 | 管理者がSecurity設定とアラートを確認。秘密情報の投入防止、必要最小限の権限と更新レビューを運用。疑いのある秘密情報を公開issueで報告しない。 |
+
+## 次回更新の手順
+
+1. 入力データの担当者が、出典・資料年・対象・単位・利用条件・加工内容を更新する。機密な利用実績、ICカードID、児童の乗降地点、個人がわかる少数OD、未公開の費用資料は公開リポジトリへ入れない。単に氏名を消したデータを「匿名加工情報」と呼ばない。
+2. 更新担当者がコミット前に差分、配布ZIP/PDF/XLSX、秘密情報を確認する。`.gitignore` は全機密を検出する仕組みではなく、既に追跡されたファイルも保護しない。
+3. 分析担当者が、古い実績と推計の区別、交通空白の条件・収録不足、送迎の対象者、B/Cの仮定・範囲を確認する。更新日を示す。コンサルタント業務と同等の性能・削減効果等は、検証なしで表示しない。
+4. 公開責任者が未解決事項と公開先の適合を確認し、変更内容と公開コミットを記録する。データ更新・機能追加・ホスト変更時に利用案内も改訂する。
+5. 訂正・削除要請・漏えい疑いはinfo@mobilitydlab.comで受け付ける。秘密鍵は失効を先行し、必要な公開停止・履歴対処・影響調査・報告対応を個別に判断する。
+
+実データを扱う本番環境では、データ提供契約（目的・再提供・保存・削除・管理責任）、アクセス権限、公開版との分離、問い合わせ情報の保存期間等を合意してから運用する。この公開デモを機密データの業務基盤として扱わない。
+
+## 一次資料
+
+- [GitHub Pagesの利用制限](https://docs.github.com/en/site-policy/github-terms/github-terms-for-additional-products-and-features#pages)（2026年4月27日発効）と [利用上限](https://docs.github.com/en/pages/getting-started-with-github-pages/github-pages-limits)
+- [GitHubのリポジトリライセンス解説](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/licensing-a-repository)
+- [GitHub Pagesのデータ収集](https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection)、[Secret scanning](https://docs.github.com/en/code-security/concepts/secret-security/secret-scanning)、[Push protection](https://docs.github.com/en/code-security/concepts/secret-security/push-protection)
+- [国土数値情報N03・2026年版](https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html)、[国土地理院の二次利用Q&A](https://www.gsi.go.jp/LAW/2930-qa.html)、[地理院タイル一覧](https://maps.gsi.go.jp/development/ichiran.html)
+- [個人情報保護委員会：仮名加工情報・匿名加工情報ガイドライン](https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/)
+- データ別の利用条件・リンクは [NOTICE.md](oita-mobility/NOTICE.md) と [利用案内](https://mobilitydlab.com/oita-mobility/usage.html) に掲載。

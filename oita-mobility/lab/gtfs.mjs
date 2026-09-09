@@ -69,7 +69,30 @@ export function scenarioFeeds(base,edits=[]){
     throw Error('未対応の変更種別です');
   }return feeds;
 }
-export function exportFeed(feed){const entries={};for(const [name,rows]of Object.entries(feed.tables))if(rows.length)entries[name+'.txt']=csvText(rows);for(const [name,bytes]of Object.entries(feed.emptyFiles??{}))if(!entries[name])entries[name]=new Uint8Array(bytes);for(const [name,bytes]of Object.entries(feed.extra??{}))entries[name]=new Uint8Array(bytes);return zip(entries)}
+export function exportFeed(feed){
+  const entries={};
+  for(const [name,rows]of Object.entries(feed.tables))if(rows.length)entries[name+'.txt']=csvText(rows);
+  for(const [name,bytes]of Object.entries(feed.emptyFiles??{}))if(!entries[name])entries[name]=new Uint8Array(bytes);
+  for(const [name,bytes]of Object.entries(feed.extra??{}))entries[name]=new Uint8Array(bytes);
+  let notice='MDL-EXPORT-NOTICE.md',n=2;
+  while(Object.hasOwn(entries,notice))notice=`MDL-EXPORT-NOTICE-${n++}.md`;
+  entries[notice]=[
+    'GTFS書き出し：MDL 大分 交通データ 公開デモ',
+    'このファイルはMDLのデモで変換・編集した検討用データです。公式ダイヤや事業者の承認済み変更を意味しません。',
+    '元データ：'+(feed.name||'利用者が読み込んだGTFS'),
+    feed.attribution||('出典：'+(feed.source||'利用者が読み込んだデータ。提供元の確認が必要です。')),
+    '元ファイルURL：'+(feed.source||'未登録'),
+    'カタログ：'+(feed.catalog||'未登録'),
+    '取得時点：'+(feed.retrieved||'未登録'),
+    '元ファイルSHA-256：'+(feed.hash||'未登録'),
+    '利用条件：'+(feed.license||'未確認。権利者の許諾なく再配布しないでください。'),
+    '利用条件URL：'+(feed.licenseUrl||(feed.license==='CC BY 4.0'?'https://creativecommons.org/licenses/by/4.0/deed.ja':'未登録')),
+    '元データの第三者の権利・個別条件は引き続き適用されます。',
+    '利用案内：https://mobilitydlab.com/oita-mobility/usage.html',
+    '出力日時：'+new Date().toISOString()
+  ].join('\n')+'\n';
+  return zip(entries);
+}
 export function distance(a,b){const rad=Math.PI/180,x=(b.lat-a.lat)*rad,y=(b.lon-a.lon)*rad,s=Math.sin(x/2)**2+Math.cos(a.lat*rad)*Math.cos(b.lat*rad)*Math.sin(y/2)**2;return 6371000*2*Math.atan2(Math.sqrt(s),Math.sqrt(Math.max(0,1-s)))}
 export function buildNetwork(feeds,date,{includeOvernight=true}={}){
   date=dateKey(date);const stops={},routes={},trips=[],transfers=[];let excluded=0;

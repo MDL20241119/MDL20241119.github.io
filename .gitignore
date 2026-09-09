@@ -1,0 +1,15 @@
+# Local credentials and restricted inputs must never be published with Pages.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+credentials*.json
+service-account*.json
+private-data/
+local-imports/
+node_modules/
+__pycache__/
+.DS_Store

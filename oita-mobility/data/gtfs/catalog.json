@@ -6,7 +6,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
     "sha256": "678d2406c5c1918381ef0dee01d74c628ecc8687095444feaa4d5d01c2687801",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 65530
+    "bytes": 65530,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 高速バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "高速バス（大分交通幹事）",
@@ -15,7 +20,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
     "sha256": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 61128
+    "bytes": 61128,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 高速バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "高速バス（亀の井バス幹事）",
@@ -24,7 +34,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
     "sha256": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 61687
+    "bytes": 61687,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 高速バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "高速バス（日田バス幹事）",
@@ -33,7 +48,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
     "sha256": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 161140
+    "bytes": 161140,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 高速バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "臼杵市コミュニティバス",
@@ -42,7 +62,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
     "sha256": "ba9f79e2b194b3eb6b58dddaf50926b2a60e5ca085df1ce906b1ef1809a21c2f",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 105560
+    "bytes": 105560,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 コミュニティバスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "竹田市コミュニティバス",
@@ -51,7 +76,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
     "sha256": "ca98db5584c88904b7d34d98816800bd16fd0be113656224c3f0246dee02c863",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 193314
+    "bytes": 193314,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 コミュニティバスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "由布市コミュニティバス",
@@ -60,7 +90,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
     "sha256": "80c982b208a00f8d4ec31b41763e88d2f830c980b9c9900a946c5e90f626675a",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 76787
+    "bytes": 76787,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 コミュニティバスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "大分交通",
@@ -69,7 +104,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs04_oitakotsu",
     "sha256": "2267cd27cf825ab0c1688b774099f3fd7290b7ffd7bf96c9436a3ef8f5c73f75",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 683830
+    "bytes": 683830,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 大分交通GTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "日田バス",
@@ -78,7 +118,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs09_hitabus",
     "sha256": "96b72f9f6d2c546284d58913af14b293eb2cf55af047f830a2c5b8a5c9fb87d5",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 317004
+    "bytes": 317004,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 日田バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "亀の井バス",
@@ -87,7 +132,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs08_kamenoibus",
     "sha256": "88901ba3c27b8aa8a7b63905292846c8ca8427bbdc1ed285413910d74b78e292",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 852192
+    "bytes": 852192,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 亀の井バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "大分バス",
@@ -96,7 +146,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs01_oitabus",
     "sha256": "310b12e5f7503bf180934080247a002d4a276532c74df3f0ee4d60e426bd034d",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 3085381
+    "bytes": 3085381,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 大分バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "玖珠観光バス",
@@ -105,7 +160,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs06_kusukanko",
     "sha256": "b7d09da6c2ae241796bf9ef9cf84ddbcf6e85ca10b73ead37a0e89a57c2bd217",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 178401
+    "bytes": 178401,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 玖珠観光バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "国東観光バス",
@@ -114,7 +174,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs05_kunisakikanko",
     "sha256": "f23eab71c23ecda9829508c7ef8463c40c83836367d3c983917fa9826dd505bf",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 280070
+    "bytes": 280070,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 国東観光バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "臼津交通",
@@ -123,7 +188,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs03_kyushinkotsu",
     "sha256": "df4b96c08c2043153a561240171676cf361d3f2e24ba5161b28fc89295248ef2",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 367623
+    "bytes": 367623,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 臼津交通GTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "大野竹田バス",
@@ -132,7 +202,12 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs02_oonotaketabus",
     "sha256": "9c97b920f87d9aa644d341e472324b8405a79947ba17261ae59969dad7d69bee",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 390782
+    "bytes": 390782,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 大野竹田バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   },
   {
     "name": "大交北部バス",
@@ -141,6 +216,11 @@
     "catalog": "https://data.bodik.jp/dataset/440001_gtfs07_daikohokubu",
     "sha256": "0268f219405b795eebfde0f03c9007c2b6a6a20d8304e383d5779f2a62f50978",
     "retrieved": "2026-09-08T02:21:08.395385+00:00",
-    "bytes": 461797
+    "bytes": 461797,
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "licenseCheckedAt": "2026-09-09",
+    "attribution": "出典：大分県 大交北部バスGTFSデータ",
+    "processing": "配布ZIPを保存。表示・計算時に必要項目を抽出・集計。変更案はMDL公開デモでの加工結果。"
   }
 ]
