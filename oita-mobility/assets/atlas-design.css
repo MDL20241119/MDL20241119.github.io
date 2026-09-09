@@ -31,3 +31,13 @@ body.atlas{font-size:16px;line-height:1.8;color:var(--ink);background:var(--pape
 @media(max-width:700px){.page-gaps .heading p,.page-access .heading p,.page-gaps .heading .workflow-hint,.page-access .heading .workflow-hint{display:none}.page-gaps .heading .eyebrow,.page-access .heading .eyebrow{font-size:12px}.page-gaps .heading h1,.page-access .heading h1{font-size:24px}.page-gaps .heading>.button,.page-access .heading>.button{display:none}.page-gaps .screen-jumps,.page-access .screen-jumps{display:none}.page-gaps .context-bar{padding:13px 14px;gap:10px 13px}.page-gaps .context-bar .populated-switch{font-size:13px;min-height:28px}.page-gaps .metric-row>div>span{min-height:3.1em;font-size:13px}.page-gaps .metric-row b{margin:2px 0 5px;font-size:27px}.page-gaps .metric-row small{font-size:12px}.atlas .atlas-header-actions .button{font-size:13px}.page-home #view-start h1{font-size:29px}.page-access .category small{font-size:12px}.atlas .atlas-nav a:focus-visible{outline-offset:1px}}
 
 .atlas footer .mdl-home-link{display:inline-block;font-size:13px;text-decoration:underline;text-underline-offset:3px;margin:8px 0 0 14px}.page-home footer .mdl-home-link{margin:0}@media(max-width:700px){.atlas footer .mdl-home-link{display:block;margin:8px 0 0}}
+
+/* Demo positioning and a direct production-development contact. */
+.atlas .demo-notice{display:flex;align-items:center;justify-content:space-between;gap:14px;padding:10px max(24px,calc((100vw - 1460px)/2));background:#fff8e5;border-bottom:1px solid #e9d69a;color:#48360d;margin:0}
+.atlas .demo-description{display:flex;align-items:center;gap:12px;min-width:0;font-size:14px;line-height:1.6}
+.atlas .demo-label{display:inline-block;flex-shrink:0;border:1px solid #d6ad49;background:#ffce56;color:#342607;border-radius:6px;padding:3px 9px;font-size:14px;line-height:1.5}
+.atlas .demo-contact{display:inline-flex;align-items:center;gap:8px;flex-shrink:0;min-height:44px;padding:8px 14px;border:1px solid #152440;border-radius:8px;background:#152440;color:#fff;font-size:14px;font-weight:700;text-decoration:none;line-height:1.5}
+.atlas .demo-contact:hover{background:#28416b}.atlas .demo-contact:focus-visible{outline-color:#2856d9}
+.atlas footer .demo-footer-contact{display:inline-block;margin:8px 0 0 14px;font-size:14px;text-decoration:underline;text-underline-offset:3px;overflow-wrap:anywhere}
+@media(max-width:700px){.atlas .demo-notice{padding:8px 15px;gap:10px}.atlas .demo-description>span{display:none}.atlas .demo-contact{padding:8px 11px}.atlas footer .demo-footer-contact{display:block;margin:8px 0 0}}
+@media print{.atlas .demo-notice{padding:5px 0;border-bottom:1px solid #999;background:white}.atlas .demo-contact,.atlas .demo-footer-contact{display:none}}

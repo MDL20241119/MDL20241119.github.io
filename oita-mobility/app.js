@@ -24,7 +24,7 @@ function route(view,scroll=false){
   $('#subnav').hidden=!tabs.length;$('#subnav').classList.toggle('two-items',tabs.length===2);
   $('#subnav').innerHTML=tabs.map(([key,label])=>`<a href="#${key}" class="${view===key?'active':''}" ${view===key?'aria-current="page"':''}>${label}</a>`).join('');
   $('#bc-mobile-summary').hidden=view!=='bc';
-  document.title=$('#view-'+view+' h1').textContent+'｜大分 交通データ';
+  document.title='公開デモ｜'+$('#view-'+view+' h1').textContent+'｜大分 交通データ';
   if(view==='map'&&map)setTimeout(()=>map.invalidateSize(),30);
   if(view==='forecast'&&data)$('#forecast-chart').innerHTML=forecastChart($('#forecast-method').value);
   if(scroll){window.scrollTo({top:0,behavior:'auto'});$('#main').focus({preventScroll:true})}
