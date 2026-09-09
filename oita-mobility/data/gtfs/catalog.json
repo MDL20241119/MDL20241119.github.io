@@ -1,0 +1,146 @@
+[
+  {
+    "name": "高速バス（大分バス幹事）",
+    "file": "440001_gtfs10_highwaybus__5713d7c2.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/5713d7c2-b881-48e6-86b8-ed4eb0e9006f/download/gtfs10_highway01oitabus.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "sha256": "678d2406c5c1918381ef0dee01d74c628ecc8687095444feaa4d5d01c2687801",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 65530
+  },
+  {
+    "name": "高速バス（大分交通幹事）",
+    "file": "440001_gtfs10_highwaybus__3ece7365.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/3ece7365-9739-4c5d-92a8-f008922325ff/download/gtfs10_highway02oitakotsu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "sha256": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 61128
+  },
+  {
+    "name": "高速バス（亀の井バス幹事）",
+    "file": "440001_gtfs10_highwaybus__be2e8be4.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/be2e8be4-44d1-4a85-aea6-78c8147f41c5/download/gtfs10_highway03kamenoi.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "sha256": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 61687
+  },
+  {
+    "name": "高速バス（日田バス幹事）",
+    "file": "440001_gtfs10_highwaybus__17806124.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/17806124-f3bd-4146-b276-675133184953/download/gtfs10_highway04hita.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "sha256": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 161140
+  },
+  {
+    "name": "臼杵市コミュニティバス",
+    "file": "440001_gtfs11_communitybus__95513da5.zip",
+    "source": "https://data.bodik.jp/dataset/bf767ad7-4651-42f8-a9b1-78874542e046/resource/95513da5-7317-4b97-911a-5df29d387900/download/gtfs11_combus06_usuki.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
+    "sha256": "ba9f79e2b194b3eb6b58dddaf50926b2a60e5ca085df1ce906b1ef1809a21c2f",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 105560
+  },
+  {
+    "name": "竹田市コミュニティバス",
+    "file": "440001_gtfs11_communitybus__0f39370a.zip",
+    "source": "https://data.bodik.jp/dataset/bf767ad7-4651-42f8-a9b1-78874542e046/resource/0f39370a-d524-43f1-998b-d59c87c4e9ae/download/gtfs11_combus08_taketa.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
+    "sha256": "ca98db5584c88904b7d34d98816800bd16fd0be113656224c3f0246dee02c863",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 193314
+  },
+  {
+    "name": "由布市コミュニティバス",
+    "file": "440001_gtfs11_communitybus__9b537213.zip",
+    "source": "https://data.bodik.jp/dataset/bf767ad7-4651-42f8-a9b1-78874542e046/resource/9b537213-f309-4116-9952-53050ea768ba/download/gtfs11_combus13_yufu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs11_communitybus",
+    "sha256": "80c982b208a00f8d4ec31b41763e88d2f830c980b9c9900a946c5e90f626675a",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 76787
+  },
+  {
+    "name": "大分交通",
+    "file": "440001_gtfs04_oitakotsu__899d5ccc.zip",
+    "source": "https://data.bodik.jp/dataset/09f3116a-418d-42be-9bd5-4d395c7b3467/resource/899d5ccc-75ee-48a8-bc96-e241a6a0c0cd/download/gtfs04_oitakotsu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs04_oitakotsu",
+    "sha256": "2267cd27cf825ab0c1688b774099f3fd7290b7ffd7bf96c9436a3ef8f5c73f75",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 683830
+  },
+  {
+    "name": "日田バス",
+    "file": "440001_gtfs09_hitabus__e37c6f56.zip",
+    "source": "https://data.bodik.jp/dataset/2dcbcc0d-6fbb-4c6b-9790-2f54ed41bf4f/resource/e37c6f56-ed8b-4032-a91f-4fc24639a18e/download/gtfs09_hitabus.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs09_hitabus",
+    "sha256": "96b72f9f6d2c546284d58913af14b293eb2cf55af047f830a2c5b8a5c9fb87d5",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 317004
+  },
+  {
+    "name": "亀の井バス",
+    "file": "440001_gtfs08_kamenoibus__8d18cbd7.zip",
+    "source": "https://data.bodik.jp/dataset/b9319381-3841-4a1c-a796-33e7953b193a/resource/8d18cbd7-eef0-48c6-9fa3-eae936d56f40/download/gtfs08_kamenoibus.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs08_kamenoibus",
+    "sha256": "88901ba3c27b8aa8a7b63905292846c8ca8427bbdc1ed285413910d74b78e292",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 852192
+  },
+  {
+    "name": "大分バス",
+    "file": "440001_gtfs01_oitabus__9c3c2dbb.zip",
+    "source": "https://data.bodik.jp/dataset/6b8c3167-971c-4c3c-ab84-4eae561be553/resource/9c3c2dbb-493a-40be-991d-44923919908c/download/gtfs01_oitabus.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs01_oitabus",
+    "sha256": "310b12e5f7503bf180934080247a002d4a276532c74df3f0ee4d60e426bd034d",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 3085381
+  },
+  {
+    "name": "玖珠観光バス",
+    "file": "440001_gtfs06_kusukanko__d99bc99a.zip",
+    "source": "https://data.bodik.jp/dataset/b90a15f4-9680-4b7c-bcf9-d510d426e210/resource/d99bc99a-4358-4eab-af68-b140c12477a0/download/gtfs06_kusukanko.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs06_kusukanko",
+    "sha256": "b7d09da6c2ae241796bf9ef9cf84ddbcf6e85ca10b73ead37a0e89a57c2bd217",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 178401
+  },
+  {
+    "name": "国東観光バス",
+    "file": "440001_gtfs05_kunisakikanko__5469eca7.zip",
+    "source": "https://data.bodik.jp/dataset/53ed44a0-0507-4002-aa9e-c4421d290dd4/resource/5469eca7-e04b-4fba-8cdd-208a4538a7e9/download/gtfs05_kunisakikanko.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs05_kunisakikanko",
+    "sha256": "f23eab71c23ecda9829508c7ef8463c40c83836367d3c983917fa9826dd505bf",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 280070
+  },
+  {
+    "name": "臼津交通",
+    "file": "440001_gtfs03_kyushinkotsu__76e548c5.zip",
+    "source": "https://data.bodik.jp/dataset/af52f355-1e78-405c-9d89-9df309bbb30f/resource/76e548c5-617e-4273-81f7-23499ec3aafe/download/gtfs03_kyushinkotsu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs03_kyushinkotsu",
+    "sha256": "df4b96c08c2043153a561240171676cf361d3f2e24ba5161b28fc89295248ef2",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 367623
+  },
+  {
+    "name": "大野竹田バス",
+    "file": "440001_gtfs02_oonotaketabus__c9321261.zip",
+    "source": "https://data.bodik.jp/dataset/82f8e394-562d-4ccf-b279-cf31e2454d13/resource/c9321261-fa35-434a-8a6a-ad0c992b1194/download/gtfs02_oonotaketabus.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs02_oonotaketabus",
+    "sha256": "9c97b920f87d9aa644d341e472324b8405a79947ba17261ae59969dad7d69bee",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 390782
+  },
+  {
+    "name": "大交北部バス",
+    "file": "440001_gtfs07_daikohokubu__dd886eca.zip",
+    "source": "https://data.bodik.jp/dataset/1e5193a5-c771-419a-9e7a-903d45ced2f3/resource/dd886eca-3abb-4244-a866-a62f676ccb83/download/gtfs07_daikohokubu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs07_daikohokubu",
+    "sha256": "0268f219405b795eebfde0f03c9007c2b6a6a20d8304e383d5779f2a62f50978",
+    "retrieved": "2026-09-08T02:21:08.395385+00:00",
+    "bytes": 461797
+  }
+]
