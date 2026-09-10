@@ -10,7 +10,7 @@ export const OUTCOMES = {
 };
 export const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const fmt=v=>Number.isFinite(v)?v.toLocaleString('ja-JP'):'—';
-export const dateText=v=>v?String(v).replace(/T.*$/,''):'未確認';
+export const dateText=v=>v?String(v).replace(/^(\d{4})(\d{2})(\d{2})$/,'$1-$2-$3').replace(/T.*$/,''):'未確認';
 export const httpURL=v=>{try{const u=new URL(v);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}};
 export const sourceLink=(url,name)=>httpURL(url)?`<a href="${esc(httpURL(url))}" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`:esc(name);
 export function catalogURL(id){return 'data-catalog.html'+(id?'?dataset='+encodeURIComponent(id):'')+'#catalog';}

@@ -1,5 +1,5 @@
-import {OUTCOMES,outcome,outcomeLabel} from '../catalog/model.mjs';
-import {renderDataUsed,outcomeGuide} from '../catalog/data-used.mjs';
+import {OUTCOMES,outcome,outcomeLabel} from '../catalog/model.mjs?v=2';
+import {renderDataUsed,outcomeGuide} from '../catalog/data-used.mjs?v=2';
 import {accessShareUrl} from '../assets/share-state.mjs';
 import {csvText,download} from '../lab/io.mjs';
 import {distance,clock,seconds} from '../lab/gtfs.mjs';

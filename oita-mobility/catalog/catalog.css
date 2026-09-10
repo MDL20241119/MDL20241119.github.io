@@ -1,5 +1,5 @@
 /* DATA expands the existing Neo Swiss system. No changes to analysis layouts. */
-.page-data { --signal:#72D7FF; --accent-soft:#72D7FF; margin:0; }
+body.atlas.page-data { --signal:#72D7FF; --accent-soft:#72D7FF; margin:0; }
 .page-data .catalog-main { max-width:1500px; margin:auto; }
 .page-data .data-hero { display:grid; grid-template-columns:1.4fr 1fr; gap:40px; align-items:end; padding:22px 0 32px; }
 .page-data .data-hero h1 { font-size:clamp(52px,7vw,100px); line-height:.91; letter-spacing:-.065em; margin:18px 0 24px; font-weight:900; }
@@ -193,3 +193,6 @@
  .page-data .data-map-controls { grid-template-columns:1fr; }
 }
 @media print { .page-data .atlas-header, .page-data .data-tabs, .page-data .catalog-filters, .page-data .category-menu { display:none; } .page-data .catalog-browser { display:block; } }
+
+.page-data .skip { position:absolute; left:-10000px; top:0; z-index:10000; padding:12px; background:#fff; color:#111; }
+.page-data .skip:focus { left:12px; top:12px; }

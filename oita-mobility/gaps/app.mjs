@@ -1,4 +1,4 @@
-import {renderDataUsed} from '../catalog/data-used.mjs';
+import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
 import {csvText} from '../lab/io.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
