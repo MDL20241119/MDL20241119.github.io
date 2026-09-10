@@ -26,3 +26,22 @@ The visitor-facing [usage and data notice](https://mobilitydlab.com/oita-mobilit
 See [PUBLICATION.md](PUBLICATION.md) for the dated audit and unresolved hosting, survey-law, third-party rights and repository administration checks; [NOTICE.md](oita-mobility/NOTICE.md) for data and software rights; and [SECURITY.md](SECURITY.md) for confidential reporting. A public repository does not automatically grant an open-source license to every file. No blanket MIT or other license has been assigned to MDL code or the corporate-site assets.
 
 Targeted sharing and export checks: `node tests/publication.mjs`. These tests do not certify legal compliance or the absence of every kind of sensitive information.
+
+
+## DATA CATALOG (2026-09-10)
+
+`/oita-mobility/data-catalog.html` adds the source catalog, layer map, municipal data-coverage matrix, and recorded acquisition history. Existing page URLs, raw datasets, numerical analysis engines and Scenario Lab remain intact.
+
+- `oita-mobility/data/catalog.json` is generated metadata. **Do not edit it by hand.**
+- Rebuild after changing source files: `python scripts/build-data-catalog.py` (Python standard library, no external API).
+- Verify reproducibility: `python scripts/build-data-catalog.py --check`.
+- Verify provenance, date separation, real GTFS worker and result semantics: `node tests/data-catalog.mjs`.
+- Verify established mathematics: `node --test tests/planning.test.mjs tests/accessibility.test.mjs tests/gaps.test.mjs`.
+- Verify export attribution/privacy: `node tests/publication.mjs`.
+- `/tests/responsive.html` is a noindex manual QA harness for the same public pages at 320/390/768/1440 CSS pixels. It does not emulate device-specific browser behavior.
+
+The catalog records hashes of all input GIS/GTFS JSON and ZIP files. Dataset units are declared (feed, source collection, reported table, or derived calculation). Counts are computed from records rather than authored in the UI. Planned entries are excluded from overview dataset counts. Baseline, acquisition, source update, webpage check, validity period and calculation dates are separate fields; one never substitutes for another.
+
+The matrix measures **this site's data collection**, not transport availability. A cross means uncollected. Existing non-empty but non-comprehensive collections remain PARTIAL; there is no invented completeness, verification or partner agreement. Resource coordinates denote published facilities/pickup references, never available vehicles or service-area coverage. Population is the bundled 2020 adjusted baseline; no older-population or future figures are substituted.
+
+ACCESSIBILITY retains its routing mathematics and adds result provenance and four presentation states. Missing/incomplete/expired inputs do not become confirmed absence. Known user-supplied service eligibility rejections retain their explicit reason. Original engine states remain available for compatibility. DATA USED uses the calculation's actual feed hashes and facility IDs; the display falls back gracefully if the catalog cannot load.

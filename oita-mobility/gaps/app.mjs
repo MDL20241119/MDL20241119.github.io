@@ -1,3 +1,4 @@
+import {renderDataUsed} from '../catalog/data-used.mjs';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
 import {csvText} from '../lab/io.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
@@ -62,15 +63,17 @@ async function run(){
     worker.postMessage({id:myJob,profile:p,files:catalog.filter(f=>p.files.includes(f.file)),cells:cells.map(f=>f.properties),facilities:places.filter(f=>p.destinations.includes(f.id)),activityBounds:applied.bounds});
   }catch(e){if(myJob===job){cancel(false);throw e;}}
 }
+function updateDataUsed(){const p=applied?.profile;renderDataUsed('#gap-data-used',{kind:'gaps',mode:p&&health.length?'result':'selection',sources:health.length?health:catalog.filter(f=>(p?.files??selectedFeeds()).includes(f.file)),facilityIds:p?.activityOn?p.destinations:[],includeBoundary:true,includePopulation:p?.populatedOnly??$('#populated-only').checked,date:p?.date??$('#date').value,health,complete:applied?.complete??false});}
 function statistics(){const out={fail:{count:0,area:0},pass:{count:0,area:0},unknown:{count:0,area:0}};for(const f of cells){const g=out[results.get(f.id)?.status??'unknown'];g.count++;g.area+=f.properties.areaKm2;}return out;}
 function refresh(){
+  updateDataUsed();
   const stats=statistics();$('#metrics').innerHTML=['fail','pass','unknown'].map(s=>`<div><span>${STATES[s]}</span><b>${dirty?'—':fmt(stats[s].count)}<span class="metric-unit">区域</span></b><small>区域面積 ${dirty?'—':fmt(stats[s].area,2)} km²</small></div>`).join('');
   $('#map-title').textContent=cityName()+' · '+fmt(cells.length)+'区域';
   const p=applied?.profile;$('#result-summary').textContent=p?`${p.date} ／ ${p.name} ／ ${p.combine==='any'?'どれか1つが不足':'すべてが不足'}`:'条件を確認して、地図に反映してください';
   $('#scope-caption').textContent=dirty?'条件を変更しました。「この条件で地図を更新」を押すと、区域数・面積・判定を再計算します。':(p?.populatedOnly?'2020年基準人口のあるメッシュに限定。':'行政界内全域（山林等を含む）。')+'区域内代表点の判定です。赤は収録バスデータで条件に該当する確認候補、灰はデータ不足・未計算。面積は困っている住民数を表しません。'+(p?.activityOn?` 往復を調べた区域：${fmt(activityCount)} / ${fmt(cells.length)}。`:'')+(applied&&!applied.complete&&!busy?' 計算は未完了です。':'');
   if(selectedCell)selectCell(selectedCell,false);
 }
-function renderHealth(){$('#data-health').innerHTML=health.map(h=>`<p>${esc(h.name)}：${h.coverage==='known'?'対象日は有効期間内':h.coverage==='outside'?'対象日は有効期間外':'有効期間を確認できない'}</p>`).join('')+(excluded?`<p>時刻等の理由で算定対象外の便：${fmt(excluded)}件。不足の判定には未確認を残します。</p>`:'');}
+function renderHealth(){updateDataUsed();$('#data-health').innerHTML=health.map(h=>`<p>${esc(h.name)}：${h.coverage==='known'?'対象日は有効期間内':h.coverage==='outside'?'対象日は有効期間外':'有効期間を確認できない'}</p>`).join('')+(excluded?`<p>時刻等の理由で算定対象外の便：${fmt(excluded)}件。不足の判定には未確認を残します。</p>`:'');}
 function criterionHTML(c){return `<div class="criterion-result"><b>${esc(c.label)} <span class="status-badge ${c.state}">${c.state==='fail'?'不足候補':c.state==='pass'?'条件内':'判定できない'}</span></b>${esc(c.reason)}${c.id==='distance'?`<br>最短 ${c.value===null?'未確認':fmt(c.value)+'m'} ／ 上限 ${fmt(c.threshold)}m`:c.id==='frequency'?`<br>${fmt(c.value)}便 ／ 必要 ${fmt(c.threshold)}便`:''}${c.details?c.details.map(d=>`<p>${esc(d.name)}：${d.state==='pass'?'往復候補あり・帰宅 '+clock(d.homeAt):d.state==='fail'?'設定条件で候補なし':'確認不足'}<br><small>${esc(d.reasons.join(' / ')||d.unknowns.join(' / '))}</small></p>`).join(''):''}</div>`;}
 function selectCell(id,move=false){
   const f=cells.find(x=>x.id===id);if(!f)return;selectedCell=id;const p=f.properties,r=results.get(id),state=r?.status??'unknown';
