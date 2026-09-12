@@ -5,8 +5,8 @@
 <meta name="description" content="大分の観光統計を、地域の交通と一緒に見る。由布・別府・日出・宇佐・大分・国東の宿泊、消費、滞在、混雑の課題を、出典とともに確認できるMDLの公開データアプリ。">
 <title>大分観光・周遊データマップ｜モビリティデザインラボ</title>
 <link rel="icon" href="../oita-mobility/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="style.css?v=1">
-<script defer src="../oita-mobility/assets/leaflet.js"></script><script type="module" src="app.mjs?v=1"></script>
+<link rel="stylesheet" href="../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="neo-swiss.css?v=1">
+<script defer src="../oita-mobility/assets/leaflet.js"></script><script type="module" src="app.mjs?v=2"></script>
 </head>
 <body>
 <a href="#main" class="skip">内容へ移動</a>
@@ -30,8 +30,8 @@
 <section id="panel-overview" class="view" aria-label="地域を知る" hidden></section>
 <section id="panel-compare" class="view" aria-label="数字を比べる" hidden></section>
 <section id="panel-access" class="view" aria-label="観光地へのアクセス" hidden></section>
-<section id="panel-mobility" class="view" aria-label="交通と重ねる" hidden>
- <div class="section-head"><div><span class="eyebrow">03 / TOURISM & TRANSPORT</span><h2>観光地でのアクセスを調べる</h2><p>到着後の移動を調べます。近くの乗り場、周遊先、帰りの交通を確認できます。</p></div></div>
+<section id="panel-mobility" class="view" aria-label="観光地でのアクセス" hidden>
+ <div class="section-head"><div><span class="eyebrow">04 / TOURISM & TRANSPORT</span><h2>観光地でのアクセスを調べる</h2><p>到着後の移動を調べます。近くの乗り場、周遊先、帰りの交通を確認できます。</p></div></div>
  <div id="local-trip" class="local-trip"></div>
  <div class="map-controls"><label>交通を調べる基準点<select id="anchor"></select></label><label>運行予定の日<select id="map-day"></select></label><label>周辺の範囲<select id="radius"><option value="500">直線500m</option><option value="1000" selected>直線1km</option><option value="2000">直線2km</option></select></label></div>
  <div id="transport-status" class="notice" role="status">交通データを準備しています。</div>
@@ -42,7 +42,7 @@
 </section>
 <section id="panel-issues" class="view" aria-label="課題を考える" hidden></section>
 <section id="panel-data" class="view" aria-label="データを探す" hidden>
- <div class="section-head"><div><span class="eyebrow">05 / DATA EXPLORER</span><h2>数字の意味まで、探せる。</h2><p>気になる行を押すと、対象・方法・原典を確認できます。</p></div><button id="export-csv" class="button primary">表示中のデータをCSV保存</button></div>
+ <div class="section-head"><div><span class="eyebrow">06 / DATA EXPLORER</span><h2>数字の意味まで、探せる。</h2><p>気になる行を押すと、対象・方法・原典を確認できます。</p></div><button id="export-csv" class="button primary">表示中のデータをCSV保存</button></div>
  <div class="data-filters"><label class="search-label">キーワード<input id="search" type="search" placeholder="例：宿泊、交通手段、ハーモニーランド"></label><label>種類<select id="category"><option value="all">すべて</option></select></label><label>対象年<select id="year"><option value="all">すべて</option></select></label></div>
  <div class="result-caption"><strong id="record-count"></strong><span>地域は画面上部で切り替え</span></div><div id="record-list"></div><div class="pagination"><button class="button small" id="prev-page">前へ</button><span id="page-count"></span><button class="button small" id="next-page">次へ</button></div>
 </section>
