@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="theme-color" content="#1729d7">
+<meta name="description" content="大分の観光統計を、地域の交通と一緒に見る。由布・別府・日出・宇佐・大分・国東の宿泊、消費、滞在、混雑の課題を、出典とともに確認できるMDLの公開データアプリ。">
+<title>大分観光・周遊データマップ｜モビリティデザインラボ</title>
+<link rel="icon" href="../oita-mobility/assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="style.css?v=1">
+<script defer src="../oita-mobility/assets/leaflet.js"></script><script type="module" src="app.mjs?v=1"></script>
+</head>
+<body>
+<a href="#main" class="skip">内容へ移動</a>
+<header class="topbar"><a class="brand" href="./"><span class="brand-mark">OITA<span class="brand-dot">.</span></span><span class="brand-detail">観光と交通のデータ<br><small>MOBILITY DESIGN LAB</small></span></a><nav aria-label="関連アプリ"><a class="active" href="./" aria-current="page">観光・周遊</a><a href="../oita-mobility/">交通マップ <span aria-hidden="true">↗</span></a><a class="mdl-link" href="../">MDL</a></nav></header>
+<div class="shell">
+<aside class="sidebar"><p class="nav-caption">何を調べますか？</p><nav class="app-nav" aria-label="アプリのメニュー">
+<a href="#overview" data-view="overview"><span class="nav-icon" aria-hidden="true">01</span><span>地域を知る</span></a>
+<a href="#compare" data-view="compare"><span class="nav-icon" aria-hidden="true">02</span><span>交通分担・比較</span></a>
+<a href="#access" data-view="access"><span class="nav-icon" aria-hidden="true">03</span><span>観光地へ行く</span></a>
+<a href="#mobility" data-view="mobility"><span class="nav-icon" aria-hidden="true">04</span><span>現地を回る</span></a>
+<a href="#issues" data-view="issues"><span class="nav-icon" aria-hidden="true">05</span><span>課題を考える</span></a>
+<a href="#data" data-view="data"><span class="nav-icon" aria-hidden="true">06</span><span>データを探す</span></a>
+<a href="#guide" data-view="guide"><span class="nav-icon" aria-hidden="true">?</span><span>使い方・出典</span></a>
+</nav><div class="sidebar-note"><span class="eyebrow">PUBLIC DATA EDITION</span><p>観光の数字を、<br>地域での次の一手へ。</p><small>MDLが公開資料を編集。<br>県の公式サービスではありません。</small><a href="https://oita-tourism-data-catalog.com/" target="_blank" rel="noopener noreferrer">県の公式カタログ ↗</a></div></aside>
+<main id="main" tabindex="-1">
+<div class="page-heading"><div><p class="eyebrow">OITA TOURISM × MOBILITY</p><h1>大分観光・周遊データマップ</h1><p class="intro">観光の特徴と移動の条件から、地域でできることを考える。</p></div><button class="button small" id="share" type="button">この画面を共有 <span aria-hidden="true">↗</span></button></div>
+<section class="controls" aria-label="地域と利用目的"><label class="area-label">調べる地域<select id="area"><option value="all">大分県・６市町</option></select></label><label class="role-label">使う方<select id="role"><option value="government">自治体・観光協会</option><option value="facility">宿泊・観光施設</option><option value="transport">交通事業者</option></select></label><div class="research-date"><span>観光調査の整理日</span><strong>2026.09.13</strong><small>実績の対象年は数字ごとに表示</small></div></section>
+<div id="role-guide" class="role-guide"></div>
+<div id="loading" class="empty" role="status">観光データを読み込んでいます…</div>
+<div id="error" class="notice error" role="alert" hidden></div>
+<section id="panel-overview" class="view" aria-label="地域を知る" hidden></section>
+<section id="panel-compare" class="view" aria-label="数字を比べる" hidden></section>
+<section id="panel-access" class="view" aria-label="観光地へのアクセス" hidden></section>
+<section id="panel-mobility" class="view" aria-label="交通と重ねる" hidden>
+ <div class="section-head"><div><span class="eyebrow">03 / TOURISM & TRANSPORT</span><h2>観光地でのアクセスを調べる</h2><p>到着後の移動を調べます。近くの乗り場、周遊先、帰りの交通を確認できます。</p></div></div>
+ <div id="local-trip" class="local-trip"></div>
+ <div class="map-controls"><label>交通を調べる基準点<select id="anchor"></select></label><label>運行予定の日<select id="map-day"></select></label><label>周辺の範囲<select id="radius"><option value="500">直線500m</option><option value="1000" selected>直線1km</option><option value="2000">直線2km</option></select></label></div>
+ <div id="transport-status" class="notice" role="status">交通データを準備しています。</div>
+ <div class="map-layout"><div class="map-frame"><div id="tourism-map" tabindex="0" role="region" aria-label="観光に関係する停留所と周辺の運行予定"></div><div class="map-legend"><span><i class="dot blue"></i>出発あり</span><span><i class="dot gray"></i>当日の出発0</span><span><i class="dot orange"></i>選んだ基準点</span></div><p id="tile-warning" class="map-warning" hidden>背景地図を読み込めません。地点と交通情報は一覧でも確認できます。</p></div><aside id="place-insight" class="place-insight"></aside></div>
+ <div class="section-head compact"><div><h3>近くの乗り場</h3><p id="nearby-caption"></p></div><label class="check"><input id="active-only" type="checkbox">出発がある乗り場だけ</label></div>
+ <div id="stop-list" class="stop-list"></div>
+ <p class="footnote">本数は公開時刻表による運行予定です。座席の空き、乗客数、運行遅延は含みません。直線距離は徒歩の道順・所要時間ではありません。</p>
+</section>
+<section id="panel-issues" class="view" aria-label="課題を考える" hidden></section>
+<section id="panel-data" class="view" aria-label="データを探す" hidden>
+ <div class="section-head"><div><span class="eyebrow">05 / DATA EXPLORER</span><h2>数字の意味まで、探せる。</h2><p>気になる行を押すと、対象・方法・原典を確認できます。</p></div><button id="export-csv" class="button primary">表示中のデータをCSV保存</button></div>
+ <div class="data-filters"><label class="search-label">キーワード<input id="search" type="search" placeholder="例：宿泊、交通手段、ハーモニーランド"></label><label>種類<select id="category"><option value="all">すべて</option></select></label><label>対象年<select id="year"><option value="all">すべて</option></select></label></div>
+ <div class="result-caption"><strong id="record-count"></strong><span>地域は画面上部で切り替え</span></div><div id="record-list"></div><div class="pagination"><button class="button small" id="prev-page">前へ</button><span id="page-count"></span><button class="button small" id="next-page">次へ</button></div>
+</section>
+<section id="panel-guide" class="view" aria-label="使い方と出典" hidden></section>
+<footer class="footer"><span>© Mobility Design Lab</span><a href="#guide">使い方・データの読み方</a><a href="../oita-mobility/usage.html">利用条件</a><a href="mailto:info@mobilitydlab.com?subject=観光データの訂正・お問い合わせ">訂正・お問い合わせ</a></footer>
+</main></div>
+<dialog id="detail-dialog"><div class="dialog-top"><span class="eyebrow">数字の条件と出典</span><button class="button small" id="close-detail" autofocus>閉じる ×</button></div><div id="detail-body"></div></dialog>
+<div id="toast" class="toast" role="status" hidden></div>
+<noscript><p class="notice">地図・絞り込みにはJavaScriptが必要です。<a href="data/tourism.json">収録データ</a>と<a href="https://oita-tourism-data-catalog.com/">県公式カタログ</a>を確認できます。</p></noscript>
+</body></html>

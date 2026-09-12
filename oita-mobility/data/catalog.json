@@ -10,6 +10,8 @@
     "gaps/data/sources.json": "ed48e2740c09a76725562a165d605adb792be9427fad5216766e655c5091f96b",
     "gaps/data/municipalities.geojson": "af48357dd401dc2c1337c7a807e934c0a0b3e5d924b0dd38015a5ecdeb2a2409",
     "data/analysis.json": "a19340e2d8be987cee089955b490edae85ed91a40f086cd3e2adf22808003313",
+    "../oita-tourism/data/tourism.json": "11be2dbd830447b28fafc034311cd8e031a7918a4e400caa38d6b162b1881b8e",
+    "../oita-tourism/data/access.json": "9370f910b392f238a20f81471b03ed5ce97680c33c385c8fe8b821f653dae67a",
     "data/gtfs/440001_gtfs10_highwaybus__5713d7c2.zip": "678d2406c5c1918381ef0dee01d74c628ecc8687095444feaa4d5d01c2687801",
     "data/gtfs/440001_gtfs10_highwaybus__3ece7365.zip": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
     "data/gtfs/440001_gtfs10_highwaybus__be2e8be4.zip": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
@@ -4001,6 +4003,154 @@
       }
     },
     {
+      "id": "tourism-observations",
+      "name": "観光統計・観光地へのアクセス",
+      "category": "tourism",
+      "categories": [
+        "tourism"
+      ],
+      "provider": "大分県・各市町ほか／MDL編集",
+      "sourceUrl": null,
+      "sourceUrls": [
+        {
+          "name": "大分県｜共通基準による観光入込客統計・年次推移",
+          "url": "https://www.pref.oita.jp/uploaded/attachment/2274107.pdf"
+        },
+        {
+          "name": "大分県｜2025年大分県観光統計調査結果",
+          "url": "https://www.pref.oita.jp/uploaded/attachment/2273969.pdf"
+        },
+        {
+          "name": "大分県｜観光統計調査（毎月調査）の概要",
+          "url": "https://www.pref.oita.jp/uploaded/attachment/2268128.pdf"
+        },
+        {
+          "name": "大分県｜令和7年度観光実態調査報告書",
+          "url": "https://www.pref.oita.jp/uploaded/attachment/2268519.pdf"
+        },
+        {
+          "name": "由布市｜令和7年観光動態調査",
+          "url": "https://www.city.yufu.oita.jp/uploads/files/2026/06/R7-kankoudautaityousakekka.pdf"
+        },
+        {
+          "name": "別府市｜令和6年観光動態要覧",
+          "url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.pdf"
+        },
+        {
+          "name": "日出町｜地方創生推進交付金事業進捗評価調書",
+          "url": "https://www.town.hiji.lg.jp/material/files/group/4/R02_townpro_jisseki.pdf"
+        },
+        {
+          "name": "日出町｜広報ひじ2026年9月号",
+          "url": "https://www.town.hiji.lg.jp/material/files/group/1/202609_kouhouhiji_Web.pdf"
+        },
+        {
+          "name": "宇佐市｜第2次総合計画後期基本計画 第6章",
+          "url": "https://www.city.usa.oita.jp/material/files/group/13/22550.pdf"
+        },
+        {
+          "name": "大分市｜第2次観光戦略プラン 第2章",
+          "url": "https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/2syou.pdf"
+        },
+        {
+          "name": "国東市｜総合計画進捗状況・事務事業評価",
+          "url": "https://www.city.kunisaki.oita.jp/uploaded/attachment/29726.pdf"
+        },
+        {
+          "name": "ツーリズムおおいた｜2026年ゴールデンウィーク観光動向調査",
+          "url": "https://www.pref.oita.jp/uploaded/attachment/2268201.pdf"
+        },
+        {
+          "name": "由布市｜由布院うらみち観光交通対策プロジェクト",
+          "url": "https://yufu-uramichi.com/about/"
+        },
+        {
+          "name": "由布市｜パーク＆ライド実証",
+          "url": "https://yufu-uramichi.com/park_and_ride/"
+        },
+        {
+          "name": "観光庁｜オーバーツーリズム対策事業選定一覧",
+          "url": "https://www.mlit.go.jp/kankocho/content/001884699.pdf"
+        },
+        {
+          "name": "大分県｜おおいた観光データカタログ",
+          "url": "https://oita-tourism-data-catalog.com/"
+        },
+        {
+          "name": "大分県・各交通事業者｜大分県公開GTFS（既存交通アプリと共通）",
+          "url": "https://odcs.bodik.jp/440001/2023/03/30/gtfs_bus/"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": null,
+      "checkedAt": "2026-09-13",
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "大分県と由布・別府・日出・宇佐・大分・国東。指標ごとに対象年・系列が異なる。",
+      "format": "JSON",
+      "license": null,
+      "licenseUrl": null,
+      "dataClass": null,
+      "status": "PARTIAL",
+      "analysisReady": "PARTIAL",
+      "processing": "共有調査ブック10シートを正規化。出典・単位・未取得・原表セルを保持。停留所位置と時刻表は交通アプリと共通。",
+      "limitations": [
+        "交通利用割合は複数回答。代表交通分担率とは異なる。",
+        "直通バスの往復候補のみ。徒歩・営業時間・空席は未確認。",
+        "観光消費は地域に残る所得ではない。異なる調査系列を合算しない。"
+      ],
+      "usedFor": [
+        {
+          "label": "観光・周遊データマップ",
+          "url": "../oita-tourism/"
+        },
+        {
+          "label": "観光地へのアクセス",
+          "url": "../oita-tourism/#access"
+        },
+        {
+          "label": "出典付き指標検索",
+          "url": "../oita-tourism/#data"
+        }
+      ],
+      "localFiles": [
+        "../oita-tourism/data/tourism.json",
+        "../oita-tourism/data/access.json"
+      ],
+      "records": 177,
+      "recordUnit": "指標",
+      "valueType": null,
+      "layerIds": [],
+      "scope": "観光統計",
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "大分県と由布・別府・日出・宇佐・大分・国東。指標ごとに対象年・系列が異なる。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "UNKNOWN",
+          "label": "要確認",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "観光・周遊データマップ / 観光地へのアクセス / 出典付き指標検索"
+        }
+      }
+    },
+    {
       "id": "planned-elderly",
       "name": "高齢者人口",
       "category": "population",
@@ -4551,7 +4701,7 @@
     },
     {
       "id": "planned-tourism",
-      "name": "観光施設一覧・観光需要",
+      "name": "観光施設の網羅的な一覧・時間帯別の観光需要",
       "category": "tourism",
       "categories": [
         "tourism"
@@ -4573,7 +4723,7 @@
       "analysisReady": "NOT_READY",
       "processing": null,
       "limitations": [
-        "ホテル等の送迎事例のみ収録。観光需要の推計データは未収録。"
+        "観光統計と13基準点のアクセスは別ページに収録。施設の網羅的な一覧、実測OD・時間帯別需要は未収録。"
       ],
       "usedFor": [],
       "localFiles": [],
@@ -4941,11 +5091,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 8,
+            "unit": "観光の指標",
+            "evidence": "8指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5071,11 +5221,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 23,
+            "unit": "観光の指標",
+            "evidence": "23指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5203,9 +5353,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5333,9 +5483,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5463,9 +5613,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5593,9 +5743,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5723,9 +5873,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5851,11 +6001,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 2,
+            "unit": "観光の指標",
+            "evidence": "2指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -5981,11 +6131,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 2,
+            "unit": "観光の指標",
+            "evidence": "2指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6113,9 +6263,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6241,11 +6391,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 5,
+            "unit": "観光の指標",
+            "evidence": "5指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6373,9 +6523,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6501,11 +6651,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 54,
+            "unit": "観光の指標",
+            "evidence": "54指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6631,11 +6781,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 5,
+            "unit": "観光の指標",
+            "evidence": "5指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6763,9 +6913,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -6891,11 +7041,11 @@
             "datasetId": null
           },
           "tourism": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "status": "PARTIAL",
+            "count": 5,
+            "unit": "観光の指標",
+            "evidence": "5指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -7023,9 +7173,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -7153,9 +7303,9 @@
           "tourism": {
             "status": "NOT_AVAILABLE",
             "count": 0,
-            "unit": "収録件数",
-            "evidence": "観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。",
-            "datasetId": null
+            "unit": "観光の指標",
+            "evidence": "この市町の観光指標は未収録。観光施設や需要がないことを意味しません。",
+            "datasetId": "tourism-observations"
           },
           "safety": {
             "status": "NOT_AVAILABLE",
@@ -7427,6 +7577,14 @@
     }
   ],
   "history": [
+    {
+      "date": "2026-09-13",
+      "kind": "機能追加",
+      "label": "観光専用ページ・観光地へのアクセスを共通データに接続",
+      "datasetIds": [
+        "tourism-observations"
+      ]
+    },
     {
       "date": "2026-09-10",
       "kind": "機能追加",

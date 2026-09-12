@@ -88,6 +88,8 @@ resources = read('gaps/resources.json')
 geo = read('gaps/data/sources.json')
 boundaries = read('gaps/data/municipalities.geojson')
 analysis = read('data/analysis.json')
+tourism = read('../oita-tourism/data/tourism.json')
+tourism_access = read('../oita-tourism/data/access.json')
 municipalities = [f['properties'] for f in boundaries['features']]
 
 for f in gtfs:
@@ -222,6 +224,15 @@ dataset('analysis-derived','需要シナリオ・条件付きB/Cの派生計算'
     localFiles=['data/analysis.json','calculations.js','lab/models.mjs'],
     usedFor=[usage('需要シナリオ','index.html#forecast'),usage('条件付きB/C','index.html#bc'),usage('Scenario Lab','lab.html#economics')],scope='派生計算')
 
+dataset('tourism-observations','観光統計・観光地へのアクセス','tourism',provider='大分県・各市町ほか／MDL編集',
+    sourceUrls=[{'name':x['publisher']+'｜'+x['title'],'url':x['url']} for x in tourism['sources'] if x['url']],
+    checkedAt=tourism['editedAt'],coverage='大分県と由布・別府・日出・宇佐・大分・国東。指標ごとに対象年・系列が異なる。',
+    format='JSON',records=len(tourism['records']),recordUnit='指標',status='PARTIAL',analysisReady='PARTIAL',scope='観光統計',
+    processing='共有調査ブック10シートを正規化。出典・単位・未取得・原表セルを保持。停留所位置と時刻表は交通アプリと共通。',
+    localFiles=['../oita-tourism/data/tourism.json','../oita-tourism/data/access.json'],
+    limitations=['交通利用割合は複数回答。代表交通分担率とは異なる。','直通バスの往復候補のみ。徒歩・営業時間・空席は未確認。','観光消費は地域に残る所得ではない。異なる調査系列を合算しない。'],
+    usedFor=[usage('観光・周遊データマップ','../oita-tourism/'),usage('観光地へのアクセス','../oita-tourism/#access'),usage('出典付き指標検索','../oita-tourism/#data')])
+
 missing = [
     ('elderly','高齢者人口','population','2020年の高齢者人口は既存抽出データに含まれません。将来推計で補いません。'),
     ('rail','鉄道駅・鉄道時刻表','transport','鉄道を含む往復判定は未実装。'),
@@ -232,7 +243,7 @@ missing = [
     ('welfare','福祉施設・通いの場の一覧','welfare','移動支援事例の収録と、福祉施設・通いの場の網羅は別です。'),
     ('mobile-shopping','移動販売の運行日・区域','shopping','店舗の所在地や買物送迎と、移動販売の運行情報は別です。'),
     ('childcare','保育施設・学校の網羅的な一覧','education','学校は自治体公表データの一部のみ。'),
-    ('tourism','観光施設一覧・観光需要','tourism','ホテル等の送迎事例のみ収録。観光需要の推計データは未収録。'),
+    ('tourism','観光施設の網羅的な一覧・時間帯別の観光需要','tourism','観光統計と13基準点のアクセスは別ページに収録。施設の網羅的な一覧、実測OD・時間帯別需要は未収録。'),
     ('flood','洪水想定区域・交通事故','safety','洪水時や災害時に通行できるかの判定は未実装。'),
     ('vehicles','送迎の共用可否・車両・運転手','resources','公開事例から車両の空き時間や一般住民への開放を推定しません。'),
 ]
@@ -271,6 +282,7 @@ for m in municipalities:
         'shopping':(sum(p['category']=='shopping' for p in city_places),'買物の施設','dest-shopping'),
         'education':(sum(p['category']=='school' for p in city_places),'学校の施設',None),
         'resources':(len(city_res),'送迎・移動支援事例',None),
+        'tourism':(sum(r['area']==m['name'] for r in tourism['records']),'観光の指標','tourism-observations'),
         'bus':(stop_count,'行政界内の収録バス停ID',None),
     }
     for k in ['medical','commercial','school']:
@@ -284,7 +296,7 @@ for m in municipalities:
         state='PARTIAL' if n else 'NOT_AVAILABLE'
         evidence=(f'{n} {unit}を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。' if n else '対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。')
         if k=='terrain':evidence='行政界のみ収録。歩行道路・標高・傾斜は未収録。'
-        if k=='tourism':evidence='観光施設一覧・観光需要は未収録。ホテル等の送迎は「送迎・車両・拠点」で確認できます。'
+        if k=='tourism':evidence=f'{n}指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。' if n else 'この市町の観光指標は未収録。観光施設や需要がないことを意味しません。'
         if k=='welfare':evidence='福祉施設・通いの場の一覧は未収録。移動支援事例とは区別しています。'
         cells[k]={'status':state,'count':n,'unit':unit,'evidence':evidence,'datasetId':ds}
     gap_rows.append({'code':code,'name':m['name'],'cells':cells,'mesh':mesh_counts[code]})
@@ -308,6 +320,7 @@ for date in unique((d.get('retrievedAt') or '')[:10] for d in datasets):
     history.append({'date':date,'kind':'取得記録','label':'元データに記録された取得日','datasetIds':ids})
 # No claim of a past file diff when the previous data snapshot is not available.
 history.append({'date':'2026-09-10','kind':'機能追加','label':'DATA CATALOG・収録状況・分析出典の表示を追加','datasetIds':[]})
+history.append({'date':'2026-09-13','kind':'機能追加','label':'観光専用ページ・観光地へのアクセスを共通データに接続','datasetIds':['tourism-observations']})
 out={'schemaVersion':1,'title':'大分県交通空白を見つけて解消を考えるアクセシビリティマップ',
      'generator':'scripts/build-data-catalog.py','sourceHashes':HASHES,
      'categories':[{'id':i,'number':f'{n+1:02}','name':en,'label':ja} for n,(i,en,ja) in enumerate(CATEGORIES)],

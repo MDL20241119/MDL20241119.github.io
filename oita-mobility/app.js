@@ -176,10 +176,17 @@ function renderSources(){
   <div class="panel"><h3>主な一次資料</h3><ol class="sources-list">${Object.entries(titles).map(([url,title])=>`<li>${ext(url,title)}</li>`).join('')}</ol></div>
   <details><summary>正式な評価に進むための確認項目</summary><div class="details-content"><p>事業者から、同じ期間の便別乗降・公開可能な集計OD・IC以外の総利用・当時のGTFS対応表を受領。現状維持と変更案の営業・回送・待機・労務・車両・管理費を区別します。カードIDなど個人識別子は不要です。</p><p>利用者の時間差と他の利用者の悪化、予約不成立、外出断念、帰宅条件を実測。自治体の評価責任者が対象・比較案・上限費用を決め、事業者が運行可能性と費用を確認し、分析担当と独立確認者が再計算します。役割・費用負担は未合意です。</p><p>必要な移動が改善し、継続可能な運営・負担が成立した範囲で継続を判断。利用回数や部分B/Cだけでは決定しません。</p></div></details>`;
 }
+function applyTourismLink(){
+  const q=new URLSearchParams(location.search),f=geo.feeds.findIndex(f=>f.id===q.get('feedId'));
+  const stop=f<0?-1:geo.stops.findIndex(s=>s.feedIndex===f&&s.id===q.get('stopId'));
+  if(stop<0)return;
+  if(['0','1','2'].includes(q.get('day')))$('#map-date').value=q.get('day');
+  $('#map-feed').value=String(f);drawMap();route('map');selectStop(stop,true);
+}
 async function start(){
   route(location.hash.slice(1));window.addEventListener('hashchange',()=>route(location.hash.slice(1),true));
   try{const results=await Promise.all([fetch('data/analysis.json'),fetch('data/map-data.json')]);if(results.some(r=>!r.ok))throw new Error('分析データの読み込みに失敗しました。');[data,geo]=await Promise.all(results.map(r=>r.json()));
-    renderRidership();renderOD();renderForecast();renderCost();setupBC();renderSources();setupMap();$('#loading').hidden=true;route(lastView);
+    renderRidership();renderOD();renderForecast();renderCost();setupBC();renderSources();setupMap();$('#loading').hidden=true;route(lastView);applyTourismLink();
   }catch(e){$('#loading').hidden=true;$('#error').hidden=false;$('#error').innerHTML=esc(e.message)+' <a href="downloads/oita-transport-report.pdf">PDF報告書で確認する</a>。';}
 }
 start();
