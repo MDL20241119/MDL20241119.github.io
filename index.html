@@ -9,6 +9,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="assets/cases.css?v=20260912">
     <style>
         :root {
             --primary: #000000;
@@ -455,6 +456,7 @@
                         オンデマンド定路線型モビリティサービス<br>
                         「住宅団地のエレベーター」の導入支援。
                     </p>
+                    <a class="service-case-link" href="#creative-case"><span>アクセシビリティマップの事例を見る</span><span aria-hidden="true">↓</span></a>
                 </div>
                 
                 <!-- Service 2 -->
@@ -469,6 +471,7 @@
                         地域活性化イベントの企画・運営支援、<br>
                         地域資産活用のコンサルティング。
                     </p>
+                    <a class="service-case-link" href="#produce-case"><span>人材育成・コンソーシアムの事例を見る</span><span aria-hidden="true">↓</span></a>
                 </div>
                 
                 <!-- Service 3 -->
@@ -483,34 +486,83 @@
                         リアルタイム運行管理、モバイルオーダー、<br>
                         顧客管理等の機能カスタマイズ開発。
                     </p>
+                    <a class="service-case-link" href="#mobility-case"><span>団地のエレベーターの事例を見る</span><span aria-hidden="true">↓</span></a>
                 </div>
             </div>
         </div>
     </section>
 
     <!-- Projects Section -->
-    <section id="projects" class="section section-border bg-gray-50">
-        <div class="container-custom">
-            <h2 class="en text-2xl md:text-4xl font-bold mb-16">PROJECTS</h2>
-            
-            <div class="grid md:grid-cols-2 gap-16">
-                <!-- Project 1 -->
-                <div>
-                    <h3 class="project-title mb-6">九州の地方の住宅団地実証実験</h3>
-                    <p class="text-lg mb-4">
-                        住民約7,000人規模の住宅団地でオンデマンド定路線型モビリティサービスを実施。高齢化率43.2％の地域で一日約100人以上が利用、高齢者に特に使いやすい移動サービスとして実証に成功。
-                    </p>
-                </div>
-                
-                <!-- Project 2 -->
-                <div>
-                    <h3 class="project-title mb-6">地域共創空間のプロデュース</h3>
-                    <p class="text-lg mb-4">
-                        大手企業が主導する共創空間のプロデューサー、運営管理、コミュニティづくり。地域内外の多様な人々が交流できる場を創出し、地域経済の活性化に寄与。
-                    </p>
-                </div>
+    <section id="projects" class="section section-border bg-gray-50" aria-labelledby="projects-heading">
+      <div class="container-custom">
+        <div class="works-intro"><h2 id="projects-heading" class="en text-2xl md:text-4xl font-bold">SELECTED WORKS</h2><p>構想を、地域で動く仕組みへ。MDLの紹介事例。</p></div>
+        <nav class="case-index" aria-label="事例のカテゴリ"><a href="#creative-case">01 CREATIVE</a><a href="#produce-case">02 PRODUCE</a><a href="#mobility-case">03 MOBILITY</a></nav>
+
+        <article id="creative-case" class="work-case" aria-labelledby="creative-heading">
+          <div class="case-header"><p class="case-category"><span class="case-number">01</span>CREATIVE</p><p class="case-type">データ可視化・サービスデザイン<br>大分県 / 公開デモ</p></div>
+          <div class="case-feature">
+            <div class="case-copy">
+              <p class="case-kicker">OITA MOBILITY ATLAS</p>
+              <h3 id="creative-heading" class="case-title">その用事、<br>行って帰れる？</h3>
+              <p><strong>大分県交通空白を見つけて解消を考えるアクセシビリティマップ。</strong>病院や買い物先へのアクセス、地域にある送迎、交通空白の候補を地図で確認し、改善案を考えるためのアプリです。</p>
+              <p>人口・施設・時刻表などの公開データをつなぎ、地域の困りごとを、関係者と具体的に話せる形にしました。</p>
+              <div class="case-actions"><a href="oita-mobility/" class="case-button">アプリを使ってみる <span aria-hidden="true">↗</span></a><a href="https://drive.google.com/file/d/1bTt_c9r_rdCrFj-znXEtuUIngGnVp8Ix/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="case-button secondary">ビジュアルカタログを見る <span aria-hidden="true">↗</span></a></div>
+              <p class="case-note">カタログは16の実画面で機能と使い方を紹介。分析は収録データと設定条件の範囲で行う公開デモです。</p>
             </div>
-        </div>
+            <figure class="case-visual">
+              <a class="case-screen" href="oita-mobility/" aria-label="アクセシビリティマップを開く"><img src="assets/cases/atlas-home.webp" width="1348" height="926" loading="lazy" decoding="async" alt="アクセシビリティマップの実画面。目的地、交通空白、地域の送迎、改善案の4つの入口"></a>
+              <a class="case-screen secondary-screen" href="oita-mobility/accessibility.html" aria-label="目的地の地図を開く"><img src="assets/cases/atlas-map.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分県内の病院や買い物先を地図と一覧で確認できる実画面"></a>
+              <figcaption class="case-screen-caption">アプリの実画面 / 2026.09</figcaption>
+            </figure>
+          </div>
+        </article>
+
+        <article id="produce-case" class="work-case" aria-labelledby="produce-heading">
+          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-pink)">02</span>PRODUCE</p><p class="case-type">人材育成・地域共創<br>大分から、福岡へ、次の実装へ</p></div>
+          <div class="case-feature">
+            <div class="case-copy">
+              <p class="case-kicker">2025年度 / 国土交通省 モビリティ人材育成事業</p>
+              <h3 id="produce-heading" class="case-title">まちを教室に。<br>実装する過程で、人を育てる。</h3>
+              <p>国土交通省の令和7年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」モビリティ人材育成事業。トヨタカローラ大分を実施主体に、MDLが企画・伴走しました。</p>
+              <div class="training-record"><div class="training-number">35<span>回の取組み</span></div><p>講演・対話から、住民説明、運行準備、OJT実証、結果報告まで。</p></div>
+              <p>行政・企業・大学・学生・住民が、現場で一緒に学び、つくり、動かす。そのプロセスをnoteで紹介しています。</p>
+              <div class="case-actions"><a class="case-button" href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer">人材育成事業のnoteを読む <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <figure class="case-visual training-visual"><a href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer"><img src="assets/cases/training-note.webp" width="1280" height="670" loading="lazy" decoding="async" alt="大分モビリティ人材育成事業のnote見出し画像"></a><figcaption class="case-screen-caption">活動報告 / MDL 最高挑戦責任者 植野直亮のnote</figcaption></figure>
+          </div>
+          <section class="consortium" aria-labelledby="consortium-heading">
+            <p class="case-kicker">2026年度 / 大分未来モビリティ・コンソーシアム</p>
+            <h4 id="consortium-heading" class="case-title">人 × モノ × 場。<br>地域のハブから、次の挑戦を。</h4>
+            <p class="consortium-lead">トヨタカローラ大分を地域のハブに、行政・企業・大学・学生・住民をつなぐ取組み。モビリティや技術、Garraway 0（大分）とGarraway F（福岡）の場を組み合わせ、共創と実証を広げていく構想を、MDLが企画・伴走しています。</p>
+            <div class="consortium-gallery">
+              <figure><a class="zoom-image" href="assets/cases/consortium-people.webp" data-caption="人 × モノ × 場で、コンソーシアムを動かす"><img src="assets/cases/consortium-people.webp" width="1536" height="864" loading="lazy" decoding="async" alt="コンソーシアムの構想図。トヨタカローラ大分を中心に、行政、住民、大学、企業などの人と、モビリティ、共創の場を接続"></a><figcaption>人 × モノ × 場で、コンソーシアムを動かす <span>タップして拡大 ↗</span></figcaption></figure>
+              <figure><a class="zoom-image" href="assets/cases/consortium-hubs.webp" data-caption="Garraway 0とGarraway Fが、出会いを実装につなぐ"><img src="assets/cases/consortium-hubs.webp" width="1536" height="864" loading="lazy" decoding="async" alt="大分のGarraway 0と福岡のGarraway Fを双方向につなぎ、出会い、学び、実証、展開へ進める構想"></a><figcaption>福岡と大分を、双方向につなぐ <span>タップして拡大 ↗</span></figcaption></figure>
+              <figure><a class="zoom-image" href="assets/cases/consortium-dealer.webp" data-caption="販売店だからこそ、地域のハブになれる"><img src="assets/cases/consortium-dealer.webp" width="1536" height="864" loading="lazy" decoding="async" alt="自動車販売店が地域のハブとなり、人、モノ、場をつなぐ事業構想の紹介図"></a><figcaption>販売店の未来を、地域の未来とともにつくる <span>タップして拡大 ↗</span></figcaption></figure>
+            </div>
+            <p class="case-note">2026年度の取組みを紹介する構想資料です。写真・図版にはイメージを含み、個別の連携・実施内容には検討中のものがあります。</p>
+          </section>
+          <section class="event-case" aria-labelledby="event-case-heading">
+            <a href="oita-events/" aria-label="大分県イベントカレンダーを開く"><img src="assets/cases/oita-events.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分県イベントカレンダーの実画面。2026年9月から2027年2月までのイベントを掲載"></a>
+            <div><p class="case-kicker">MDL SPECIAL SITE / 2026.09 - 2027.02</p><h4 id="event-case-heading" class="case-title">地域のイベントを、<br>モビリティ連携のきっかけに。</h4><p>開催日や会場に加え、大分県の主催・共催・後援などの関わりを見える化。地域の催しと新しい移動の接点を考えるための特設サイトです。</p><div class="case-actions"><a href="oita-events/" class="case-button light">大分県イベントカレンダーを見る <span aria-hidden="true">↗</span></a></div></div>
+          </section>
+        </article>
+
+        <article id="mobility-case" class="work-case" aria-labelledby="mobility-heading">
+          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-cyan)">03</span>MOBILITY</p><p class="case-type">アプリ開発・地域での実証<br>富士見ヶ丘団地 / 大分市</p></div>
+          <div class="case-feature">
+            <div class="case-copy">
+              <p class="case-kicker">富士見ヶ丘団地「団地のエレベーター」</p>
+              <h3 id="mobility-heading" class="case-title">その一歩を、<br>もっと気軽に。</h3>
+              <p>坂道のある団地で、買い物や地域の集まりへ。必要なときに呼び出して、決められた乗降場所の間を移動する、オンデマンド定路線型の乗合サービスです。</p>
+              <p>住民との対話から、使いやすいアプリ、運行の準備、実証と改善まで。実際の利用者画面を使い、仕組みと使い方をカタログにまとめました。</p>
+              <dl class="case-stats"><div><dt>運行日</dt><dd>10</dd></div><div><dt>実利用人数</dt><dd>72</dd></div><div><dt>延べ乗車回数</dt><dd>342</dd></div></dl>
+              <p class="case-note">2025年度の富士見ヶ丘団地実証の記録。現在の運行状況を示すものではありません。</p>
+              <div class="case-actions"><a href="danchi-elevator/" class="case-button">Webカタログを見る <span aria-hidden="true">↗</span></a><a href="assets/catalogs/danchi-elevator-catalog.pdf" target="_blank" rel="noopener" class="case-button secondary">PDFを開く（4ページ） <span aria-hidden="true">↗</span></a></div>
+            </div>
+            <figure class="case-visual"><a href="danchi-elevator/" class="catalog-cover"><img src="assets/cases/danchi-catalog-1.webp" width="1432" height="1012" loading="lazy" decoding="async" alt="団地のエレベーター紹介カタログの表紙。実際の予約アプリ画面とサービス概要"></a><figcaption class="catalog-cover-caption">サービス概要・使い方・暮らしとのつながり・導入支援を紹介。</figcaption></figure>
+          </div>
+        </article>
+      </div>
     </section>
 
     <!-- Value Proposition -->
@@ -537,7 +589,7 @@
                             <li><span class="font-bold">明確さ：</span>「モビリティを軸にした地方創生と地域の笑顔を実現」</li>
                             <li><span class="font-bold">顧客中心：</span>地域の特性や課題に寄り添い、地域住民にとって本当に使いやすく、喜ばれるサービス設計</li>
                             <li><span class="font-bold">差別化：</span>競合にはない「モビリティ×コミュニティ×デジタル」を融合した独自のソリューション提供</li>
-                            <li><span class="font-bold">検証可能：</span>九州の地方自治体にある住宅団地で実証実験を行い、一日約100人以上の利用者が高評価を示した実績</li>
+                            <li><span class="font-bold">検証可能：</span>富士見ヶ丘団地の実証では、10日間で延べ342回の乗車。利用実績と現場の声を、次の改善に生かす</li>
                         </ul>
                     </div>
                 </div>
@@ -581,5 +633,10 @@
             </div>
         </div>
     </footer>
+    <dialog id="case-lightbox" class="case-lightbox" aria-labelledby="lightbox-caption">
+      <div class="lightbox-toolbar"><p id="lightbox-caption"></p><button class="lightbox-close" type="button" aria-label="拡大画像を閉じる">×</button></div>
+      <img class="lightbox-image" alt=""><a class="lightbox-original" href="#" target="_blank" rel="noopener">画像だけで開く（拡大表示） ↗</a>
+    </dialog>
+    <script src="assets/cases.js?v=20260912" defer></script>
 </body>
 </html>
