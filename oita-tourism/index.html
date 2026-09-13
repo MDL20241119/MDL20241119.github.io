@@ -5,8 +5,8 @@
 <meta name="description" content="大分の観光統計を、地域の交通と一緒に見る。由布・別府・日出・宇佐・大分・国東の宿泊、消費、滞在、混雑の課題を、出典とともに確認できるMDLの公開データアプリ。">
 <title>大分観光・周遊データマップ｜モビリティデザインラボ</title>
 <link rel="icon" href="../oita-mobility/assets/favicon.svg" type="image/svg+xml">
-<link rel="stylesheet" href="../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="neo-swiss.css?v=2">
-<script defer src="../oita-mobility/assets/leaflet.js"></script><script type="module" src="app.mjs?v=2"></script>
+<link rel="stylesheet" href="../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="style.css?v=2"><link rel="stylesheet" href="neo-swiss.css?v=3">
+<script defer src="../oita-mobility/assets/leaflet.js"></script><script type="module" src="app.mjs?v=3"></script>
 </head>
 <body>
 <a href="#main" class="skip">内容へ移動</a>
@@ -23,7 +23,7 @@
 </nav><div class="sidebar-note"><span class="eyebrow">PUBLIC DATA EDITION</span><p>観光の数字を、<br>地域での次の一手へ。</p><small>MDLが公開資料を編集。<br>県の公式サービスではありません。</small><a href="https://oita-tourism-data-catalog.com/" target="_blank" rel="noopener noreferrer">県の公式カタログ ↗</a></div></aside>
 <main id="main" tabindex="-1">
 <div class="page-heading"><div><p class="eyebrow">OITA TOURISM × MOBILITY</p><h1>大分観光・周遊<span class="title-tail">データマップ</span></h1><p class="intro">観光の特徴と移動の条件から、地域でできることを考える。</p></div><button class="button small" id="share" type="button">この画面を共有 <span aria-hidden="true">↗</span></button></div>
-<section class="controls" aria-label="地域と利用目的"><label class="area-label">調べる地域<select id="area"><option value="all">大分県・６市町</option></select></label><label class="role-label">使う方<select id="role"><option value="government">自治体・観光協会</option><option value="facility">宿泊・観光施設</option><option value="transport">交通事業者</option></select></label><div class="research-date"><span>観光調査の整理日</span><strong>2026.09.13</strong><small>実績の対象年は数字ごとに表示</small></div></section>
+<section class="controls" aria-label="地域と利用目的"><label class="area-label">調べる地域<select id="area"><option value="all">大分県全体</option></select></label><label class="role-label">使う方<select id="role"><option value="government">自治体・観光協会</option><option value="facility">宿泊・観光施設</option><option value="transport">交通事業者</option></select></label><div class="research-date"><span>観光調査の整理日</span><strong>2026.09.13</strong><small>実績の対象年は数字ごとに表示</small></div></section>
 <div id="role-guide" class="role-guide"></div>
 <div id="loading" class="empty" role="status">観光データを読み込んでいます…</div>
 <div id="error" class="notice error" role="alert" hidden></div>
