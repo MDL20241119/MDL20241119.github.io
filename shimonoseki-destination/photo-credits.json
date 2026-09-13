@@ -1,0 +1,292 @@
+{
+  "assets": [
+    {
+      "id": "kanmon",
+      "title": "關門橋-Kanmon Bridge.jpg",
+      "title_ja": "関門海峡と関門橋",
+      "caption_ja": "関門海峡・下関側から見た関門橋",
+      "alt_ja": "関門海峡・下関側から見た関門橋",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:%E9%97%9C%E9%96%80%E6%A9%8B-Kanmon_Bridge.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/%E9%97%9C%E9%96%80%E6%A9%8B-Kanmon_Bridge.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/45/%E9%97%9C%E9%96%80%E6%A9%8B-Kanmon_Bridge.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "Wei-Te Wong",
+      "creator_url": "https://www.flickr.com/people/wongwt/",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "license_selected": "CC BY-SA 2.0",
+      "original_dimensions": [
+        7559,
+        3452
+      ],
+      "downloaded_dimensions": [
+        7559,
+        3452
+      ],
+      "dimensions": [
+        2560,
+        1169
+      ],
+      "attribution": "關門橋-Kanmon Bridge.jpg — Wei-Te Wong / Wikimedia Commons / CC BY-SA 2.0",
+      "attribution_ja": "写真：Wei-Te Wong / Wikimedia Commons / CC BY-SA 2.0（縮小・WebP変換）",
+      "modifications": "Resized from 7559 × 3452 to 2560 × 1169 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY-SA 2.0",
+      "derivative_license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "형식은 표준적인 3경간의 현수교이며, 보강형은 트러스이다. 교량 등의 방식법에는 용사(溶射)가 채용되었다. 간몬 해협은 대형 선박도 항행하는 중요 항로인 관계로, 다리에서 해면까지는 61 m의 높이를 확보하고 있다. 1973년도 토목학회 다나카 상(작품부문)을 수상하였다.",
+      "sha256": "0134cc3ff99ae9a13ab5cbe3a63a50c9f24f726deade4bdbc01ce6d56fa1f2b9",
+      "file_bytes": 407242,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility.",
+      "site_asset": "assets/kanmon.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "sushi",
+      "title": "Inside view of Karato Fish Market (2)20200113.jpg",
+      "title_ja": "唐戸市場の寿司",
+      "caption_ja": "唐戸市場で並ぶ寿司",
+      "alt_ja": "唐戸市場で並ぶ寿司",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Inside_view_of_Karato_Fish_Market_(2)20200113.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Inside_view_of_Karato_Fish_Market_%282%2920200113.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/e1/Inside_view_of_Karato_Fish_Market_%282%2920200113.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "Rick888chen",
+      "creator_url": "https://commons.wikimedia.org/wiki/User:Rick888chen",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_selected": "CC BY-SA 4.0",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "downloaded_dimensions": [
+        6000,
+        4000
+      ],
+      "dimensions": [
+        1800,
+        1200
+      ],
+      "attribution": "Inside view of Karato Fish Market (2)20200113.jpg — Rick888chen / Wikimedia Commons / CC BY-SA 4.0",
+      "attribution_ja": "写真：Rick888chen / Wikimedia Commons / CC BY-SA 4.0（縮小・WebP変換）",
+      "modifications": "Resized from 6000 × 4000 to 1800 × 1200 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY-SA 4.0",
+      "derivative_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "Sushi sold by vendors at Karato Fish Market",
+      "sha256": "25801a391c0b6b644f933d2c31391cc6812319d21f4778721935ead8a70be450",
+      "file_bytes": 368306,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility. Source photo from 2020. Incidental old price labels must not be presented as current prices. Background figures have no visible close-up faces.",
+      "site_asset": "assets/sushi.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "soba",
+      "title": "Kawara soba by woinary in Moji, Fukuoka.jpg",
+      "title_ja": "瓦そば",
+      "caption_ja": "瓦そば（門司港で撮影）",
+      "alt_ja": "瓦そば（門司港で撮影）",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Kawara_soba_by_woinary_in_Moji,_Fukuoka.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kawara_soba_by_woinary_in_Moji%2C_Fukuoka.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/Kawara_soba_by_woinary_in_Moji%2C_Fukuoka.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "woinary (Yamaguchi Yoshiaki)",
+      "creator_url": "https://www.flickr.com/people/woinary/",
+      "license": "CC BY-SA 2.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "license_selected": "CC BY-SA 2.0",
+      "original_dimensions": [
+        1280,
+        853
+      ],
+      "downloaded_dimensions": [
+        1280,
+        853
+      ],
+      "dimensions": [
+        1280,
+        853
+      ],
+      "attribution": "Kawara soba by woinary in Moji, Fukuoka.jpg — woinary (Yamaguchi Yoshiaki) / Wikimedia Commons / CC BY-SA 2.0",
+      "attribution_ja": "写真：woinary (Yamaguchi Yoshiaki) / Wikimedia Commons / CC BY-SA 2.0（縮小・WebP変換）",
+      "modifications": "Dimensions preserved at 1280 × 853 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY-SA 2.0",
+      "derivative_license_url": "https://creativecommons.org/licenses/by-sa/2.0",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "川棚温泉名物瓦そば。門司港にある支店にて。Kawara soba / 瓦そば",
+      "sha256": "741cf558fccf3d7acadd247f7641b43326f30a30754f4ebbdca3510c953db927",
+      "file_bytes": 235416,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility. Depicts kawara soba at the Mojiko branch of Ganso Kawara Soba Takase, photographed 2008-01-26. Caption must not imply that this photo was taken in Shimonoseki or shows a current partner/menu.",
+      "site_asset": "assets/soba.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "karato",
+      "title": "141122 Karato Fish Market Shimonoseki Yamaguchi pref Japan01s3.jpg",
+      "title_ja": "唐戸市場",
+      "caption_ja": "唐戸桟橋から見た唐戸市場",
+      "alt_ja": "唐戸桟橋から見た唐戸市場",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:141122_Karato_Fish_Market_Shimonoseki_Yamaguchi_pref_Japan01s3.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/141122_Karato_Fish_Market_Shimonoseki_Yamaguchi_pref_Japan01s3.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/4/42/141122_Karato_Fish_Market_Shimonoseki_Yamaguchi_pref_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "663highland",
+      "creator_url": "https://ja.wikipedia.org/wiki/user:663highland",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "license_selected": "CC BY 2.5",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "downloaded_dimensions": [
+        6000,
+        4000
+      ],
+      "dimensions": [
+        1800,
+        1200
+      ],
+      "attribution": "141122 Karato Fish Market Shimonoseki Yamaguchi pref Japan01s3.jpg — 663highland / Wikimedia Commons / CC BY 2.5",
+      "attribution_ja": "写真：663highland / Wikimedia Commons / CC BY 2.5（縮小・WebP変換）",
+      "modifications": "Resized from 6000 × 4000 to 1800 × 1200 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY 2.5",
+      "derivative_license_url": "https://creativecommons.org/licenses/by/2.5",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "Karato Fish Market in Shimonoseki, Yamaguchi prefecture, Japan.",
+      "sha256": "6ebbe1a315b6a8374a2cf132adf4b92c07bce52dc88fbaa9b8aa719e5d4be5c9",
+      "file_bytes": 381864,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility. Incidental distant pedestrians appear; none is the photograph subject. Avoid cropping to isolate or enlarge a person.",
+      "site_asset": "assets/karato.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "akama",
+      "title": "Akama-jingu 20170223.jpg",
+      "title_ja": "赤間神宮",
+      "caption_ja": "赤間神宮の水天門と、その向こうの海",
+      "alt_ja": "赤間神宮の水天門と、その向こうの海",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Akama-jingu_20170223.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Akama-jingu_20170223.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/d7/Akama-jingu_20170223.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "Suicasmo",
+      "creator_url": "https://commons.wikimedia.org/wiki/User:Suicasmo",
+      "license": "CC BY-SA 4.0",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "license_selected": "CC BY-SA 4.0",
+      "original_dimensions": [
+        5184,
+        3456
+      ],
+      "downloaded_dimensions": [
+        5184,
+        3456
+      ],
+      "dimensions": [
+        1800,
+        1200
+      ],
+      "attribution": "Akama-jingu 20170223.jpg — Suicasmo / Wikimedia Commons / CC BY-SA 4.0",
+      "attribution_ja": "写真：Suicasmo / Wikimedia Commons / CC BY-SA 4.0（縮小・WebP変換）",
+      "modifications": "Resized from 5184 × 3456 to 1800 × 1200 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY-SA 4.0",
+      "derivative_license_url": "https://creativecommons.org/licenses/by-sa/4.0",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "Akama-jingu",
+      "sha256": "288736716bd7f04c6d73db9c5acac8fecbf77e859693607a3bad5ae33f264681",
+      "file_bytes": 282994,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility.",
+      "site_asset": "assets/akama.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "mojiko",
+      "title": "140721 Mojiko Retro Kitakyushu Japan01s3.jpg",
+      "title_ja": "門司港レトロ",
+      "caption_ja": "門司港レトロの水辺",
+      "alt_ja": "門司港レトロの水辺",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:140721_Mojiko_Retro_Kitakyushu_Japan01s3.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/d/db/140721_Mojiko_Retro_Kitakyushu_Japan01s3.jpg",
+      "downloaded_image_url": "https://thumb.wikimedia.org/wikipedia/commons/thumb/d/db/140721_Mojiko_Retro_Kitakyushu_Japan01s3.jpg/960px-140721_Mojiko_Retro_Kitakyushu_Japan01s3.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=thumbnail",
+      "creator": "663highland",
+      "creator_url": "https://ja.wikipedia.org/wiki/user:663highland",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "license_selected": "CC BY 2.5",
+      "original_dimensions": [
+        6000,
+        4000
+      ],
+      "downloaded_dimensions": [
+        960,
+        640
+      ],
+      "dimensions": [
+        960,
+        640
+      ],
+      "attribution": "140721 Mojiko Retro Kitakyushu Japan01s3.jpg — 663highland / Wikimedia Commons / CC BY 2.5",
+      "attribution_ja": "写真：663highland / Wikimedia Commons / CC BY 2.5（縮小・WebP変換）",
+      "modifications": "Dimensions preserved at 960 × 640 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY 2.5",
+      "derivative_license_url": "https://creativecommons.org/licenses/by/2.5",
+      "verified_on": "2026-09-13",
+      "verification_notes": "Location and explicit photo reuse license checked on the Commons description page and its imageinfo metadata; own-work or Flickr review provenance available there.",
+      "description_from_source": "Mojiko Retro in Kitakyushu, Fukuoka prefecture, Japan.",
+      "sha256": "146e8d3723b8d1d4548e72a099429f33d061541280acfeb9bfe991254d56e01d",
+      "file_bytes": 229620,
+      "recommended_object_position": "50% 50%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility. Supplied asset uses the already downloaded 960 × 640 Wikimedia thumbnail without upscaling. Suitable for a small secondary card; the original is 6000 × 4000. The original download returned Retry-After: 600 seconds, which was respected.",
+      "site_asset": "assets/mojiko.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    },
+    {
+      "id": "night",
+      "title": "Kanmon-yakei2.jpg",
+      "title_ja": "関門海峡の夜景",
+      "caption_ja": "下関から望む関門海峡の夜景",
+      "alt_ja": "下関から望む関門海峡の夜景",
+      "source_page_url": "https://commons.wikimedia.org/wiki/File:Kanmon-yakei2.jpg",
+      "source_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Kanmon-yakei2.jpg",
+      "downloaded_image_url": "https://upload.wikimedia.org/wikipedia/commons/e/ec/Kanmon-yakei2.jpg?utm_source=commons.wikimedia.org&utm_campaign=imageinfo&utm_content=original",
+      "creator": "Takasunrise0921",
+      "creator_url": "https://ja.wikipedia.org/wiki/user:Takasunrise0921",
+      "license": "CC BY 2.5",
+      "license_url": "https://creativecommons.org/licenses/by/2.5",
+      "license_selected": "CC BY 2.5",
+      "original_dimensions": [
+        1800,
+        1196
+      ],
+      "downloaded_dimensions": [
+        1800,
+        1196
+      ],
+      "dimensions": [
+        1800,
+        1196
+      ],
+      "attribution": "Kanmon-yakei2.jpg — Takasunrise0921 / Wikimedia Commons / CC BY 2.5",
+      "attribution_ja": "写真：Takasunrise0921 / Wikimedia Commons / CC BY 2.5（縮小・WebP変換）",
+      "modifications": "Dimensions preserved at 1800 × 1196 pixels; re-encoded from JPEG to WebP. No crop, retouching, color adjustment or AI modification.",
+      "derivative_license": "CC BY 2.5",
+      "derivative_license_url": "https://creativecommons.org/licenses/by/2.5",
+      "verified_on": "2026-09-13",
+      "verification_notes": "The source page wikitext, retrieved via Commons API, states 関門海峡の夜景, categorizes the photo as Night in Shimonoseki, and explicitly offers CC BY 2.5 alongside GFDL and CC BY-SA. CC BY 2.5 selected. The English description contains a day/night typo; Japanese description, categories and the actual photo confirm night.",
+      "description_from_source": "the Kanmon Channel(day)",
+      "sha256": "a98762e7fd84065e5eb83110ccf73f07913f399b7771e3afce4c933ee61bb5ce",
+      "file_bytes": 104628,
+      "recommended_object_position": "50% 80%",
+      "use_notes": "Photograph of the existing region; do not present as an image of a proposed future facility. Photograph dated 2006-08-28. Frame is sky-heavy; for a shallow banner use object-position: 50% 80% and disclose display cropping in the site credits if used.",
+      "site_asset": "assets/night.webp",
+      "display_modifications": "表示枠に合わせたCSSによるトリミング。色調変更なし。写真単体・トリミング表示は記載の同一ライセンスを継承。"
+    }
+  ],
+  "guidance": "Use supplied attribution with source-page and license links in site photo credits. Keep CC BY-SA image derivatives under the same stated image license. The licenses do not imply creator, municipality, venue, or business endorsement. All images depict existing places or regional dishes, not proposed facilities. Record any additional display crops in final photo credits."
+}
