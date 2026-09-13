@@ -1,0 +1,216 @@
+{
+  "verified_at": "2026-09-13",
+  "scope": "世界の制度・構成の確認と、MDLによる下関への転用案。因果評価・収益性評価・投資判断ではありません。",
+  "cases": [
+    {
+      "id": "pike-place",
+      "name": "Pike Place Market",
+      "city": "Seattle",
+      "headline": "小さな商いを、制度で支える。",
+      "fact": "運営主体PDAは非営利の公共法人。市場の保存だけでなく、農家・食品小売の機会拡大、小規模事業の育成、低所得者向けサービスを憲章に定める。工芸出店では、つくり手自身が売場に立つ原則もある。",
+      "inference": "観光と地元の商いを両立させるには、出店方針と運営使命を契約・制度に落とすことが参考になる。",
+      "proposal": "小さな区画・短期出店・地元調達の評価と、生産者に会える売場を設ける。",
+      "sources": [
+        {
+          "url": "https://www.pikeplacemarket.org/about-pike-place-market/governance/",
+          "title": "Pike Place Market — Governance",
+          "locator": "Management & Oversight; Charter of the Pike Place Market PDA",
+          "proof": "PDAの公共法人としての性格、1973年運営開始、4つの使命。"
+        },
+        {
+          "url": "https://www.pikeplacemarket.org/join-our-community/become-a-pike-place-market-craftsperson/",
+          "title": "Pike Place Market — Become a Craftsperson",
+          "locator": "Qualifications",
+          "proof": "locally handmade crafts / artist must regularly sell on Daystall Tables。"
+        }
+      ],
+      "limits": "PDAと寄付を集めるMarket Foundationは別主体。地域内所得率の高さや全商店の収益性は本資料から未確認。約450人を一律に『低所得住民』とするのは避ける。"
+    },
+    {
+      "id": "granville",
+      "name": "Granville Island",
+      "city": "Vancouver",
+      "headline": "市場の収益で、文化を支える。",
+      "fact": "CMHCが管理する地区に、市場、工房、芸術・文化の場が共存する。CMHC委託の2040構想は、市場の賃料収入が島の芸術・文化活動を支えていると明記し、市場の夜間活用も提案する。",
+      "inference": "集客用途と文化用途を一つの運営単位として考え、収支を地区全体で設計する考え方が参考になる。",
+      "proposal": "飲食等の営業余剰の一部を、学生スペース、創業区画、地元文化のプログラムへ還元する。",
+      "sources": [
+        {
+          "url": "https://granvilleisland2040.ca/strategies/strategy-2/",
+          "title": "Granville Island 2040 — Strategy 2",
+          "locator": "冒頭段落とKey Actions",
+          "proof": "市場賃料による芸術文化支援を明記。Activate the Market in the eveningsは計画上のアクション。"
+        },
+        {
+          "url": "https://granvilleisland2040.ca/",
+          "title": "Granville Island 2040 — Vision",
+          "locator": "Vision for the Future of Granville Island",
+          "proof": "CMHC委託の長期構想と1970年代の再開発。"
+        },
+        {
+          "url": "https://granvilleisland.com/",
+          "title": "Granville Island — Official visitor information",
+          "locator": "Directory; arts and cultural events; footer CMHC管理表示",
+          "proof": "現行の市場・文化イベント・工房等の用途とCMHC管理。"
+        }
+      ],
+      "limits": "2017年の2040計画に載る増床・Arts Hub・夜間活性化は、全て完成済みとは扱わない。クロスサブシディーの金額・最新収支は未確認。"
+    },
+    {
+      "id": "lisbon",
+      "name": "Time Out Market Lisboa",
+      "city": "Lisbon",
+      "headline": "街の食を、選んで届ける。",
+      "fact": "Time Outの編集チームが選ぶ食と文化の場として、2014年に開業。飲食・物販・催事の側と、肉・魚・果物・花を扱う従来の市場の側が、一つの建物に共存している。",
+      "inference": "『どの街にもある店の集合』を避け、地域を知る編集者が何を選ぶかに責任を持つ運営が参考になる。",
+      "proposal": "下関の食の編集会議を置き、瓦そば・ふぐ・鮮魚・地酒・菓子を、生産地やつくり手の物語と合わせて選ぶ。",
+      "sources": [
+        {
+          "url": "https://www.timeout.com/time-out-market-lisboa/concept",
+          "title": "Time Out Market Lisboa — Who we are",
+          "locator": "2024-11-29記事本文3段落",
+          "proof": "編集チームによる選定、2014年開始、従来の食料品市場との共存。"
+        },
+        {
+          "url": "https://www.timeout.com/time-out-market-lisboa",
+          "title": "Time Out Market Lisboa — Official overview",
+          "locator": "Who we are; All about the Market",
+          "proof": "Mercado da Ribeiraの所在地、現行の飲食・催事・料理学校の構成。"
+        }
+      ],
+      "limits": "『街で一番良い』は運営者の編集判断であり客観ランキングではない。Cais do Sodréの交通結節点に近いことと、下関駅が関門航路に直接接続することは別。下関は唐戸港への陸上移動を明示する。"
+    },
+    {
+      "id": "bilbao",
+      "name": "Bilbao Ría 2000 / Abandoibarra",
+      "city": "Bilbao",
+      "headline": "目的地の先に、街をつなぐ。",
+      "fact": "公的主体が出資する非営利会社Bilbao Ría 2000は、都市計画・交通・環境を一体で調整。旧造船所・港湾・鉄道用地を、川沿いの遊歩道、公園、住宅、経済活動の場へ段階的に転換した。",
+      "inference": "象徴的な施設だけでなく、施設の間を歩き、滞在し、別の場所へ移る仕組みまで一体で設計する点を学べる。",
+      "proposal": "駅前・唐戸・海響館・赤間神宮・長府・門司港を、交通と街歩きを含む一続きの滞在体験にする。",
+      "sources": [
+        {
+          "url": "https://www.bilbaoria2000.org/en/bilbao-ria-2000/what-is-bilbao-ria-2000/",
+          "title": "Bilbao Ría 2000 — What is it?",
+          "locator": "What is BILBAO Ría 2000? / What does it do?",
+          "proof": "非営利公共会社、都市計画・交通・環境の統合。"
+        },
+        {
+          "url": "https://www.bilbaoria2000.org/en/actions/abandoibarra/",
+          "title": "Bilbao Ría 2000 — Abandoibarra",
+          "locator": "冒頭3段落; DATA SHEET",
+          "proof": "産業・鉄道跡の用途転換、段階整備、公園・歩道・住宅等。"
+        }
+      ],
+      "limits": "美術館だけで都市再生・回遊が実現したとの因果は示せない。大丸跡が同規模の集客装置になると推論しない。"
+    },
+    {
+      "id": "battersea",
+      "name": "Battersea Power Station",
+      "city": "London",
+      "headline": "既存の建物を、行く理由に。",
+      "fact": "旧発電所を核に、住まい、オフィス、飲食・商業、余暇の場を整備。Northern Line延伸の新駅が地区を支え、段差のない出入口と歩行者空間への接続も改善している。",
+      "inference": "既存資産の特徴を体験に変えることと、そこへ到達しやすくすることを同じ計画で考える点が参考になる。",
+      "proposal": "大丸跡では海峡の食・文化体験を来訪理由にし、駐車場・バス・駅・歩行動線を最初から設計する。",
+      "sources": [
+        {
+          "url": "https://batterseapowerstation.co.uk/news/new-step-free-underground-entrance-opens-at-bps/",
+          "title": "Battersea Power Station — New Step Free Underground Entrance",
+          "locator": "2025-10-06、延伸駅の開業と後段mixed-use説明",
+          "proof": "2021年延伸、新たな段差のない出入口、複合用途、未完成部分が存在。"
+        },
+        {
+          "url": "https://batterseapowerstation.co.uk/news/gehry-partners-designed-next-phase-of-battersea-power-station-development-to-progress/",
+          "title": "Battersea Power Station — Next Phase Following Planning Consent",
+          "locator": "2025-05-01、最終3段落",
+          "proof": "歴史建物を核とした地区再生、住宅・商業・仕事・次段階の計画。"
+        }
+      ],
+      "limits": "ロンドンの住宅・業務需要と資金調達は下関の条件と異なる。対象建物の建築的価値・構造・設備は、現地調査と専門評価が必要。"
+    },
+    {
+      "id": "kings-cross",
+      "name": "King’s Cross",
+      "city": "London",
+      "headline": "毎日来る理由を、重ねる。",
+      "fact": "旧鉄道・工業地区に、仕事、住まい、商業、学校、広場を組み合わせた。Central Saint Martinsは旧穀物倉庫に入り、Coal Drops Yardでは石炭搬送施設を保存・転用している。",
+      "inference": "乗換客の立寄りだけに依存せず、学ぶ・働く・暮らす人が日々訪れる用途を重ねる発想が参考になる。",
+      "proposal": "駅前に食・観光の目的と、学習、仕事、子育てなどの生活目的を重ね、平日にも使う拠点にする。",
+      "sources": [
+        {
+          "url": "https://www.kingscross.co.uk/press/2021/10/08/the-kings-cross-estate-celebrates-10-year-anniversary",
+          "title": "King’s Cross — 10-year anniversary",
+          "locator": "2021-10-08、冒頭・Community",
+          "proof": "複合用途、CSM、学校・公共施設、18000 jobs capacityの定義。"
+        },
+        {
+          "url": "https://www.kingscross.co.uk/coal-drops",
+          "title": "King’s Cross — The Coal Drops",
+          "locator": "Then / and now",
+          "proof": "旧石炭搬送施設の保存・商業用途への転用。"
+        }
+      ],
+      "limits": "駅を使わなくても行く理由という提案は妥当だが、『車優先』の根拠になる事例ではない。業務需要と交通集積の条件差を留保する。"
+    },
+    {
+      "id": "markthal",
+      "name": "Markthal",
+      "city": "Rotterdam",
+      "headline": "買い物の場所を、体験にする。",
+      "fact": "市場を覆う大きなアーチに住宅を組み込み、飲食と地下駐車場も併設。内部の巨大な壁画と、地元商人を含む食の売場が、一つの空間をつくっている。",
+      "inference": "食を買う機能に、つくる光景・空間・アートを重ねると、訪れたくなる体験を設計できる。",
+      "proposal": "ふぐ職人の仕事、瓦そばの仕上げ、地域作家の表現を見える場所に置き、食べる前から楽しめる市場をつくる。",
+      "sources": [
+        {
+          "url": "https://www.mvrdv.com/projects/115/markthal",
+          "title": "MVRDV — Markthal",
+          "locator": "Project description、hybrid building / fresh food stalls / Cornucopia",
+          "proof": "設計者による用途、地域事業者、壁画の説明。"
+        }
+      ],
+      "limits": "設計者の説明は建築構成の一次資料であり、市場商人の継続収益、地域所得、現在の稼働率を証明する資料ではない。"
+    },
+    {
+      "id": "medellin",
+      "name": "Medellín",
+      "city": "Medellín",
+      "headline": "移動の先に、暮らしをひらく。",
+      "fact": "丘陵部と都市の機会を結ぶ交通整備に、歩行空間、図書館、学校、広場などの公共施設を組み合わせた。世界銀行の現地報告は、交通と公共空間を一体で考える包摂の設計を紹介する。",
+      "inference": "観光客を運ぶだけでなく、市民が仕事・学び・サービスへ到達できるかまで、移動の価値として測る視点が参考になる。",
+      "proposal": "KANMON LOOPでは観光周遊に加え、地元の通勤・通院・買い物、待合環境、車いすや子連れの乗継も設計する。",
+      "sources": [
+        {
+          "url": "https://blogs.worldbank.org/en/endpovertyinsouthasia/what-can-south-asian-cities-learn-colombias-medellin",
+          "title": "World Bank — What can South Asian cities learn from Colombia’s Medellin?",
+          "locator": "2015-11-03、What happened in Medellin? / Public spaces enhance inclusion",
+          "proof": "世界銀行専門家の現地報告。交通、歩行・自転車動線、公共施設と公共空間の統合。"
+        }
+      ],
+      "limits": "本文は世界銀行専門家の政策・現地観察であり、厳密な反実仮想を置いた因果評価ではない。治安改善・貧困削減を交通単独の効果としない。ケーブルカーと屋外エスカレーターは別施設・別事業で、一つの同一交通事業にまとめない。"
+    },
+    {
+      "id": "singapore",
+      "name": "Chinatown / Smith Street",
+      "city": "Singapore",
+      "headline": "商いの歴史を、次の価値に。",
+      "fact": "Smith Streetの2023年公募は、歴史保全と文化・飲食・仕事などの用途を組み合わせ、価格だけでなく提案内容を評価。NHBの制度は、地域に根づく老舗の認定と発信・経営面の支援を行う。",
+      "inference": "歴史ある店を看板として残すだけでなく、文化を伝える活動と持続する経営を一緒に支える制度が参考になる。",
+      "proposal": "SHIMONOSEKI HERITAGE BUSINESS（仮称）で、老舗の物語・技・後継者を可視化し、新商品や体験を共同で育てる。",
+      "sources": [
+        {
+          "url": "https://www.ura.gov.sg/news/media/pr23-47/",
+          "title": "URA — Rejuvenating Smith Street",
+          "locator": "2023-11-30、Key objectives; Price-Quality tender",
+          "proof": "歴史保全、複合用途、公募の価格30%・CAPEX20%・品質50%、単一マスターテナント。"
+        },
+        {
+          "url": "https://www.mccy.gov.sg/about-us/news-and-resources/digital-support-and-tools-to-expand-businesses-presence-under-the-sg-heritage-business-scheme/",
+          "title": "MCCY — Digital Support and Tools under SG Heritage Business Scheme",
+          "locator": "2026-03-03、Response 1–3",
+          "proof": "同地域30年以上などの要件、NHB認定、直接給付なし、発信・ブランディング・経営相談支援。"
+        }
+      ],
+      "limits": "『100年以上の店だけの制度』ではない。『地元商売を消さなかった』という成果保証や、家賃低減・直接補助金をこの認定制度が提供するという説明は不可。Smith Streetの公募条件は計画の事実であり全ての用途の実現・成功を意味しない。"
+    }
+  ]
+}

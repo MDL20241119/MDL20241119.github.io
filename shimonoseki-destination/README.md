@@ -1,4 +1,4 @@
-# 下関、夜のものがたり。 / 関門滞在拠点構想
+# SHIMONOSEKI LOCAL & GLOBAL LOOP / 関門滞在拠点構想
 
 Public independent concept by Mobility Design Lab. Published 2026-09-13 at https://mobilitydlab.com/shimonoseki-destination/ through the existing repository's GitHub Pages workflow. This is an informational concept, not a booking, sales, tenant recruitment, official redevelopment or transport operating service.
 
@@ -12,7 +12,7 @@ Public independent concept by Mobility Design Lab. Published 2026-09-13 at https
 
 ## Materials and visitor data
 
-The current edition uses six original AI-generated Naive Zine assets. The existing boat, navigation and food scenes are joined by `assets/history-scenes.webp`, `assets/theatre-scene.webp` and `assets/local-work-scene.webp`. The history image is a four-scene sheet displayed in four CSS viewports; its subjects are conceptual illustrations for the proposed storytelling, not portraits or historical reconstructions. The additional prompts are recorded in `illustration-prompts.json`. They communicate proposed experiences, not actual venue interiors, historical reconstructions or official mascots. The page explains this once in the illustration note. Earlier licensed photographs remain archived in the repository; their metadata is in `photo-credits.json`. They are not displayed in this edition.
+The current edition uses nine original AI-generated Naive Zine assets. The boat, navigation, food, history, theatre and local-work scenes are joined by `assets/case-food-sheet.webp`, `assets/case-city-sheet.webp` and `assets/case-connection-sheet.webp`. Each new sheet contains four vignettes displayed in CSS viewports: three world-case mechanisms and a fourth Shimonoseki adaptation. The new prompts are recorded in `global-loop-illustration-prompts.json`; earlier prompts are in `illustration-prompts.json`. These are conceptual illustrations, not portraits, surveyed architecture, documentary photographs, approved interiors or official mascots. The page explains this once in the illustration note. Earlier licensed photographs remain archived in the repository; their metadata is in `photo-credits.json`. They are not displayed on the special-site page in this edition.
 
 The locally hosted Yomogi font is a subset of the official Google Fonts release (https://github.com/google/fonts/tree/main/ofl/yomogi), under the SIL Open Font License in `assets/Yomogi-OFL.txt`. `scripts/subset-font.py` rebuilds the WOFF when supplied the original TTF. Update the subset after adding text.
 
@@ -20,7 +20,25 @@ No third-party character, logo, corporate confidential material, personal operat
 
 ## Illustration-first reading
 
-The four history chapters and three night experiences open with large illustrations and short captions. Creative-experience details and map rationale remain available in native disclosure panels. Map tabs show thumbnails of the actual three diagrams, while all original map panels, course options, sources, caveats and independent keyboard controls remain present. The regional diagrams retain their original precise SVG geometry and responsive variants. A larger community illustration explains who receives local work. `illustrations.css` provides this reading layer over the existing site styles.
+The opening overview connects four actions: attract visitors, explore, stay, and pay local people. Nine case cards are organized into three chapters: food and local business; existing places and repeated visits; experience and access. Each uses one large image and one short lesson, followed by a Shimonoseki proposal. Verified facts, transfer conditions and primary sources remain accessible in native disclosure panels. Three larger illustrated bridges translate the lessons into food curation, a shared district and Kanmon mobility. Eight compact principles and an operating plan connect the whole proposal.
+
+The four history chapters and three night experiences remain, with all three maps, four course options, caveats and independent keyboard controls. The geographic diagrams retain their original precise SVG geometry and responsive variants. `global-loop.css` adds the new world-case and strategy presentation over `illustrations.css` and the original site styles. No new JavaScript, third-party embed, tracking or booking capability was added.
+
+## Nine cases: facts, inference and transfer
+
+`world-cases-evidence.json` records facts, MDL inferences, Shimonoseki proposals, primary URLs and locators, and limitations, checked on 2026-09-13. Operator/designer claims verify a mechanism or configuration; they are not independent causal or profitability evidence. No overseas visitor count, development area, investment figure or employment capacity is used as a demand forecast for Shimonoseki.
+
+- Pike Place: PDA's charter covers market preservation, food retail, small businesses and social services. Do not conflate PDA with the fundraising Market Foundation.
+- Granville: the CMHC-commissioned 2040 plan explicitly describes market rents supporting arts and culture. Its proposed night activation is not represented as completed.
+- Lisbon: editorial selection and coexistence with the traditional market. Shimonoseki Station requires a land transfer to Karato's ferry terminal.
+- Bilbao: integrated urban planning, transport, environment and public space, not a museum-only causal story.
+- Battersea: reuse and access together. London demand and the architectural value of the subject Shimonoseki building are not assumed.
+- King's Cross: repeated learning, work and daily-life uses. The 18,000 figure in its 2021 material is capacity, not measured net jobs; it is omitted from the page.
+- Markthal: mixed-use market and spatial experience. Visitor forecasts are not presented as achieved performance.
+- Medellín: resident access to opportunities and public space, not merely tourist mobility or transport-only crime reduction.
+- Singapore: preservation, mixed uses and quality-based operation. Heritage recognition is not limited to 100-year-old businesses and does not itself provide direct grants.
+
+Local cross-subsidy is conditional on operating costs, common costs, repair reserves and working capital being covered. Transparent selection, rent terms, payer obligations and reinvestment limits are proposed. Local supplier payments and resident wages are tracked without duplication; regional value-added estimation has a separate boundary. The page does not publish a fabricated 70% Local Money Ratio.
 
 ## Narrative and night programme
 
@@ -28,7 +46,7 @@ The premise is “日本史が動いた、歴史のまち。” Daytime historic
 
 The three proposed experiences are a cooperative Kanmon navigation game, a locally produced participatory food programme, and a small participatory theatre. They are creative proposals, not existing/bookable operations or licensed partnerships. No shrine after-hours use is assumed. Fugu preparation belongs to qualified professional operations; the mock auction changes neither price nor meal entitlement. Professional review, operating conditions and relevant permissions precede any pilot.
 
-Compared with a large permanent attraction, the selected approach starts with small paid food/theatre programmes and portable play equipment. Paid demand, incremental spending/stays, local purchasing, staff conditions and direct operating contribution determine continuation, adaptation or cancellation before permanent investment. Existing night views and dining are acknowledged. No claim is made that Shimonoseki has no night economy or that these programmes alone reverse population loss.
+Compared with a large permanent attraction, the conditionally selected approach jointly operates small paid food/theatre programmes, district referrals and return-journey information; daily-life demand supports it. The page compares building-led, jointly operated district, daily-services and no-additional-project options. Paid demand, incremental spending/stays, local purchasing, staff conditions, common costs and renewal reserves determine continuation, adaptation or cancellation before permanent investment. The 30/90/365-day programme starts only after investigation/pilot authorization; operators and payers are proposed roles, not appointed organizations. Existing night views and dining are acknowledged. No claim is made that Shimonoseki has no night economy or that these programmes alone reverse population loss.
 
 ## Decision-quality record
 
@@ -41,9 +59,9 @@ Graph Lite applied to faithful public presentation of the user's concept; no und
 | Decision contract | partial | Public concept presentation authorized; asset and investment owners not agreed |
 | Graph | partial | Stay → spending → local income → jobs → retention is a falsifiable causal hypothesis |
 | SIDE+P | partial | Costs, public burdens, fairness and operational responsibilities require investigation |
-| Options | partial | Daily-services, destination-experiences, district-circulation and no-development are compared qualitatively |
+| Options | partial | Building-led, jointly operated district, daily-services and no-additional-project are compared qualitatively; district pilot is conditional |
 | Refutation | partial | Displacement, weekday shortfall, capex/opex, transport and community impacts identified |
-| Execution design | partial | Investigation → small paid pilot → phased growth; owners and budgets subject to agreement |
+| Execution design | partial | Proposed 30/90/365-day investigation, paid pilot and seasonal review; owners, budgets, loss ceiling and decision thresholds subject to agreement |
 | Evidence freeze | blocked | Business-critical building, cost and rights information unverified |
 | Audience presentation | complete | Conditional concept and key limitations published consistently |
 | Execution/learning | not executed | No business experiment, measured causal impact or operational deployment |
@@ -52,7 +70,7 @@ The next decision concerns authorization and resourcing of an investigation, not
 
 ## Maintenance
 
-Plain static files; no dependency install or build. `app.js` changes three map panels and four illustrative course options, with separate keyboard tab controls. Direct links to `#map-building`, `#map-city`, and `#map-kanmon` select the relevant map. All three maps remain readable without JavaScript. Sources and caveats are rendered in HTML. This edition changes only this special site. Do not overwrite contemporaneous changes to other special sites.
+Plain static files; no dependency install or build. `app.js` changes three map panels and four illustrative course options, with separate keyboard tab controls. Direct links to `#map-building`, `#map-city`, and `#map-kanmon` select the relevant map. All three maps remain readable without JavaScript. Sources and caveats are rendered in HTML. This edition changes only this special site. The user removed its MDL news entry; do not restore it. The separate homepage teaser is outside this update's scope. Do not overwrite contemporaneous changes to other special sites.
 
 ## Three maps and circular mobility concept
 
@@ -63,4 +81,4 @@ Plain static files; no dependency install or build. `app.js` changes three map p
 - The city loop starts with a proposed weekend pilot. Night journeys are planned around bookings and lodging areas, without claiming a scheduled late-night service. Vehicles, operator, stops, permits, fares, timing, staffing, accessibility and costs require agreement and verification. Booking and ticket integration are unagreed concepts, not live functions.
 - Current city bus connections and Chofu access were checked against Sanden Kotsu's official sightseeing access page and Yamaguchi Tourism's Chofu page on 2026-09-13; both are linked on the page. No specific travel-time or frequency promise is made.
 
-Diagram PNGs were rendered with Inkscape to review desktop and mobile label placement; page references, SVG structure, JS syntax and isolated map/course interactions were checked. No browser preview was requested or performed for this update.
+Previous diagram PNGs were rendered with Inkscape to review desktop and mobile label placement; those SVGs and their controls are unchanged in this edition. New assets were inspected, and the final HTML, asset references, anchors, source links, font coverage, CSS structure and retained interaction selectors were statically checked. No browser preview was requested or performed for this update.
