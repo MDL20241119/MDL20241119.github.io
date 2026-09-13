@@ -1,0 +1,284 @@
+{
+  "schema_version": "1.0",
+  "verified_as_of": "2026-09-13",
+  "scope": "KANMON AFTER DARK海外7都市の限定独立事実検証。一次資料に基づく掲載文案。成果の都市間ランキング・因果推論・下関での効果予測は対象外。",
+  "source_policy": "自治体・政府・公的交通機関と、委託調査の実施主体による一次資料。更新日のないページは閲覧日と区別。施設数・経済規模等は年・定義が揃わないため原則掲載しない。",
+  "case_count": 7,
+  "cases": [
+    {
+      "id": "sydney",
+      "city": "シドニー／NSW",
+      "verified_fact": "NSW州は2024年に24時間経済戦略を刷新し、文化・地区づくり・交通・安全を横断して扱う。2025–28年の夜間労働者行動計画は、休憩設備や健康・安全の支援も対象にしている。",
+      "transfer": "下関でも、夜の催し・帰宅交通・働く人の休憩環境を一つの運営計画にする。",
+      "sources": [
+        {
+          "url": "https://www.nsw.gov.au/business-and-economy/office-of-24-hour-economy-commissioner/24-hour-economy-strategy",
+          "title": "24-Hour Economy Strategy 2024",
+          "date": "2024",
+          "locator": "Strategic Pillars 1–5、特にPillar 3: Night-time Workers、Pillar 4: Safety, Mobility, Access and Inclusion"
+        },
+        {
+          "url": "https://www.nsw.gov.au/business-and-economy/office-of-24-hour-economy-commissioner/night-worker-action-plan",
+          "title": "NSW Night Worker Action Plan 2025–2028",
+          "date": "2025–2028（計画期間）",
+          "locator": "本文冒頭、Better facilities for gig workers／Health and wellbeing support／Stronger protections at work"
+        },
+        {
+          "url": "https://www.nsw.gov.au/departments-and-agencies/dciths/ministerial-media-releases/nightlife-revival-expands-focus-to-127m-night-time-workers",
+          "title": "Nightlife revival expands focus to 1.27m night-time workers",
+          "date": "2025-10-29",
+          "locator": "公表日、夜間労働者の交通・安全・健康を対象とする行動計画の説明"
+        }
+      ],
+      "limits": [
+        "対象はシドニー市だけでなくNSW州全体。州施策を市単独の実績として表現しない。",
+        "24時間経済は政策の対象範囲。全店舗・全交通の24時間運用を意味しない。",
+        "計画策定・施策の存在は確認。売上増加や安全改善の因果効果、下関での再現性はこの資料だけでは検証できない。"
+      ],
+      "verdict": "KEEP（対象地域と計画であることを明記）"
+    },
+    {
+      "id": "amsterdam",
+      "city": "アムステルダム",
+      "verified_fact": "Night Vision（2021）と実施計画（2023–26）は、夜の文化の場所・担い手・支援を扱う。24時間許可は施設ごとの仕組みとして導入され、市全体を一律に24時間営業へ変えた制度ではない。",
+      "transfer": "空き床を夜の文化の場として試す際は、施設・時間帯ごとの条件と近隣相談を先に定める。",
+      "sources": [
+        {
+          "url": "https://www.amsterdam.nl/en/leisure/night-vision/",
+          "title": "The night has the future — Night Vision Amsterdam",
+          "date": "2021／2023–2026（政策・実施計画）",
+          "locator": "Night Culture Implementation Agenda 2023–2026、Night Culture Consultation"
+        },
+        {
+          "url": "https://assets.amsterdam.nl/publish/pages/1032233/nachtvisie_engels.pdf",
+          "title": "Space for night culture — Future of the Amsterdam Night",
+          "date": "2021",
+          "locator": "PDF本文p.49 Area-oriented hospitality policy、p.50 Area and district-based policies（24-hour permitを有する施設・地区の説明）"
+        },
+        {
+          "url": "https://www.amsterdam.nl/en/business/noise-exemption/",
+          "title": "Apply for an exemption for opening hours or noise limits",
+          "date": "更新日表示なし（2026-09-13閲覧）",
+          "locator": "Conditions、Opening hours exemption：既存営業許可、近隣周知、窓扉を閉じる等の要件"
+        },
+        {
+          "url": "https://www.amsterdam.nl/bestuur-organisatie/beleid/nachtcultuur/",
+          "title": "Nachtcultuur",
+          "date": "更新日表示なし（2026-09-13閲覧）",
+          "locator": "Plannen、Programma's、Stappen zetten richting minder overlast"
+        }
+      ],
+      "limits": [
+        "24時間許可の個別導入を、一般的・無条件の24時間営業許可と説明しない。",
+        "現行の特例申請と過去の24時間許可を同一制度として混ぜない。",
+        "2021年の施設名・件数は歴史的説明。最新の許可件数・有効期間・新規申請の可否は今回の掲載文から除外。",
+        "Night Mayor Foundationは市政府の市長とは異なる独立団体。『夜の市長が一元的に許認可する』と書かない。",
+        "現行市ページでは2024–25年防音試行の結果を2026年秋に検討予定としており、成果確定とは扱わない。"
+      ],
+      "verdict": "REVISE（Night Visionを中心にし、一律24時間化という説明を削除）"
+    },
+    {
+      "id": "berlin",
+      "city": "ベルリン",
+      "verified_fact": "クラブ文化はベルリンの文化的な魅力の一つだが、2026年公表の事業者調査では、人件費・運営費の上昇や飲料売上への依存の変化が経営を圧迫している。調査にはクラブ以外のイベント運営者なども含まれる。",
+      "transfer": "海峡の音楽・文化を育てながら、入場料、飲食収益、賃金、防音費を分けて採算を確認する。",
+      "sources": [
+        {
+          "url": "https://www.clubcommission.de/neue-studie-zur-berliner-clubkultur/",
+          "title": "Neue Studie zur Berliner Clubkultur",
+          "date": "2026-08-07",
+          "locator": "Das Geschäftsmodell hat sich gedreht／Die Nachfrage ist ungebrochen／Die Raumfrage bleibt ungelöst／Zur Methodik"
+        }
+      ],
+      "limits": [
+        "州経済省の委託によるClubcommissionの一次調査公表。2026-03-19〜04-24の調査、完全回答102件。事業者自己申告で、全施設の悉皆統計ではない。",
+        "調査対象にはクラブ、コレクティブ、企画者、音楽バー、複合文化施設等を含み、通常の商業ディスコ等は対象外。",
+        "同資料の2017年対2025年の採算比較を『2026年全クラブの採算』と表示しない。今回は本サイトに割合・件数を載せない。",
+        "文化ブランドの存在と、規制・助成が成長を生んだ因果関係は別。『世界一』『成功したから必ず再現できる』と断定しない。"
+      ],
+      "verdict": "REVISE（文化的魅力と2026年の経営圧力を併記）"
+    },
+    {
+      "id": "london",
+      "city": "ロンドン",
+      "verified_fact": "Night Tubeは金・土曜の夜に地下鉄5路線の対象区間で運行し、Windrush線にも夜間運行がある。市は2026年1月、業界主導のNightlife Commission設立を支援すると発表した。",
+      "transfer": "夜の企画から帰宅までを設計し、鉄道終便後の移動を利用者向けに明示する。",
+      "sources": [
+        {
+          "url": "https://tfl.gov.uk/modes/tube/night-tube",
+          "title": "The Night Tube",
+          "date": "更新日表示なし（2026-09-13閲覧）",
+          "locator": "Current services：Friday and Saturday nights、対象路線列挙"
+        },
+        {
+          "url": "https://tfl.gov.uk/info-for/media/press-releases/2026/august/night-tube-marks-10-years-of-keeping-london-moving-after-dark",
+          "title": "Night Tube marks 10 years of keeping London moving after dark",
+          "date": "2026-08-18",
+          "locator": "Notes to editors／Night Tube and Night London Overground timeline、Windrush線をNight London Overgroundと区別"
+        },
+        {
+          "url": "https://www.london.gov.uk/media-centre/mayors-press-release/London%E2%80%99s-independent-Nightlife-Taskforce-sets-out-comprehensive-plan-to-drive-the-future-of-the-capital-at-night",
+          "title": "London’s independent Nightlife Taskforce sets out comprehensive plan to drive the future of the capital at night",
+          "date": "2026-01-27",
+          "locator": "Nightlife Commissionの創設提言、市長の設立助成、年内発足予定の各段落"
+        },
+        {
+          "url": "https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/night-czar-recruitment",
+          "title": "Night Czar Recruitment — Question 2025/0442",
+          "date": "2025-07-16（回答）",
+          "locator": "Answer：採用活動は進行していないとの回答"
+        },
+        {
+          "url": "https://www.london.gov.uk/who-we-are/what-london-assembly-does/questions-mayor/find-an-answer/night-czar-25",
+          "title": "Night Czar — Question 2025/1996",
+          "date": "2025-07-16（回答）",
+          "locator": "Answer：Night Czar職の判断をTaskforce研究後に行うとの回答"
+        }
+      ],
+      "limits": [
+        "地下鉄対象はCentral、Jubilee、Northern、Piccadilly、Victoriaの対象区間。WindrushはLondon Overground。全地下鉄・全区間・毎夜の24時間運行ではない。",
+        "本サイト掲載時点の運休・工事は別途変わるため、実際の旅行案内ではTfL現行運行情報を参照する。",
+        "現職Night Czarが常設されているとは掲載しない。2025年の採用なしの公式回答と、2026年1月の独立Commission設立支援までは確認。",
+        "2026-09-13時点のCommissionの実際の発足日、およびNight Czar職の正式廃止という明文は今回確認できていない。『Commission運営中』『役職を法的に廃止済み』とは書かない。",
+        "行政公式の旧人物紹介が残ることだけで現職在任を判断しない。"
+      ],
+      "verdict": "REVISE（金土・対象路線に限定し、Night Czar現職の記述を削除）"
+    },
+    {
+      "id": "melbourne",
+      "city": "メルボルン",
+      "verified_fact": "Night Networkは金・土曜の深夜に、選ばれた鉄道・トラム・バス路線と一部の地域間コーチをつなぐ。全路線・毎夜の運行ではなく、利用できる経路を確認して帰宅を計画する仕組みである。",
+      "transfer": "まず週末の実証日に合わせ、駅・夜の拠点・宿泊先を結ぶ帰宅案内と移動手段を用意する。",
+      "sources": [
+        {
+          "url": "https://transport.vic.gov.au/plan-a-journey/travel-tips-and-resources/late-night-public-transport",
+          "title": "Late-night public transport in Melbourne",
+          "date": "更新日表示なし（2026-09-13閲覧）",
+          "locator": "冒頭、Night Network maps、Late night services：鉄道・トラム・バス・一部地域間コーチ"
+        },
+        {
+          "url": "https://studymelbourne.vic.gov.au/living-here/transport/guide-to-public-transportation",
+          "title": "A guide to public transport in Melbourne — Study Melbourne",
+          "date": "2026-06-16（更新）",
+          "locator": "Night Network：Fridays and Saturdays／select train, tram and bus lines"
+        }
+      ],
+      "limits": [
+        "州政府の現行案内は金・土曜の深夜、選ばれた鉄道・トラム・バス路線と説明する。『週7日』『全路線』へ拡張しない。",
+        "経路・頻度・運休は改定される。今回、全系統一覧と最新頻度の照合はせず、掲載文に路線数や間隔は載せない。",
+        "非政府観光サイトにある『トラム6路線・バス21路線』等の数を、現在の一次資料確認なしで掲載しない。",
+        "帰宅可能性の制度例であり、夜間消費を増やした因果効果までは検証していない。"
+      ],
+      "verdict": "KEEP（曜日と一部路線への限定を明記、系統数は省略）"
+    },
+    {
+      "id": "nyc",
+      "city": "ニューヨーク",
+      "verified_fact": "ニューヨーク市のOffice of Nightlifeは、事業者・地域・行政の窓口として営業支援や近隣紛争の調停を提供する。「351億ドル・約30万人」は2016年を基準とする推計で、現在の規模としては扱えない。",
+      "transfer": "許可相談、事業者支援、近隣との調停を受け止める連絡窓口を設ける。",
+      "sources": [
+        {
+          "url": "https://www.nyc.gov/site/sbs/businesses/nightlife.page",
+          "title": "Office of Nightlife — NYC Department of Small Business Services",
+          "date": "更新日表示なし（2026-09-13閲覧）",
+          "locator": "Office of Nightlife本文：central point of contact／NYC Programs & Resources：MASH、MEND NYC"
+        },
+        {
+          "url": "https://www.nyc.gov/site/mome/news/01242019-nightlife-study.page",
+          "title": "Mayor’s Office of Media and Entertainment Announces Results of First-Ever Economic Impact Study of NYC Nightlife",
+          "date": "2019-01-24",
+          "locator": "定義段落、2016年直接効果段落、間接・誘発・付随効果の各段落"
+        }
+      ],
+      "limits": [
+        "351億米ドルは2016年基準のtotal economic output、29.9万雇用は直接・間接・誘発・付随効果を含む推計。現在の売上・GDP・直接従業員数ではない。",
+        "対象は18時〜翌6時における飲食、バー、芸術文化、会場、スポーツ・レクリエーションの5部門。",
+        "当時の内訳は直接191億、間接51億、誘発49億、付随60億米ドル。報告には小売・交通・宿泊等の付随効果が既に含まれる。",
+        "現行SBSページにも旧推計が掲示されているが、新しい基準年の推計と確認できないため、サイトの規模比較・見出し数字からは省略する。",
+        "Office設立は2017年であり、2016年推計をOffice設立の成果として説明できない。"
+      ],
+      "verdict": "REVISE（窓口・調停の制度を掲載し、351億ドル・約30万人を現行規模として使わない）"
+    },
+    {
+      "id": "montreal",
+      "city": "モントリオール",
+      "verified_fact": "モントリオールは夜間政策をNuits Montréalとして実施中。文化プログラム、安全、近隣との共存に取り組む施設・地区に、事前承認された夜の営業時間延長を認め、防音などの騒音低減も支援している。",
+      "transfer": "営業時間延長は文化企画・安全・近隣対応と結び、防音投資を実証費に含める。",
+      "sources": [
+        {
+          "url": "https://montreal.ca/articles/nuits-montreal-plongez-dans-la-vitalite-nocturne-et-culturelle-montrealaise-107601",
+          "title": "Nuits Montréal : plongez dans la vitalité nocturne et culturelle montréalaise",
+          "date": "2026-07-03（更新）",
+          "locator": "Qui peut obtenir la qualification／Liste des salles de spectacle et des secteurs qualifiés：資格条件とsoirées préautorisées"
+        },
+        {
+          "url": "https://montreal.ca/programmes/qualification-des-etablissements-et-poles-de-vitalite-nocturne",
+          "title": "Qualification des établissements et pôles de vitalité nocturne",
+          "date": "2026-07-08（更新）",
+          "locator": "Description／Engagements réciproques：文化、近隣共存、音、安全の管理、営業時間特例の支援"
+        },
+        {
+          "url": "https://montreal.ca/programmes/programme-daide-la-reduction-des-nuisances-sonores-pour-les-salles-de-spectacles-independantes",
+          "title": "Programme d’aide à la réduction des nuisances sonores pour les salles de spectacles indépendantes",
+          "date": "2026-07-29（更新）",
+          "locator": "En cours／Description／Critères d’admissibilité：独立興行施設の騒音低減支援、適合・事前調査・工事の3区分"
+        },
+        {
+          "url": "https://montreal.ca/articles/table-de-concertation-de-la-vie-nocturne-un-role-conseil-essentiel-84716",
+          "title": "Table de concertation de la vie nocturne : un rôle conseil essentiel",
+          "date": "2026-07-31（更新）",
+          "locator": "Mission de la Table de concertation：政策実施、当事者対話、規制・共存・音管理等の分科検討"
+        }
+      ],
+      "limits": [
+        "2024年の構想・相談段階だけを引用せず、2026年の資格制度と支援の運用を区別して掲載する。",
+        "資格は一律24時間営業許可ではない。対象施設・地区に条件があり、延長は事前に承認された夜に適用される。",
+        "防音等助成は独立興行施設に条件付きで提供。現行案内では3,000席未満、許可用途、前年35公演以上、5年間の用途維持等の要件がある。あらゆる店舗への自動給付ではない。",
+        "資格件数、予算額、助成率は比較の基準を揃えていないため、本サイトでは省略。",
+        "政策の存在は確認できるが、騒音苦情や施設閉鎖の問題が解消したとは断定できない。"
+      ],
+      "verdict": "REVISE（構想段階から運用段階へ更新し、条件付き延長と防音支援を併記）"
+    }
+  ],
+  "formula_review": {
+    "original": "夜間域外消費 × 地元調達率 ＋ 賃金 ＋ 利益 ＋ 宿泊波及",
+    "verdict": "REVISE（経済効果の計算式として掲載しない）",
+    "verified_fact": "売上・調達額・賃金・利益・宿泊支出は同じ取引を異なる側面から捉えるため、定義なしの加算は重複計上を招く。付加価値は産出額から中間投入を引き、賃金や営業余剰等に分けて捉える。",
+    "issues": [
+      "地元調達率は一般に事業者の仕入れに占める地元調達の割合で、消費売上全額に掛けても地域内付加価値にはならない。分母・対象業種・域内範囲を定義する必要がある。",
+      "地元調達額には地元仕入先の賃金・利益・さらなる仕入れが含まれる。これらの賃金・利益を別途足すと二重計上になり得る。",
+      "店舗自身の地元仕入れ、地域住民への賃金、地元所有者への利益を相互排他的に整理すれば初期の資金配分指標にはできるが、GDPや地域全体の経済効果とは異なる。",
+      "域外来訪者の夜間消費に宿泊が含まれる場合、宿泊波及の別加算は重複。既存宿泊の置換や、企画がなくても生じた宿泊を除いた追加分だけを区別する。",
+      "経済効果と公共価値は別。売上・雇用が増えても、騒音、労働負担、帰宅費等が悪化すれば事業評価は変わる。"
+    ],
+    "recommended_site_copy": "域外からの夜間消費、地元調達率、地元で生まれた所得、事業者の採算、追加宿泊をそれぞれ測り、地域に残る価値を確かめる。",
+    "recommended_display": "一つの合計式にせず、域外来訪者消費／地元調達率／地元雇用所得／事業者採算／追加宿泊の5指標を並べる。騒音・安心・帰宅負担も併せて追う。",
+    "valid_accounting_reference": "付加価値 ＝ 産出額 − 中間投入 ＝ 雇用者報酬 ＋ 生産・輸入税（補助金控除）＋ 営業余剰等。地域内所得を測る場合は雇用者の居住地・利益の帰属先をさらに区別する。",
+    "sources": [
+      {
+        "url": "https://www.bea.gov/help/glossary/value-added",
+        "title": "Value added — U.S. Bureau of Economic Analysis",
+        "date": "2018-04-13（最終更新表示）",
+        "locator": "用語定義：gross output less intermediate inputs、および付加価値の所得側構成"
+      },
+      {
+        "url": "https://www.nyc.gov/site/mome/news/01242019-nightlife-study.page",
+        "title": "NYC Nightlife Economic Impact Study — official results",
+        "date": "2019-01-24",
+        "locator": "直接・間接・誘発・付随効果の区別、付随効果にlodgingを含む説明"
+      }
+    ],
+    "next_verification": "下関の実証前に、地域範囲、時間帯、来訪者の居住地、各指標の分母、宿泊の追加性、比較日、集計担当を決める。現地実測・収支検証は未実施。"
+  },
+  "graph_resolution_pass": {
+    "mode": "限定検証（親タスクの独立検証ノード）",
+    "observation": "complete：7都市の制度・時点・対象範囲を一次資料で確認。",
+    "depth": "partial：制度の存在と成果の因果関係を区別。効果識別の分析は本ノード対象外。",
+    "breadth": "complete：住民、事業者、労働者、帰宅交通、防音、採算を確認範囲へ含めた。",
+    "structure": "complete：政策・運用・成果を区別し、歴史的数値と現行情報を分離。",
+    "refutation": "complete：一律24時間化、現職Night Czar、古い経済規模、成功断定、重複加算を修正。",
+    "decision": "complete：親タスクはKEEP/REVISEとlimitsに従い掲載文を選ぶ。",
+    "execution": "partial：掲載用短文と出典を凍結。下関の制度・予算・運営体制・安全条件は別途現地検証が必要。",
+    "learning": "not executed：サイト掲載や下関の社会実験の効果測定は本ノードでは行っていない。"
+  }
+}

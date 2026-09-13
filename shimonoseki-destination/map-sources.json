@@ -1,0 +1,156 @@
+{
+  "updated": "2026-09-13",
+  "coastline_and_rail": {
+    "source": "国土地理院ベクトルタイル提供実験を加工",
+    "source_url": "https://github.com/gsi-cyberjapan/gsimaps-vector-experiment",
+    "retrieved": "2026-09-13",
+    "source_update": "2026-04-01（配信者のデータ更新情報）",
+    "zoom": 12,
+    "coordinates": "global Web Mercator tile coordinates at z12; north up",
+    "tiles": [
+      {
+        "x": 3536,
+        "y": 1635,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3536/1635.pbf"
+      },
+      {
+        "x": 3536,
+        "y": 1636,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3536/1636.pbf"
+      },
+      {
+        "x": 3536,
+        "y": 1637,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3536/1637.pbf"
+      },
+      {
+        "x": 3536,
+        "y": 1638,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3536/1638.pbf"
+      },
+      {
+        "x": 3537,
+        "y": 1635,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3537/1635.pbf"
+      },
+      {
+        "x": 3537,
+        "y": 1636,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3537/1636.pbf"
+      },
+      {
+        "x": 3537,
+        "y": 1637,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3537/1637.pbf"
+      },
+      {
+        "x": 3537,
+        "y": 1638,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3537/1638.pbf"
+      },
+      {
+        "x": 3538,
+        "y": 1635,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3538/1635.pbf"
+      },
+      {
+        "x": 3538,
+        "y": 1636,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3538/1636.pbf"
+      },
+      {
+        "x": 3538,
+        "y": 1637,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3538/1637.pbf"
+      },
+      {
+        "x": 3538,
+        "y": 1638,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3538/1638.pbf"
+      },
+      {
+        "x": 3539,
+        "y": 1635,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3539/1635.pbf"
+      },
+      {
+        "x": 3539,
+        "y": 1636,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3539/1636.pbf"
+      },
+      {
+        "x": 3539,
+        "y": 1637,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3539/1637.pbf"
+      },
+      {
+        "x": 3539,
+        "y": 1638,
+        "url": "https://cyberjapandata.gsi.go.jp/xyz/experimental_bvmap/12/3539/1638.pbf"
+      }
+    ]
+  },
+  "terms": "https://www.gsi.go.jp/kikakuchousei/kikakuchousei40182.html",
+  "representative_points": {
+    "下関駅": {
+      "lon": 130.923021,
+      "lat": 33.949127,
+      "source": "GSI label"
+    },
+    "新下関駅": {
+      "lon": 130.94804,
+      "lat": 34.006175,
+      "source": "GSI label"
+    },
+    "門司港駅": {
+      "lon": 130.962181,
+      "lat": 33.942559,
+      "source": "GSI label"
+    },
+    "門司駅": {
+      "lon": 130.933664,
+      "lat": 33.904189,
+      "source": "GSI label"
+    },
+    "小倉駅": {
+      "lon": 130.882638,
+      "lat": 33.888551,
+      "source": "GSI label"
+    },
+    "住吉神社": {
+      "lon": 130.956533,
+      "lat": 33.999639,
+      "source": "https://yamaguchi-tourism.jp/spot/detail_10469.html"
+    },
+    "城下町長府": {
+      "lon": 130.981947,
+      "lat": 33.997543,
+      "source": "https://s-kanrikousha.com/mouriteiaccess.html",
+      "note": "長府毛利邸周辺をエリア代表点として表示"
+    },
+    "海響館": {
+      "lon": 130.942361,
+      "lat": 33.954619,
+      "source": "https://www.kaikyokan.com/access.php"
+    },
+    "唐戸市場・赤間神宮": {
+      "source": [
+        "https://www.karatoichiba.com/access/",
+        "https://akama-jingu.com/precinct-information/"
+      ],
+      "note": "公式の所在地案内を参照した概略位置。測量点・入口座標ではない。"
+    }
+  },
+  "transport_sources": [
+    "https://www.sandenkotsu.co.jp/bus/odekake/",
+    "https://www.kanmon-kisen.co.jp/route/kanmon.html",
+    "https://www.jrkyushu-timetable.jp/cgi-bin/sp/sp-tt_list.cgi/27503"
+  ],
+  "method": "地理院の水域・鉄道形状を使用。北が上の等角投影。バス・船は接続の説明、名所は代表点で、道路・航路・入口・乗降場・所要時間の案内図ではない。青い破線は未運行の周回案。駅と船乗り場は同一点ではなく、徒歩等の乗り継ぎが必要。",
+  "building": "B1〜5Fの機能を仮置きした立体配置案。屋上は将来の検討候補。実測・構造・避難・設備設計ではない。",
+  "art": "生成した名所イラストを正確な地理データの上に配置。イラストは実建築の再現ではない。",
+  "reproduce": [
+    "python scripts/build-maps.py",
+    "python scripts/export-maps.py"
+  ]
+}

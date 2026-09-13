@@ -1,248 +1,115 @@
+"""Generate self-contained illustrated concept SVGs from GSI coastline data.
+Connections and floor uses are proposals, not navigation or construction plans.
+"""
 from pathlib import Path
 from html import escape
-
-OUT = Path(__file__).resolve().parents[1] / 'assets'
-BLUE='#82D6F7'; BLACK='#111111'; PINK='#82D6F7'; LEMON='#F7F4EE'; CORAL='#82D6F7'; LIME='#F7F4EE'; PAPER='#F7F4EE'
-
+import base64,json,math,re
+ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'assets'
+GEO=json.loads((OUT/'kanmon-geography.json').read_text())
+PAPER='#F7F4EE';INK='#111111';SKY='#82D6F7'
+ART=base64.b64encode((OUT/'map-landmarks-sheet.webp').read_bytes()).decode()
+PLAY=base64.b64encode((OUT/'after-dark-play-sheet.webp').read_bytes()).decode()
+POI={'station':(130.923021,33.949127),'shin':(130.948040,34.006175),'sumiyoshi':(130.956533,33.999639),'chofu':(130.981947,33.997543),'aquarium':(130.942361,33.954619),'market':(130.94585,33.95635),'akama':(130.9491,33.9595),'karato':(130.9443,33.95525),'mojiko':(130.962181,33.942559),'moji':(130.933664,33.904189),'kokura':(130.882638,33.888551)}
+def merc(lon,lat):return ((lon+180)/360*4096,(1-math.asinh(math.tan(math.radians(lat)))/math.pi)/2*4096)
 class SVG:
-    def __init__(self,w,h,title,desc):
-        self.w=w; self.h=h
-        self.parts=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="{BLACK}">']
-        self.rect(0,0,w,h,PAPER,0)
-    def rect(self,x,y,w,h,fill='white',sw=2,stroke=BLACK,rx=0,dash=''):
-        if fill=='white': fill=PAPER
-        self.parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"'+(f' stroke-dasharray="{dash}"' if dash else '')+'/>')
-    def path(self,d,color=BLACK,width=4,dash='',fill='none'):
-        self.parts.append(f'<path d="{d}" fill="{fill}" stroke="{color}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"'+(f' stroke-dasharray="{dash}"' if dash else '')+'/>')
-    def poly(self,pts,fill,sw=2):
-        if fill=='white': fill=PAPER
-        self.parts.append(f'<polygon points="{pts}" fill="{fill}" stroke="{BLACK}" stroke-width="{sw}" stroke-linejoin="round"/>')
-    def circle(self,x,y,r=11,fill='white',stroke=BLACK,sw=3):
-        if fill=='white': fill=PAPER
-        self.parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>')
-    def text(self,x,y,txt,size=26,weight=700,fill=BLACK,anchor='start'):
-        if fill=='white': fill=BLACK
-        self.parts.append(f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{fill}" text-anchor="{anchor}">{escape(txt)}</text>')
-    def label(self,x,y,text,color='white',size=23,pad=14):
-        # Japanese width is one em; Latin labels use a compact estimate.
-        w=sum(size*(.6 if ord(c)<128 else 1) for c in text)+2*pad
-        self.rect(x,y-size,w,size+17,color,0,rx=2)
-        self.text(x+pad,y,text,size)
-    def save(self,name):
-        (OUT/name).write_text('\n'.join(self.parts)+ '\n</g></svg>\n')
-
-floors=[('5F','暮らす・働く','医療・学習・仕事の候補',LIME),('4F','体験する・学ぶ','海峡の航海ゲーム・親子の体験',CORAL),('3F','好きに出会う','IP展示・参加型劇場の候補',PINK),('2F','日本を持ち帰る','日本ブランド × 地域のつくり手',BLUE),('1F','食べる・旅立つ','食の拠点・夜の食事・観光案内',LEMON),('B1','日常を支える','地元食材・日々の買い物',BLUE)]
-
+ def __init__(self,w,h,title,desc):
+  self.clipcount=0;self.p=[f'<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc><defs><image id="landmarks" width="1254" height="1254" xlink:href="data:image/webp;base64,{ART}"/><image id="play" width="1672" height="941" xlink:href="data:image/webp;base64,{PLAY}"/></defs><g font-family="Noto Sans CJK JP,Noto Sans JP,Meiryo,sans-serif" fill="{INK}">'];self.rect(0,0,w,h)
+ def rect(self,x,y,w,h,fill=PAPER,sw=0,rx=0,dash=''):self.p.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{INK}" stroke-width="{sw}" stroke-dasharray="{dash}"/>')
+ def path(self,d,color=INK,width=3,dash='',fill='none'):self.p.append(f'<path d="{d}" fill="{fill}" stroke="{color}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="{dash}"/>')
+ def text(self,x,y,t,size=25,weight=500,anchor='start',halo=False):
+  ha=f' paint-order="stroke" stroke="{PAPER}" stroke-width="9" stroke-linejoin="round"' if halo else ''
+  self.p.append(f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" text-anchor="{anchor}"{ha}>{escape(t)}</text>')
+ def circle(self,x,y,r=5):self.p.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{PAPER}" stroke="{INK}" stroke-width="2.5"/>')
+ def icon(self,n,x,y,size):
+  self.clipcount+=1;self.p.append(f'<defs><clipPath id="art{self.clipcount}"><rect x="{x}" y="{y}" width="{size}" height="{size}"/></clipPath></defs><g clip-path="url(#art{self.clipcount})">');self.p.append(f'<svg x="{x}" y="{y}" width="{size}" height="{size}" viewBox="{n%3*418} {n//3*418} 418 418"><use xlink:href="#landmarks"/></svg></g>')
+ def vignette(self,n,x,y,w,h):
+  self.clipcount+=1;self.p.append(f'<defs><clipPath id="art{self.clipcount}"><rect x="{x}" y="{y}" width="{w}" height="{h}"/></clipPath></defs><g clip-path="url(#art{self.clipcount})">');self.p.append(f'<svg x="{x}" y="{y}" width="{w}" height="{h}" preserveAspectRatio="xMidYMid slice" viewBox="{n%2*836} {n//2*470.5} 836 470.5"><use xlink:href="#play"/></svg></g>')
+ def save(self,name):
+  data='\n'.join(self.p)+'\n</g></svg>\n'
+  for ident in ['play','landmarks']:
+   if '#'+ident not in data:data=re.sub(r'<image id="'+ident+r'"[^>]*/>','',data)
+  (OUT/name).write_text(data)
+class Map:
+ def __init__(self,s,bbox,rect,ident,rail=False):
+  self.s=s;self.x,self.y,self.w,self.h=rect;left,bottom=merc(bbox[0],bbox[1]);right,top=merc(bbox[2],bbox[3]);self.scale=min(self.w/(right-left),self.h/(bottom-top));self.left=left;self.top=top;self.ox=self.x+(self.w-(right-left)*self.scale)/2;self.oy=self.y+(self.h-(bottom-top)*self.scale)/2
+  s.p.append(f'<defs><clipPath id="{ident}"><rect x="{self.x}" y="{self.y}" width="{self.w}" height="{self.h}" rx="8"/></clipPath></defs><g clip-path="url(#{ident})">')
+  for f in GEO['water']:
+   parts=[]
+   for ring in f['geometry']:
+    pts=[self.xy(*v) for v in ring]
+    if not self.visible(pts):continue
+    parts.append('M'+' L'.join(f'{x:.1f},{y:.1f}' for x,y in pts)+' Z')
+   if parts:s.p.append(f'<path d="{" ".join(parts)}" fill="{SKY}" fill-rule="evenodd"/>')
+  if rail:
+   for f in GEO['rail']:
+    for line in f['geometry']:
+     pts=[self.xy(*v) for v in line]
+     if len(pts)<2 or not self.visible(pts):continue
+     d='M'+' L'.join(f'{x:.1f},{y:.1f}' for x,y in pts);s.path(d,INK,3.3);s.path(d,PAPER,1.1)
+  s.p.append('</g>')
+ def visible(self,pts):return pts and not(max(p[0] for p in pts)<self.x or min(p[0] for p in pts)>self.x+self.w or max(p[1] for p in pts)<self.y or min(p[1] for p in pts)>self.y+self.h)
+ def xy(self,x,y):return self.ox+(x-self.left)*self.scale,self.oy+(y-self.top)*self.scale
+ def point(self,key):return self.xy(*merc(*POI[key]))
+ def pointll(self,lon,lat):return self.xy(*merc(lon,lat))
+ def route(self,coords,kind='bus'):
+  pts=[self.point(v) if isinstance(v,str) else self.pointll(*v) for v in coords];d='M'+' L'.join(f'{x:.1f},{y:.1f}' for x,y in pts)
+  if kind=='proposal':self.s.path(d,INK,9,'13 12');self.s.path(d,SKY,5,'13 12')
+  elif kind=='ferry':self.s.path(d,INK,4,'3 9')
+  elif kind=='walk':self.s.path(d,INK,2,'2 6')
+  else:self.s.path(d,INK,3.5)
+ def landmark(self,key,n,label,dx=0,dy=-80,size=90,labelsize=25,sub=None):
+  x,y=self.point(key);cx=x+dx;cy=y+dy;self.s.path(f'M{x:.1f},{y:.1f} L{cx:.1f},{cy+size*.65:.1f}',INK,1.4);self.s.icon(n,cx-size/2,cy,size);self.s.circle(x,y);self.s.text(cx,cy+size+19,label,labelsize,700,'middle',True)
+  if sub:self.s.text(cx,cy+size+46,sub,labelsize-6,400,'middle',True)
+def north(s,x,y):s.text(x,y,'N',19,700,'middle');s.path(f'M{x},{y+12} v35 m-8,-24 8,-11 8,11',INK,2)
+def credit(s,y):s.text(25,y,'国土地理院ベクトルタイル提供実験を加工 / 北が上',16,400);s.text(25,y+26,'海岸線をもとに、施設位置と接続を簡略化した構想図。',16,400)
+def city(mobile=False):
+ w,h=(680,1300) if mobile else (1180,1000);s=SVG(w,h,'下関市内の周回イメージ','国土地理院の海岸線を土台とする市内地図。下関駅前、海響館、唐戸市場、赤間神宮、城下町長府、新下関駅、住吉神社。水色の破線は未運行の周回案。');s.text(25,43,'02 / まちを、ぐるっと。',32,700);s.text(25,77,'食・海・歴史をつなぐ CITY LOOP',20)
+ rect,bbox=((15,100,650,720),(130.896,33.939,131.009,34.026)) if mobile else ((20,110,750,735),(130.892,33.937,131.012,34.027));m=Map(s,bbox,rect,'city-water',True)
+ m.route(['station',(130.932,33.953),(130.939,33.954),'karato','akama',(130.971,33.973),'chofu']);m.route(['shin',(130.959,34.010),(130.981,34.008),'chofu'])
+ m.route(['station',(130.918,33.963),(130.923,33.988),(130.937,34.013),'shin',(130.969,34.016),(130.990,34.009),'chofu',(130.975,33.976),'akama','karato',(130.936,33.951),'station'],'proposal')
+ if mobile:
+  m.landmark('shin',5,'新下関駅',-53,-120,102,29,'新幹線から');m.landmark('chofu',4,'城下町長府',42,-37,111,29,'武家屋敷・土塀の町');m.landmark('sumiyoshi',8,'住吉神社',-72,15,87,26);m.landmark('station',0,'下関駅前',1,-100,104,29,'大丸跡の構想・シーモール');x,y=m.point('karato');s.circle(x,y);s.text(x+35,y+7,'唐戸・赤間',28,700,halo=True);s.text(x+35,y+37,'↓ 下の拡大図へ',20,halo=True);x,y=m.pointll(130.916,34.000);s.text(x,y,'JR',23,700,halo=True);x,y=m.pointll(130.995,33.973);s.text(x,y,'関門海峡',27,700,'middle');north(s,35,140);inset=(20,850,640,298);subtitle_y=840
+ else:
+  m.landmark('shin',5,'新下関駅',-48,-110,100,28,'新幹線の入口');m.landmark('chofu',4,'城下町長府',60,-15,117,28,'武家屋敷・土塀の町');m.landmark('sumiyoshi',8,'住吉神社',-70,18,90,27);m.landmark('station',0,'下関駅前',-43,-99,108,29,'大丸跡の構想・シーモール');x,y=m.point('karato');s.circle(x,y);s.text(x+42,y-5,'唐戸・赤間',29,700,halo=True);s.text(x+42,y+27,'右の拡大図へ →',20,halo=True);x,y=m.pointll(130.910,33.989);s.text(x,y,'JR',23,700,halo=True);x,y=m.pointll(130.997,33.970);s.text(x,y,'関門海峡',30,700,'middle');north(s,42,150);inset=(787,169,368,328);subtitle_y=140
+ s.rect(*inset,PAPER,2,9);s.text(inset[0]+5,subtitle_y,'唐戸・赤間を拡大',25,700);mi=Map(s,(130.9395,33.9524,130.953,33.9626),inset,'karato-water');mi.route(['aquarium','market','akama'],'walk')
+ if mobile:mi.landmark('aquarium',2,'海響館',-62,-98,89,26);mi.landmark('market',1,'唐戸市場',-9,-95,88,26);mi.landmark('akama',3,'赤間神宮',48,-69,89,26)
+ else:mi.landmark('aquarium',2,'海響館',-16,-92,90,25);mi.landmark('market',1,'唐戸市場',-16,-116,83,25);mi.landmark('akama',3,'赤間神宮',27,-55,89,25)
+ if mobile:s.text(25,1190,'水色の破線＝新しい周回便の案',25,700);s.text(25,1225,'既存JR・バス＋徒歩を土台に、乗り継ぎを整える。',20);credit(s,1252)
+ else:
+  for yy,tt,sz,ww in [(555,'水色の破線',25,700),(590,'新しい周回便の案',25,700),(632,'JR・路線バスを土台に、',21,500),(665,'名所をひとめぐり。',21,500),(733,'夜は駅前の食・遊びへ。',23,700),(770,'帰路は予約前に確認。',21,500)]:s.text(797,yy,tt,sz,ww)
+  s.path('M30 868 H1145',INK,1);s.text(30,906,'乗降場所・道路経路・便数・運行時間は、交通事業者と協議する企画案です。',21);credit(s,949)
+ s.save('map-city'+('-mobile' if mobile else '')+'.svg')
+def kanmon(mobile=False):
+ w,h=(680,1160) if mobile else (1180,1010);s=SVG(w,h,'関門広域の回遊イメージ','実際の海岸線をもとに、下関・唐戸・門司港・門司・小倉を結ぶ。JRは国土地理院の鉄道線、船とバスは接続を簡略化。夜間運行や帰宅保証を示さない。');s.text(25,44,'03 / 海峡ごと、楽しもう。',32,700);s.text(25,79,'下関 × 門司港 × 小倉 / ONE KANMON',20)
+ rect,bbox=((10,105,660,850),(130.864,33.871,131.014,34.020)) if mobile else ((25,104,1130,776),(130.840,33.875,131.047,34.018));m=Map(s,bbox,rect,'kanmon-water',True);m.route(['station',(130.932,33.953),'karato']);m.route(['karato',(130.9522,33.948),'mojiko'],'ferry')
+ if mobile:
+  m.landmark('shin',5,'新下関駅',-75,-100,97,29);m.landmark('station',0,'下関駅前',-95,-100,103,29,'夜の食・遊びの拠点案');m.landmark('karato',1,'唐戸',1,-123,96,29,'昼の市場・海の体験');m.landmark('mojiko',6,'門司港',46,28,111,30,'港のまち歩き');m.landmark('kokura',7,'小倉',16,-130,105,30,'城・商い・文化');x,y=m.point('moji');s.circle(x,y);s.text(x+15,y+30,'門司駅',27,700,halo=True)
+  for lon,lat,tt in [(130.987,34.010,'本州'),(130.988,33.891,'九州'),(130.942,33.933,'関門海峡')]:x,y=m.pointll(lon,lat);s.text(x,y,tt,27,700,'middle')
+  north(s,40,130);s.rect(25,250,183,142,PAPER,1,5);s.path('M40 280 H77',INK,4);s.path('M40 280 H77',PAPER,1.3);s.text(91,287,'鉄道',21);s.path('M40 326 H77',INK,3.5);s.text(91,333,'バス',21);s.path('M40 371 H77',INK,4,'3 9');s.text(91,378,'連絡船',21);s.text(25,988,'船で渡る。鉄道で広げる。',29,700);s.text(25,1027,'下関 → 唐戸 → 門司港 → 小倉へ。',23);s.text(25,1063,'夜の帰路は、宿と終便に合わせて設計。',23);credit(s,1108)
+ else:
+  m.landmark('shin',5,'新下関駅',-99,-63,100,27);m.landmark('station',0,'下関駅前',-143,-88,123,31,'夜の食・遊びの拠点案');m.landmark('karato',1,'唐戸',37,-154,113,30,'昼の市場・海の体験');m.landmark('mojiko',6,'門司港',115,6,124,31,'港のまち歩き');m.landmark('kokura',7,'小倉',-84,-160,117,31,'城・商い・文化');x,y=m.point('moji');s.circle(x,y);s.text(x+22,y+5,'門司駅',27,700,halo=True)
+  for lon,lat,tt in [(130.990,34.011,'本州'),(130.987,33.903,'九州'),(130.918,33.929,'関門海峡')]:x,y=m.pointll(lon,lat);s.text(x,y,tt,30,700,'middle')
+  x,y=m.pointll(130.953,33.949);s.text(x+13,y,'連絡船',22,700,halo=True);x,y=m.pointll(130.951,33.886);s.text(x,y,'JR 在来線でつながる',24,700,halo=True);north(s,45,149);s.rect(50,245,235,161,PAPER,1,5);s.path('M70 280 H122',INK,4);s.path('M70 280 H122',PAPER,1.3);s.text(140,287,'既存の鉄道',22);s.path('M70 329 H122',INK,3.5);s.text(140,336,'路線バス',22);s.path('M70 378 H122',INK,4,'3 9');s.text(140,385,'連絡船',22);s.path('M25 891 H1155',INK,1);s.text(25,933,'門司駅と門司港駅は別の駅。船・鉄道・バスは夜間の運行を保証するものではありません。',21);credit(s,967)
+ s.save('map-kanmon'+('-mobile' if mobile else '')+'.svg')
 def building(mobile=False):
-    w,h=(640,990) if mobile else (1180,820)
-    s=SVG(w,h,'建物の立体構成イメージ・フロア機能の配置案','大丸下関店の営業終了後を見据えた独自構想。B1は日常の買い物、1Fは食と旅の入口、2Fは日本ブランド、3FはIP、4Fは体験、5Fは暮らしと仕事の候補。実測図・設計図ではなく、対象階と動線は未確定。')
-    s.text(24 if mobile else 40,38,'SPACE / 機能を積み重ねる',25 if mobile else 22)
-    if not mobile: s.text(1135,38,'配置案・寸法なし',19,500,anchor='end')
-    # Dashed vertical alignment shows an exploded stack, not a staircase or escape route.
-    if mobile:
-        s.path('M130 84 V850 M330 129 V895', BLACK,2,'5 8')
-    else:
-        s.path('M260 82 V690 M590 134 V742 M410 195 V803',BLACK,2,'5 8')
-    for i,(floor,title,detail,color) in enumerate(floors):
-        y=(86+i*136) if mobile else (78+i*113)
-        if mobile:
-            a,b,c,d=(130,y),(330,y+45),(210,y+93),(10,y+48)
-            thick=12; labelx=365; labely=y+22; title_size=28
-            plane=(1,.225,-1,.4,130,y); pw,ph=200,120
-        else:
-            a,b,c,d=(260,y),(590,y+52.8),(410,y+108.6),(80,y+55.8)
-            thick=13; labelx=680; labely=y+33; title_size=31
-            plane=(1,.16,-1,.31,260,y); pw,ph=330,180
-        points=lambda arr:' '.join(f'{x},{v}' for x,v in arr)
-        s.poly(points([d,c,(c[0],c[1]+thick),(d[0],d[1]+thick)]),color)
-        s.poly(points([b,c,(c[0],c[1]+thick),(b[0],b[1]+thick)]),'white')
-        s.poly(points([a,b,c,d]),color)
-        s.parts.append('<g transform="matrix('+ ' '.join(map(str,plane)) + ')">')
-        # Color zones suggest activity areas; they are not a survey of the actual property.
-        s.rect(15,14,pw*.42,ph*.37,'white',1.7)
-        s.rect(pw*.54,14,pw*.39,ph*.37,'white',1.7)
-        s.rect(15,ph*.56,pw*.60,ph*.33,'white',1.7)
-        s.rect(pw*.73,ph*.55,pw*.20,ph*.34,BLACK,1.7)
-        # Tables / flexible islands give spatial legibility without decorative 3D effects.
-        if i in (0,3,5):
-            for xx in [26,54,82]: s.rect(xx,ph*.63,16,ph*.16,color,1)
-        elif i in (1,2):
-            for xx in [28,57,86]: s.circle(xx,ph*.73,7,color,BLACK,1)
-        else:
-            s.rect(26,ph*.63,pw*.43,ph*.14,color,1)
-        s.parts.append('</g>')
-        s.path(f'M{b[0]} {b[1]+4} H{labelx-20}',BLACK,1.8)
-        s.rect(labelx,labely-24,68 if mobile else 78,33,color,1.5)
-        s.text(labelx+9,labely+1,floor+' 案',22 if mobile else 24)
-        mobile_titles=['暮らし・仕事','体験・学び','IP・カルチャー','日本ブランド','食・観光案内','日常の買い物']
-        s.text(labelx,labely+43,mobile_titles[i] if mobile else title,30 if mobile else title_size,900)
-        if not mobile: s.text(labelx,labely+76,detail,21,500)
-    if mobile:
-        s.rect(16,922,608,50,PAPER,1)
-        s.text(320,957,'食・観光を入口に、日常の利用を重ねる。',24,700,'white','middle')
-    else:
-        s.rect(650,759,480,41,PAPER,1)
-        s.text(675,787,'食・観光を入口に、日常の利用を重ねる。',21,700,'white')
-    s.save('map-building'+('-mobile' if mobile else '')+'.svg')
-
-def local(mobile=False):
-    desc='下関駅前と、海響館・唐戸市場・赤間神宮・城下町長府・新下関駅をつなぐ模式図。下関駅から海沿いの各地へ既存バス、新下関駅から下関駅へJR、新下関駅から城下町長府へ既存バス。水色の破線はこれらを周回する未運行の企画案。方位、距離、道路形状は示さない。'
-    s=SVG(640 if mobile else 1180,1160 if mobile else 820,'下関市内のアクセシビリティ',desc)
-    if mobile:
-        # The coast runs down the right of a legible, vertical city circuit.
-        s.path('M640 220 L585 340 L585 650 L455 760 L455 1160 H640 Z',BLUE,0,fill=BLUE)
-        s.text(26,39,'CITY / 下関市内をひとつの旅に',25)
-        s.path('M102 145 V928',BLACK,10)
-        s.path('M102 145 V928',PAPER,4)
-        s.path('M102 145 H470 V273',BLACK,5)
-        s.path('M470 350 V425 L370 548 L310 700 L225 924',BLACK,5)
-        s.path('M370 557 L411 702 L320 812',BLACK,4,'2 12')
-        s.path('M206 925 L284 685 L343 534 L439 419 V187 H147 V840 Z',BLACK,11,'12 14')
-        s.path('M206 925 L284 685 L343 534 L439 419 V187 H147 V840 Z',PINK,7,'12 14')
-        s.label(177,409,'周回便',PINK,27)
-        s.text(192,445,'企画案',25)
-        s.label(17,416,'JR',PAPER,28)
-        s.label(248,222,'路線バス',PAPER,28)
-        s.label(393,391,'路線バス',PAPER,26)
-        s.label(425,727,'徒歩等',PAPER,23)
-        s.circle(102,145); s.circle(470,301); s.circle(370,548); s.circle(310,700); s.circle(225,866)
-        s.rect(35,65,330,114,'white',2)
-        s.text(54,102,'新幹線の入口',24,600)
-        s.text(54,148,'新下関駅',38,900)
-        s.rect(276,254,335,114,LIME,2)
-        s.text(296,297,'城下町長府',37,900)
-        s.text(296,341,'武家屋敷・土塀の町並み',24,500)
-        s.rect(349,455,265,81,'white',2)
-        s.text(369,505,'赤間神宮',36,900)
-        s.rect(277,584,295,83,LEMON,2)
-        s.text(299,638,'唐戸市場',38,900)
-        s.rect(165,750,264,83,'white',2)
-        s.text(185,804,'海響館',38,900)
-        s.rect(32,904,478,129,LEMON,2.5)
-        s.text(52,943,'下関駅前 / 構想拠点',35,900)
-        s.text(52,982,'大丸下関店の営業終了後を想定',23,500)
-        s.text(52,1015,'シーモール・駐車場と一体利用を検討',22,500)
-        s.text(476,1080,'関門海峡',28,900,'white')
-        s.text(28,1124,'接続を整理した模式図・縮尺なし',24,500)
-    else:
-        s.path('M1180 298 L1100 362 L1050 435 L882 475 L830 557 L670 628 L585 708 L510 820 H1180 Z',BLUE,0,fill=BLUE)
-        s.text(40,39,'CITY / 下関市内をひとつの旅に',22)
-        s.text(1138,39,'接続を整理した模式図・縮尺なし',19,500,anchor='end')
-        s.path('M225 148 V676',BLACK,10)
-        s.path('M225 148 V676',PAPER,4)
-        s.path('M225 148 H950 V226',BLACK,5)
-        s.path('M950 226 V313 L798 400 L643 497 L460 580 L280 673',BLACK,5)
-        s.path('M807 411 L807 527 L649 585 L480 660',BLACK,4,'2 12')
-        s.path('M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z',BLACK,11,'12 14')
-        s.path('M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z',PINK,7,'12 14')
-        s.label(35,418,'周回便',PINK,27)
-        s.text(49,455,'企画案',24,700)
-        s.label(247,365,'JR 山陽本線',PAPER,24)
-        s.label(556,134,'既存の路線バス',PAPER,25)
-        s.label(493,429,'既存の路線バス',PAPER,25)
-        s.label(865,593,'徒歩などで回遊',PAPER,22)
-        for x,y in [(225,148),(950,226),(798,400),(643,497),(460,580),(280,673)]: s.circle(x,y)
-        s.rect(82,82,350,127,'white',2)
-        s.text(107,121,'新幹線の入口',22,600)
-        s.text(106,173,'新下関駅',41,900)
-        s.rect(764,216,375,112,LIME,2)
-        s.text(790,262,'城下町長府',37,900)
-        s.text(790,300,'武家屋敷・土塀の町並み',23,500)
-        s.rect(803,347,256,83,'white',2)
-        s.text(826,400,'赤間神宮',37,900)
-        s.rect(642,473,255,88,LEMON,2)
-        s.text(665,529,'唐戸市場',40,900)
-        s.rect(389,583,235,65,'white',2)
-        s.text(414,631,'海響館',39,900)
-        s.rect(45,658,440,119,LEMON,2.5)
-        s.text(67,703,'下関駅前 / 構想拠点',37,900)
-        s.text(67,738,'大丸下関店の営業終了後を想定',21,500)
-        s.text(67,764,'シーモール・駐車場と一体利用を検討',20,500)
-        s.text(812,696,'関門海峡',42,900,'white')
-        s.text(814,730,'KANMON STRAIT',22,700,'white')
-    s.save('map-city'+('-mobile' if mobile else '')+'.svg')
-
-def regional(mobile=False):
-    desc='関門を一体で巡る交通接続の模式図。新下関駅と下関駅はJR山陽本線、下関駅と唐戸は既存バス、唐戸港と門司港は既存の関門連絡船。下関駅から海峡を越えて門司駅・小倉駅へJR在来線、門司駅から門司港駅へJR。途中駅やバス停は省略。宿泊や夜の帰路の一体案内は未合意の構想。'
-    s=SVG(640 if mobile else 1180,1090 if mobile else 820,'関門広域のアクセシビリティ',desc)
-    if mobile:
-        s.rect(0,403,640,224,BLUE,0)
-        s.text(23,37,'REGION / 海峡を越えて、滞在する',24)
-        s.path('M130 147 V720 H85 V835',BLACK,10)
-        s.path('M130 147 V720 H85 V835',PAPER,4)
-        s.path('M130 720 H500 V630',BLACK,10)
-        s.path('M130 720 H500 V630',PAPER,4)
-        s.path('M130 274 H496 V348',BLACK,5)
-        s.path('M498 359 V630',BLACK,4,'10 9')
-        s.rect(34,68,313,97,'white',2)
-        s.text(54,101,'新幹線の入口',22,500)
-        s.text(54,144,'新下関駅',36,900)
-        s.label(149,213,'JR',PAPER,26)
-        s.rect(25,249,305,131,LEMON,2.5)
-        s.text(45,288,'下関駅前',36,900)
-        s.text(45,325,'大丸営業終了後の構想拠点',21,500)
-        s.text(45,357,'夜の食と文化・宿泊連携案',22,500)
-        s.label(345,249,'路線バス',PAPER,24)
-        s.rect(407,297,208,91,'white',2)
-        s.text(427,333,'唐戸',34,900)
-        s.text(427,369,'市場・港',25,500)
-        s.text(184,468,'関門海峡',41,900,'white')
-        s.label(161,552,'JR 在来線','white',26)
-        s.label(351,594,'関門連絡船','white',26)
-        s.circle(130,720);s.circle(500,720);s.circle(85,835)
-        s.rect(362,622,254,80,'white',2)
-        s.text(380,658,'門司港',33,900)
-        s.text(380,688,'門司港駅',23,500)
-        s.text(159,674,'門司駅',32,900)
-        s.text(159,703,'門司港方面へ接続',20,500)
-        s.label(255,762,'JR 在来線',PAPER,25)
-        s.rect(32,821,276,82,'white',2)
-        s.text(52,872,'小倉駅',38,900)
-        s.text(345,853,'北九州市',32,900)
-        s.text(345,885,'門司港・小倉にも泊まる',20,500)
-        s.rect(23,937,594,115,'white',3,PINK,dash='11 7')
-        s.text(44,975,'連携案 / 宿へ戻るまでをひとつに',26,900)
-        s.text(44,1010,'下関・門司港・小倉の宿、荷物、夜の帰路。',22,500)
-        s.text(44,1038,'深夜の船・バス・鉄道の運行は示しません。',22,500)
-    else:
-        s.rect(0,331,1180,260,BLUE,0)
-        s.text(40,38,'REGION / 海峡を越えて、滞在する',22)
-        s.text(1138,38,'交通の接続図・縮尺なし・途中駅を省略',19,500,anchor='end')
-        s.path('M252 136 V430 L470 619 H984',BLACK,10)
-        s.path('M252 136 V430 L470 619 H984',PAPER,4)
-        s.path('M470 619 H186 V686',BLACK,10)
-        s.path('M470 619 H186 V686',PAPER,4)
-        s.path('M252 258 H978 V282',BLACK,5)
-        s.path('M978 295 V591',BLACK,4,'10 9')
-        s.rect(91,68,334,99,'white',2)
-        s.text(115,102,'新幹線の入口',21,500)
-        s.text(115,147,'新下関駅',39,900)
-        s.label(274,209,'JR 山陽本線',PAPER,24)
-        s.rect(56,229,455,106,LEMON,2.5)
-        s.text(80,274,'下関駅前 / 構想拠点',38,900)
-        s.text(80,313,'夜の食と文化を、関門に泊まる理由に。',22,500)
-        s.label(594,244,'既存の路線バス',PAPER,25)
-        s.rect(864,211,266,121,'white',2)
-        s.text(887,257,'唐戸',39,900)
-        s.text(887,299,'市場・海響館・港',25,500)
-        s.text(590,436,'関門海峡',52,900,'white','middle')
-        s.text(590,473,'KANMON STRAIT',24,700,'white','middle')
-        s.label(145,504,'JR 在来線','white',25)
-        s.label(785,553,'既存の関門連絡船','white',24)
-        for x,y in [(470,619),(186,686),(978,619)]: s.circle(x,y)
-        s.rect(63,664,279,100,'white',2)
-        s.text(87,707,'小倉駅',39,900)
-        s.text(87,744,'新幹線・街歩き・宿泊',21,500)
-        s.text(443,675,'門司駅',34,900)
-        s.text(443,708,'門司港方面へ接続',21,500)
-        s.label(632,611,'JR 在来線',PAPER,23)
-        s.rect(811,596,318,108,'white',2)
-        s.text(834,641,'門司港・門司港駅',32,900)
-        s.text(834,680,'街歩き・夜景・宿泊',23,500)
-        s.rect(390,748,740,48,'white',3,PINK,dash='11 7')
-        s.text(410,780,'連携案 / 下関・門司港・小倉の宿、荷物、夜の帰路を一体案内',21,700)
-    s.save('map-kanmon'+('-mobile' if mobile else '')+'.svg')
-
-for m in (False,True):
-    building(m);local(m);regional(m)
-print('Created 6 responsive SVG maps')
+ w,h=(680,1150) if mobile else (1180,970);s=SVG(w,h,'建物の立体フロア構成案','B1から5Fの配置案。日常の食、夜の市場、日本の工芸、ゲーム・IP、音楽と物語、暮らしと仕事。屋上は別途調査する将来案。実測図・設計図ではない。');s.text(25,43,'01 / 建物の中に、小さなまち。',30,700);s.text(25,78,'食べる → つくる → 遊ぶ → 物語に入る',21)
+ names=[('5F','暮らし・仕事','LOCAL LIFE / WORK'),('4F','音楽とものがたり','LIVE & EXPERIENCE'),('3F','ゲーム・IP','POP CULTURE NIGHT'),('2F','工芸と夜の買い物','JAPAN NIGHT'),('1F','夜の食と旅の案内','NIGHT MARKET / TRIP'),('B1','食材とお持ち帰り','EVERYDAY FOOD')]
+ for i,(floor,title,eng) in enumerate(names):
+  y=(120+i*141) if mobile else (122+i*116)
+  if mobile:a,b,c,d=(122,y),(323,y+38),(234,y+90),(33,y+52);tx=357
+  else:a,b,c,d=(224,y),(555,y+47),(407,y+109),(76,y+62);tx=635
+  for pts,color in [([d,c,(c[0],c[1]+10),(d[0],d[1]+10)],PAPER),([b,c,(c[0],c[1]+10),(b[0],b[1]+10)],'#C5A6E8'),([a,b,c,d],PAPER)]:s.p.append(f'<polygon points="{" ".join(f"{x},{v}" for x,v in pts)}" fill="{color}" stroke="{INK}" stroke-width="2.2"/>')
+  s.text(d[0]+27,d[1]+13,floor,25,700)
+  if i in (1,2,3,4):s.vignette({1:3,2:2,3:1,4:0}[i],a[0]+(8 if mobile else 32),y+1,151 if mobile else 226,75 if mobile else 90)
+  else:
+   s.path(f'M{a[0]+30},{y+29} l80,13 -34,20 -80,-13 Z',INK,2,fill='#C5A6E8');s.path(f'M{a[0]+139},{y+45} l45,7 -23,13 -45,-7 Z',INK,2,fill=PAPER)
+  s.path(f'M{b[0]+5},{b[1]+7} H{tx-20}',INK,1.4);s.text(tx,y+30,floor+' 案',23,700)
+  if mobile:
+   for k,t in enumerate(title.split('と')):s.text(tx,y+68+k*32,t,27,700)
+  else:s.text(tx,y+68,title,30,700);s.text(tx,y+99,eng,18,400)
+ if mobile:s.rect(25,1002,630,114,PAPER,1.5,5,'7 6');s.text(42,1037,'ROOFTOP / 将来の検討案',22,700);s.text(42,1071,'KANMON SKY：構造・眺望・音・避難を調査。',20);s.text(42,1100,'実測図ではありません。全館同時開業は前提にしません。',17)
+ else:s.rect(25,853,1130,87,PAPER,1.5,5,'7 6');s.text(44,886,'ROOFTOP / KANMON SKY は将来の検討案',24,700);s.text(44,920,'構造・眺望・音・避難を調査。これは機能の配置案で、実測図や設計図ではありません。',20)
+ s.save('map-building'+('-mobile' if mobile else '')+'.svg')
+if __name__=='__main__':
+ for mobile in (False,True):building(mobile);city(mobile);kanmon(mobile)
+ print('Wrote six illustrated SVG maps.')

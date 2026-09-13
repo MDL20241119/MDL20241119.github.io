@@ -1,0 +1,75 @@
+/* KANMON AFTER DARK: a quiet illustrated zine, with readable map imagery. */
+.after-dark-edition .cover-art{aspect-ratio:1.45/1;max-height:510px;overflow:visible}
+.after-dark-edition .cover-art img{height:100%;width:100%;object-fit:contain;transform:none;mix-blend-mode:multiply}
+.after-dark-edition .zine-cover h1{line-height:1.6}
+.after-dark-edition .site-header nav a{font-size:14px}
+.after-dark-edition .night-cards{grid-template-columns:repeat(2,minmax(0,1fr));gap:34px;margin-top:28px}
+.after-dark-edition .night-card{display:block;border-radius:5px 9px 4px 7px;background:#F7F4EE}
+.after-dark-edition .night-card .night-art{display:block;position:relative;aspect-ratio:836/470.5;overflow:hidden;margin:0}
+.after-dark-edition .night-card .night-art img{position:absolute;width:200%;height:200%;max-width:none;object-fit:fill;mix-blend-mode:multiply}
+.after-dark-edition .night-art.quadrant-tl img{left:0;top:0}
+.after-dark-edition .night-art.quadrant-tr img{left:-100%;top:0}
+.after-dark-edition .night-art.quadrant-bl img{left:0;top:-100%}
+.after-dark-edition .night-art.quadrant-br img{left:-100%;top:-100%}
+.after-dark-edition .night-card-copy{padding:17px 35px 30px}
+.after-dark-edition .night-card h3{font-size:clamp(30px,3.2vw,43px);line-height:1.55;margin:18px 0 22px}
+.after-dark-edition .night-card-copy>p br{display:initial}
+.after-dark-edition .night-card-label{font-size:12px;letter-spacing:.05em}
+.after-dark-edition .night-card-copy .night-hook{font-size:22px;margin-top:8px}
+.after-dark-edition .card-details{font-size:14px;line-height:1.9}
+.after-dark-edition .card-details p{margin-block:18px}
+.night-opening{text-align:center;margin:35px 0 18px}
+.night-opening>span{font-family:var(--hand);font-size:29px}
+.night-opening>p{font-size:14px;margin-top:12px}
+.night-art-note{font-size:12px;line-height:1.8;text-align:center;margin:24px auto 65px;max-width:850px}
+.night-time{margin-top:65px;padding-top:45px;border-top:1px solid #111}
+.night-time h3{font-size:clamp(29px,3.5vw,43px);line-height:1.65;margin:20px 0 35px}
+.night-hours{list-style:none;display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:27px;padding:0;margin:28px 0}
+.night-hours li{padding:18px 0 0;border-top:3px solid #C5A6E8}
+.night-hours li.night-hours-later{border-top:3px dashed #111}
+.night-hours span{font-family:var(--hand);font-size:25px;display:block;margin-bottom:20px;min-height:36px}
+.night-hours b{font-family:var(--hand);font-size:23px;font-weight:400;display:block;line-height:1.65;margin-bottom:16px}
+.night-hours p{font-size:14px;line-height:1.9}
+.after-dark-edition .after-dark-journey{margin:55px 0;background:#F3DE53;padding:42px 35px;border:1px solid #111;border-radius:5px 8px 3px 7px}
+.after-dark-journey .eyebrow{font-size:13px}
+.after-dark-edition .after-dark-journey h3{font-size:clamp(29px,3.4vw,43px);margin-top:20px}
+.after-dark-edition .after-dark-journey ol{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:27px 22px;margin:35px 0}
+.after-dark-edition .after-dark-journey li{min-width:0;display:block;border-top:1px dashed #111;padding-top:16px}
+.after-dark-edition .after-dark-journey li:after{content:none}
+.after-dark-edition .after-dark-journey li span{font:12px/1.6 Arial,sans-serif;display:block;margin-bottom:13px}
+.after-dark-edition .after-dark-journey li b{font-family:var(--hand);font-size:21px;font-weight:400}
+.after-dark-journey .zine-button{margin-top:20px;background:#F7F4EE;font-size:14px}
+.night-operations{padding:12px 0 35px}
+.night-operations h3{font-size:clamp(29px,3vw,40px);line-height:1.6;margin:22px 0}
+.night-operations>p{font-size:15px;line-height:1.8}
+.night-operations-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:30px;margin-top:30px}
+.night-operations-grid article{border-top:1px dashed #111;padding-top:20px}
+.night-operations-grid b{font-family:var(--hand);font-size:24px;font-weight:400}
+.night-operations-grid p{font-size:14px;line-height:1.9;margin-top:16px}
+.night-lessons{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;margin:30px 0}
+.night-lessons article{border-top:1px solid #111;padding-top:22px;min-width:0}
+.night-lessons span{font-size:13px}
+.night-lessons h4{font-family:var(--hand);font-weight:400;font-size:27px;line-height:1.7;margin:17px 0}
+.night-lessons p{font-size:14px;line-height:1.9;margin:14px 0}
+.night-lessons .night-transfer{border-left:3px solid #C5A6E8;padding-left:14px}
+.night-lessons a{font-size:12px;line-height:1.8;overflow-wrap:anywhere}
+.after-dark-edition .atlas-figure img{width:100%;height:auto;display:block}
+.after-dark-edition .map-mini{overflow:hidden}
+.after-dark-edition .map-mini img{width:100%;height:100%;object-fit:cover;object-position:center 32%}
+.after-dark-edition .loop-overview li:nth-child(2) figure img{object-fit:contain;transform:none}
+.night-income{margin:45px 0 35px;padding:35px;border:1px solid #111;border-radius:5px 8px 4px 7px;background:#B7D98B}
+.night-income h3{font-size:clamp(28px,3vw,40px);line-height:1.6;margin:18px 0}
+.night-income>p{font-size:15px;line-height:1.8}
+.income-equation{display:flex;align-items:center;justify-content:center;gap:30px;margin:35px 0;text-align:center}
+.income-equation>span{font-size:13px;line-height:1.8}
+.income-equation b{font-family:var(--hand);font-size:26px;font-weight:400;line-height:1.8;display:block;margin-top:10px}
+.income-equation i{font:28px/1 Arial,sans-serif}
+.night-income .fine{font-size:13px;line-height:1.9}
+.spend-examples{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px;margin:27px 0}
+.spend-examples article{border-top:1px dashed #111;padding-top:18px}
+.spend-examples span{font-size:13px;display:block}
+.spend-examples b{font-family:var(--hand);font-size:36px;font-weight:400;display:block;margin:20px 0}
+.spend-examples p{font-size:14px;line-height:1.9}
+@media(max-width:900px){.night-hours{grid-template-columns:repeat(2,minmax(0,1fr))}.night-operations-grid{grid-template-columns:1fr;gap:25px}.after-dark-edition .night-card-copy{padding-inline:25px}.after-dark-edition .night-card h3{font-size:30px}.after-dark-edition .after-dark-journey ol{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:700px){.after-dark-edition .site-header nav a{font-size:12px}.after-dark-edition .cover-art{aspect-ratio:1.65/1;max-height:270px}.after-dark-edition .night-cards{grid-template-columns:1fr;gap:29px}.after-dark-edition .night-card-copy{padding:17px 25px 28px}.after-dark-edition .night-card h3{font-size:34px}.night-art-note{text-align:left;margin-bottom:45px}.night-time{margin-top:40px;padding-top:30px}.night-hours{gap:25px 22px}.night-hours span{font-size:23px}.night-hours b{font-size:21px}.night-hours p{font-size:13px}.night-hours p br{display:none}.after-dark-edition .after-dark-journey{padding:30px 23px;margin:40px 0}.after-dark-edition .after-dark-journey li b{font-size:20px}.night-lessons{grid-template-columns:1fr}.night-operations-grid b{font-size:25px}.night-income{padding:27px 22px}.income-equation{flex-direction:column;gap:19px;margin:25px 0}.income-equation b{font-size:26px}.spend-examples{grid-template-columns:1fr}.spend-examples b{font-size:34px;margin:12px 0}.night-opening>span{font-size:27px}.after-dark-edition .night-card-copy .night-hook{font-size:20px}}
+@media(prefers-reduced-motion:reduce){.after-dark-edition *{scroll-behavior:auto}}
