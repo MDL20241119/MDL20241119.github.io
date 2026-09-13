@@ -1,0 +1,169 @@
+{
+  "version": "2026-09-13-building-concept",
+  "scope": "Independent public concept. No business, investment, tenancy, building-design or operating approval is represented. Existing 9-case and 7-night-city evidence records remain applicable.",
+  "sources_record": "world-cases-evidence.json",
+  "claims": [
+    {
+      "id": "BC01",
+      "type": "fact",
+      "claim": "PDA charter includes fostering small businesses; craft daystall participation includes makers selling their own products.",
+      "source": "https://www.pikeplacemarket.org/about-pike-place-market/governance/",
+      "locator": "PDA charter mission",
+      "grade": "primary operator/charter",
+      "confidence": "high for mission; profitability not established",
+      "proposal": "Transparent small-unit and short-term tenant selection plus disclosed total occupancy costs on B1 and 2F.",
+      "limitation": "Rent discounts and turnover rents are MDL proposals, not a claim about all Pike Place leases."
+    },
+    {
+      "id": "BC02",
+      "type": "fact",
+      "claim": "Granville Island 2040 describes market rental revenue supporting arts and culture.",
+      "source": "https://granvilleisland2040.ca/strategies/strategy-2/",
+      "locator": "Strategy 2 economic engine / arts and culture",
+      "grade": "CMHC-commissioned primary plan",
+      "confidence": "high for stated mechanism; current surplus not audited here",
+      "proposal": "Budget culture at operator level, supported first by committed funding; allocate only available surplus after full operating costs, repair reserves and working capital.",
+      "limitation": "Tenant sales/profit and landlord/operator income are separate. Evening activation in the source is a plan, not a measured outcome."
+    },
+    {
+      "id": "BC03",
+      "type": "fact",
+      "claim": "Time Out describes selection by its editorial team and coexistence with the traditional market.",
+      "source": "https://www.timeout.com/time-out-market-lisboa/concept",
+      "locator": "Who we are / selection / traditional market",
+      "grade": "primary operator",
+      "confidence": "high for configuration; not independent demand evidence",
+      "proposal": "An accountable food curator selects local operators, seasonality and accessible price bands for the B1/1F core.",
+      "limitation": "Shimonoseki demand and profitability are unmeasured."
+    },
+    {
+      "id": "BC04",
+      "type": "fact",
+      "claim": "King’s Cross combines work, residences, education, retail and public space.",
+      "source": "https://www.kingscross.co.uk/about-the-development",
+      "locator": "About the development / mix of uses",
+      "grade": "primary developer",
+      "confidence": "high for mix of uses",
+      "proposal": "5F learning/work/community with repeat users and actual operating partners identified first.",
+      "limitation": "Repeat visits and net jobs are hypotheses in Shimonoseki. Prior 2021 link is retained in the historic evidence snapshot; current page now links this source."
+    },
+    {
+      "id": "BC05",
+      "type": "fact",
+      "claim": "Smith Street master-tenant quality selection and SG Heritage Business Scheme support are different mechanisms.",
+      "sources": [
+        "https://www.ura.gov.sg/news/media/pr23-47/",
+        "https://www.mccy.gov.sg/about-us/news-and-resources/digital-support-and-tools-to-expand-businesses-presence-under-the-sg-heritage-business-scheme/"
+      ],
+      "locator": "Master tenancy tender / scheme support",
+      "grade": "primary public agencies",
+      "confidence": "high for mechanisms",
+      "proposal": "Publish operator/tenant selection reasons and connect heritage storytelling to business and successor support.",
+      "limitation": "No claim of existing local-preference lease entitlement or direct cash subsidy under the heritage scheme."
+    },
+    {
+      "id": "BC06",
+      "type": "inference",
+      "claim": "Markthal food experience, Bilbao integrated district planning, Battersea reuse/access and Medellin inclusive access inform spatial conditions across floors.",
+      "source_record_case_ids": [
+        "markthal",
+        "bilbao",
+        "battersea",
+        "medellin"
+      ],
+      "proposal": "1F food/Trip Studio connects the building to existing city and Kanmon transport, shops and public space.",
+      "confidence": "design inference, effect unverified",
+      "limitation": "These examples do not establish the suitability or value of the subject building or a specific floor allocation."
+    },
+    {
+      "id": "BC07",
+      "type": "proposal",
+      "claim": "Six conceptual places form one jointly curated building: B1 pantry, 1F local table/trip gateway, 2F makers, 3F Kanmon play, 4F theatre, 5F learning/work.",
+      "basis": [
+        "BC01",
+        "BC02",
+        "BC03",
+        "BC04",
+        "BC05",
+        "BC06"
+      ],
+      "conditions": [
+        "building rights and scope",
+        "structure and floor loads",
+        "floor area and existing uses",
+        "fire escape and evening vertical circulation",
+        "kitchen/ventilation/waste",
+        "sound mitigation and staff travel",
+        "willing operators and paid demand"
+      ],
+      "limitation": "3F game is MDL original, not a foreign case performance claim. Floors and sequence are provisional. Roof/6F/7F not committed."
+    }
+  ],
+  "decision_contract": {
+    "audience": "MDL special-site readers and prospective local participants",
+    "decision": "Publish a clearer conditional in-building concept; no capital or operating commitment",
+    "owner": "MDL for proposal; asset, funding and operator decision owners require agreement",
+    "next_action": "Survey usable spaces, operators, demand and full costs before authorizing a paid trial",
+    "approval_status": "Site update authorized; redevelopment and experiment not authorized or executed"
+  },
+  "hypotheses": [
+    {
+      "hypothesis": "Curated food plus one local experience creates incremental spend and paid repeat visits.",
+      "counter_hypothesis": "Activity displaces existing district purchases; upper-floor costs exceed additional income.",
+      "test": "Compare food-only and food-plus-experience sessions, pre-existing travel plans, nearby purchases, paid reuse and separate tenant/operator fully loaded accounts."
+    },
+    {
+      "hypothesis": "Daily work/learning supports weekday use.",
+      "counter_hypothesis": "Existing nearby provision already meets demand or users will not pay.",
+      "test": "Obtain repeat-use commitments and compare incremental service access before permanent fit-out."
+    }
+  ],
+  "alternatives": {
+    "A": "Permanent building-led destination, conditional on measured demand, owners and downside funding",
+    "B": "Small anchor plus district venues and joint operations, proposed first test",
+    "C": "Daily-use core with work/learning/service commitments",
+    "no_additional_project": "Retain existing services and defer additional investment; ownership/maintenance obligations may remain"
+  },
+  "execution": {
+    "state": "designed / not executed",
+    "sequence": "30 days investigation; by 90 days authorized paid pilot; by 365 days seasonal assessment; dates relative to agreed start",
+    "owners": "Before a pilot agree asset owner, operator, budget/risk/data owner, transport and culture partners",
+    "measure": [
+      "incremental purchases",
+      "outside-building use",
+      "paid repeat use",
+      "resident income without double counting",
+      "tenant and operator accounts",
+      "worker return and neighbourhood burden"
+    ],
+    "continue": "Paid demand plus committed revenue/funding covers full costs within agreed loss ceiling",
+    "pivot": "Adjust content, area, hours or district referrals when paid demand exists but format fails",
+    "stop": "No sustainable funds or operating conditions after adjustment; stop before agreed loss ceiling",
+    "funding": "Base cultural programme needs committed finance, not assumed future food profit; reinvestment is limited to eligible operator surplus after costs/reserves/working capital."
+  },
+  "graph_lite_status": {
+    "observation": "partial",
+    "problem_definition": "partial",
+    "decision_contract": "partial",
+    "graph": "partial",
+    "SIDE+P": "partial",
+    "options": "partial",
+    "refutation": "partial",
+    "execution_design": "partial",
+    "business_evidence_freeze": "blocked",
+    "audience_presentation": "complete",
+    "execution_learning": "not executed"
+  },
+  "verification": {
+    "date": "2026-09-13",
+    "method": "Independent bounded urban/operating-strategy review and separate primary-source verifier",
+    "revisions": [
+      "Distinguished tenant and facility accounts",
+      "Required committed base culture budget",
+      "Allowed 5F daily use before entertainment floors if supported",
+      "Explicitly labelled 3F as MDL proposal",
+      "Changed Granville heading to market rents",
+      "Replaced King’s Cross public source with current development overview"
+    ]
+  }
+}

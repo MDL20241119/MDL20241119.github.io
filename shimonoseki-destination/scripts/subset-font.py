@@ -15,7 +15,7 @@ if len(sys.argv) != 2:
 
 source = Path(sys.argv[1])
 text = "".join((ROOT / name).read_text() for name in (
-    "index.html", "app.js", "maps.css", "zine.css", "illustrations.css", "global-loop.css", "after-dark.css"
+    "index.html", "app.js", "maps.css", "zine.css", "illustrations.css", "global-loop.css", "after-dark.css", "commons.css"
 )) + "".join(chr(code) for code in range(32, 127))
 
 font = TTFont(source)

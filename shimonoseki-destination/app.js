@@ -46,14 +46,22 @@ mapTabs.forEach((tab,index)=>{
 document.querySelectorAll('[data-map-link]').forEach(link=>link.addEventListener('click',()=>{
  selectMap(mapTabs.find(t=>t.dataset.map===link.dataset.mapLink));
 }));
-function mapFromHash(){return mapTabs.find(t=>'#'+t.getAttribute('aria-controls')===location.hash);}
+function mapFromHash(){
+ const target=document.getElementById(location.hash.slice(1));
+ const parentPanel=target&&target.closest('.atlas-panel');
+ return parentPanel&&mapTabs.find(t=>t.getAttribute('aria-controls')===parentPanel.id);
+}
 if(mapTabs.length)selectMap(mapFromHash()||mapTabs[0]);
 window.addEventListener('hashchange',()=>{const tab=mapFromHash();if(tab)selectMap(tab);});
 
-// Open the source note when reached by its direct link.
-function revealSourceNote(){
- if(location.hash==='#sources')document.getElementById('sources').open=true;
+// A floor or source link also reveals its containing map and disclosures.
+function revealLinkedContent(hash=location.hash){
+ const target=document.getElementById(hash.slice(1));
+ if(!target)return;
+ const parentPanel=target.closest('.atlas-panel');
+ if(parentPanel)selectMap(mapTabs.find(t=>t.getAttribute('aria-controls')===parentPanel.id));
+ for(let node=target;node;node=node.parentElement){if(node.tagName==='DETAILS')node.open=true;}
 }
-revealSourceNote();
-window.addEventListener('hashchange',revealSourceNote);
-document.querySelectorAll('a[href="#sources"]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('sources').open=true;}));
+revealLinkedContent();
+window.addEventListener('hashchange',()=>revealLinkedContent());
+document.querySelectorAll('a[href^="#"]').forEach(link=>link.addEventListener('click',()=>revealLinkedContent(link.getAttribute('href'))));

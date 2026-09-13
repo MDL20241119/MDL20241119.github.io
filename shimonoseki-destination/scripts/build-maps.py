@@ -92,23 +92,35 @@ def kanmon(mobile=False):
   x,y=m.pointll(130.953,33.949);s.text(x+13,y,'連絡船',22,700,halo=True);x,y=m.pointll(130.951,33.886);s.text(x,y,'JR 在来線でつながる',24,700,halo=True);north(s,45,149);s.rect(50,245,235,161,PAPER,1,5);s.path('M70 280 H122',INK,4);s.path('M70 280 H122',PAPER,1.3);s.text(140,287,'既存の鉄道',22);s.path('M70 329 H122',INK,3.5);s.text(140,336,'路線バス',22);s.path('M70 378 H122',INK,4,'3 9');s.text(140,385,'連絡船',22);s.path('M25 891 H1155',INK,1);s.text(25,933,'門司駅と門司港駅は別の駅。船・鉄道・バスは夜間の運行を保証するものではありません。',21);credit(s,967)
  s.save('map-kanmon'+('-mobile' if mobile else '')+'.svg')
 def building(mobile=False):
- w,h=(680,1150) if mobile else (1180,970);s=SVG(w,h,'建物の立体フロア構成案','B1から5Fの配置案。日常の食、夜の市場、日本の工芸、ゲーム・IP、音楽と物語、暮らしと仕事。屋上は別途調査する将来案。実測図・設計図ではない。');s.text(25,43,'01 / 建物の中に、小さなまち。',30,700);s.text(25,78,'食べる → つくる → 遊ぶ → 物語に入る',21)
- names=[('5F','暮らし・仕事','LOCAL LIFE / WORK'),('4F','音楽とものがたり','LIVE & EXPERIENCE'),('3F','ゲーム・IP','POP CULTURE NIGHT'),('2F','工芸と夜の買い物','JAPAN NIGHT'),('1F','夜の食と旅の案内','NIGHT MARKET / TRIP'),('B1','食材とお持ち帰り','EVERYDAY FOOD')]
- for i,(floor,title,eng) in enumerate(names):
-  y=(120+i*141) if mobile else (122+i*116)
-  if mobile:a,b,c,d=(122,y),(323,y+38),(234,y+90),(33,y+52);tx=357
+ w,h=(680,1290) if mobile else (1180,1110)
+ s=SVG(w,h,'世界の知恵を骨格にした館内の立体構成案','B1はまちの台所、1Fは下関の食卓と旅の入口、2Fはつくり手の路地、3Fは海峡あそび場、4Fはものがたり劇場、5Fは学びと仕事の広場。機能の配置案であり、実測図・設計図ではない。')
+ s.text(25,43,'01 / 海峡のまちが、ひとつ屋根の下に。',27 if mobile else 32,700)
+ s.text(25,79,'商い・文化・日常を、一つの運営でつなぐ。',20 if mobile else 23)
+ names=[
+  ('5F','学びと仕事の広場','自習・仕事・地域の講座','King’s Cross','毎週通う理由'),
+  ('4F','ものがたり劇場','歴史の短編劇・地元の音楽','Granville Island','文化を育てる'),
+  ('3F','海峡あそび場','潮を読み、仲間と港を目指す','MDLのオリジナル企画案','遊びに来る目的'),
+  ('2F','つくり手の路地','工房・老舗・新しいブランド','Pike Place / Chinatown','商いを育てる'),
+  ('1F','下関の食卓と、旅の入口','料理人の食卓・旅と荷物の案内','Time Out Lisbon / Markthal','食で人を呼ぶ'),
+  ('B1','まちの台所','地元の食材・惣菜・生産者の売場','Pike Place','日常を支える')]
+ for i,(floor,title,sub,case,role) in enumerate(names):
+  y=125+i*(162 if mobile else 138)
+  if mobile:a,b,c,d=(104,y),(282,y+36),(202,y+83),(24,y+47);tx=325
   else:a,b,c,d=(224,y),(555,y+47),(407,y+109),(76,y+62);tx=635
   for pts,color in [([d,c,(c[0],c[1]+10),(d[0],d[1]+10)],PAPER),([b,c,(c[0],c[1]+10),(b[0],b[1]+10)],'#C5A6E8'),([a,b,c,d],PAPER)]:s.p.append(f'<polygon points="{" ".join(f"{x},{v}" for x,v in pts)}" fill="{color}" stroke="{INK}" stroke-width="2.2"/>')
-  s.text(d[0]+27,d[1]+13,floor,25,700)
-  if i in (1,2,3,4):s.vignette({1:3,2:2,3:1,4:0}[i],a[0]+(8 if mobile else 32),y+1,151 if mobile else 226,75 if mobile else 90)
+  s.text(d[0]+17,d[1]+14,floor,25,700)
+  if i in (1,2,3,4,5):s.vignette({1:3,2:2,3:1,4:0,5:0}[i],a[0]+(1 if mobile else 32),y+1,139 if mobile else 226,70 if mobile else 90)
   else:
-   s.path(f'M{a[0]+30},{y+29} l80,13 -34,20 -80,-13 Z',INK,2,fill='#C5A6E8');s.path(f'M{a[0]+139},{y+45} l45,7 -23,13 -45,-7 Z',INK,2,fill=PAPER)
-  s.path(f'M{b[0]+5},{b[1]+7} H{tx-20}',INK,1.4);s.text(tx,y+30,floor+' 案',23,700)
-  if mobile:
-   for k,t in enumerate(title.split('と')):s.text(tx,y+68+k*32,t,27,700)
-  else:s.text(tx,y+68,title,30,700);s.text(tx,y+99,eng,18,400)
- if mobile:s.rect(25,1002,630,114,PAPER,1.5,5,'7 6');s.text(42,1037,'ROOFTOP / 将来の検討案',22,700);s.text(42,1071,'KANMON SKY：構造・眺望・音・避難を調査。',20);s.text(42,1100,'実測図ではありません。全館同時開業は前提にしません。',17)
- else:s.rect(25,853,1130,87,PAPER,1.5,5,'7 6');s.text(44,886,'ROOFTOP / KANMON SKY は将来の検討案',24,700);s.text(44,920,'構造・眺望・音・避難を調査。これは機能の配置案で、実測図や設計図ではありません。',20)
+   s.path(f'M{a[0]+20},{y+29} l70,13 -34,18 -70,-13 Z',INK,2,fill='#C5A6E8');s.path(f'M{a[0]+113},{y+43} l45,7 -23,13 -45,-7 Z',INK,2,fill=PAPER)
+  s.path(f'M{b[0]+5},{b[1]+7} H{tx-16}',INK,1.4)
+  s.text(tx,y+21,floor+' / '+role,18 if mobile else 20,700)
+  s.text(tx,y+62,title,25 if mobile else 31,700)
+  s.text(tx,y+97,sub,18 if mobile else 23)
+  s.text(tx,y+126,case,17 if mobile else 18,400)
+ if mobile:
+  s.rect(25,1125,630,132,PAPER,1.5,5,'7 6');s.text(42,1159,'ROOFTOP / KANMON SKY は将来の検討案',20,700);s.text(42,1190,'構造・眺望・音・避難を調査して判断。',19);s.text(42,1220,'階は仮置き。使える区画と需要から開く。',19);s.text(42,1246,'参照事例の再現図や、現況の設計図ではありません。',17)
+ else:
+  s.rect(25,982,1130,103,PAPER,1.5,5,'7 6');s.text(44,1016,'ROOFTOP / KANMON SKY は将来の検討案',24,700);s.text(44,1049,'階は仮置き。使える区画と需要から開く。屋上は構造・眺望・音・避難を調査。',20);s.text(44,1077,'参照事例の再現図や、現況の設計図ではありません。',18)
  s.save('map-building'+('-mobile' if mobile else '')+'.svg')
 if __name__=='__main__':
  for mobile in (False,True):building(mobile);city(mobile);kanmon(mobile)

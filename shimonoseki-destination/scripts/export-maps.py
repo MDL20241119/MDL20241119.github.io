@@ -5,7 +5,7 @@ Published SVGs embed WebP and remain independently viewable in modern browsers.
 from pathlib import Path
 from concurrent.futures import ThreadPoolExecutor
 from PIL import Image
-import base64,io,os,subprocess,tempfile
+import base64,io,os,subprocess,tempfile,sys
 ROOT=Path(__file__).resolve().parents[1];OUT=ROOT/'assets'
 replacements={}
 for name in ['map-landmarks-sheet','after-dark-play-sheet']:
@@ -22,4 +22,5 @@ def render(p):
   if os.environ.get('MAP_RENDER_DIR'):
    dest=Path(os.environ['MAP_RENDER_DIR']);dest.mkdir(exist_ok=True,parents=True);im.save(dest/(p.stem+'.png'))
  return p.stem
-with ThreadPoolExecutor(max_workers=3) as pool:print(list(pool.map(render,sorted(OUT.glob('map-*.svg')))))
+pattern=sys.argv[1] if len(sys.argv)>1 else 'map-*.svg'
+with ThreadPoolExecutor(max_workers=3) as pool:print(list(pool.map(render,sorted(OUT.glob(pattern)))))
