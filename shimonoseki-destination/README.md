@@ -12,11 +12,15 @@ Public independent concept by Mobility Design Lab. Published 2026-09-13 at https
 
 ## Materials and visitor data
 
-The current edition uses three original AI-generated Naive Zine illustrations: `assets/zine-boat.webp`, `assets/zine-navigation.webp` and `assets/zine-food.webp`. They communicate proposed experiences, not actual venue interiors, historical reconstructions or official mascots. The page explains this once in the illustration note. Earlier licensed photographs remain archived in the repository; their metadata is in `photo-credits.json`. They are not displayed in this edition.
+The current edition uses six original AI-generated Naive Zine assets. The existing boat, navigation and food scenes are joined by `assets/history-scenes.webp`, `assets/theatre-scene.webp` and `assets/local-work-scene.webp`. The history image is a four-scene sheet displayed in four CSS viewports; its subjects are conceptual illustrations for the proposed storytelling, not portraits or historical reconstructions. The additional prompts are recorded in `illustration-prompts.json`. They communicate proposed experiences, not actual venue interiors, historical reconstructions or official mascots. The page explains this once in the illustration note. Earlier licensed photographs remain archived in the repository; their metadata is in `photo-credits.json`. They are not displayed in this edition.
 
 The locally hosted Yomogi font is a subset of the official Google Fonts release (https://github.com/google/fonts/tree/main/ofl/yomogi), under the SIL Open Font License in `assets/Yomogi-OFL.txt`. `scripts/subset-font.py` rebuilds the WOFF when supplied the original TTF. Update the subset after adding text.
 
 No third-party character, logo, corporate confidential material, personal operational data or private correspondence is included. The site uses local assets and no analytics, cookies, browser storage, form, location request or external embedded media. GitHub Pages access logging and external-link behavior are explained on the page.
+
+## Illustration-first reading
+
+The four history chapters and three night experiences open with large illustrations and short captions. Creative-experience details and map rationale remain available in native disclosure panels. Map tabs show thumbnails of the actual three diagrams, while all original map panels, course options, sources, caveats and independent keyboard controls remain present. The regional diagrams retain their original precise SVG geometry and responsive variants. A larger community illustration explains who receives local work. `illustrations.css` provides this reading layer over the existing site styles.
 
 ## Narrative and night programme
 

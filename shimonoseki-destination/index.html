@@ -8,12 +8,13 @@
   <meta name="description" content="歴史のまち下関を、物語の舞台に。海峡で遊ぶ、港の食卓にまざる、参加型の夜の劇場。大丸下関店の営業終了後を見据えたMDL独自構想。建物の立体図、長府・新下関までの市内周回図、小倉・門司港までの関門広域図で紹介します。">
   <link rel="canonical" href="https://mobilitydlab.com/shimonoseki-destination/">
   <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='6' fill='%23F7F4EE'/%3E%3Cpath d='M23 9H13a4 4 0 000 8h6a4 4 0 010 8H9' fill='none' stroke='%23111111' stroke-width='4'/%3E%3C/svg%3E">
-  <link rel="preload" href="assets/yomogi-zine.woff" as="font" type="font/woff" crossorigin>
+  <link rel="preload" href="assets/yomogi-zine.woff?v=20260913-illustrations" as="font" type="font/woff" crossorigin>
   <link rel="stylesheet" href="maps.css?v=20260913-zine">
-  <link rel="stylesheet" href="zine.css?v=20260913-story">
+  <link rel="stylesheet" href="zine.css?v=20260913-illustrations">
+  <link rel="stylesheet" href="illustrations.css?v=20260913-illustrations">
   <script src="app.js?v=20260913-story" defer></script>
 </head>
-<body>
+<body class="illustration-led">
 <a class="skip" href="#main">本文へ</a>
 <header class="site-header">
   <a class="mdl" href="https://mobilitydlab.com/" aria-label="モビリティデザインラボのホームページ"><b>MDL.</b><span>MOBILITY<br>DESIGN LAB</span></a>
@@ -22,69 +23,81 @@
 <main id="main">
   <section class="zine-hero" aria-labelledby="hero-title">
     <div class="zine-edition"><span>モビリティデザインラボの、まちづくりノート</span><a href="#about">独自構想 / 2026.09</a></div>
-    <div class="zine-cover"><div class="zine-cover-copy"><p class="hand-note">日本史が動いた、歴史のまち。</p><h1 id="hero-title">下関、<br><span>夜のものがたり。</span></h1><p class="cover-intro">昼は、歴史のまちを歩く。<br>夜は、その物語の登場人物になる。<br>遊んで、食べて、関門に泊まる。</p><div class="cover-links"><a class="zine-button" href="#night">夜の遊び場をのぞく ↓</a><a href="#maps">建物と、まちの地図を見る</a></div></div><figure class="cover-drawing"><img src="assets/zine-boat.webp" width="1672" height="941" alt="月の下、小さな舟に乗るふぐ。素朴な手描き風のイラスト" fetchpriority="high"><figcaption class="hand-note">この海峡には、まだ出会っていない物語がある。</figcaption></figure></div>
+    <div class="zine-cover"><div class="zine-cover-copy"><p class="hand-note">日本史が動いた、歴史のまち。</p><h1 id="hero-title">下関、<br><span>夜のものがたり。</span></h1><p class="cover-intro">昼は、歴史のまちへ。夜は、物語の中へ。<br>遊んで、食べて、関門に泊まる。</p><div class="cover-links"><a class="zine-button" href="#night">夜の遊び場をのぞく ↓</a><a href="#maps">建物と、まちの地図を見る</a></div></div><figure class="cover-drawing"><div class="cover-art"><img src="assets/zine-boat.webp" width="1672" height="941" alt="月の下、小さな舟に乗るふぐ。素朴な手描き風のイラスト" fetchpriority="high"></div><figcaption class="hand-note">ふぐの舟と、物語の旅へ。</figcaption></figure></div>
     <p class="cover-project">大丸下関店の営業終了後を見据えた、<br class="mobile">関門広域の滞在拠点の提案。</p>
   </section>
   <div class="concept-notice"><p><strong>ここから先は、これからつくりたい未来の話です。</strong> 大丸・シーモール・自治体等の公式計画ではありません。出店・改修・連携・運行・開業は未決定です。</p></div>
 
-  <section class="story-letter section-pad" id="vision" aria-labelledby="letter-title"><div class="letter-kicker">物語の入口 / 体験の導入案</div><div class="letter-paper"><span class="hand-note">下関を訪れた、あなたへ。</span><h2 id="letter-title">日本史が動いたまちから、<br>あなたへ届く手紙。</h2><p>「この海峡で、あなたに尋ねたいことがあります。」</p><p>海を渡ろうとした人。時代の転換点に立った人。<br>このまちで、世界と向き合った人。<br>四つの物語から届く、創作の手紙をたどる。</p><p class="letter-last hand-note">今夜の物語をつくるのは、あなたです。</p></div><p class="story-intent">昼に、歴史の現場を歩く。夜に、その物語に参加する。<br>手紙を共通の入口に、３つの遊び場をつなぎます。</p></section>
-
-    <section class="four-stories section-pad" id="history" aria-labelledby="history-title">
-    <div class="chapter-heading"><span class="eyebrow">日本史が動いた、歴史のまち下関。</span><h2 id="history-title">四つの物語。<br>四つの「その時」へ。</h2><p>ひと晩に、一つの章。<br>次に来た日は、違う時代の登場人物になる。</p></div>
-    <div class="history-chapters">
-      <article id="history-ancient"><span class="history-era">一 / 神話・伝承を題材に</span><h3>仲哀天皇・神功皇后、<br>住吉神の物語。</h3><p class="history-question">海を渡る人は、何を願ったのか。</p><dl><div><dt>昼に訪ねる</dt><dd>住吉神社・忌宮神社</dd></div><div><dt>夜の創作体験</dt><dd>船出の手紙を受け取り、風と潮を手がかりに行き先を選ぶ。</dd></div></dl><p class="history-kind">社寺に伝わる由緒・伝承として扱い、実証された歴史と区別します。</p></article>
-      <article id="history-genpei"><span class="history-era">二 / 1185年・史実を題材に</span><h3>源平合戦。<br>壇ノ浦の海峡へ。</h3><p class="history-question">時代の境目で、人は何を思ったのか。</p><dl><div><dt>昼に訪ねる</dt><dd>壇ノ浦・赤間神宮</dd></div><div><dt>夜の創作体験</dt><dd>架空の船上の伝令になり、一通の手紙を誰に届けるか選ぶ。</dd></div></dl><p class="history-kind">戦いの結果を変えるゲームにはせず、歴史と人々の視点に触れる構成へ。</p></article>
-      <article id="history-bakumatsu"><span class="history-era">三 / 幕末維新・史実を題材に</span><h3>幕末維新。<br>変化の前夜に立つ。</h3><p class="history-question">まだ答えのない時代に、どう動く？</p><dl><div><dt>昼に訪ねる</dt><dd>城下町長府・功山寺</dd></div><div><dt>夜の創作体験</dt><dd>迷う登場人物と対話し、自分ならどう動くかを語る参加型の芝居。</dd></div></dl><p class="history-kind">高杉晋作らの時代から着想。史料の説明と、創作の台詞を分けます。</p></article>
-      <article id="history-treaty"><span class="history-era">四 / 1895年・史実を題材に</span><h3>下関講和条約。<br>このまちで、世界と向き合う。</h3><p class="history-question">話し合いの先で、何が変わったのか。</p><dl><div><dt>昼に訪ねる</dt><dd>日清講和記念館・春帆楼ゆかりの地</dd></div><div><dt>夜の創作体験</dt><dd>史料と異なる立場の言葉を手がかりに、問いを持ち寄る対話劇。</dd></div></dl><p class="history-kind">戦争の被害や条約が各地にもたらした影響も扱い、勝敗の娯楽化を避けます。</p></article>
-    </div>
-    <p class="history-caption">夜の内容は、文化監修を経て新たに制作する企画案です。<a href="#sources">歴史・伝承の出典を見る</a> ／ <a href="#map-city" data-map-link="city">昼に巡る、下関市内のマップへ</a></p>
+  <section class="story-letter section-pad" id="vision" aria-labelledby="letter-title">
+    <span class="eyebrow">昼の発見が、夜の伏線に。</span>
+    <h2 id="letter-title">手紙をひらくと、<br>旅がはじまる。</h2>
+    <p>歴史の舞台を歩いたら、夜はその物語の登場人物へ。<br>４つの物語から、その日の一章を選びます。</p>
   </section>
 
+  <section class="four-stories section-pad" id="history" aria-labelledby="history-title">
+    <div class="chapter-heading"><span class="eyebrow">日本史が動いた、歴史のまち。</span><h2 id="history-title">海峡をめぐる、<br>４つの物語。</h2></div>
+    <div class="history-chapters">
+      <article id="history-ancient">
+        <figure class="history-art art-ancient"><img src="assets/history-scenes.webp" width="1672" height="941" alt="海辺の鳥居と、海を望み祈る旅人。神話・伝承を表すイラスト" loading="lazy"></figure>
+        <div class="history-card-copy"><span class="history-era">一 / 神話・伝承</span><h3>仲哀天皇・神功皇后、<br>住吉神の物語。</h3><p class="history-question">海を渡る人は、何を願った？</p><p class="history-place">昼に訪ねる：住吉神社・忌宮神社</p>
+        <details class="card-details"><summary>夜は、どんな物語に？</summary><p>船出の手紙を受け取り、風と潮を手がかりに行き先を選ぶ創作体験。</p><p class="history-kind">社寺に伝わる由緒・伝承を題材にし、実証された歴史と区別します。</p></details></div>
+      </article>
+      <article id="history-genpei">
+        <figure class="history-art art-genpei"><img src="assets/history-scenes.webp" width="1672" height="941" alt="海峡で向き合う二つの舟。源平合戦の記憶を表すイラスト" loading="lazy"></figure>
+        <div class="history-card-copy"><span class="history-era">二 / 1185年</span><h3>源平合戦。<br>壇ノ浦の海峡へ。</h3><p class="history-question">時代の境目に、立ってみる。</p><p class="history-place">昼に訪ねる：壇ノ浦・赤間神宮</p>
+        <details class="card-details"><summary>夜は、どんな物語に？</summary><p>架空の船上の伝令になり、一通の手紙を誰に届けるか選ぶ。</p><p class="history-kind">戦いの結果を変えるゲームではなく、史実と人々の視点に触れる創作体験です。</p></details></div>
+      </article>
+      <article id="history-bakumatsu">
+        <figure class="history-art art-bakumatsu"><img src="assets/history-scenes.webp" width="1672" height="941" alt="寺の門と土塀の道を、手紙を携えて歩く旅人。幕末の長府を思い描くイラスト" loading="lazy"></figure>
+        <div class="history-card-copy"><span class="history-era">三 / 幕末維新</span><h3>幕末維新。<br>変化の前夜へ。</h3><p class="history-question">まだ答えのない時代に、どう動く？</p><p class="history-place">昼に訪ねる：城下町長府・功山寺</p>
+        <details class="card-details"><summary>夜は、どんな物語に？</summary><p>迷う登場人物に話しかけ、自分ならどう動くかを語る参加型の芝居。</p><p class="history-kind">高杉晋作らの時代から着想し、史料の説明と創作の台詞を分けます。</p></details></div>
+      </article>
+      <article id="history-treaty">
+        <figure class="history-art art-treaty"><img src="assets/history-scenes.webp" width="1672" height="941" alt="講和を題材にした対話劇のイメージ。テーブルで台本を囲む二人のイラスト" loading="lazy"></figure>
+        <div class="history-card-copy"><span class="history-era">四 / 1895年</span><h3>下関講和条約。<br>世界と向き合う。</h3><p class="history-question">話し合いの先で、何が変わった？</p><p class="history-place">昼に訪ねる：日清講和記念館・春帆楼ゆかりの地</p>
+        <details class="card-details"><summary>夜は、どんな物語に？</summary><p>史料と異なる立場の言葉を手がかりに、問いを持ち寄る対話劇。</p><p class="history-kind">戦争の被害や条約の影響も扱い、勝敗を競う娯楽にはしません。</p></details></div>
+      </article>
+    </div>
+    <p class="illustration-note">絵は構想を伝えるAI生成イラストです。実在施設・歴史上の人物や建築の再現、確定した完成予想図ではありません。</p>
+    <p class="history-caption">史実・伝承・創作を分け、文化監修を経て制作する企画案です。<a href="#sources">出典を見る</a> ／ <a href="#map-city" data-map-link="city">昼の訪問先をマップで見る</a></p>
+  </section>
 
   <section class="night-play section-pad" id="night" aria-labelledby="night-title">
-    <div class="chapter-heading"><span class="eyebrow">下関、夜のものがたり / 新しい体験の構想</span><h2 id="night-title">遊ぶ。食べる。<br>物語の中に、入ってみる。</h2><p>海峡の潮、港の食、土地に残る物語。<br>下関らしさを、３つの遊び場に。</p></div>
-    <nav class="chapter-jumps" aria-label="３つの夜の体験"><a href="#night-playpark">一　船乗りになる</a><a href="#night-table">二　食卓にまざる</a><a href="#night-theatre">三　物語に入る</a></nav>
-
-    <article class="night-page play-page" id="night-playpark">
-      <div class="night-page-top"><span>遊び場 01 / 海峡プレイパーク</span><small>体を動かす、協力する。</small></div>
-      <div class="night-page-grid"><figure><img src="assets/zine-navigation.webp" width="1672" height="941" alt="家族や仲間と舵を回す、海峡の航海ゲームの手描き風イメージ" loading="lazy"></figure><div class="night-page-copy"><h3>今夜、あなたは<br>海峡の船乗り。</h3><p>仲間と舵を回し、潮を読み、港へ向かう。<br>関門海峡の地形と船の行き交いを使った、<br>みんなで挑む航海ゲーム。</p><ol class="play-actions"><li>役割を決める</li><li>潮を読む</li><li>力を合わせて到着</li></ol><p class="place-reason"><b>下関らしさ</b>潮流と航路そのものが、遊びのルールになる。</p></div></div>
-      <div class="night-page-bottom"><p><b>また来る理由</b>役割や難度を変えて、次の航海へ。</p><p><b>小さく試す</b>可動式の舵と床の航路図から。映像設備は体験の反応を見て判断。</p></div>
-    </article>
-
-    <article class="night-page table-page" id="night-table">
-      <div class="night-page-top"><span>遊び場 02 / 下関ライブ食堂</span><small>つくる人と、食べる人が出会う。</small></div>
-      <div class="night-page-grid"><figure><img src="assets/zine-food.webp" width="1672" height="941" alt="料理人と一緒に瓦そばを仕上げ、食卓を囲む手描き風イメージ" loading="lazy"></figure><div class="night-page-copy"><h3>いただきます、の<br>前から楽しい。</h3><p>袋せりの合図を、まねしてみる。<br>料理人と、瓦そばを仕上げる。<br>ふくを味わい、港の仕事の話を聞く。</p><ol class="play-actions"><li>競りのまね</li><li>料理の仕上げ</li><li>みんなで一皿</li></ol><p class="place-reason"><b>下関らしさ</b>南風泊の袋せり、川棚生まれの瓦そば、ふくの食文化。</p></div></div>
-      <div class="night-page-bottom"><p><b>また来る理由</b>旬の魚と料理人が変わる、季節の食卓。</p><p><b>小さく試す</b>既存の厨房を使った予約制の食事会から。地元の料理人・仕入先と組む。</p></div>
-    </article>
-
-    <article class="night-page theatre-page" id="night-theatre">
-      <div class="night-page-top"><span>遊び場 03 / 関門ものがたり劇場</span><small>見る人から、登場人物へ。</small></div>
-      <div class="theatre-letter"><span class="hand-note">手紙には、こう書かれていました。</span><p>「あなたなら、<br>この人に何と答えますか。」</p><span class="hand-note">その返事から、次の場面が始まる。</span></div>
-      <div class="theatre-copy"><div><h3>ちょっとふしぎな、<br>海峡の夜に入る。</h3><p>語り手や俳優に話しかけ、役を選ぶ。<br>神話・伝承、源平、幕末、講和の歴史を手がかりに、<br>あなたの選択で架空の旅人の結末が変わる、小さな夜の公演。</p></div><div><ol class="play-actions"><li>役を選ぶ</li><li>登場人物と話す</li><li>結末を見届ける</li></ol><p class="place-reason"><b>下関らしさ</b>住吉・忌宮、壇ノ浦、長府、講和の舞台。昼の訪問が、夜の物語につながる。</p></div></div>
-      <div class="night-page-bottom"><p><b>また来る理由</b>四つの物語を、ひと晩に一章ずつ。次は違う時代、違う役で。</p><p><b>小さく試す</b>館内の一室で短編から。地元の演者・語り手に制作と上演を発注する案。</p></div>
-    </article>
-
-    <p class="illustration-note">このページの絵は、構想を伝えるAI生成イラストです。実在の施設内観や確定した完成予想図ではありません。</p>
-    <div class="history-note"><b>史実、伝承、創作を、分けて大切に。</b><p>手紙と登場人物は新たに制作する創作案です。歴史や伝承は出典と文化監修を確かめて扱います。史実の勝敗や条約の内容を、参加者が変える企画ではありません。神社での夜間開催や、既存作品・施設との連携を前提にはしません。</p></div>
-
-    <div class="night-itinerary"><div><span class="eyebrow">こんな一泊を、つくりたい。</span><h3>昼の発見が、<br>夜の伏線になる。</h3></div><ol><li><span>昼</span><b>その章の、歴史の現場へ。</b><p>住吉・忌宮、壇ノ浦、長府、講和の舞台。章に合わせて街を歩く。</p></li><li><span>夕方</span><b>駅前で、遊んで食べる。</b><p>船乗りになり、港の食卓にまざる。</p></li><li><span>夜</span><b>ものがたり劇場へ。</b><p>受け取った手紙の続きを、自分の選択でつくる。</p></li><li><span>宿へ</span><b>下関・門司港・小倉に泊まる。</b><p>予約前に、夜の帰路も決めておく。</p></li><li><span>翌朝</span><b>気になった場所へ、もう一度。</b><p>長府の町並み、関門の港。物語の外でも、旅は続く。</p></li></ol><p class="fine">過ごし方の例です。一日で全史跡を巡る設計にはせず、一つの章・一つの体験から選べる形にします。既存交通の最終便と宿への接続は別途確認します。</p></div>
-
-    <details class="zine-details night-practical"><summary>夜の企画を、続けられる形にするには <span>＋</span></summary><div><p><b>最初に試すのは、週末の小さな食事会と公演。</b> 大型設備を先に揃えず、実際に料金を払って参加する人がいるかを確かめます。</p><p><b>予約で決めること：</b>体験時間、料金、言語、年齢の目安、食物アレルギー、取消条件、宿への帰路。ノンアルコールでも楽しめる内容にします。</p><p><b>運営で決めること：</b>厨房、防音、避難、定員、夜の人員・帰宅手段、警備、権利・文化監修。ふくは専門の調理者が扱い、競りの模擬体験では結果によって料金や提供する食事を変えない設計です。</p><p><b>続ける判断：</b>有料予約、参加者の評価、次回来訪、地元への発注、直接運営収支を確認。集客や採算が弱ければ内容を変え、改善しても成立しなければ常設化を見送ります。</p><p>夜の体験が宿泊増に結びつくかは未検証です。もともとの宿泊予定と体験後の行動を分けて確かめます。運営者・費用負担・停止基準は、発注前に責任者が決めます。</p></div></details>
+    <div class="chapter-heading"><span class="eyebrow">下関で過ごす、夜の企画。</span><h2 id="night-title">今夜は、<br>何して遊ぼう？</h2><p>遊ぶ。食べる。物語に入る。<br>下関に泊まりたくなる、３つの遊び場。</p></div>
+    <div class="night-cards">
+      <article class="night-card" id="night-playpark">
+        <figure><img src="assets/zine-navigation.webp" width="1672" height="941" alt="親子や仲間と舵を回し、航海ゲームを楽しむイラスト" loading="lazy"></figure>
+        <div class="night-card-copy"><span class="night-card-label">01 / 海峡プレイパーク</span><h3>船乗りに、なる。</h3><p>仲間と舵を回し、潮を読む。<br>みんなで港を目指す航海ゲーム。</p><p class="night-hook">関門海峡そのものが、遊びになる。</p>
+        <details class="card-details"><summary>遊び方・また来る理由</summary><ol class="play-actions"><li>役割を決める</li><li>潮を読む</li><li>力を合わせる</li></ol><p>役割や難度を変えて、次の航海へ。可動式の舵と床の航路図から小さく試し、映像設備は反応を見て判断します。</p></details></div>
+      </article>
+      <article class="night-card" id="night-table">
+        <figure><img src="assets/zine-food.webp" width="1672" height="941" alt="料理人と一緒に瓦そばを仕上げ、食卓を囲むイラスト" loading="lazy"></figure>
+        <div class="night-card-copy"><span class="night-card-label">02 / 下関ライブ食堂</span><h3>つくって、食べる。</h3><p>袋せりの合図を、まねしてみる。<br>料理人と瓦そばを仕上げる。</p><p class="night-hook">港の仕事も、食事の楽しみに。</p>
+        <details class="card-details"><summary>遊び方・また来る理由</summary><ol class="play-actions"><li>競りのまね</li><li>料理の仕上げ</li><li>一皿を味わう</li></ol><p>南風泊の袋せり、川棚生まれの瓦そば、ふくの食文化。旬の魚と料理人が変わる予約制の食事会を、地元の厨房・仕入先と組んで試す案です。</p></details></div>
+      </article>
+      <article class="night-card" id="night-theatre">
+        <figure><img src="assets/theatre-scene.webp" width="1672" height="941" alt="手紙を受け取った観客が語り手に話しかけ、物語に参加するイラスト" loading="lazy"></figure>
+        <div class="night-card-copy"><span class="night-card-label">03 / 関門ものがたり劇場</span><h3>物語の、主役へ。</h3><p>俳優に話しかけ、自分で選ぶ。<br>その返事で、次の場面が始まる。</p><p class="night-hook">昼に歩いた歴史が、夜の舞台に。</p>
+        <details class="card-details"><summary>遊び方・また来る理由</summary><ol class="play-actions"><li>役を選ぶ</li><li>登場人物と話す</li><li>結末を見届ける</li></ol><p>４つの物語を、ひと晩に一章ずつ。選択で変わるのは架空の旅人の結末です。館内の一室で短編から始め、地元の演者・語り手に制作と上演を発注する案です。</p></details></div>
+      </article>
+    </div>
+    <div class="stay-story"><h3>楽しい夜の、<br class="mobile">続きをつくる。</h3><ol><li><span>昼</span><b>歴史のまちへ</b></li><li><span>夕方</span><b>遊んで、食べる</b></li><li><span>夜</span><b>物語の主役に</b></li><li><span>宿へ</span><b>関門に泊まる</b></li><li><span>翌朝</span><b>もう一つのまちへ</b></li></ol><p class="fine">過ごし方の案です。一つの章・一つの体験から選び、宿への帰路を予約前に確認します。</p></div>
+    <details class="zine-details night-practical"><summary>夜の企画を、続けられる形にするには <span>＋</span></summary><div><p><b>史実・伝承・創作を分けて制作。</b> 手紙と登場人物は創作案です。文化監修を経て扱い、史実の勝敗や条約の内容を参加者が変える企画にはしません。神社での夜間開催、既存作品・施設との連携は未合意です。</p><p><b>最初に試すのは、週末の小さな食事会と公演。</b> 大型設備を先に揃えず、実際に料金を払って参加する人がいるかを確かめます。</p><p><b>予約で決めること：</b>体験時間、料金、言語、年齢の目安、食物アレルギー、取消条件、宿への帰路。ノンアルコールでも楽しめる内容にします。</p><p><b>運営で決めること：</b>厨房、防音、避難、定員、夜の人員・帰宅手段、警備、権利・文化監修。ふくは専門の調理者が扱い、競りの模擬体験では結果によって料金や提供する食事を変えない設計です。</p><p><b>続ける判断：</b>有料予約、参加者の評価、次回来訪、地元への発注、直接運営収支を確認。集客や採算が弱ければ内容を変え、改善しても成立しなければ常設化を見送ります。</p><p>夜の体験が宿泊増に結びつくかは未検証です。もともとの宿泊予定と体験後の行動を分けて確かめます。運営者・費用負担・停止基準は、発注前に責任者が決めます。</p></div></details>
   </section>
 
   <section class="atlas section-pad" id="maps" aria-labelledby="atlas-title">
     <div class="section-label"><span>THE PROJECT, IN 3 MAPS</span><span>建物。下関市内。関門全体。</span></div>
     <div class="atlas-intro"><h2 id="atlas-title">どこで楽しむ？<br><span>どう、つながる？</span></h2><p>建物の中から、海峡の向こうまで。<br>３つのマップで見る、<br>「もう一泊したくなる街」のつくり方。</p></div>
     <div class="atlas-tabs" role="tablist" aria-label="企画を３つのマップで見る">
-      <button type="button" role="tab" id="atlas-tab-building" aria-controls="map-building" aria-selected="true" data-map="building"><span class="atlas-tab-no">01</span><span><b>建物の中</b><small>立体フロア構成</small></span><i aria-hidden="true">↘</i></button>
-      <button type="button" role="tab" id="atlas-tab-city" aria-controls="map-city" aria-selected="false" tabindex="-1" data-map="city"><span class="atlas-tab-no">02</span><span><b>下関市内</b><small>周回モビリティ</small></span><i aria-hidden="true">↘</i></button>
-      <button type="button" role="tab" id="atlas-tab-kanmon" aria-controls="map-kanmon" aria-selected="false" tabindex="-1" data-map="kanmon"><span class="atlas-tab-no">03</span><span><b>関門全体</b><small>海峡を越える接続</small></span><i aria-hidden="true">↘</i></button>
+      <button type="button" role="tab" id="atlas-tab-building" aria-controls="map-building" aria-selected="true" data-map="building"><span class="map-mini" aria-hidden="true"><img src="assets/map-building.svg?v=20260913-story" width="1180" height="820" alt="" loading="lazy"></span><span class="atlas-tab-no">01</span><span><b>建物の中</b><small>立体フロア構成</small></span><i aria-hidden="true">↘</i></button>
+      <button type="button" role="tab" id="atlas-tab-city" aria-controls="map-city" aria-selected="false" tabindex="-1" data-map="city"><span class="map-mini" aria-hidden="true"><img src="assets/map-city.svg?v=20260913-story" width="1180" height="820" alt="" loading="lazy"></span><span class="atlas-tab-no">02</span><span><b>下関市内</b><small>周回モビリティ</small></span><i aria-hidden="true">↘</i></button>
+      <button type="button" role="tab" id="atlas-tab-kanmon" aria-controls="map-kanmon" aria-selected="false" tabindex="-1" data-map="kanmon"><span class="map-mini" aria-hidden="true"><img src="assets/map-kanmon.svg?v=20260913-story" width="1180" height="820" alt="" loading="lazy"></span><span class="atlas-tab-no">03</span><span><b>関門全体</b><small>海峡を越える接続</small></span><i aria-hidden="true">↘</i></button>
     </div>
 
     <article class="atlas-panel" id="map-building" role="tabpanel" aria-labelledby="atlas-tab-building" tabindex="0">
       <div class="atlas-panel-head"><div><span class="eyebrow">01 / INSIDE THE DESTINATION</span><h3>食と旅を入口に。<br class="mobile">上の階にも、行く理由を。</h3></div><a class="atlas-expand" href="assets/map-building.svg?v=20260913-story" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></div>
       <figure class="atlas-figure"><picture><source media="(max-width: 650px)" srcset="assets/map-building-mobile.svg?v=20260913-story" width="640" height="990"><img src="assets/map-building.svg?v=20260913-story" alt="建物の立体構成案。B1は日常の買い物、1Fは食と観光案内、2Fは日本ブランド、3FはIP、4Fは体験、5Fは暮らしと仕事の候補。" width="1180" height="820" loading="lazy"></picture><figcaption><strong>機能の配置案です。</strong> 実測図・設計図ではありません。B1〜5Fに主な機能を仮置きした図で、6F・7F・屋上を含む対象範囲、既存テナント、面積、縦動線は調査・協議後に判断します。</figcaption></figure>
-      <div class="atlas-readout"><div><span>低層 / 食と旅</span><b>毎日と、旅の接点。</b><p>地元の買い物、夜の食事、観光案内。入口に利用頻度の高い機能を集める。</p></div><div><span>中層 / 好きと体験</span><b>上がるたび、発見。</b><p>3F案はIP・参加型劇場、4F案は海峡の航海ゲームなど。夜の体験も、立体的につなぐ。</p></div><div><span>周辺 / ONE DISTRICT</span><b>シーモールと一体に。</b><p>駐車場、買い物、近くの映画館。既存機能と役割を分け、歩く接続を整える。</p></div></div>
+      <details class="map-reading"><summary>このマップの考え方を見る</summary><div class="atlas-readout"><div><span>低層 / 食と旅</span><b>毎日と、旅の接点。</b><p>地元の買い物、夜の食事、観光案内。入口に利用頻度の高い機能を集める。</p></div><div><span>中層 / 好きと体験</span><b>上がるたび、発見。</b><p>3F案はIP・参加型劇場、4F案は海峡の航海ゲームなど。夜の体験も、立体的につなぐ。</p></div><div><span>周辺 / ONE DISTRICT</span><b>シーモールと一体に。</b><p>駐車場、買い物、近くの映画館。既存機能と役割を分け、歩く接続を整える。</p></div></div></details>
       <p class="atlas-footnote">全館同時の開業を前提にせず、需要のある区画から。夜間利用区画と日常利用区画の入口・運営も、建物調査に基づき設計します。</p>
       <a class="atlas-next" href="#map-city" data-map-link="city">次は、建物の外へ。下関市内の周回を見る <span aria-hidden="true">→</span></a>
     </article>
@@ -93,7 +106,7 @@
       <div class="atlas-panel-head"><div><span class="eyebrow">02 / SHIMONOSEKI CITY LOOP</span><h3>市場も、武家屋敷も。<br class="mobile">まちを、ぐるっと。</h3></div><a class="atlas-expand" href="assets/map-city.svg?v=20260913-story" target="_blank" rel="noopener noreferrer">図を大きく見る ↗</a></div>
       <div class="atlas-legend" aria-label="市内マップの凡例"><span><i class="key-rail"></i>既存JR</span><span><i class="key-bus"></i>既存バス</span><span><i class="key-walk"></i>徒歩等</span><span><i class="key-loop"></i>周回便の企画案</span></div>
       <figure class="atlas-figure"><picture><source media="(max-width: 650px)" srcset="assets/map-city-mobile.svg?v=20260913-story" width="640" height="1160"><img src="assets/map-city.svg?v=20260913-story" alt="下関市内の接続図。下関駅前、海響館、唐戸市場、赤間神宮、城下町長府、新下関駅を一体化。既存のJRとバスに、これらを巡る周回便の企画案を重ねる。" width="1180" height="820" loading="lazy"></picture><figcaption>位置関係と接続を整理した模式図です。縮尺・道路形状・実際の乗降場所は表しません。<strong>水色の破線は未運行の周回便案。</strong> 各施設への徒歩、乗り場・乗り継ぎは別途確認が必要です。</figcaption></figure>
-      <div class="atlas-readout"><div><span>到着 / 新下関駅</span><b>新幹線から、旅へ。</b><p>新下関駅も関門観光の入口に。長府へはバス、下関駅へはJRで接続する。</p></div><div><span>回遊 / 唐戸から長府</span><b>食・海・歴史を巡る。</b><p>海響館、唐戸市場、赤間神宮から、長府の武家屋敷や土塀の町並みまで。</p></div><div><span>帰着 / 下関駅前</span><b>夜の楽しみへ戻る。</b><p>荷物を受け取り、予約した食と文化へ。宿への帰路もまとめて案内する構想。</p></div></div>
+      <details class="map-reading"><summary>このマップの考え方を見る</summary><div class="atlas-readout"><div><span>到着 / 新下関駅</span><b>新幹線から、旅へ。</b><p>新下関駅も関門観光の入口に。長府へはバス、下関駅へはJRで接続する。</p></div><div><span>回遊 / 唐戸から長府</span><b>食・海・歴史を巡る。</b><p>海響館、唐戸市場、赤間神宮から、長府の武家屋敷や土塀の町並みまで。</p></div><div><span>帰着 / 下関駅前</span><b>夜の楽しみへ戻る。</b><p>荷物を受け取り、予約した食と文化へ。宿への帰路もまとめて案内する構想。</p></div></div></details>
       <div class="history-map-key" aria-label="市内マップの各エリアから訪ねる歴史の場所"><p><b>新下関周辺</b><a href="#history-ancient">住吉神社</a><br>海を渡る人々の伝承へ。</p><p><b>長府</b><a href="#history-ancient">忌宮神社</a>・<a href="#history-bakumatsu">功山寺</a><br>神話・伝承から幕末まで。</p><p><b>唐戸・赤間周辺から</b><a href="#history-genpei">壇ノ浦・赤間神宮</a><br><a href="#history-treaty">日清講和記念館</a></p></div><p class="atlas-footnote">既存バスの接続は<a href="https://www.sandenkotsu.co.jp/bus/odekake/" target="_blank" rel="noopener noreferrer">サンデン交通の観光アクセス案内</a>を参照。すべてが同じ系統ではありません。時刻・行き先・乗り換えを確認してください。</p>
       <a class="atlas-next" href="#map-kanmon" data-map-link="kanmon">さらに、海峡の向こうへ。関門全体を見る <span aria-hidden="true">→</span></a>
     </article>
@@ -103,7 +116,7 @@
       <div class="atlas-legend" aria-label="関門マップの凡例"><span><i class="key-rail"></i>既存JR</span><span><i class="key-bus"></i>既存バス</span><span><i class="key-ferry"></i>既存の連絡船</span><span class="legend-proposal">宿泊・夜の帰路の連携は企画案</span></div>
       <figure class="atlas-figure"><picture><source media="(max-width: 650px)" srcset="assets/map-kanmon-mobile.svg?v=20260913-story" width="640" height="1090"><img src="assets/map-kanmon.svg?v=20260913-story" alt="関門広域の交通接続。下関駅と唐戸はバス、唐戸と門司港は連絡船。JR在来線で下関駅から門司駅・小倉駅へ、門司駅から門司港駅へ接続。新下関駅は新幹線の入口。" width="1180" height="820" loading="lazy"></picture><figcaption>交通の接続を示す模式図。途中駅・バス停、運行系統、実際の方位・距離は省略しています。<strong>門司駅と門司港駅は別の駅です。</strong> 船の乗り場と駅の間は徒歩等で移動します。</figcaption></figure>
       <div class="kanmon-circuit"><span>関門周遊ループ / 過ごし方の案</span><p><b>小倉</b><i>JR →</i><b>門司港</b><i>船 →</i><b>唐戸</b><i>バス →</i><b>下関駅前</b><i>JR →</i><b>小倉</b></p><small>小倉〜門司港は門司駅経由。ダイヤ・乗り換えを確認して組み合わせます。</small></div>
-      <div class="atlas-readout"><div><span>渡る / 連絡船</span><b>移動そのものが体験。</b><p>唐戸から門司港へ。市場、港の街歩き、海峡の風景をつなぐ。</p></div><div><span>広げる / JR</span><b>小倉も、旅の中に。</b><p>下関と北九州を鉄道でつなぐ。新幹線での到着から広域の回遊まで案内する。</p></div><div><span>泊まる / 帰路の設計</span><b>夜の先に、宿がある。</b><p>下関・門司港・小倉の宿泊施設との連携案。予約前に、夜の帰り方まで確かめる。</p></div></div>
+      <details class="map-reading"><summary>このマップの考え方を見る</summary><div class="atlas-readout"><div><span>渡る / 連絡船</span><b>移動そのものが体験。</b><p>唐戸から門司港へ。市場、港の街歩き、海峡の風景をつなぐ。</p></div><div><span>広げる / JR</span><b>小倉も、旅の中に。</b><p>下関と北九州を鉄道でつなぐ。新幹線での到着から広域の回遊まで案内する。</p></div><div><span>泊まる / 帰路の設計</span><b>夜の先に、宿がある。</b><p>下関・門司港・小倉の宿泊施設との連携案。予約前に、夜の帰り方まで確かめる。</p></div></div></details>
       <p class="atlas-footnote">既存交通が深夜まで運行することを示す図ではありません。最終便は<a href="https://www.kanmon-kisen.co.jp/route/kanmon.html" target="_blank" rel="noopener noreferrer">関門汽船</a>、<a href="https://www.jrkyushu-timetable.jp/cgi-bin/sp/sp-tt_list.cgi/27503" target="_blank" rel="noopener noreferrer">JR九州</a>等の公式案内で確認。最終便後の宿への移動は、予約制交通などを別途設計します。</p>
       <a class="atlas-next" href="#loop-mobility">周回便と、夜の帰路の企画を見る <span aria-hidden="true">↓</span></a>
     </article>
@@ -111,7 +124,7 @@
     <section class="loop-mobility" id="loop-mobility" aria-labelledby="loop-title">
       <div class="loop-heading"><div><span class="eyebrow">MOBILITY PROGRAM / 運行構想</span><h3 id="loop-title">昼は、ぐるっと。<br>夜は、宿まで。</h3></div><p>建物を出てからも、体験は続く。<br>「次はどこへ？」と「どう帰る？」を、<br>ひとつのモビリティ企画に。</p></div>
       <div class="loop-programs">
-        <article class="loop-day"><span class="loop-tag">DAY / 周回便の企画案</span><h4>SHIMONOSEKI<br>LOOP</h4><p class="loop-catch">５つの拠点を、一周する。</p><ol class="loop-stops"><li><span>01</span><b>下関駅前</b><small>車・鉄道・バスで集合</small></li><li><span>02</span><b>海響館・唐戸市場</b><small>エリア内を歩いて楽しむ</small></li><li><span>03</span><b>赤間神宮</b><small>歴史と海峡の風景へ</small></li><li><span>04</span><b>城下町長府</b><small>武家屋敷・土塀の町並み</small></li><li><span>05</span><b>新下関駅</b><small>新幹線の到着・出発につなぐ</small></li></ol><div class="loop-return">↩ 下関駅前へ戻る</div><p>既存バス・JRを土台に、乗り換えの負担を減らす周回便を検討。停車するエリアと巡る順序の案です。</p></article>
+        <article class="loop-day"><span class="loop-tag">DAY / 周回便の企画案</span><h4>まちを、<br>ぐるっと一周。</h4><p class="loop-catch">５つの拠点を、ひとめぐり。</p><ol class="loop-stops"><li><span>01</span><b>下関駅前</b><small>車・鉄道・バスで集合</small></li><li><span>02</span><b>海響館・唐戸市場</b><small>エリア内を歩いて楽しむ</small></li><li><span>03</span><b>赤間神宮</b><small>歴史と海峡の風景へ</small></li><li><span>04</span><b>城下町長府</b><small>武家屋敷・土塀の町並み</small></li><li><span>05</span><b>新下関駅</b><small>新幹線の到着・出発につなぐ</small></li></ol><div class="loop-return">↩ 下関駅前へ戻る</div><p>既存バス・JRを土台に、乗り換えの負担を減らす周回便を検討。停車するエリアと巡る順序の案です。</p></article>
         <div class="loop-night-pair"><article class="loop-night"><span class="loop-tag">NIGHT / 予約制の帰路案</span><h4>物語のあとも、<br>旅をデザイン。</h4><p>下関駅前の遊び・食事・ものがたり劇場から、宿泊エリアへ。宿の場所と人数を事前に集約し、既存交通または予約制のタクシー・乗合交通で帰路を設計。</p><div class="stay-area-tags"><span>下関の宿</span><span>門司港の宿</span><span>小倉の宿</span></div><p class="fine">夜の定期周回便を最初から設定せず、予約・需要に合わせる案。深夜運行・送迎の実施は未決定です。</p></article><article class="loop-cross"><span class="loop-tag">CROSS STRAIT / 関門をつなぐ</span><h4>船も、鉄道も。<br>ひとつの案内で。</h4><p>小倉 → 門司港 → 唐戸 → 下関駅前 → 小倉。既存のJR・船・バスで巡る関門周遊と、下関市内の周回便をつなぐ。旅程、乗り場、荷物、帰路をまとめる。共通券や予約連携は交通事業者と協議する企画案。</p></article></div>
       </div>
       <div class="loop-pilot"><b>まずは、週末の小さな実証から。</b><p>試走で所要時間を測る → 乗降場所・乗り継ぎを確認 → 運行主体・費用負担を決める → 予約や乗車実績をもとに便数を調整する。</p><div><span>見る数字</span><strong>乗車率</strong><strong>乗り継ぎの待ち時間</strong><strong>夜の消費・宿泊</strong><strong>１便あたりの収支</strong></div></div>
@@ -123,7 +136,13 @@
 
   <section class="mobility section-pad" id="mobility"><div class="chapter-heading"><span class="eyebrow">物語の舞台は、建物の外にも。</span><h2>まちを巡る。<br>海峡を渡る。宿に帰る。</h2><p>長府・新下関から、小倉・門司港まで。<br>昼の周回と夜の帰路を、一つの旅として案内する構想。</p></div><div class="route-studio"><div class="studio-intro"><span class="eyebrow">SHIMONOSEKI TRIP STUDIO / 構想</span><h3>「どの物語に会う？」から、<br>旅をつなぐ。</h3><p>旅程、交通、夜の体験、宿泊、荷物預かり。<br>予約や案内をつなぐ、関門の入口へ。</p></div><div class="route-demo"><span class="demo-label">未来の過ごし方 / モデルコース案</span><div class="route-tabs" role="tablist" aria-label="モデルコースを選ぶ"><button type="button" role="tab" id="tab-strait" aria-controls="route-panel" aria-selected="true" data-course="strait">海峡を満喫</button><button type="button" role="tab" id="tab-family" aria-controls="route-panel" aria-selected="false" tabindex="-1" data-course="family">子どもと一緒</button><button type="button" role="tab" id="tab-history" aria-controls="route-panel" aria-selected="false" tabindex="-1" data-course="history">長府も巡る</button><button type="button" role="tab" id="tab-evening" aria-controls="route-panel" aria-selected="false" tabindex="-1" data-course="evening">泊まって楽しむ</button></div><div id="route-panel" role="tabpanel" aria-labelledby="tab-strait" tabindex="0"><h4 id="route-name">市場の活気と、海峡を渡る時間。</h4><ol id="route-stops"><li><b>駅前</b><span>車と荷物を預け、旅を始める</span></li><li><b>唐戸市場</b><span>市場を楽しみ、港を歩く</span></li><li><b>門司港</b><span>関門連絡船で、海峡の向こうへ</span></li><li><b>駅前へ</b><span>港で見つけた食を、ライブ食堂でもう一度</span></li></ol></div><p class="fine">構想を伝える体験例です。予約機能はありません。営業日・運航・バリアフリー対応は各公式案内で確認が必要です。</p></div></div><div class="mobility-map-links"><a href="#map-city" data-map-link="city"><span>下関市内</span><b>長府・新下関まで巡る。</b><small>市内周回のマップへ ↗</small></a><a href="#map-kanmon" data-map-link="kanmon"><span>関門全体</span><b>小倉・門司港まで楽しむ。</b><small>関門広域のマップへ ↗</small></a></div></section>
 
-  <section class="local section-pad" id="local"><div class="chapter-heading"><span class="eyebrow">このまちで、続いていくために。</span><h2>楽しかった一夜が、<br>地元の仕事につながる。</h2><p>料理人、魚屋、語り手、演者、交通、宿。<br>体験づくりも運営も、地域の人に仕事として届ける。</p></div><div class="local-story"><article><span>旅の人は</span><h3>遊ぶ。食べる。泊まる。</h3><p>参加料・食事代・宿泊・街での買い物。</p></article><article><span>地域の人には</span><h3>発注。報酬。続く仕事。</h3><p>地元の制作、仕入れ、雇用に支払う仕組み。</p></article><article><span>目指す未来は</span><h3>ここで暮らす選択肢。</h3><p>若者が学び、働き、挑戦できるまちへ。</p></article></div><p class="local-measure"><b>数えるのは、来た人数だけではありません。</b><br>夜に増えた消費、地元への発注、所得、続いた雇用を確認します。下関と北九州の効果は分けて測り、人口減少を食い止める力につながるかを長く確かめます。</p><details class="local-method"><summary>「地域に残るお金」の測り方（設計案）<span aria-hidden="true">＋</span></summary><div><p>地域は下関市を基本単位とし、対象期間と施設・取引範囲を固定します。北九州市分と関門全体の集計を別に表示し、同じ取引を重複加算しません。地域への一次支払額（市内事業者への仕入れ等）と、市内に帰属する付加価値（雇用所得・利益等）は別の指標にします。</p><p><strong>LOCAL MONEY RATIOの考え方：</strong>施設利用から直接・間接に生まれ、市内に帰属する付加価値の推計 ÷ 対象消費額。域外への仕入れや所得流出、取引段階間の重複を調整する必要があります。これは確立した統一指標や実測値ではなく、算定範囲・税の扱い・方法を検証するための提案です。</p><p>地元企業・創業者には、低い固定賃料と売上歩合を組み合わせる案です。地元雇用・仕入れ・地域への再投資を評価するLOCAL IMPACT SCOREも評価設計案です。対象・配点・証憑・見直し方法を公開し、地域貢献だけで賃料を決めず、支払い能力と施設全体の採算を合わせて確認します。</p></div></details></section>
+  <section class="local section-pad" id="local">
+    <div class="chapter-heading"><span class="eyebrow">地元に、お金と仕事を残す。</span><h2>楽しい一夜を、<br>このまちの仕事に。</h2></div>
+    <figure class="local-work-art"><img src="assets/local-work-scene.webp" width="1672" height="941" alt="料理人、仕入先、演者、運転手、若い職人。地域の人が仕事でつながるイラスト" loading="lazy"><figcaption>料理人も、魚屋も、演者も、運転手も。</figcaption></figure>
+    <ol class="local-flow"><li><span>旅の人が</span><h3>遊ぶ・食べる・泊まる</h3></li><li><span>地元の企業へ</span><h3>発注し、報酬を払う</h3></li><li><span>若者の未来へ</span><h3>続く仕事を育てる</h3></li></ol>
+    <p class="local-measure">目指すのは、ここで暮らす選択肢を増やすこと。<br>消費・地元への発注・所得・続いた雇用を測り、人口減少への効果は長く確かめます。</p>
+    <details class="local-method"><summary>「地域に残るお金」の測り方（設計案）<span aria-hidden="true">＋</span></summary><div><p>地域は下関市を基本単位とし、対象期間と施設・取引範囲を固定します。北九州市分と関門全体の集計を別に表示し、同じ取引を重複加算しません。地域への一次支払額（市内事業者への仕入れ等）と、市内に帰属する付加価値（雇用所得・利益等）は別の指標にします。</p><p><strong>LOCAL MONEY RATIOの考え方：</strong>施設利用から直接・間接に生まれ、市内に帰属する付加価値の推計 ÷ 対象消費額。域外への仕入れや所得流出、取引段階間の重複を調整する必要があります。これは確立した統一指標や実測値ではなく、算定範囲・税の扱い・方法を検証するための提案です。</p><p>地元企業・創業者には、低い固定賃料と売上歩合を組み合わせる案です。地元雇用・仕入れ・地域への再投資を評価するLOCAL IMPACT SCOREも評価設計案です。対象・配点・証憑・見直し方法を公開し、地域貢献だけで賃料を決めず、支払い能力と施設全体の採算を合わせて確認します。</p></div></details>
+  </section>
 
   <section class="next section-pad" id="next"><span class="eyebrow">まず、一夜の物語から。</span><h2>一度、開いてみる。<br>声を聞いて、育てていく。</h2><p class="next-lead">建物を埋めることより、<br>また来たいと思える体験を一つ、成立させる。</p><ol class="next-steps"><li><b>確かめる</b><p>建物の使い方、費用、運営者、地元のつくり手と需要を調べる。</p></li><li><b>小さく開く</b><p>使える会場で、食事会と短編公演を有料で試す。市内周回も試走する。</p></li><li><b>育てる</b><p>体験の評価と収支を見て、開催日・内容・区画を段階的に広げる。</p></li></ol><p class="fine">すべて提案段階です。対象建物の使用権、改修、出店・運行・宿泊連携は未合意。調査・実証の結果で変更や中止も判断します。</p></section>
 

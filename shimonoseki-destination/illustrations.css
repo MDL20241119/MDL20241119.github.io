@@ -1,0 +1,105 @@
+@charset "UTF-8";
+/* A picture-book reading layer over the existing accessible map and course UI. */
+.illustration-led .zine-cover{grid-template-columns:.9fr 1.1fr;gap:10px;padding-block:35px;min-height:540px}
+.illustration-led .cover-drawing{margin:0;transform:none}
+.cover-art{aspect-ratio:1/1;overflow:hidden;max-height:540px}
+.cover-art img{width:100%;height:100%;object-fit:cover;transform:scale(1.5)}
+.illustration-led .cover-drawing figcaption{margin-top:-12px;font-size:20px;position:relative}
+.illustration-led .story-letter{padding-top:45px;padding-bottom:25px}
+.illustration-led .story-letter h2{font-size:clamp(30px,3.4vw,44px);margin:15px 0}
+.illustration-led .story-letter>p{font-size:16px;line-height:1.8}
+.illustration-led .history-chapters{gap:35px}
+.illustration-led .history-chapters>article{padding:0;overflow:hidden;background:var(--paper);border-radius:8px 3px 10px 4px}
+.history-art{position:relative;aspect-ratio:16/9;overflow:hidden}
+.history-art img{position:absolute;width:200%;height:200%;max-width:none;object-fit:fill;mix-blend-mode:multiply}
+.art-ancient img{left:0;top:0}.art-genpei img{left:-100%;top:0}.art-bakumatsu img{left:0;top:-100%}.art-treaty img{left:-100%;top:-100%}
+.history-card-copy{padding:0 30px 27px}
+.illustration-led .history-chapters h3{font-size:clamp(27px,2.8vw,36px);margin:14px 0 12px}
+.illustration-led .history-era{font-size:14px;display:inline-block;border-bottom:2px solid var(--blue);padding-bottom:3px}
+.illustration-led .history-question{font-size:22px;margin-bottom:15px}
+.history-place{font-size:14px;line-height:1.8}
+.card-details{margin-top:20px;border-top:1px dashed #111}
+.card-details summary{cursor:pointer;padding:14px 0 0;font-size:14px;min-height:44px}
+.card-details p{font-size:15px;line-height:1.8;margin-top:15px}
+.card-details .history-kind{font-size:13px}
+.night-cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;margin:40px 0 20px;align-items:start}
+.night-card{border:1px solid #111;border-radius:5px 10px 3px 8px;overflow:hidden;scroll-margin-top:100px}
+.night-card figure{aspect-ratio:4/3;overflow:hidden}
+.night-card figure img{width:100%;height:100%;object-fit:cover;mix-blend-mode:multiply}
+.night-card-copy{padding:0 24px 25px}
+.night-card-label{font-size:14px;line-height:1.6;display:block}
+.night-card h3{font-size:clamp(26px,2.6vw,35px);margin:18px 0 15px;letter-spacing:0}
+.night-card-copy>p{font-size:16px;line-height:1.8}
+.night-card-copy>p br{display:none}
+.night-card-copy .night-hook{font-family:var(--hand);font-size:18px;padding-top:18px}
+.night-card .play-actions{gap:9px 15px;margin:18px 0}
+.night-card .play-actions li{font-size:16px}
+.illustration-led .illustration-note{margin:20px 0 0;font-size:13px}
+.stay-story{text-align:center;margin:55px 0 35px}
+.stay-story h3{font-size:36px;margin-bottom:30px}
+.stay-story ol{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));list-style:none;padding:0;margin:0 0 25px;gap:18px}
+.stay-story li{position:relative}
+.stay-story li+li:before{content:'→';position:absolute;left:-19px;top:15px;font-size:19px}
+.stay-story li>span{display:grid;place-items:center;width:62px;height:62px;margin:0 auto 15px;border:1px solid #111;border-radius:48% 43% 46% 50%;background:var(--blue);font-family:var(--hand);font-size:23px}
+.stay-story li>b{font-weight:400;font-size:16px;line-height:1.7}
+.illustration-led .atlas-tabs button{display:grid;grid-template-columns:auto 1fr;gap:10px 16px;align-items:center;padding:15px 20px 19px}
+.map-mini{display:block;grid-column:1/-1;aspect-ratio:1.7/1;overflow:hidden;margin:0 0 6px;background:var(--paper);border:1px solid #111}
+.map-mini img{width:100%;height:100%;object-fit:contain}
+.illustration-led .atlas-tabs i{display:none}
+.map-reading{border-top:1px solid #111}
+.map-reading summary{font-size:14px;line-height:1.7;padding:17px 30px;cursor:pointer}
+.map-reading .atlas-readout{padding-top:10px}
+.local-work-art{max-width:1000px;margin:-5px auto 30px}
+.local-work-art img{width:100%;mix-blend-mode:multiply}
+.local-work-art figcaption{text-align:center;font-family:var(--hand);font-size:24px;margin-top:12px}
+.local-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:35px;list-style:none;margin:35px 0;padding:0}
+.local-flow li{position:relative;padding:24px 16px;border-block:1px solid #111;text-align:center}
+.local-flow li+li:before{content:'→';position:absolute;left:-31px;top:45px;font-family:var(--hand);font-size:25px}
+.local-flow span{font-size:14px}
+.local-flow h3{font-size:clamp(23px,2.2vw,30px);margin-top:10px;letter-spacing:0}
+.illustration-led .local-measure{font-size:16px;max-width:760px}
+@media(min-width:701px) and (max-width:1050px){.night-cards{grid-template-columns:1fr;gap:24px}.night-card{display:grid;grid-template-columns:1.15fr 1fr;align-items:center}.night-card-copy{padding:28px}.night-card figure{aspect-ratio:1.3/1}.night-card h3{font-size:34px}.local-flow{gap:25px}.local-flow li+li:before{left:-25px}.local-flow h3{font-size:25px}}
+@media(max-width:700px){
+ .illustration-led .zine-cover{display:flex;padding-top:25px;gap:8px;min-height:0}
+ .illustration-led .cover-drawing{width:100%;max-width:390px;order:-1}
+ .cover-art{max-height:250px;aspect-ratio:1.3/1}
+ .cover-art img{transform:scale(1.4)}
+ .illustration-led .cover-drawing figcaption{display:none}
+ .illustration-led .zine-cover h1{font-size:clamp(35px,8.1vw,48px)}
+ .illustration-led .cover-intro{font-size:16px;max-width:340px;margin:20px auto 0}
+ .illustration-led .cover-intro br{display:none}
+ .illustration-led .story-letter{padding-top:35px;padding-bottom:15px}
+ .illustration-led .story-letter h2{font-size:32px}
+ .illustration-led .story-letter>p br{display:none}
+ .illustration-led .history-chapters{gap:25px}
+ .history-card-copy{padding:0 23px 23px}
+ .illustration-led .history-chapters h3{font-size:30px}
+ .illustration-led .history-question{font-size:21px}
+ .night-cards{grid-template-columns:1fr;gap:28px;margin-top:30px}
+ .night-card figure{aspect-ratio:1.5/1}
+ .night-card-copy{padding:0 24px 25px}
+ .night-card h3{font-size:33px}
+ .night-card-copy .night-hook{font-size:20px}
+ .stay-story{margin-top:40px}
+ .stay-story h3{font-size:32px}
+ .stay-story ol{grid-template-columns:1fr;max-width:320px;margin:0 auto 25px;gap:21px}
+ .stay-story li{display:flex;align-items:center;text-align:left;gap:22px}
+ .stay-story li>span{width:53px;height:53px;margin:0;flex-shrink:0;font-size:21px}
+ .stay-story li+li:before{content:'↓';left:21px;top:-25px;font-size:18px}
+ .illustration-led .atlas-tabs button{display:block;padding:10px 7px 13px}
+ .map-mini{aspect-ratio:1.35/1;margin-bottom:12px}
+ .illustration-led .atlas-tab-no{font-size:25px;margin-bottom:6px}
+ .illustration-led .atlas-tabs b{font-size:21px}
+ .illustration-led .atlas-tabs small{font-size:12px;line-height:1.5;min-height:36px}
+ .map-reading summary{padding:17px 18px}
+ .local-work-art{margin:0 -10px 25px}
+ .local-work-art figcaption{font-size:20px;margin:10px 15px 0}
+ .local-flow{grid-template-columns:1fr;gap:27px;max-width:330px;margin:30px auto}
+ .local-flow li{padding:18px 12px}
+ .local-flow li+li:before{content:'↓';left:calc(50% - 9px);top:-31px;font-size:23px}
+ .local-flow h3{font-size:27px}
+ .illustration-led .local-measure{font-size:16px}
+ .illustration-led .local-measure br{display:none}
+}
+
+@media(max-width:380px){.illustration-led .atlas-tabs b{font-size:19px}.illustration-led .history-chapters h3{font-size:27px}}
