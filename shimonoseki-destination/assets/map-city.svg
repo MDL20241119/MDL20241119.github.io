@@ -1,47 +1,48 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" role="img" aria-labelledby="title desc"><title id="title">下関市内のアクセシビリティ</title><desc id="desc">下関駅前と、海響館・唐戸市場・赤間神宮・城下町長府・新下関駅をつなぐ模式図。下関駅から海沿いの各地へ既存バス、新下関駅から下関駅へJR、新下関駅から城下町長府へ既存バス。ピンクの破線はこれらを周回する未運行の企画案。方位、距離、道路形状は示さない。</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="#111111">
-<rect x="0" y="0" width="1180" height="820" rx="0" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
-<path d="M1180 298 L1100 362 L1050 435 L882 475 L830 557 L670 628 L585 708 L510 820 H1180 Z" fill="#1892F5" stroke="#1892F5" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
+<svg xmlns="http://www.w3.org/2000/svg" width="1180" height="820" viewBox="0 0 1180 820" role="img" aria-labelledby="title desc"><title id="title">下関市内のアクセシビリティ</title><desc id="desc">下関駅前と、海響館・唐戸市場・赤間神宮・城下町長府・新下関駅をつなぐ模式図。下関駅から海沿いの各地へ既存バス、新下関駅から下関駅へJR、新下関駅から城下町長府へ既存バス。水色の破線はこれらを周回する未運行の企画案。方位、距離、道路形状は示さない。</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="#111111">
+<rect x="0" y="0" width="1180" height="820" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
+<path d="M1180 298 L1100 362 L1050 435 L882 475 L830 557 L670 628 L585 708 L510 820 H1180 Z" fill="#82D6F7" stroke="#82D6F7" stroke-width="0" stroke-linecap="round" stroke-linejoin="round"/>
 <text x="40" y="39" font-size="22" font-weight="700" fill="#111111" text-anchor="start">CITY / 下関市内をひとつの旅に</text>
 <text x="1138" y="39" font-size="19" font-weight="500" fill="#111111" text-anchor="end">接続を整理した模式図・縮尺なし</text>
 <path d="M225 148 V676" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M225 148 H950 V226" fill="none" stroke="#FF5A45" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M950 226 V313 L798 400 L643 497 L460 580 L280 673" fill="none" stroke="#FF5A45" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M807 411 L807 527 L649 585 L480 660" fill="none" stroke="#73776F" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 12"/>
+<path d="M225 148 V676" fill="none" stroke="#F7F4EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M225 148 H950 V226" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M950 226 V313 L798 400 L643 497 L460 580 L280 673" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M807 411 L807 527 L649 585 L480 660" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="2 12"/>
 <path d="M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z" fill="none" stroke="#111111" stroke-width="11" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 14"/>
-<path d="M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z" fill="none" stroke="#EF7BD7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 14"/>
-<rect x="35" y="391" width="109" height="44" rx="2" fill="#EF7BD7" stroke="#111111" stroke-width="0"/>
+<path d="M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z" fill="none" stroke="#82D6F7" stroke-width="7" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="12 14"/>
+<rect x="35" y="391" width="109" height="44" rx="2" fill="#82D6F7" stroke="#111111" stroke-width="0"/>
 <text x="49" y="418" font-size="27" font-weight="700" fill="#111111" text-anchor="start">周回便</text>
 <text x="49" y="455" font-size="24" font-weight="700" fill="#111111" text-anchor="start">企画案</text>
-<rect x="247" y="341" width="167.2" height="41" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="247" y="341" width="167.2" height="41" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="261" y="365" font-size="24" font-weight="700" fill="#111111" text-anchor="start">JR 山陽本線</text>
-<rect x="556" y="109" width="203" height="42" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="556" y="109" width="203" height="42" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="570" y="134" font-size="25" font-weight="700" fill="#111111" text-anchor="start">既存の路線バス</text>
-<rect x="493" y="404" width="203" height="42" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="493" y="404" width="203" height="42" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="507" y="429" font-size="25" font-weight="700" fill="#111111" text-anchor="start">既存の路線バス</text>
-<rect x="865" y="571" width="182" height="39" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="865" y="571" width="182" height="39" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="879" y="593" font-size="22" font-weight="700" fill="#111111" text-anchor="start">徒歩などで回遊</text>
-<circle cx="225" cy="148" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="950" cy="226" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="798" cy="400" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="643" cy="497" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="460" cy="580" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="280" cy="673" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<rect x="82" y="82" width="350" height="127" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<circle cx="225" cy="148" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="950" cy="226" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="798" cy="400" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="643" cy="497" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="460" cy="580" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="280" cy="673" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<rect x="82" y="82" width="350" height="127" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="107" y="121" font-size="22" font-weight="600" fill="#111111" text-anchor="start">新幹線の入口</text>
 <text x="106" y="173" font-size="41" font-weight="900" fill="#111111" text-anchor="start">新下関駅</text>
-<rect x="764" y="216" width="375" height="112" rx="0" fill="#64D84A" stroke="#111111" stroke-width="2"/>
+<rect x="764" y="216" width="375" height="112" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="790" y="262" font-size="37" font-weight="900" fill="#111111" text-anchor="start">城下町長府</text>
 <text x="790" y="300" font-size="23" font-weight="500" fill="#111111" text-anchor="start">武家屋敷・土塀の町並み</text>
-<rect x="803" y="347" width="256" height="83" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<rect x="803" y="347" width="256" height="83" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="826" y="400" font-size="37" font-weight="900" fill="#111111" text-anchor="start">赤間神宮</text>
-<rect x="642" y="473" width="255" height="88" rx="0" fill="#FFE248" stroke="#111111" stroke-width="2"/>
+<rect x="642" y="473" width="255" height="88" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="665" y="529" font-size="40" font-weight="900" fill="#111111" text-anchor="start">唐戸市場</text>
-<rect x="389" y="583" width="235" height="65" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<rect x="389" y="583" width="235" height="65" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="414" y="631" font-size="39" font-weight="900" fill="#111111" text-anchor="start">海響館</text>
-<rect x="45" y="658" width="440" height="119" rx="0" fill="#FFE248" stroke="#111111" stroke-width="2.5"/>
+<rect x="45" y="658" width="440" height="119" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2.5"/>
 <text x="67" y="703" font-size="37" font-weight="900" fill="#111111" text-anchor="start">下関駅前 / 構想拠点</text>
 <text x="67" y="738" font-size="21" font-weight="500" fill="#111111" text-anchor="start">大丸下関店の営業終了後を想定</text>
 <text x="67" y="764" font-size="20" font-weight="500" fill="#111111" text-anchor="start">シーモール・駐車場と一体利用を検討</text>
-<text x="812" y="696" font-size="42" font-weight="900" fill="white" text-anchor="start">関門海峡</text>
-<text x="814" y="730" font-size="22" font-weight="700" fill="white" text-anchor="start">KANMON STRAIT</text>
+<text x="812" y="696" font-size="42" font-weight="900" fill="#111111" text-anchor="start">関門海峡</text>
+<text x="814" y="730" font-size="22" font-weight="700" fill="#111111" text-anchor="start">KANMON STRAIT</text>
 </g></svg>

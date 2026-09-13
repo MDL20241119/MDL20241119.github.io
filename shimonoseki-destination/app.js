@@ -1,9 +1,9 @@
 "use strict";
 const courses={
- strait:{title:"市場の活気と、海峡を渡る時間。",places:["station","karato","mojiko"],stops:[["駅前","車と荷物を預け、旅を始める"],["唐戸市場","市場を楽しみ、港を歩く"],["門司港","関門連絡船で、海峡の向こうへ"],["駅前へ","下関の食とお土産で締めくくる"]]},
- family:{title:"親子で、海の世界とおいしい発見。",places:["station","aquarium","karato"],stops:[["駅前","必要な荷物を整え、バスへ"],["海響館","海の生きものとの出会いを楽しむ"],["唐戸周辺","休憩しながら、水辺を散歩"],["駅前へ","家族で食事。買い物も一度に"]]},
- history:{title:"新幹線の入口から、城下町と海峡の街へ。",stops:[["新下関駅","新幹線から、市内の旅へ"],["城下町長府","武家屋敷や土塀の町並みを歩く"],["赤間神宮・唐戸","歴史と、港の風景に出会う"],["下関駅前","夜の食と文化を楽しみ、関門の宿へ"]]},
- evening:{title:"関門を楽しみ、もう一泊したくなる夜へ。",places:["station","karato","mojiko"],stops:[["関門の港へ","夕景を楽しみ、夜の帰路を確認"],["下関駅前","地元の食と文化を楽しむ夜の構想"],["関門の宿へ","下関・門司港・小倉の宿泊施設との連携案"],["翌朝も街へ","朝食・街歩き・買い物で、もう一つの発見"]]}
+ strait:{title:"市場の活気と、海峡を渡る時間。",places:["station","karato","mojiko"],stops:[["駅前","車と荷物を預け、旅を始める"],["唐戸市場","市場を楽しみ、港を歩く"],["門司港","関門連絡船で、海峡の向こうへ"],["駅前へ","港で見つけた食を、ライブ食堂でもう一度"]]},
+ family:{title:"親子で、海に出会い、船乗りになる。",places:["station","aquarium","karato"],stops:[["駅前","必要な荷物を整え、バスへ"],["海響館","海の生きものとの出会いを楽しむ"],["唐戸周辺","休憩しながら、水辺を散歩"],["駅前へ","海峡の航海ゲームに挑戦し、家族で食事"]]},
+ history:{title:"長府で見つけた問いを、夜の劇場へ。",stops:[["新下関駅","新幹線から、城下町長府へ"],["城下町長府","忌宮神社・功山寺など、その日の章の舞台へ"],["下関駅前","港の食卓を囲み、物語の手紙を受け取る"],["ものがたり劇場","昼の発見を手がかりに参加し、予約した宿へ"]]},
+ evening:{title:"小倉から海峡へ。物語を楽しみ、関門に泊まる。",places:["station","karato","mojiko"],stops:[["小倉・門司港","城下町や港を楽しみ、夜の帰路を確認"],["下関駅前","ライブ食堂で食べ、参加型の劇場を楽しむ"],["関門の宿へ","予約した下関・門司港・小倉の宿へ戻る連携案"],["翌朝も街へ","物語で気になった場所へ、もう一度"]]}
 };
 const tabs=Array.from(document.querySelectorAll('.route-tabs [role="tab"]'));
 const panel=document.getElementById('route-panel');
@@ -49,3 +49,11 @@ document.querySelectorAll('[data-map-link]').forEach(link=>link.addEventListener
 function mapFromHash(){return mapTabs.find(t=>'#'+t.getAttribute('aria-controls')===location.hash);}
 if(mapTabs.length)selectMap(mapFromHash()||mapTabs[0]);
 window.addEventListener('hashchange',()=>{const tab=mapFromHash();if(tab)selectMap(tab);});
+
+// Open the source note when reached by its direct link.
+function revealSourceNote(){
+ if(location.hash==='#sources')document.getElementById('sources').open=true;
+}
+revealSourceNote();
+window.addEventListener('hashchange',revealSourceNote);
+document.querySelectorAll('a[href="#sources"]').forEach(link=>link.addEventListener('click',()=>{document.getElementById('sources').open=true;}));

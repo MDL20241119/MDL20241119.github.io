@@ -1,46 +1,47 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="640" height="1090" viewBox="0 0 640 1090" role="img" aria-labelledby="title desc"><title id="title">関門広域のアクセシビリティ</title><desc id="desc">関門を一体で巡る交通接続の模式図。新下関駅と下関駅はJR山陽本線、下関駅と唐戸は既存バス、唐戸港と門司港は既存の関門連絡船。下関駅から海峡を越えて門司駅・小倉駅へJR在来線、門司駅から門司港駅へJR。途中駅やバス停は省略。宿泊や夜の帰路の一体案内は未合意の構想。</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="#111111">
-<rect x="0" y="0" width="640" height="1090" rx="0" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
-<rect x="0" y="403" width="640" height="224" rx="0" fill="#1892F5" stroke="#111111" stroke-width="0"/>
+<rect x="0" y="0" width="640" height="1090" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
+<rect x="0" y="403" width="640" height="224" rx="0" fill="#82D6F7" stroke="#111111" stroke-width="0"/>
 <text x="23" y="37" font-size="24" font-weight="700" fill="#111111" text-anchor="start">REGION / 海峡を越えて、滞在する</text>
 <path d="M130 147 V720 H85 V835" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 147 V720 H85 V835" fill="none" stroke="#F7F4EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
 <path d="M130 720 H500 V630" fill="none" stroke="#111111" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M130 274 H496 V348" fill="none" stroke="#FF5A45" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M498 359 V630" fill="none" stroke="white" stroke-width="16" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M498 359 V630" fill="none" stroke="#1892F5" stroke-width="9" stroke-linecap="round" stroke-linejoin="round"/>
-<rect x="34" y="68" width="313" height="97" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<path d="M130 720 H500 V630" fill="none" stroke="#F7F4EE" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M130 274 H496 V348" fill="none" stroke="#111111" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<path d="M498 359 V630" fill="none" stroke="#111111" stroke-width="4" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="10 9"/>
+<rect x="34" y="68" width="313" height="97" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="54" y="101" font-size="22" font-weight="500" fill="#111111" text-anchor="start">新幹線の入口</text>
 <text x="54" y="144" font-size="36" font-weight="900" fill="#111111" text-anchor="start">新下関駅</text>
-<rect x="149" y="187" width="59.2" height="43" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="149" y="187" width="59.2" height="43" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="163" y="213" font-size="26" font-weight="700" fill="#111111" text-anchor="start">JR</text>
-<rect x="25" y="249" width="305" height="131" rx="0" fill="#FFE248" stroke="#111111" stroke-width="2.5"/>
+<rect x="25" y="249" width="305" height="131" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2.5"/>
 <text x="45" y="288" font-size="36" font-weight="900" fill="#111111" text-anchor="start">下関駅前</text>
 <text x="45" y="325" font-size="21" font-weight="500" fill="#111111" text-anchor="start">大丸営業終了後の構想拠点</text>
 <text x="45" y="357" font-size="22" font-weight="500" fill="#111111" text-anchor="start">夜の食と文化・宿泊連携案</text>
-<rect x="345" y="225" width="124" height="41" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="345" y="225" width="124" height="41" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="359" y="249" font-size="24" font-weight="700" fill="#111111" text-anchor="start">路線バス</text>
-<rect x="407" y="297" width="208" height="91" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<rect x="407" y="297" width="208" height="91" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="427" y="333" font-size="34" font-weight="900" fill="#111111" text-anchor="start">唐戸</text>
 <text x="427" y="369" font-size="25" font-weight="500" fill="#111111" text-anchor="start">市場・港</text>
-<text x="184" y="468" font-size="41" font-weight="900" fill="white" text-anchor="start">関門海峡</text>
-<rect x="161" y="526" width="152.8" height="43" rx="2" fill="white" stroke="#111111" stroke-width="0"/>
+<text x="184" y="468" font-size="41" font-weight="900" fill="#111111" text-anchor="start">関門海峡</text>
+<rect x="161" y="526" width="152.8" height="43" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="175" y="552" font-size="26" font-weight="700" fill="#111111" text-anchor="start">JR 在来線</text>
-<rect x="351" y="568" width="158" height="43" rx="2" fill="white" stroke="#111111" stroke-width="0"/>
+<rect x="351" y="568" width="158" height="43" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="365" y="594" font-size="26" font-weight="700" fill="#111111" text-anchor="start">関門連絡船</text>
-<circle cx="130" cy="720" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="500" cy="720" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<circle cx="85" cy="835" r="11" fill="white" stroke="#111111" stroke-width="3"/>
-<rect x="362" y="622" width="254" height="80" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<circle cx="130" cy="720" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="500" cy="720" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<circle cx="85" cy="835" r="11" fill="#F7F4EE" stroke="#111111" stroke-width="3"/>
+<rect x="362" y="622" width="254" height="80" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="380" y="658" font-size="33" font-weight="900" fill="#111111" text-anchor="start">門司港</text>
 <text x="380" y="688" font-size="23" font-weight="500" fill="#111111" text-anchor="start">門司港駅</text>
 <text x="159" y="674" font-size="32" font-weight="900" fill="#111111" text-anchor="start">門司駅</text>
 <text x="159" y="703" font-size="20" font-weight="500" fill="#111111" text-anchor="start">門司港方面へ接続</text>
-<rect x="255" y="737" width="148.0" height="42" rx="2" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<rect x="255" y="737" width="148.0" height="42" rx="2" fill="#F7F4EE" stroke="#111111" stroke-width="0"/>
 <text x="269" y="762" font-size="25" font-weight="700" fill="#111111" text-anchor="start">JR 在来線</text>
-<rect x="32" y="821" width="276" height="82" rx="0" fill="white" stroke="#111111" stroke-width="2"/>
+<rect x="32" y="821" width="276" height="82" rx="0" fill="#F7F4EE" stroke="#111111" stroke-width="2"/>
 <text x="52" y="872" font-size="38" font-weight="900" fill="#111111" text-anchor="start">小倉駅</text>
 <text x="345" y="853" font-size="32" font-weight="900" fill="#111111" text-anchor="start">北九州市</text>
 <text x="345" y="885" font-size="20" font-weight="500" fill="#111111" text-anchor="start">門司港・小倉にも泊まる</text>
-<rect x="23" y="937" width="594" height="115" rx="0" fill="white" stroke="#EF7BD7" stroke-width="3" stroke-dasharray="11 7"/>
+<rect x="23" y="937" width="594" height="115" rx="0" fill="#F7F4EE" stroke="#82D6F7" stroke-width="3" stroke-dasharray="11 7"/>
 <text x="44" y="975" font-size="26" font-weight="900" fill="#111111" text-anchor="start">連携案 / 宿へ戻るまでをひとつに</text>
 <text x="44" y="1010" font-size="22" font-weight="500" fill="#111111" text-anchor="start">下関・門司港・小倉の宿、荷物、夜の帰路。</text>
 <text x="44" y="1038" font-size="22" font-weight="500" fill="#111111" text-anchor="start">深夜の船・バス・鉄道の運行は示しません。</text>

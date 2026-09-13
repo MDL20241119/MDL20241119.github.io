@@ -2,7 +2,7 @@ from pathlib import Path
 from html import escape
 
 OUT = Path(__file__).resolve().parents[1] / 'assets'
-BLUE='#1892F5'; BLACK='#111111'; PINK='#EF7BD7'; LEMON='#FFE248'; CORAL='#FF5A45'; LIME='#64D84A'; PAPER='#F5F5EE'
+BLUE='#82D6F7'; BLACK='#111111'; PINK='#82D6F7'; LEMON='#F7F4EE'; CORAL='#82D6F7'; LIME='#F7F4EE'; PAPER='#F7F4EE'
 
 class SVG:
     def __init__(self,w,h,title,desc):
@@ -10,14 +10,18 @@ class SVG:
         self.parts=[f'<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}" role="img" aria-labelledby="title desc"><title id="title">{escape(title)}</title><desc id="desc">{escape(desc)}</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="{BLACK}">']
         self.rect(0,0,w,h,PAPER,0)
     def rect(self,x,y,w,h,fill='white',sw=2,stroke=BLACK,rx=0,dash=''):
+        if fill=='white': fill=PAPER
         self.parts.append(f'<rect x="{x}" y="{y}" width="{w}" height="{h}" rx="{rx}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"'+(f' stroke-dasharray="{dash}"' if dash else '')+'/>')
     def path(self,d,color=BLACK,width=4,dash='',fill='none'):
         self.parts.append(f'<path d="{d}" fill="{fill}" stroke="{color}" stroke-width="{width}" stroke-linecap="round" stroke-linejoin="round"'+(f' stroke-dasharray="{dash}"' if dash else '')+'/>')
     def poly(self,pts,fill,sw=2):
+        if fill=='white': fill=PAPER
         self.parts.append(f'<polygon points="{pts}" fill="{fill}" stroke="{BLACK}" stroke-width="{sw}" stroke-linejoin="round"/>')
     def circle(self,x,y,r=11,fill='white',stroke=BLACK,sw=3):
+        if fill=='white': fill=PAPER
         self.parts.append(f'<circle cx="{x}" cy="{y}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{sw}"/>')
     def text(self,x,y,txt,size=26,weight=700,fill=BLACK,anchor='start'):
+        if fill=='white': fill=BLACK
         self.parts.append(f'<text x="{x}" y="{y}" font-size="{size}" font-weight="{weight}" fill="{fill}" text-anchor="{anchor}">{escape(txt)}</text>')
     def label(self,x,y,text,color='white',size=23,pad=14):
         # Japanese width is one em; Latin labels use a compact estimate.
@@ -27,7 +31,7 @@ class SVG:
     def save(self,name):
         (OUT/name).write_text('\n'.join(self.parts)+ '\n</g></svg>\n')
 
-floors=[('5F','暮らす・働く','医療・学習・仕事の候補',LIME),('4F','体験する・学ぶ','ワークショップ・親子の体験',CORAL),('3F','好きに出会う','IP展示・カフェ・限定企画',PINK),('2F','日本を持ち帰る','日本ブランド × 地域のつくり手',BLUE),('1F','食べる・旅立つ','食の拠点・夜の食事・観光案内',LEMON),('B1','日常を支える','地元食材・日々の買い物','#C7E7FF')]
+floors=[('5F','暮らす・働く','医療・学習・仕事の候補',LIME),('4F','体験する・学ぶ','海峡の航海ゲーム・親子の体験',CORAL),('3F','好きに出会う','IP展示・参加型劇場の候補',PINK),('2F','日本を持ち帰る','日本ブランド × 地域のつくり手',BLUE),('1F','食べる・旅立つ','食の拠点・夜の食事・観光案内',LEMON),('B1','日常を支える','地元食材・日々の買い物',BLUE)]
 
 def building(mobile=False):
     w,h=(640,990) if mobile else (1180,820)
@@ -36,9 +40,9 @@ def building(mobile=False):
     if not mobile: s.text(1135,38,'配置案・寸法なし',19,500,anchor='end')
     # Dashed vertical alignment shows an exploded stack, not a staircase or escape route.
     if mobile:
-        s.path('M130 84 V850 M330 129 V895', '#B5B8B4',2,'5 8')
+        s.path('M130 84 V850 M330 129 V895', BLACK,2,'5 8')
     else:
-        s.path('M260 82 V690 M590 134 V742 M410 195 V803','#B5B8B4',2,'5 8')
+        s.path('M260 82 V690 M590 134 V742 M410 195 V803',BLACK,2,'5 8')
     for i,(floor,title,detail,color) in enumerate(floors):
         y=(86+i*136) if mobile else (78+i*113)
         if mobile:
@@ -74,24 +78,25 @@ def building(mobile=False):
         s.text(labelx,labely+43,mobile_titles[i] if mobile else title,30 if mobile else title_size,900)
         if not mobile: s.text(labelx,labely+76,detail,21,500)
     if mobile:
-        s.rect(16,922,608,50,BLACK,0)
+        s.rect(16,922,608,50,PAPER,1)
         s.text(320,957,'食・観光を入口に、日常の利用を重ねる。',24,700,'white','middle')
     else:
-        s.rect(650,759,480,41,BLACK,0)
+        s.rect(650,759,480,41,PAPER,1)
         s.text(675,787,'食・観光を入口に、日常の利用を重ねる。',21,700,'white')
     s.save('map-building'+('-mobile' if mobile else '')+'.svg')
 
 def local(mobile=False):
-    desc='下関駅前と、海響館・唐戸市場・赤間神宮・城下町長府・新下関駅をつなぐ模式図。下関駅から海沿いの各地へ既存バス、新下関駅から下関駅へJR、新下関駅から城下町長府へ既存バス。ピンクの破線はこれらを周回する未運行の企画案。方位、距離、道路形状は示さない。'
+    desc='下関駅前と、海響館・唐戸市場・赤間神宮・城下町長府・新下関駅をつなぐ模式図。下関駅から海沿いの各地へ既存バス、新下関駅から下関駅へJR、新下関駅から城下町長府へ既存バス。水色の破線はこれらを周回する未運行の企画案。方位、距離、道路形状は示さない。'
     s=SVG(640 if mobile else 1180,1160 if mobile else 820,'下関市内のアクセシビリティ',desc)
     if mobile:
         # The coast runs down the right of a legible, vertical city circuit.
         s.path('M640 220 L585 340 L585 650 L455 760 L455 1160 H640 Z',BLUE,0,fill=BLUE)
         s.text(26,39,'CITY / 下関市内をひとつの旅に',25)
         s.path('M102 145 V928',BLACK,10)
-        s.path('M102 145 H470 V273',CORAL,10)
-        s.path('M470 350 V425 L370 548 L310 700 L225 924',CORAL,10)
-        s.path('M370 557 L411 702 L320 812','#73776F',4,'2 12')
+        s.path('M102 145 V928',PAPER,4)
+        s.path('M102 145 H470 V273',BLACK,5)
+        s.path('M470 350 V425 L370 548 L310 700 L225 924',BLACK,5)
+        s.path('M370 557 L411 702 L320 812',BLACK,4,'2 12')
         s.path('M206 925 L284 685 L343 534 L439 419 V187 H147 V840 Z',BLACK,11,'12 14')
         s.path('M206 925 L284 685 L343 534 L439 419 V187 H147 V840 Z',PINK,7,'12 14')
         s.label(177,409,'周回便',PINK,27)
@@ -124,9 +129,10 @@ def local(mobile=False):
         s.text(40,39,'CITY / 下関市内をひとつの旅に',22)
         s.text(1138,39,'接続を整理した模式図・縮尺なし',19,500,anchor='end')
         s.path('M225 148 V676',BLACK,10)
-        s.path('M225 148 H950 V226',CORAL,10)
-        s.path('M950 226 V313 L798 400 L643 497 L460 580 L280 673',CORAL,10)
-        s.path('M807 411 L807 527 L649 585 L480 660','#73776F',4,'2 12')
+        s.path('M225 148 V676',PAPER,4)
+        s.path('M225 148 H950 V226',BLACK,5)
+        s.path('M950 226 V313 L798 400 L643 497 L460 580 L280 673',BLACK,5)
+        s.path('M807 411 L807 527 L649 585 L480 660',BLACK,4,'2 12')
         s.path('M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z',BLACK,11,'12 14')
         s.path('M280 675 L442 558 L625 475 L780 378 L923 291 V177 H190 V575 Z',PINK,7,'12 14')
         s.label(35,418,'周回便',PINK,27)
@@ -163,10 +169,11 @@ def regional(mobile=False):
         s.rect(0,403,640,224,BLUE,0)
         s.text(23,37,'REGION / 海峡を越えて、滞在する',24)
         s.path('M130 147 V720 H85 V835',BLACK,10)
+        s.path('M130 147 V720 H85 V835',PAPER,4)
         s.path('M130 720 H500 V630',BLACK,10)
-        s.path('M130 274 H496 V348',CORAL,10)
-        s.path('M498 359 V630','white',16)
-        s.path('M498 359 V630',BLUE,9)
+        s.path('M130 720 H500 V630',PAPER,4)
+        s.path('M130 274 H496 V348',BLACK,5)
+        s.path('M498 359 V630',BLACK,4,'10 9')
         s.rect(34,68,313,97,'white',2)
         s.text(54,101,'新幹線の入口',22,500)
         s.text(54,144,'新下関駅',36,900)
@@ -202,10 +209,11 @@ def regional(mobile=False):
         s.text(40,38,'REGION / 海峡を越えて、滞在する',22)
         s.text(1138,38,'交通の接続図・縮尺なし・途中駅を省略',19,500,anchor='end')
         s.path('M252 136 V430 L470 619 H984',BLACK,10)
+        s.path('M252 136 V430 L470 619 H984',PAPER,4)
         s.path('M470 619 H186 V686',BLACK,10)
-        s.path('M252 258 H978 V282',CORAL,10)
-        s.path('M978 295 V591','white',16)
-        s.path('M978 295 V591',BLUE,9)
+        s.path('M470 619 H186 V686',PAPER,4)
+        s.path('M252 258 H978 V282',BLACK,5)
+        s.path('M978 295 V591',BLACK,4,'10 9')
         s.rect(91,68,334,99,'white',2)
         s.text(115,102,'新幹線の入口',21,500)
         s.text(115,147,'新下関駅',39,900)
