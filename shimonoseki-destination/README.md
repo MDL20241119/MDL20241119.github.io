@@ -38,4 +38,15 @@ The next decision concerns authorization and resourcing of an investigation, not
 
 ## Maintenance
 
-Plain static files; no dependency install or build. `app.js` only changes three illustrative course panels and highlights diagram nodes. Sources and caveats are rendered in HTML even without JavaScript. Keep root homepage changes limited to the new concept notice and teaser. Do not overwrite contemporaneous changes to other special sites.
+Plain static files; no dependency install or build. `app.js` changes three map panels and four illustrative course options, with separate keyboard tab controls. Direct links to `#map-building`, `#map-city`, and `#map-kanmon` select the relevant map. All three maps remain readable without JavaScript. Sources and caveats are rendered in HTML. Keep root homepage changes limited to the new concept notice and teaser. Do not overwrite contemporaneous changes to other special sites.
+
+## Three maps and circular mobility concept
+
+- `map-building.svg`: an original exploded floor-stack diagram, with illustrative functions on B1–5F. It is not a measured drawing, current tenant layout, approved design, or inventory of the whole building. Scope for 6F, 7F and roof remains unresolved.
+- `map-city.svg`: Shimonoseki Station, Kaikyokan, Karato Market, Akama Shrine, historic Chofu, and Shin-Shimonoseki Station. Solid lines represent existing transport connections; the outlined pink dashed circuit is an unoperated proposal. It does not represent surveyed road geometry or approved stops.
+- `map-kanmon.svg`: the wider Kokura–Mojiko–Karato–Shimonoseki circuit, with existing JR, bus and ferry connections. Moji Station and Mojiko Station are separate. Transfers, walking links, intermediate stations and operating patterns are simplified.
+- Each map has a separate mobile SVG. Text, lines and geometry are original editable SVG, not generated geographical imagery. The generator is `scripts/build-maps.py` (Python standard library only).
+- The city loop starts with a proposed weekend pilot. Night journeys are planned around bookings and lodging areas, without claiming a scheduled late-night service. Vehicles, operator, stops, permits, fares, timing, staffing, accessibility and costs require agreement and verification. Booking and ticket integration are unagreed concepts, not live functions.
+- Current city bus connections and Chofu access were checked against Sanden Kotsu's official sightseeing access page and Yamaguchi Tourism's Chofu page on 2026-09-13; both are linked on the page. No specific travel-time or frequency promise is made.
+
+Diagram PNGs were rendered with Inkscape to review desktop and mobile label placement; page references, SVG structure, JS syntax and isolated map/course interactions were checked. No browser preview was requested or performed for this update.

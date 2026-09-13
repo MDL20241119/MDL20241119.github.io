@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="640" height="990" viewBox="0 0 640 990" role="img" aria-labelledby="title desc"><title id="title">建物の立体構成イメージ・フロア機能の配置案</title><desc id="desc">大丸下関店の営業終了後を見据えた独自構想。B1は日常の買い物、1Fは食と旅の入口、2Fは日本ブランド、3FはIP、4Fは体験、5Fは暮らしと仕事の候補。実測図・設計図ではなく、対象階と動線は未確定。</desc><g font-family="Noto Sans CJK JP,Noto Sans JP,Hiragino Kaku Gothic ProN,Meiryo,sans-serif" fill="#111111">
+<rect x="0" y="0" width="640" height="990" rx="0" fill="#F5F5EE" stroke="#111111" stroke-width="0"/>
+<text x="24" y="38" font-size="25" font-weight="700" fill="#111111" text-anchor="start">SPACE / 機能を積み重ねる</text>
+<path d="M130 84 V850 M330 129 V895" fill="none" stroke="#B5B8B4" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-dasharray="5 8"/>
+<polygon points="10,134 210,179 210,191 10,146" fill="#64D84A" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,131 210,179 210,191 330,143" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,86 330,131 210,179 10,134" fill="#64D84A" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 86)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<rect x="26" y="75.6" width="16" height="19.2" rx="0" fill="#64D84A" stroke="#111111" stroke-width="1"/>
+<rect x="54" y="75.6" width="16" height="19.2" rx="0" fill="#64D84A" stroke="#111111" stroke-width="1"/>
+<rect x="82" y="75.6" width="16" height="19.2" rx="0" fill="#64D84A" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 135 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="84" width="68" height="33" rx="0" fill="#64D84A" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="109" font-size="22" font-weight="700" fill="#111111" text-anchor="start">5F 案</text>
+<text x="365" y="151" font-size="30" font-weight="900" fill="#111111" text-anchor="start">暮らし・仕事</text>
+<polygon points="10,270 210,315 210,327 10,282" fill="#FF5A45" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,267 210,315 210,327 330,279" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,222 330,267 210,315 10,270" fill="#FF5A45" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 222)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<circle cx="28" cy="87.6" r="7" fill="#FF5A45" stroke="#111111" stroke-width="1"/>
+<circle cx="57" cy="87.6" r="7" fill="#FF5A45" stroke="#111111" stroke-width="1"/>
+<circle cx="86" cy="87.6" r="7" fill="#FF5A45" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 271 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="220" width="68" height="33" rx="0" fill="#FF5A45" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="245" font-size="22" font-weight="700" fill="#111111" text-anchor="start">4F 案</text>
+<text x="365" y="287" font-size="30" font-weight="900" fill="#111111" text-anchor="start">体験・学び</text>
+<polygon points="10,406 210,451 210,463 10,418" fill="#EF7BD7" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,403 210,451 210,463 330,415" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,358 330,403 210,451 10,406" fill="#EF7BD7" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 358)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<circle cx="28" cy="87.6" r="7" fill="#EF7BD7" stroke="#111111" stroke-width="1"/>
+<circle cx="57" cy="87.6" r="7" fill="#EF7BD7" stroke="#111111" stroke-width="1"/>
+<circle cx="86" cy="87.6" r="7" fill="#EF7BD7" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 407 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="356" width="68" height="33" rx="0" fill="#EF7BD7" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="381" font-size="22" font-weight="700" fill="#111111" text-anchor="start">3F 案</text>
+<text x="365" y="423" font-size="30" font-weight="900" fill="#111111" text-anchor="start">IP・カルチャー</text>
+<polygon points="10,542 210,587 210,599 10,554" fill="#1892F5" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,539 210,587 210,599 330,551" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,494 330,539 210,587 10,542" fill="#1892F5" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 494)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<rect x="26" y="75.6" width="16" height="19.2" rx="0" fill="#1892F5" stroke="#111111" stroke-width="1"/>
+<rect x="54" y="75.6" width="16" height="19.2" rx="0" fill="#1892F5" stroke="#111111" stroke-width="1"/>
+<rect x="82" y="75.6" width="16" height="19.2" rx="0" fill="#1892F5" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 543 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="492" width="68" height="33" rx="0" fill="#1892F5" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="517" font-size="22" font-weight="700" fill="#111111" text-anchor="start">2F 案</text>
+<text x="365" y="559" font-size="30" font-weight="900" fill="#111111" text-anchor="start">日本ブランド</text>
+<polygon points="10,678 210,723 210,735 10,690" fill="#FFE248" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,675 210,723 210,735 330,687" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,630 330,675 210,723 10,678" fill="#FFE248" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 630)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<rect x="26" y="75.6" width="86.0" height="16.8" rx="0" fill="#FFE248" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 679 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="628" width="68" height="33" rx="0" fill="#FFE248" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="653" font-size="22" font-weight="700" fill="#111111" text-anchor="start">1F 案</text>
+<text x="365" y="695" font-size="30" font-weight="900" fill="#111111" text-anchor="start">食・観光案内</text>
+<polygon points="10,814 210,859 210,871 10,826" fill="#C7E7FF" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="330,811 210,859 210,871 330,823" fill="white" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<polygon points="130,766 330,811 210,859 10,814" fill="#C7E7FF" stroke="#111111" stroke-width="2" stroke-linejoin="round"/>
+<g transform="matrix(1 0.225 -1 0.4 130 766)">
+<rect x="15" y="14" width="84.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="108.0" y="14" width="78.0" height="44.4" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="15" y="67.2" width="120.0" height="39.6" rx="0" fill="white" stroke="#111111" stroke-width="1.7"/>
+<rect x="146.0" y="66.0" width="40.0" height="40.800000000000004" rx="0" fill="#111111" stroke="#111111" stroke-width="1.7"/>
+<rect x="26" y="75.6" width="16" height="19.2" rx="0" fill="#C7E7FF" stroke="#111111" stroke-width="1"/>
+<rect x="54" y="75.6" width="16" height="19.2" rx="0" fill="#C7E7FF" stroke="#111111" stroke-width="1"/>
+<rect x="82" y="75.6" width="16" height="19.2" rx="0" fill="#C7E7FF" stroke="#111111" stroke-width="1"/>
+</g>
+<path d="M330 815 H345" fill="none" stroke="#111111" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/>
+<rect x="365" y="764" width="68" height="33" rx="0" fill="#C7E7FF" stroke="#111111" stroke-width="1.5"/>
+<text x="374" y="789" font-size="22" font-weight="700" fill="#111111" text-anchor="start">B1 案</text>
+<text x="365" y="831" font-size="30" font-weight="900" fill="#111111" text-anchor="start">日常の買い物</text>
+<rect x="16" y="922" width="608" height="50" rx="0" fill="#111111" stroke="#111111" stroke-width="0"/>
+<text x="320" y="957" font-size="24" font-weight="700" fill="white" text-anchor="middle">食・観光を入口に、日常の利用を重ねる。</text>
+</g></svg>
