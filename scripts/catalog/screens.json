@@ -1,0 +1,66 @@
+[
+  {
+    "name": "01-start",
+    "url": "https://mobilitydlab.com/oita-tourism/"
+  },
+  {
+    "name": "02-overview",
+    "url": "https://mobilitydlab.com/oita-tourism/#overview"
+  },
+  {
+    "name": "03-yufu",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E7%94%B1%E5%B8%83%E5%B8%82#overview"
+  },
+  {
+    "name": "04-access",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access"
+  },
+  {
+    "name": "05-conditions",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access"
+  },
+  {
+    "name": "06-roundtrip",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access"
+  },
+  {
+    "name": "07-local-map",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000#mobility"
+  },
+  {
+    "name": "08-nearby-stops",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000#mobility"
+  },
+  {
+    "name": "09-modes",
+    "url": "https://mobilitydlab.com/oita-tourism/?compare=modes#compare"
+  },
+  {
+    "name": "10-lodging",
+    "url": "https://mobilitydlab.com/oita-tourism/?compare=lodging#compare"
+  },
+  {
+    "name": "11-monthly",
+    "url": "https://mobilitydlab.com/oita-tourism/?compare=monthly#compare"
+  },
+  {
+    "name": "12-gw",
+    "url": "https://mobilitydlab.com/oita-tourism/?compare=gw#compare"
+  },
+  {
+    "name": "13-issues",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E7%94%B1%E5%B8%83%E5%B8%82#issues"
+  },
+  {
+    "name": "14-search",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#data"
+  },
+  {
+    "name": "15-source",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#data"
+  },
+  {
+    "name": "16-guide",
+    "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#guide"
+  }
+]

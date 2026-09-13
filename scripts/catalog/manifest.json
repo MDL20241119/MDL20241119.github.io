@@ -1,0 +1,87 @@
+{
+  "captured": "2026-09-13",
+  "screenCount": 16,
+  "pdfPages": 18,
+  "images": [
+    {
+      "id": "01-start",
+      "url": "https://mobilitydlab.com/oita-tourism/",
+      "sha256": "043eb4d036d8e75e4fc2e5e7c6732dfbf17221add8ff9407cf7f8f7973dd5c50"
+    },
+    {
+      "id": "02-overview",
+      "url": "https://mobilitydlab.com/oita-tourism/#overview",
+      "sha256": "6918f664666485702242af0d7e9282526eb33451a36deb875f6ca16de103e4c3"
+    },
+    {
+      "id": "03-yufu",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E7%94%B1%E5%B8%83%E5%B8%82#overview",
+      "sha256": "e9bffa61c803b9c062bf58e8aa079d82e111c99ffb1d3fb1cba841adf46c46ba"
+    },
+    {
+      "id": "04-access",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access",
+      "sha256": "3f881a3eeb26b8f579b10750c25a2b20ef7695b3a3886f1edc5fca1a6c6044c5"
+    },
+    {
+      "id": "05-conditions",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access",
+      "sha256": "7c761ceb7e298a0031c43e3ba7318844566f5ec9958723147ccd23afb74ba667"
+    },
+    {
+      "id": "06-roundtrip",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility&place=hiji-harmony&day=0&radius=1000&from=hiji-yokoku&at=09%3A00&back=18%3A00&stay=120&limit=90#access",
+      "sha256": "ed41b463304a01e9792e6f2c9d0d8a29d26e29768ef65805a813d94f2c94d61a"
+    },
+    {
+      "id": "07-local-map",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000#mobility",
+      "sha256": "9eee1ef828ad05b23feebc2e9c80941023cc48d123c34f5c6c160dcc2dea27d5"
+    },
+    {
+      "id": "08-nearby-stops",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&place=hiji-harmony&day=0&radius=1000#mobility",
+      "sha256": "9568a370733d7f7bd13c8a836b8fef7ab353c7a6091bfa6f7d8eebc6cd8f73f3"
+    },
+    {
+      "id": "09-modes",
+      "url": "https://mobilitydlab.com/oita-tourism/?compare=modes#compare",
+      "sha256": "e77140f5a4f24c410d92fbec2e36252ab49ca6bf1c98831727e9acd146b015d6"
+    },
+    {
+      "id": "10-lodging",
+      "url": "https://mobilitydlab.com/oita-tourism/?compare=lodging#compare",
+      "sha256": "1c1a260a20f3ddecceffe3e0361f457253ed818b0f0ab0687410293de24ba942"
+    },
+    {
+      "id": "11-monthly",
+      "url": "https://mobilitydlab.com/oita-tourism/?compare=monthly#compare",
+      "sha256": "1d215f9df9ac8103cc12e1391e1d4581b18731bc8305a96be5b0fb5136617199"
+    },
+    {
+      "id": "12-gw",
+      "url": "https://mobilitydlab.com/oita-tourism/?compare=gw#compare",
+      "sha256": "0b1917547ec488d5ad5aff32295e837565c914a3be72a645bc01ad956249d0b6"
+    },
+    {
+      "id": "13-issues",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E7%94%B1%E5%B8%83%E5%B8%82#issues",
+      "sha256": "8fbb52efbd7d2723cb7f988b432bd935f317340a6356cf2b6965c2b798d32034"
+    },
+    {
+      "id": "14-search",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#data",
+      "sha256": "b2130fb268d68a650b62ba1c2abf778c9567464ea3e48e185050e4575d0e7197"
+    },
+    {
+      "id": "15-source",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#data",
+      "sha256": "c45edbd4cafb93eda6e3594ac2331ecb2ec584d8e640e25a36b5b8827cd86a7f"
+    },
+    {
+      "id": "16-guide",
+      "url": "https://mobilitydlab.com/oita-tourism/?area=%E6%97%A5%E5%87%BA%E7%94%BA&role=facility#guide",
+      "sha256": "d57d85dffce1fa3f87ba88e6ed7209fe9572775ea877d437d47307e2ce678ee5"
+    }
+  ]
+}
