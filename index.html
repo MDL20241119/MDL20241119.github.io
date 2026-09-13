@@ -254,6 +254,19 @@
             font-weight: 600;
         }
 
+        .news-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.25rem 1.25rem;
+            margin-top: 0.25rem;
+        }
+
+        .news-actions a {
+            display: inline-flex;
+            align-items: center;
+            min-height: 44px;
+        }
+
         #vision, #services, #projects, #news, #contact {
             scroll-margin-top: 6rem;
         }
@@ -350,6 +363,17 @@
             <div class="news-layout">
                 <h2 id="news-heading" class="en news-heading">NEWS</h2>
                 <ul class="news-list" role="list">
+                    <li class="news-item">
+                        <time class="news-date" datetime="2026-09-13" aria-label="公開日 2026年9月13日">2026.09.13</time>
+                        <span class="news-label">使い方ガイド</span>
+                        <div class="news-title">
+                            <p>「大分観光・周遊データマップ」の使い方カタログを公開しました。実画面16枚で、できること・使う人・操作手順を紹介します。</p>
+                            <div class="news-actions">
+                                <a class="news-link" href="oita-tourism/catalog/">Webカタログを見る<span class="news-arrow" aria-hidden="true">→</span></a>
+                                <a class="news-link" href="oita-tourism/catalog/oita-tourism-catalog.pdf">PDFを見る（18ページ）<span class="news-arrow" aria-hidden="true">→</span></a>
+                            </div>
+                        </div>
+                    </li>
                     <li class="news-item">
                         <time class="news-date" datetime="2026-09-13" aria-label="公開日 2026年9月13日">2026.09.13</time>
                         <span class="news-label">観光 × 交通</span>
