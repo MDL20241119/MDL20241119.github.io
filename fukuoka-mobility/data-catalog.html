@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="ja"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#FFF1F5">
+<title>OPEN DATA｜福岡県交通空白を見つけて解消を考えるアクセシビリティマップ</title>
+<meta name="description" content="福岡の移動をデータから見る。出典、基準日、取得日、利用条件と未収録データを確認し、アクセシビリティと交通空白の理由を考える公開データカタログ。">
+<link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/atlas-design.css?v=9"><link rel="stylesheet" href="assets/neo-swiss.css?v=11"><link rel="stylesheet" href="catalog/catalog.css?v=2">
+<script defer src="assets/leaflet.js"></script><script type="module" src="catalog/app.mjs?v=2"></script><link rel="stylesheet" href="catalog/integration.css?v=1"></head>
+<body class="atlas page-data"><a class="skip" href="#main">データカタログへ移動</a>
+<header class="atlas-header"><a class="atlas-brand" href="index.html"><span class="atlas-monogram" aria-hidden="true">FUK</span><span>福岡 交通データ<small>FUKUOKA TRANSPORT ATLAS</small></span></a><nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html" aria-current="page"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a></nav><div class="atlas-header-actions"><button class="button" id="share-catalog">表示を共有 ↗</button></div></header>
+<main id="main" class="catalog-main">
+<section class="data-hero" aria-labelledby="page-title"><div><span class="data-kicker">FUKUOKA MOBILITY ATLAS / OPEN DATA</span><h1 id="page-title"><span>DATA</span><span>CATALOG.</span></h1><p>福岡の移動を、データから見る。</p></div><div class="hero-aside"><strong>何が分かり、<br>何がまだ分からないか。</strong><p>病院へ行けるか。買物をして帰れるか。<br>その判断のもとになるデータと、まだ足りない情報を確かめる場所です。</p><p>福岡県交通空白を見つけて解消を考える<br>アクセシビリティマップ</p></div></section>
+<dl class="data-overview" id="data-overview" aria-label="データ全体の収録状況"><div><dt>OPEN DATASETS</dt><dd>—</dd><small>読み込み中</small></div><div><dt>TRANSPORT DATASETS</dt><dd>—</dd></div><div><dt>DESTINATIONS</dt><dd>—</dd></div><div><dt>MUNICIPALITIES</dt><dd>—</dd></div><div><dt>LAST RETRIEVED</dt><dd class="date-value">—</dd><small>元データに記録された取得日</small></div></dl>
+<p class="overview-note" id="overview-note">件数は同梱データから集計します。データ基準日とMDL取得日は別々に表示します。</p>
+<div class="catalog-error" id="catalog-error" role="alert" hidden></div><p id="catalog-status" role="status">カタログを読み込んでいます…</p>
+<div class="data-tabs" role="tablist" aria-label="データの見方">
+<button id="tab-catalog" role="tab" aria-selected="true" aria-controls="panel-catalog" data-panel="catalog"><small>01 / CATALOG</small>データを探す</button>
+<button id="tab-data-map" role="tab" aria-selected="false" aria-controls="panel-data-map" data-panel="data-map" tabindex="-1"><small>02 / DATA MAP</small>地図で見る</button>
+<button id="tab-data-gap" role="tab" aria-selected="false" aria-controls="panel-data-gap" data-panel="data-gap" tabindex="-1"><small>03 / DATA GAP</small>足りないデータ</button>
+<button id="tab-history" role="tab" aria-selected="false" aria-controls="panel-history" data-panel="history" tabindex="-1"><small>04 / HISTORY</small>更新を確認する</button></div>
+<section id="panel-catalog" role="tabpanel" aria-labelledby="tab-catalog">
+<div class="data-section-heading"><div><h2>判断の根拠を、たどれるように。</h2><p>種類を選び、データ名を押すと、原典・使い方・制約が分かります。</p></div><a class="button" href="#quality" id="quality-link">評価基準を見る ↓</a></div>
+<div class="catalog-browser"><aside><div id="category-menu" class="category-menu" aria-label="データカテゴリ"></div></aside><div>
+<div class="catalog-filters"><label>名前・提供元で探す<input id="dataset-search" type="search" placeholder="例：福岡バス、病院、人口" autocomplete="off"></label><label>サイトでの利用状況<select id="status-filter"><option value="all">すべて</option><option value="USED">USED / 利用中</option><option value="PARTIAL">PARTIAL / 一部利用</option><option value="AVAILABLE">AVAILABLE / 利用可能</option><option value="PLANNED">PLANNED / 導入候補</option><option value="UNKNOWN">UNKNOWN / 要確認</option></select></label><label>データの性質<select id="class-filter"><option value="all">すべて</option><option value="OPEN">OPEN / オープンデータ</option><option value="VERIFIED">VERIFIED / 確認済み</option><option value="PARTNER">PARTNER / 連携提供</option><option value="UNCLASSIFIED">公開情報・未分類</option></select></label></div>
+<div class="result-bar"><strong id="result-count" role="status">—</strong><button class="button" id="reset-filters">絞り込みを解除</button></div>
+<div id="dataset-list"></div><div class="pager"><button class="button" id="previous-page">← 前へ</button><span id="page-count"></span><button class="button" id="next-page">次へ →</button></div></div></div>
+<details id="quality" class="method-details"><summary>DATA STATUS / 評価基準とデータの性質</summary><p>曖昧な総合点は付けません。以下の5項目を独立して記載し、裏付けのない点数・精度・最新性は「未確認」と表示します。</p><div class="criteria-list">
+<div><strong>FRESHNESS / 最新性</strong><p>基準日、配信の有効期間、取得日を別々に記録します。原典と現況の一致を確認した記録がなければ「現況との一致は未確認」です。</p></div>
+<div><strong>COVERAGE / 網羅性</strong><p>収録対象、地域、抜粋範囲を明記。レコードが存在しても、地域の全交通・全施設を収録したとは扱いません。</p></div>
+<div><strong>POSITION / 位置精度</strong><p>報告座標・概略位置・区域単位を区別。座標があっても、誤差の実測や入口確認がなければ精度を点数化しません。</p></div>
+<div><strong>LICENSE / 利用条件</strong><p>元ファイルにライセンスと条件へのリンクがある場合は「記載あり」。第三者の権利や別手続を含む包括的な適法性の保証ではありません。</p></div>
+<div><strong>ANALYSIS READY / 分析可能性</strong><p>具体的な用途に接続済みか、条件付きかを表示。単にダウンロードできることとは区別します。</p></div>
+<div><strong>OPEN / VERIFIED / PARTNER</strong><p>OPENはオープンな利用条件を記録したデータ。VERIFIEDはMDLによる内容・運行条件等の確認記録、PARTNERは提供合意があるものだけ。現在、その確認記録がない情報をいずれにも昇格させていません。</p></div></div>
+<p><b>USED</b>：分析・表示に利用中 / <b>PARTIAL</b>：一部利用 / <b>AVAILABLE</b>：利用可能・未実装 / <b>PLANNED</b>：今後の候補 / <b>UNKNOWN</b>：要確認</p><p>公共機関のWebで読める情報も、利用条件を確認できなければOPENとは表示しません。</p></details>
+</section>
+<section id="panel-data-map" role="tabpanel" aria-labelledby="tab-data-map" hidden>
+<div class="data-section-heading"><div><h2>データを重ねて、地域を見る。</h2><p>ここは収録データの地図です。色のない場所を「交通がない場所」とは判定しません。</p></div></div>
+<div class="data-map-controls"><label>表示する地域<select id="map-municipality"><option value="all">福岡県全体</option></select></label><button class="button" id="map-reset">地域全体を表示</button></div>
+<p id="map-dataset-filter" hidden></p><div class="data-map-layout"><div id="layer-list" class="layer-list" aria-label="表示レイヤーと出典"></div><div class="data-map-surface"><div id="data-map-canvas" role="region" aria-label="収録データの地図" tabindex="0"></div><div id="map-data-legend" class="map-data-legend"></div></div></div>
+<p id="map-status" class="map-data-note" role="status">地図を準備しています…</p><div id="layer-metadata" class="data-note" aria-live="polite"><strong>各レイヤーの「情報」を押す</strong>出典・基準日・取得日・件数を確認できます。</div>
+<details class="map-feature-list"><summary>地図に表示中の施設・送迎を一覧で確認する</summary><p>地図を操作しづらい場合は、こちらから情報を確認できます。</p><ul id="map-record-list"></ul><button class="button" id="map-record-more" hidden>続きを表示</button></details>
+<p class="map-data-note">未収録レイヤーは COMING と表示し、操作を無効にしています。背景：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">国土地理院 地理院タイル</a>。背景地図の記号は本サイトの分析入力ではありません。</p>
+</section>
+<section id="panel-data-gap" role="tabpanel" aria-labelledby="tab-data-gap" hidden>
+<div class="data-section-heading"><div><h2>交通空白と、データ空白を分ける。</h2><p>市町村ごとに「このサイトに何が収録されているか」を確認します。</p></div></div>
+<div class="data-note"><strong>× 未収録 ≠ 交通・施設が存在しない</strong>未収録の送迎や、未確認の運行条件があるかもしれません。まず事業者・施設・地域の方に確かめるための一覧です。</div>
+<div class="gap-controls"><label>確認する項目<select id="gap-view"><option value="categories">10のデータカテゴリ</option><option value="services">交通・送迎サービスのデータ</option></select></label><label>自治体で絞る<select id="gap-municipality"><option value="all">すべての市町村</option></select></label></div>
+<div class="gap-legend"><span><i class="gap-mark AVAILABLE">●</i> AVAILABLE / 収録確認</span><span><i class="gap-mark PARTIAL">△</i> PARTIAL / 一部収録</span><span><i class="gap-mark NOT_AVAILABLE">×</i> NOT AVAILABLE / 未収録</span><span><i class="gap-mark UNKNOWN">?</i> UNKNOWN / 未確認</span></div>
+<p class="map-data-note">記号を押すと根拠を確認できます。「一部収録」は全体の網羅を確認していないデータです。スマートフォンでは自治体を選ぶと縦の一覧でも確認できます。</p>
+<div id="gap-city-list" class="gap-city-list"></div><div class="gap-table-wrap" tabindex="0" role="region" aria-label="市町村別収録状況。横にスクロールできます"><table class="gap-table" id="gap-table"></table></div>
+<div id="gap-detail" class="gap-detail" hidden tabindex="-1"></div><p id="gap-method" class="map-data-note"></p>
+</section>
+<section id="panel-history" role="tabpanel" aria-labelledby="tab-history" hidden><div class="data-section-heading"><div><h2>いつのデータで考えているか。</h2><p>元ファイルに記録された取得日と、サイト機能の追加履歴です。</p></div></div><ol id="history-list" class="history-list"></ol><div class="data-note"><strong>比較できる記録だけを表示します。</strong>過去の同条件スナップショットを保持していないデータは、件数の増減を表示していません。取得履歴は、原典の内容更新日や現況確認日ではありません。</div><details class="method-details"><summary>再現性・元ファイルとの対応</summary><p>カタログは既存のGTFSカタログ、目的地、資源、人口・行政区域、分析JSONから生成しています。メタデータ・件数・ファイルの照合値を保存し、更新時に再生成・照合します。</p><p><a href="data/catalog.json" download>統合カタログJSONを保存 ↗</a> · <a href="NOTICE.md">出典と権利表記</a></p></details></section>
+<nav class="data-workflow" aria-label="データから地域での行動まで"><a href="data-catalog.html#catalog"><span>01 / OPEN DATA</span>根拠を知る →</a><a href="accessibility.html"><span>02 / ACCESSIBILITY</span>生活へアクセス →</a><a href="transport-gaps.html"><span>03 / MOBILITY GAP</span>課題を確かめる →</a><a href="transport-gaps.html#resources"><span>04 / RESOURCES</span>地域資源を探す →</a><a href="lab.html#design"><span>05 / SCENARIO</span>改善案を比べる →</a><a href="lab.html#report"><span>06 / ACTION</span>共有し、次の一歩へ ↗</a></nav>
+</main><footer class="catalog-footer"><span>FUKUOKA MOBILITY ATLAS / MDL</span><a href="usage.html">ご利用にあたって・データと権利</a><a href="../">モビリティデザインラボ</a><a href="mailto:info@mobilitydlab.com">本番開発・データ連携のご相談</a></footer>
+<dialog id="dataset-dialog" aria-labelledby="dataset-dialog-title"><div class="dialog-bar"><span>DATASET / PROVENANCE</span><button class="button" id="close-dialog">閉じる ×</button></div><div class="dialog-content" id="dialog-content"></div></dialog>
+<noscript><p>絞り込みと地図にはJavaScriptが必要です。<a href="data/catalog.json">統合データカタログ</a>と<a href="NOTICE.md">出典表記</a>は直接参照できます。</p></noscript></body></html>

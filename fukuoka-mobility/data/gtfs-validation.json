@@ -1,0 +1,492 @@
+[
+  {
+    "file": "402257_ukihabasugtfs__2aa2b7c6.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20201105",
+    "validTo": "20260930",
+    "current": true
+  },
+  {
+    "file": "401307_shieitosen2025__499f5b3d.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260101",
+    "validTo": "20271231",
+    "current": true
+  },
+  {
+    "file": "401005_shieitosengtfs__6a4cf8de.zip",
+    "errors": 11,
+    "warnings": 0,
+    "issues": [
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "calendar_duplicate",
+        "message": "同じ例外日が重複 平日（月～土）（小倉）|20210813"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "calendar_duplicate",
+        "message": "同じ例外日が重複 平日（月～土）（小倉）|20220103"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日001 / AI"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日001 / KO"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日001 / UM"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日002 / AI"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日002 / KO"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日002 / UM"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日003 / AI"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日003 / KO"
+      },
+      {
+        "level": "error",
+        "feed": "北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
+        "code": "stop_reference",
+        "message": "時刻表の便・停留所IDが不一致 AK土曜・日曜・祝日003 / UM"
+      }
+    ],
+    "validFrom": "20180901",
+    "validTo": "20220331",
+    "current": false
+  },
+  {
+    "file": "402036_0001000_00004__65f5ac3a.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260701",
+    "validTo": "20270630",
+    "current": true
+  },
+  {
+    "file": "402036_0001000_00004__894d891e.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20251001",
+    "validTo": "20260930",
+    "current": true
+  },
+  {
+    "file": "403831_rosen_jikoku_r071001__64acdcd5.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20251001",
+    "validTo": "20280331",
+    "current": true
+  },
+  {
+    "file": "amagikankobus-AmagiKankoBus__d7c81670.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "ashiyatown-AshiyaTownBus__2557c9bb.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260328",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "buzencity-BuzenCityBus__8cf4a4d5.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "chikugocity-HainuzukaStationAreaLoopBus__9e8f3859.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "chikujotown-ChikujoTownCommunityBus__0c039dc3.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "dazaifucity-DazaifuCityCommunityBus__bf91074d.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20250929",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "fukuoka-kawasakitown-KawasakiTownFureaiBus__f8911268.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20251001",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "fukuoka-kogacity-KogaBus__7daf11dc.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260601",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "fukuokacity-ImajukuMeinohamaLine__58bf16e9.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20250401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "fukutsucity-minibus__9229120c.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "hisayamatown-HisayamaIkoBus__84c87410.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260321",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kamacity-KamaCityBus__9b4014be.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kandatown-KandaTownCommunityBus__b7a9581f.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kasugacity-yayoi_kasuga__9fbcb219.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260414",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-tsunemi-kitaku__c8db06f7.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-okura__f0f9392e.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-oma-dobaru__6e82a537.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-koyanose-kusubashi-hoshigaoka__f28ca3e6.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260321",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-higashitani__8322c0c2.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-edamitsu__a3f656b0.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260806",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-hiraodai__3074f341.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260320",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kitakyushucity-tashiro-kawachi__6c883643.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "kuratetown-KurateTownSmileBusMiyawakaLine__ef3b99fa.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "miyamacity-MiyamaCityCommunityBus__bf5b6dd0.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260302",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "miyawakacity-MiyawakaMunakataLine__2f15eb49.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20250401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "mizumakitown-MizumakiTownBus__9950b5de.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "munakatacity-MunakataCityCommunityBus__fc23813c.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260406",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "munakatacity-MunakataCityFureaiBus__9f4602bd.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "munakatacity-MunakataCityOshimaFerry__da95747b.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20220401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "munakatacity-MiyawakaMunakataLine__24c12fd2.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "munakatacity-MunakataCityJinoshimaFerry__a0323fe1.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20220401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "nogatacity-NogataCityCommunityBus__6e697c44.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "ongatown-OngaTownCommunityBus__99e18e8d.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260314",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "shingutown-TownFerryShingu__97f8b07f.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260301",
+    "validTo": "20270228",
+    "current": true
+  },
+  {
+    "file": "shingutown-ShinguTownCommunityBus__2f56b623.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260301",
+    "validTo": "20270228",
+    "current": true
+  },
+  {
+    "file": "soedatown-soedamachibus__116c96e8.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "suetown-SueTownCommunityBus__82c162b6.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "tagawacity-TagawaCityCommunityBus__3ac0003b.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20251006",
+    "validTo": "20270930",
+    "current": true
+  },
+  {
+    "file": "taiyo-koutu-taiyo-koutu__a3d6ec53.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "yanagawacity-YanagawaCityCommunityBus__129c200d.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20251001",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "402052_27__4820885f.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20201001",
+    "validTo": "20270331",
+    "current": true
+  }
+]

@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="referrer" content="no-referrer">
+  <meta name="description" content="福岡 交通データの公開デモについて。利用時の確認事項、入力・共有データの扱い、出典とライセンスをご案内します。">
+  <title>ご利用にあたって｜福岡 交通データ 公開デモ</title>
+  <link rel="icon" href="assets/favicon.svg?v=10">
+  <link rel="stylesheet" href="assets/atlas-design.css?v=9">
+  <link rel="stylesheet" href="assets/usage.css">
+<link rel="stylesheet" href="assets/neo-swiss.css?v=10"><link rel="stylesheet" href="catalog/integration.css?v=1"></head>
+<body class="atlas page-usage">
+<a class="skip" href="#main">本文へ</a>
+<header class="atlas-header">
+  <a class="atlas-brand" href="index.html"><span class="atlas-monogram" aria-hidden="true">FUK</span><span>福岡 交通データ<small>FUKUOKA TRANSPORT ATLAS</small></span></a>
+  <nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a></nav>
+</header>
+<main id="main">
+  <div class="usage-heading"><span class="usage-kicker">PUBLIC DEMO GUIDE</span><h1>安心して試すために。</h1><p>このデモでわかることと、データを扱うときの約束。</p><small>対象：福岡 交通データ 公開デモ（/fukuoka-mobility/） · 更新：2026年9月14日</small></div>
+  <div class="usage-cards">
+    <a class="usage-card blue" href="#demo"><span>01 · 結果の見方</span><h2>検討の入口に使う</h2><p>実績・推計・仮定と、まだ確認できていないことを確かめます。</p><b>デモの範囲を見る →</b></a>
+    <a class="usage-card teal" href="#privacy"><span>02 · 入力と共有</span><h2>公開できる情報で試す</h2><p>氏名や個人の移動履歴、非公開の費用は、この公開デモに入力しないでください。</p><b>保存・共有の扱いを見る →</b></a>
+    <a class="usage-card purple" href="#sources"><span>03 · 出典と権利</span><h2>根拠も一緒に伝える</h2><p>データの提供元、時点、加工内容、利用条件を保って共有します。</p><b>出典と利用条件を見る →</b></a>
+  </div>
+
+  <section id="demo" class="usage-section">
+    <span class="section-number">01</span><h2>公開デモの位置付け</h2>
+    <p>モビリティデザインラボが公開資料をもとに作成した、交通計画を検討するための無料デモです。自治体、データ提供機関、交通事業者による公式サービス・認定・監修を示すものではありません。</p>
+    <ul>
+      <li><strong>乗降・OD・費用：</strong>収録値は公表資料の集計値です。事業者の非公開IC個票や、最新の全便実績を取得したものではありません。資料年・対象範囲・単位を併せて確認してください。</li>
+      <li><strong>需要予測・B/C：</strong>入力と仮定に基づく試算です。将来の利用者数、収益、施策効果を保証しません。公的な事業評価・採択資料に使う際は、対象事業の評価手法、費用範囲、二重計上、感度を別途検証してください。</li>
+      <li><strong>交通空白・アクセシビリティ：</strong>設定条件と収録データに基づく確認候補です。公式な交通空白地の認定、移動困難な住民数、実際の通行可能性を示しません。未収録の鉄道・タクシー等も確認してください。</li>
+      <li><strong>施設・送迎：</strong>営業・診療・予約・対象者・運行日は提供元への確認が必要です。学校や病院の送迎車を表示しても、一般利用や他目的での共用が許可されたことにはなりません。</li>
+    </ul>
+    <p class="usage-note">生活上の移動や運行の変更を決める前に、施設・事業者・自治体と現況を確認してください。表示や試算には誤りや遅れが生じる場合があります。誤りを見つけたときは、下の窓口へお知らせください。</p>
+  </section>
+
+  <section id="privacy" class="usage-section">
+    <span class="section-number">02</span><h2>入力・保存・共有の扱い</h2>
+    <p>読み込んだファイルと入力値の計算はブラウザー内で行います。このアプリには、それらをモビリティデザインラボのサーバーへアップロードする機能やアクセス解析タグはありません。ウェブページの取得や背景地図の表示には、以下の通信が発生します。</p>
+    <div class="usage-table-wrap"><table><caption>操作ごとに、どこへ情報が渡るか</caption><thead><tr><th scope="col">操作・機能</th><th scope="col">扱う情報と保存先</th></tr></thead><tbody>
+      <tr><th scope="row">サイトを開く</th><td>GitHub Pagesへページ・データのリクエストを送ります。GitHubはセキュリティ目的で訪問者のIPアドレスを記録します。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHubの説明</a> / <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">プライバシー声明</a></td></tr>
+      <tr><th scope="row">背景地図を表示</th><td>国土地理院（cyberjapandata.gsi.go.jp）に、表示範囲を表すタイル座標を送ります。接続元IP等も通信に伴います。<a href="https://www.gsi.go.jp/GSI/puraibasi-porisi.htm">国土地理院のプライバシーポリシー</a></td></tr>
+      <tr><th scope="row">入力・ファイル読込</th><td>この画面内のメモリーで処理します。自動アップロードは行いません。外部の出典リンクを開く場合は、そのリンク先への通信が発生します。</td></tr>
+      <tr><th scope="row">「自治体の条件を保存」</th><td>条件の名前・根拠・数値等を、同じブラウザーのlocalStorageに保存します。ページを閉じても残ります。削除するには、ブラウザー設定でmobilitydlab.comのサイトデータを消去してください。同じドメインの他の保存設定も消える場合があります。共用端末での保存には注意してください。</td></tr>
+      <tr><th scope="row">目的地の「条件を共有」</th><td>目的地の種類と自治体だけをURLに含めます。検索語、出発地、地区の声、調査記録は含めません。</td></tr>
+      <tr><th scope="row">交通空白の「条件を共有」</th><td>自治体・日付・距離・便数・選択した目的地等をURLの末尾に含めます。条件名、自由記述の根拠、追加した輸送資源は含めません。URLを受け取った人は条件を読めます。文字の変換は暗号化ではありません。</td></tr>
+      <tr><th scope="row">JSON・CSV・レポートを保存</th><td>保存内容に応じて、地点、地区の声、根拠、担当者名、読み込んだ集計データ、費用等がファイルに含まれます。端末への保存後、メールや共有フォルダーへ渡す範囲はご自身で確認してください。</td></tr>
+      <tr><th scope="row">メールで問い合わせ</th><td>メールアプリが開き、ご自身が送信した内容・アドレス等がMDLへ届きます。お問い合わせへの対応・連絡に使用します。初回の相談には、地域と課題の概要だけをお送りください。個人情報を含む実績ファイルや非公開資料は添付しないでください。</td></tr>
+    </tbody></table></div>
+    <p class="usage-note"><strong>「匿名」と名前を付けるだけでは安全になりません。</strong>氏名を削除しても、少人数のOD、日時・自宅・通院先の組み合わせから個人がわかる場合があります。個人情報を含む個票は取り込まず、公開可能な集計値・架空データで試してください。本デモには法令上の匿名加工情報を作成・認定する機能はありません。<a href="https://www.ppc.go.jp/personalinfo/legal/guidelines_anonymous/">個人情報保護委員会のガイドライン</a></p>
+    <p>共有URLは公開先・受取人・ブラウザー履歴等に残る場合があります。共有対象を確認してください。</p>
+  </section>
+
+  <section id="sources" class="usage-section">
+    <span class="section-number">03</span><h2>出典・ライセンス・再利用</h2>
+    <p>提供元の資料から必要な項目を抽出し、形式変換・集計・地図表示を行っています。以下のライセンスは、それぞれの対象データに適用されます。提供元による本デモの推奨や保証を意味しません。</p>
+    <div class="usage-table-wrap"><table><caption>主なデータと利用条件（2026年9月14日確認）</caption><thead><tr><th scope="col">対象</th><th scope="col">出典・時点・加工</th><th scope="col">利用条件</th></tr></thead><tbody>
+      <tr><th scope="row">公開時刻表</th><td>各自治体・運行事業者／GTFSデータリポジトリ・BODIK。2026年9月14日取得。暦・例外日・通常乗車条件を適用。<a href="data/gtfs/catalog.json">個別出典・有効期間・SHA-256</a></td><td>各ファイルの原典ライセンス。CC BY 4.0ほか、個別表記を保持。</td></tr>
+      <tr><th scope="row">病院・公共施設</th><td><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html">厚生労働省 医療情報ネット（2026年6月1日）</a>と、福岡県内自治体の公開施設CSVを整理。<a href="access/destinations.json">施設別の出典・基準日</a></td><td>医療情報ネット：PDL1.0。自治体CSV：各原典のCC BY等の条件。</td></tr>
+      <tr><th scope="row">行政界・人口・鉄道・バス停位置</th><td>国土交通省・国土数値情報。行政界2026年、人口2020年基準（R6国政局調整値）、鉄道2025年12月31日、バス停2022年度。<a href="gaps/data/sources.json">行政界・人口の出典と加工</a>／<a href="data/rail.json">鉄道位置</a>／<a href="data/bus-stop-inventory.geojson">バス停位置</a></td><td><a href="https://nlftp.mlit.go.jp/ksj/other/agreement_01.html">CC BY 4.0・国土数値情報利用規約</a>。位置資料は現行の運行・本数を証明しません。</td></tr>
+      <tr><th scope="row">買物・送迎</th><td>各店舗・運営者の公式案内から所在地・利用条件を整理。<a href="access/shopping.json">買物先の個別出典</a>／<a href="gaps/resources.json">送迎の個別出典</a></td><td>事実情報を抜粋。説明文・写真・商標等の包括的な再利用許諾は付与しません。</td></tr>
+      <tr><th scope="row">乗車実績・OD・財務</th><td>福岡市交通局の駅別乗車人員・2024年度決算、2020年国勢調査の通勤通学OD、北部九州圏PT。<a href="data/analysis.json">数値・定義・出典</a></td><td>各公表資料の利用条件。単位・観測期間を保って数値を整理。資料全体の再利用許諾とは異なります。</td></tr>
+      <tr><th scope="row">背景地図</th><td><a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院 地理院タイル</a></td><td>国土地理院コンテンツ利用規約・個別の利用条件。</td></tr>
+      <tr><th scope="row">地図表示ライブラリー</th><td>Leaflet 1.9.4。著作権表示・免責文を同梱。</td><td><a href="assets/leaflet-LICENSE.txt">BSD 2-Clause License</a></td></tr>
+    </tbody></table></div>
+    <p class="usage-note"><strong>行政界の利用手続について：</strong>N03の提供ページには二次利用時に国土地理院への申請等が必要な場合がある旨が記載されています。本サイトの行政界の簡略化・配布形態について、手続の要否は未確認です。CC BY表示だけで申請不要とは判断していません。<a href="https://www.gsi.go.jp/LAW/2930-qa.html">国土地理院の利用手続Q&amp;A</a></p>
+    <h3>デモを使うことと、コードを再配布すること</h3>
+    <p>このデモは無料で利用できます。公開リポジトリに置かれていることだけで、全ファイルがMIT等のオープンソースライセンスになるわけではありません。MDL独自部分の再利用ライセンスは現在未設定です。今後のライセンス設定でも、第三者のデータ・ライブラリー・商標・写真の条件は個別に扱います。詳細は<a href="NOTICE.md">権利表記</a>をご覧ください。</p>
+  </section>
+
+  <section id="contact" class="usage-contact">
+    <div><span class="usage-kicker">CONTACT</span><h2>訂正・掲載内容・本番開発のご相談</h2><p>運営：モビリティデザインラボ<br>該当ページと確認したい点をお知らせください。個人情報や非公開の実績資料の添付は不要です。</p></div>
+    <a class="button primary" href="mailto:info@mobilitydlab.com">info@mobilitydlab.com ↗</a>
+  </section>
+  <p class="usage-back"><a href="index.html">← 公開デモのホームへ</a></p>
+</main>
+<footer>福岡 交通データ · 公開デモ <a class="mdl-home-link" href="../">モビリティデザインラボ公式サイト</a></footer>
+</body></html>
