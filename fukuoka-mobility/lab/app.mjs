@@ -16,7 +16,7 @@ let state={schema:'fukuoka-planning-project/1',engine:ENGINE_VERSION,name:'福�
 let callDraft=[];
 let exampleFeed=null,exampleMap=null,exampleMarkers=null,exampleAdded=false;
 let catalog=[],analysis=null,changed=[],reach=null,map,markers,shapeLayer,odLayer,mapMode='supply',loadedCSV=null,cashflowImport=null,rideResult=null,odResult=null,forecastResult=null,econResult=null,latestRevision=0,pending=new Map(),requestId=0;
-let worker=new Worker(new URL('./worker.mjs',import.meta.url),{type:'module'});
+let worker=new Worker(new URL('./worker.mjs?v=20260915-2',import.meta.url),{type:'module'});
 worker.onmessage=({data})=>{const p=pending.get(data.id);if(!p)return;clearTimeout(p.timer);pending.delete(data.id);data.error?p.reject(Error(data.error)):p.resolve(data.result)};
 worker.onerror=()=>{for(const p of pending.values()){clearTimeout(p.timer);p.reject(Error('分析処理を完了できませんでした。データ量を減らして再読み込みしてください'))}pending.clear()};
 function request(type,payload){return new Promise((resolve,reject)=>{const id=++requestId,timer=setTimeout(()=>{pending.delete(id);reject(Error('分析に時間がかかっています。データを分けて再実行してください'))},120000);pending.set(id,{resolve,reject,timer});worker.postMessage({id,type,payload})})}
@@ -184,6 +184,6 @@ async function start(){
   on('#cashflow-file','change',async e=>{const file=e.target.files[0];if(!file)return;cashflowImport=parseCSV(await file.text());$('#calculate-cashflow').disabled=!cashflowImport.length;$('#cashflow-state').textContent=file.name+' · '+cashflowImport.length+'年分。必須数値は計算時に検査します。'});on('#calculate-cashflow','click',()=>{if(!cashflowImport?.length)throw Error('年別CSVを選んでください');calculateEconomics(cashflowImport)});
   on('#decision-form','submit',e=>{e.preventDefault();state.decision=Object.fromEntries(new FormData(e.target));message('判断条件をこの計画に記録しました。計画保存でファイルとして残せます。')});
   on('#save-project','click',saveProject);on('#save-project-2','click',saveProject);on('#export-report','click',exportReport);on('#export-results','click',exportResults);on('#export-gtfs','click',exportGTFS);
-  const response=await fetch('data/gtfs/catalog.json');if(!response.ok)throw Error('公開データ一覧を読み込めません');catalog=(await response.json()).filter(c=>c.analysisReady&&c.current);$('#seed-select').innerHTML=catalog.map(c=>opt(c.file,c.name)).join('');$('#seed-select').value=catalog.find(c=>c.file.includes('TagawaCityCommunityBus'))?.file??catalog[0].file;await loadSeed(true);exampleFeed=structuredClone(state.feeds[0]);renderExample();calculateForecast();message('田川市コミュニティバスの公開時刻表で操作できます。別の地域は「データを用意」から選べます。');
+  const response=await fetch('data/gtfs/catalog.json?v=20260915-2');if(!response.ok)throw Error('公開データ一覧を読み込めません');catalog=(await response.json()).filter(c=>c.analysisReady&&c.current);$('#seed-select').innerHTML=catalog.map(c=>opt(c.file,c.name)).join('');$('#seed-select').value=catalog.find(c=>c.file.includes('TagawaCityCommunityBus'))?.file??catalog[0].file;await loadSeed(true);exampleFeed=structuredClone(state.feeds[0]);renderExample();calculateForecast();message('田川市コミュニティバスの公開時刻表で操作できます。別の地域は「データを用意」から選べます。');
 }
 guarded(start);

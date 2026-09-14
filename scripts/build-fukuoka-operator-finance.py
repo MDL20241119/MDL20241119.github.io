@@ -73,7 +73,9 @@ for x in facts['mlit']:
         sourcePage='営業損益 '+','.join(x['financeCells'].values())+'／輸送人員 '+x['passengersCell']))
 
 # Group results must be one record, even when several listed affiliates are selected.
-bus_keys=['西日本鉄道','西鉄バス北九州','西鉄バス久留米','西鉄バス大牟田','西鉄バス筑豊','西鉄バス二日市','西鉄バス宗像','西鉄バス佐賀']
+# The highway GTFS also uses the group label 西鉄バス. Relate that label to
+# the single group report without allocating the report to an individual company.
+bus_keys=['西日本鉄道','西鉄バス','西鉄バス北九州','西鉄バス久留米','西鉄バス大牟田','西鉄バス筑豊','西鉄バス二日市','西鉄バス宗像','西鉄バス佐賀']
 for x in facts['recent']:
     bus=x['kind']=='nishitetsu-bus';nishi=x['kind'].startswith('nishitetsu')
     name='西鉄グループ '+('バス事業' if bus else '鉄道事業') if nishi else 'JR九州 単体・鉄道事業'

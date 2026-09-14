@@ -20,7 +20,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：うきは市／うきはバスGTFSデータ",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -44,7 +44,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：福岡市／福岡市営渡船　運行情報データ（GTFS形式）",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -68,7 +68,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／北九州市　市営渡船（若戸航路・小倉航路）GTFSデータ",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "invalid"
   },
   {
@@ -92,7 +92,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：久留米市／生活支援交通「よりみちバス」",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -116,7 +116,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：久留米市／生活支援交通「よりみちバス」",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -140,7 +140,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：岡垣町／岡垣町コミュニティバス　路線図・時刻表（令和７年１０月１日改定）",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -165,7 +165,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：株式会社甘木観光バス／株式会社甘木観光バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -190,7 +190,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：芦屋町／芦屋町コミュニティバス 芦屋タウンバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -215,7 +215,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：豊前市／豊前市バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -240,7 +240,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：筑後市／羽犬塚駅周辺循環バス（はねバス）",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -265,7 +265,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：築上町／築上町コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -290,7 +290,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：太宰府市／太宰府市コミュニティバスまほろば号",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -315,7 +315,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：川崎町／川崎町ふれあいバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -340,7 +340,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：古賀市／コガバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -365,7 +365,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：福岡市／今宿姪浜線乗合バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -390,7 +390,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：福津市／ふくつミニバス・ふくつ乗合タクシー",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -415,7 +415,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：久山町／久山町コミュニティバス イコバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -440,7 +440,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：嘉麻市／嘉麻市バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -465,7 +465,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：苅田町／苅田町コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -490,7 +490,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：春日市／春日市コミュニティバスやよい",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -515,7 +515,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／門司区恒見・喜多久地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -540,7 +540,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／八幡東区大蔵地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -565,7 +565,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／小倉南区合馬・道原地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -590,7 +590,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／八幡西区木屋瀬・楠橋・星ヶ丘地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -615,7 +615,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／小倉南区東谷地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -640,7 +640,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／八幡東区枝光地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -665,7 +665,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／小倉南区平尾台地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -690,7 +690,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：北九州市／八幡東区田代・河内地区",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -715,7 +715,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：鞍手町／すまいるバスみやわか線",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -740,7 +740,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：みやま市／みやま市コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -765,7 +765,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宮若市／宮田・百合野線",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -790,7 +790,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：水巻町／町内巡回バス・通勤通学バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -815,7 +815,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宗像市／宗像市コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -840,7 +840,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宗像市／宗像市ふれあいバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -865,7 +865,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宗像市／宗像市営渡船大島航路",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -890,7 +890,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宗像市／宮若・宗像線",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -915,7 +915,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：宗像市／宗像市営渡船地島航路",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -940,7 +940,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：直方市／直方市コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -965,7 +965,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：遠賀町／遠賀町コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -990,7 +990,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：新宮町／町営渡船しんぐう",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1015,7 +1015,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：新宮町／新宮町コミュニティバス マリンクス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1040,7 +1040,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：添田町／添田町バス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1065,7 +1065,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：須恵町／須恵町コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1090,7 +1090,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：田川市／田川市コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1115,7 +1115,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：太陽交通株式会社／太陽交通株式会社",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1140,7 +1140,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：柳川市／柳川市コミュニティバス",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1164,7 +1164,7 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：飯塚市／コミュニティバス（宮若・飯塚線）",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
     "dataStatus": "current"
   },
   {
@@ -1954,7 +1954,215 @@
     "retrieved": "2026-09-14",
     "licenseCheckedAt": "2026-09-14",
     "attribution": "出典：佐賀県・昭和自動車・祐徳自動車／佐賀県GTFS・福岡乗入路線（昭和バス・祐徳自動車）",
-    "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。福岡県の行政界内に停留所を持つ22路線を抽出。対象路線の県外停留所・全停車時刻・線形を維持。配布ZIPは原典の全路線を保存。",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県の行政界内に停留所を持つ22路線を抽出。対象路線の県外停留所・全停車時刻・線形を維持。配布ZIPは原典の全路線を保存。",
+    "dataStatus": "current"
+  },
+  {
+    "name": "福岡市地下鉄・全3路線（公式Excel加工／9月14・15・19・20日の通常ダイヤ比較）",
+    "file": "fukuoka-subway__b9f8e012.zip",
+    "source": "https://subway.city.fukuoka.lg.jp/subway/about/material.php",
+    "catalog": "https://subway.city.fukuoka.lg.jp/subway/about/material.php",
+    "provider": "福岡市交通局",
+    "license": "福岡市オープンデータ利用規約（CC BY 2.1 JP）・国土数値情報CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+    "downloaded": true,
+    "bytes": 267767,
+    "sha256": "b9f8e012e3eb76c5a176b6fc95f62b66bd11820c65e6daffb09d7cb5f7ac2f5c",
+    "analysisSampleDates": [
+      "20260914",
+      "20260915",
+      "20260919",
+      "20260920"
+    ],
+    "validityNote": "calendar_datesは通常ダイヤを比較するために選んだ分析日です。事業者公表の有効期限ではありません。期間外は運行なしではなく未判定としてください。",
+    "officialExpiryDate": null,
+    "analysisScope": "分析日を9月14・15・19・20日に限定した加工データ。公式の有効期限ではありません。姪浜以西のJR筑肥線、臨時変更、改札・設備・運賃は未収録。",
+    "derived": true,
+    "attribution": "出典：福岡市交通局／福岡市地下鉄・全3路線（公式Excel加工／9月14・15・19・20日の通常ダイヤ比較）",
+    "id": "b9f8e012",
+    "validFrom": "20260914",
+    "validTo": "20260920",
+    "current": true,
+    "analysisReady": true,
+    "retrieved": "2026-09-14",
+    "licenseCheckedAt": "2026-09-14",
+    "processing": "公式公開ExcelをGTFSに加工。分析対象日を限定。公式の有効期限ではない。原典の運行暦・例外日・乗降制限を適用。分析日を9月14・15・19・20日に限定した加工データ。公式の有効期限ではありません。姪浜以西のJR筑肥線、臨時変更、改札・設備・運賃は未収録。",
+    "dataStatus": "current"
+  },
+  {
+    "name": "高速バス（大分交通幹事）GTFSデータ・福岡接続路線",
+    "file": "gtfs10_highway02oitakotsu-fukuoka__9ed291ed.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/3ece7365-9739-4c5d-92a8-f008922325ff/download/gtfs10_highway02oitakotsu.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "provider": "大分県・高速バス（大分交通幹事）GTFSデータ",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "downloaded": true,
+    "bytes": 61128,
+    "sha256": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
+    "analysisRouteIds": [
+      "8000",
+      "8001",
+      "8010",
+      "8011",
+      "8020",
+      "8021",
+      "8100",
+      "8101",
+      "8110",
+      "8111",
+      "8200",
+      "8201",
+      "8210",
+      "8211",
+      "8220",
+      "8221",
+      "8320",
+      "8321",
+      "8420",
+      "8421"
+    ],
+    "fukuokaStopIds": [
+      "8006 1",
+      "8006 2",
+      "8007 1",
+      "8007 2",
+      "8008 1",
+      "8008 2",
+      "8107 1",
+      "8107 2"
+    ],
+    "analysisScope": "福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+    "id": "9ed291ed",
+    "validFrom": "20260901",
+    "validTo": "20270831",
+    "current": true,
+    "analysisReady": true,
+    "retrieved": "2026-09-14",
+    "licenseCheckedAt": "2026-09-14",
+    "attribution": "出典：大分県・高速バス（大分交通幹事）GTFSデータ／高速バス（大分交通幹事）GTFSデータ・福岡接続路線",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+    "dataStatus": "current"
+  },
+  {
+    "name": "高速バス（亀の井バス幹事）GTFSデータ・福岡接続路線",
+    "file": "gtfs10_highway03kamenoi-fukuoka__c7c02367.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/be2e8be4-44d1-4a85-aea6-78c8147f41c5/download/gtfs10_highway03kamenoi.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "provider": "大分県・高速バス（亀の井バス幹事）GTFSデータ",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "downloaded": true,
+    "bytes": 61687,
+    "sha256": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
+    "analysisRouteIds": [
+      "80000",
+      "80001",
+      "80010",
+      "80020",
+      "80021",
+      "80022",
+      "80023",
+      "81000",
+      "81001",
+      "81011",
+      "81020",
+      "81021",
+      "81022",
+      "81023",
+      "82020",
+      "82021",
+      "82022",
+      "82023"
+    ],
+    "fukuokaStopIds": [
+      "800006 1",
+      "800006 2",
+      "800007 1",
+      "800007 2",
+      "800008 1",
+      "800008 2",
+      "800016 1",
+      "800016 2"
+    ],
+    "analysisScope": "福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+    "id": "c7c02367",
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true,
+    "analysisReady": true,
+    "retrieved": "2026-09-14",
+    "licenseCheckedAt": "2026-09-14",
+    "attribution": "出典：大分県・高速バス（亀の井バス幹事）GTFSデータ／高速バス（亀の井バス幹事）GTFSデータ・福岡接続路線",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+    "dataStatus": "current"
+  },
+  {
+    "name": "高速バス（日田バス幹事）GTFSデータ・福岡接続路線",
+    "file": "gtfs10_highway04hita-fukuoka__a5f3cbf7.zip",
+    "source": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/17806124-f3bd-4146-b276-675133184953/download/gtfs10_highway04hita.zip",
+    "catalog": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+    "provider": "大分県・高速バス（日田バス幹事）GTFSデータ",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+    "downloaded": true,
+    "bytes": 161140,
+    "sha256": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
+    "analysisRouteIds": [
+      "124-down",
+      "125-up",
+      "126-down",
+      "127-up",
+      "128-down",
+      "129-up",
+      "131-down",
+      "232-up",
+      "233-down",
+      "24-down",
+      "25-up",
+      "26-down",
+      "27-up",
+      "28-down",
+      "29-up",
+      "30-down",
+      "32-up",
+      "33-down"
+    ],
+    "fukuokaStopIds": [
+      "1108 1",
+      "1108 2",
+      "1123 1",
+      "1123 2",
+      "1207 1",
+      "1207 2",
+      "1208 1",
+      "1208 2",
+      "1209 1",
+      "1209 2",
+      "1276 1",
+      "1276 2",
+      "1277 1",
+      "1277 2",
+      "1278 1",
+      "1278 2",
+      "1279 1",
+      "1279 2",
+      "1280 2",
+      "1281 1",
+      "1281 2",
+      "1282 1",
+      "1282 2"
+    ],
+    "analysisScope": "福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+    "id": "a5f3cbf7",
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true,
+    "analysisReady": true,
+    "retrieved": "2026-09-14",
+    "licenseCheckedAt": "2026-09-14",
+    "attribution": "出典：大分県・高速バス（日田バス幹事）GTFSデータ／高速バス（日田バス幹事）GTFSデータ・福岡接続路線",
+    "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
     "dataStatus": "current"
   }
 ]

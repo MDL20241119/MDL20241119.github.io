@@ -275,7 +275,7 @@ dataset('operator-coverage','県内交通事業者・公表主体の反映状況
     checkedAt=operators['checkedAt'],dataAsOf=None,dataClass='VERIFIED',status='PARTIAL',analysisReady='PARTIAL',format='JSON・画面からCSV保存',
     records=len(operators['operators']),recordUnit='事業者・公表主体（県内総数ではない）',coverage=operators['scope'],
     processing='原典の事業者名とGTFS agencyを集約。位置を索引で参照し、時刻表・実績・費用・リアルタイムの反映状況を明示。',
-    limitations=[operators['agencyNote'],'県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州の公表実績・収支は反映。時刻表・往復計算・リアルタイムは未反映。'],
+    limitations=[operators['agencyNote'],'県内全事業者の網羅は未完了。西鉄バスの高速便・福岡市地下鉄を計算に追加。西鉄バス・西鉄電車・JR九州・JR九州バスの全便時刻表・リアルタイムは未接続。'],
     usedFor=[usage('事業者別の位置と反映・未反映','operators.html')],localFiles=['data/operators.json'],scope='県内全事業者のデータ反映は未完了')
 
 station_stats=read('data/station-ridership.json')
@@ -316,7 +316,7 @@ dataset('census-elderly','2020年国勢調査・高齢者人口と世帯','popul
     valueType='2020年国勢調査実績・世帯数と人数は区別',scope='福岡県60市町村の500m・1000m区域')
 
 missing = [
-    ('rail-timetable','鉄道の全便時刻表','transport','鉄道の全便データを未取得。西鉄電車・JR九州等の駅位置や実績を時刻表の代用にしません。'),
+    ('rail-timetable','鉄道の全便時刻表','transport','福岡市地下鉄は公式Excelから限定日の通常ダイヤを計算に追加。西鉄電車・JR九州の全便は未取得。駅位置や実績を時刻表の代用にしません。'),
     ('taxi','タクシーの供給・予約可能台数','transport','予約可能台数・現時点の供給状況は未収録。'),
     ('road-conditions','歩道段差・道路の現況確認','terrain','OSM道路を反映。横断の可否・段差・幅員・現在の通行可否の完全性は未確認です。'),
     ('elevation','標高・傾斜','terrain','実際の坂道・勾配を計算には反映していません。'),

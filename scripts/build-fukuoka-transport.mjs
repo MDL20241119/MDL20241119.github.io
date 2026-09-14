@@ -32,7 +32,7 @@ for(const item of manifest.filter(m=>m.downloaded)){
   reviews.push({file:item.file,errors:q.errors,warnings:q.warnings,issues:q.issues,validFrom,validTo,current});
   // Keep expired source snapshots inspectable without reporting them as today's zero service.
   const m={...item,id,validFrom,validTo,current,analysisReady,retrieved:'2026-09-14',licenseCheckedAt:'2026-09-14',attribution:`出典：${item.provider}／${item.name}`,
-   processing:'公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。'+(item.analysisScope??''),dataStatus:!analysisReady?'invalid':current?'current':'expired'};
+   processing:(item.derived?'公式公開ExcelをGTFSに加工。分析対象日を限定。公式の有効期限ではない。':'公開GTFS ZIPを保存。')+'原典の運行暦・例外日・乗降制限を適用。'+(item.analysisScope??''),dataStatus:!analysisReady?'invalid':current?'current':'expired'};
   await fs.mkdir(new URL('data/gtfs/',root),{recursive:true});await fs.writeFile(new URL('data/gtfs/'+item.file,root),buffer);
   catalog.push(m);
   const fi=feeds.length,ns=dates.map(d=>buildNetwork([f],d,{includeOvernight:false}));
@@ -48,7 +48,7 @@ for(const item of manifest.filter(m=>m.downloaded)){
   const shapeGroups=new Map();for(const s of t.shapes??[]){if(!shapeGroups.has(s.shape_id))shapeGroups.set(s.shape_id,[]);shapeGroups.get(s.shape_id).push(s)}
   for(const [sid,points] of shapeGroups){points.sort((a,b)=>Number(a.shape_pt_sequence)-Number(b.shape_pt_sequence));const related=[...new Set((t.trips??[]).filter(tr=>tr.shape_id===sid).map(tr=>routeIndex.get(tr.route_id)))];
    shapes.push({id:sid,feedIndex:fi,routeIndices:related,trips:ns.map((n,i)=>inValidity[i]?n.trips.filter(tr=>tr.shape===sid).length:0),coordinates:simplifyLine(points.map(p=>[Number(p.shape_pt_lat),Number(p.shape_pt_lon)]))});}
-  feeds.push({id,name:item.name,sourceUrl:item.catalog,downloadUrl:item.source,license:item.license,licenseUrl:item.licenseUrl,validFrom,validTo,scheduledTrips:supplies.map((v,i)=>inValidity[i]?v.trips:null),sha256:item.sha256,stopCount:stopIndex.size,shapeCount:shapeGroups.size,shapeStatus:shapeGroups.size?'GTFS shapesあり':'線形未収録',dataStatus:!analysisReady?'invalid':current?'current':'expired'});
+  feeds.push({id,name:item.name,sourceUrl:item.catalog,downloadUrl:item.source,license:item.license,licenseUrl:item.licenseUrl,validFrom,validTo,scheduledTrips:supplies.map((v,i)=>inValidity[i]?v.trips:null),sha256:item.sha256,stopCount:stopIndex.size,shapeCount:shapeGroups.size,analysisSampleDates:item.analysisSampleDates??null,validityNote:item.validityNote??null,shapeStatus:shapeGroups.size?'GTFS shapesあり':'線形未収録',dataStatus:!analysisReady?'invalid':current?'current':'expired'});
   ns.forEach((n,i)=>inValidity[i]&&networks[i].push({n,stopIndex}));
   console.log(item.file,stopIndex.size,supplies.map(x=>x.trips).join('/'),current?'有効':'期限外',q.errors+' errors');
  }catch(e){reviews.push({file:item.file,error:String(e)});console.error(item.file,String(e));}
@@ -61,6 +61,6 @@ for(let d=0;d<dates.length;d++)for(let oi=0;oi<origins.length;oi++){
  for(const {n,stopIndex} of networks[d])for(const trip of n.trips){let boarded=false;for(const call of trip.calls){const i=stopIndex.get(call.stop_id);if(i===undefined)continue;if(allowed.has(i)&&call.pickup&&call.departure>=32400&&call.departure<=36000)boarded=true;if(boarded&&call.dropoff&&call.arrival<=36000)stops[i].reach[d]|=1<<oi;}}
  origin.reachableNames[d]=new Set(stops.filter(s=>s.reach[d]&(1<<oi)).map(s=>s.name)).size;
 }
-const result={meta:{version:1,analysisDate:'2026-09-14',retrievedAt:'2026-09-14',dates,dateLabels:['2026年9月14日（月）','2026年9月19日（土）','2026年9月20日（日）'],scope:'福岡県の公開GTFSと、佐賀県配布の福岡接続22路線（県外区間を含む）。県内全交通の網羅ではありません。西鉄バス・西鉄電車・JR九州等の全時刻表は未収録。',realtime:false,scheduleOnly:true,coordinateOrder:'[latitude, longitude]',attribution:'各自治体・運行事業者／BODIK、GTFSデータリポジトリ、佐賀県GTFS',departureDefinition:'当日の運行暦・例外日に従うGTFSの通常乗車可能な出発の数。乗客数ではありません。',zeroDefinition:'有効期間内の収録停留所で出発がない場合だけ0。期限外はnull。未収録の交通を0とはしません。',scheduledTripTotals:dates.map((_,i)=>feeds.reduce((n,f)=>n+(f.scheduledTrips[i]??0),0)),currentFeeds:feeds.filter(f=>f.dataStatus==='current').length},feeds,routes,stops,shapes,origins};
+const result={meta:{version:1,analysisDate:'2026-09-14',retrievedAt:'2026-09-14',dates,dateLabels:['2026年9月14日（月）','2026年9月19日（土）','2026年9月20日（日）'],scope:'福岡県の公開GTFSと、佐賀・大分県配布の福岡接続路線、福岡市地下鉄の限定日データ（県外区間を含む）。県内全交通の網羅ではありません。西鉄バス・西鉄電車・JR九州等の全時刻表は未収録。',realtime:false,scheduleOnly:true,coordinateOrder:'[latitude, longitude]',attribution:'各自治体・運行事業者／BODIK、GTFSデータリポジトリ、佐賀県GTFS',departureDefinition:'当日の運行暦・例外日に従うGTFSの通常乗車可能な出発の数。乗客数ではありません。',zeroDefinition:'有効期間内の収録停留所で出発がない場合だけ0。期限外はnull。未収録の交通を0とはしません。',scheduledTripTotals:dates.map((_,i)=>feeds.reduce((n,f)=>n+(f.scheduledTrips[i]??0),0)),currentFeeds:feeds.filter(f=>f.dataStatus==='current').length},feeds,routes,stops,shapes,origins};
 await fs.writeFile(new URL('data/gtfs/catalog.json',root),JSON.stringify(catalog,null,2));await fs.writeFile(new URL('data/map-data.json',root),JSON.stringify(result));await fs.writeFile(new URL('data/gtfs-validation.json',root),JSON.stringify(reviews,null,2));
 console.log({feeds:feeds.length,current:result.meta.currentFeeds,stops:stops.length,shapes:shapes.length,totals:result.meta.scheduledTripTotals});

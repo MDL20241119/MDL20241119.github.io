@@ -6,9 +6,9 @@
   "agencyNote": "自治体・地域交通名は原典の公表主体で表示。委託運行会社を推定して割り当てていません。西鉄の委託路線を含む自治体GTFSがあっても、西鉄全線の時刻表反映には数えません。",
   "missingCategories": [
     {
-      "name": "西鉄バス・西鉄電車・JR九州",
-      "status": "公表実績・収支を追加。時刻表・往復計算・遅延情報は未反映",
-      "reason": "公開検索画面の閲覧と分析用データの接続は別です。全便の時刻表ファイル、再利用・配信条件、有効期間を確認できていないため、経路・交通空白判定には使いません。停留所別・時間帯別ODと県内路線別原価も未取得。"
+      "name": "西鉄バス・西鉄電車・JR九州・JR九州バス",
+      "status": "公式時刻表・路線案内を追加。全便の往復計算・遅延情報は未接続",
+      "reason": "timetables.html に駅・停留所別の公式検索、PDF、県外の接続先を収録。公式リンクと計算用の全停車時刻データは別です。全便ファイルと再利用条件が未確認の交通を、0便や交通空白として確定しません。"
     },
     {
       "name": "北九州市営バスの時刻表",
@@ -48,7 +48,8 @@
         "op-35cf1f0fa500",
         "op-d165f9606ee3",
         "op-498d4be7871c",
-        "op-da9ea48ec031"
+        "op-da9ea48ec031",
+        "op-6cde3b015be9"
       ]
     },
     {
@@ -63,6 +64,13 @@
       "name": "JR九州",
       "operatorIds": [
         "op-a9d2d56b3a04"
+      ]
+    },
+    {
+      "id": "jr-kyushu-bus",
+      "name": "JR九州バス",
+      "operatorIds": [
+        "op-d4b115605fbf"
       ]
     }
   ],
@@ -165,8 +173,8 @@
       "realtime": null,
       "ridership": null,
       "costs": null,
-      "officialUrl": null,
-      "officialTimetableUrl": null,
+      "officialUrl": "https://www.jrkbus.co.jp/rosen/index",
+      "officialTimetableUrl": "https://www.jrkbus.co.jp/rosen/nogata",
       "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "fukuokaGtfsStopCount": 0,
@@ -1079,6 +1087,170 @@
       "positionDates": [
         "2022年度"
       ],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-d7afbfbaa5ab",
+      "name": "九州産交バス",
+      "sourceNames": [
+        "九州産交バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "a5f3cbf7"
+      ],
+      "routeIndices": [
+        286,
+        287
+      ],
+      "gtfsStopIndices": [
+        5129,
+        5130,
+        5131,
+        5132,
+        5135,
+        5136,
+        5147,
+        5148,
+        5149,
+        5150,
+        5151,
+        5152,
+        5153,
+        5154,
+        5155,
+        5156,
+        5157,
+        5158,
+        5173,
+        5174,
+        5178,
+        5179
+      ],
+      "routes": [
+        "福岡～日田～黒川",
+        "黒川～日田～福岡"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          4,
+          4,
+          4
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 22,
+      "fukuokaGtfsStopCount": 6,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-8b9218c01672",
+      "name": "亀の井バス",
+      "sourceNames": [
+        "亀の井バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "c7c02367"
+      ],
+      "routeIndices": [
+        252,
+        253,
+        254,
+        255,
+        256,
+        264,
+        265
+      ],
+      "gtfsStopIndices": [
+        5097,
+        5098,
+        5099,
+        5100,
+        5101,
+        5102,
+        5103,
+        5104,
+        5105,
+        5106,
+        5107,
+        5108,
+        5109,
+        5110,
+        5111,
+        5112,
+        5113,
+        5114,
+        5115,
+        5116,
+        5117,
+        5118,
+        5119,
+        5120,
+        5121,
+        5122,
+        5123,
+        5124,
+        5125,
+        5126,
+        5127,
+        5128
+      ],
+      "routes": [
+        "別府～福岡空港～福岡（とよのくに号）",
+        "別府～福岡（とよのくに号）",
+        "湯布院～福岡（ゆふいん号）",
+        "福岡～湯布院（ゆふいん号）",
+        "福岡～福岡空港～別府（とよのくに号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          28,
+          28,
+          28
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 32,
+      "fukuokaGtfsStopCount": 8,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
       "statisticRecordCount": 0
     },
     {
@@ -3088,6 +3260,216 @@
       "positionDates": [
         "2022年度"
       ],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-2ef26528beb3",
+      "name": "大分バス",
+      "sourceNames": [
+        "大分バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "9ed291ed"
+      ],
+      "routeIndices": [
+        242,
+        243,
+        244,
+        245,
+        246,
+        247
+      ],
+      "gtfsStopIndices": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5063,
+        5064,
+        5065,
+        5066,
+        5067,
+        5068,
+        5069,
+        5070,
+        5071,
+        5072,
+        5073,
+        5074,
+        5075,
+        5076,
+        5077,
+        5078,
+        5079,
+        5080,
+        5081,
+        5082,
+        5083,
+        5084,
+        5085,
+        5086,
+        5087,
+        5088,
+        5089,
+        5090,
+        5091,
+        5092,
+        5093,
+        5094,
+        5095,
+        5096
+      ],
+      "routes": [
+        "博多～大分（とよのくに号）",
+        "博多～福岡空港～大分（とよのくに号）",
+        "大分～博多（とよのくに号）",
+        "大分～福岡空港～博多（とよのくに号）",
+        "大分～長崎（サンライト号）",
+        "長崎～大分（サンライト号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          12,
+          14,
+          14
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 46,
+      "fukuokaGtfsStopCount": 8,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-32221a59e51c",
+      "name": "大分交通",
+      "sourceNames": [
+        "大分交通"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "9ed291ed"
+      ],
+      "routeIndices": [
+        232,
+        233,
+        234,
+        235,
+        236,
+        237
+      ],
+      "gtfsStopIndices": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5063,
+        5064,
+        5065,
+        5066,
+        5067,
+        5068,
+        5069,
+        5070,
+        5071,
+        5072,
+        5073,
+        5074,
+        5075,
+        5076,
+        5077,
+        5078,
+        5079,
+        5080,
+        5081,
+        5082,
+        5083,
+        5084,
+        5085,
+        5086,
+        5087,
+        5088,
+        5089,
+        5090,
+        5091,
+        5092,
+        5093,
+        5094,
+        5095,
+        5096
+      ],
+      "routes": [
+        "博多～大分（とよのくに号）",
+        "博多～福岡空港～大分（とよのくに号）",
+        "大分～博多（とよのくに号）",
+        "大分～福岡空港～博多（とよのくに号）",
+        "大分～長崎（サンライト号）",
+        "長崎～大分（サンライト号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          12,
+          14,
+          14
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 46,
+      "fukuokaGtfsStopCount": 8,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
       "statisticRecordCount": 0
     },
     {
@@ -6232,6 +6614,149 @@
       "positionDates": [
         "2022年度"
       ],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-9fee79a32eef",
+      "name": "日田バス",
+      "sourceNames": [
+        "日田バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "c7c02367",
+        "a5f3cbf7"
+      ],
+      "routeIndices": [
+        262,
+        263,
+        268,
+        269,
+        270,
+        271,
+        272,
+        273,
+        274,
+        275,
+        276,
+        277,
+        278
+      ],
+      "gtfsStopIndices": [
+        5106,
+        5107,
+        5108,
+        5109,
+        5110,
+        5111,
+        5112,
+        5113,
+        5115,
+        5116,
+        5117,
+        5118,
+        5119,
+        5120,
+        5121,
+        5122,
+        5123,
+        5124,
+        5125,
+        5126,
+        5127,
+        5128,
+        5129,
+        5130,
+        5131,
+        5132,
+        5133,
+        5134,
+        5135,
+        5136,
+        5137,
+        5138,
+        5139,
+        5140,
+        5141,
+        5142,
+        5143,
+        5144,
+        5145,
+        5146,
+        5147,
+        5148,
+        5149,
+        5150,
+        5151,
+        5152,
+        5153,
+        5154,
+        5155,
+        5156,
+        5157,
+        5158,
+        5159,
+        5160,
+        5161,
+        5162,
+        5163,
+        5164,
+        5165,
+        5166,
+        5167,
+        5168,
+        5169,
+        5170,
+        5171,
+        5172,
+        5173,
+        5174,
+        5175,
+        5176,
+        5177,
+        5178,
+        5179
+      ],
+      "routes": [
+        "日田～呉服町～福岡（ひた号）",
+        "日田～福岡空港～福岡（ひた号）",
+        "日田～福岡（ひた号）",
+        "湯布院～福岡（ゆふいん号）",
+        "福岡～日田（ひた号）",
+        "福岡～日田～黒川",
+        "福岡～湯布院（ゆふいん号）",
+        "福岡～福岡空港～日田（ひた号）",
+        "黒川～日田～福岡"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 2,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          45,
+          41,
+          41
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 73,
+      "fukuokaGtfsStopCount": 31,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
       "statisticRecordCount": 0
     },
     {
@@ -11133,6 +11658,191 @@
         "2022年度"
       ],
       "statisticRecordCount": 0
+    },
+    {
+      "id": "op-6cde3b015be9",
+      "name": "西鉄バス",
+      "sourceNames": [
+        "西鉄バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "9ed291ed",
+        "c7c02367",
+        "a5f3cbf7"
+      ],
+      "routeIndices": [
+        238,
+        239,
+        240,
+        241,
+        257,
+        258,
+        259,
+        260,
+        261,
+        266,
+        267,
+        279,
+        280,
+        281,
+        282,
+        283,
+        284,
+        285
+      ],
+      "gtfsStopIndices": [
+        5051,
+        5052,
+        5053,
+        5054,
+        5055,
+        5056,
+        5057,
+        5058,
+        5059,
+        5060,
+        5061,
+        5062,
+        5063,
+        5064,
+        5065,
+        5066,
+        5067,
+        5068,
+        5097,
+        5098,
+        5099,
+        5100,
+        5101,
+        5102,
+        5103,
+        5104,
+        5105,
+        5106,
+        5107,
+        5108,
+        5109,
+        5110,
+        5111,
+        5112,
+        5113,
+        5114,
+        5115,
+        5116,
+        5117,
+        5118,
+        5119,
+        5120,
+        5121,
+        5122,
+        5123,
+        5124,
+        5125,
+        5126,
+        5127,
+        5128,
+        5129,
+        5130,
+        5133,
+        5134,
+        5137,
+        5138,
+        5139,
+        5140,
+        5141,
+        5142,
+        5143,
+        5144,
+        5145,
+        5146,
+        5157,
+        5158,
+        5159,
+        5160,
+        5161,
+        5162,
+        5163,
+        5164,
+        5165,
+        5166,
+        5167,
+        5168,
+        5169,
+        5170,
+        5171,
+        5172,
+        5173,
+        5174,
+        5176,
+        5177,
+        5178,
+        5179
+      ],
+      "routes": [
+        "別府～福岡空港～福岡（とよのくに号）",
+        "博多～大分（とよのくに号）",
+        "博多～福岡空港～大分（とよのくに号）",
+        "大分～博多（とよのくに号）",
+        "大分～福岡空港～博多（とよのくに号）",
+        "日田～福岡空港～福岡（ひた号）",
+        "日田～福岡（ひた号）",
+        "湯布院～福岡（ゆふいん号）",
+        "福岡～別府（とよのくに号）",
+        "福岡～日田（ひた号）",
+        "福岡～湯布院（ゆふいん号）",
+        "福岡～福岡空港～別府（とよのくに号）",
+        "福岡～福岡空港～日田（ひた号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 3,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          60,
+          64,
+          64
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-6cde3b015be9#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-6cde3b015be9#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
+      "officialTimetableUrl": "https://jik.nishitetsu.jp/",
+      "missingReason": null,
+      "gtfsStopCount": 86,
+      "fukuokaGtfsStopCount": 34,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-d165f9606ee3",
@@ -17666,6 +18376,168 @@
       "statisticRecordCount": 0
     },
     {
+      "id": "op-717463cd9960",
+      "name": "長崎バス",
+      "sourceNames": [
+        "長崎バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "9ed291ed"
+      ],
+      "routeIndices": [
+        250,
+        251
+      ],
+      "gtfsStopIndices": [
+        5055,
+        5056,
+        5069,
+        5070,
+        5071,
+        5072,
+        5073,
+        5074,
+        5075,
+        5076,
+        5077,
+        5078,
+        5079,
+        5080,
+        5081,
+        5082,
+        5083,
+        5084,
+        5085,
+        5086,
+        5087,
+        5088,
+        5089,
+        5090,
+        5091,
+        5092,
+        5093,
+        5094,
+        5095,
+        5096
+      ],
+      "routes": [
+        "大分～長崎（サンライト号）",
+        "長崎～大分（サンライト号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          2,
+          2,
+          2
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 30,
+      "fukuokaGtfsStopCount": 2,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
+      "statisticRecordCount": 0
+    },
+    {
+      "id": "op-62c01ea42b05",
+      "name": "長崎県営バス",
+      "sourceNames": [
+        "長崎県営バス"
+      ],
+      "mode": "bus",
+      "busIndices": [],
+      "stationIndices": [],
+      "lineIndices": [],
+      "feedIds": [
+        "9ed291ed"
+      ],
+      "routeIndices": [
+        248,
+        249
+      ],
+      "gtfsStopIndices": [
+        5055,
+        5056,
+        5069,
+        5070,
+        5071,
+        5072,
+        5073,
+        5074,
+        5075,
+        5076,
+        5077,
+        5078,
+        5079,
+        5080,
+        5081,
+        5082,
+        5083,
+        5084,
+        5085,
+        5086,
+        5087,
+        5088,
+        5089,
+        5090,
+        5091,
+        5092,
+        5093,
+        5094,
+        5095,
+        5096
+      ],
+      "routes": [
+        "大分～長崎（サンライト号）",
+        "長崎～大分（サンライト号）"
+      ],
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          2,
+          2,
+          2
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
+      "realtime": null,
+      "ridership": null,
+      "costs": null,
+      "officialUrl": null,
+      "officialTimetableUrl": null,
+      "missingReason": null,
+      "gtfsStopCount": 30,
+      "fukuokaGtfsStopCount": 2,
+      "stationCount": 0,
+      "status": "timetable",
+      "positionDates": [],
+      "statisticRecordCount": 0
+    },
+    {
       "id": "op-1045d3c57469",
       "name": "鞍手町",
       "sourceNames": [
@@ -19882,7 +20754,8 @@
       "id": "op-4be7d0741f8b",
       "name": "福岡市地下鉄",
       "sourceNames": [
-        "福岡市"
+        "福岡市",
+        "福岡市地下鉄"
       ],
       "mode": "rail",
       "busIndices": [],
@@ -20003,15 +20876,76 @@
         807,
         808
       ],
-      "feedIds": [],
-      "routeIndices": [],
-      "gtfsStopIndices": [],
+      "feedIds": [
+        "b9f8e012"
+      ],
+      "routeIndices": [
+        229,
+        230,
+        231
+      ],
+      "gtfsStopIndices": [
+        5014,
+        5015,
+        5016,
+        5017,
+        5018,
+        5019,
+        5020,
+        5021,
+        5022,
+        5023,
+        5024,
+        5025,
+        5026,
+        5027,
+        5028,
+        5029,
+        5030,
+        5031,
+        5032,
+        5033,
+        5034,
+        5035,
+        5036,
+        5037,
+        5038,
+        5039,
+        5040,
+        5041,
+        5042,
+        5043,
+        5044,
+        5045,
+        5046,
+        5047,
+        5048,
+        5049,
+        5050
+      ],
       "routes": [
         "1号線(空港線)",
         "2号線(箱崎線)",
-        "3号線(七隈線)"
+        "3号線(七隈線)",
+        "七隈線",
+        "空港線（地下鉄区間）",
+        "箱崎線（空港線への直通を含む）"
       ],
-      "timetable": null,
+      "timetable": {
+        "status": "partial",
+        "feedCount": 1,
+        "dates": [
+          "20260914",
+          "20260919",
+          "20260920"
+        ],
+        "scheduledTrips": [
+          980,
+          830,
+          822
+        ],
+        "note": "収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。"
+      },
       "realtime": null,
       "ridership": {
         "status": "partial",
@@ -20029,11 +20963,11 @@
       },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
-      "gtfsStopCount": 0,
-      "fukuokaGtfsStopCount": 0,
+      "missingReason": null,
+      "gtfsStopCount": 37,
+      "fukuokaGtfsStopCount": 37,
       "stationCount": 36,
-      "status": "location",
+      "status": "timetable",
       "positionDates": [
         "2025-12-31"
       ],
@@ -20458,7 +21392,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/be02305f-43ab-40b7-b8e2-1d460f5756d1/resource/2aa2b7c6-2671-472f-87f2-b6e5cc06e2e2/download/402257_ukihabasu.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "1c302e30466b6b46a07c9e9c0046a033bc302e230258fcda221f39726f3a5ad1"
+      "sha256": "1c302e30466b6b46a07c9e9c0046a033bc302e230258fcda221f39726f3a5ad1",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "499f5b3d",
@@ -20475,7 +21411,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/9938b52c-e54c-4d92-9975-a98c5f60e727/resource/499f5b3d-093e-4c32-9636-2b91b227e6c2/download/data.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "b39a7590d454e37a400f724472e4969133c7b9f54b8600dce68bc47fa0da1b9e"
+      "sha256": "b39a7590d454e37a400f724472e4969133c7b9f54b8600dce68bc47fa0da1b9e",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "6a4cf8de",
@@ -20492,7 +21430,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/c7fb7cb4-bca5-4444-9890-59fcfc13fb3b/resource/6a4cf8de-b0e9-493b-822f-91ed911b07b5/download/401005_shieitosengtfs.zip",
       "license": "Creative Commons Attribution",
       "licenseUrl": "http://www.opendefinition.org/licenses/cc-by",
-      "sha256": "320e1ec12f48ccf91a058366fd9892602e1bd09cc0fbd658222a3a1f4ab663f2"
+      "sha256": "320e1ec12f48ccf91a058366fd9892602e1bd09cc0fbd658222a3a1f4ab663f2",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "65f5ac3a",
@@ -20509,7 +21449,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/64e6655e-52f8-4bd0-9ca7-2a33085e3d42/resource/65f5ac3a-f952-4d9b-9db5-99c0890fbd00/download/jyojima_r8.7_v5.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "440f41f5ba52aa1cfc8c16056d112a8707b482d2a87e7bbaa72d3de95c2690e4"
+      "sha256": "440f41f5ba52aa1cfc8c16056d112a8707b482d2a87e7bbaa72d3de95c2690e4",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "894d891e",
@@ -20526,7 +21468,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/64e6655e-52f8-4bd0-9ca7-2a33085e3d42/resource/894d891e-a3d6-4b95-ad96-b27728cd7897/download/kitano.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "90df8701ea2c23e080750cf69d6292a96fb5701c516f98898fd36b6bc1f6b053"
+      "sha256": "90df8701ea2c23e080750cf69d6292a96fb5701c516f98898fd36b6bc1f6b053",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "64acdcd5",
@@ -20543,7 +21487,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/9958a118-d383-4d00-8812-1d1efa527dc8/resource/64acdcd5-4833-4b0b-927d-83e0e21ef52f/download/gtfs-okagaki2025v1.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "86f5714c3acd26e2c84020c6dce03afbd5152b78c28cd5a556adbcc299fdd89a"
+      "sha256": "86f5714c3acd26e2c84020c6dce03afbd5152b78c28cd5a556adbcc299fdd89a",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "d7c81670",
@@ -20560,7 +21506,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/amagikankobus/feeds/AmagiKankoBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "825acfad1e80f3ee0eac1edb04d66f366d7421c60b3a765dc5a7262d31c2375b"
+      "sha256": "825acfad1e80f3ee0eac1edb04d66f366d7421c60b3a765dc5a7262d31c2375b",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "2557c9bb",
@@ -20577,7 +21525,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/ashiyatown/feeds/AshiyaTownBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "8148c57b6f0837d776aa3b6ef59df23714baf5965d07dba2ed2ca5b72655c0d4"
+      "sha256": "8148c57b6f0837d776aa3b6ef59df23714baf5965d07dba2ed2ca5b72655c0d4",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "8cf4a4d5",
@@ -20594,7 +21544,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/buzencity/feeds/BuzenCityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "e9a397eec5fb189c050bf60f35864af4bc4ab27c0c86a82e5561bab11edd8302"
+      "sha256": "e9a397eec5fb189c050bf60f35864af4bc4ab27c0c86a82e5561bab11edd8302",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9e8f3859",
@@ -20611,7 +21563,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/chikugocity/feeds/HainuzukaStationAreaLoopBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "da758a1436a7a05de47b67d57fbabe694b8f9d9c97a2f95b02e6546721bb1e8f"
+      "sha256": "da758a1436a7a05de47b67d57fbabe694b8f9d9c97a2f95b02e6546721bb1e8f",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "0c039dc3",
@@ -20628,7 +21582,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/chikujotown/feeds/ChikujoTownCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "303fe175458cebdeb188aa4adfc3a727408a530363336f8959d7febc148d2510"
+      "sha256": "303fe175458cebdeb188aa4adfc3a727408a530363336f8959d7febc148d2510",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "bf91074d",
@@ -20645,7 +21601,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/dazaifucity/feeds/DazaifuCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "9fca4da2973f45c49721d8b4eb55a8be8f9806d58177436e9f42fc2f2681dbe8"
+      "sha256": "9fca4da2973f45c49721d8b4eb55a8be8f9806d58177436e9f42fc2f2681dbe8",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "f8911268",
@@ -20662,7 +21620,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/fukuoka-kawasakitown/feeds/KawasakiTownFureaiBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "473dbff8b7fc70f5fcd2f90738b852c64e2e6697bacc8be9b56874dd9b018d66"
+      "sha256": "473dbff8b7fc70f5fcd2f90738b852c64e2e6697bacc8be9b56874dd9b018d66",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "7daf11dc",
@@ -20679,7 +21639,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/fukuoka-kogacity/feeds/KogaBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "d7fd39e91d4528aa30bd0c4e9cc27bcee92cc20aa2c97142729827d64e104d3a"
+      "sha256": "d7fd39e91d4528aa30bd0c4e9cc27bcee92cc20aa2c97142729827d64e104d3a",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "58bf16e9",
@@ -20696,7 +21658,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/fukuokacity/feeds/ImajukuMeinohamaLine/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "a170c057cb296dd0c1076b9a647c146a2be6f1fe643a1df3fccd069e3c2ef005"
+      "sha256": "a170c057cb296dd0c1076b9a647c146a2be6f1fe643a1df3fccd069e3c2ef005",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9229120c",
@@ -20713,7 +21677,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/fukutsucity/feeds/minibus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "302b4a5b5aca5373cbcbd2c51fd9d3d7ab4b3fe9d2af0e3eecd4b2a144f9143c"
+      "sha256": "302b4a5b5aca5373cbcbd2c51fd9d3d7ab4b3fe9d2af0e3eecd4b2a144f9143c",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "84c87410",
@@ -20730,7 +21696,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/hisayamatown/feeds/HisayamaIkoBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "0be3b2fd79732e6a285c9ae7cd63d7632fd35ac0f12a0a05e111c1fec625b2b3"
+      "sha256": "0be3b2fd79732e6a285c9ae7cd63d7632fd35ac0f12a0a05e111c1fec625b2b3",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9b4014be",
@@ -20747,7 +21715,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kamacity/feeds/KamaCityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "6ace7e018a78316c7ea69b282685ecb2ae1a736f804f8f7698251bb98216e798"
+      "sha256": "6ace7e018a78316c7ea69b282685ecb2ae1a736f804f8f7698251bb98216e798",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "b7a9581f",
@@ -20764,7 +21734,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kandatown/feeds/KandaTownCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "1de07664db5157c95a5b4e409f33bfe8fb3218270cdda0d5e8662bd95daf2215"
+      "sha256": "1de07664db5157c95a5b4e409f33bfe8fb3218270cdda0d5e8662bd95daf2215",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9fbcb219",
@@ -20781,7 +21753,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kasugacity/feeds/yayoi_kasuga/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "46810fd34c249ccb533345776bc6e2f7d45353d4e8296806a7b773f343beca13"
+      "sha256": "46810fd34c249ccb533345776bc6e2f7d45353d4e8296806a7b773f343beca13",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "c8db06f7",
@@ -20798,7 +21772,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/tsunemi-kitaku/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "ee22e8a1ff9904d9b78eca41fcd51bb6b361d4807ccd86c98e47dd7f2d3c4dfa"
+      "sha256": "ee22e8a1ff9904d9b78eca41fcd51bb6b361d4807ccd86c98e47dd7f2d3c4dfa",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "f0f9392e",
@@ -20815,7 +21791,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/okura/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "a2c63bf1eedb51ce1117e3ac9401c07bfc72d97ecd69ad46100299a813defe1e"
+      "sha256": "a2c63bf1eedb51ce1117e3ac9401c07bfc72d97ecd69ad46100299a813defe1e",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "6e82a537",
@@ -20832,7 +21810,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/oma-dobaru/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "b6f897566a356239b16f9ada570fca35479c8f325975a340068a35da7f532771"
+      "sha256": "b6f897566a356239b16f9ada570fca35479c8f325975a340068a35da7f532771",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "f28ca3e6",
@@ -20849,7 +21829,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/koyanose-kusubashi-hoshigaoka/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "5ebba343eb5f05c42e17401c202738063cdb1af30d154a69f3a9a27490f646e6"
+      "sha256": "5ebba343eb5f05c42e17401c202738063cdb1af30d154a69f3a9a27490f646e6",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "8322c0c2",
@@ -20866,7 +21848,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/higashitani/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "0044c7e6ed042ad15c062f3778f2cdecfc0dc9544ea8e9d317d2eb37905c3766"
+      "sha256": "0044c7e6ed042ad15c062f3778f2cdecfc0dc9544ea8e9d317d2eb37905c3766",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "a3f656b0",
@@ -20883,7 +21867,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/edamitsu/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "bdd8e232ec1fa5673518b4c2b0b74d3e6ac309bf593c8e0aac7103452998675e"
+      "sha256": "bdd8e232ec1fa5673518b4c2b0b74d3e6ac309bf593c8e0aac7103452998675e",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "3074f341",
@@ -20900,7 +21886,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/hiraodai/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "5719ac4db41886ea2540d677024598ef89894e6853610b3e01eff7cdc146aef7"
+      "sha256": "5719ac4db41886ea2540d677024598ef89894e6853610b3e01eff7cdc146aef7",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "6c883643",
@@ -20917,7 +21905,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kitakyushucity/feeds/tashiro-kawachi/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "dfbab04b22e3758b05706b60939e6652559882ca4f268b71e58c724ca31ae415"
+      "sha256": "dfbab04b22e3758b05706b60939e6652559882ca4f268b71e58c724ca31ae415",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "ef3b99fa",
@@ -20934,7 +21924,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/kuratetown/feeds/KurateTownSmileBusMiyawakaLine/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "dc37b9cded3082d44d53dc75e58166509ae1164865ff9e1b495a63baf7327281"
+      "sha256": "dc37b9cded3082d44d53dc75e58166509ae1164865ff9e1b495a63baf7327281",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "bf5b6dd0",
@@ -20951,7 +21943,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/miyamacity/feeds/MiyamaCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "3cc0a202889658fc33b343e5f0436a3d883c44644a03ed82e01663b3feddca67"
+      "sha256": "3cc0a202889658fc33b343e5f0436a3d883c44644a03ed82e01663b3feddca67",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "2f15eb49",
@@ -20968,7 +21962,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/miyawakacity/feeds/MiyawakaMunakataLine/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "44f19b95aed92680b5712712f84b6d67251f7956db96bb209ea9296063a46980"
+      "sha256": "44f19b95aed92680b5712712f84b6d67251f7956db96bb209ea9296063a46980",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9950b5de",
@@ -20985,7 +21981,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/mizumakitown/feeds/MizumakiTownBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "d0f44cdcbc38d10bc0ff95736242b75f797d0a6689d7ed13918720adac42c2e5"
+      "sha256": "d0f44cdcbc38d10bc0ff95736242b75f797d0a6689d7ed13918720adac42c2e5",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "fc23813c",
@@ -21002,7 +22000,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/munakatacity/feeds/MunakataCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "1f046fc306680b5051b56b94a6d731f0c22084480082a9003799903862c477e1"
+      "sha256": "1f046fc306680b5051b56b94a6d731f0c22084480082a9003799903862c477e1",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "9f4602bd",
@@ -21019,7 +22019,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/munakatacity/feeds/MunakataCityFureaiBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "159e7afbcef3b2657c8a773768d94e8a3d21be1a1d751ef124278c52a0ebe179"
+      "sha256": "159e7afbcef3b2657c8a773768d94e8a3d21be1a1d751ef124278c52a0ebe179",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "da95747b",
@@ -21036,7 +22038,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/munakatacity/feeds/MunakataCityOshimaFerry/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "97fa33622cb993d4341bbbfebbd69d2ad4da5ba27b41ab382e011739f782cab1"
+      "sha256": "97fa33622cb993d4341bbbfebbd69d2ad4da5ba27b41ab382e011739f782cab1",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "24c12fd2",
@@ -21053,7 +22057,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/munakatacity/feeds/MiyawakaMunakataLine/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "cc3d4f208fc396a15f4af0a08ee135dba936f91b72dd6b3285dfa7da278207f4"
+      "sha256": "cc3d4f208fc396a15f4af0a08ee135dba936f91b72dd6b3285dfa7da278207f4",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "a0323fe1",
@@ -21070,7 +22076,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/munakatacity/feeds/MunakataCityJinoshimaFerry/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "17b466104fe5e95a43713510eb75f60083d519b726de47cb0d9b2e782699f7fa"
+      "sha256": "17b466104fe5e95a43713510eb75f60083d519b726de47cb0d9b2e782699f7fa",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "6e697c44",
@@ -21087,7 +22095,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/nogatacity/feeds/NogataCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "659e2c653b0a2a9e8e8b572ee7956daf0dbd02a50e85e58aaff9c794690d26d0"
+      "sha256": "659e2c653b0a2a9e8e8b572ee7956daf0dbd02a50e85e58aaff9c794690d26d0",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "99e18e8d",
@@ -21104,7 +22114,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/ongatown/feeds/OngaTownCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "3c1b6ad14a3267725e222fc4930bb49125ebcd25fd9b8143d1bd3e6677695bb2"
+      "sha256": "3c1b6ad14a3267725e222fc4930bb49125ebcd25fd9b8143d1bd3e6677695bb2",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "97f8b07f",
@@ -21121,7 +22133,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/shingutown/feeds/TownFerryShingu/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "af22e4cbbf23731ace604cfb96df4e8b16fb159088e24648ca54bbfa949eca97"
+      "sha256": "af22e4cbbf23731ace604cfb96df4e8b16fb159088e24648ca54bbfa949eca97",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "2f56b623",
@@ -21138,7 +22152,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/shingutown/feeds/ShinguTownCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "28f0ba4c1eac4089ab08478927ad1a4c7674ce4f6138a969e41a21eb67f89079"
+      "sha256": "28f0ba4c1eac4089ab08478927ad1a4c7674ce4f6138a969e41a21eb67f89079",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "116c96e8",
@@ -21155,7 +22171,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/soedatown/feeds/soedamachibus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "7f1168aa6098b4d1f508382360606a4c9e9092ae4bda731fe01d2af54134e2a3"
+      "sha256": "7f1168aa6098b4d1f508382360606a4c9e9092ae4bda731fe01d2af54134e2a3",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "82c162b6",
@@ -21172,7 +22190,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/suetown/feeds/SueTownCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "f708fd022a3e8be3bf7a6dde31d6694ff176f0a80fe5fbeb00cf25e9fccc2e6f"
+      "sha256": "f708fd022a3e8be3bf7a6dde31d6694ff176f0a80fe5fbeb00cf25e9fccc2e6f",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "3ac0003b",
@@ -21189,7 +22209,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/tagawacity/feeds/TagawaCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "2f433aff3ac2277ec13d3b03e6bb99e8d951a2309b9f320fa2e58605952055b1"
+      "sha256": "2f433aff3ac2277ec13d3b03e6bb99e8d951a2309b9f320fa2e58605952055b1",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "a3d6ec53",
@@ -21206,7 +22228,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/taiyo-koutu/feeds/taiyo-koutu/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "ae78bea6a9616545dbea7a77c862978f9213c5784676e63b45f5900d5b1a213c"
+      "sha256": "ae78bea6a9616545dbea7a77c862978f9213c5784676e63b45f5900d5b1a213c",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "129c200d",
@@ -21223,7 +22247,9 @@
       "downloadUrl": "https://api.gtfs-data.jp/v2/organizations/yanagawacity/feeds/YanagawaCityCommunityBus/files/feed.zip?rid=current",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "b2711f99f60400d051377d30a17409a4241a87d3a358f4b883852103e587a875"
+      "sha256": "b2711f99f60400d051377d30a17409a4241a87d3a358f4b883852103e587a875",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "4820885f",
@@ -21240,7 +22266,9 @@
       "downloadUrl": "https://data.bodik.jp/dataset/341b6046-0030-4a78-a54d-87b1a1335563/resource/4820885f-ba67-4e44-ae3f-976155006119/download/miyawaka-iizuka.zip",
       "license": "Creative Commons Attribution 4.0 International",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "05bb4ef7699b988f46ff04090e9ba1ba7c6544c0d8de94a37b2004782b73da9d"
+      "sha256": "05bb4ef7699b988f46ff04090e9ba1ba7c6544c0d8de94a37b2004782b73da9d",
+      "analysisSampleDates": null,
+      "validityNote": null
     },
     {
       "id": "dd522638",
@@ -21257,17 +22285,100 @@
       "downloadUrl": "http://opendata.sagabus.info/saga-current.zip",
       "license": "CC BY 4.0",
       "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
-      "sha256": "dd522638eb9686e99d6b3350424bdbb6adb2d8efd32397af1c4bd93049072ef2"
+      "sha256": "dd522638eb9686e99d6b3350424bdbb6adb2d8efd32397af1c4bd93049072ef2",
+      "analysisSampleDates": null,
+      "validityNote": null
+    },
+    {
+      "id": "b9f8e012",
+      "name": "福岡市地下鉄・全3路線（公式Excel加工／9月14・15・19・20日の通常ダイヤ比較）",
+      "validFrom": "20260914",
+      "validTo": "20260920",
+      "dataStatus": "current",
+      "scheduledTrips": [
+        980,
+        830,
+        822
+      ],
+      "sourceUrl": "https://subway.city.fukuoka.lg.jp/subway/about/material.php",
+      "downloadUrl": "https://subway.city.fukuoka.lg.jp/subway/about/material.php",
+      "license": "福岡市オープンデータ利用規約（CC BY 2.1 JP）・国土数値情報CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+      "sha256": "b9f8e012e3eb76c5a176b6fc95f62b66bd11820c65e6daffb09d7cb5f7ac2f5c",
+      "analysisSampleDates": [
+        "20260914",
+        "20260915",
+        "20260919",
+        "20260920"
+      ],
+      "validityNote": "calendar_datesは通常ダイヤを比較するために選んだ分析日です。事業者公表の有効期限ではありません。期間外は運行なしではなく未判定としてください。"
+    },
+    {
+      "id": "9ed291ed",
+      "name": "高速バス（大分交通幹事）GTFSデータ・福岡接続路線",
+      "validFrom": "20260901",
+      "validTo": "20270831",
+      "dataStatus": "current",
+      "scheduledTrips": [
+        48,
+        56,
+        56
+      ],
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "downloadUrl": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/3ece7365-9739-4c5d-92a8-f008922325ff/download/gtfs10_highway02oitakotsu.zip",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "sha256": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
+      "analysisSampleDates": null,
+      "validityNote": null
+    },
+    {
+      "id": "c7c02367",
+      "name": "高速バス（亀の井バス幹事）GTFSデータ・福岡接続路線",
+      "validFrom": "20260401",
+      "validTo": "20270331",
+      "dataStatus": "current",
+      "scheduledTrips": [
+        48,
+        48,
+        48
+      ],
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "downloadUrl": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/be2e8be4-44d1-4a85-aea6-78c8147f41c5/download/gtfs10_highway03kamenoi.zip",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "sha256": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
+      "analysisSampleDates": null,
+      "validityNote": null
+    },
+    {
+      "id": "a5f3cbf7",
+      "name": "高速バス（日田バス幹事）GTFSデータ・福岡接続路線",
+      "validFrom": "20260401",
+      "validTo": "20270331",
+      "dataStatus": "current",
+      "scheduledTrips": [
+        69,
+        65,
+        65
+      ],
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "downloadUrl": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/17806124-f3bd-4146-b276-675133184953/download/gtfs10_highway04hita.zip",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "sha256": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
+      "analysisSampleDates": null,
+      "validityNote": null
     }
   ],
   "sourceHashes": {
     "data/bus-stop-inventory.geojson": "9d959321851196554504801f9e2ee25475adf79ad09a8d3b19e5eebd7bc21b58",
     "data/rail.json": "317b82308a1f611cf1b57a6db4f18601046164e8c53f8d641da79df06b562aa5",
-    "data/map-data.json": "7e08652284a4dadc63039eeab8d798b32d411cc77b64181b9b80260f119445fd",
-    "data/gtfs/catalog.json": "efd3d610c8b8e6849747e248665e38b1b5a5ccbb87a687e9b65c5b2c4f7b8415",
+    "data/map-data.json": "fafff71661b5b4b7aa31d49830e98a71f35122ac886307d4a00a1120f72d583f",
+    "data/gtfs/catalog.json": "d815721f6093da2e8b685abd0ebd855bd6385cc7616054e12167ad03fbfbc82e",
     "data/analysis.json": "2f799266cec5f20f628c691d3e38460bef8a7efe7274febd01d97c60100c0435",
     "data/station-ridership.json": "88b6e3ed09f14416969b50e3f7dc572fb01c5ecf02b2788c68c6e61569e3bc9e",
-    "data/operator-finance.json": "dd74edfcec2a551d0776a4c5735c01cabcdaf4696cf70868b85ab82ed92fc905"
+    "data/operator-finance.json": "dd3617f578f3ce578c3dace266a9e233af13cf414ba9cf3adae81282da410c70"
   },
   "sources": {
     "bus": {

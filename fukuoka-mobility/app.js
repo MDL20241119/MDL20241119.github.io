@@ -160,7 +160,7 @@ function applyTourismLink(){
 }
 async function start(){
   route(location.hash.slice(1));window.addEventListener('hashchange',()=>route(location.hash.slice(1),true));
-  try{const results=await Promise.all([fetch('data/analysis.json'),fetch('data/map-data.json')]);if(results.some(r=>!r.ok))throw new Error('分析データの読み込みに失敗しました。');[data,geo]=await Promise.all(results.map(r=>r.json()));
+  try{const results=await Promise.all([fetch('data/analysis.json'),fetch('data/map-data.json?v=20260915-2')]);if(results.some(r=>!r.ok))throw new Error('分析データの読み込みに失敗しました。');[data,geo]=await Promise.all(results.map(r=>r.json()));
     for(const [id,value] of [['home-feeds',geo.feeds.length]])if($('#'+id))$('#'+id).textContent=fmt(value);fetch('data/catalog.json').then(r=>r.json()).then(c=>{for(const [id,value] of [['home-destinations',c.overview.destinations],['home-resources',c.overview.resources]])if($('#'+id))$('#'+id).textContent=fmt(value)});renderRidership();renderOD();renderForecast();renderCost();setupBC();renderSources();setupMap();$('#loading').hidden=true;route(lastView);applyTourismLink();
   }catch(e){$('#loading').hidden=true;$('#error').hidden=false;$('#error').innerHTML=esc(e.message)+' <a href="downloads/fukuoka-data-report.html">データ報告書で確認する</a>。';}
 }
