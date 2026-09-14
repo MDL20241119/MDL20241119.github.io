@@ -19,10 +19,11 @@ function transfer(n,l,to,t){let best=null,score=-1;const from=n.stops[l.fromStop
     const s=(r.from_trip_id&&r.to_trip_id?6:r.from_trip_id&&r.to_route_id||r.to_trip_id&&r.from_route_id?5:r.from_trip_id||r.to_trip_id?4:r.from_route_id&&r.to_route_id?3:r.from_route_id||r.to_route_id?2:1)*10+(r.from_stop_id===from.id?1:0)+(r.to_stop_id===dest.id?1:0);if(s>score){best=r;score=s;}}
   return best;
 }
-function walkLinks(n,o){const cacheKey=o.maxWalk+':'+o.walkFactor;if(n.walkCache.has(cacheKey))return n.walkCache.get(cacheKey);
+export function walkingMeters(n,a,b,o){return n.walkingGraph?n.walkingGraph.route(a,b,o.maxWalk/o.walkFactor,!!o.wheelchair).meters*o.walkFactor:distance(a,b)*o.walkFactor;}
+function walkLinks(n,o){const cacheKey=o.maxWalk+':'+o.walkFactor+':'+!!o.wheelchair;if(n.walkCache.has(cacheKey))return n.walkCache.get(cacheKey);
   const grid=new Map(),step=.01;for(const s of Object.values(n.stops)){const k=Math.floor(s.lat/step)+','+Math.floor(s.lon/step);if(!grid.has(k))grid.set(k,[]);grid.get(k).push(s);}
   const result=new Map(),radius=Math.ceil(o.maxWalk/800)+1;
-  for(const s of Object.values(n.stops)){const rows=[],a=Math.floor(s.lat/step),b=Math.floor(s.lon/step);for(let x=-radius;x<=radius;x++)for(let y=-radius;y<=radius;y++)for(const d of grid.get((a+x)+','+(b+y))??[]){const meters=distance(s,d)*o.walkFactor;if(meters<=o.maxWalk+1e-6)rows.push({stop:d.key,meters});}result.set(s.key,rows);}
+  for(const s of Object.values(n.stops)){const rows=[],a=Math.floor(s.lat/step),b=Math.floor(s.lon/step);for(let x=-radius;x<=radius;x++)for(let y=-radius;y<=radius;y++)for(const d of grid.get((a+x)+','+(b+y))??[]){const meters=walkingMeters(n,s,d,o);if(meters<=o.maxWalk+1e-6)rows.push({stop:d.key,meters});}result.set(s.key,rows);}
   if(n.walkCache.size>3)n.walkCache.clear();n.walkCache.set(cacheKey,result);return result;
 }
 function dominates(a,b){return a.arrival<=b.arrival+.001&&a.walk<=b.walk+.001&&a.uncertain<=b.uncertain;}
@@ -38,9 +39,9 @@ function walkPath(from,to,meters,start,speed){return {mode:'walk',from,to,meters
 // Resource labels keep shorter-walk and fewer-unknown alternatives, including incoming-trip rules.
 export function pointJourneys(n,origin,destination,start,o,walkBudget=o.totalWalk){
   const limit=Math.min(start+o.legMinutes*60,o.deadline),ctx={truncated:false,unsupported:false,operations:0},all=new Map(),initial=new Map(),links=walkLinks(n,o),speed=o.walkSpeed*1000/3600;
-  const direct=distance(origin,destination)*o.walkFactor;
+  const direct=walkingMeters(n,origin,destination,o);
   if(direct<=o.maxWalk+1e-6&&direct<=walkBudget&&start+direct/speed<=limit)insert(all,'destination',{arrival:start+direct/speed,walk:direct,uncertain:0,unknowns:[],path:[walkPath(origin,destination,direct,start,o.walkSpeed)],boardings:0},ctx,false);
-  for(const s of Object.values(n.stops)){const meters=distance(origin,s)*o.walkFactor;if(meters>o.maxWalk+1e-6||meters>walkBudget||start+meters/speed>limit)continue;insert(initial,s.key,{arrival:start+meters/speed,walk:meters,uncertain:0,unknowns:[],path:[walkPath(origin,s,meters,start,o.walkSpeed)],lastTripId:null,lastTripKey:null,lastRouteId:null,fromStop:s.key,rideArrival:start},ctx);}
+  for(const s of Object.values(n.stops)){const meters=walkingMeters(n,origin,s,o);if(meters>o.maxWalk+1e-6||meters>walkBudget||start+meters/speed>limit)continue;insert(initial,s.key,{arrival:start+meters/speed,walk:meters,uncertain:0,unknowns:[],path:[walkPath(origin,s,meters,start,o.walkSpeed)],lastTripId:null,lastTripKey:null,lastRouteId:null,fromStop:s.key,rideArrival:start},ctx);}
   let previous=initial;
   for(let round=1;round<=o.maxTransfers+1;round++){
     const arrivals=new Map();
@@ -66,7 +67,7 @@ export function pointJourneys(n,origin,destination,start,o,walkBudget=o.totalWal
     }
     const next=new Map();
     for(const [stop,labels]of arrivals)for(const l of labels){
-      const meters=distance(n.stops[stop],destination)*o.walkFactor;
+      const meters=walkingMeters(n,n.stops[stop],destination,o);
       if(meters<=o.maxWalk+1e-6&&l.walk+meters<=walkBudget&&l.arrival+meters/speed<=limit)insert(all,'destination',{...l,arrival:l.arrival+meters/speed,walk:l.walk+meters,path:[...l.path,walkPath(n.stops[stop],destination,meters,l.arrival,o.walkSpeed)]},ctx,false);
       for(const w of links.get(stop)??[]){if(l.walk+w.meters>walkBudget||l.arrival+w.meters/speed>limit)continue;insert(next,w.stop,{...l,arrival:l.arrival+w.meters/speed,walk:l.walk+w.meters,path:w.meters?[...l.path,walkPath(n.stops[stop],n.stops[w.stop],w.meters,l.arrival,o.walkSpeed)]:l.path},ctx);}
     }
@@ -77,7 +78,7 @@ export function pointJourneys(n,origin,destination,start,o,walkBudget=o.totalWal
 
 export function evaluateActivity(n,home,facility,o,conditions={}){
   validateOptions(o);const unknowns=[],reasons=[];
-  const base={facilityId:facility.id,facilityName:facility.name,conditions,options:o,home,facility,status:'unknown',reasons,unknowns};
+  const base={facilityId:facility.id,facilityName:facility.name,conditions,options:o,home,facility,walkingModel:n.walkingGraph?'OSM道路距離×補正倍率':'直線距離×補正倍率',walkingSource:n.walkingGraph?.meta??null,status:'unknown',reasons,unknowns};
   if(conditions.acceptance==='no')return {...base,status:'not_met',reasons:['この用事の受入れ条件を満たさない（入力値）']};
   if(o.wheelchair&&conditions.entry==='no')return {...base,status:'not_met',reasons:['施設入口の車いす条件を満たさない（入力値）']};
   const opening=conditions.open?seconds(conditions.open+':00'):null,closing=conditions.close?seconds(conditions.close+':00'):null;
@@ -87,14 +88,15 @@ export function evaluateActivity(n,home,facility,o,conditions={}){
     const earliest=Math.max(out.arrival,o.activityFrom,opening??0),latest=Math.min(o.activityTo,(closing??86400)-o.dwell*60,o.deadline-o.dwell*60);
     if(earliest>latest)continue;activityPossible=true;
     const begins=new Set([earliest,latest]);
-    for(const t of n.trips)for(const c of t.calls){if(c.pickup_type==='1')continue;const meters=distance(facility,n.stops[c.stopKey])*o.walkFactor;if(meters>o.maxWalk)continue;const candidate=c.departure-meters/(o.walkSpeed*1000/3600)-o.dwell*60;if(candidate>=earliest&&candidate<=latest)begins.add(candidate);}
+    for(const t of n.trips)for(const c of t.calls){if(c.pickup_type==='1')continue;const meters=walkingMeters(n,facility,n.stops[c.stopKey],o);if(meters>o.maxWalk)continue;const candidate=c.departure-meters/(o.walkSpeed*1000/3600)-o.dwell*60;if(candidate>=earliest&&candidate<=latest)begins.add(candidate);}
     let count=0;for(const begin of [...begins].sort((a,b)=>a-b)){if(++count>80){incomplete=true;break;}const end=begin+o.dwell*60;
       const backSearch=pointJourneys(n,facility,home,end,o,o.totalWalk-out.walk);incomplete||=backSearch.truncated||backSearch.unsupported;
       for(const back of backSearch.journeys){if(back.arrival>o.deadline)continue;const candidate={outbound:out,inbound:back,begin,end,homeAt:back.arrival,walk:out.walk+back.walk,uncertain:out.uncertain+back.uncertain};if(!best||candidate.uncertain<best.uncertain||candidate.uncertain===best.uncertain&&(candidate.homeAt<best.homeAt||candidate.homeAt===best.homeAt&&candidate.walk<best.walk))best=candidate;}
     }
   }
-  if(!best){const reason=!departureSearch.journeys.length?'この時刻・徒歩条件で、行きの経路が見つからない':!activityPossible?'指定時間帯の用事・滞在時間が収まらない':'用事の後、指定時刻までの帰りの経路が見つからない';return {...base,reasons:[reason],searchIncomplete:incomplete,unknowns:['未収録の交通・道路条件を含めた代替手段は未確認',...(n.excluded?['算定対象外の便あり']:[]),...(incomplete?['探索の一部が未完了']:[])]};}
+  if(!best){const reason=!departureSearch.journeys.length?'この時刻・徒歩条件で、行きの経路が見つからない':!activityPossible?'指定時間帯の用事・滞在時間が収まらない':'用事の後、指定時刻までの帰りの経路が見つからない';return {...base,reasons:[reason],searchIncomplete:incomplete||!!n.walkingGraph,unknowns:['未収録の交通・道路条件を含めた代替手段は未確認',...(n.excluded?['算定対象外の便あり']:[]),...(incomplete?['探索の一部が未完了']:[])]};}
   unknowns.push(...best.outbound.unknowns,...best.inbound.unknowns);
+  if(n.walkingGraph){for(const trip of [best.outbound,best.inbound])for(const leg of trip.path)if(leg.mode==='walk'){const route=n.walkingGraph.route(leg.from,leg.to,o.maxWalk/o.walkFactor,!!o.wheelchair,true);leg.coordinates=route.coordinates;leg.connectorMeters=route.connectorMeters;leg.walkingModel='OSM道路距離×補正倍率';}unknowns.push('OSM道路の現況・敷地内接続・横断・坂・路面・幅員');}
   if(facility.needsCoordinateConfirmation&&!conditions.positionConfirmed)unknowns.push('目的地は公式地図の概略位置・入口位置未確認');
   if(opening===null||closing===null)unknowns.push('当日の営業時間・受付時間');
   if(conditions.acceptance!=='yes')unknowns.push('用事の受入れ・予約枠・利用資格');

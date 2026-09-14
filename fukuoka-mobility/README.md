@@ -53,3 +53,25 @@ node tests/fukuoka-data.mjs
 ```
 
 原典を更新する場合、駅別実績は `--source-zip <S12-25_GML.zip>` で県境抽出から再生成（Shapely）、鉄道統計は `--source-dir <取得資料フォルダー>` で読み取ります（openpyxlの読取専用モード）。ファイル名・表セル・年度の対応はスクリプトに固定し、別年度へ無検証で適用しません。出典と取得ファイルのSHA-256を保存しています。西鉄グループと各社単体、2023〜2025年度、乗車・乗降・人キロの単位を混ぜずに表示します。
+
+### 県外GTFS・医療・道路の再生成
+
+原典ファイルのURL、取得日、版、SHA-256は各catalog・audit・source.jsonに記録しています。佐賀県GTFSの元ZIPを`raw/saga-current.zip`、MHLWの8 ZIPを`raw/`、Geofabrikの元PBFを`raw/kyushu-260913.osm.pbf`に用意します。原典はNOTICE.mdからたどれます。キャッシュはリポジトリ外に置いてください。
+
+```sh
+python scripts/prepare-fukuoka-crossborder.py /path/to/raw
+node scripts/build-fukuoka-transport.mjs /path/to/raw
+python scripts/build-fukuoka-medical.py --raw-dir /path/to/raw
+python scripts/build-fukuoka-osm.py /path/to/raw/kyushu-260913.osm.pbf --cache-dir /path/to/raw
+python scripts/pack-fukuoka-walking.py /path/to/raw/walking-graph.json.gz
+python scripts/build-fukuoka-osm-destinations.py
+python scripts/build-fukuoka-reference-stops.py
+python scripts/build-fukuoka-operators.py
+python scripts/build-fukuoka-catalog.py
+node --test tests/fukuoka-expansion.test.mjs tests/fukuoka-operators.test.mjs tests/fukuoka-statistics.test.mjs
+node tests/fukuoka-data.mjs
+```
+
+OSM抽出にはpyosmium（osmium）・shapely、圧縮にはnumpyを使用します。道路の中間JSON・元道路タグはキャッシュに、公開道路グラフと施設抽出はdata/osmに保存します。MHLWは`--raw-dir`を省略すると同梱した県内原典抽出から再現できます。大きい施設原典・診療時刻はgzipで保存し、診療時刻は選択施設の市町村分だけ読み込みます。
+
+この更新で全件取得が完了したわけではありません。主要3者の全便時刻表・PTD-HSの認証・e-Statのダウンロード制限などの条件はNOTICE.mdと画面に明記しています。未取得を0件にしないこと、県外区間を切断しないこと、他社の便数を混ぜないこと、道路接続を創作しないことを検証します。

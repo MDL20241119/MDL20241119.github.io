@@ -14,9 +14,9 @@ export const dateText=v=>v?String(v).replace(/^(\d{4})(\d{2})(\d{2})$/,'$1-$2-$3
 export const httpURL=v=>{try{const u=new URL(v);return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}};
 export const sourceLink=(url,name)=>httpURL(url)?`<a href="${esc(httpURL(url))}" target="_blank" rel="noopener noreferrer">${esc(name)} ↗</a>`:esc(name);
 export function catalogURL(id){return 'data-catalog.html'+(id?'?dataset='+encodeURIComponent(id):'')+'#catalog';}
-export function usedDatasets(catalog,{sources=[],facilityIds=[],includePopulation=false,includeBoundary=false,allDestinations=false}={}){
+export function usedDatasets(catalog,{kind,sources=[],facilityIds=[],includePopulation=false,includeBoundary=false,allDestinations=false}={}){
  const hashes=new Set(sources.map(s=>s.hash??s.sha256).filter(Boolean)),files=new Set(sources.map(s=>s.file).filter(Boolean)),ids=new Set(facilityIds);
- return catalog.datasets.filter(d=>hashes.has(d.sha256)||(d.scope==='バス時刻表'&&d.localFiles.some(f=>files.has(f.split('/').at(-1))))||d.recordIds?.some(id=>ids.has(id))||allDestinations&&d.scope==='目的地'||includePopulation&&d.id==='population-2020'||includeBoundary&&d.id==='geo-boundaries');
+ return catalog.datasets.filter(d=>hashes.has(d.sha256)||(d.scope==='バス時刻表'&&d.localFiles.some(f=>files.has(f.split('/').at(-1))))||d.recordIds?.some(id=>ids.has(id))||allDestinations&&d.scope==='目的地'||includePopulation&&d.id==='population-2020'||includeBoundary&&d.id==='geo-boundaries'||['access','gaps'].includes(kind)&&d.id==='osm-walking'||kind==='gaps'&&d.id==='reference-unverified-stops');
 }
 export function outcome(r){
  if(!r)return 'INSUFFICIENT_DATA';

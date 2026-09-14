@@ -6,6 +6,7 @@ The generated JSON contains metadata and counts, never a second copy of GIS data
 Unknown source fields stay null. checkedAt is NOT retrievedAt or dataAsOf.
 """
 import collections
+import gzip
 import hashlib
 import json
 from pathlib import Path
@@ -18,7 +19,7 @@ HASHES = {}
 def read(name):
     raw = (ROOT / name).read_bytes()
     HASHES[name] = hashlib.sha256(raw).hexdigest()
-    return json.loads(raw)
+    return json.loads(gzip.decompress(raw) if name.endswith(".gz") else raw)
 
 
 def unique(values):
@@ -83,7 +84,7 @@ def usage(label, url):
 
 gtfs = read('data/gtfs/catalog.json')
 transport = read('data/map-data.json')
-places = read('access/destinations.json') + read('access/shopping.json')
+places = read('access/destinations.json') + read('access/shopping.json') + read('access/osm-destinations.json.gz')
 resources = read('gaps/resources.json')
 geo = read('gaps/data/sources.json')
 boundaries = read('gaps/data/municipalities.geojson')
@@ -119,28 +120,72 @@ place_groups = collections.defaultdict(list)
 for p in places:
     place_groups[p['source']].append(p)
 for source, rows in place_groups.items():
-    shopping = rows[0]['category'] == 'shopping'
-    hospital = rows[0]['category'] == 'hospital'
+    shopping = all(r['category']=='shopping' for r in rows)
+    hospital = source.startswith('厚生労働省')
     id = 'dest-shopping' if shopping else 'dest-hospitals' if source.startswith('厚生労働省') else 'dest-public-' + hashlib.sha256(source.encode()).hexdigest()[:8]
-    cats = ['shopping'] if shopping else ['healthcare'] if hospital else ['resources']
-    if not shopping and not hospital:
-        if any(r['category'] == 'school' for r in rows): cats.append('education')
-        if any(r['category'] == 'clinic' for r in rows): cats.append('healthcare')
+    category_map={'hospital':'healthcare','clinic':'healthcare','dental':'healthcare','maternity':'healthcare','pharmacy':'healthcare','shopping':'shopping','school':'education','childcare':'education','welfare':'welfare','civic':'resources','library':'resources'}
+    cats=unique(category_map[r['category']] for r in rows)
     d = dataset(id, '買物の目的地（公式案内から収録）' if shopping else source, cats[0], categories=cats,
-        provider=source, sourceUrl=one(r.get('sourceUrl') for r in rows), sourceUrls=sources(rows),
+        provider=source, sourceUrl='https://download.geofabrik.de/asia/japan/kyushu.html' if 'OpenStreetMap' in source else one(r.get('sourceUrl') for r in rows), sourceUrls=[{'name':'OSM県内施設の全抽出と各施設の原典URL','url':'https://download.geofabrik.de/asia/japan/kyushu.html'}] if 'OpenStreetMap' in source else sources(rows),
         dataAsOf=one(r.get('dataAsOf') for r in rows), retrievedAt=one(r.get('retrievedAt') for r in rows),
         checkedAt=one(r.get('checkedAt') for r in rows), sourceUpdatedAt=one(r.get('sourceUpdatedAt') for r in rows),
         license=one(r.get('license') for r in rows), licenseUrl=one(r.get('licenseUrl') for r in rows),
         dataClass=None if shopping else 'OPEN', status='PARTIAL', analysisReady='PARTIAL',
         coverage=' / '.join(unique(r['city'] for r in rows)) + '。所在地の収録。全施設・当日の利用可否は未検証。',
-        format='公開案内 → JSON' if shopping else '公開CSV → JSON',
+        format='OSM PBF → JSON gzip' if 'OpenStreetMap' in source else '公開案内 → JSON' if shopping else '公開CSV → JSON',
         processing='公開資料から福岡県内の対象施設と所在地を抜粋。目的別に分類しJSONに整形。',
-        limitations=unique([r.get('dataNote') for r in rows] + ['受付時間・当日の利用資格・入口までの歩行経路は未確認。', '収録なしは施設なしを意味しません。'] + (['公式案内の事実情報。包括的なオープンライセンスは未確認。', '公式地図の中心などによる概略位置を含みます。'] if shopping else [])),
+        limitations=unique([r.get('dataNote') for r in rows] + ['当日の受付・利用資格・入口までの歩行経路は未確認。', '収録なしは施設なしを意味しません。'] + (['公式案内の事実情報。包括的なオープンライセンスは未確認。', '公式地図の中心などによる概略位置を含みます。'] if shopping else [])),
         records=len(rows), recordUnit='施設', valueType='公表施設情報（現況は未確認）',
         recordIds=[r['id'] for r in rows],
         usedFor=[usage('目的地の表示・選択した施設への往復', 'accessibility.html'), usage('選択時：交通空白の往復条件', 'transport-gaps.html')],
-        localFiles=['access/shopping.json'] if shopping else ['access/destinations.json'], layerIds=unique({'hospital':'hospitals','clinic':'clinics','school':'schools','shopping':'shops','civic':'civic','library':'civic'}[r['category']] for r in rows),
+        localFiles=['access/shopping.json'] if shopping else ['access/osm-destinations.json.gz'] if 'OpenStreetMap' in source else ['access/destinations.json'], layerIds=unique({'hospital':'hospitals','clinic':'clinics','dental':'clinics','maternity':'clinics','pharmacy':'pharmacies','childcare':'schools','welfare':'welfare','school':'schools','shopping':'shops','civic':'civic','library':'civic'}[r['category']] for r in rows),
         scope='目的地', positionNote='報告された施設所在地、または公式地図の概略位置。入口・現地精度は未確認。')
+
+medical=read('data/medical-audit.json')
+references=read('gaps/data/reference-stops.json')
+dataset('reference-unverified-stops','時刻表未確認のバス停・駅位置による判定保留','transport',
+    provider='国土交通省 国土数値情報',sourceUrl='https://nlftp.mlit.go.jp/ksj/',dataAsOf='バス停2022年度・鉄道2025年',retrievedAt='2026-09-14',
+    license='CC BY 4.0',licenseUrl='https://nlftp.mlit.go.jp/ksj/other/agreement_01.html',dataClass='OPEN',status='USED',analysisReady='PARTIAL',
+    format='GeoJSON → JSON',records=len(references['stops']),recordUnit='位置レコード',coverage='福岡県内の取得バス停・駅位置資料。現行の時刻表とは未照合。',
+    processing='駅グループは位置で重複除去。近隣に未確認の交通があるときは便数不足・到達不能の断定を保留。',
+    limitations=[references['meta']['note']],localFiles=['gaps/data/reference-stops.json'],
+    usedFor=[usage('交通空白候補の判定保留','transport-gaps.html')],scope='未確認交通の位置資料')
+medical_files=sorted(str(p.relative_to(ROOT)) for p in (ROOT/'access/medical-hours').glob('*.json.gz'))
+for name in medical_files+['data/sources/medical-fukuoka-20260601.json.gz']:
+    HASHES[name]=hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+dataset('medical-source-and-hours','医療施設全原典行・診療科別の曜日時刻・位置未確認一覧','healthcare',
+    provider='厚生労働省 医療情報ネット',sourceUrl='https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html',
+    sourceUrls=[{'name':s['file'],'url':s['url']} for s in medical['sources']],dataAsOf=medical['asOf'],retrievedAt=medical['retrievedAt'],
+    license='公共データ利用規約 第1.0版',licenseUrl='https://www.digital.go.jp/resources/open_data/public_data_license_v1.0',
+    dataClass='OPEN',status='USED',analysisReady='PARTIAL',format='8 CSV ZIP → 福岡県行のJSON gzip・通常週の診療時刻',
+    records=sum(c['sourceRows'] for c in medical['counts'].values()),recordUnit='施設原典行',
+    coverage=f"2026年6月1日公表の福岡県コード40の全施設行。位置を確認できた{medical['located']}件を地図に表示。",
+    processing='原典の列・値・行番号を保存。位置等が未確認の321件は一覧で公開。診療科・曜日・時間帯を施設詳細に接続。',
+    limitations=['通常週の時刻は往復の条件へ自動適用していません。祝日・特定週・臨時休診・現在の受入は個別確認。','位置等を確認できない行は地図・経路計算に使いません。','収録の完全性はこの公表版の福岡県行に限り、現在の全施設の存在・営業を保証しません。'],
+    localFiles=['data/medical-audit.json','data/sources/medical-fukuoka-20260601.json.gz']+medical_files,
+    usedFor=[usage('施設の公表時刻・位置未確認の全件一覧','accessibility.html#sources')],scope='公表版の県内全施設行')
+
+osm=read('data/osm/source.json');osm_audit=read('data/osm/facility-audit.json')
+road_manifest=read('data/osm/walking-graph.json')
+road_files=['data/osm/walking-graph.json']+['data/osm/'+p['file'] for p in road_manifest['parts']]
+for name in road_files+['data/osm/facilities.json.gz']:
+    HASHES[name]=hashlib.sha256((ROOT/name).read_bytes()).hexdigest()
+dataset('osm-walking','OSM歩行道路・道路に沿う距離計算','terrain',provider=osm['provider'],sourceUrl=osm['url'],
+    sourceUrls=[{'name':'九州の原典PBF', 'url':osm['downloadUrl']}],dataAsOf=osm['dataAsOf'],retrievedAt=osm['retrievedAt'],
+    license=osm['license'],licenseUrl=osm['licenseUrl'],dataClass='OPEN',status='USED',analysisReady='PARTIAL',format='OSM PBF → 有向道路グラフ gzip',
+    records=osm['wayCount'],recordUnit='OSM道路way',coverage='福岡県行政界と約3kmの県境周辺。OSMに収録された歩行道路。',
+    processing='原典の共有ノードで接続。歩行禁止・私有・条件付き区間を除外。出発地・目的地は75m以内の道路ノードへ直線で接続。',
+    limitations=osm['notes']+['接続できない地点は道路未確認として扱い、直線距離で通行可能とは仮定しません。','地点と道路をつなぐ最大75mの区間、歩道・横断・入口は未検証。'],
+    localFiles=['data/osm/source.json']+road_files,valueType='OSM道路の距離（現況未確認）',layerIds=['walking-roads'],
+    usedFor=[usage('徒歩区間・乗換徒歩・施設への往復','accessibility.html'),usage('道路距離に基づく停留所到達条件','transport-gaps.html')],scope='県境周辺を含む歩行道路')
+dataset('osm-facility-source','OSM生活施設の原典抽出・重複照合','resources',categories=['resources','healthcare','shopping','welfare','education'],
+    provider=osm['provider'],sourceUrl=osm['url'],dataAsOf=osm['dataAsOf'],retrievedAt=osm['retrievedAt'],license=osm['license'],licenseUrl=osm['licenseUrl'],
+    dataClass='OPEN',status='USED',analysisReady='PARTIAL',format='OSM PBF → JSON gzip',records=osm_audit['sourceRecords'],recordUnit='施設位置レコード',
+    coverage='県内の名称付きnode・wayの医療、買物、学校、保育、福祉、公共施設。',
+    processing=f"原典タグを保存。名称・市町村・100m以内の位置が一致する{len(osm_audit['duplicates'])}件を照合し、{osm_audit['addedRecords']}件を追加。",
+    limitations=['relation施設は未抽出。全施設の網羅性は未確認。','別表記の同一施設が残る可能性があります。原典IDを維持。'],
+    localFiles=['data/osm/facilities.json.gz','data/osm/facility-audit.json','access/osm-destinations.json.gz'],
+    usedFor=[usage('生活施設の表示・選択先への往復','accessibility.html')],scope='OSMの県内生活施設')
 
 b = geo['boundary']
 dataset('geo-boundaries', b['title'], 'terrain', provider=b['provider'], sourceUrl=b['url'], dataAsOf=b.get('asOf'), retrievedAt=b.get('retrievedAt'),
@@ -259,15 +304,14 @@ dataset('operator-finance','9鉄道事業者と西鉄グループ・年間輸送
     localFiles=['data/operator-finance.json',finance_stats['sourceFacts']],scope='県外を含む事業全体の実績')
 
 missing = [
-    ('elderly','高齢者人口','population','2020年の高齢者人口は既存抽出データに含まれません。将来推計で補いません。'),
-    ('rail-timetable','鉄道時刻表','transport','鉄道を含む往復判定は未実装。'),
+    ('elderly','高齢者人口','population','e-Statの2020年500m人口・世帯（T001141）を確認。配布先が取得環境のURL制限で拒否され未取得。将来推計で補いません。'),
+    ('rail-timetable','鉄道の全便時刻表','transport','鉄道の全便データを未取得。西鉄電車・JR九州等の駅位置や実績を時刻表の代用にしません。'),
     ('taxi','タクシーの供給・予約可能台数','transport','予約可能台数・現時点の供給状況は未収録。'),
-    ('roads','歩行道路・歩道段差','terrain','現在の徒歩計算は直線距離に補正係数を掛けた概算です。'),
+    ('road-conditions','歩道段差・道路の現況確認','terrain','OSM道路を反映。横断の可否・段差・幅員・現在の通行可否の完全性は未確認です。'),
     ('elevation','標高・傾斜','terrain','実際の坂道・勾配を計算には反映していません。'),
-    ('pharmacies','薬局の所在地・営業時間','healthcare','薬局の一覧は未収録。'),
-    ('welfare','福祉施設・通いの場の一覧','welfare','移動支援事例の収録と、福祉施設・通いの場の網羅は別です。'),
+    ('welfare','福祉施設・通いの場の網羅','welfare','OSMの福祉施設と移動支援事例を反映。指定施設名簿・通いの場の網羅は未完了。'),
     ('mobile-shopping','移動販売の運行日・区域','shopping','店舗の所在地や買物送迎と、移動販売の運行情報は別です。'),
-    ('childcare','保育施設・学校の網羅的な一覧','education','学校は自治体公表データの一部のみ。'),
+    ('childcare','保育施設・学校の網羅的な一覧','education','自治体公表データとOSMの学校・保育施設を反映。認可・認可外を含む施設名簿の網羅は未完了。'),
     ('tourism','観光施設の網羅的な一覧・時間帯別の観光需要','tourism','施設の網羅的な一覧、実測OD・時間帯別需要は未収録。'),
     ('flood','洪水想定区域・交通事故','safety','洪水時や災害時に通行できるかの判定は未実装。'),
     ('vehicles','送迎の共用可否・車両・運転手','resources','公開事例から車両の空き時間や一般住民への開放を推定しません。'),
@@ -303,9 +347,11 @@ for m in municipalities:
     counts={
         'population':(mesh_counts[code]['knownPopulation'],'人口値を持つ500m区域','population-2020'),
         'transport':(stop_count,'行政界内の収録バス停ID',None),
-        'healthcare':(sum(p['category'] in ['hospital','clinic'] for p in city_places),'病院・診療所の施設',None),
+        'healthcare':(sum(p['category'] in ['hospital','clinic','dental','maternity','pharmacy'] for p in city_places),'医療施設・薬局',None),
         'shopping':(sum(p['category']=='shopping' for p in city_places),'買物の施設','dest-shopping'),
-        'education':(sum(p['category']=='school' for p in city_places),'学校の施設',None),
+        'education':(sum(p['category'] in ['school','childcare'] for p in city_places),'学校・保育施設',None),
+        'welfare':(sum(p['category']=='welfare' for p in city_places),'福祉施設',None),
+        'terrain':(1,'行政界（県内道路データも収録）','osm-walking'),
         'resources':(len(city_res),'送迎・移動支援事例',None),
         'tourism':(0,'観光の指標',None),
         'bus':(stop_count,'行政界内の収録バス停ID',None),
@@ -320,9 +366,9 @@ for m in municipalities:
         # Zero bundled records is NOT proof of no service, nor of no external open dataset.
         state='PARTIAL' if n else 'NOT_AVAILABLE'
         evidence=(f'{n} {unit}を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。' if n else '対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。')
-        if k=='terrain':evidence='行政界のみ収録。歩行道路・標高・傾斜は未収録。'
+        if k=='terrain':evidence='行政界・OSM歩行道路を収録。標高・傾斜・道路の現況確認は未収録。'
         if k=='tourism':evidence=f'{n}指標を観光専用ページに収録。対象年・系列を保持。観光施設の網羅的な一覧・時間帯別需要は未収録。' if n else 'この市町の観光指標は未収録。観光施設や需要がないことを意味しません。'
-        if k=='welfare':evidence='福祉施設・通いの場の一覧は未収録。移動支援事例とは区別しています。'
+        if k=='welfare':evidence=f'OSMの福祉施設{n}件を反映。全指定施設・通いの場の網羅は未完了。移動支援事例とは区別しています。'
         cells[k]={'status':state,'count':n,'unit':unit,'evidence':evidence,'datasetId':ds}
     gap_rows.append({'code':code,'name':m['name'],'cells':cells,'mesh':mesh_counts[code]})
 
@@ -330,9 +376,10 @@ layer_specs=[
     ('population','人口メッシュ','population',None),('elderly','高齢者人口','population',None),
     ('bus-stops','バス停','transport',len(transport['stops'])),('bus-routes','バス路線','transport',len(transport['shapes'])),
     ('rail','鉄道駅','transport',len(rail['stations']['features'])),('bus-inventory','バス停位置資料・2022年','transport',len(bus_inventory['features'])),('hospitals','病院','healthcare',sum(p['category']=='hospital' for p in places)),
-    ('clinics','診療所','healthcare',sum(p['category']=='clinic' for p in places)),('pharmacies','薬局','healthcare',None),
-    ('shops','スーパー・買物','shopping',sum(p['category']=='shopping' for p in places)),('welfare','福祉施設','welfare',None),
-    ('schools','学校','education',sum(p['category']=='school' for p in places)),('gatherings','通いの場','welfare',None),
+    ('clinics','診療所・歯科・助産所','healthcare',sum(p['category'] in ['clinic','dental','maternity'] for p in places)),('pharmacies','薬局','healthcare',sum(p['category']=='pharmacy' for p in places)),
+    ('shops','スーパー・買物','shopping',sum(p['category']=='shopping' for p in places)),('welfare','福祉施設','welfare',sum(p['category']=='welfare' for p in places)),
+    ('schools','学校・保育施設','education',sum(p['category'] in ['school','childcare'] for p in places)),('gatherings','通いの場','welfare',None),
+    ('walking-roads','歩行道路','terrain',osm['wayCount']),
     ('civic','公共施設・図書館','resources',sum(p['category'] in ['civic','library'] for p in places)),
     ('shuttles','送迎・移動支援','resources',sum(isinstance(r.get('lat'),(int,float)) and isinstance(r.get('lon'),(int,float)) for r in resources)),
     ('elevation','標高','terrain',None),('flood','洪水想定区域','safety',None),('boundaries','行政区域','terrain',len(municipalities))

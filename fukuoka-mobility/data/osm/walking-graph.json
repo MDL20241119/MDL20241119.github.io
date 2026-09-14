@@ -1,0 +1,32 @@
+{
+  "format": "MDLWALK1/gzip-parts",
+  "bytes": 25566149,
+  "sha256": "d0cec0ff3dd3d7d9d9906ee94fa3d94f21a54499260a007117f8adcf9dd60e52",
+  "parts": [
+    {
+      "file": "walking-graph.part01",
+      "bytes": 6291456,
+      "sha256": "4261526376f29a8793a9f36eef4a3959d94951601c45cc77a3235c4e158cd088"
+    },
+    {
+      "file": "walking-graph.part02",
+      "bytes": 6291456,
+      "sha256": "a1df49359c20cbea39050e91ed27d353eb6a31be2c3c821311406183f035530e"
+    },
+    {
+      "file": "walking-graph.part03",
+      "bytes": 6291456,
+      "sha256": "b7a06e94414126f3927b8fea93852cb833b0d8ac4ffd5beb5927bc36497a3b5f"
+    },
+    {
+      "file": "walking-graph.part04",
+      "bytes": 6291456,
+      "sha256": "5a00794b2134c50f2f1c8e01f5f7157f44fffd3d22d8f05d05fa1a4a22a56393"
+    },
+    {
+      "file": "walking-graph.part05",
+      "bytes": 400325,
+      "sha256": "e6af041f56e9243aaa85f90986a98be79e53b3b50a630c92a9246fe878e0217a"
+    }
+  ]
+}

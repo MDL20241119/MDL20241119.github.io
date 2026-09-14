@@ -1,6 +1,7 @@
 import fs from 'node:fs/promises';
 import path from 'node:path';
 import {importGTFS,buildNetwork,supply,validateFeeds} from '../fukuoka-mobility/lab/gtfs.mjs';
+import {scopeFeed} from '../fukuoka-mobility/lab/feed-scope.mjs';
 
 const raw=process.argv[2],root=new URL('../fukuoka-mobility/',import.meta.url);
 const manifest=JSON.parse(await fs.readFile(path.join(raw,'gtfs-manifest.json'),'utf8'));
@@ -21,7 +22,7 @@ function simplifyLine(points,tolerance=15){
 for(const item of manifest.filter(m=>m.downloaded)){
  const buffer=await fs.readFile(path.join(raw,'gtfs',item.file));
  try{
-  const id=item.file.split('__').at(-1).slice(0,8),f=await importGTFS(buffer.buffer.slice(buffer.byteOffset,buffer.byteOffset+buffer.byteLength),item.name,id),t=f.tables;
+  const id=item.file.split('__').at(-1).slice(0,8),f=scopeFeed(await importGTFS(buffer.buffer.slice(buffer.byteOffset,buffer.byteOffset+buffer.byteLength),item.name,id),item),t=f.tables;
   const q=validateFeeds([f]);
   const starts=[...(t.calendar??[]).map(r=>r.start_date),...(t.calendar_dates??[]).filter(r=>r.exception_type==='1').map(r=>r.date)].filter(Boolean);
   const ends=[...(t.calendar??[]).map(r=>r.end_date),...(t.calendar_dates??[]).filter(r=>r.exception_type==='1').map(r=>r.date)].filter(Boolean);
@@ -31,15 +32,19 @@ for(const item of manifest.filter(m=>m.downloaded)){
   reviews.push({file:item.file,errors:q.errors,warnings:q.warnings,issues:q.issues,validFrom,validTo,current});
   // Keep expired source snapshots inspectable without reporting them as today's zero service.
   const m={...item,id,validFrom,validTo,current,analysisReady,retrieved:'2026-09-14',licenseCheckedAt:'2026-09-14',attribution:`出典：${item.provider}／${item.name}`,
-   processing:'公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。',dataStatus:!analysisReady?'invalid':current?'current':'expired'};
+   processing:'公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。'+(item.analysisScope??''),dataStatus:!analysisReady?'invalid':current?'current':'expired'};
   await fs.mkdir(new URL('data/gtfs/',root),{recursive:true});await fs.writeFile(new URL('data/gtfs/'+item.file,root),buffer);
   catalog.push(m);
   const fi=feeds.length,ns=dates.map(d=>buildNetwork([f],d,{includeOvernight:false}));
   const supplies=ns.map(n=>supply(n));const inValidity=dates.map(d=>analysisReady&&!!validFrom&&validFrom<=d&&!!validTo&&d<=validTo);
-  const stopIndex=new Map(),routeIndex=new Map();
-  for(const r of t.routes??[]){routeIndex.set(r.route_id,routes.length);routes.push({id:r.route_id,feedIndex:fi,name:r.route_long_name||r.route_short_name||r.route_id,routeType:r.route_type,trips:ns.map((n,i)=>inValidity[i]?n.trips.filter(tr=>tr.routeId===r.route_id).length:null)})}
-  for(const s of t.stops??[]){if(!Number.isFinite(Number(s.stop_lat))||!Number.isFinite(Number(s.stop_lon))||Number(s.stop_lat)<32.7||Number(s.stop_lat)>34.3||Number(s.stop_lon)<129.9||Number(s.stop_lon)>131.5)continue;
-   stopIndex.set(s.stop_id,stops.length);stops.push({id:s.stop_id,feedIndex:fi,name:s.stop_name,lat:Number(s.stop_lat),lon:Number(s.stop_lon),departures:supplies.map((v,i)=>inValidity[i]?(v.byStop[id+'::'+s.stop_id]?.departures??0):null),routes:[...new Set((t.stop_times??[]).filter(r=>r.stop_id===s.stop_id).map(c=>(t.trips??[]).find(tr=>tr.trip_id===c.trip_id)?.route_id).map(r=>routeIndex.get(r)).filter(r=>r!==undefined))],reach:[0,0,0]});}
+  const stopIndex=new Map(),routeIndex=new Map(),tripRoutes=new Map(t.trips.map(r=>[r.trip_id,r.route_id])),stopRoutes=new Map();
+  for(const r of t.routes??[]){routeIndex.set(r.route_id,routes.length);routes.push({id:r.route_id,feedIndex:fi,agencyId:r.agency_id??t.agency?.[0]?.agency_id??'',name:r.route_long_name||r.route_short_name||r.route_id,routeType:r.route_type,trips:ns.map((n,i)=>inValidity[i]?n.trips.filter(tr=>tr.routeId===r.route_id).length:null)})}
+  for(const c of t.stop_times??[]){if(!stopRoutes.has(c.stop_id))stopRoutes.set(c.stop_id,new Set());const ri=routeIndex.get(tripRoutes.get(c.trip_id));if(ri!==undefined)stopRoutes.get(c.stop_id).add(ri);}
+  const perRouteStop=ns.map((n,i)=>{const result=new Map();if(inValidity[i])for(const trip of n.trips)if(trip.offset===0)for(const c of trip.calls)if(c.pickup&&c.departure>=0&&c.departure<172800){const k=c.stop_id+'|'+routeIndex.get(trip.routeId);result.set(k,(result.get(k)??0)+1);}return result;});
+  const prefStops=item.fukuokaStopIds?new Set(item.fukuokaStopIds):null;
+  for(const s of t.stops??[]){if(!s.stop_lat||!s.stop_lon||!Number.isFinite(Number(s.stop_lat))||!Number.isFinite(Number(s.stop_lon)))continue;
+   if(!item.analysisRouteIds&&(Number(s.stop_lat)<32.7||Number(s.stop_lat)>34.4||Number(s.stop_lon)<129.9||Number(s.stop_lon)>131.5))continue;
+   stopIndex.set(s.stop_id,stops.length);stops.push({id:s.stop_id,feedIndex:fi,name:s.stop_name,lat:Number(s.stop_lat),lon:Number(s.stop_lon),inFukuoka:prefStops?prefStops.has(s.stop_id):true,departures:supplies.map((v,i)=>inValidity[i]?(v.byStop[id+'::'+s.stop_id]?.departures??0):null),routes:[...(stopRoutes.get(s.stop_id)??[])],routeDepartures:Object.fromEntries([...(stopRoutes.get(s.stop_id)??[])].map(ri=>[ri,perRouteStop.map((d,i)=>inValidity[i]?(d.get(s.stop_id+'|'+ri)??0):null)])),reach:[0,0,0]});}
   const shapeGroups=new Map();for(const s of t.shapes??[]){if(!shapeGroups.has(s.shape_id))shapeGroups.set(s.shape_id,[]);shapeGroups.get(s.shape_id).push(s)}
   for(const [sid,points] of shapeGroups){points.sort((a,b)=>Number(a.shape_pt_sequence)-Number(b.shape_pt_sequence));const related=[...new Set((t.trips??[]).filter(tr=>tr.shape_id===sid).map(tr=>routeIndex.get(tr.route_id)))];
    shapes.push({id:sid,feedIndex:fi,routeIndices:related,trips:ns.map((n,i)=>inValidity[i]?n.trips.filter(tr=>tr.shape===sid).length:0),coordinates:simplifyLine(points.map(p=>[Number(p.shape_pt_lat),Number(p.shape_pt_lon)]))});}
@@ -56,6 +61,6 @@ for(let d=0;d<dates.length;d++)for(let oi=0;oi<origins.length;oi++){
  for(const {n,stopIndex} of networks[d])for(const trip of n.trips){let boarded=false;for(const call of trip.calls){const i=stopIndex.get(call.stop_id);if(i===undefined)continue;if(allowed.has(i)&&call.pickup&&call.departure>=32400&&call.departure<=36000)boarded=true;if(boarded&&call.dropoff&&call.arrival<=36000)stops[i].reach[d]|=1<<oi;}}
  origin.reachableNames[d]=new Set(stops.filter(s=>s.reach[d]&(1<<oi)).map(s=>s.name)).size;
 }
-const result={meta:{version:1,analysisDate:'2026-09-14',retrievedAt:'2026-09-14',dates,dateLabels:['2026年9月14日（月）','2026年9月19日（土）','2026年9月20日（日）'],scope:'福岡県内の公開GTFS。県内全交通の網羅ではありません。西鉄バス・JR等の全時刻表は未収録。',realtime:false,scheduleOnly:true,coordinateOrder:'[latitude, longitude]',attribution:'各自治体・運行事業者／BODIK、GTFSデータリポジトリ',departureDefinition:'当日の運行暦・例外日に従うGTFSの通常乗車可能な出発の数。乗客数ではありません。',zeroDefinition:'有効期間内の収録停留所で出発がない場合だけ0。期限外はnull。未収録の交通を0とはしません。',scheduledTripTotals:dates.map((_,i)=>feeds.reduce((n,f)=>n+(f.scheduledTrips[i]??0),0)),currentFeeds:feeds.filter(f=>f.dataStatus==='current').length},feeds,routes,stops,shapes,origins};
+const result={meta:{version:1,analysisDate:'2026-09-14',retrievedAt:'2026-09-14',dates,dateLabels:['2026年9月14日（月）','2026年9月19日（土）','2026年9月20日（日）'],scope:'福岡県の公開GTFSと、佐賀県配布の福岡接続22路線（県外区間を含む）。県内全交通の網羅ではありません。西鉄バス・西鉄電車・JR九州等の全時刻表は未収録。',realtime:false,scheduleOnly:true,coordinateOrder:'[latitude, longitude]',attribution:'各自治体・運行事業者／BODIK、GTFSデータリポジトリ、佐賀県GTFS',departureDefinition:'当日の運行暦・例外日に従うGTFSの通常乗車可能な出発の数。乗客数ではありません。',zeroDefinition:'有効期間内の収録停留所で出発がない場合だけ0。期限外はnull。未収録の交通を0とはしません。',scheduledTripTotals:dates.map((_,i)=>feeds.reduce((n,f)=>n+(f.scheduledTrips[i]??0),0)),currentFeeds:feeds.filter(f=>f.dataStatus==='current').length},feeds,routes,stops,shapes,origins};
 await fs.writeFile(new URL('data/gtfs/catalog.json',root),JSON.stringify(catalog,null,2));await fs.writeFile(new URL('data/map-data.json',root),JSON.stringify(result));await fs.writeFile(new URL('data/gtfs-validation.json',root),JSON.stringify(reviews,null,2));
 console.log({feeds:feeds.length,current:result.meta.currentFeeds,stops:stops.length,shapes:shapes.length,totals:result.meta.scheduledTripTotals});

@@ -60,7 +60,7 @@ def get(name, mode):
         if mode == 'ferry': display += '営渡船' if key.endswith('市') else '営渡船'
         rows[mode, key] = dict(id='op-' + hashlib.sha256((mode + ':' + key).encode()).hexdigest()[:12],
             name=display, sourceNames=[], mode=mode, busIndices=[], stationIndices=[], lineIndices=[],
-            feedIds=[], routes=[], timetable=None, realtime=None, ridership=None, costs=None,
+            feedIds=[], routeIndices=[], gtfsStopIndices=[], routes=[], timetable=None, realtime=None, ridership=None, costs=None,
             officialUrl=None, officialTimetableUrl=None, missingReason=None)
     row = rows[mode, key]
     if name not in row['sourceNames']: row['sourceNames'].append(name)
@@ -82,25 +82,35 @@ for f in feeds:
         def table(name):
             return list(csv.DictReader(io.StringIO(z.read(paths[name]).decode('utf-8-sig')))) if name in paths else []
         agencies, routes = table('agency.txt'), table('routes.txt')
+        if f.get('analysisRouteIds'):
+            routes = [r for r in routes if r['route_id'] in f['analysisRouteIds']]
+        def route_mode(r):
+            return 'ferry' if r['route_type'] == '4' else 'rail' if r['route_type'] in ('0','1','2','5','6','7') else 'bus'
         for a in agencies:
             own = [r for r in routes if r.get('agency_id') == a.get('agency_id') or (len(agencies) == 1 and not r.get('agency_id'))]
-            for mode in sorted({'ferry' if r['route_type'] == '4' else 'rail' if r['route_type'] in ('0','1','2','5','6','7') else 'bus' for r in own}):
+            for mode in sorted({route_mode(r) for r in own}):
                 row = get(a['agency_name'], mode)
                 if f['id'] not in row['feedIds']: row['feedIds'].append(f['id'])
-                row['routes'].extend(r.get('route_long_name') or r.get('route_short_name') or r['route_id'] for r in own)
+                own_mode = [r for r in own if route_mode(r) == mode]
+                own_ids = {r['route_id'] for r in own_mode}
+                row['routes'].extend(r.get('route_long_name') or r.get('route_short_name') or r['route_id'] for r in own_mode)
+                row['routeIndices'].extend(i for i,r in enumerate(transport['routes']) if transport['feeds'][r['feedIndex']]['id'] == f['id'] and r['id'] in own_ids)
     source = next(x for x in transport['feeds'] if x['id'] == f['id'])
     feed_details.append({k: source[k] for k in ['id','name','validFrom','validTo','dataStatus','scheduledTrips','sourceUrl','downloadUrl','license','licenseUrl','sha256']})
 
 source_by_id = {f['id']: f for f in feed_details}
 for (mode, key), row in rows.items():
     row['routes'] = sorted(set(row['routes']))
-    row['gtfsStopCount'] = sum(1 for s in transport['stops'] if transport['feeds'][s['feedIndex']]['id'] in row['feedIds'])
+    own_route_indices = set(row['routeIndices'])
+    row['gtfsStopIndices'] = [i for i,s in enumerate(transport['stops']) if own_route_indices.intersection(s['routes'])]
+    row['gtfsStopCount'] = len(row['gtfsStopIndices'])
+    row['fukuokaGtfsStopCount'] = sum(transport['stops'][i].get('inFukuoka',True) for i in row['gtfsStopIndices'])
     row['stationCount'] = len({rail['stations']['features'][i]['properties']['N02_005g'] for i in row['stationIndices']})
     current = [source_by_id[i] for i in row['feedIds'] if source_by_id[i]['dataStatus'] == 'current']
     if current:
         row['timetable'] = {'status':'partial', 'feedCount':len(current), 'dates':transport['meta']['dates'],
-            'scheduledTrips':[sum(f['scheduledTrips'][d] or 0 for f in current) for d in range(3)],
-            'note':'収録した公開ファイルの路線のみ。事業者の全路線・全便の網羅は未確認。'}
+            'scheduledTrips':[sum(transport['routes'][i]['trips'][d] or 0 for i in row['routeIndices']) for d in range(3)],
+            'note':'収録した当該事業者の路線のみ（県外区間を含む）。事業者の全路線・全便の網羅は未確認。'}
         row['status'] = 'timetable'
     elif row['feedIds']:
         row['status'] = 'unusable'
@@ -138,8 +148,6 @@ for (mode, key), row in rows.items():
                 'url':'operators.html?operator='+row['id']+'#operator-statistics','note':scope}
     if mode == 'bus' and key == '昭和自動車':
         row['officialUrl'] = 'https://www.showa-bus.jp/'
-        row['acquisitionSource'] = 'http://opendata.sagabus.info/'
-        row['missingReason'] = '福岡路線を含む佐賀側GTFSの追加取得が保留。時刻表は未反映。取得後に福岡県内の対象路線・有効期間・利用条件の検証が必要。'
     if mode == 'bus' and key == '北九州市':
         row['acquisitionSource'] = 'https://www.ptd-hs.jp/'
         row['missingReason'] = 'PTD-HSに2027年2月28日までの時刻表配信を確認。利用登録の審査・APIキー発行が必要。現時点では未取得。'
@@ -155,7 +163,6 @@ result = {'schemaVersion':1,'checkedAt':'2026-09-14','coverageComplete':False,
     'missingCategories':[
         {'name':'西鉄バス・西鉄電車・JR九州','status':'公表実績・収支を追加。時刻表・往復計算・遅延情報は未反映','reason':'公開検索画面の閲覧と分析用データの接続は別です。全便の時刻表ファイル、再利用・配信条件、有効期間を確認できていないため、経路・交通空白判定には使いません。停留所別・時間帯別ODと県内路線別原価も未取得。'},
         {'name':'北九州市営バスの時刻表','status':'配信あり・利用登録待ち','reason':'PTD-HSの福岡県一覧で静的データと2027年2月28日の期限を確認。配信元の登録審査、APIキー発行、利用条件の確認が必要。資料・申請先：https://www.ptd-hs.jp/'},
-        {'name':'昭和バスの時刻表','status':'追加取得が保留','reason':'福岡・糸島の運行は公式案内で確認。福岡路線を含む佐賀側配布ファイルを取得し、県内路線・有効期間・利用条件を確認する作業が残っています。'},
         {'name':'現行の県内全交通事業者名簿','status':'全件照合は未完了','reason':'2022年度のバス停資料、2025年の鉄道資料、取得GTFSに現れない事業者は個別に列挙できていません。掲載数は県内の事業者総数ではありません。'},
         {'name':'タクシー各社','status':'各社名簿・配車供給は未反映','reason':'公開GTFSに含まれる乗合タクシー路線等のみ。一覧の会社についても通常のタクシー予約可能台数・運行区域は未取得。'},
         {'name':'旅客船・フェリー','status':'公営渡船の一部のみ','reason':'福岡市・宗像市・新宮町の収録GTFSを反映。北九州市営渡船は期限外・検証エラー。その他の会社・航路は網羅していません。'},

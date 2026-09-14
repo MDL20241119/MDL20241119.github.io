@@ -488,5 +488,14 @@
     "validFrom": "20201001",
     "validTo": "20270331",
     "current": true
+  },
+  {
+    "file": "saga-fukuoka__dd522638.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260907",
+    "validTo": "20270907",
+    "current": true
   }
 ]

@@ -37,17 +37,17 @@ async function drawMap(){
   if(!map){map=L.map('operator-map',{preferCanvas:true,scrollWheelZoom:false,minZoom:5}).setView([33.6,130.6],9);const tile=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxNativeZoom:18,maxZoom:18,attribution:'背景：地理院タイル｜国土数値情報・各GTFS公開元'}).addTo(map);tile.on('tileerror',()=>{$('#operator-tile-warning').hidden=false});tile.on('tileload',()=>{$('#operator-tile-warning').hidden=true});layers=L.featureGroup().addTo(map);}
   layers.clearLayers();
   const dot=(coords,label,body,color)=>L.circleMarker([coords[1],coords[0]],{radius:4,color,weight:.6,fillOpacity:.75}).bindTooltip(esc(label)).bindPopup(`<b>${esc(label)}</b><br>${body}`,{maxWidth:300}).addTo(layers);
-  const wantedFeeds=new Map();
+  const wantedRoutes=new Map();
   for(const r of rows){
-    for(const id of r.feedIds)wantedFeeds.set(id,r);
+    for(const i of r.routeIndices)wantedRoutes.set(i,r);
     for(const i of r.busIndices){const f=bus.features[i],p=f.properties;dot(f.geometry.coordinates,p.P11_001,`${esc(r.name)}<br>停留所位置資料：2022年度<br><strong>この位置資料の運行本数・現況は未確認</strong><br>${esc(p.P11_003_01)}`,'#a46b39');}
     const seen=new Set();for(const i of r.stationIndices){const f=rail.stations.features[i],p=f.properties;if(seen.has(p.N02_005g))continue;seen.add(p.N02_005g);dot(pointOf(f),p.N02_005,`${esc(r.name)} / ${esc(p.N02_003)}<br>駅位置：2025年12月31日<br><strong>時刻表・往復計算は未反映</strong>`,'#2857a0');}
     if(r.lineIndices.length)L.geoJSON({type:'FeatureCollection',features:r.lineIndices.map(i=>rail.lines.features[i])},{style:{color:'#2857a0',weight:2,opacity:.55},interactive:false}).addTo(layers);
   }
-  for(const s of geo.stops){const f=geo.feeds[s.feedIndex],r=wantedFeeds.get(f.id);if(!r)continue;dot([s.lon,s.lat],s.name,`${esc(r.name)}<br>${esc(f.name)}<br>${esc(geo.meta.dateLabels[0])}：${s.departures[0]===null?'未確認・計算に不使用':fmt(s.departures[0])+'本（運行予定）'}<br>収録路線のみ。リアルタイムではありません。`,s.departures[0]===null?'#777':'#227554');}
-  for(const s of geo.shapes)if(wantedFeeds.has(geo.feeds[s.feedIndex].id))L.polyline(s.coordinates,{color:'#227554',weight:1.4,opacity:.4,interactive:false}).addTo(layers);
+  for(const s of geo.stops){const f=geo.feeds[s.feedIndex],owners=[...new Set(s.routes.map(i=>wantedRoutes.get(i)).filter(Boolean))];if(!owners.length)continue;dot([s.lon,s.lat],s.name,`${esc(owners.map(r=>r.name).join('・'))}<br>${esc(f.name)}<br>${s.inFukuoka===false?'県外の接続区間<br>':''}${s.routes.some(i=>wantedRoutes.has(i)&&(s.routeDepartures?.[i]?.[0]??null)===null)?'有効期間外・便数未確認':'基準日の選択事業者の出発：'+fmt(s.routes.filter(i=>wantedRoutes.has(i)).reduce((n,i)=>n+(s.routeDepartures[i][0]??0),0))+'便'}（乗客数ではありません）。`,'#227554');}
+  for(const s of geo.shapes)if(s.routeIndices.some(i=>wantedRoutes.has(i)))L.polyline(s.coordinates,{color:'#227554',weight:1.4,opacity:.4,interactive:false}).addTo(layers);
   const b=layers.getBounds();if(b.isValid())map.fitBounds(b,{padding:[20,20],maxZoom:13});else map.setView([33.6,130.6],9);
-  const n=summarize(rows);$('#operator-map-status').textContent=`表示：${fmt(rows.length)}主体／バス停位置資料 ${fmt(n.bus)}点／駅グループ ${fmt(n.stations)}件／取得GTFSの乗降地点 ${fmt(n.stops)}点。位置資料とGTFSには重複があります。`;
+  const n=summarize(rows);$('#operator-map-status').textContent=`表示：${fmt(rows.length)}主体／バス停位置資料 ${fmt(n.bus)}点／駅グループ ${fmt(n.stations)}件／取得GTFSの乗降地点 ${fmt(n.stops)}点（県外区間・共同地点の各社計上を含む）。位置資料とGTFSには重複があります。`;
 }
 function exportCSV(){const columns=['事業者・公表主体','交通種別','時刻表反映状況','未反映理由・収録範囲','バス停位置2022年度','駅グループ2025年末','GTFS乗降地点','乗降実績','費用','リアルタイム','確認日','名簿網羅','出典'];const values=rows.map(r=>[r.name,MODES[r.mode],STATUS[r.status].label,r.missingReason??r.timetable.note,r.busIndices.length||'',r.stationCount||'',r.gtfsStopCount||'',r.ridership?.period??'未反映',r.costs?.period??'未反映','未反映',data.checkedAt,'県内全事業者は未網羅',[...(r.busIndices.length?[data.sources.bus.url]:[]),...(r.stationCount?[data.sources.rail.url]:[]),...data.feeds.filter(f=>r.feedIds.includes(f.id)).map(f=>f.sourceUrl)].join(' | ')]);const url=URL.createObjectURL(new Blob([csvText([columns,...values])],{type:'text/csv;charset=utf-8'}));const a=document.createElement('a');a.href=url;a.download='fukuoka-operator-coverage.csv';a.click();setTimeout(()=>URL.revokeObjectURL(url),1000);}
 async function start(){

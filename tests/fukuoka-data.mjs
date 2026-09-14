@@ -1,4 +1,5 @@
 import fs from 'node:fs/promises';
+import {gunzipSync} from 'node:zlib';
 import assert from 'node:assert/strict';
 import {createHash} from 'node:crypto';
 import {importGTFS,buildNetwork,supply} from '../fukuoka-mobility/lab/gtfs.mjs';
@@ -6,12 +7,12 @@ import {defaultProfile,validateProfile,prepareGapNetwork,measureSupply} from '..
 import {exampleComparison} from '../fukuoka-mobility/lab/example.mjs';
 import {calculateBC,forecastSeries} from '../fukuoka-mobility/calculations.js';
 import {isFukuokaAreaPoint} from '../fukuoka-mobility/assets/geography.mjs';
-const root=new URL('../fukuoka-mobility/',import.meta.url),read=async p=>JSON.parse(await fs.readFile(new URL(p,root),'utf8'));
-const [catalog,geo,boundary,analysis,facilities,shops,metadata]=await Promise.all(['data/gtfs/catalog.json','data/map-data.json','gaps/data/municipalities.geojson','data/analysis.json','access/destinations.json','access/shopping.json','data/catalog.json'].map(read));
+const root=new URL('../fukuoka-mobility/',import.meta.url),read=async p=>{const b=await fs.readFile(new URL(p,root));return JSON.parse(p.endsWith('.gz')?gunzipSync(b):b)};
+const [catalog,geo,boundary,analysis,facilities,shops,metadata,osm]=await Promise.all(['data/gtfs/catalog.json','data/map-data.json','gaps/data/municipalities.geojson','data/analysis.json','access/destinations.json','access/shopping.json','data/catalog.json','access/osm-destinations.json.gz'].map(read));
 assert.equal(boundary.features.length,60);assert.equal(analysis.municipal_population.length,60);assert.equal(analysis.municipal_population.reduce((v,p)=>v+p.population,0),5135214);
 assert.equal(analysis.commute_od.filter(x=>x.level==='ward').length,49);assert.equal(analysis.stop_actuals.length,40);assert.equal(analysis.expenses.reduce((v,e)=>v+e.yen,0),analysis.finance[0].cost);
-assert.equal(metadata.overview.destinations,facilities.length+shops.length);assert(shops.length>100);assert.equal(new Set(metadata.datasets.map(d=>d.id)).size,metadata.datasets.length);
-for(const f of [...facilities,...shops]){assert(f.municipalityCode.startsWith('40'));assert(f.lat>32.7&&f.lat<34.4&&f.lon>129.9&&f.lon<131.5);assert(f.sourceUrl.startsWith('https://'));}
+assert.equal(metadata.overview.destinations,facilities.length+shops.length+osm.length);assert(shops.length>100);assert.equal(new Set(metadata.datasets.map(d=>d.id)).size,metadata.datasets.length);
+for(const f of [...facilities,...shops,...osm]){assert(f.municipalityCode.startsWith('40'));assert(f.lat>32.7&&f.lat<34.4&&f.lon>129.9&&f.lon<131.5);assert(f.sourceUrl.startsWith('https://'));}
 const selected=catalog.filter(f=>f.current&&f.analysisReady);validateProfile(defaultProfile('40206',selected.map(f=>f.file)));
 assert.equal(catalog.length,geo.feeds.length);assert.equal(geo.meta.currentFeeds,selected.length);
 for(const f of catalog){const b=await fs.readFile(new URL('data/gtfs/'+f.file,root));assert.equal(createHash('sha256').update(b).digest('hex'),f.sha256);}
@@ -28,4 +29,4 @@ function checkCoordinates(coordinates){
 }
 for(const m of boundary.features){checkCoordinates(m.geometry.coordinates);for(const res of [500,1000]){const mesh=await read('gaps/data/'+m.properties.code+'-'+res+'.geojson');assert(mesh.features.length>0);assert.equal(new Set(mesh.features.map(f=>f.id)).size,mesh.features.length);}}
 for(const point of [null,{lat:NaN,lon:130.5},{lat:34,lon:Infinity},{lat:0,lon:0},{lat:33.6,lon:132}])assert.equal(isFukuokaAreaPoint(point),false);
-console.log(`PASS: 60 municipalities, ${catalog.length} GTFS / ${selected.length} current, ${facilities.length+shops.length} destinations; census, source hashes, OD, financial reconciliation, scenarios and Fukuoka profile validation.`);
+console.log(`PASS: 60 municipalities, ${catalog.length} GTFS / ${selected.length} current, ${facilities.length+shops.length+osm.length} destinations; census, source hashes, OD, financial reconciliation, scenarios and Fukuoka profile validation.`);
