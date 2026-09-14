@@ -62,3 +62,5 @@ body.atlas.page-operators {color:#171717;background:#fff1f5}
 .finance-table td:not(:first-child){font-variant-numeric:tabular-nums}
 #station-source{margin:20px 0 34px}
 @media(max-width:700px){.stats-filters{grid-template-columns:1fr}}
+
+.priority-grid{grid-template-columns:repeat(4,minmax(0,1fr))}.priority-card a{display:block;margin-top:10px}.priority-card small{display:block}@media(max-width:1100px){.priority-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:650px){.priority-grid{grid-template-columns:1fr}}

@@ -3,8 +3,8 @@
   "title": "福岡県交通空白を見つけて解消を考えるアクセシビリティマップ",
   "generator": "scripts/build-fukuoka-catalog.py",
   "sourceHashes": {
-    "data/gtfs/catalog.json": "efd3d610c8b8e6849747e248665e38b1b5a5ccbb87a687e9b65c5b2c4f7b8415",
-    "data/map-data.json": "7e08652284a4dadc63039eeab8d798b32d411cc77b64181b9b80260f119445fd",
+    "data/gtfs/catalog.json": "d815721f6093da2e8b685abd0ebd855bd6385cc7616054e12167ad03fbfbc82e",
+    "data/map-data.json": "fafff71661b5b4b7aa31d49830e98a71f35122ac886307d4a00a1120f72d583f",
     "access/destinations.json": "ef90ba01533cf8a138f12246ba1c95c336693551594b14da4a690f056544f6eb",
     "access/shopping.json": "e79e0cd8b8fb406fd0831f7b366405e1b83dbc7db832a0fd6d5f1dc8dc35d172",
     "access/osm-destinations.json.gz": "1563cc90300d2804504406ddef59588d24e02107739bb5931f6da8d15955a1b3",
@@ -60,6 +60,10 @@
     "data/gtfs/yanagawacity-YanagawaCityCommunityBus__129c200d.zip": "b2711f99f60400d051377d30a17409a4241a87d3a358f4b883852103e587a875",
     "data/gtfs/402052_27__4820885f.zip": "05bb4ef7699b988f46ff04090e9ba1ba7c6544c0d8de94a37b2004782b73da9d",
     "data/gtfs/saga-fukuoka__dd522638.zip": "dd522638eb9686e99d6b3350424bdbb6adb2d8efd32397af1c4bd93049072ef2",
+    "data/gtfs/fukuoka-subway__b9f8e012.zip": "b9f8e012e3eb76c5a176b6fc95f62b66bd11820c65e6daffb09d7cb5f7ac2f5c",
+    "data/gtfs/gtfs10_highway02oitakotsu-fukuoka__9ed291ed.zip": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
+    "data/gtfs/gtfs10_highway03kamenoi-fukuoka__c7c02367.zip": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
+    "data/gtfs/gtfs10_highway04hita-fukuoka__a5f3cbf7.zip": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
     "data/medical-audit.json": "454d0b673b047a764bce805ce7bf0a88b4c7124da9f17c29d416bfbbf9eb4a05",
     "gaps/data/reference-stops.json": "ce318269d0bcaa69e550644000b3e277b76e9a18f542b3aad9b4785b859d19e1",
     "access/medical-hours/40000.json.gz": "f4d38b02eaaf06b738546924701977f7f0bf8235e51a976e7b714037279e0a21",
@@ -255,10 +259,10 @@
     "gaps/data/40647-1000.geojson": "3506a2b38cfbf805d8ddf7748359de48cd67dbeab6dabf0da1bd69e0efc4b376",
     "data/rail.json": "317b82308a1f611cf1b57a6db4f18601046164e8c53f8d641da79df06b562aa5",
     "data/bus-stop-inventory.geojson": "9d959321851196554504801f9e2ee25475adf79ad09a8d3b19e5eebd7bc21b58",
-    "data/operators.json": "9ee0f2eedbc1352b8ac0d2ec817ea2b130ca088dfcf8a04483370d24d09dbfb6",
+    "data/operators.json": "69568008c52d90814f4767b52e83d3d11f6d37b1d86129d06513a4e8ec07f899",
     "data/station-ridership.json": "88b6e3ed09f14416969b50e3f7dc572fb01c5ecf02b2788c68c6e61569e3bc9e",
     "data/sources/station-ridership-2024.geojson": "d700f90618361ab8b29efb01edc42d9ed50a4431745bbf93fd3d10fc6919a7fd",
-    "data/operator-finance.json": "dd74edfcec2a551d0776a4c5735c01cabcdaf4696cf70868b85ab82ed92fc905",
+    "data/operator-finance.json": "dd3617f578f3ce578c3dace266a9e233af13cf414ba9cf3adae81282da410c70",
     "data/sources/operator-finance-facts.json": "a6c3f58db051961965488b86d68f70501eeeb4d126a43152f7e7d3fda2dfd812",
     "data/census-audit.json": "5f38aca2337bc011b165673a06a14a7e2ad8eb1506c5c73aaaeb223c471c30c1"
   },
@@ -352,7 +356,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -452,7 +456,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -552,7 +556,7 @@
       "dataClass": "OPEN",
       "status": "PARTIAL",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "このスナップショットは有効期間外または構造エラーのため、経路・便数・交通空白の計算から除外しています。原典と過去の停留所位置のみ保存。",
         "リアルタイム遅延・満員情報は含みません。",
@@ -641,7 +645,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -741,7 +745,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -841,7 +845,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -941,7 +945,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1041,7 +1045,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1141,7 +1145,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1241,7 +1245,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1341,7 +1345,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1441,7 +1445,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1541,7 +1545,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1641,7 +1645,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1741,7 +1745,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1841,7 +1845,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -1941,7 +1945,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2041,7 +2045,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2141,7 +2145,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2241,7 +2245,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2341,7 +2345,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2441,7 +2445,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2541,7 +2545,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2641,7 +2645,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2741,7 +2745,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2841,7 +2845,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -2941,7 +2945,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3041,7 +3045,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3141,7 +3145,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3241,7 +3245,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3341,7 +3345,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3441,7 +3445,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3541,7 +3545,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3641,7 +3645,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3741,7 +3745,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3841,7 +3845,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -3941,7 +3945,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4041,7 +4045,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4141,7 +4145,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4241,7 +4245,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4341,7 +4345,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4441,7 +4445,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4541,7 +4545,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4641,7 +4645,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4741,7 +4745,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4841,7 +4845,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -4941,7 +4945,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -5041,7 +5045,7 @@
       "dataClass": "OPEN",
       "status": "USED",
       "analysisReady": "PARTIAL",
-      "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。福岡県の行政界内に停留所を持つ22路線を抽出。対象路線の県外停留所・全停車時刻・線形を維持。配布ZIPは原典の全路線を保存。",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県の行政界内に停留所を持つ22路線を抽出。対象路線の県外停留所・全停車時刻・線形を維持。配布ZIPは原典の全路線を保存。",
       "limitations": [
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
@@ -5086,6 +5090,406 @@
       "validTo": "20270907",
       "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
       "shapeCount": 107,
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "DOCUMENTED",
+          "label": "利用条件の記載あり",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "バス停・路線・運行頻度 / 選択時：目的地への往復 / 選択時：交通空白候補 / 時刻表編集・シナリオ比較"
+        }
+      }
+    },
+    {
+      "id": "gtfs-b9f8e012",
+      "name": "福岡市地下鉄・全3路線（公式Excel加工／9月14・15・19・20日の通常ダイヤ比較） GTFS",
+      "category": "transport",
+      "categories": [
+        "transport"
+      ],
+      "provider": "福岡市交通局",
+      "sourceUrl": "https://subway.city.fukuoka.lg.jp/subway/about/material.php",
+      "sourceUrls": [
+        {
+          "name": "福岡市地下鉄・全3路線（公式Excel加工／9月14・15・19・20日の通常ダイヤ比較）",
+          "url": "https://subway.city.fukuoka.lg.jp/subway/about/material.php"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": "2026-09-14",
+      "checkedAt": null,
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。",
+      "format": "GTFS ZIP → JSON",
+      "license": "福岡市オープンデータ利用規約（CC BY 2.1 JP）・国土数値情報CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.1/jp/",
+      "dataClass": "OPEN",
+      "status": "USED",
+      "analysisReady": "PARTIAL",
+      "processing": "公式公開ExcelをGTFSに加工。分析対象日を限定。公式の有効期限ではない。原典の運行暦・例外日・乗降制限を適用。分析日を9月14・15・19・20日に限定した加工データ。公式の有効期限ではありません。姪浜以西のJR筑肥線、臨時変更、改札・設備・運賃は未収録。",
+      "limitations": [
+        "リアルタイム遅延・満員情報は含みません。",
+        "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
+        "未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。",
+        "原GTFSの線形のみ表示。欠けた区間の線形を創作しません。",
+        "分析日と選択した事業者により利用範囲が変わります。"
+      ],
+      "usedFor": [
+        {
+          "label": "バス停・路線・運行頻度",
+          "url": "index.html#map"
+        },
+        {
+          "label": "選択時：目的地への往復",
+          "url": "accessibility.html"
+        },
+        {
+          "label": "選択時：交通空白候補",
+          "url": "transport-gaps.html"
+        },
+        {
+          "label": "時刻表編集・シナリオ比較",
+          "url": "lab.html#design"
+        }
+      ],
+      "localFiles": [
+        "data/gtfs/fukuoka-subway__b9f8e012.zip",
+        "data/gtfs/catalog.json",
+        "data/map-data.json"
+      ],
+      "records": 37,
+      "recordUnit": "停留所ID",
+      "valueType": "時刻表（予定値）",
+      "layerIds": [
+        "bus-stops",
+        "bus-routes"
+      ],
+      "scope": "バス時刻表",
+      "licenseCheckedAt": "2026-09-14",
+      "sha256": "b9f8e012e3eb76c5a176b6fc95f62b66bd11820c65e6daffb09d7cb5f7ac2f5c",
+      "validFrom": "20260914",
+      "validTo": "20260920",
+      "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
+      "shapeCount": 0,
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "DOCUMENTED",
+          "label": "利用条件の記載あり",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "バス停・路線・運行頻度 / 選択時：目的地への往復 / 選択時：交通空白候補 / 時刻表編集・シナリオ比較"
+        }
+      }
+    },
+    {
+      "id": "gtfs-9ed291ed",
+      "name": "高速バス（大分交通幹事）GTFSデータ・福岡接続路線 GTFS",
+      "category": "transport",
+      "categories": [
+        "transport"
+      ],
+      "provider": "大分県・高速バス（大分交通幹事）GTFSデータ",
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "sourceUrls": [
+        {
+          "name": "高速バス（大分交通幹事）GTFSデータ・福岡接続路線",
+          "url": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/3ece7365-9739-4c5d-92a8-f008922325ff/download/gtfs10_highway02oitakotsu.zip"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": "2026-09-14",
+      "checkedAt": null,
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。",
+      "format": "GTFS ZIP → JSON",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "dataClass": "OPEN",
+      "status": "USED",
+      "analysisReady": "PARTIAL",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+      "limitations": [
+        "リアルタイム遅延・満員情報は含みません。",
+        "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
+        "未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。",
+        "原GTFSの線形のみ表示。欠けた区間の線形を創作しません。",
+        "分析日と選択した事業者により利用範囲が変わります。"
+      ],
+      "usedFor": [
+        {
+          "label": "バス停・路線・運行頻度",
+          "url": "index.html#map"
+        },
+        {
+          "label": "選択時：目的地への往復",
+          "url": "accessibility.html"
+        },
+        {
+          "label": "選択時：交通空白候補",
+          "url": "transport-gaps.html"
+        },
+        {
+          "label": "時刻表編集・シナリオ比較",
+          "url": "lab.html#design"
+        }
+      ],
+      "localFiles": [
+        "data/gtfs/gtfs10_highway02oitakotsu-fukuoka__9ed291ed.zip",
+        "data/gtfs/catalog.json",
+        "data/map-data.json"
+      ],
+      "records": 46,
+      "recordUnit": "停留所ID",
+      "valueType": "時刻表（予定値）",
+      "layerIds": [
+        "bus-stops",
+        "bus-routes"
+      ],
+      "scope": "バス時刻表",
+      "licenseCheckedAt": "2026-09-14",
+      "sha256": "9ed291ed759cdf5fedacb976cea66dc586407f1c8b4733f64d1bcd9aaf4bf1e8",
+      "validFrom": "20260901",
+      "validTo": "20270831",
+      "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
+      "shapeCount": 6,
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "DOCUMENTED",
+          "label": "利用条件の記載あり",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "バス停・路線・運行頻度 / 選択時：目的地への往復 / 選択時：交通空白候補 / 時刻表編集・シナリオ比較"
+        }
+      }
+    },
+    {
+      "id": "gtfs-c7c02367",
+      "name": "高速バス（亀の井バス幹事）GTFSデータ・福岡接続路線 GTFS",
+      "category": "transport",
+      "categories": [
+        "transport"
+      ],
+      "provider": "大分県・高速バス（亀の井バス幹事）GTFSデータ",
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "sourceUrls": [
+        {
+          "name": "高速バス（亀の井バス幹事）GTFSデータ・福岡接続路線",
+          "url": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/be2e8be4-44d1-4a85-aea6-78c8147f41c5/download/gtfs10_highway03kamenoi.zip"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": "2026-09-14",
+      "checkedAt": null,
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。",
+      "format": "GTFS ZIP → JSON",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "dataClass": "OPEN",
+      "status": "USED",
+      "analysisReady": "PARTIAL",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+      "limitations": [
+        "リアルタイム遅延・満員情報は含みません。",
+        "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
+        "未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。",
+        "原GTFSの線形のみ表示。欠けた区間の線形を創作しません。",
+        "分析日と選択した事業者により利用範囲が変わります。"
+      ],
+      "usedFor": [
+        {
+          "label": "バス停・路線・運行頻度",
+          "url": "index.html#map"
+        },
+        {
+          "label": "選択時：目的地への往復",
+          "url": "accessibility.html"
+        },
+        {
+          "label": "選択時：交通空白候補",
+          "url": "transport-gaps.html"
+        },
+        {
+          "label": "時刻表編集・シナリオ比較",
+          "url": "lab.html#design"
+        }
+      ],
+      "localFiles": [
+        "data/gtfs/gtfs10_highway03kamenoi-fukuoka__c7c02367.zip",
+        "data/gtfs/catalog.json",
+        "data/map-data.json"
+      ],
+      "records": 32,
+      "recordUnit": "停留所ID",
+      "valueType": "時刻表（予定値）",
+      "layerIds": [
+        "bus-stops",
+        "bus-routes"
+      ],
+      "scope": "バス時刻表",
+      "licenseCheckedAt": "2026-09-14",
+      "sha256": "c7c02367610b1f0921089fe4c1314e9f5d86ce20135c15dd6bfa193a81b5defe",
+      "validFrom": "20260401",
+      "validTo": "20270331",
+      "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
+      "shapeCount": 8,
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "DOCUMENTED",
+          "label": "利用条件の記載あり",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "バス停・路線・運行頻度 / 選択時：目的地への往復 / 選択時：交通空白候補 / 時刻表編集・シナリオ比較"
+        }
+      }
+    },
+    {
+      "id": "gtfs-a5f3cbf7",
+      "name": "高速バス（日田バス幹事）GTFSデータ・福岡接続路線 GTFS",
+      "category": "transport",
+      "categories": [
+        "transport"
+      ],
+      "provider": "大分県・高速バス（日田バス幹事）GTFSデータ",
+      "sourceUrl": "https://data.bodik.jp/dataset/440001_gtfs10_highwaybus",
+      "sourceUrls": [
+        {
+          "name": "高速バス（日田バス幹事）GTFSデータ・福岡接続路線",
+          "url": "https://data.bodik.jp/dataset/4e332c7a-3ac9-4c7a-a4b0-f78665e635da/resource/17806124-f3bd-4146-b276-675133184953/download/gtfs10_highway04hita.zip"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": "2026-09-14",
+      "checkedAt": null,
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。",
+      "format": "GTFS ZIP → JSON",
+      "license": "CC BY 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by/4.0/deed.ja",
+      "dataClass": "OPEN",
+      "status": "USED",
+      "analysisReady": "PARTIAL",
+      "processing": "公開GTFS ZIPを保存。原典の運行暦・例外日・乗降制限を適用。福岡県内の乗降地点を持つ路線を抽出。原典ZIPは全路線を保存。抽出路線の県外停留所・時刻は切断せず保持。共同運行の担当便は原典agency_idに従い、幹事社以外への推測割当はしない。",
+      "limitations": [
+        "リアルタイム遅延・満員情報は含みません。",
+        "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
+        "未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。",
+        "原GTFSの線形のみ表示。欠けた区間の線形を創作しません。",
+        "分析日と選択した事業者により利用範囲が変わります。"
+      ],
+      "usedFor": [
+        {
+          "label": "バス停・路線・運行頻度",
+          "url": "index.html#map"
+        },
+        {
+          "label": "選択時：目的地への往復",
+          "url": "accessibility.html"
+        },
+        {
+          "label": "選択時：交通空白候補",
+          "url": "transport-gaps.html"
+        },
+        {
+          "label": "時刻表編集・シナリオ比較",
+          "url": "lab.html#design"
+        }
+      ],
+      "localFiles": [
+        "data/gtfs/gtfs10_highway04hita-fukuoka__a5f3cbf7.zip",
+        "data/gtfs/catalog.json",
+        "data/map-data.json"
+      ],
+      "records": 51,
+      "recordUnit": "停留所ID",
+      "valueType": "時刻表（予定値）",
+      "layerIds": [
+        "bus-stops",
+        "bus-routes"
+      ],
+      "scope": "バス時刻表",
+      "licenseCheckedAt": "2026-09-14",
+      "sha256": "a5f3cbf746066207cc9039d1880c4c0f735f8b8d2e081e68fe1b3f66890dfa0a",
+      "validFrom": "20260401",
+      "validTo": "20270331",
+      "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
+      "shapeCount": 10,
       "quality": {
         "freshness": {
           "state": "UNKNOWN",
@@ -33480,7 +33884,7 @@
       "processing": "原典の事業者名とGTFS agencyを集約。位置を索引で参照し、時刻表・実績・費用・リアルタイムの反映状況を明示。",
       "limitations": [
         "自治体・地域交通名は原典の公表主体で表示。委託運行会社を推定して割り当てていません。西鉄の委託路線を含む自治体GTFSがあっても、西鉄全線の時刻表反映には数えません。",
-        "県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州の公表実績・収支は反映。時刻表・往復計算・リアルタイムは未反映。"
+        "県内全事業者の網羅は未完了。西鉄バスの高速便・福岡市地下鉄を計算に追加。西鉄バス・西鉄電車・JR九州・JR九州バスの全便時刻表・リアルタイムは未接続。"
       ],
       "usedFor": [
         {
@@ -33491,7 +33895,7 @@
       "localFiles": [
         "data/operators.json"
       ],
-      "records": 79,
+      "records": 87,
       "recordUnit": "事業者・公表主体（県内総数ではない）",
       "valueType": null,
       "layerIds": [],
@@ -33796,7 +34200,7 @@
       "analysisReady": "NOT_READY",
       "processing": null,
       "limitations": [
-        "鉄道の全便データを未取得。西鉄電車・JR九州等の駅位置や実績を時刻表の代用にしません。"
+        "福岡市地下鉄は公式Excelから限定日の通常ダイヤを計算に追加。西鉄電車・JR九州の全便は未取得。駅位置や実績を時刻表の代用にしません。"
       ],
       "usedFor": [],
       "localFiles": [],
@@ -34848,9 +35252,9 @@
           },
           "transport": {
             "status": "PARTIAL",
-            "count": 280,
+            "count": 340,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "280 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "340 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "terrain": {
@@ -34911,9 +35315,9 @@
           },
           "bus": {
             "status": "PARTIAL",
-            "count": 280,
+            "count": 340,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "280 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "340 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "rail": {
@@ -36537,10 +36941,10 @@
             "datasetId": "population-2020"
           },
           "transport": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 2,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "2 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "terrain": {
@@ -36600,10 +37004,10 @@
             "datasetId": null
           },
           "bus": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 2,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "2 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "rail": {
@@ -36667,10 +37071,10 @@
             "datasetId": "population-2020"
           },
           "transport": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 4,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "4 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "terrain": {
@@ -36730,10 +37134,10 @@
             "datasetId": null
           },
           "bus": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 4,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "4 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "rail": {
@@ -37968,9 +38372,9 @@
           },
           "transport": {
             "status": "PARTIAL",
-            "count": 56,
+            "count": 64,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "56 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "64 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "terrain": {
@@ -38031,9 +38435,9 @@
           },
           "bus": {
             "status": "PARTIAL",
-            "count": 56,
+            "count": 64,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "56 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "64 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "rail": {
@@ -40568,9 +40972,9 @@
           },
           "transport": {
             "status": "PARTIAL",
-            "count": 2,
+            "count": 4,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "2 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "4 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "terrain": {
@@ -40631,9 +41035,9 @@
           },
           "bus": {
             "status": "PARTIAL",
-            "count": 2,
+            "count": 4,
             "unit": "行政界内の収録バス停ID",
-            "evidence": "2 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "4 行政界内の収録バス停IDを既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": null
           },
           "rail": {
@@ -42532,7 +42936,7 @@
       "name": "バス停",
       "category": "transport",
       "available": true,
-      "count": 5014,
+      "count": 5180,
       "datasetIds": [
         "gtfs-2aa2b7c6",
         "gtfs-499f5b3d",
@@ -42581,7 +42985,11 @@
         "gtfs-a3d6ec53",
         "gtfs-129c200d",
         "gtfs-4820885f",
-        "gtfs-dd522638"
+        "gtfs-dd522638",
+        "gtfs-b9f8e012",
+        "gtfs-9ed291ed",
+        "gtfs-c7c02367",
+        "gtfs-a5f3cbf7"
       ]
     },
     {
@@ -42589,7 +42997,7 @@
       "name": "バス路線",
       "category": "transport",
       "available": true,
-      "count": 822,
+      "count": 846,
       "datasetIds": [
         "gtfs-2aa2b7c6",
         "gtfs-499f5b3d",
@@ -42638,7 +43046,11 @@
         "gtfs-a3d6ec53",
         "gtfs-129c200d",
         "gtfs-4820885f",
-        "gtfs-dd522638"
+        "gtfs-dd522638",
+        "gtfs-b9f8e012",
+        "gtfs-9ed291ed",
+        "gtfs-c7c02367",
+        "gtfs-a5f3cbf7"
       ]
     },
     {
@@ -42911,6 +43323,10 @@
         "gtfs-129c200d",
         "gtfs-4820885f",
         "gtfs-dd522638",
+        "gtfs-b9f8e012",
+        "gtfs-9ed291ed",
+        "gtfs-c7c02367",
+        "gtfs-a5f3cbf7",
         "dest-hospitals",
         "dest-public-138f30f5",
         "dest-public-4303beeb",

@@ -4,15 +4,15 @@
 <title>交通事業者・データ反映状況｜福岡 交通データ｜MDL</title>
 <meta name="description" content="福岡県内の交通事業者・公表主体ごとに、停留所・駅・線路と時刻表等の反映状況を確認。西鉄・JR九州を含む駅別実績、年間輸送人員と収支を掲載。未収録の時刻表・遅延情報は区別して表示します。">
 <link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/atlas-design.css?v=9"><link rel="stylesheet" href="assets/neo-swiss.css?v=11">
-<script defer src="assets/leaflet.js"></script><script type="module" src="operators/app.mjs?v=20260914-4"></script><link rel="stylesheet" href="catalog/integration.css?v=1"><link rel="stylesheet" href="operators/style.css?v=20260914-3"></head>
+<script defer src="assets/leaflet.js"></script><script type="module" src="operators/app.mjs?v=20260915-2"></script><link rel="stylesheet" href="catalog/integration.css?v=1"><link rel="stylesheet" href="operators/style.css?v=20260915-2"><link rel="stylesheet" href="operators/timetables.css?v=20260915-2"></head>
 <body class="atlas page-operators"><a class="skip" href="#main">事業者一覧へ移動</a>
 <header class="atlas-header"><a class="atlas-brand" href="index.html"><span class="atlas-monogram" aria-hidden="true">FUK</span><span>福岡 交通データ<small>FUKUOKA TRANSPORT ATLAS</small></span></a><nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a><a href="operators.html" aria-current="page"><span class="nav-index" aria-hidden="true">06</span><span>事業者</span></a></nav><div class="atlas-header-actions"><button class="button" id="share-catalog">表示を共有 ↗</button></div></header>
 <main id="main" class="operator-main">
 <span class="operator-kicker">FUKUOKA MOBILITY ATLAS / OPERATORS</span>
 <h1>交通事業者と、<br>データの反映状況。</h1>
 <p class="operator-intro">福岡県内の収録位置を事業者ごとに確認できます。時刻表、乗降実績、費用、リアルタイム情報の反映状況を分けて表示します。</p>
-<aside class="operator-notice" aria-label="データ反映の未完了項目"><p><strong>県内全事業者のデータ反映は、まだ完了していません。</strong><br>西鉄バス・西鉄電車・JR九州の公表実績・収支を追加しました。3者の時刻表・往復計算・リアルタイム情報は未反映です。</p><a href="#uncovered">未反映の範囲を確認 →</a></aside>
-<div id="priority-operators" class="priority-grid" aria-label="西鉄バス・西鉄電車・JR九州"></div>
+<aside class="operator-notice" aria-label="データ反映の未完了項目"><p><strong>西鉄・JRの公式時刻表と、分析に使える時刻表を追加しました。</strong><br>西鉄バスの高速便・福岡市地下鉄を計算に追加。西鉄バス・西鉄電車・JR九州・JR九州バスの全便は未接続です。未取得を0便・交通空白と断定しません。</p><a href="#uncovered">未反映の範囲を確認 →</a></aside><div class="tt-quick"><strong>時刻表・路線を調べる</strong><a href="timetables.html?group=nishitetsu-bus">西鉄バス</a><a href="timetables.html?group=nishitetsu-rail">西鉄電車</a><a href="timetables.html?group=jr-kyushu">JR九州</a><a href="timetables.html?group=jr-kyushu-bus">JR九州バス</a><a href="timetables.html">すべて見る →</a></div>
+<div id="priority-operators" class="priority-grid" aria-label="西鉄バス・西鉄電車・JR九州・JR九州バス"></div>
 <p id="operator-loading" role="status">事業者データを読み込んでいます。読込完了までは件数を表示しません。</p>
 <p id="operator-error" class="op-error" role="alert" hidden></p>
 <section aria-labelledby="directory-title">
@@ -26,7 +26,7 @@
 <label>事業者名・原典の路線名<input id="operator-query" type="search" placeholder="例：西鉄、JR九州、昭和" autocomplete="off"></label>
 </div>
 <div class="op-tools"><p id="operator-count" aria-live="polite"></p><div><button id="operator-reset" type="button">条件をリセット</button> <button id="operator-export" type="button">一覧をCSVで保存</button></div></div>
-<div class="op-table-wrap" tabindex="0" role="region" aria-label="事業者別の反映状況。狭い画面では横にスクロールできます"><table class="op-table"><thead><tr><th scope="col">事業者・公表主体</th><th scope="col">時刻表・経路計算</th><th scope="col">反映した位置</th><th scope="col">乗降実績</th><th scope="col">費用</th><th scope="col">リアルタイム</th></tr></thead><tbody id="operator-table-body"></tbody></table></div>
+<div class="op-table-wrap" tabindex="0" role="region" aria-label="事業者別の反映状況。狭い画面では横にスクロールできます"><table class="op-table"><thead><tr><th scope="col">事業者・公表主体</th><th scope="col">計算への時刻表反映／公式案内</th><th scope="col">反映した位置</th><th scope="col">乗降実績</th><th scope="col">費用</th><th scope="col">リアルタイム</th></tr></thead><tbody id="operator-table-body"></tbody></table></div>
 <div class="op-pagination"><button id="operator-prev" disabled>前へ</button><span id="operator-page" aria-live="polite"></span><button id="operator-next" disabled>次へ</button></div>
 </section>
 <section id="operator-statistics" aria-labelledby="statistics-title">
@@ -54,7 +54,7 @@
 <div id="operator-detail" class="op-detail" hidden></div>
 </section>
 <section id="uncovered" aria-labelledby="uncovered-title"><h2 id="uncovered-title">未反映・確認が残っている範囲</h2><p>「未反映」はサービスが存在しないという意味ではありません。未収録の交通を0便・到達不可として扱わず、分析結果は収録したデータの範囲で読みます。</p><div id="operator-gaps" class="op-gaps"></div></section>
-<section aria-labelledby="operator-sources-title"><h2 id="operator-sources-title">出典・集計方法</h2><div class="op-sources"><div><p><a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11-2022.html" target="_blank" rel="noopener noreferrer">国土数値情報 バス停留所（2022年度） ↗</a><br>福岡県の8,490位置レコードを原典の事業者名で分類。同名停留所の乗り場統合・現況照合は未実施。</p><p><a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html" target="_blank" rel="noopener noreferrer">国土数値情報 鉄道（2025年） ↗</a><br>福岡県内の駅・線路形状。駅数は事業者ごとの駅グループコードで重複を除去。現在の営業駅総数ではありません。</p></div><div><p>GTFSは取得済みの原典48ファイル（佐賀県配布の福岡接続路線を含む）を集約。基準日（2026年9月14日）に有効・検証済みの収録分を「時刻表反映」と表示します。反映済みでも、各事業者の全路線の網羅は確認できていません。</p><p>駅別実績は国土数値情報S12、9鉄道事業者の年間実績・収支は鉄道統計年報、西鉄・JR九州の2024・2025年度実績は各社決算資料を収録。原典URL・集計範囲・算出費用の区別は実績表に表示します。</p><p>出典：国土数値情報（国土交通省）を加工。<a href="https://nlftp.mlit.go.jp/ksj/other/agreement_01.html" target="_blank" rel="noopener noreferrer">利用条件 ↗</a>／GTFSは各公開元の条件。<a href="data-catalog.html">個別データの出典を見る →</a></p></div></div><p class="op-help">反映状況の確認日：2026年9月14日。原典の基準日と確認日は別です。</p></section>
+<section aria-labelledby="operator-sources-title"><h2 id="operator-sources-title">出典・集計方法</h2><div class="op-sources"><div><p><a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11-2022.html" target="_blank" rel="noopener noreferrer">国土数値情報 バス停留所（2022年度） ↗</a><br>福岡県の8,490位置レコードを原典の事業者名で分類。同名停留所の乗り場統合・現況照合は未実施。</p><p><a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html" target="_blank" rel="noopener noreferrer">国土数値情報 鉄道（2025年） ↗</a><br>福岡県内の駅・線路形状。駅数は事業者ごとの駅グループコードで重複を除去。現在の営業駅総数ではありません。</p></div><div><p>GTFSは取得済みの52ファイル（地下鉄の加工データ、佐賀・大分の福岡接続路線を含む）を集約。基準日（2026年9月14日）に有効・検証済みの収録分を「時刻表反映」と表示します。反映済みでも、各事業者の全路線の網羅は確認できていません。</p><p>駅別実績は国土数値情報S12、9鉄道事業者の年間実績・収支は鉄道統計年報、西鉄・JR九州の2024・2025年度実績は各社決算資料を収録。原典URL・集計範囲・算出費用の区別は実績表に表示します。</p><p>出典：国土数値情報（国土交通省）を加工。<a href="https://nlftp.mlit.go.jp/ksj/other/agreement_01.html" target="_blank" rel="noopener noreferrer">利用条件 ↗</a>／GTFSは各公開元の条件。<a href="data-catalog.html">個別データの出典を見る →</a></p></div></div><p class="op-help">反映状況の確認日：2026年9月14日。原典の基準日と確認日は別です。</p></section>
 </main>
 <footer class="catalog-footer"><span>FUKUOKA MOBILITY ATLAS / MDL</span><a href="usage.html">ご利用にあたって・データと権利</a><a href="../">モビリティデザインラボ</a><a href="mailto:info@mobilitydlab.com">本番開発・データ連携のご相談</a></footer>
 </body></html>

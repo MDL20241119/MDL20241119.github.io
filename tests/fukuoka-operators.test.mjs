@@ -22,11 +22,15 @@ test('every source position and feed is accounted for, with current source hashe
   assert.equal(new Set(data.operators.map(r=>r.id)).size,data.operators.length);
 });
 
-test('the three required operators show real positions and explicit missing schedules',()=>{
-  const expected=[['nishitetsu-bus',4065,0,8],['nishitetsu-rail',0,73,1],['jr-kyushu',0,165,1]];
+test('required operators distinguish complete positions from partial or missing schedules',()=>{
+  const busRows=selectOperators(data,{operator:'nishitetsu-bus'});
+  assert.equal(summarize(busRows).bus,4065);
+  const highway=busRows.find(r=>r.name==='西鉄バス');assert(highway?.timetable);
+  assert.deepEqual(highway.timetable.scheduledTrips,[60,64,64]);assert.match(highway.timetable.note,/網羅は未確認/);
+  const expected=[['nishitetsu-rail',0,73,1],['jr-kyushu',0,165,1],['jr-kyushu-bus',76,0,1]];
   for(const [id,busCount,stations,providers]of expected){
     const rows=selectOperators(data,{operator:id});assert.deepEqual(summarize(rows),{providers,bus:busCount,stations,stops:0,timetable:0});
-    for(const r of rows){assert.equal(r.timetable,null);assert(r.ridership);assert(r.costs);assert.equal(r.realtime,null);assert.equal(r.status,'location');assert(r.missingReason.includes('未取得'));}
+    for(const r of rows){assert.equal(r.timetable,null);assert(r.officialTimetableUrl);assert.equal(r.realtime,null);assert.equal(r.status,'location');assert(r.missingReason.includes('未取得'));}
   }
   assert.equal(data.coverageComplete,false);assert(data.missingCategories.some(r=>r.name.includes('全交通事業者名簿')));
 });

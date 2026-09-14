@@ -1,7 +1,7 @@
 import {STATUS,CLASSES,GAP,esc,fmt,dateText,sourceLink,catalogURL,matchDatasets,overview} from './model.mjs?v=2';
 const $=s=>document.querySelector(s), $$=s=>[...document.querySelectorAll(s)];
 const cache=new Map();
-async function json(path){if(!cache.has(path))cache.set(path,fetch(path).then(r=>{if(!r.ok)throw Error('読み込めません：'+path+' ('+r.status+')');return r.json();}).catch(e=>{cache.delete(path);throw e;}));return cache.get(path);}
+async function json(path){if(!cache.has(path))cache.set(path,fetch(path+'?v=20260915-2').then(r=>{if(!r.ok)throw Error('読み込めません：'+path+' ('+r.status+')');return r.json();}).catch(e=>{cache.delete(path);throw e;}));return cache.get(path);}
 let catalog,category='all',page=0,panel='catalog',detailId=null,detailTrigger=null,map,mapReady=null,mapEpoch=0,mapDataset=null,mapRecordLimit=30;
 let rail,inventory,boundaries,transport,places,resources,mapLayers=new Map(),mapRecords=[],mapCity='all',meshCache=new Map(),infoLayer=null;
 const selectedLayers=new Set(['bus-stops','hospitals','boundaries']);

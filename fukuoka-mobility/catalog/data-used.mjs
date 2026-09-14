@@ -1,14 +1,14 @@
 import {esc,fmt,dateText,sourceLink,catalogURL,usedDatasets,OUTCOMES} from './model.mjs?v=2';
 let promise;
 const revisions=new WeakMap();
-export function getCatalog(){if(!promise)promise=fetch(new URL('../data/catalog.json',import.meta.url)).then(r=>{if(!r.ok)throw Error('カタログを取得できません');return r.json();}).catch(e=>{promise=null;throw e;});return promise;}
+export function getCatalog(){if(!promise)promise=fetch(new URL('../data/catalog.json?v=20260915-2',import.meta.url)).then(r=>{if(!r.ok)throw Error('カタログを取得できません');return r.json();}).catch(e=>{promise=null;throw e;});return promise;}
 export async function renderDataUsed(selector,context={}){
  const root=typeof selector==='string'?document.querySelector(selector):selector;if(!root)return;
  const host=root.querySelector('[data-used-content]')??root,revision=(revisions.get(root)??0)+1;revisions.set(root,revision);
  try {const c=await getCatalog();if(revisions.get(root)!==revision)return;
   const ds=usedDatasets(c,context),unmatched=(context.sources??[]).filter(s=>!c.datasets.some(d=>d.sha256&&(d.sha256===(s.hash??s.sha256)||d.localFiles.some(f=>f.split('/').at(-1)===s.file))));
   const pending=context.mode!=='result',heading=pending?'選択中のデータ / 再計算前':'この結果の計算に使用したデータ';
-  const operatorMissing='西鉄バス・西鉄電車・JR九州：標準収録の時刻表・経路計算に未反映';
+  const operatorMissing='西鉄バス・西鉄電車・JR九州・JR九州バス：全便の経路計算は未接続。西鉄高速便・地下鉄等の収録分のみ計算';
   const missing=context.kind==='gaps'?['鉄道の時刻表・タクシー供給：判定に未反映','病院・学校・店舗の送迎：参考表示のみ。経路計算に未反映','OSM道路を反映。歩道・段差・標高・現在の通行可否：未確認','高齢者人口・個人の移動困難：未集計']:['鉄道の時刻表・タクシー供給：未反映','病院・学校・店舗の送迎：経路計算に未反映','徒歩はOSM道路距離と75m以内の地点接続を使用。段差・標高・現在の通行可否は未確認','当日の施設受付・予約枠・実際の歩きやすさ：入力・現地確認が必要'];
   missing.unshift(operatorMissing);
   host.innerHTML=`<p class="data-used-intro"><strong>${heading}</strong>${context.date?' / 分析日 '+esc(context.date):''}${context.complete===false?' / 計算は未完了':''}</p><p class="data-used-scope">${pending?'条件変更後の結果ではありません。計算ボタンを押すと、この選択で結果を更新します。':'結果を得た時点の選択に基づいて表示。原典の基準日とMDL取得日は別です。'}</p><div class="data-used-list">${ds.map(d=>`<article><strong><a href="${catalogURL(d.id)}">${esc(d.name)} ↗</a></strong><p>${esc(d.provider??'提供元未確認')}<br>基準日：${esc(dateText(d.dataAsOf))} / MDL取得：${esc(dateText(d.retrievedAt))}<br>利用条件：${esc(d.license??'未確認')}${d.validFrom||d.validTo?'<br>時刻表の有効期間：'+esc(dateText(d.validFrom))+'〜'+esc(dateText(d.validTo)):''}${d.sha256?'<br><span class="source-hash">使用ファイル SHA-256：'+esc(d.sha256)+'</span>':''}</p></article>`).join('')||'<p>選択した時刻表・目的地はまだありません。</p>'}${unmatched.map(s=>`<article><strong>${esc(s.name??'カタログ外データ')}</strong><p>追加・差し替えデータ。統合カタログとの一致は未確認。<br>${sourceLink(s.source,'取得元')}<br>SHA-256：${esc(s.hash??s.sha256??'未記録')}</p></article>`).join('')}</div><div class="data-missing"><strong>MISSING / NOT INCLUDED</strong><ul>${missing.map(s=>`<li>${esc(s)}</li>`).join('')}</ul>${context.includePopulation?'<p>人口は2020年基準の国交省調整値。境界またぎ・収録外等は未集計。現在人口や交通に困る人数を表しません。</p>':''}<p><b>未収録の交通は、存在しない交通ではありません。</b></p></div>${context.health?.length?'<details><summary>分析日の時刻表の有効性</summary><ul>'+context.health.map(h=>`<li>${esc(h.name)}：${h.coverage==='known'?'収録期間内':h.coverage==='outside'?'収録期間外':'期間未確認'}</li>`).join('')+'</ul></details>':''}<div class="data-used-actions"><a href="operators.html">事業者別の反映・未反映 →</a><a href="data-catalog.html#catalog">データカタログを見る →</a><a href="data-catalog.html#data-gap">市町村ごとの不足データ →</a></div>`;

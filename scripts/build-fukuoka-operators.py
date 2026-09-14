@@ -30,6 +30,8 @@ def clean(name):
 # Exact source-label aliases only. A commissioning municipality is not reassigned
 # to a commercial contractor without source evidence.
 ALIASES = {
+    '福岡市交通局': '福岡市',
+    '福岡市地下鉄': '福岡市',
     'うきは市(うきはバス)': 'うきは市', '芦屋タウンバス': '芦屋町',
     '古賀市公共施設等連絡バスコガバス': '古賀市', '苅田町コミュニティバス': '苅田町',
     '直方市コミュニティバス': '直方市', '遠賀町コミュニティバス': '遠賀町',
@@ -96,7 +98,7 @@ for f in feeds:
                 row['routes'].extend(r.get('route_long_name') or r.get('route_short_name') or r['route_id'] for r in own_mode)
                 row['routeIndices'].extend(i for i,r in enumerate(transport['routes']) if transport['feeds'][r['feedIndex']]['id'] == f['id'] and r['id'] in own_ids)
     source = next(x for x in transport['feeds'] if x['id'] == f['id'])
-    feed_details.append({k: source[k] for k in ['id','name','validFrom','validTo','dataStatus','scheduledTrips','sourceUrl','downloadUrl','license','licenseUrl','sha256']})
+    feed_details.append({k: source.get(k) for k in ['id','name','validFrom','validTo','dataStatus','scheduledTrips','sourceUrl','downloadUrl','license','licenseUrl','sha256','analysisSampleDates','validityNote']})
 
 source_by_id = {f['id']: f for f in feed_details}
 for (mode, key), row in rows.items():
@@ -125,6 +127,9 @@ for (mode, key), row in rows.items():
     if mode == 'rail' and key == '九州旅客鉄道':
         row['officialUrl'] = 'https://www.jrkyushu.co.jp/'
         row['officialTimetableUrl'] = 'https://www.jrkyushu-timetable.jp/'
+    if mode == 'bus' and key == 'JR九州バス':
+        row['officialUrl'] = 'https://www.jrkbus.co.jp/rosen/index'
+        row['officialTimetableUrl'] = 'https://www.jrkbus.co.jp/rosen/nogata'
     if mode == 'rail' and key == '福岡市':
         row['costs'] = {'status':'partial','period':'2024年度','url':'index.html#cost','note':'地下鉄の公表決算。'}
     own_stations = [s for s in station_stats['stations'] if s['operatorId'] == row['id']]
@@ -156,12 +161,13 @@ priority = [
     {'id':'nishitetsu-bus','name':'西鉄バス','operatorIds':[v['id'] for (m,k),v in rows.items() if m=='bus' and (k=='西日本鉄道' or k.startswith('西鉄バス'))]},
     {'id':'nishitetsu-rail','name':'西鉄電車','operatorIds':[rows['rail','西日本鉄道']['id']]},
     {'id':'jr-kyushu','name':'JR九州','operatorIds':[rows['rail','九州旅客鉄道']['id']]},
+    {'id':'jr-kyushu-bus','name':'JR九州バス','operatorIds':[rows['bus','JR九州バス']['id']]},
 ]
 result = {'schemaVersion':1,'checkedAt':'2026-09-14','coverageComplete':False,
     'scope':'国土数値情報の福岡県収録分と、保存した公開GTFSに記載された事業者・公表主体。現行の県内全事業者名簿ではありません。',
     'agencyNote':'自治体・地域交通名は原典の公表主体で表示。委託運行会社を推定して割り当てていません。西鉄の委託路線を含む自治体GTFSがあっても、西鉄全線の時刻表反映には数えません。',
     'missingCategories':[
-        {'name':'西鉄バス・西鉄電車・JR九州','status':'公表実績・収支を追加。時刻表・往復計算・遅延情報は未反映','reason':'公開検索画面の閲覧と分析用データの接続は別です。全便の時刻表ファイル、再利用・配信条件、有効期間を確認できていないため、経路・交通空白判定には使いません。停留所別・時間帯別ODと県内路線別原価も未取得。'},
+        {'name':'西鉄バス・西鉄電車・JR九州・JR九州バス','status':'公式時刻表・路線案内を追加。全便の往復計算・遅延情報は未接続','reason':'timetables.html に駅・停留所別の公式検索、PDF、県外の接続先を収録。公式リンクと計算用の全停車時刻データは別です。全便ファイルと再利用条件が未確認の交通を、0便や交通空白として確定しません。'},
         {'name':'北九州市営バスの時刻表','status':'配信あり・利用登録待ち','reason':'PTD-HSの福岡県一覧で静的データと2027年2月28日の期限を確認。配信元の登録審査、APIキー発行、利用条件の確認が必要。資料・申請先：https://www.ptd-hs.jp/'},
         {'name':'現行の県内全交通事業者名簿','status':'全件照合は未完了','reason':'2022年度のバス停資料、2025年の鉄道資料、取得GTFSに現れない事業者は個別に列挙できていません。掲載数は県内の事業者総数ではありません。'},
         {'name':'タクシー各社','status':'各社名簿・配車供給は未反映','reason':'公開GTFSに含まれる乗合タクシー路線等のみ。一覧の会社についても通常のタクシー予約可能台数・運行区域は未取得。'},

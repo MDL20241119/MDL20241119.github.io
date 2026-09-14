@@ -74,9 +74,21 @@ node tests/fukuoka-data.mjs
 
 OSM抽出にはpyosmium（osmium）・shapely、圧縮にはnumpyを使用します。道路の中間JSON・元道路タグはキャッシュに、公開道路グラフと施設抽出はdata/osmに保存します。MHLWは`--raw-dir`を省略すると同梱した県内原典抽出から再現できます。大きい施設原典・診療時刻はgzipで保存し、診療時刻は選択施設の市町村分だけ読み込みます。
 
-この更新で全件取得が完了したわけではありません。主要3者の全便時刻表・PTD-HSの認証などの条件はNOTICE.mdと画面に明記しています。未取得を0件にしないこと、県外区間を切断しないこと、他社の便数を混ぜないこと、道路接続を創作しないことを検証します。
+この更新で全件取得が完了したわけではありません。西鉄バス・西鉄電車・JR九州・JR九州バスの全便時刻表・PTD-HSの認証などの条件はNOTICE.mdと画面に明記しています。未取得を0件にしないこと、県外区間を切断しないこと、他社の便数を混ぜないこと、道路接続を創作しないことを検証します。
 
 
 ### 2020年国勢調査の年齢別人口・世帯
 
 `data/census-audit.json` の4つの原典URLを `raw/census2020-{4930,5030,5031,5130}.zip` として保存し、`python scripts/build-fukuoka-census.py raw` → `python scripts/build-fukuoka-catalog.py` で再生成します。県外も含む1次メッシュを取得して福岡県に交差する原典行を選択。秘匿・合算先は通常メッシュと混ぜず、人口配分は行いません。国交省調整人口は既存の居住メッシュ絞込みに使用し、新しい国勢調査実績とは別に表示します。
+
+### 公式時刻表と交通空白判定（2026年9月15日）
+
+`operators/timetables.mjs` と `timetables.html` に公式の駅・停留所別検索を追加。`python scripts/build-fukuoka-timetable-directory.py <cache> --fetch` で一次ページを取得・再生成します。原典HTMLは公開ツリー外のキャッシュに置きます。
+
+福岡市地下鉄は公式Excelを `scripts/build-fukuoka-subway.py --source-dir <cache> --output <zip> --verify-pdfs` で列車単位に変換します。`--dates` の日付は検証した通常ダイヤの比較日だけに限定し、公式の有効期間と混同しません。出典Excel、PDFのURLとハッシュ、シート・列、検証結果はGTFS内 `source_metadata.json` と公開検証JSONに保存。現行の対象日は20260914,20260915,20260919,20260920です。対象日を変える場合は臨時変更・休日を再確認し、検証資料とカタログを更新します。
+
+GTFS追加後は、`data/gtfs/catalog.json` の既存全ファイルと新規ファイルをキャッシュの `gtfs/` へコピーし、全項目を `gtfs-manifest.json` に保存。`node scripts/build-fukuoka-transport.mjs <cache>` → `python scripts/build-fukuoka-operators.py` → `python scripts/build-fukuoka-timetable-directory.py <cache>` → `python scripts/build-fukuoka-catalog.py` の順に再生成します。既存52ファイルを落とさず、県外乗降地点を切断しないでください。追加高速データの原典URL・抽出路線ID・県内停留所IDはカタログに保持しています。
+
+検証：`node --test tests/fukuoka-timetables.test.mjs tests/fukuoka-coverage.test.mjs tests/fukuoka-operators.test.mjs tests/fukuoka-expansion.test.mjs`。未接続を0便にしないこと、限定日の間の日付も未判定にすること、選択外時刻表が消えないこと、車いす・予約の未知条件を合格にしないことを確認します。
+
+時間帯別地図は `gaps/time-view.mjs` と `gaps/app.mjs` が担当。1時間ごとの実際の出発数を使用し、未取得を0便に変換しません。`?view=hourly&hour=12&hourlyMinimum=1` で昼の表示を直接共有できます。日付・徒歩圏・選択データは従来の共有条件に含み、時刻表を再計算してから色分けします。`view=conditions` は条件の総合判定。表示の時間を変えても判定プロファイルの便数条件を上書きしません。

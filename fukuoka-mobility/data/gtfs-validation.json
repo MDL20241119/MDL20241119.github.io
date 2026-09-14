@@ -497,5 +497,41 @@
     "validFrom": "20260907",
     "validTo": "20270907",
     "current": true
+  },
+  {
+    "file": "fukuoka-subway__b9f8e012.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260914",
+    "validTo": "20260920",
+    "current": true
+  },
+  {
+    "file": "gtfs10_highway02oitakotsu-fukuoka__9ed291ed.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260901",
+    "validTo": "20270831",
+    "current": true
+  },
+  {
+    "file": "gtfs10_highway03kamenoi-fukuoka__c7c02367.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
+  },
+  {
+    "file": "gtfs10_highway04hita-fukuoka__a5f3cbf7.zip",
+    "errors": 0,
+    "warnings": 0,
+    "issues": [],
+    "validFrom": "20260401",
+    "validTo": "20270331",
+    "current": true
   }
 ]
