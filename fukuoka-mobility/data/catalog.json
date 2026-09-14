@@ -179,7 +179,8 @@
     "gaps/data/40647-500.geojson": "c8025d3ee5236d5f60b1fbcb3dd8266372e5c80bff157182c0c34f49cb07c583",
     "gaps/data/40647-1000.geojson": "3506a2b38cfbf805d8ddf7748359de48cd67dbeab6dabf0da1bd69e0efc4b376",
     "data/rail.json": "317b82308a1f611cf1b57a6db4f18601046164e8c53f8d641da79df06b562aa5",
-    "data/bus-stop-inventory.geojson": "9d959321851196554504801f9e2ee25475adf79ad09a8d3b19e5eebd7bc21b58"
+    "data/bus-stop-inventory.geojson": "9d959321851196554504801f9e2ee25475adf79ad09a8d3b19e5eebd7bc21b58",
+    "data/operators.json": "f67c2ce640a55a8a9cc010c12d57f3a200f1a6b9019610d49b180cb9e3894f45"
   },
   "categories": [
     {
@@ -14068,6 +14069,84 @@
           "state": "PARTIAL",
           "label": "用途・条件に制約",
           "evidence": "分析への接続を確認していません。"
+        }
+      }
+    },
+    {
+      "id": "operator-coverage",
+      "name": "県内交通事業者・公表主体の反映状況",
+      "category": "transport",
+      "categories": [
+        "transport"
+      ],
+      "provider": "各原典をモビリティデザインラボが集約",
+      "sourceUrl": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html",
+      "sourceUrls": [
+        {
+          "name": "国土数値情報 バス停留所",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11-2022.html"
+        },
+        {
+          "name": "国土数値情報 鉄道",
+          "url": "https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N02-2025.html"
+        }
+      ],
+      "dataAsOf": null,
+      "retrievedAt": null,
+      "checkedAt": "2026-09-14",
+      "sourceUpdatedAt": null,
+      "updateFrequency": null,
+      "coverage": "国土数値情報の福岡県収録分と、保存した公開GTFSに記載された事業者・公表主体。現行の県内全事業者名簿ではありません。",
+      "format": "JSON・画面からCSV保存",
+      "license": null,
+      "licenseUrl": null,
+      "dataClass": "DERIVED",
+      "status": "PARTIAL",
+      "analysisReady": "PARTIAL",
+      "processing": "原典の事業者名とGTFS agencyを集約。位置を索引で参照し、時刻表・実績・費用・リアルタイムの反映状況を明示。",
+      "limitations": [
+        "自治体・地域交通名は原典の公表主体で表示。委託運行会社を推定して割り当てていません。西鉄の委託路線を含む自治体GTFSがあっても、西鉄全線の時刻表反映には数えません。",
+        "県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州は位置のみで、時刻表・往復計算・乗降実績・費用・リアルタイムは未反映。"
+      ],
+      "usedFor": [
+        {
+          "label": "事業者別の位置と反映・未反映",
+          "url": "operators.html"
+        }
+      ],
+      "localFiles": [
+        "data/operators.json"
+      ],
+      "records": 78,
+      "recordUnit": "事業者・公表主体（県内総数ではない）",
+      "valueType": null,
+      "layerIds": [],
+      "scope": "県内全事業者のデータ反映は未完了",
+      "quality": {
+        "freshness": {
+          "state": "UNKNOWN",
+          "label": "現況との一致は未確認",
+          "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
+        },
+        "coverage": {
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "国土数値情報の福岡県収録分と、保存した公開GTFSに記載された事業者・公表主体。現行の県内全事業者名簿ではありません。"
+        },
+        "position": {
+          "state": "UNKNOWN",
+          "label": "精度の数値検証なし",
+          "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
+        },
+        "license": {
+          "state": "UNKNOWN",
+          "label": "要確認",
+          "evidence": "個別の原典条件・第三者権利を確認してください。"
+        },
+        "analysis": {
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "事業者別の位置と反映・未反映"
         }
       }
     },

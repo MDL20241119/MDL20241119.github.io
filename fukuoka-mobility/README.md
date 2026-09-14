@@ -30,3 +30,8 @@ node tests/fukuoka-data.mjs
 ```
 
 index.html は既存ホームページへの入口追加のみ。大分県版は変更しません。通常のローカル確認はリポジトリ直下で `python3 -m http.server`。
+
+
+### 事業者別データ
+
+`operators.html` で事業者・公表主体を検索し、位置と時刻表等の反映状況を確認できます。県内全事業者の反映は未完了です。再生成順序：`python scripts/build-fukuoka-operators.py` → `python scripts/build-fukuoka-catalog.py`。検証：`python scripts/build-fukuoka-operators.py --check`、`node --test tests/fukuoka-operators.test.mjs`。GTFS追加時は原典・利用条件・有効期間を確認し、交通データを先に再生成してください。

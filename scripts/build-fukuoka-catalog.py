@@ -224,6 +224,15 @@ dataset('rail-geography','福岡県内の鉄道駅・線路位置','transport',p
 bus_inventory=read('data/bus-stop-inventory.geojson')
 dataset('bus-inventory','福岡県バス停留所・2022年位置資料','transport',provider='国土交通省',sourceUrl='https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-P11-2022.html',dataAsOf='2022年度',retrievedAt='2026-09-14',license='CC BY 4.0',licenseUrl='https://nlftp.mlit.go.jp/ksj/other/agreement_01.html',dataClass='OPEN',status='PARTIAL',analysisReady='PARTIAL',format='GeoJSON',records=len(bus_inventory['features']),recordUnit='停留所位置',coverage='福岡県の収録分',limitations=['過去の位置資料。現在の運行有無・本数は判断しない。時刻表計算とは別。'],localFiles=['data/bus-stop-inventory.geojson'],layerIds=['bus-inventory'],scope='バス停位置資料')
 
+operators=read('data/operators.json')
+dataset('operator-coverage','県内交通事業者・公表主体の反映状況','transport',provider='各原典をモビリティデザインラボが集約',
+    sourceUrl=rail['meta']['sourceUrl'],sourceUrls=[{'name':'国土数値情報 バス停留所','url':operators['sources']['bus']['url']},{'name':'国土数値情報 鉄道','url':operators['sources']['rail']['url']}],
+    checkedAt=operators['checkedAt'],dataAsOf=None,dataClass='DERIVED',status='PARTIAL',analysisReady='PARTIAL',format='JSON・画面からCSV保存',
+    records=len(operators['operators']),recordUnit='事業者・公表主体（県内総数ではない）',coverage=operators['scope'],
+    processing='原典の事業者名とGTFS agencyを集約。位置を索引で参照し、時刻表・実績・費用・リアルタイムの反映状況を明示。',
+    limitations=[operators['agencyNote'],'県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州は位置のみで、時刻表・往復計算・乗降実績・費用・リアルタイムは未反映。'],
+    usedFor=[usage('事業者別の位置と反映・未反映','operators.html')],localFiles=['data/operators.json'],scope='県内全事業者のデータ反映は未完了')
+
 missing = [
     ('elderly','高齢者人口','population','2020年の高齢者人口は既存抽出データに含まれません。将来推計で補いません。'),
     ('rail-timetable','鉄道時刻表','transport','鉄道を含む往復判定は未実装。'),
