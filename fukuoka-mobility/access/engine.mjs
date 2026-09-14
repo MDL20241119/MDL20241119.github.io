@@ -1,6 +1,6 @@
 import {buildNetwork,distance,key,seconds,validDate} from '../lab/gtfs.mjs';
 
-export const ACCESS_VERSION='activity-access-1.0';
+export const ACCESS_VERSION='activity-access-1.1';
 const unique=a=>[...new Set(a)];
 export function prepareAccess(feeds,date){
   if(!validDate(date))throw Error('分析日を確認してください');
