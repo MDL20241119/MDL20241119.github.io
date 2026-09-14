@@ -303,8 +303,19 @@ dataset('operator-finance','9鉄道事業者と西鉄グループ・年間輸送
     usedFor=[usage('年間輸送量・収支・営業利益率・CSV','operators.html#operator-statistics')],
     localFiles=['data/operator-finance.json',finance_stats['sourceFacts']],scope='県外を含む事業全体の実績')
 
+census = read('data/census-audit.json')
+dataset('census-elderly','2020年国勢調査・高齢者人口と世帯','population',provider=census['provider'],
+    sourceUrl=census['url'],sourceUrls=[{'name':a['mesh']+' 原典CSV ZIP','url':a['url']} for a in census['archives']],
+    dataAsOf=census['dataAsOf'],retrievedAt=census['retrievedAt'],sourceUpdatedAt=census['sourceUpdatedAt'],
+    license=census['license'],licenseUrl=census['licenseUrl'],format='CSV → JSON / gzip',
+    status='PARTIAL',analysisReady='PARTIAL',records=census['selectedSourceRows'],recordUnit='500mメッシュ原典行',
+    coverage='福岡県と交差するメッシュを4つの1次メッシュ原典から抽出。境界付近・秘匿・欠測は人数未集計。',
+    processing='年齢別人口と世帯をメッシュコードで結合。1000mは4子メッシュすべての集計可否を確認。',
+    limitations=census['notes'],usedFor=[usage('交通空白の区域詳細・CSV・GeoJSON','transport-gaps.html')],
+    localFiles=['data/census-audit.json','data/sources/census2020.json.gz','gaps/data/census2020.json.gz'],
+    valueType='2020年国勢調査実績・世帯数と人数は区別',scope='福岡県60市町村の500m・1000m区域')
+
 missing = [
-    ('elderly','高齢者人口','population','e-Statの2020年500m人口・世帯（T001141）を確認。配布先が取得環境のURL制限で拒否され未取得。将来推計で補いません。'),
     ('rail-timetable','鉄道の全便時刻表','transport','鉄道の全便データを未取得。西鉄電車・JR九州等の駅位置や実績を時刻表の代用にしません。'),
     ('taxi','タクシーの供給・予約可能台数','transport','予約可能台数・現時点の供給状況は未収録。'),
     ('road-conditions','歩道段差・道路の現況確認','terrain','OSM道路を反映。横断の可否・段差・幅員・現在の通行可否の完全性は未確認です。'),

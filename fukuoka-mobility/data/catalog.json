@@ -259,7 +259,8 @@
     "data/station-ridership.json": "88b6e3ed09f14416969b50e3f7dc572fb01c5ecf02b2788c68c6e61569e3bc9e",
     "data/sources/station-ridership-2024.geojson": "d700f90618361ab8b29efb01edc42d9ed50a4431745bbf93fd3d10fc6919a7fd",
     "data/operator-finance.json": "dd74edfcec2a551d0776a4c5735c01cabcdaf4696cf70868b85ab82ed92fc905",
-    "data/sources/operator-finance-facts.json": "a6c3f58db051961965488b86d68f70501eeeb4d126a43152f7e7d3fda2dfd812"
+    "data/sources/operator-finance-facts.json": "a6c3f58db051961965488b86d68f70501eeeb4d126a43152f7e7d3fda2dfd812",
+    "data/census-audit.json": "5f38aca2337bc011b165673a06a14a7e2ad8eb1506c5c73aaaeb223c471c30c1"
   },
   "categories": [
     {
@@ -33681,38 +33682,68 @@
       }
     },
     {
-      "id": "planned-elderly",
-      "name": "高齢者人口",
+      "id": "census-elderly",
+      "name": "2020年国勢調査・高齢者人口と世帯",
       "category": "population",
       "categories": [
         "population"
       ],
-      "provider": null,
-      "sourceUrl": null,
-      "sourceUrls": [],
-      "dataAsOf": null,
-      "retrievedAt": null,
-      "checkedAt": null,
-      "sourceUpdatedAt": null,
-      "updateFrequency": null,
-      "coverage": "未収録。提供元・利用条件・収録範囲の確認が必要。",
-      "format": null,
-      "license": null,
-      "licenseUrl": null,
-      "dataClass": null,
-      "status": "PLANNED",
-      "analysisReady": "NOT_READY",
-      "processing": null,
-      "limitations": [
-        "e-Statの2020年500m人口・世帯（T001141）を確認。配布先が取得環境のURL制限で拒否され未取得。将来推計で補いません。"
+      "provider": "総務省統計局・e-Stat",
+      "sourceUrl": "https://www.e-stat.go.jp/gis/statmap-search?type=1&statsId=T001141",
+      "sourceUrls": [
+        {
+          "name": "4930 原典CSV ZIP",
+          "url": "https://www.e-stat.go.jp/gis/statmap-search/data?statsId=T001141&code=4930&downloadType=2"
+        },
+        {
+          "name": "5030 原典CSV ZIP",
+          "url": "https://www.e-stat.go.jp/gis/statmap-search/data?statsId=T001141&code=5030&downloadType=2"
+        },
+        {
+          "name": "5031 原典CSV ZIP",
+          "url": "https://www.e-stat.go.jp/gis/statmap-search/data?statsId=T001141&code=5031&downloadType=2"
+        },
+        {
+          "name": "5130 原典CSV ZIP",
+          "url": "https://www.e-stat.go.jp/gis/statmap-search/data?statsId=T001141&code=5130&downloadType=2"
+        }
       ],
-      "usedFor": [],
-      "localFiles": [],
-      "records": null,
-      "recordUnit": "件",
-      "valueType": null,
+      "dataAsOf": "2020-10-01",
+      "retrievedAt": "2026-09-14",
+      "checkedAt": null,
+      "sourceUpdatedAt": "2024-03-14",
+      "updateFrequency": null,
+      "coverage": "福岡県と交差するメッシュを4つの1次メッシュ原典から抽出。境界付近・秘匿・欠測は人数未集計。",
+      "format": "CSV → JSON / gzip",
+      "license": "政府標準利用規約に基づく加工",
+      "licenseUrl": "https://www.e-stat.go.jp/terms-of-use",
+      "dataClass": null,
+      "status": "PARTIAL",
+      "analysisReady": "PARTIAL",
+      "processing": "年齢別人口と世帯をメッシュコードで結合。1000mは4子メッシュすべての集計可否を確認。",
+      "limitations": [
+        "2020年実績。現在人口や交通空白人口ではありません。国交省調整人口とは別の統計です。",
+        "秘匿・合算対象は集計から除外。欠測・区域境界付近を0や面積按分で補完しません。",
+        "500mメッシュ全体と約30mの余裕が自治体境界内に収まる場合のみ区域人数を計上。",
+        "1000mは4子メッシュすべてに集計可能な数値がある場合だけ合算します。",
+        "高齢単身世帯・高齢夫婦世帯は世帯数。人数へ変換しません。"
+      ],
+      "usedFor": [
+        {
+          "label": "交通空白の区域詳細・CSV・GeoJSON",
+          "url": "transport-gaps.html"
+        }
+      ],
+      "localFiles": [
+        "data/census-audit.json",
+        "data/sources/census2020.json.gz",
+        "gaps/data/census2020.json.gz"
+      ],
+      "records": 11423,
+      "recordUnit": "500mメッシュ原典行",
+      "valueType": "2020年国勢調査実績・世帯数と人数は区別",
       "layerIds": [],
-      "scope": "今後の収録候補",
+      "scope": "福岡県60市町村の500m・1000m区域",
       "quality": {
         "freshness": {
           "state": "UNKNOWN",
@@ -33720,9 +33751,9 @@
           "evidence": "基準日・取得日は下記に分離。取得した日が新しくても、現況を保証しません。"
         },
         "coverage": {
-          "state": "UNKNOWN",
-          "label": "未確認",
-          "evidence": "未収録。提供元・利用条件・収録範囲の確認が必要。"
+          "state": "PARTIAL",
+          "label": "収録範囲に限定",
+          "evidence": "福岡県と交差するメッシュを4つの1次メッシュ原典から抽出。境界付近・秘匿・欠測は人数未集計。"
         },
         "position": {
           "state": "UNKNOWN",
@@ -33730,14 +33761,14 @@
           "evidence": "位置精度の検証記録なし。座標があることと、入口に到達できることは別です。"
         },
         "license": {
-          "state": "UNKNOWN",
-          "label": "要確認",
+          "state": "DOCUMENTED",
+          "label": "利用条件の記載あり",
           "evidence": "個別の原典条件・第三者権利を確認してください。"
         },
         "analysis": {
-          "state": "NOT_READY",
-          "label": "未実装",
-          "evidence": "分析への接続を確認していません。"
+          "state": "PARTIAL",
+          "label": "用途・条件に制約",
+          "evidence": "交通空白の区域詳細・CSV・GeoJSON"
         }
       }
     },
@@ -42933,7 +42964,8 @@
         "rail-geography",
         "bus-inventory",
         "station-ridership",
-        "operator-finance"
+        "operator-finance",
+        "census-elderly"
       ]
     },
     {
