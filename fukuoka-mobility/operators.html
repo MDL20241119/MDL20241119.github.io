@@ -2,16 +2,16 @@
 <html lang="ja"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#FFF1F5">
 <title>交通事業者・データ反映状況｜福岡 交通データ｜MDL</title>
-<meta name="description" content="福岡県内の交通事業者・公表主体ごとに、停留所・駅・線路と時刻表等の反映状況を確認。西鉄バス・西鉄電車・JR九州は位置のみで、時刻表・往復計算が未反映であることを明示します。">
+<meta name="description" content="福岡県内の交通事業者・公表主体ごとに、停留所・駅・線路と時刻表等の反映状況を確認。西鉄・JR九州を含む駅別実績、年間輸送人員と収支を掲載。未収録の時刻表・遅延情報は区別して表示します。">
 <link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/atlas-design.css?v=9"><link rel="stylesheet" href="assets/neo-swiss.css?v=11">
-<script defer src="assets/leaflet.js"></script><script type="module" src="operators/app.mjs?v=20260914-2"></script><link rel="stylesheet" href="catalog/integration.css?v=1"><link rel="stylesheet" href="operators/style.css?v=20260914-1"></head>
+<script defer src="assets/leaflet.js"></script><script type="module" src="operators/app.mjs?v=20260914-3"></script><link rel="stylesheet" href="catalog/integration.css?v=1"><link rel="stylesheet" href="operators/style.css?v=20260914-3"></head>
 <body class="atlas page-operators"><a class="skip" href="#main">事業者一覧へ移動</a>
 <header class="atlas-header"><a class="atlas-brand" href="index.html"><span class="atlas-monogram" aria-hidden="true">FUK</span><span>福岡 交通データ<small>FUKUOKA TRANSPORT ATLAS</small></span></a><nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a><a href="operators.html" aria-current="page"><span class="nav-index" aria-hidden="true">06</span><span>事業者</span></a></nav><div class="atlas-header-actions"><button class="button" id="share-catalog">表示を共有 ↗</button></div></header>
 <main id="main" class="operator-main">
 <span class="operator-kicker">FUKUOKA MOBILITY ATLAS / OPERATORS</span>
 <h1>交通事業者と、<br>データの反映状況。</h1>
 <p class="operator-intro">福岡県内の収録位置を事業者ごとに確認できます。時刻表、乗降実績、費用、リアルタイム情報の反映状況を分けて表示します。</p>
-<aside class="operator-notice" aria-label="データ反映の未完了項目"><p><strong>県内全事業者のデータ反映は、まだ完了していません。</strong><br>西鉄バス・西鉄電車・JR九州は位置情報のみ。3者の時刻表・往復計算・乗降実績・費用・リアルタイム情報は未反映です。</p><a href="#uncovered">未反映の範囲を確認 →</a></aside>
+<aside class="operator-notice" aria-label="データ反映の未完了項目"><p><strong>県内全事業者のデータ反映は、まだ完了していません。</strong><br>西鉄バス・西鉄電車・JR九州の公表実績・収支を追加しました。3者の時刻表・往復計算・リアルタイム情報は未反映です。</p><a href="#uncovered">未反映の範囲を確認 →</a></aside>
 <div id="priority-operators" class="priority-grid" aria-label="西鉄バス・西鉄電車・JR九州"></div>
 <p id="operator-loading" role="status">事業者データを読み込んでいます。読込完了までは件数を表示しません。</p>
 <p id="operator-error" class="op-error" role="alert" hidden></p>
@@ -22,13 +22,31 @@
 <div class="operator-filters">
 <label>事業者・公表主体<select id="operator-select"><option value="all">すべての掲載主体</option></select></label>
 <label>交通の種類<select id="mode-select"><option value="all">すべて</option><option value="bus">バス・地域交通</option><option value="rail">鉄道</option><option value="ferry">渡船</option></select></label>
-<label>時刻表の反映状況<select id="status-select"><option value="all">すべて</option><option value="missing">未反映・利用不可のみ</option><option value="timetable">反映済み（収録分）</option><option value="location">位置情報のみ</option><option value="unusable">期限外・検証エラー</option></select></label>
+<label>時刻表の反映状況<select id="status-select"><option value="all">すべて</option><option value="missing">未反映・利用不可のみ</option><option value="timetable">反映済み（収録分）</option><option value="location">時刻表未反映・位置あり</option><option value="unusable">期限外・検証エラー</option></select></label>
 <label>事業者名・原典の路線名<input id="operator-query" type="search" placeholder="例：西鉄、JR九州、昭和" autocomplete="off"></label>
 </div>
 <div class="op-tools"><p id="operator-count" aria-live="polite"></p><div><button id="operator-reset" type="button">条件をリセット</button> <button id="operator-export" type="button">一覧をCSVで保存</button></div></div>
 <div class="op-table-wrap" tabindex="0" role="region" aria-label="事業者別の反映状況。狭い画面では横にスクロールできます"><table class="op-table"><thead><tr><th scope="col">事業者・公表主体</th><th scope="col">時刻表・経路計算</th><th scope="col">反映した位置</th><th scope="col">乗降実績</th><th scope="col">費用</th><th scope="col">リアルタイム</th></tr></thead><tbody id="operator-table-body"></tbody></table></div>
 <div class="op-pagination"><button id="operator-prev" disabled>前へ</button><span id="operator-page" aria-live="polite"></span><button id="operator-next" disabled>次へ</button></div>
 </section>
+<section id="operator-statistics" aria-labelledby="statistics-title">
+<h2 id="statistics-title">乗降実績と収支を調べる</h2>
+<p>上の事業者の選択を反映します。駅別乗降客数は福岡県内の収録地点。年間輸送人員・収支は各社またはグループ全体の実績です。</p>
+<p id="statistics-loading" role="status">実績と収支を読み込んでいます。</p>
+<div id="statistics-controls" hidden>
+<div class="operator-filters stats-filters"><label>駅別実績の年度<select id="stats-year"><option value="2024">2024年度</option></select></label><label>駅名・路線名<input id="station-query" type="search" placeholder="例：博多、天神" autocomplete="off"></label></div>
+<div class="op-tools"><h3>駅別の乗降客数</h3><button id="station-export">選択地点の全年度CSV</button></div>
+<p id="station-coverage" aria-live="polite"></p>
+<p class="op-help">単位：人／日。原典の駅・路線単位で表示し、他線計上は再加算しません。前年比は前年にも公表値があり、原典注記が一致する場合の参考値です。</p>
+<div class="op-table-wrap" tabindex="0" role="region" aria-label="駅別乗降実績"><table class="op-table"><thead><tr><th scope="col">駅・路線（駅名で全年度を表示）</th><th scope="col">乗降客数（人／日）</th><th scope="col">データの状態</th><th scope="col">前年比・参考</th></tr></thead><tbody id="station-table-body"></tbody></table></div>
+<div class="op-pagination"><button id="station-prev" disabled>実績の前ページ</button><span id="station-page" aria-live="polite"></span><button id="station-next" disabled>実績の次ページ</button></div>
+<div id="station-history" class="op-detail" hidden></div><p id="station-source" class="op-help"></p>
+<div class="op-tools"><h3>年間輸送量・収支</h3><button id="finance-export">表示した収支をCSVで保存</button></div>
+<p id="finance-count" aria-live="polite"></p>
+<p class="op-help"><strong>金額の単位：百万円。</strong>輸送量の単位は各行に表示。県外の路線を含む事業全体の値で、県内の路線別原価には配賦していません。</p>
+<div class="op-table-wrap" tabindex="0" role="region" aria-label="事業者と事業区分ごとの輸送量・収支"><table class="op-table finance-table"><thead><tr><th scope="col">事業者・集計範囲・出典</th><th scope="col">年度</th><th scope="col">年間輸送量</th><th scope="col">営業収益</th><th scope="col">営業費用</th><th scope="col">営業利益</th></tr></thead><tbody id="finance-table-body"></tbody></table></div>
+<ul id="finance-notes" class="op-help"></ul>
+</div></section>
 <section id="operator-map-section" class="op-map-section" aria-labelledby="operator-map-title">
 <h2 id="operator-map-title">事業者別の停留所・駅・線路</h2><p class="op-help">上の選択条件を地図にも反映。位置資料は現在の運行状況や経路計算の対象を示すものではありません。</p>
 <div class="op-map-legend"><span style="--marker:#a46b39">バス停位置・2022年度</span><span style="--marker:#2857a0">鉄道駅・線路・2025年末</span><span style="--marker:#227554">取得GTFSの乗降地点・路線</span><span style="--marker:#777">GTFS期限外・検証エラー</span></div>

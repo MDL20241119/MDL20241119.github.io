@@ -7,8 +7,18 @@
   "missingCategories": [
     {
       "name": "西鉄バス・西鉄電車・JR九州",
-      "status": "時刻表・往復計算は未反映",
-      "reason": "位置データのみ。乗降実績・費用・遅延情報も未反映。"
+      "status": "公表実績・収支を追加。時刻表・往復計算・遅延情報は未反映",
+      "reason": "公開検索画面の閲覧と分析用データの接続は別です。全便の時刻表ファイル、再利用・配信条件、有効期間を確認できていないため、経路・交通空白判定には使いません。停留所別・時間帯別ODと県内路線別原価も未取得。"
+    },
+    {
+      "name": "北九州市営バスの時刻表",
+      "status": "配信あり・利用登録待ち",
+      "reason": "PTD-HSの福岡県一覧で静的データと2027年2月28日の期限を確認。配信元の登録審査、APIキー発行、利用条件の確認が必要。資料・申請先：https://www.ptd-hs.jp/"
+    },
+    {
+      "name": "昭和バスの時刻表",
+      "status": "追加取得が保留",
+      "reason": "福岡・糸島の運行は公式案内で確認。福岡路線を含む佐賀側配布ファイルを取得し、県内路線・有効期間・利用条件を確認する作業が残っています。"
     },
     {
       "name": "現行の県内全交通事業者名簿",
@@ -160,13 +170,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-7ec8e3013093",
@@ -211,7 +222,8 @@
       "gtfsStopCount": 35,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-856323a70a56",
@@ -254,7 +266,8 @@
       "gtfsStopCount": 76,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-2072085c54a4",
@@ -303,13 +316,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-d8686f6cf9e5",
@@ -418,7 +432,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-5b9f8cea5a5b",
@@ -654,7 +669,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-4cdad5d437b4",
@@ -747,13 +763,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-936c6c0645d3",
@@ -1314,13 +1331,15 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "PTD-HSに2027年2月28日までの時刻表配信を確認。利用登録の審査・APIキー発行が必要。現時点では未取得。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "acquisitionSource": "https://www.ptd-hs.jp/"
     },
     {
       "id": "op-c5670800c0ca",
@@ -1364,13 +1383,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-738b39284a62",
@@ -1423,13 +1443,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-20084b99a339",
@@ -1488,7 +1509,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-03027da8a0e6",
@@ -1531,7 +1553,8 @@
       "gtfsStopCount": 44,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-718e1acabb0d",
@@ -1592,13 +1615,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-c8b0958d1bfa",
@@ -1639,13 +1663,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-72b98f982098",
@@ -1946,7 +1971,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-513dee1fec28",
@@ -2263,13 +2289,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-0f621ec46c63",
@@ -2313,7 +2340,8 @@
       "gtfsStopCount": 25,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-c1788f0aec07",
@@ -2444,13 +2472,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-bfefc2b76c6f",
@@ -2646,7 +2675,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-4e219d2c1156",
@@ -2956,7 +2986,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-408cecb14f97",
@@ -3021,7 +3052,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-1627b329a5ca",
@@ -3398,7 +3430,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-42a64035bfd1",
@@ -3501,7 +3534,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-c46b50b59066",
@@ -3625,13 +3659,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-3948fa7e621a",
@@ -3763,7 +3798,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-e682e04f03b0",
@@ -3809,7 +3845,8 @@
       "gtfsStopCount": 106,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-028fcf87b1dd",
@@ -3851,7 +3888,8 @@
       "gtfsStopCount": 16,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-624f185721df",
@@ -3893,7 +3931,8 @@
       "gtfsStopCount": 22,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-411ced3dfbcf",
@@ -3991,7 +4030,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-32ae044aea84",
@@ -4201,7 +4241,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-ff81999acc66",
@@ -4564,16 +4605,17 @@
       "realtime": null,
       "ridership": null,
       "costs": null,
-      "officialUrl": null,
+      "officialUrl": "https://www.showa-bus.jp/",
       "officialTimetableUrl": null,
-      "missingReason": "佐賀県の公開元にGTFSの案内あり。今回の取得は失敗したため、時刻表は未反映。福岡県内の対象路線・利用条件の確認も必要。",
+      "missingReason": "福岡路線を含む佐賀側GTFSの追加取得が保留。時刻表は未反映。取得後に福岡県内の対象路線・有効期間・利用条件の検証が必要。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
       ],
-      "acquisitionSource": "https://opendata.sagabus.info/"
+      "statisticRecordCount": 0,
+      "acquisitionSource": "http://opendata.sagabus.info/"
     },
     {
       "id": "op-7c4834134d8a",
@@ -4664,13 +4706,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-6b20fea6a8b7",
@@ -4712,7 +4755,8 @@
       "gtfsStopCount": 42,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-db88819c9a74",
@@ -4754,7 +4798,8 @@
       "gtfsStopCount": 38,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-ef8b40fe1c79",
@@ -4800,7 +4845,8 @@
       "gtfsStopCount": 63,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-10de57cdb8f3",
@@ -4851,7 +4897,8 @@
       "gtfsStopCount": 174,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-27b49062e80d",
@@ -4896,7 +4943,8 @@
       "gtfsStopCount": 114,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-22d6b39fc11f",
@@ -4992,7 +5040,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-791f89506375",
@@ -5100,7 +5149,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-1eeb0dfbd3e9",
@@ -5142,7 +5192,8 @@
       "gtfsStopCount": 11,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-38beadd9d06b",
@@ -5305,7 +5356,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-d14632f03080",
@@ -5428,7 +5480,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-93019147217e",
@@ -5625,7 +5678,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-f1b94b15b90c",
@@ -5845,13 +5899,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-060cadd8a45c",
@@ -5894,7 +5949,8 @@
       "gtfsStopCount": 47,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-dd0ab015c593",
@@ -6032,13 +6088,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-9f864b2ecff7",
@@ -6157,7 +6214,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-aaa8c9d728b1",
@@ -6206,7 +6264,8 @@
       "gtfsStopCount": 88,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-dd2e0bae6d82",
@@ -6362,7 +6421,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-d165f9606ee3",
@@ -6893,17 +6953,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-d165f9606ee3#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-d165f9606ee3#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-35cf1f0fa500",
@@ -7267,17 +7347,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-35cf1f0fa500#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-35cf1f0fa500#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-498d4be7871c",
@@ -7340,17 +7440,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-498d4be7871c#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-498d4be7871c#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-75d2e8318672",
@@ -8657,17 +8777,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-75d2e8318672#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-75d2e8318672#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-da9ea48ec031",
@@ -8868,17 +9008,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-da9ea48ec031#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-da9ea48ec031#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-2f19f6b92442",
@@ -9197,17 +9357,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-2f19f6b92442#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-2f19f6b92442#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-522cf239f096",
@@ -9757,17 +9937,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-522cf239f096#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-522cf239f096#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-b508ac787846",
@@ -12026,17 +12226,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "group",
+        "period": "2024・2025年度",
+        "label": "グループ輸送実績",
+        "url": "operators.html?operator=op-b508ac787846#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-b508ac787846#operator-statistics",
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/bus/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0,
+      "annualStatistics": {
+        "recordIds": [
+          "nishitetsu-bus-2025",
+          "nishitetsu-bus-2024"
+        ],
+        "note": "西鉄グループ集計。各社単独の値ではありません。"
+      }
     },
     {
       "id": "op-4d6dc21744b1",
@@ -12199,7 +12419,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-ecd1443bcc33",
@@ -12238,13 +12459,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-accba64c32c5",
@@ -12297,7 +12519,8 @@
       "gtfsStopCount": 80,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-8e4037767ffa",
@@ -12459,13 +12682,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-1045d3c57469",
@@ -12548,7 +12772,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-6b6d9c7cbeb8",
@@ -12597,7 +12822,8 @@
       "gtfsStopCount": 107,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-0ee0de0cc6d8",
@@ -13002,13 +13228,14 @@
       "costs": null,
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 0,
       "status": "location",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-dcf9474d65b8",
@@ -13081,7 +13308,8 @@
       "status": "timetable",
       "positionDates": [
         "2022年度"
-      ]
+      ],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-3a85b653e98b",
@@ -13112,7 +13340,8 @@
       "gtfsStopCount": 5,
       "stationCount": 0,
       "status": "unusable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-5441824b9855",
@@ -13156,7 +13385,8 @@
       "gtfsStopCount": 5,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-2affa8a479b0",
@@ -13199,7 +13429,8 @@
       "gtfsStopCount": 2,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-7021d33da43d",
@@ -13244,7 +13475,8 @@
       "gtfsStopCount": 7,
       "stationCount": 0,
       "status": "timetable",
-      "positionDates": []
+      "positionDates": [],
+      "statisticRecordCount": 0
     },
     {
       "id": "op-a9d2d56b3a04",
@@ -13865,17 +14097,39 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-a9d2d56b3a04#operator-statistics",
+        "available2024": 126,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023・2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-a9d2d56b3a04#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": "https://www.jrkyushu.co.jp/",
       "officialTimetableUrl": "https://www.jrkyushu-timetable.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 165,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 186,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-a9d2d56b3a04-2023",
+          "jr-kyushu-2025",
+          "jr-kyushu-2024"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-648da6762c3c",
@@ -13910,17 +14164,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-648da6762c3c#operator-statistics",
+        "available2024": 3,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-648da6762c3c#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 3,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 4,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-648da6762c3c-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-f630f2153b77",
@@ -13979,17 +14253,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-f630f2153b77#operator-statistics",
+        "available2024": 13,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-f630f2153b77#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 13,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 13,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-f630f2153b77-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-abb2e6ceb7ac",
@@ -14140,17 +14434,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-abb2e6ceb7ac#operator-statistics",
+        "available2024": 39,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-abb2e6ceb7ac#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 40,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 42,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-abb2e6ceb7ac-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-fffe33eaa1b8",
@@ -14197,17 +14511,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-fffe33eaa1b8#operator-statistics",
+        "available2024": 9,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-fffe33eaa1b8#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 9,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 9,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-fffe33eaa1b8-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-e0f015d1c93f",
@@ -14232,17 +14566,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-e0f015d1c93f#operator-statistics",
+        "available2024": 2,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-e0f015d1c93f#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 2,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 2,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-e0f015d1c93f-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-4be7d0741f8b",
@@ -14379,9 +14733,11 @@
       "realtime": null,
       "ridership": {
         "status": "partial",
-        "period": "2024年度",
-        "url": "index.html#ridership",
-        "note": "地下鉄の年度平均乗車人員。個人単位のODは未反映。"
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-4be7d0741f8b#operator-statistics",
+        "available2024": 36,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
       },
       "costs": {
         "status": "partial",
@@ -14391,13 +14747,20 @@
       },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 36,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 38,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-4be7d0741f8b-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-9eae4050500d",
@@ -14479,17 +14842,37 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-9eae4050500d#operator-statistics",
+        "available2024": 21,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-9eae4050500d#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": null,
       "officialTimetableUrl": null,
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 21,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 21,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-9eae4050500d-2023"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     },
     {
       "id": "op-5b00b3f71dcb",
@@ -14735,17 +15118,39 @@
       ],
       "timetable": null,
       "realtime": null,
-      "ridership": null,
-      "costs": null,
+      "ridership": {
+        "status": "partial",
+        "period": "2011〜2024年度",
+        "label": "駅別乗降実績",
+        "url": "operators.html?operator=op-5b00b3f71dcb#operator-statistics",
+        "available2024": 73,
+        "note": "県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。"
+      },
+      "costs": {
+        "status": "partial",
+        "period": "2023・2024・2025年度",
+        "label": "収支",
+        "url": "operators.html?operator=op-5b00b3f71dcb#operator-statistics",
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      },
       "officialUrl": "https://www.nishitetsu.jp/train/rosen/",
       "officialTimetableUrl": "https://jik.nishitetsu.jp/",
-      "missingReason": "計算に使える時刻表を未取得。位置・原典の路線名だけを反映。",
+      "missingReason": "計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。",
       "gtfsStopCount": 0,
       "stationCount": 73,
       "status": "location",
       "positionDates": [
         "2025-12-31"
-      ]
+      ],
+      "statisticRecordCount": 75,
+      "annualStatistics": {
+        "recordIds": [
+          "mlit-op-5b00b3f71dcb-2023",
+          "nishitetsu-rail-2025",
+          "nishitetsu-rail-2024"
+        ],
+        "note": "事業者・事業区分全体。県外を含み、路線別原価は未反映。"
+      }
     }
   ],
   "feeds": [
@@ -15554,7 +15959,9 @@
     "data/rail.json": "317b82308a1f611cf1b57a6db4f18601046164e8c53f8d641da79df06b562aa5",
     "data/map-data.json": "a7fae822c81c59c30dd5cdb067c04b0bc52aac2f64aa3e9d5dfad72325190669",
     "data/gtfs/catalog.json": "b59e6a8a68527421af0515d2919101f89c50ef0b08f59d6876c88d2952390d66",
-    "data/analysis.json": "2f799266cec5f20f628c691d3e38460bef8a7efe7274febd01d97c60100c0435"
+    "data/analysis.json": "2f799266cec5f20f628c691d3e38460bef8a7efe7274febd01d97c60100c0435",
+    "data/station-ridership.json": "88b6e3ed09f14416969b50e3f7dc572fb01c5ecf02b2788c68c6e61569e3bc9e",
+    "data/operator-finance.json": "dd74edfcec2a551d0776a4c5735c01cabcdaf4696cf70868b85ab82ed92fc905"
   },
   "sources": {
     "bus": {

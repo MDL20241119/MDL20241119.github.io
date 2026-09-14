@@ -1,0 +1,263 @@
+{
+  "checkedAt": "2026-09-14",
+  "mlit": [
+    {
+      "operator": "西日本鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 20873212,
+        "expenses": 19181881,
+        "profit": 1691331
+      },
+      "annualPassengersThousand": 98289,
+      "financeCells": {
+        "revenue": "N377",
+        "expenses": "CE377",
+        "profit": "CF377"
+      },
+      "passengersCell": "I346",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "北九州高速鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 2521645,
+        "expenses": 2030786,
+        "profit": 490859
+      },
+      "annualPassengersThousand": 12012,
+      "financeCells": {
+        "revenue": "N380",
+        "expenses": "CE380",
+        "profit": "CF380"
+      },
+      "passengersCell": "I350",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "筑豊電気鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 795855,
+        "expenses": 854725,
+        "profit": -58870
+      },
+      "annualPassengersThousand": 4015,
+      "financeCells": {
+        "revenue": "N382",
+        "expenses": "CE382",
+        "profit": "CF382"
+      },
+      "passengersCell": "I353",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "甘木鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 235350,
+        "expenses": 280544,
+        "profit": -45194
+      },
+      "annualPassengersThousand": 1337,
+      "financeCells": {
+        "revenue": "N385",
+        "expenses": "CE385",
+        "profit": "CF385"
+      },
+      "passengersCell": "I352",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "皿倉登山鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 121413,
+        "expenses": 149203,
+        "profit": -27790
+      },
+      "annualPassengersThousand": 237,
+      "financeCells": {
+        "revenue": "N387",
+        "expenses": "CE387",
+        "profit": "CF387"
+      },
+      "passengersCell": "I362",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "平成筑豊鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 340892,
+        "expenses": 859824,
+        "profit": -518932
+      },
+      "annualPassengersThousand": 1354,
+      "financeCells": {
+        "revenue": "N391",
+        "expenses": "CE391",
+        "profit": "CF391"
+      },
+      "passengersCell": "I358",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "福岡市",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 33730262,
+        "expenses": 28384621,
+        "profit": 5345641
+      },
+      "annualPassengersThousand": 176426,
+      "financeCells": {
+        "revenue": "N400",
+        "expenses": "CE400",
+        "profit": "CF400"
+      },
+      "passengersCell": "I366",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "西日本旅客鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 915801374,
+        "expenses": 813112116,
+        "profit": 102689258
+      },
+      "annualPassengersThousand": 1731736,
+      "financeCells": {
+        "revenue": "N434",
+        "expenses": "CE434",
+        "profit": "CF434"
+      },
+      "passengersCell": "I385",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    },
+    {
+      "operator": "九州旅客鉄道",
+      "year": 2023,
+      "valuesThousandYen": {
+        "revenue": 160497332,
+        "expenses": 149941885.816,
+        "profit": 10555446.183999985
+      },
+      "annualPassengersThousand": 318879,
+      "financeCells": {
+        "revenue": "N436",
+        "expenses": "CE436",
+        "profit": "CF436"
+      },
+      "passengersCell": "I387",
+      "financeSheet": "鉄・軌道業営業損益（鉄道統計年報版）",
+      "passengersSheet": "公表用（０１）Ⅰ運輸成績表（数量）_2023年度（済）"
+    }
+  ],
+  "mlitSource": {
+    "title": "鉄道統計年報 令和5年度（2023年度）",
+    "url": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+    "financeUrl": "https://www.mlit.go.jp/tetudo/content/001977420.xlsx",
+    "passengersUrl": "https://www.mlit.go.jp/tetudo/content/001977752.xlsx",
+    "errataUrl": "https://www.mlit.go.jp/tetudo/content/001984232.xlsx",
+    "financeSha256": "633857cf05996c8573101b69af28a6ef550a9f6f7c0a8599f58a291856d058aa",
+    "passengersSha256": "ec76ba538f81c1d85df1a4581ce3a316097f4b1be2691762a1ffa770bca1c12e",
+    "note": "2026年7月9日更新の正誤表を確認。配布中ファイルから抽出。合計行を二重加算せず、事業者の年間輸送人員を採用。"
+  },
+  "recent": [
+    {
+      "id": "nishitetsu-rail-2025",
+      "kind": "nishitetsu-rail",
+      "year": 2025,
+      "revenueMillionYen": 23866,
+      "profitMillionYen": 1828,
+      "passengersValue": 112,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1
+    },
+    {
+      "id": "nishitetsu-rail-2024",
+      "kind": "nishitetsu-rail",
+      "year": 2024,
+      "revenueMillionYen": 22595,
+      "profitMillionYen": 2223,
+      "passengersValue": 107,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1
+    },
+    {
+      "id": "nishitetsu-bus-2025",
+      "kind": "nishitetsu-bus",
+      "year": 2025,
+      "revenueMillionYen": 56317,
+      "profitMillionYen": 2207,
+      "passengersValue": 207,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1
+    },
+    {
+      "id": "nishitetsu-bus-2024",
+      "kind": "nishitetsu-bus",
+      "year": 2024,
+      "revenueMillionYen": 55846,
+      "profitMillionYen": 2675,
+      "passengersValue": 207,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1
+    },
+    {
+      "id": "jr-kyushu-2025",
+      "kind": "jr-kyushu",
+      "year": 2025,
+      "revenueMillionYen": 188800,
+      "profitMillionYen": 24200,
+      "passengersValue": 8493,
+      "passengersUnit": "百万人キロ／年",
+      "sourceUrl": "https://www.jrkyushu.co.jp/company/ir/library/earnings/__icsFiles/afieldfile/2026/05/12/9142.FY2026.4q.material.ja_1.pdf",
+      "sourceTitle": "JR九州 2026年3月期決算説明会資料",
+      "sourcePage": "13・23ページ",
+      "sourceMoneyUnit": "億円",
+      "sourcePrecisionMillionYen": 100
+    },
+    {
+      "id": "jr-kyushu-2024",
+      "kind": "jr-kyushu",
+      "year": 2024,
+      "revenueMillionYen": 167000,
+      "profitMillionYen": 13400,
+      "passengersValue": 8595,
+      "passengersUnit": "百万人キロ／年",
+      "sourceUrl": "https://www.jrkyushu.co.jp/company/ir/library/earnings/__icsFiles/afieldfile/2026/05/12/9142.FY2026.4q.material.ja_1.pdf",
+      "sourceTitle": "JR九州 2026年3月期決算説明会資料",
+      "sourcePage": "13・23ページ",
+      "sourceMoneyUnit": "億円",
+      "sourcePrecisionMillionYen": 100
+    }
+  ]
+}

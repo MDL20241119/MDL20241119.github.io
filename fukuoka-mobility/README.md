@@ -35,3 +35,21 @@ index.html は既存ホームページへの入口追加のみ。大分県版は
 ### 事業者別データ
 
 `operators.html` で事業者・公表主体を検索し、位置と時刻表等の反映状況を確認できます。県内全事業者の反映は未完了です。再生成順序：`python scripts/build-fukuoka-operators.py` → `python scripts/build-fukuoka-catalog.py`。検証：`python scripts/build-fukuoka-operators.py --check`、`node --test tests/fukuoka-operators.test.mjs`。GTFS追加時は原典・利用条件・有効期間を確認し、交通データを先に再生成してください。
+
+
+### 事業者の実績・収支を再生成
+
+`operators.html#operator-statistics` で、事業者フィルター、駅別の年度切替・駅名検索・全年度表示・CSV出力、年間輸送量と収支を利用できます。データは `station-ridership.json`、`operator-finance.json`、その原典抽出ファイルです。駅別実績を時刻表や経路計算の代わりに使いません。
+
+再生成はプロジェクトルートから次の順序で実行します。各Pythonコマンドは `--check` で変更せず再現性を確認できます。
+
+```sh
+python scripts/build-fukuoka-operator-stats.py
+python scripts/build-fukuoka-operator-finance.py
+python scripts/build-fukuoka-operators.py
+python scripts/build-fukuoka-catalog.py
+node --test tests/fukuoka-statistics.test.mjs tests/fukuoka-operators.test.mjs tests/fukuoka-ui.test.mjs
+node tests/fukuoka-data.mjs
+```
+
+原典を更新する場合、駅別実績は `--source-zip <S12-25_GML.zip>` で県境抽出から再生成（Shapely）、鉄道統計は `--source-dir <取得資料フォルダー>` で読み取ります（openpyxlの読取専用モード）。ファイル名・表セル・年度の対応はスクリプトに固定し、別年度へ無検証で適用しません。出典と取得ファイルのSHA-256を保存しています。西鉄グループと各社単体、2023〜2025年度、乗車・乗降・人キロの単位を混ぜずに表示します。

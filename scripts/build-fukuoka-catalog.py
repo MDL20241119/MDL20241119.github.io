@@ -227,11 +227,36 @@ dataset('bus-inventory','福岡県バス停留所・2022年位置資料','transp
 operators=read('data/operators.json')
 dataset('operator-coverage','県内交通事業者・公表主体の反映状況','transport',provider='各原典をモビリティデザインラボが集約',
     sourceUrl=rail['meta']['sourceUrl'],sourceUrls=[{'name':'国土数値情報 バス停留所','url':operators['sources']['bus']['url']},{'name':'国土数値情報 鉄道','url':operators['sources']['rail']['url']}],
-    checkedAt=operators['checkedAt'],dataAsOf=None,dataClass='DERIVED',status='PARTIAL',analysisReady='PARTIAL',format='JSON・画面からCSV保存',
+    checkedAt=operators['checkedAt'],dataAsOf=None,dataClass='VERIFIED',status='PARTIAL',analysisReady='PARTIAL',format='JSON・画面からCSV保存',
     records=len(operators['operators']),recordUnit='事業者・公表主体（県内総数ではない）',coverage=operators['scope'],
     processing='原典の事業者名とGTFS agencyを集約。位置を索引で参照し、時刻表・実績・費用・リアルタイムの反映状況を明示。',
-    limitations=[operators['agencyNote'],'県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州は位置のみで、時刻表・往復計算・乗降実績・費用・リアルタイムは未反映。'],
+    limitations=[operators['agencyNote'],'県内全事業者の網羅は未完了。西鉄バス・西鉄電車・JR九州の公表実績・収支は反映。時刻表・往復計算・リアルタイムは未反映。'],
     usedFor=[usage('事業者別の位置と反映・未反映','operators.html')],localFiles=['data/operators.json'],scope='県内全事業者のデータ反映は未完了')
+
+station_stats=read('data/station-ridership.json')
+read(station_stats['source']['localFile'])
+ss=station_stats['source']
+dataset('station-ridership','福岡県内9事業者・駅別乗降客数（2011〜2024年度）','transport',provider='国土交通省 国土数値情報',
+    sourceUrl=ss['url'],retrievedAt='2026-09-14',checkedAt=station_stats['checkedAt'],dataAsOf='2011〜2024年度',
+    dataClass='OPEN',status='USED',analysisReady='PARTIAL',format='GeoJSON → JSON・画面からCSV保存',
+    license=ss['license'],licenseUrl=ss['licenseUrl'],records=len(station_stats['stations']),recordUnit='駅・路線レコード',
+    coverage=station_stats['scope'],processing='福岡県の市町村境界と交差する地点を抽出。年度別のデータ有無・他線計上コードを維持。',
+    limitations=station_stats['notes'],valueType=ss['unit'],
+    usedFor=[usage('駅別実績・年度切替・前年比参考・全年度CSV','operators.html#operator-statistics')],
+    localFiles=['data/station-ridership.json',ss['localFile']],scope='県内地点・駅別公表実績')
+
+finance_stats=read('data/operator-finance.json')
+finance_facts=read(finance_stats['sourceFacts'])
+dataset('operator-finance','9鉄道事業者と西鉄グループ・年間輸送量と収支','transport',provider='国土交通省・西日本鉄道・JR九州',
+    sourceUrl=finance_facts['mlitSource']['url'],sourceUrls=sources(finance_stats['accounts']),
+    retrievedAt='2026-09-14',checkedAt=finance_stats['checkedAt'],dataAsOf='2023〜2025年度（資料ごと）',
+    dataClass='VERIFIED',status='USED',analysisReady='PARTIAL',format='公式資料の数値 → JSON・画面からCSV保存',
+    records=len(finance_stats['accounts']),recordUnit='年度・事業区分',
+    coverage='2023年度は県内9鉄道事業者の事業全体。2024・2025年度は西鉄の鉄道・バス事業、JR九州単体鉄道事業。県外を含む。',
+    processing='原表セル・単位・年度・集計範囲を保存。営業収益・利益から算出した費用は公表費用と区別。',
+    limitations=finance_stats['notes'],valueType='年度実績・公表値、一部費用は算出値',
+    usedFor=[usage('年間輸送量・収支・営業利益率・CSV','operators.html#operator-statistics')],
+    localFiles=['data/operator-finance.json',finance_stats['sourceFacts']],scope='県外を含む事業全体の実績')
 
 missing = [
     ('elderly','高齢者人口','population','2020年の高齢者人口は既存抽出データに含まれません。将来推計で補いません。'),

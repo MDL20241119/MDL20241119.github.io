@@ -53,3 +53,12 @@ body.atlas.page-operators {color:#171717;background:#fff1f5}
 @media print{.atlas-header,.operator-filters,.op-tools,.op-pagination,#operator-map{display:none}.operator-main{padding:0}.priority-grid{grid-template-columns:repeat(3,1fr)}.priority-card{padding:12px}.operator-notice,.op-gaps{break-inside:avoid}.op-table-wrap{overflow:visible}}
 
 .page-operators .catalog-footer{padding:24px 36px;border-top:1px solid #171717;display:flex;flex-wrap:wrap;gap:16px 30px;font-size:12px;line-height:1.8}
+.stats-filters{grid-template-columns:1fr 2fr;max-width:760px}
+#operator-statistics{margin-top:40px;border-top:2px solid #171717;scroll-margin-top:20px}
+#operator-statistics h3{font-size:18px}
+.finance-table{min-width:840px}
+.finance-table td{min-width:85px}
+.finance-table td:first-child{min-width:230px;max-width:330px}
+.finance-table td:not(:first-child){font-variant-numeric:tabular-nums}
+#station-source{margin:20px 0 34px}
+@media(max-width:700px){.stats-filters{grid-template-columns:1fr}}

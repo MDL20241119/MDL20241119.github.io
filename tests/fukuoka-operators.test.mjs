@@ -26,7 +26,7 @@ test('the three required operators show real positions and explicit missing sche
   const expected=[['nishitetsu-bus',4065,0,8],['nishitetsu-rail',0,73,1],['jr-kyushu',0,165,1]];
   for(const [id,busCount,stations,providers]of expected){
     const rows=selectOperators(data,{operator:id});assert.deepEqual(summarize(rows),{providers,bus:busCount,stations,stops:0,timetable:0});
-    for(const r of rows){assert.equal(r.timetable,null);assert.equal(r.ridership,null);assert.equal(r.costs,null);assert.equal(r.realtime,null);assert.equal(r.status,'location');assert(r.missingReason.includes('未取得'));}
+    for(const r of rows){assert.equal(r.timetable,null);assert(r.ridership);assert(r.costs);assert.equal(r.realtime,null);assert.equal(r.status,'location');assert(r.missingReason.includes('未取得'));}
   }
   assert.equal(data.coverageComplete,false);assert(data.missingCategories.some(r=>r.name.includes('全交通事業者名簿')));
 });

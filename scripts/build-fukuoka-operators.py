@@ -45,6 +45,8 @@ rail = read('data/rail.json')
 transport = read('data/map-data.json')
 feeds = read('data/gtfs/catalog.json')
 analysis = read('data/analysis.json')
+station_stats = read('data/station-ridership.json')
+finance_stats = read('data/operator-finance.json')
 rows = {}
 
 
@@ -105,7 +107,7 @@ for (mode, key), row in rows.items():
         row['missingReason'] = '取得済みの時刻表は有効期間外または検証エラー。運行本数・経路計算には使いません。'
     else:
         row['status'] = 'location'
-        row['missingReason'] = '計算に使える時刻表を未取得。位置・原典の路線名だけを反映。'
+        row['missingReason'] = '計算に使える時刻表は未取得。停留所・駅の位置と原典の路線名は反映済み。'
     row['positionDates'] = (['2022年度'] if row['busIndices'] else []) + ([rail['meta']['dataAsOf']] if row['stationIndices'] else [])
     if key.startswith('西鉄バス') or key == '西日本鉄道':
         row['officialUrl'] = 'https://www.nishitetsu.jp/train/rosen/' if mode == 'rail' else 'https://www.nishitetsu.jp/bus/rosen/'
@@ -114,11 +116,33 @@ for (mode, key), row in rows.items():
         row['officialUrl'] = 'https://www.jrkyushu.co.jp/'
         row['officialTimetableUrl'] = 'https://www.jrkyushu-timetable.jp/'
     if mode == 'rail' and key == '福岡市':
-        row['ridership'] = {'status':'partial','period':'2024年度','url':'index.html#ridership','note':'地下鉄の年度平均乗車人員。個人単位のODは未反映。'}
         row['costs'] = {'status':'partial','period':'2024年度','url':'index.html#cost','note':'地下鉄の公表決算。'}
+    own_stations = [s for s in station_stats['stations'] if s['operatorId'] == row['id']]
+    own_accounts = [a for a in finance_stats['accounts'] if row['id'] in a['operatorIds']]
+    row['statisticRecordCount'] = len(own_stations)
+    if own_stations:
+        row['ridership'] = {'status':'partial','period':'2011〜2024年度','label':'駅別乗降実績',
+            'url':'operators.html?operator='+row['id']+'#operator-statistics',
+            'available2024':sum(s['observations'][-1]['status']=='available' for s in own_stations),
+            'note':'県内の原典収録地点。データなし・他線計上等を区別。日別・個人単位ODは未反映。'}
+    if own_accounts:
+        years = sorted(set(a['year'] for a in own_accounts))
+        period = '・'.join(str(y) for y in years)+'年度'
+        scope = '西鉄グループ集計。各社単独の値ではありません。' if mode=='bus' else '事業者・事業区分全体。県外を含み、路線別原価は未反映。'
+        row['annualStatistics'] = {'recordIds':[a['id'] for a in own_accounts],'note':scope}
+        if not row['costs']:
+            row['costs'] = {'status':'partial','period':period,'label':'収支',
+                'url':'operators.html?operator='+row['id']+'#operator-statistics','note':scope}
+        if not row['ridership']:
+            row['ridership'] = {'status':'group','period':period,'label':'グループ輸送実績',
+                'url':'operators.html?operator='+row['id']+'#operator-statistics','note':scope}
     if mode == 'bus' and key == '昭和自動車':
-        row['acquisitionSource'] = 'https://opendata.sagabus.info/'
-        row['missingReason'] = '佐賀県の公開元にGTFSの案内あり。今回の取得は失敗したため、時刻表は未反映。福岡県内の対象路線・利用条件の確認も必要。'
+        row['officialUrl'] = 'https://www.showa-bus.jp/'
+        row['acquisitionSource'] = 'http://opendata.sagabus.info/'
+        row['missingReason'] = '福岡路線を含む佐賀側GTFSの追加取得が保留。時刻表は未反映。取得後に福岡県内の対象路線・有効期間・利用条件の検証が必要。'
+    if mode == 'bus' and key == '北九州市':
+        row['acquisitionSource'] = 'https://www.ptd-hs.jp/'
+        row['missingReason'] = 'PTD-HSに2027年2月28日までの時刻表配信を確認。利用登録の審査・APIキー発行が必要。現時点では未取得。'
 
 priority = [
     {'id':'nishitetsu-bus','name':'西鉄バス','operatorIds':[v['id'] for (m,k),v in rows.items() if m=='bus' and (k=='西日本鉄道' or k.startswith('西鉄バス'))]},
@@ -129,7 +153,9 @@ result = {'schemaVersion':1,'checkedAt':'2026-09-14','coverageComplete':False,
     'scope':'国土数値情報の福岡県収録分と、保存した公開GTFSに記載された事業者・公表主体。現行の県内全事業者名簿ではありません。',
     'agencyNote':'自治体・地域交通名は原典の公表主体で表示。委託運行会社を推定して割り当てていません。西鉄の委託路線を含む自治体GTFSがあっても、西鉄全線の時刻表反映には数えません。',
     'missingCategories':[
-        {'name':'西鉄バス・西鉄電車・JR九州','status':'時刻表・往復計算は未反映','reason':'位置データのみ。乗降実績・費用・遅延情報も未反映。'},
+        {'name':'西鉄バス・西鉄電車・JR九州','status':'公表実績・収支を追加。時刻表・往復計算・遅延情報は未反映','reason':'公開検索画面の閲覧と分析用データの接続は別です。全便の時刻表ファイル、再利用・配信条件、有効期間を確認できていないため、経路・交通空白判定には使いません。停留所別・時間帯別ODと県内路線別原価も未取得。'},
+        {'name':'北九州市営バスの時刻表','status':'配信あり・利用登録待ち','reason':'PTD-HSの福岡県一覧で静的データと2027年2月28日の期限を確認。配信元の登録審査、APIキー発行、利用条件の確認が必要。資料・申請先：https://www.ptd-hs.jp/'},
+        {'name':'昭和バスの時刻表','status':'追加取得が保留','reason':'福岡・糸島の運行は公式案内で確認。福岡路線を含む佐賀側配布ファイルを取得し、県内路線・有効期間・利用条件を確認する作業が残っています。'},
         {'name':'現行の県内全交通事業者名簿','status':'全件照合は未完了','reason':'2022年度のバス停資料、2025年の鉄道資料、取得GTFSに現れない事業者は個別に列挙できていません。掲載数は県内の事業者総数ではありません。'},
         {'name':'タクシー各社','status':'各社名簿・配車供給は未反映','reason':'公開GTFSに含まれる乗合タクシー路線等のみ。一覧の会社についても通常のタクシー予約可能台数・運行区域は未取得。'},
         {'name':'旅客船・フェリー','status':'公営渡船の一部のみ','reason':'福岡市・宗像市・新宮町の収録GTFSを反映。北九州市営渡船は期限外・検証エラー。その他の会社・航路は網羅していません。'},

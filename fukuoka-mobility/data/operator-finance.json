@@ -1,0 +1,334 @@
+{
+  "schemaVersion": 1,
+  "checkedAt": "2026-09-14",
+  "accounts": [
+    {
+      "id": "mlit-op-5b00b3f71dcb-2023",
+      "name": "西鉄電車（西日本鉄道）",
+      "operatorIds": [
+        "op-5b00b3f71dcb"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 20873.212,
+      "expensesMillionYen": 19181.881,
+      "profitMillionYen": 1691.331,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 98289,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N377,CE377,CF377／輸送人員 I346"
+    },
+    {
+      "id": "mlit-op-f630f2153b77-2023",
+      "name": "北九州モノレール",
+      "operatorIds": [
+        "op-f630f2153b77"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 2521.645,
+      "expensesMillionYen": 2030.786,
+      "profitMillionYen": 490.859,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 12012,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N380,CE380,CF380／輸送人員 I350"
+    },
+    {
+      "id": "mlit-op-9eae4050500d-2023",
+      "name": "筑豊電気鉄道",
+      "operatorIds": [
+        "op-9eae4050500d"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 795.855,
+      "expensesMillionYen": 854.725,
+      "profitMillionYen": -58.87,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 4015,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N382,CE382,CF382／輸送人員 I353"
+    },
+    {
+      "id": "mlit-op-fffe33eaa1b8-2023",
+      "name": "甘木鉄道",
+      "operatorIds": [
+        "op-fffe33eaa1b8"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 235.35,
+      "expensesMillionYen": 280.544,
+      "profitMillionYen": -45.194,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 1337,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N385,CE385,CF385／輸送人員 I352"
+    },
+    {
+      "id": "mlit-op-e0f015d1c93f-2023",
+      "name": "皿倉登山鉄道",
+      "operatorIds": [
+        "op-e0f015d1c93f"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 121.413,
+      "expensesMillionYen": 149.203,
+      "profitMillionYen": -27.79,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 237,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N387,CE387,CF387／輸送人員 I362"
+    },
+    {
+      "id": "mlit-op-abb2e6ceb7ac-2023",
+      "name": "平成筑豊鉄道",
+      "operatorIds": [
+        "op-abb2e6ceb7ac"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 340.892,
+      "expensesMillionYen": 859.824,
+      "profitMillionYen": -518.932,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 1354,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N391,CE391,CF391／輸送人員 I358"
+    },
+    {
+      "id": "mlit-op-4be7d0741f8b-2023",
+      "name": "福岡市地下鉄",
+      "operatorIds": [
+        "op-4be7d0741f8b"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 33730.262,
+      "expensesMillionYen": 28384.621,
+      "profitMillionYen": 5345.641,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 176426,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N400,CE400,CF400／輸送人員 I366"
+    },
+    {
+      "id": "mlit-op-648da6762c3c-2023",
+      "name": "JR西日本",
+      "operatorIds": [
+        "op-648da6762c3c"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 915801.374,
+      "expensesMillionYen": 813112.116,
+      "profitMillionYen": 102689.258,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 1731736,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N434,CE434,CF434／輸送人員 I385"
+    },
+    {
+      "id": "mlit-op-a9d2d56b3a04-2023",
+      "name": "JR九州",
+      "operatorIds": [
+        "op-a9d2d56b3a04"
+      ],
+      "year": 2023,
+      "scope": "事業者全体の鉄・軌道業。県外区間を含み、福岡県内の金額・人数に分割していません。",
+      "revenueMillionYen": 160497.332,
+      "expensesMillionYen": 149941.88581600002,
+      "profitMillionYen": 10555.446183999986,
+      "expensesMethod": "公表値（差引営業費合計）",
+      "sourceMoneyUnit": "千円",
+      "sourcePrecisionMillionYen": 0.001,
+      "passengersValue": 318879,
+      "passengersUnit": "千人／年",
+      "sourceUrl": "https://www.mlit.go.jp/tetudo/tetudo_tk1_000074.html",
+      "sourceTitle": "鉄道統計年報 令和5年度（2023年度）",
+      "sourcePage": "営業損益 N436,CE436,CF436／輸送人員 I387"
+    },
+    {
+      "id": "nishitetsu-rail-2025",
+      "kind": "nishitetsu-rail",
+      "year": 2025,
+      "revenueMillionYen": 23866,
+      "profitMillionYen": 1828,
+      "passengersValue": 112,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1,
+      "name": "西鉄グループ 鉄道事業",
+      "operatorIds": [
+        "op-5b00b3f71dcb"
+      ],
+      "scope": "グループ事業の集計。個別の運行会社や福岡県内だけの実績ではありません。事業内部取引を含む公表値。",
+      "expensesMillionYen": 22038,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    },
+    {
+      "id": "nishitetsu-rail-2024",
+      "kind": "nishitetsu-rail",
+      "year": 2024,
+      "revenueMillionYen": 22595,
+      "profitMillionYen": 2223,
+      "passengersValue": 107,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1,
+      "name": "西鉄グループ 鉄道事業",
+      "operatorIds": [
+        "op-5b00b3f71dcb"
+      ],
+      "scope": "グループ事業の集計。個別の運行会社や福岡県内だけの実績ではありません。事業内部取引を含む公表値。",
+      "expensesMillionYen": 20372,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    },
+    {
+      "id": "nishitetsu-bus-2025",
+      "kind": "nishitetsu-bus",
+      "year": 2025,
+      "revenueMillionYen": 56317,
+      "profitMillionYen": 2207,
+      "passengersValue": 207,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1,
+      "name": "西鉄グループ バス事業",
+      "operatorIds": [
+        "op-b508ac787846",
+        "op-75d2e8318672",
+        "op-d165f9606ee3",
+        "op-da9ea48ec031",
+        "op-522cf239f096",
+        "op-35cf1f0fa500",
+        "op-2f19f6b92442",
+        "op-498d4be7871c"
+      ],
+      "scope": "グループ事業の集計。個別の運行会社や福岡県内だけの実績ではありません。事業内部取引を含む公表値。",
+      "expensesMillionYen": 54110,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    },
+    {
+      "id": "nishitetsu-bus-2024",
+      "kind": "nishitetsu-bus",
+      "year": 2024,
+      "revenueMillionYen": 55846,
+      "profitMillionYen": 2675,
+      "passengersValue": 207,
+      "passengersUnit": "百万人／年",
+      "sourceUrl": "https://www.nishitetsu.co.jp/ja/ir/library/earnings/main/00/teaserItems2/0110/linkList/04/link/hosokusetumei.pdf",
+      "sourceTitle": "西日本鉄道 2025年度決算補足説明資料",
+      "sourcePage": "印刷3ページ（PDF5ページ）",
+      "sourceMoneyUnit": "百万円",
+      "sourcePrecisionMillionYen": 1,
+      "name": "西鉄グループ バス事業",
+      "operatorIds": [
+        "op-b508ac787846",
+        "op-75d2e8318672",
+        "op-d165f9606ee3",
+        "op-da9ea48ec031",
+        "op-522cf239f096",
+        "op-35cf1f0fa500",
+        "op-2f19f6b92442",
+        "op-498d4be7871c"
+      ],
+      "scope": "グループ事業の集計。個別の運行会社や福岡県内だけの実績ではありません。事業内部取引を含む公表値。",
+      "expensesMillionYen": 53171,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    },
+    {
+      "id": "jr-kyushu-2025",
+      "kind": "jr-kyushu",
+      "year": 2025,
+      "revenueMillionYen": 188800,
+      "profitMillionYen": 24200,
+      "passengersValue": 8493,
+      "passengersUnit": "百万人キロ／年",
+      "sourceUrl": "https://www.jrkyushu.co.jp/company/ir/library/earnings/__icsFiles/afieldfile/2026/05/12/9142.FY2026.4q.material.ja_1.pdf",
+      "sourceTitle": "JR九州 2026年3月期決算説明会資料",
+      "sourcePage": "13・23ページ",
+      "sourceMoneyUnit": "億円",
+      "sourcePrecisionMillionYen": 100,
+      "name": "JR九州 単体・鉄道事業",
+      "operatorIds": [
+        "op-a9d2d56b3a04"
+      ],
+      "scope": "JR九州単体の鉄道事業全体。県外区間を含み、福岡県内だけの収支ではありません。",
+      "expensesMillionYen": 164600,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    },
+    {
+      "id": "jr-kyushu-2024",
+      "kind": "jr-kyushu",
+      "year": 2024,
+      "revenueMillionYen": 167000,
+      "profitMillionYen": 13400,
+      "passengersValue": 8595,
+      "passengersUnit": "百万人キロ／年",
+      "sourceUrl": "https://www.jrkyushu.co.jp/company/ir/library/earnings/__icsFiles/afieldfile/2026/05/12/9142.FY2026.4q.material.ja_1.pdf",
+      "sourceTitle": "JR九州 2026年3月期決算説明会資料",
+      "sourcePage": "13・23ページ",
+      "sourceMoneyUnit": "億円",
+      "sourcePrecisionMillionYen": 100,
+      "name": "JR九州 単体・鉄道事業",
+      "operatorIds": [
+        "op-a9d2d56b3a04"
+      ],
+      "scope": "JR九州単体の鉄道事業全体。県外区間を含み、福岡県内だけの収支ではありません。",
+      "expensesMillionYen": 153600,
+      "expensesMethod": "算出値（公表された丸め済み営業収益−営業利益）"
+    }
+  ],
+  "sourceFacts": "data/sources/operator-finance-facts.json",
+  "sourceSha256": "a6c3f58db051961965488b86d68f70501eeeb4d126a43152f7e7d3fda2dfd812",
+  "notes": [
+    "年度は4月〜翌年3月。2026年3月期は2025年度です。",
+    "決算の範囲・年度・単位を揃えて読みます。グループ値と各社単体値を合算しません。",
+    "営業利益率は営業利益÷営業収益。算出費用は元資料の丸めの影響を受けます。路線別原価・自治体内原価には配賦していません。",
+    "年間輸送人員、1日乗降客数、輸送人キロは別の指標です。駅の乗降客数を年間旅客数に変換しません。"
+  ]
+}

@@ -1,16 +1,17 @@
 import {STATUS,MODES,esc,fmt,selectOperators,summarize,csvText} from './model.mjs';
+import {setupStatistics,renderStatistics} from './statistics.mjs';
 const $=s=>document.querySelector(s);
 let data,rows=[],page=0,map,layers,mapSources,mapEpoch=0;
 const PAGE_SIZE=15;
 const link=(url,label)=>/^https?:\/\//.test(url??'')?`<a href="${esc(url)}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`:'';
 const badge=r=>`<span class="op-status ${STATUS[r.status].className}">${STATUS[r.status].label}</span>`;
-const statLink=(value,label)=>value?`<a href="${esc(value.url)}">${esc(value.period)} ${esc(label)} ↗</a>`:'未反映';
-async function json(path){const response=await fetch(path);if(!response.ok)throw Error(path+' を取得できません（'+response.status+'）');return response.json();}
+const statLink=(value,label)=>value?`<a href="${esc(value.url)}">${esc(value.period)} ${esc(value.label??label)} ↗</a><small>${esc(value.note)}</small>`:'未反映';
+async function json(path){const response=await fetch(path+'?v=20260914-3');if(!response.ok)throw Error(path+' を取得できません（'+response.status+'）');return response.json();}
 function filters(){return {operator:$('#operator-select').value,mode:$('#mode-select').value,status:$('#status-select').value,query:$('#operator-query').value.trim()};}
 function fail(error){$('#operator-error').hidden=false;$('#operator-error').textContent='読み込み・表示が完了していません。'+error.message+'。未取得の件数は0とは扱いません。';}
-function updateURL(){const url=new URL(location.href);url.search='';for(const [key,value] of Object.entries(filters()))if(value&&value!=='all')url.searchParams.set(key,value);history.replaceState(null,'',url);}
+function updateURL(){const url=new URL(location.href);url.search='';for(const [key,value] of Object.entries(filters()))if(value&&value!=='all')url.searchParams.set(key,value);if($('#stats-year').value!=='2024')url.searchParams.set('year',$('#stats-year').value);if($('#station-query').value.trim())url.searchParams.set('station',$('#station-query').value.trim());history.replaceState(null,'',url);}
 function renderPriority(){
-  $('#priority-operators').innerHTML=data.priorityGroups.map(group=>{const rs=selectOperators(data,{operator:group.id}),s=summarize(rs);return `<a class="priority-card" href="?operator=${group.id}#operator-map-section"><span class="op-status missing">時刻表・往復計算は未反映</span><h2>${esc(group.name)}</h2><b>${fmt(s.bus||s.stations)} <small>${s.bus?'停留所位置・2022年度':'駅グループ・2025年末'}</small></b><small>${s.bus?`${s.providers}社の原典表記を集約。現行の全停留所数ではありません。`:'原典の駅グループコードで集計。線路位置も反映。'}</small><small>乗降実績・費用・リアルタイム：未反映</small><strong>位置と反映状況を見る →</strong></a>`;}).join('');
+  $('#priority-operators').innerHTML=data.priorityGroups.map(group=>{const rs=selectOperators(data,{operator:group.id}),s=summarize(rs);return `<a class="priority-card" href="?operator=${group.id}#operator-statistics"><span class="op-status missing">時刻表・往復計算は未反映</span><h2>${esc(group.name)}</h2><b>${fmt(s.bus||s.stations)} <small>${s.bus?'停留所位置・2022年度':'駅グループ・2025年末'}</small></b><small>${s.bus?`${s.providers}社の原典表記を集約。現行の全停留所数ではありません。`:'原典の駅グループコードで集計。線路位置も反映。'}</small><small>${group.id==='nishitetsu-bus'?'グループの年間輸送実績・収支を反映':'県内駅別実績（公表分）・事業収支を反映'}</small><small>リアルタイム：未反映</small><strong>実績・収支と位置を見る →</strong></a>`;}).join('');
 }
 function render(){
   rows=selectOperators(data,filters());page=Math.min(page,Math.max(0,Math.ceil(rows.length/PAGE_SIZE)-1));const s=summarize(rows);
@@ -18,7 +19,7 @@ function render(){
   $('#operator-count').textContent=`${fmt(rows.length)}主体を表示。自治体・地域交通の公表主体を含みます。`;
   $('#operator-table-body').innerHTML=rows.slice(page*PAGE_SIZE,(page+1)*PAGE_SIZE).map(r=>`<tr><td><button data-operator="${r.id}">${esc(r.name)}</button><small>${MODES[r.mode]}</small></td><td>${badge(r)}<small>${r.timetable?esc(r.timetable.note):esc(r.missingReason)}</small></td><td>${r.busIndices.length?fmt(r.busIndices.length)+'停留所（2022年度）<br>':''}${r.stationCount?fmt(r.stationCount)+'駅グループ（2025年末）<br>':''}${r.gtfsStopCount?fmt(r.gtfsStopCount)+'乗降地点（取得GTFS）':''}</td><td>${statLink(r.ridership,'乗車人員')}</td><td>${statLink(r.costs,'費用')}</td><td>未反映</td></tr>`).join('')||'<tr><td colspan="6">この条件で確認できる主体はありません。県内に事業者が存在しないという意味ではありません。</td></tr>';
   $('#operator-page').textContent=`${rows.length?page+1:0} / ${Math.ceil(rows.length/PAGE_SIZE)}ページ`;$('#operator-prev').disabled=page===0;$('#operator-next').disabled=(page+1)*PAGE_SIZE>=rows.length;
-  renderDetail();updateURL();drawMap().catch(fail);
+  renderDetail();renderStatistics(rows);updateURL();drawMap().catch(fail);
 }
 function renderDetail(){
   const target=$('#operator-select').value;if(target==='all'){$('#operator-detail').hidden=true;return;}
@@ -55,7 +56,7 @@ async function start(){
   const params=new URLSearchParams(location.search);for(const [key,id] of [['operator','operator-select'],['mode','mode-select'],['status','status-select']])if([...$('#'+id).options].some(o=>o.value===params.get(key)))$('#'+id).value=params.get(key);$('#operator-query').value=params.get('query')??'';
   $('#operator-gaps').innerHTML=data.missingCategories.map(g=>`<article><h3>${esc(g.name)}</h3><strong>${esc(g.status)}</strong><p>${esc(g.reason)}</p></article>`).join('');
   $('#operator-scope').textContent=data.scope+' '+data.agencyNote;
-  renderPriority();render();$('#operator-loading').hidden=true;
+  await setupStatistics({json,onChange:updateURL});renderPriority();render();$('#operator-loading').hidden=true;
   for(const id of ['operator-select','mode-select','status-select'])$('#'+id).addEventListener('change',()=>{page=0;render()});$('#operator-query').addEventListener('input',()=>{page=0;render()});
   $('#operator-reset').addEventListener('click',()=>{for(const id of ['operator-select','mode-select','status-select'])$('#'+id).value='all';$('#operator-query').value='';page=0;render()});
   $('#operator-table-body').addEventListener('click',e=>{const button=e.target.closest('[data-operator]');if(!button)return;$('#operator-select').value=button.dataset.operator;$('#operator-query').value='';page=0;render();$('#operator-map-section').scrollIntoView({block:'start'});});

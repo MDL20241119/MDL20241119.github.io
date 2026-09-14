@@ -1,6 +1,6 @@
 export const STATUS = {
   timetable: {label:'時刻表反映（収録分）', className:'available'},
-  location: {label:'位置のみ・時刻表未反映', className:'missing'},
+  location: {label:'時刻表未反映・位置あり', className:'missing'},
   unusable: {label:'時刻表利用不可', className:'unusable'},
 };
 export const MODES = {bus:'バス・地域交通',rail:'鉄道',ferry:'渡船'};
@@ -19,6 +19,6 @@ export function summarize(rows) {
     timetable:rows.filter(r=>r.timetable).length};
 }
 export function csvText(rows) {
-  const cell = value => '"'+String(value??'').replace(/^[=+@-]/,"' $&").replaceAll('"','""')+'"';
+  const cell = value => '"'+(typeof value==='number'&&Number.isFinite(value)?String(value):String(value??'').replace(/^[=+@-]/,"' $&")).replaceAll('"','""')+'"';
   return '\uFEFF'+rows.map(row=>row.map(cell).join(',')).join('\r\n');
 }
