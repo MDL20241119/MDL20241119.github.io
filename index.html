@@ -4,12 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mobility Design Lab | モビリティデザインラボ</title>
-    <meta name="description" content="株式会社モビリティデザインラボの公式ウェブサイト。モビリティを活用し、人と人のつながりをデザインすることで、地方活性化に貢献します。">
+    <meta name="description" content="モビリティデザインラボの『横のエレベーター』は、乗りたい人と運転する人をつなぐライドシェア・送迎アプリ。標準アプリ利用料0円。運用費は分担、カスタマイズ・個別支援は別途。使い方をWeb・PDFカタログで紹介します。">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/cases.css?v=20260913-tourism">
+    <link rel="stylesheet" href="assets/yoko-elevator.css?v=20260914-free">
     <link rel="stylesheet" href="shimonoseki-destination/teaser.css">
     <style>
         :root {
@@ -314,6 +315,7 @@
                     <span class="en">DESIGN LAB</span>
                 </a>
                 <nav class="header-nav hidden md:flex space-x-5 lg:space-x-8 font-medium">
+                    <a href="#yoko-elevator" class="yoko-nav">横のエレベーター</a>
                     <a href="#vision" class="hover:text-gray-900 transition-colors">VISION</a>
                     <a href="#services" class="hover:text-gray-900 transition-colors">SERVICES</a>
                     <a href="#projects" class="hover:text-gray-900 transition-colors">PROJECTS</a>
@@ -327,6 +329,7 @@
                         </svg>
                     </summary>
                     <nav class="absolute right-0 mt-3 w-48 bg-white border border-gray-200 shadow-lg py-2 font-medium" aria-label="モバイルメニュー">
+                        <a href="#yoko-elevator" class="block px-5 py-3 hover:bg-gray-50">横のエレベーター</a>
                         <a href="#vision" class="block px-5 py-3 hover:bg-gray-50">VISION</a>
                         <a href="#services" class="block px-5 py-3 hover:bg-gray-50">SERVICES</a>
                         <a href="#projects" class="block px-5 py-3 hover:bg-gray-50">PROJECTS</a>
@@ -350,6 +353,11 @@
                 モビリティを活用し、人と人のつながりをデザインすることで、<br class="hidden md:block">
                 地方活性化に貢献する。
             </p>
+            <div class="yoko-announcement" aria-label="横のエレベーターのご紹介">
+                <div class="yoko-announcement-copy"><p>ライドシェア・送迎アプリ</p><strong>横のエレベーター</strong><span>乗りたい人と、運転する人をつなぐ。</span></div>
+                <div class="yoko-announcement-price"><span>標準アプリ利用料</span><strong>0<small>円</small></strong><span>維持・運用費等は別途</span></div>
+                <div class="yoko-announcement-actions"><a class="yoko-button" href="#yoko-elevator">仕組み・料金を見る <span aria-hidden="true">↓</span></a><a class="yoko-text-link" href="#elevator-catalogs">カタログを見る <span aria-hidden="true">↓</span></a></div>
+            </div>
             <a class="tourism-announcement" href="oita-tourism/">
                 <span class="tourism-announcement-label">NEW APP</span>
                 <span><strong>大分観光・周遊データマップ</strong><small>観光地へのアクセス・現地の移動・観光統計を調べる</small></span>
@@ -521,12 +529,13 @@
                     </div>
                     <h3 class="service-title en mb-6">MOBILITY</h3>
                     <p class="service-desc">
-                        モビリティサービス用のユーザー・<br>
-                        ドライバーアプリ開発。<br>
-                        リアルタイム運行管理、モバイルオーダー、<br>
-                        顧客管理等の機能カスタマイズ開発。
+                        乗りたい人と、運転する人をつなぐ<br>
+                        ライドシェア・送迎アプリ<br>
+                        「横のエレベーター」。<br>
+                        使い方に合わせてカスタマイズ。
                     </p>
-                    <a class="service-case-link" href="#mobility-case"><span>団地のエレベーターの事例を見る</span><span aria-hidden="true">↓</span></a>
+                    <p class="yoko-service-price"><strong>標準アプリ利用料 0円</strong><small>維持・運用費、個別支援等は別途</small></p>
+                    <a class="service-case-link" href="#yoko-elevator"><span>仕組み・料金・カタログを見る</span><span aria-hidden="true">↓</span></a>
                 </div>
             </div>
         </div>
@@ -611,20 +620,71 @@
           </section>
         </article>
 
-        <article id="mobility-case" class="work-case" aria-labelledby="mobility-heading">
-          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-cyan)">03</span>MOBILITY</p><p class="case-type">アプリ開発・地域での実証<br>富士見ヶ丘団地 / 大分市</p></div>
-          <div class="case-feature">
-            <div class="case-copy">
-              <p class="case-kicker">「横のエレベーター」 / 富士見ヶ丘団地の導入事例</p>
-              <h3 id="mobility-heading" class="case-title">その一歩を、<br>もっと気軽に。</h3>
-              <p>坂道のある団地で、買い物や地域の集まりへ。必要なときに呼び出して、決められた乗降場所の間を移動する、オンデマンド定路線型の乗合サービスです。</p>
-              <p>大分の実証では、トヨタカローラ大分の試乗車（アルファード）を活用し、地元住民を送迎しました。実際のアプリ画面で、ユーザー・ドライバー・管理者それぞれの使い方を紹介します。</p>
-              <dl class="case-stats"><div><dt>運行日</dt><dd>10</dd></div><div><dt>実利用人数</dt><dd>72</dd></div><div><dt>延べ乗車回数</dt><dd>342</dd></div></dl>
-              <p class="case-note">2025年度の富士見ヶ丘団地実証の記録。現在の運行状況を示すものではありません。</p>
-              <div class="elevator-home-editions"><div><strong>要約版</strong><small>4ページで全体像を知る</small><div class="case-actions"><a href="danchi-elevator/" class="case-button">Web版 →</a><a href="assets/catalogs/danchi-elevator-catalog.pdf" class="case-button secondary">PDF版 ↗</a></div></div><div><strong>詳細版</strong><small>3者それぞれの操作・運用 / 全12ページ</small><div class="case-actions"><a href="danchi-elevator/detail/" class="case-button">Web版 →</a><a href="assets/catalogs/yoko-elevator-detail.pdf" class="case-button secondary">PDF版 ↗</a></div></div></div><nav class="elevator-home-roles" aria-label="立場別の使い方"><a href="danchi-elevator/detail/#user">ユーザー用 →</a><a href="danchi-elevator/detail/#driver">ドライバー用 →</a><a href="danchi-elevator/detail/#admin">管理者用 →</a></nav>
+        <article id="mobility-case" class="work-case yoko-product" aria-labelledby="mobility-heading">
+          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-cyan)">03</span>MOBILITY</p><p class="case-type">ライドシェア・送迎アプリ<br>使い方に合わせてカスタマイズ</p></div>
+          <div id="yoko-elevator" class="yoko-hero">
+            <div class="yoko-hero-copy">
+              <p class="yoko-eyebrow">横のエレベーター</p>
+              <h3 id="mobility-heading">乗りたい人と、<br>運転する人を、つなぐ。</h3>
+              <p class="yoko-lead">移動したい人〈ライダー〉と、送迎する人〈ドライバー〉をつなぐマッチングアプリです。地元にある車両や人を活かした移動サービスづくりを支えます。</p>
+              <p class="yoko-custom-lead">標準アプリで小さく始めて、<br>使い方に合わせてカスタマイズ。</p>
+              <div class="yoko-actions"><a class="yoko-button" href="#elevator-catalogs">カタログで詳しく見る <span aria-hidden="true">↓</span></a><a class="yoko-text-link" href="#elevator-consult">導入・カスタマイズを相談する <span aria-hidden="true">↓</span></a></div>
             </div>
-            <figure class="case-visual"><a href="danchi-elevator/" class="catalog-cover"><img src="assets/cases/yoko-elevator/user-flow.jpg" width="1536" height="874" loading="lazy" decoding="async" alt="横のエレベーターの実際のアプリ画面。乗降場所・人数の入力、車の確定通知、乗降場所の写真確認"></a><figcaption class="catalog-cover-caption">実画面でわかる4ステップ。要約版・詳細版をWeb／PDFで掲載。</figcaption></figure>
+            <div class="yoko-price-poster">
+              <p class="yoko-price-label">標準アプリ利用料</p>
+              <p class="yoko-zero">0<span>円</span></p>
+              <p class="yoko-free">アプリは、無料。</p>
+              <p class="yoko-price-note">維持・運用費は分担。<br>カスタマイズ・個別支援は別途。</p>
+              <a href="#elevator-pricing" class="yoko-text-link">無料の範囲・費用を見る <span aria-hidden="true">↓</span></a>
+            </div>
           </div>
+
+          <div class="yoko-how">
+            <ol class="yoko-flow" aria-label="アプリでつながる流れ">
+              <li><span class="yoko-step" aria-hidden="true">01</span><div><span class="yoko-role-label">乗りたい人 / ライダー</span><h4>移動を依頼する。</h4><p>乗る場所・降りる場所・人数を選んで依頼。</p></div></li>
+              <li><span class="yoko-step" aria-hidden="true">02</span><div><span class="yoko-role-label">運転する人 / ドライバー</span><h4>依頼を引き受ける。</h4><p>対応できるドライバーが引き受け、迎えに行く。</p></div></li>
+              <li><span class="yoko-step" aria-hidden="true">03</span><div><span class="yoko-role-label">乗りたい人 / ライダー</span><h4>車を確認して、乗る。</h4><p>確定した車と乗降場所をアプリで確認。</p></div></li>
+            </ol>
+            <figure class="yoko-screen"><a href="danchi-elevator/" aria-label="実際のアプリ画面と使い方をWebカタログで見る"><img src="assets/cases/yoko-elevator/user-flow.jpg" width="1536" height="874" loading="lazy" decoding="async" alt="横のエレベーターの実際のアプリ画面。乗降場所・人数の入力、依頼、アルファードの確定通知、乗降場所の写真確認"></a><figcaption>実際のアプリ画面。画像をタップすると使い方を読めます。</figcaption></figure>
+          </div>
+
+          <section id="elevator-pricing" class="yoko-pricing" aria-labelledby="elevator-pricing-heading">
+            <div class="yoko-section-title"><p class="yoko-eyebrow">費用の考え方</p><h4 id="elevator-pricing-heading">アプリは無料。運用費は分け合う。<br>支援は、必要な分だけ。</h4></div>
+            <dl class="yoko-costs">
+              <div><dt>標準アプリを使う</dt><dd class="yoko-cost-value">利用料 <strong>0円</strong></dd><dd>対象の標準機能を無料で利用できます。</dd></div>
+              <div><dt>使い続ける</dt><dd class="yoko-cost-value">維持・運用費を分担</dd><dd>データの保存・通信、システムの保守など、必要な費用を分け合います。</dd></div>
+              <div><dt>変える・支援を受ける</dt><dd class="yoko-cost-value">必要な分だけお見積もり</dd><dd>カスタマイズ、導入説明、運行設計、データ分析などを個別にご相談いただけます。</dd></div>
+            </dl>
+            <p class="yoko-cost-promise">何が無料で、何に費用がかかるのか。始める前にはっきりお伝えします。</p>
+            <details class="yoko-custom">
+              <summary><span>使い方に合わせて、どこを変えられる？</span><span class="yoko-expand" aria-hidden="true">＋</span></summary>
+              <div class="yoko-custom-content"><p>一からつくらず、必要なところだけ。設定の調整や機能の追加・変更をご相談いただけます。</p><ul><li>利用者を住民や会員に限定したい</li><li>運行する範囲や時間帯を決めたい</li><li>予約の受け付け方を変えたい</li><li>管理画面や集計項目を業務に合わせたい</li></ul><p>まずは標準機能を活かし、足りない部分だけをカスタマイズ。対応可否・内容・費用を事前に確認し、お見積もりします。</p></div>
+            </details>
+            <p class="yoko-terms">無料の対象は、所定の標準アプリの利用料です。維持・運用費、カスタマイズ費、個別支援費は別途必要です。カスタマイズや個別支援の購入は、標準アプリ利用の必須条件ではありません。車両・ドライバーの確保、保険、運行に必要な手続き・安全管理などは別途必要です。アプリ利用料無料は、運賃無料を意味しません。</p>
+          </section>
+
+          <aside class="yoko-manifesto" aria-labelledby="elevator-mission-heading">
+            <p class="yoko-eyebrow">交通空白は、待ってくれない。</p>
+            <h4 id="elevator-mission-heading">移動をあきらめる理由から、<br>コストをなくしたい。</h4>
+            <p>デジタル技術とAIをフル活用し、開発・運用のコストを徹底的に削減していく。<br>必要なまちが、必要な移動の仕組みを導入できるように。<br>私たちは、標準アプリの利用料を0円にしました。</p>
+          </aside>
+
+          <section id="elevator-catalogs" class="yoko-catalogs" aria-labelledby="elevator-catalog-heading">
+            <div class="yoko-section-title"><p class="yoko-eyebrow">横のエレベーター / カタログ</p><h4 id="elevator-catalog-heading">まずは全体像。詳しくは、使い方。</h4><p>Webですぐ読む。PDFで保存・共有する。目的に合わせて選べます。</p></div>
+            <div class="yoko-editions">
+              <article class="yoko-edition"><div class="yoko-edition-top"><span>まず知りたい方へ</span><span>4 PAGES</span></div><h5>要約版</h5><p>仕組みと、富士見ヶ丘団地の導入事例をひと通り。</p><a class="yoko-button" href="danchi-elevator/">要約版をWebで読む <span aria-hidden="true">→</span></a><a class="yoko-text-link" href="assets/catalogs/danchi-elevator-catalog.pdf" target="_blank" rel="noopener">要約版PDF（4ページ）<span aria-hidden="true">↗</span></a></article>
+              <article class="yoko-edition"><div class="yoko-edition-top"><span>使い方を知りたい方へ</span><span>12 PAGES</span></div><h5>詳細版</h5><p>ユーザー・ドライバー・管理者の操作と運用を、実画面で。</p><a class="yoko-button" href="danchi-elevator/detail/">詳細版をWebで読む <span aria-hidden="true">→</span></a><a class="yoko-text-link" href="assets/catalogs/yoko-elevator-detail.pdf" target="_blank" rel="noopener">詳細版PDF（12ページ）<span aria-hidden="true">↗</span></a></article>
+            </div>
+            <div class="yoko-role-guides" aria-label="立場別のカタログ">
+              <div><h5>ユーザー用</h5><p>依頼から乗車まで</p><nav aria-label="ユーザー用カタログ"><a href="danchi-elevator/detail/#user">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-user.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
+              <div><h5>ドライバー用</h5><p>引き受けから降車まで</p><nav aria-label="ドライバー用カタログ"><a href="danchi-elevator/detail/#driver">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-driver.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
+              <div><h5>管理者用</h5><p>運行の確認と振り返り</p><nav aria-label="管理者用カタログ"><a href="danchi-elevator/detail/#admin">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-admin.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
+            </div>
+          </section>
+
+          <div class="yoko-pilot"><div><p class="yoko-eyebrow">2025年度 / 大分市・富士見ヶ丘団地の実証</p><p>トヨタカローラ大分の試乗車<strong>〈アルファード〉</strong>を活用し、地元住民を送迎しました。</p></div><dl><div><dt>運行日数</dt><dd>10<span>日</span></dd></div><div><dt>実利用人数</dt><dd>72<span>人</span></dd></div><div><dt>延べ乗車回数</dt><dd>342<span>回</span></dd></div></dl><p class="yoko-terms">当該実証の記録です。現在の運行状況を示すものではありません。</p></div>
+
+          <section id="elevator-consult" class="yoko-consult" aria-labelledby="elevator-consult-heading"><div><h4 id="elevator-consult-heading">「こんな使い方はできる？」<br>から、ご相談ください。</h4><p>企画書や詳しい仕様書は、まだ必要ありません。<br>誰の移動を支えたいか。どんな車両や人がいるか。<br>そのお話から、無理なく始める方法を一緒に考えます。</p></div><div class="yoko-consult-action"><a class="yoko-button" href="mailto:info@mobilitydlab.com?subject=%E6%A8%AA%E3%81%AE%E3%82%A8%E3%83%AC%E3%83%99%E3%83%BC%E3%82%BF%E3%83%BC%EF%BC%9A%E5%B0%8E%E5%85%A5%E3%83%BB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%E3%81%AE%E7%9B%B8%E8%AB%87">導入・カスタマイズを相談する <span aria-hidden="true">↗</span></a><p>メールで相談：info@mobilitydlab.com</p></div></section>
         </article>
       </div>
     </section>

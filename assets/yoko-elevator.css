@@ -1,0 +1,108 @@
+/* Yoko Elevator: a clear product introduction and catalog directory. */
+.yoko-product,.yoko-announcement{--yoko-ink:#102026;--yoko-cyan:#4edcf3;--yoko-pale:#e3f7fb;--yoko-line:#b9cbd0;color:var(--yoko-ink)}
+.yoko-product *,.yoko-announcement *{box-sizing:border-box}
+.yoko-product h3,.yoko-product h4,.yoko-product h5{font-family:'Noto Sans JP',sans-serif}
+#yoko-elevator,#elevator-pricing,#elevator-catalogs,#elevator-consult{scroll-margin-top:150px}
+.yoko-nav{font-size:.875rem;white-space:nowrap;font-weight:700}
+.yoko-button{display:inline-flex;align-items:center;justify-content:space-between;gap:1rem;min-height:50px;padding:1rem 1.2rem;background:var(--yoko-ink,#102026);border:1px solid var(--yoko-ink,#102026);color:#fff;font-size:.9375rem;font-weight:700;line-height:1.6;text-decoration:none}
+.yoko-button:hover{background:#154957;border-color:#154957;color:#fff}
+.yoko-button span,.yoko-text-link span{flex-shrink:0}
+.yoko-text-link{display:inline-flex;gap:.8rem;align-items:center;justify-content:space-between;min-height:48px;padding:.5rem 0;font-size:.875rem;font-weight:700;color:inherit;text-decoration:underline;text-underline-offset:5px;text-decoration-thickness:1px}
+.yoko-text-link:hover{text-decoration-thickness:2px}
+.yoko-product a:focus-visible,.yoko-announcement a:focus-visible,.yoko-custom summary:focus-visible,.yoko-nav:focus-visible{outline:3px solid #174bd2;outline-offset:5px}
+.yoko-announcement{max-width:1080px;display:grid;grid-template-columns:minmax(0,1fr) auto auto;align-items:center;gap:2rem;margin-top:2.5rem;padding:1.5rem 1.75rem;background:var(--yoko-cyan);border:1px solid var(--yoko-ink)}
+.yoko-announcement-copy p{font-size:.875rem;font-weight:700;margin:0 0 .3rem}
+.yoko-announcement-copy strong{display:block;font-size:clamp(1.5rem,2.5vw,2rem);font-weight:900;line-height:1.6;letter-spacing:-.04em}
+.yoko-announcement-copy>span{display:block;font-size:.875rem;margin-top:.4rem}
+.yoko-announcement-price{padding:0 2rem;border-left:1px solid #10202666;border-right:1px solid #10202666;min-width:190px}
+.yoko-announcement-price>span{display:block;font-size:.8125rem;line-height:1.7;font-weight:500}
+.yoko-announcement-price strong{display:block;font-family:'Poppins',sans-serif;font-size:4.7rem;font-weight:800;line-height:1.1;letter-spacing:-.055em}
+.yoko-announcement-price small{font-family:'Noto Sans JP',sans-serif;font-size:1.5rem;margin-left:.25rem;letter-spacing:0}
+.yoko-announcement-actions{display:flex;flex-direction:column;align-items:stretch}
+.yoko-announcement-actions .yoko-text-link{align-self:center}
+.yoko-service-price{margin-top:1.2rem;font-size:1rem}
+.yoko-service-price strong{display:inline-block;padding:.3rem .6rem;background:#4edcf3}
+.yoko-service-price small{display:block;font-size:.8125rem;margin-top:.5rem;color:#546478}
+.yoko-product .case-type{font-size:.875rem}
+.yoko-hero{display:grid;grid-template-columns:minmax(0,1.45fr) minmax(280px,.7fr);gap:clamp(2rem,4vw,4rem);align-items:stretch;margin:2rem 0 2.8rem}
+.yoko-eyebrow{font-size:.875rem;font-weight:700;letter-spacing:.03em;line-height:1.7;margin:0 0 1rem}
+.yoko-hero-copy>.yoko-eyebrow{display:inline-block;padding:.35rem .8rem;background:var(--yoko-cyan);font-size:1.125rem;font-weight:900}
+.yoko-hero h3{font-size:clamp(1.7rem,3.15vw,2.8rem);font-weight:900;line-height:1.55;letter-spacing:-.055em;margin:.3rem 0 1.2rem}
+.yoko-lead{font-size:1rem;line-height:1.95;max-width:700px}
+.yoko-custom-lead{font-size:1.125rem;font-weight:700;line-height:1.85;margin-top:1.25rem}
+.yoko-actions{display:flex;align-items:center;flex-wrap:wrap;gap:.4rem 1.2rem;margin-top:1.7rem}
+.yoko-price-poster{display:flex;flex-direction:column;justify-content:center;padding:2rem 2.2rem;background:var(--yoko-cyan);border:1px solid var(--yoko-ink);text-align:left}
+.yoko-price-label{font-size:1.125rem;font-weight:700;line-height:1.6}
+.yoko-zero{font-family:'Poppins',sans-serif;font-size:clamp(7rem,12vw,11rem);font-weight:800;line-height:1.05;letter-spacing:-.07em;margin:1rem 0 .6rem;white-space:nowrap}
+.yoko-zero span{font-family:'Noto Sans JP',sans-serif;font-size:2.5rem;letter-spacing:0;margin-left:.4rem}
+.yoko-free{font-size:clamp(1.25rem,2vw,1.7rem);font-weight:900;margin-bottom:1.3rem}
+.yoko-price-note{font-size:.9375rem;line-height:1.9;padding-top:1rem;border-top:1px solid #10202666}
+.yoko-price-poster .yoko-text-link{margin-top:.35rem;align-self:flex-start}
+.yoko-how{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:3rem;align-items:center;padding:2rem 0 3rem;border-bottom:1px solid var(--yoko-line)}
+.yoko-flow{list-style:none;padding:0;margin:0}
+.yoko-flow li{display:grid;grid-template-columns:2.7rem minmax(0,1fr);gap:1rem;padding:1.05rem 0;border-top:1px solid var(--yoko-line)}
+.yoko-flow li:last-child{border-bottom:1px solid var(--yoko-line)}
+.yoko-step{font-family:'Poppins',sans-serif;font-size:1.875rem;font-weight:700;line-height:1.4;letter-spacing:-.055em}
+.yoko-role-label{font-size:.8125rem;line-height:1.7;color:#4c626a}
+.yoko-flow h4{font-size:1.25rem;font-weight:900;line-height:1.6;margin:.2rem 0 .3rem}
+.yoko-flow p{font-size:.9375rem;line-height:1.85}
+.yoko-screen{min-width:0;margin:0}
+.yoko-screen a{display:block;border:1px solid var(--yoko-line);background:#fff}
+.yoko-screen img{display:block;width:100%;height:auto}
+.yoko-screen figcaption{font-size:.8125rem;line-height:1.8;color:#4c626a;margin-top:.8rem}
+.yoko-pricing{padding:3rem 0}
+.yoko-section-title h4{font-size:clamp(1.4rem,2.6vw,2.1rem);font-weight:900;line-height:1.65;letter-spacing:-.035em;margin:0 0 1rem}
+.yoko-section-title>p:last-child{font-size:1rem;line-height:1.85}
+.yoko-costs{margin:1.8rem 0 1.2rem;border-top:2px solid var(--yoko-ink)}
+.yoko-costs>div{display:grid;grid-template-columns:minmax(0,.85fr) minmax(0,1fr) minmax(0,1.6fr);gap:1.5rem;align-items:center;padding:1.3rem 1rem;border-bottom:1px solid var(--yoko-line)}
+.yoko-costs>div:first-child{background:var(--yoko-pale)}
+.yoko-costs dt{font-size:1rem;font-weight:700;line-height:1.7}
+.yoko-costs dd{font-size:.9375rem;line-height:1.85;margin:0}
+.yoko-costs .yoko-cost-value{font-weight:700;font-size:1rem}
+.yoko-cost-value strong{font-family:'Noto Sans JP',sans-serif;font-size:2rem;line-height:1.2;margin-left:.3rem;font-weight:900}
+.yoko-cost-promise{font-size:.9375rem;font-weight:700;line-height:1.9}
+.yoko-custom{margin-top:1.8rem;border:1px solid var(--yoko-line);background:#fff}
+.yoko-custom summary{display:flex;align-items:center;justify-content:space-between;gap:1.4rem;list-style:none;cursor:pointer;min-height:64px;padding:1rem 1.4rem;font-size:1rem;font-weight:700;line-height:1.8}
+.yoko-custom summary::-webkit-details-marker{display:none}
+.yoko-expand{font-size:1.5rem;flex-shrink:0}
+.yoko-custom[open] .yoko-expand{transform:rotate(45deg)}
+.yoko-custom-content{padding:0 1.4rem 1.4rem;font-size:.9375rem;line-height:1.95}
+.yoko-custom-content ul{display:grid;grid-template-columns:1fr 1fr;gap:.7rem 2rem;margin:1rem 0 1rem 1.3rem;list-style:disc}
+.yoko-terms{font-size:.8125rem;line-height:1.95;color:#4c626a;margin-top:1.2rem}
+.yoko-manifesto{background:var(--yoko-ink);color:#fff;padding:clamp(1.5rem,3.5vw,3rem);margin:0 0 3rem;border-left:8px solid var(--yoko-cyan)}
+.yoko-manifesto .yoko-eyebrow{color:var(--yoko-cyan)}
+.yoko-manifesto h4{font-size:clamp(1.4rem,2.6vw,2.2rem);font-weight:900;line-height:1.65;letter-spacing:-.035em;margin:0 0 1.2rem}
+.yoko-manifesto>p:last-child{font-size:1rem;line-height:2;color:#e0eaed}
+.yoko-catalogs{padding:.2rem 0 3rem}
+.yoko-editions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));margin-top:1.8rem;border:1px solid var(--yoko-ink);background:#fff}
+.yoko-edition{padding:1.7rem 2rem;display:flex;flex-direction:column;min-width:0;border-top:6px solid var(--yoko-cyan)}
+.yoko-edition+.yoko-edition{border-left:1px solid var(--yoko-ink);border-top-color:var(--yoko-ink)}
+.yoko-edition-top{display:flex;justify-content:space-between;gap:1rem;font-size:.875rem;line-height:1.7}
+.yoko-edition-top span:last-child{font-family:'Poppins',sans-serif;font-size:.8125rem;white-space:nowrap}
+.yoko-edition h5{font-size:2.5rem;font-weight:900;line-height:1.4;margin:1rem 0 .7rem;letter-spacing:-.04em}
+.yoko-edition>p{font-size:1rem;line-height:1.9;margin-bottom:1.4rem;flex:1}
+.yoko-edition .yoko-button{width:100%}
+.yoko-edition .yoko-text-link{align-self:flex-start;margin-top:.5rem}
+.yoko-role-guides{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));border-bottom:1px solid var(--yoko-ink);margin-top:1.8rem}
+.yoko-role-guides>div{padding:0 1.5rem 1.2rem;border-left:1px solid var(--yoko-line)}
+.yoko-role-guides>div:first-child{padding-left:0;border:0}
+.yoko-role-guides h5{font-size:1.25rem;font-weight:900;line-height:1.7}
+.yoko-role-guides p{font-size:.875rem;color:#4c626a;margin:.3rem 0 .6rem;line-height:1.8}
+.yoko-role-guides nav{display:flex;flex-wrap:wrap;gap:0 1.2rem}
+.yoko-role-guides a{display:inline-flex;align-items:center;gap:.4rem;min-height:48px;font-size:.875rem;font-weight:700;text-decoration:underline;text-underline-offset:5px}
+.yoko-pilot{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:1rem 3rem;padding:1.8rem 0 2.3rem;border-bottom:1px solid var(--yoko-line)}
+.yoko-pilot>div>p:last-child{font-size:1rem;line-height:1.9}
+.yoko-pilot dl{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;align-self:center}
+.yoko-pilot dt{font-size:.8125rem;line-height:1.7;color:#4c626a}
+.yoko-pilot dd{font-family:'Poppins',sans-serif;font-size:clamp(2.2rem,3.6vw,3rem);font-weight:700;line-height:1.4;letter-spacing:-.04em;margin:0}
+.yoko-pilot dd span{font-family:'Noto Sans JP',sans-serif;font-size:.875rem;margin-left:.4rem;letter-spacing:0}
+.yoko-pilot>.yoko-terms{grid-column:1/-1;margin:0}
+.yoko-consult{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:2rem;align-items:center;padding:2.5rem 0 0}
+.yoko-consult h4{font-size:clamp(1.4rem,2.3vw,1.8rem);line-height:1.65;font-weight:900;margin-bottom:1rem;letter-spacing:-.035em}
+.yoko-consult p{font-size:.9375rem;line-height:1.95}
+.yoko-consult-action>p{font-size:.8125rem;margin-top:.7rem;color:#4c626a;overflow-wrap:anywhere}
+@media(min-width:768px) and (max-width:1099px){.header-nav{display:none}.mobile-nav{display:block}}
+@media(max-width:1000px){.yoko-announcement{grid-template-columns:1fr auto}.yoko-announcement-price{border-right:0;padding-right:0}.yoko-announcement-actions{grid-column:1/-1;flex-direction:row;gap:1.5rem;align-items:center}.yoko-hero{grid-template-columns:minmax(0,1.35fr) minmax(230px,.8fr);gap:1.7rem}.yoko-price-poster{padding:1.5rem}.yoko-how{gap:1.7rem}.yoko-costs>div{grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:.5rem 1.2rem}.yoko-costs dd:last-child{grid-column:1/-1}.yoko-consult{grid-template-columns:1fr}.yoko-edition{padding:1.4rem}.yoko-role-guides>div{padding-right:.8rem;padding-left:1rem}}
+@media(max-width:700px){#yoko-elevator,#elevator-pricing,#elevator-catalogs,#elevator-consult{scroll-margin-top:128px}.yoko-product .case-type{font-size:.75rem;max-width:48%}.yoko-hero{grid-template-columns:1fr;gap:1.5rem;margin-bottom:1rem}.yoko-hero h3{font-size:clamp(1.4rem,5.9vw,2.5rem)}.yoko-hero-copy>.yoko-eyebrow{font-size:1rem}.yoko-actions{align-items:stretch;flex-direction:column}.yoko-actions>.yoko-text-link{align-self:flex-start}.yoko-price-poster{display:grid;grid-template-columns:1fr auto;gap:.6rem 1rem;padding:1.3rem 1.5rem;align-items:center}.yoko-price-label{font-size:1rem;grid-column:1}.yoko-zero{grid-column:2;grid-row:1/3;font-size:6.5rem;margin:0}.yoko-zero span{font-size:1.6rem}.yoko-free{grid-column:1;align-self:start;margin:0;font-size:1.4rem}.yoko-price-note{grid-column:1/-1;margin-top:.3rem}.yoko-price-poster .yoko-text-link{grid-column:1/-1;margin:0}.yoko-how{grid-template-columns:1fr;gap:1.5rem;padding-top:1rem;padding-bottom:2rem}.yoko-pricing{padding:2rem 0}.yoko-section-title h4{font-size:1.35rem}.yoko-custom-content ul{grid-template-columns:1fr}.yoko-editions{grid-template-columns:1fr}.yoko-edition+.yoko-edition{border-left:0;border-top:6px solid var(--yoko-ink)}.yoko-edition{padding:1.4rem}.yoko-edition h5{font-size:2rem}.yoko-role-guides{grid-template-columns:1fr;margin-top:.7rem}.yoko-role-guides>div,.yoko-role-guides>div:first-child{padding:1.1rem 0;border-left:0;border-top:1px solid var(--yoko-line)}.yoko-role-guides>div:first-child{border-top:0}.yoko-role-guides nav{gap:0 1.5rem}.yoko-manifesto{padding:1.4rem;margin-bottom:2rem;border-left-width:5px}.yoko-manifesto h4{font-size:clamp(1.2rem,4.7vw,1.75rem)}.yoko-manifesto br{display:none}.yoko-catalogs{padding-bottom:1rem}.yoko-pilot{grid-template-columns:1fr;gap:1.2rem}.yoko-pilot dl{gap:.5rem}.yoko-consult{padding-top:2rem;gap:1.3rem}.yoko-consult p br{display:none}.yoko-consult-action .yoko-button{width:100%}}
+@media(max-width:540px){.yoko-announcement{grid-template-columns:1fr;gap:1.1rem;padding:1.2rem}.yoko-announcement-copy strong{font-size:1.65rem}.yoko-announcement-price{display:grid;grid-template-columns:1fr auto;padding:.8rem 0 0;border-left:0;border-top:1px solid #10202666;align-items:center;gap:.2rem .7rem}.yoko-announcement-price strong{grid-column:2;grid-row:1/3;font-size:4.5rem}.yoko-announcement-price>span:first-child{font-size:.9375rem;font-weight:700}.yoko-announcement-price>span:last-child{align-self:start}.yoko-announcement-actions{display:flex;flex-direction:column;gap:.1rem;align-items:stretch}.yoko-announcement-actions .yoko-text-link{align-self:center}.yoko-custom-lead{font-size:1rem}.yoko-costs>div{grid-template-columns:1fr;padding:1.1rem 1rem;gap:.45rem}.yoko-costs dd:last-child{grid-column:auto}.yoko-costs dt{font-size:.875rem;color:#4c626a}.yoko-costs .yoko-cost-value{font-size:1.125rem}.yoko-custom summary{font-size:.9375rem;padding:1rem}.yoko-custom-content{padding:0 1rem 1rem}.yoko-terms{font-size:.8125rem}.yoko-price-poster{padding:1.2rem;gap:.5rem}.yoko-zero{font-size:5.75rem}.yoko-free{font-size:1.2rem}.yoko-consult-action .yoko-button{font-size:.875rem;padding:1rem}}
+@media print{.yoko-announcement{display:none}.yoko-hero,.yoko-how,.yoko-pilot,.yoko-consult{display:block}.yoko-price-poster{margin-top:1.5rem}.yoko-manifesto{background:#fff;color:#102026;border:1px solid #102026}.yoko-manifesto p,.yoko-manifesto .yoko-eyebrow{color:#102026!important}.yoko-button{color:#102026;background:#fff}.yoko-role-guides{grid-template-columns:repeat(3,1fr)}}
