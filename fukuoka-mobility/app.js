@@ -13,6 +13,7 @@ const bounds=[[32.9,129.98],[34.27,131.22]];
 const places={fukuoka:[33.59,130.42,13],kitakyushu:[33.885,130.882,13],kurume:[33.32,130.502,12],tagawa:[33.63,130.815,12],omuta:[33.029,130.444,12],itoshima:[33.558,130.2,12]};
 function day(){return Number($('#map-date').value)}function feed(){return $('#map-feed').value}
 function feedName(i){return geo.feeds[i].name.replace('GTFSデータ','')}
+function mapDateLabel(i){return geo.meta.dateLabels[i].replace(/^\d{4}年/,'').replace('月','/').replace(/日（(.)）/,' $1')}
 function color(n){return n===null?'#d4c5d0':n===0?colors.zero:n<10?colors.low:n<30?colors.medium:colors.high}
 function route(view,scroll=false){
   if(view==='main'){$('#main').focus();return}
@@ -40,6 +41,8 @@ function setupMap(){
   let failures=0;tiles.on('tileerror',()=>{failures++;if(failures>3)$('#tile-warning').hidden=false});tiles.on('tileload',()=>{$('#tile-warning').hidden=true;failures=0});
   shapeLayer=L.layerGroup().addTo(map);stopLayer=L.layerGroup().addTo(map);originLayer=L.layerGroup().addTo(map);
   geo.stops.forEach((s,i)=>s.index=i);
+  all('[data-day]').forEach(b=>{const i=Number(b.dataset.day),[date,weekday]=mapDateLabel(i).split(' ');b.innerHTML=esc(weekday)+'<span>'+esc(date)+'</span>';});
+  $('#map-date').innerHTML=geo.meta.dateLabels.map((label,i)=>`<option value="${i}">${esc(label)}</option>`).join('');
   $('#map-feed').innerHTML='<option value="all">すべての公開データ</option>'+geo.feeds.map((f,i)=>`<option value="${i}">${esc(feedName(i))}</option>`).join('');
   $('#reach-origin').innerHTML=geo.origins.map((o,i)=>`<option value="${i}">${esc(o.name)}</option>`).join('');
   ['#map-date','#map-feed'].forEach(id=>$(id).addEventListener('change',()=>{selectedStop=null;stopPage=0;map.closePopup();closeSuggestions();drawMap()}));
@@ -98,7 +101,7 @@ function selectStop(i,fly){
 function renderStopDetail(s){
   const f=geo.feeds[s.feedIndex],routes=s.routes.map(i=>geo.routes[i]).filter(r=>r.trips[day()]>0);
   $('#map-detail').classList.remove('default-detail');
-  $('#map-detail').innerHTML=`<div class="detail-label">選択した乗り場</div><h3>${esc(s.name)}</h3><p class="muted">${esc(feedName(s.feedIndex))}</p><div class="detail-stats">${['月','土','日'].map((d,i)=>`<div class="${i===day()?'current':''}">9/${[8,12,13][i]} ${d}<b>${fmt(s.departures[i])}</b>本／日</div>`).join('')}</div><p class="muted">${s.departures[day()]===0?'当日の通常乗車可能な出発が0。地域の交通手段がないという意味ではありません。':'この乗り場から通常乗車できる出発数です。利用人数ではありません。'}</p><details><summary>登録路線と出典</summary><div class="details-content"><p class="muted">登録路線のうち当日運行あり</p><p>${routes.length?routes.map(r=>esc(r.name)).join('<br>'):'該当する登録路線なし'}</p><p class="muted">路線の登録関係から表示。各便の停車は時刻表を確認してください。</p>${ext(f.sourceUrl,'公開データ・出典')}</div></details><button class="quiet-button detail-clear" data-clear-stop>選択を解除</button>`;
+  $('#map-detail').innerHTML=`<div class="detail-label">選択した乗り場</div><h3>${esc(s.name)}</h3><p class="muted">${esc(feedName(s.feedIndex))}</p><div class="detail-stats">${['月','土','日'].map((d,i)=>`<div class="${i===day()?'current':''}">${esc(mapDateLabel(i))}<b>${fmt(s.departures[i])}</b>本／日</div>`).join('')}</div><p class="muted">${s.departures[day()]===null?'この日の運行本数は未確認です。時刻表の有効期間を出典で確認してください。':s.departures[day()]===0?'当日の通常乗車可能な出発が0。地域の交通手段がないという意味ではありません。':'この乗り場から通常乗車できる出発数です。利用人数ではありません。'}</p><details><summary>登録路線と出典</summary><div class="details-content"><p class="muted">登録路線のうち当日運行あり</p><p>${routes.length?routes.map(r=>esc(r.name)).join('<br>'):'該当する登録路線なし'}</p><p class="muted">路線の登録関係から表示。各便の停車は時刻表を確認してください。</p>${ext(f.sourceUrl,'公開データ・出典')}</div></details><button class="quiet-button detail-clear" data-clear-stop>選択を解除</button>`;
 }
 function renderStopTable(){
   const q=$('#stop-search').value.trim().toLowerCase(),filtered=visibleStops.filter(s=>q?s.name.toLowerCase().includes(q):map.getBounds().contains([s.lat,s.lon])).sort((a,b)=>b.departures[day()]-a.departures[day()]);const size=12,pages=Math.max(1,Math.ceil(filtered.length/size));stopPage=Math.min(Math.max(0,stopPage),pages-1);
@@ -137,10 +140,11 @@ function setupBC(){
  $('#bc-form').addEventListener('submit',e=>e.preventDefault());['#bc-share','#bc-minutes','#bc-cost','#bc-rate','#bc-users','#bc-time-value'].forEach(id=>$(id).addEventListener('input',updateBC));$('#bc-reset').addEventListener('click',()=>{$('#bc-share').value='50';$('#bc-minutes').value='5';$('#bc-cost').value='30';$('#bc-rate').value='0.04';$('#bc-users').value='10000';$('#bc-time-value').value='30';updateBC()});updateBC();
 }
 function updateBC(){
-  const share=Number($('#bc-share').value)/100,minutes=Number($('#bc-minutes').value),cost=$('#bc-cost').value.trim()===''?NaN:Number($('#bc-cost').value)*10000,rate=Number($('#bc-rate').value);$('#bc-share-value').textContent=fmt(share*100)+'%';$('#bc-minutes-value').textContent=fmt(minutes,Number.isInteger(minutes)?0:1)+'分';
+  const number=id=>$(id).value.trim()===''?NaN:Number($(id).value);
+  const share=number('#bc-share')/100,minutes=number('#bc-minutes'),cost=number('#bc-cost')*10000,rate=number('#bc-rate');$('#bc-share-value').textContent=fmt(share*100)+'%';$('#bc-minutes-value').textContent=fmt(minutes,Number.isInteger(minutes)?0:1)+'分';
   $('#bc-share').setAttribute('aria-valuetext',fmt(share*100)+'パーセントの移動');$('#bc-minutes').setAttribute('aria-valuetext',fmt(minutes,1)+'分短縮');
-  const users=Number($('#bc-users').value),timeValue=Number($('#bc-time-value').value);const r=calculateBC({share,minutes,annualCost:cost,rate,users,timeValue});
-  if(!r){$('#bc-results').innerHTML='<div class="error">追加費用に0以上の数値を入力してください。</div>';$('#bc-mobile-summary').innerHTML='<span>費用便益の試算</span><b>費用を入力してください</b>';return}
+  const users=number('#bc-users'),timeValue=number('#bc-time-value');const r=calculateBC({share,minutes,annualCost:cost,rate,users,timeValue});
+  if(!r){$('#bc-results').innerHTML='<div class="error">年間の追加費用・年間対象移動回数・時間価値に、0以上の数値を入力してください。</div>';$('#bc-mobile-summary').innerHTML='<span>費用便益の試算</span><b>入力値を確認してください</b>';return}
   $('#bc-results').innerHTML=`<div class="bc-hero"><div class="bc-assumption">いまの条件：対象 ${fmt(share*100)}% · ${fmt(minutes,Number.isInteger(minutes)?0:1)}分短縮 · 年${fmt(cost/10000,1)}万円</div><div class="label">時間便益と釣り合う追加費用</div><div class="value">${fmt(r.annualBenefit/10000,2)}<small>万円／年</small></div><span class="bc-badge">時間便益のみのB/C <b>${r.bc===null?'算定不可':fmt(r.bc,2)}</b></span><p style="margin-top:14px">${r.bc===null?'追加費用が0のため比率は算定できません。':'B/C＝時間短縮の価値 ÷ 追加費用。'}<br>この仮定での費用上限です。正式な事業評価・見積額ではありません。</p></div><div class="bc-summary">${metric('5年分の便益現在価値',fmt(r.pvBenefit/10000,2)+'万円')}${metric('5年分の費用現在価値',fmt(r.pvCost/10000,2)+'万円')}${metric('部分純便益の現在価値',fmt(r.npv/10000,2)+'万円')}${metric('B/C＝1に必要な短縮',r.requiredMinutes===null?'算定不可':fmt(r.requiredMinutes,2)+'分')}</div><p class="source-note">現在の短縮時間で必要な対象割合：${r.requiredShare===null?'算定不可':fmt(r.requiredShare*100,1)+'%'}${r.requiredShare>1?'（100%を超えるため、この短縮時間では費用を賄えません）':''}。費用と効果を確認するための条件整理です。</p>`;
   $('#bc-mobile-summary').innerHTML=`<div><span>時間便益のみのB/C</span><strong>${r.bc===null?'—':fmt(r.bc,2)}</strong></div><div><span>釣り合う追加費用</span><br><b>${fmt(r.annualBenefit/10000,2)}万円／年</b></div>`;
 }
