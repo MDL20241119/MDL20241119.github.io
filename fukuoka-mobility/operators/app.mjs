@@ -58,7 +58,7 @@ async function start(){
   $('#operator-scope').textContent=data.scope+' '+data.agencyNote;
   await setupStatistics({json,onChange:updateURL});renderPriority();render();$('#operator-loading').hidden=true;
   for(const id of ['operator-select','mode-select','status-select'])$('#'+id).addEventListener('change',()=>{page=0;render()});$('#operator-query').addEventListener('input',()=>{page=0;render()});
-  $('#operator-reset').addEventListener('click',()=>{for(const id of ['operator-select','mode-select','status-select'])$('#'+id).value='all';$('#operator-query').value='';page=0;render()});
+  $('#operator-reset').addEventListener('click',()=>{for(const id of ['operator-select','mode-select','status-select'])$('#'+id).value='all';$('#operator-query').value='';$('#stats-year').value='2024';$('#station-query').value='';page=0;render()});
   $('#operator-table-body').addEventListener('click',e=>{const button=e.target.closest('[data-operator]');if(!button)return;$('#operator-select').value=button.dataset.operator;$('#operator-query').value='';page=0;render();$('#operator-map-section').scrollIntoView({block:'start'});});
   $('#operator-prev').addEventListener('click',()=>{page--;render()});$('#operator-next').addEventListener('click',()=>{page++;render()});$('#operator-export').addEventListener('click',exportCSV);
   $('#share-catalog').addEventListener('click',async()=>{updateURL();try{await navigator.clipboard.writeText(location.href);$('#share-catalog').textContent='コピーしました';}catch{window.prompt('このURLで表示条件を共有できます。',location.href);}});
