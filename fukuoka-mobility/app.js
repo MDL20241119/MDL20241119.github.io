@@ -7,9 +7,9 @@ const tag=(text,cls='')=>`<span class="tag ${cls}">${esc(text)}</span>`;
 const metric=(label,value,sub='')=>`<div class="metric"><span class="label">${label}</span><strong>${value}</strong><span class="sub">${sub}</span></div>`;
 const table=(headers,rows,cls='')=>`<div class="table-wrap"><table class="data-table ${cls}"><thead><tr>${headers.map(h=>`<th scope="col">${h}</th>`).join('')}</tr></thead><tbody>${rows.length?rows.map(r=>`<tr>${r.map((c,i)=>`<td data-label="${esc(headers[i].replace(/<[^>]*>/g,''))}"><div class="cell-value">${c??'—'}</div></td>`).join('')}</tr>`).join(''):`<tr><td colspan="${headers.length}">該当するデータはありません。</td></tr>`}</tbody></table></div>`;
 const panel=(title,body,meta='')=>`<div class="panel"><div class="panel-title"><div><h3>${title}</h3>${meta?`<p>${meta}</p>`:''}</div></div>${body}</div>`;
-let data,geo,map,stopLayer,shapeLayer,originLayer,visibleStops=[],stopPage=0,selectedStop=null,mode='frequency',lastView='start';
+let data,geo,map,stopLayer,shapeLayer,originLayer,visibleStops=[],stopPage=0,selectedStop=null,mode='frequency',lastView='start',mapHasBeenShown=false;
 const colors={zero:'#a3adb4',low:'#d6a23e',medium:'#139c91',high:'#1f539b'};
-const bounds=[[32.98,130.01],[34.03,131.20]];
+const bounds=[[32.9,129.98],[34.27,131.22]];
 const places={fukuoka:[33.59,130.42,13],kitakyushu:[33.885,130.882,13],kurume:[33.32,130.502,12],tagawa:[33.63,130.815,12],omuta:[33.029,130.444,12],itoshima:[33.558,130.2,12]};
 function day(){return Number($('#map-date').value)}function feed(){return $('#map-feed').value}
 function feedName(i){return geo.feeds[i].name.replace('GTFSデータ','')}
@@ -25,13 +25,17 @@ function route(view,scroll=false){
   $('#subnav').innerHTML=tabs.map(([key,label])=>`<a href="#${key}" class="${view===key?'active':''}" ${view===key?'aria-current="page"':''}>${label}</a>`).join('');
   $('#bc-mobile-summary').hidden=view!=='bc';
   document.title='公開デモ｜'+$('#view-'+view+' h1').textContent+'｜福岡 交通データ';
-  if(view==='map'&&map)setTimeout(()=>map.invalidateSize(),30);
+  if(view==='map'&&map)requestAnimationFrame(()=>{
+    map.invalidateSize();
+    if(!mapHasBeenShown){if(selectedStop===null)map.fitBounds(bounds,{padding:[8,8]});mapHasBeenShown=true;}
+    updateMapSummary();renderStopTable();
+  });
   if(view==='forecast'&&data)$('#forecast-chart').innerHTML=forecastChart($('#forecast-method').value);
   if(scroll){window.scrollTo({top:0,behavior:'auto'});$('#main').focus({preventScroll:true})}
 }
 function setupMap(){
   if(!window.L)throw new Error('地図の表示に必要なファイルを読み込めませんでした。ページを再読み込みしてください。');
-  map=L.map('map',{preferCanvas:true,scrollWheelZoom:false,minZoom:5,maxZoom:18}).fitBounds(bounds,{padding:[8,8]});
+  map=L.map('map',{preferCanvas:true,scrollWheelZoom:false,minZoom:5,maxZoom:18}).setView([33.6,130.55],9);
   const tiles=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxNativeZoom:18,maxZoom:18,attribution:'背景：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>｜交通：各自治体・運行事業者（個別の利用条件）'}).addTo(map);
   let failures=0;tiles.on('tileerror',()=>{failures++;if(failures>3)$('#tile-warning').hidden=false});tiles.on('tileload',()=>{$('#tile-warning').hidden=true;failures=0});
   shapeLayer=L.layerGroup().addTo(map);stopLayer=L.layerGroup().addTo(map);originLayer=L.layerGroup().addTo(map);

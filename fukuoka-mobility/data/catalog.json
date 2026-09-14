@@ -469,10 +469,11 @@
       "license": "Creative Commons Attribution",
       "licenseUrl": "http://www.opendefinition.org/licenses/cc-by",
       "dataClass": "OPEN",
-      "status": "USED",
+      "status": "PARTIAL",
       "analysisReady": "PARTIAL",
       "processing": "公開GTFS ZIPを保存。原典の有効期間・運行暦・例外日・乗降制限を適用して表示・集計。",
       "limitations": [
+        "このスナップショットは有効期間外または構造エラーのため、経路・便数・交通空白の計算から除外しています。原典と過去の停留所位置のみ保存。",
         "リアルタイム遅延・満員情報は含みません。",
         "停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。",
         "未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。",
@@ -481,20 +482,8 @@
       ],
       "usedFor": [
         {
-          "label": "バス停・路線・運行頻度",
+          "label": "過去の停留所位置のみ（経路・便数計算から除外）",
           "url": "index.html#map"
-        },
-        {
-          "label": "選択時：目的地への往復",
-          "url": "accessibility.html"
-        },
-        {
-          "label": "選択時：交通空白候補",
-          "url": "transport-gaps.html"
-        },
-        {
-          "label": "時刻表編集・シナリオ比較",
-          "url": "lab.html#design"
         }
       ],
       "localFiles": [
@@ -540,7 +529,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "バス停・路線・運行頻度 / 選択時：目的地への往復 / 選択時：交通空白候補 / 時刻表編集・シナリオ比較"
+          "evidence": "過去の停留所位置のみ（経路・便数計算から除外）"
         }
       }
     },

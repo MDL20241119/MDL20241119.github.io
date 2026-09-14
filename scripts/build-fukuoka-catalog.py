@@ -91,6 +91,7 @@ analysis = read('data/analysis.json')
 municipalities = [f['properties'] for f in boundaries['features']]
 
 for f in gtfs:
+    usable = f.get('current') and f.get('analysisReady')
     meta = next((m for m in transport['feeds'] if m['sha256'] == f['sha256']), None)
     if not meta:
         raise ValueError('GTFS and map metadata disagree: ' + f['file'])
@@ -102,7 +103,7 @@ for f in gtfs:
     d = dataset('gtfs-' + meta['id'], f['name'] + ' GTFS', 'transport',
         provider=f['provider'], sourceUrl=f['catalog'], sourceUrls=[{'name': f['name'], 'url': f['source']}],
         retrievedAt=f.get('retrieved'), license=f.get('license'), licenseUrl=f.get('licenseUrl'),
-        licenseCheckedAt=f.get('licenseCheckedAt'), dataClass='OPEN', status='USED', analysisReady='PARTIAL',
+        licenseCheckedAt=f.get('licenseCheckedAt'), dataClass='OPEN', status='USED' if usable else 'PARTIAL', analysisReady='PARTIAL',
         coverage='この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。',
         format='GTFS ZIP → JSON', processing=f.get('processing'), sha256=f['sha256'],
         validFrom=meta.get('validFrom'), validTo=meta.get('validTo'),
@@ -110,8 +111,8 @@ for f in gtfs:
         records=sum(s['feedIndex'] == i for s in transport['stops']), recordUnit='停留所ID',
         shapeCount=sum(s['feedIndex'] == i for s in transport['shapes']),
         valueType='時刻表（予定値）', layerIds=['bus-stops', 'bus-routes'],
-        usedFor=[usage('バス停・路線・運行頻度', 'index.html#map'), usage('選択時：目的地への往復', 'accessibility.html'), usage('選択時：交通空白候補', 'transport-gaps.html'), usage('時刻表編集・シナリオ比較', 'lab.html#design')],
-        limitations=['リアルタイム遅延・満員情報は含みません。', '停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。', '未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。', '原GTFSの線形のみ表示。欠けた区間の線形を創作しません。', '分析日と選択した事業者により利用範囲が変わります。'],
+        usedFor=[usage('バス停・路線・運行頻度', 'index.html#map'), usage('選択時：目的地への往復', 'accessibility.html'), usage('選択時：交通空白候補', 'transport-gaps.html'), usage('時刻表編集・シナリオ比較', 'lab.html#design')] if usable else [usage('過去の停留所位置のみ（経路・便数計算から除外）', 'index.html#map')],
+        limitations=([] if usable else ['このスナップショットは有効期間外または構造エラーのため、経路・便数・交通空白の計算から除外しています。原典と過去の停留所位置のみ保存。'])+['リアルタイム遅延・満員情報は含みません。', '停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。', '未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。', '原GTFSの線形のみ表示。欠けた区間の線形を創作しません。', '分析日と選択した事業者により利用範囲が変わります。'],
         localFiles=[local, 'data/gtfs/catalog.json', 'data/map-data.json'], scope='バス時刻表')
 
 place_groups = collections.defaultdict(list)
