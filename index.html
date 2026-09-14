@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/cases.css?v=20260913-tourism">
-    <link rel="stylesheet" href="assets/yoko-elevator.css?v=20260914-free2">
+    <link rel="stylesheet" href="assets/yoko-elevator.css?v=20260914-free3">
     <link rel="stylesheet" href="shimonoseki-destination/teaser.css">
     <style>
         :root {
@@ -762,5 +762,12 @@
       <p class="lightbox-status" role="status"></p><img class="lightbox-image" alt=""><a class="lightbox-original" href="#" target="_blank" rel="noopener">画像だけで開く（拡大表示） ↗</a>
     </dialog>
     <script src="assets/cases.js?v=20260912-2" defer></script>
+    <script>
+      document.querySelectorAll('.mobile-nav a').forEach(function (link) {
+        link.addEventListener('click', function () {
+          link.closest('details').removeAttribute('open');
+        });
+      });
+    </script>
 </body>
 </html>
