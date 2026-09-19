@@ -73,9 +73,9 @@
       tiles.on('tileerror',()=>{$('map-error').hidden=false;});
       tiles.on('load',()=>{const images=[...$('journey-map').querySelectorAll('.leaflet-tile')];if(images.length&&images.every(img=>img.complete&&img.naturalWidth>0))$('map-error').hidden=true;});
       map.setView([33.1998,131.5718],15);
-      if(window.ResizeObserver)new ResizeObserver(()=>map.invalidateSize({pan:false})).observe($('journey-map'));
+      if(window.ResizeObserver){let previousWidth=0;new ResizeObserver(()=>{const width=$('journey-map').clientWidth;if(width&&width!==previousWidth){previousWidth=width;map.invalidateSize();fit();}}).observe($('journey-map'));}
     }
-    function fit(){if(map&&markers.size)map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[78,46],maxZoom:15,animate:false});}
+    function fit(){if(map&&markers.size)map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,46],maxZoom:15,animate:false});}
     function buildMarkers(){
       if(!map)return;
       const key=JSON.stringify(stops.map(s=>[s.id,s.name]));if(key===markerKey)return;markerKey=key;
@@ -85,7 +85,7 @@
         const button=document.createElement('button');button.type='button';button.setAttribute('aria-label','地図で'+stop.name+'を選ぶ');
         const badge=document.createElement('small');badge.className='pin-kind';const label=document.createElement('span');label.textContent=stop.name;button.append(badge,label);
         button.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();chooseStop(stop.id);});
-        const icon=L.divIcon({className:'stop-pin',html:button,iconSize:[130,48],iconAnchor:[65,24]});
+        const icon=L.divIcon({className:'stop-pin',html:button,iconSize:[120,48],iconAnchor:[60,24]});
         const marker=L.marker(points[stop.id],{icon,keyboard:false}).addTo(map);markers.set(stop.id,marker);
       }
       fit();
@@ -117,7 +117,7 @@
         $('pick-'+field).setAttribute('aria-pressed',String(target===field));
       }
       const active=activeRide(),frozen=locked(),fixed=fixedStops();
-      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':target==='passengers'?'乗降場所を選びました。次は人数を選んでください。':'緑のピンを押して、'+names[target]+'を選んでください。';
+      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'乗降場所を選びました。次は人数を選んでください。':'緑のピンを押して、'+names[target]+'を選んでください。';
       for(const id of ['pick-origin','pick-destination','summary-origin','summary-destination'])$(id).disabled=frozen||fixed;
       for(const b of $('journey-passengers').querySelectorAll('button')){b.setAttribute('aria-pressed',String(Number(b.dataset.people)===selection.passengers));b.disabled=frozen;}
       $('journey-chat-input').disabled=frozen;$('journey-chat-send').disabled=frozen;
