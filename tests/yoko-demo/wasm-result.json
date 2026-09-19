@@ -1,0 +1,22 @@
+{
+  "status": "PASS",
+  "checks": [
+    "seeded pending and completed rides come from Core transitions",
+    "only the three fictional demo actors can enter the adapter",
+    "rider request is confirmed and saved by the unchanged Core",
+    "same operation replay does not duplicate a reservation",
+    "admin cannot impersonate a rider mutation",
+    "all four driver transitions require stopped confirmation and appear for all roles",
+    "completion releases the recorded vehicle seats",
+    "owner cancellation has its own confirmation and persists",
+    "rider cannot view another fictional passenger request",
+    "fresh Core instances read the same SQLite reservation ledger",
+    "reset affects only the dedicated fictional demo database"
+  ],
+  "count": 11,
+  "production_authentication": false,
+  "runtime": "3.14.2 (main, Sep 14 2026, 03:03:51) [Clang 23.0.0git (https:/github.com/llvm/llvm-project e5927fecf8a6ce89e1a4eac5b8",
+  "pyodide": "314.0.7",
+  "scope": "PYODIDE_WASM_CORE_NOT_BROWSER_RENDERER_OR_INDEXEDDB",
+  "checked_at": "2026-09-19T22:13:42.016Z"
+}
