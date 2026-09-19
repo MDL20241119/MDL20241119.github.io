@@ -1,0 +1,34 @@
+{
+  "status": "PASS",
+  "checked_on_utc": "2026-09-19",
+  "runtime_commit": "bd23416cf66820bddbc20a9e8983042bb5ca8dd0",
+  "environment": "Live GitHub Pages, Chrome, synthetic data, ordinary UI actions",
+  "entry_urls": {
+    "user": "https://mobilitydlab.com/danchi-elevator/demo/?role=user",
+    "driver": "https://mobilitydlab.com/danchi-elevator/demo/?role=driver",
+    "admin": "https://mobilitydlab.com/danchi-elevator/demo/?role=admin"
+  },
+  "checks": [
+    "Common entry boots the real Pyodide worker and enables all three role entries",
+    "User confirms and saves a one-passenger request from ふれあいセンター to 駅前ロータリー",
+    "Driver sees the same receipt, de738198; an action without stopped confirmation is refused",
+    "Driver records accept, arrive, board and complete with a fresh stopped confirmation each time",
+    "Separate admin tab in the same browser sees arrival and onboard states, then completed count 2 including the seeded history",
+    "Driver reloads its direct URL and sees receipt de738198 in completed history; reserved seats return to 0",
+    "User creates another request, dacd3185, confirms cancellation, and sees it in cancelled history",
+    "Three role entry URLs are verified from the live post-navigation URLs"
+  ],
+  "responsive_review": {
+    "method": "Live same-origin iframe with explicit CSS viewport widths; DOM and screenshot review",
+    "user": {"390px": {"client_width": 375, "scroll_width": 375}, "320px": {"client_width": 305, "scroll_width": 305}},
+    "driver": "320px visual review: role tabs, stopped confirmation and request controls fit",
+    "admin": "390px and 320px visual review: role tabs, statistics and request list fit; heading spacing refined after review",
+    "limitation": "No physical phone or Safari verification. Frame DOM measurement after navigation was unavailable; driver/admin reviews are visual."
+  },
+  "limitations": [
+    "IndexedDB storage is shared only inside this browser/origin; separate devices do not share reservations",
+    "Role selection is public fictional demo identity, not production authentication",
+    "No actual rides, payment collection or external notifications",
+    "No full MLIT conformance or public production server claim"
+  ]
+}
