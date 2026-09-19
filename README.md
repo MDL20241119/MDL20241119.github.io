@@ -2,6 +2,21 @@
 
 Official site: https://mobilitydlab.com/
 
+## Corporate homepage
+
+The homepage is authored in `index.html`, with its own `assets/home.css` and
+`assets/home.js`. Application pages and their stylesheets remain independent.
+
+Keep the information order: business overview, field-work examples, apps and
+catalogs, news, company philosophy, and contact. Add new tools to the existing
+apps section rather than another top-of-page banner. Show the latest three news
+items and keep older entries in the expandable archive. Preserve the established
+section IDs, catalog URLs, pricing qualifications, and proposal/demo labels.
+
+Run `python tests/homepage.py` and `node --check assets/home.js`. The existing
+`tests/responsive.html` harness can display the homepage at phone, tablet and
+desktop widths. It tests layout, not device-specific browser behavior.
+
 ## Oita mobility atlas
 
 The complete static application is published at `/oita-mobility/`. It includes destinations, municipal transport-gap conditions, local transport resources, timetable planning and conditional analysis. The company homepage links to the tool from NEWS.
