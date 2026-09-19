@@ -1,0 +1,111 @@
+{
+  "status": "PASS",
+  "checked_on_utc": "2026-09-19",
+  "version": "0.15.0",
+  "functional_runtime_commit": "e1619ec6e1e1cf439ed04fad301255c60deb721f",
+  "environment": "Live GitHub Pages in Chrome; ordinary UI actions with synthetic browser-local records",
+  "receipt": "59fd9829",
+  "checks": [
+    "User picks ふれあいセンター on the map, sends 駅前へ1人 in the LINE-style chat and sees matching selection details",
+    "Only the explicit request confirmation creates receipt 59fd9829",
+    "Driver searches the receipt in chat, selects the result, confirms stopped status and accepts through the new review dialog",
+    "User receives the vehicle confirmation dialog for デモ車両1 and the selected boarding stop",
+    "Driver confirms arrival, boarding and completion with separate stopped checks and review dialogs",
+    "Admin reflects one onboard passenger and two still-waiting passengers from the untouched seeded request",
+    "Admin map selection filters three records involving ふれあいセンター; chat receipt search isolates the completed 59fd9829 record",
+    "User chat reflects arrival, boarding and completion; the composer unlocks after completion",
+    "Desktop visual review confirms user map/chat split, driver map/reception/pending structure and administrator map/large counts",
+    "Driver phone-width visual review confirms large stopped control and action button with LINE-style white/green chat bubbles"
+  ],
+  "responsive_review": {
+    "method": "Same-origin iframe at 320 CSS px; visible DOM geometry and computed styles",
+    "user": {
+      "client_width": 305,
+      "scroll_width": 305,
+      "map_bounds": [
+        15,
+        290
+      ],
+      "pin_edges": [
+        [
+          93,
+          213
+        ],
+        [
+          169,
+          289
+        ],
+        [
+          16,
+          136
+        ]
+      ],
+      "chat_font_px": 18,
+      "map_label_font_px": 16,
+      "input_height_px": 56,
+      "confirmation_button_height_px": 64
+    },
+    "driver": {
+      "client_width": 305,
+      "scroll_width": 305,
+      "map_bounds": [
+        15,
+        290
+      ],
+      "pin_edges": [
+        [
+          93,
+          213
+        ],
+        [
+          169,
+          289
+        ],
+        [
+          16,
+          136
+        ]
+      ],
+      "chat_font_px": 18,
+      "map_label_font_px": 16,
+      "action_button_height_px": 66
+    },
+    "admin": {
+      "client_width": 305,
+      "scroll_width": 305,
+      "map_bounds": [
+        14,
+        291
+      ],
+      "pin_edges": [
+        [
+          93,
+          213
+        ],
+        [
+          169,
+          289
+        ],
+        [
+          16,
+          136
+        ]
+      ],
+      "chat_font_px": 18,
+      "map_label_font_px": 16
+    }
+  },
+  "follow_up_fixes": [
+    "Replace color-dependent green-pin wording with map-place-button wording",
+    "Retain the selected role accent on hover; enlarge mobile role tabs to at least 56px",
+    "Add the missing administrator map border",
+    "Keep the stopped control disabled until both mutation and refresh finish; dedicated assertion added to the 20-check operations suite"
+  ],
+  "limitations": [
+    "Desktop Chrome and CSS viewport emulation only; no physical phone or Safari test",
+    "Three fictional stops, browser-local reservations and fictional public roles; no cross-device sharing or production authentication",
+    "Chat matches registered phrases locally; LINE-like appearance does not connect LINE or an external AI",
+    "Exception buttons show guidance only; no external report, cancellation, route optimization, live vehicle location or ETA is added",
+    "No full MLIT conformance or actual ride service claim"
+  ]
+}

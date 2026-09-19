@@ -1,6 +1,6 @@
 {
   "status": "PASS",
-  "count": 19,
+  "count": 20,
   "checks": [
     "Driver console shows only the driver surface and the real pending count",
     "Admin separates requests from people waiting to board",
@@ -9,6 +9,7 @@
     "A driver action requires a fresh stopped confirmation",
     "Review shows the actual route and passengers before any mutation",
     "Backing out of review leaves the request unassigned",
+    "Stopped confirmation is disabled until the operation and refresh finish",
     "Repeated confirmation accepts exactly once through Core and updates the route tiles",
     "Admin live snapshot reflects assignment while passengers are still waiting",
     "No-show guidance never marks a passenger onboard or cancels the ride",

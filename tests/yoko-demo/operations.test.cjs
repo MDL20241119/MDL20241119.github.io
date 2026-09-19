@@ -39,7 +39,9 @@ function check(name,fn){fn();checks.push(name);}
   check('Review shows the actual route and passengers before any mutation',()=>{assert.equal(d.$('driver-action-dialog').open,true);assert.match(d.$('driver-action-details').textContent,/中央広場/);assert.match(d.$('driver-action-details').textContent,/2名/);assert.equal(ride().status,'requested');});
   d.$('driver-action-back').click();await settle();
   check('Backing out of review leaves the request unassigned',()=>assert.equal(ride().status,'requested'));
-  d.$('driver-next').click();d.$('driver-action-confirm').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
+  d.$('driver-next').click();d.$('driver-action-confirm').click();
+  check('Stopped confirmation is disabled until the operation and refresh finish',()=>assert.equal(d.$('stopped').disabled,true));
+  d.$('driver-action-confirm').click();await settle();await a.refresh();
   check('Repeated confirmation accepts exactly once through Core and updates the route tiles',()=>{assert.equal(ride().status,'assigned');assert.equal(ride().events.length,2);assert.equal(d.$('stopped').checked,false);assert.match(d.$('driver-runs').textContent,/中央広場/);assert.match(d.$('driver-confirmed-count').textContent,/1件 \/ 2名/);assert.equal(d.$('driver-seats').textContent,'1 / 3名');});
   check('Admin live snapshot reflects assignment while passengers are still waiting',()=>{assert.equal(a.$('admin-waiting-orders').textContent,'0件');assert.equal(a.$('admin-waiting-people').textContent,'2名');assert.equal(a.$('admin-onboard').textContent,'0名');});
   d.$('driver-exceptions').querySelector('[data-driver-help=absent]').click();await settle();

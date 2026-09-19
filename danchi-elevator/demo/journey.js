@@ -27,7 +27,7 @@
       $('journey-messages').scrollTop=$('journey-messages').scrollHeight;
     }
     function prompt(){
-      if(!selection.origin)return 'どこから乗りますか？\n地図の緑のピンか、場所名で教えてください。';
+      if(!selection.origin)return 'どこから乗りますか？\n地図の場所ボタンか、場所名で教えてください。';
       if(!selection.destination)return stopName(selection.origin)+'からですね。\n次は、どこで降りますか？';
       if(!selection.passengers)return '何人で乗りますか？\n1〜3人から選ぶか、「2人」のように送ってください。';
       return '場所と人数がそろいました。\n下の「内容を確認する」から、最後に確認しましょう。';
@@ -118,7 +118,7 @@
         $('pick-'+field).setAttribute('aria-pressed',String(target===field));
       }
       const active=activeRide(),frozen=locked(),fixed=fixedStops();
-      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'乗降場所を選びました。次は人数を選んでください。':'緑のピンを押して、'+names[target]+'を選んでください。';
+      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'乗降場所を選びました。次は人数を選んでください。':'地図の場所ボタンを押して、'+names[target]+'を選んでください。';
       for(const id of ['pick-origin','pick-destination','summary-origin','summary-destination'])$(id).disabled=frozen||fixed;
       for(const b of $('journey-passengers').querySelectorAll('button')){b.setAttribute('aria-pressed',String(Number(b.dataset.people)===selection.passengers));b.disabled=frozen;}
       $('journey-chat-input').disabled=frozen;$('journey-chat-send').disabled=frozen;
