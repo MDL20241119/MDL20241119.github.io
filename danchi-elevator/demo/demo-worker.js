@@ -5,7 +5,7 @@ const PERSIST='/yoko-elevator-demo-v1';
 let pyodide;
 const sync=populate=>new Promise((resolve,reject)=>pyodide.FS.syncfs(populate,error=>error?reject(error):resolve()));
 async function boot(){
-  importScripts(INDEX_URL+'pyodide.js');
+  const {loadPyodide}=await import(INDEX_URL+'pyodide.mjs');
   pyodide=await loadPyodide({indexURL:INDEX_URL});
   await pyodide.loadPackage('tzdata');
   const [bundleResponse,runtimeResponse]=await Promise.all([fetch('./core-bundle.json'),fetch('./demo_runtime.py')]);
@@ -27,7 +27,7 @@ async function boot(){
   postMessage({type:'ready',version:bundle.version});
 }
 let queue=boot().catch(error=>{postMessage({type:'fatal',message:String(error)});throw error;});
-onmessage=event=>{
+self.onmessage=event=>{
   const {id,command}=event.data;
   queue=queue.then(async()=>{
     try{

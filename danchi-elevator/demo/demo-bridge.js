@@ -30,7 +30,7 @@
   };
   async function main(){
     if(!window.Worker||!window.indexedDB||!navigator.locks||!window.crypto?.subtle)throw new Error('このブラウザーではデモの保存機能を利用できません。新しいSafari、Chrome、Edgeで開いてください。');
-    worker=new Worker('./demo-worker.js');
+    worker=new Worker('./demo-worker.js?v=2',{type:'module'});
     await new Promise((resolve,reject)=>{
       const timer=setTimeout(()=>reject(new Error('読み込みに時間がかかっています。通信を確認して、もう一度読み込んでください。')),60000);
       worker.onerror=event=>{clearTimeout(timer);reject(new Error(event.message||'デモを起動できませんでした'));for(const p of pending.values())p.reject(new Error('Worker stopped'));pending.clear();};

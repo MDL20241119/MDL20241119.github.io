@@ -39,7 +39,7 @@ def build(source):
     html=html.replace('<title>横のエレベーター｜Webアプリ</title>', '<title>横のエレベーター｜3者の体験デモ</title>')
     html=html.replace('<meta name="color-scheme" content="light">', '<meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#17664e">')
     html=html.replace('href="/style.css"','href="./style.css"').replace('<script src="/app.js" defer></script>',
-        '<link rel="stylesheet" href="./demo.css"><script src="./demo-bridge.js" defer></script>')
+        '<link rel="stylesheet" href="./demo.css"><script src="./demo-bridge.js?v=2" defer></script>')
     html=html.replace('href="/" aria-label','href="./" aria-label')
     html=html.replace('ローカル試験 <span class="strip-detail">架空データのみ・実際の送迎は行いません','体験デモ <span class="strip-detail">架空の地域・実際の送迎は行いません')
     html=html.replace('Webアプリをはじめる','3つの役割で、体験する')
