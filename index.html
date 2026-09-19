@@ -1,384 +1,114 @@
 <!DOCTYPE html>
 <html lang="ja">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mobility Design Lab | モビリティデザインラボ</title>
-    <meta name="description" content="モビリティデザインラボの『横のエレベーター』は、乗りたい人と運転する人をつなぐライドシェア・送迎アプリ。標準アプリ利用料0円。運用費は分担、カスタマイズ・個別支援は別途。使い方をWeb・PDFカタログで紹介します。">
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500;700;900&family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="assets/cases.css?v=20260913-tourism">
-    <link rel="stylesheet" href="assets/yoko-elevator.css?v=20260914-free3">
-    <link rel="stylesheet" href="shimonoseki-destination/teaser.css">
-    <style>
-        :root {
-            --primary: #000000;
-            --secondary: #444444;
-            --accent: #E63946;
-            --light: #F8F9FA;
-            --spacing: clamp(2rem, 5vw, 8rem);
-        }
-        
-        body {
-            font-family: 'Noto Sans JP', sans-serif;
-            color: var(--primary);
-            background-color: white;
-            line-height: 1.6;
-        }
-        
-        h1, h2, h3, h4, .en {
-            font-family: 'Poppins', sans-serif;
-            font-weight: 700;
-        }
-        
-        .container-custom {
-            max-width: 1440px;
-            margin: 0 auto;
-            padding: 0 1.5rem;
-        }
-        
-        .section {
-            padding: var(--spacing) 0;
-        }
-
-        .section-border {
-            border-top: 1px solid #E5E5E5;
-        }
-        
-        .tagline {
-            font-size: clamp(2rem, 5vw, 4.5rem);
-            line-height: 1.1;
-            font-weight: 900;
-            letter-spacing: -0.02em;
-        }
-        
-        .mission-vision {
-            font-size: clamp(1.25rem, 3vw, 1.75rem);
-            line-height: 1.6;
-            font-weight: 300;
-        }
-        
-        .service-title {
-            font-size: clamp(2rem, 4vw, 3.5rem);
-            font-weight: 800;
-            line-height: 1.1;
-            letter-spacing: -0.02em;
-        }
-        
-        .service-desc {
-            font-size: clamp(1rem, 2vw, 1.25rem);
-            line-height: 1.7;
-            font-weight: 400;
-        }
-
-        .project-title {
-            font-size: clamp(1.5rem, 3vw, 2.5rem);
-            font-weight: 700;
-            line-height: 1.2;
-        }
-        
-        .header-nav a {
-            position: relative;
-        }
-        
-        .header-nav a:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 2px;
-            bottom: -4px;
-            left: 0;
-            background-color: var(--accent);
-            transition: width 0.3s ease;
-        }
-        
-        .header-nav a:hover:after {
-            width: 100%;
-        }
-        
-        .more-mobility {
-            position: relative;
-            display: inline-block;
-        }
-        
-        .more-mobility:after {
-            content: '';
-            position: absolute;
-            width: 100%;
-            height: 0.25rem;
-            bottom: -0.5rem;
-            left: 0;
-            background-color: var(--accent);
-        }
-        
-        .service-block {
-            position: relative;
-        }
-
-        .service-block::after {
-            content: "";
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            width: 0;
-            height: 3px;
-            background-color: var(--accent);
-            transition: width 0.5s ease;
-        }
-        
-        .service-block:hover::after {
-            width: 100%;
-        }
-        
-        .contact-button {
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-        }
-        
-        .contact-button:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-        }
-        
-        .footer-link {
-            position: relative;
-        }
-        
-        .footer-link:after {
-            content: '';
-            position: absolute;
-            width: 0;
-            height: 1px;
-            bottom: -2px;
-            left: 0;
-            background-color: var(--light);
-            transition: width 0.3s ease;
-        }
-        
-        .footer-link:hover:after {
-            width: 100%;
-        }
-
-        .service-image {
-            width: 100%;
-            height: 220px;
-            object-fit: cover;
-            margin-bottom: 1.5rem;
-            border-radius: 4px;
-            transition: transform 0.3s ease;
-        }
-
-        .service-block:hover .service-image {
-            transform: scale(1.03);
-        }
-
-        .news-section {
-            padding: clamp(1.75rem, 4vw, 3.5rem) 0;
-        }
-
-        .news-layout {
-            display: grid;
-            grid-template-columns: minmax(7rem, 0.28fr) 1fr;
-            gap: clamp(1.5rem, 5vw, 5rem);
-            align-items: start;
-        }
-
-        .news-heading {
-            font-size: clamp(1.5rem, 3vw, 2.25rem);
-            line-height: 1;
-        }
-
-        .news-list {
-            border-top: 1px solid #D1D5DB;
-        }
-
-        .news-item {
-            display: grid;
-            grid-template-columns: 8rem 6rem minmax(0, 1fr);
-            gap: 1rem;
-            align-items: baseline;
-            padding: 1.25rem 0;
-            border-bottom: 1px solid #D1D5DB;
-        }
-
-        .news-date {
-            font-family: 'Poppins', sans-serif;
-            font-size: 0.875rem;
-            color: #4B5563;
-            font-variant-numeric: tabular-nums;
-        }
-
-        .news-label {
-            justify-self: start;
-            color: var(--accent);
-            border: 1px solid var(--accent);
-            padding: 0.1rem 0.55rem;
-            font-size: 0.75rem;
-            font-weight: 700;
-            line-height: 1.5;
-            white-space: nowrap;
-        }
-
-        .news-title {
-            min-width: 0;
-            font-size: 1rem;
-            line-height: 1.7;
-            line-break: strict;
-            word-break: normal;
-            overflow-wrap: anywhere;
-        }
-
-        .news-link {
-            color: inherit;
-            text-decoration: underline;
-            text-decoration-color: #9CA3AF;
-            text-underline-offset: 0.2em;
-            transition: color 0.2s ease, text-decoration-color 0.2s ease;
-        }
-
-        .news-link:hover {
-            color: var(--accent);
-            text-decoration-color: currentColor;
-        }
-
-        .news-link:focus-visible {
-            outline: 2px solid var(--accent);
-            outline-offset: 4px;
-            border-radius: 2px;
-        }
-
-        .news-arrow {
-            display: inline-block;
-            margin-left: 0.35rem;
-            color: var(--accent);
-            font-family: 'Poppins', sans-serif;
-            font-weight: 600;
-        }
-
-        .news-actions {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 0.25rem 1.25rem;
-            margin-top: 0.25rem;
-        }
-
-        .news-actions a {
-            display: inline-flex;
-            align-items: center;
-            min-height: 44px;
-        }
-
-        #vision, #services, #projects, #news, #contact {
-            scroll-margin-top: 6rem;
-        }
-
-        .mobile-nav summary {
-            list-style: none;
-        }
-
-        .mobile-nav summary::-webkit-details-marker {
-            display: none;
-        }
-
-        @media (max-width: 767px) {
-            .news-layout {
-                grid-template-columns: 1fr;
-                gap: 1.25rem;
-            }
-
-            .news-item {
-                grid-template-columns: auto 1fr;
-                gap: 0.5rem 1rem;
-            }
-
-            .news-title {
-                grid-column: 1 / -1;
-            }
-        }
-
-        @media print {
-            .section {
-                page-break-inside: avoid;
-                padding: 2rem 0;
-            }
-        }
-    </style>
-<link rel="stylesheet" href="danchi-elevator/catalog.css?v=20260913-flow"></head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mobility Design Lab | モビリティデザインラボ</title>
+  <meta name="description" content="移動の仕組みづくりから、人材育成・共創の場、アプリ開発、現場実証まで。モビリティデザインラボは、地元の課題をともに考え、実装まで伴走します。事例、横のエレベーター、交通・観光データアプリをご紹介。">
+  <meta name="theme-color" content="#1c2020">
+  <link rel="canonical" href="https://mobilitydlab.com/">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700;800&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/home.css?v=20260919-1">
+  <script src="assets/home.js?v=20260919-1" defer></script>
+  <script src="assets/cases.js?v=20260912-2" defer></script>
+</head>
 <body>
-    <!-- Header -->
-    <header class="py-6 sticky top-0 bg-white z-50 shadow-sm">
-        <div class="container-custom">
-            <div class="flex items-center justify-between">
-                <a href="#" class="text-2xl md:text-3xl font-bold tracking-tighter">
-                    <span class="en">MOBILITY</span><br>
-                    <span class="en">DESIGN LAB</span>
-                </a>
-                <nav class="header-nav hidden md:flex space-x-5 lg:space-x-8 font-medium">
-                    <a href="#yoko-elevator" class="yoko-nav">横のエレベーター</a>
-                    <a href="#vision" class="hover:text-gray-900 transition-colors">VISION</a>
-                    <a href="#services" class="hover:text-gray-900 transition-colors">SERVICES</a>
-                    <a href="#projects" class="hover:text-gray-900 transition-colors">PROJECTS</a>
-                    <a href="#news" class="hover:text-gray-900 transition-colors">NEWS</a>
-                    <a href="#contact" class="hover:text-gray-900 transition-colors">CONTACT</a>
-                </nav>
-                <details class="mobile-nav relative md:hidden">
-                    <summary class="p-2 cursor-pointer" aria-label="メニューを開く">
-                        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                        </svg>
-                    </summary>
-                    <nav class="absolute right-0 mt-3 w-48 bg-white border border-gray-200 shadow-lg py-2 font-medium" aria-label="モバイルメニュー">
-                        <a href="#yoko-elevator" class="block px-5 py-3 hover:bg-gray-50">横のエレベーター</a>
-                        <a href="#vision" class="block px-5 py-3 hover:bg-gray-50">VISION</a>
-                        <a href="#services" class="block px-5 py-3 hover:bg-gray-50">SERVICES</a>
-                        <a href="#projects" class="block px-5 py-3 hover:bg-gray-50">PROJECTS</a>
-                        <a href="#news" class="block px-5 py-3 hover:bg-gray-50">NEWS</a>
-                        <a href="#contact" class="block px-5 py-3 hover:bg-gray-50">CONTACT</a>
-                    </nav>
-                </details>
-            </div>
+<a class="skip-link" href="#main">本文へスキップ</a>
+<header class="site-header">
+  <div class="shell header-inner">
+    <a class="brand" href="#top" aria-label="モビリティデザインラボ トップへ">MOBILITY<br>DESIGN LAB<span class="brand-dot">.</span></a>
+    <nav class="desktop-nav" aria-label="メインメニュー">
+      <a href="#services">事業紹介</a><a href="#projects">実績・取組み</a><a href="#tools">アプリ・資料</a><a href="#vision">私たちについて</a><a class="nav-contact" href="#contact">相談する <span aria-hidden="true">↗</span></a>
+    </nav>
+    <details class="mobile-menu">
+      <summary aria-label="メニュー">MENU</summary>
+      <nav aria-label="モバイルメニュー"><a href="#services">事業紹介 <span aria-hidden="true">↓</span></a><a href="#projects">実績・取組み <span aria-hidden="true">↓</span></a><a href="#tools">アプリ・資料 <span aria-hidden="true">↓</span></a><a href="#yoko-elevator">横のエレベーター <span aria-hidden="true">↓</span></a><a href="#news">お知らせ <span aria-hidden="true">↓</span></a><a href="#vision">私たちについて <span aria-hidden="true">↓</span></a><a href="#contact">相談する <span aria-hidden="true">↓</span></a></nav>
+    </details>
+  </div>
+</header>
+<main id="main">
+  <section class="hero" id="top" aria-labelledby="hero-heading">
+    <div class="shell">
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">MOBILITY × COMMUNITY × DIGITAL</p>
+          <h1 id="hero-heading"><span>つながりをつくる。</span><span class="accent">まちを動かす。</span></h1>
+          <p class="hero-description">移動の仕組みづくりから、人材育成・共創の場、<br>アプリ開発、現場実証まで。<br>地元の課題をともに考え、実装まで伴走します。</p>
+          <div class="actions"><a class="button" href="#services">MDLにできること <span class="arrow" aria-hidden="true">↓</span></a><a class="text-link" href="#contact">まずは相談する <span class="arrow" aria-hidden="true">↗</span></a></div>
         </div>
-    </header>
+        <figure class="hero-visual"><img class="hero-photo" src="assets/images/produce-co-creation.webp" alt="多世代のメンバーがテーブルを囲み、まちの課題を話し合う共創のイメージ" width="1600" height="844" fetchpriority="high"><figcaption class="hero-image-note">共創のイメージ</figcaption><div class="hero-stamp en" aria-label="MORE MOBILITY, MORE SMILES."><span>MORE MOBILITY,</span><span>MORE SMILES.</span></div></figure>
+      </div>
+      <div class="hero-footer"><p>株式会社モビリティデザインラボ</p><a href="#tools">アプリ・カタログをお探しの方 <span class="arrow" aria-hidden="true">↓</span></a></div>
+    </div>
+  </section>
 
-    <!-- Hero Section -->
-    <section class="section pt-16 md:pt-24">
-        <div class="container-custom">
-            <h1 class="tagline max-w-5xl mb-8">
-                <span class="block mb-3">MORE</span>
-                <span class="block mb-3 more-mobility">MOBILITY,</span>
-                <span class="block">MORE SMILES.</span>
-            </h1>
-            <p class="text-lg md:text-xl max-w-3xl text-gray-700 font-light">
-                モビリティを活用し、人と人のつながりをデザインすることで、<br class="hidden md:block">
-                地方活性化に貢献する。
-            </p>
-            <div class="yoko-announcement" aria-label="横のエレベーターのご紹介">
-                <div class="yoko-announcement-copy"><p>ライドシェア・送迎アプリ</p><strong>横のエレベーター</strong><span>乗りたい人と、運転する人をつなぐ。</span></div>
-                <div class="yoko-announcement-price"><span>標準アプリ利用料</span><strong>0<small>円</small></strong><span>維持・運用費等は別途</span></div>
-                <div class="yoko-announcement-actions"><a class="yoko-button" href="#yoko-elevator">仕組み・料金を見る <span aria-hidden="true">↓</span></a><a class="yoko-text-link" href="#elevator-catalogs">カタログを見る <span aria-hidden="true">↓</span></a></div>
+  <section id="services" class="section" aria-labelledby="services-heading">
+    <div class="shell">
+      <p class="section-label"><span class="en">OUR BUSINESS</span><span class="section-number en">01</span></p>
+      <div class="section-head"><h2 id="services-heading">課題を見つける。<br>仲間とつくる。現場で動かす。</h2><p>モビリティを軸に、人と人のつながりをデザインする。<br>３つの事業を組み合わせ、構想から実装まで支えます。</p></div>
+      <div class="service-grid">
+        <article class="service"><div class="service-index"><span>01</span><span class="eyebrow">CREATIVE</span></div><h3>移動の仕組みを<br>設計する</h3><p>地元の困りごとと、人口・施設・交通のデータから、必要なサービスを具体化します。使う人に合わせた体験や仕組みを設計します。</p><a class="text-link" href="#creative-case">データ活用の事例を見る <span class="arrow" aria-hidden="true">↓</span></a></article>
+        <article class="service"><div class="service-index"><span>02</span><span class="eyebrow">PRODUCE</span></div><h3>仲間と実装の場を<br>つくる</h3><p>行政・企業・大学・住民をつなぎ、人材育成や共創拠点を企画・運営。関係者とともに学び、実証を進めるチームを育てます。</p><a class="text-link" href="#produce-case">人材育成・共創の事例を見る <span class="arrow" aria-hidden="true">↓</span></a></article>
+        <article class="service"><div class="service-index"><span>03</span><span class="eyebrow">MOBILITY</span></div><h3>使いやすいアプリを<br>届ける</h3><p>「乗りたい人」と「運転する人」をつなぐ、横のエレベーター。地元にある車両や人を活かし、使い方に合わせてカスタマイズします。</p><a class="text-link" href="#yoko-elevator">アプリ・料金を見る <span class="arrow" aria-hidden="true">↓</span></a></article>
+      </div>
+      <div class="support-line"><p>企画・設計から、開発・運営、実証後の改善まで。</p><p>自治体・企業・交通事業者・共創に取り組む皆さまへ</p></div>
+    </div>
+  </section>
+
+  <section id="projects" class="section works" aria-labelledby="projects-heading">
+    <div class="shell">
+      <p class="section-label"><span class="en">SELECTED WORKS</span><span class="section-number en">02</span></p>
+      <div class="section-head"><h2 id="projects-heading">現場で、ともにつくる。</h2><p>実際に取り組んだことと、次に進めていること。<br>MDLの仕事を、具体的な事例でご紹介します。</p></div>
+      <article class="work-feature" id="produce-case" aria-labelledby="produce-heading">
+        <figure class="work-visual"><a href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer"><img src="assets/cases/training-note.webp" alt="活動報告のnote見出し画像。交通空白の解消は、コストではない。地元の成長投資である。" width="1280" height="670" loading="lazy" decoding="async"></a><figcaption>活動報告 / MDL 最高挑戦責任者 植野直亮のnote</figcaption></figure>
+        <div class="work-copy"><p class="eyebrow">PRODUCE / 2025年度・大分</p><h3 id="produce-heading">まちを教室に。<br>実装する過程で、人を育てる。</h3><p>国土交通省のモビリティ人材育成事業。トヨタカローラ大分を実施主体に、MDLが企画・伴走しました。</p><div class="training-count"><strong>35<span>回</span></strong><p>講演・対話から、住民説明、<br>運行準備、OJT実証、結果報告まで。</p></div><a class="text-link" href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer">取組みをnoteで読む <span class="arrow" aria-hidden="true">↗</span></a></div>
+      </article>
+      <div class="work-grid">
+        <article class="work-small" id="mobility-case" aria-labelledby="pilot-heading"><p class="eyebrow">MOBILITY / 2025年度・富士見ヶ丘団地</p><h3 id="pilot-heading">試乗車が、地元の足になる。</h3><p>トヨタカローラ大分の試乗車〈アルファード〉を活用し、「横のエレベーター」で地元住民を送迎しました。</p><dl class="results"><div><dt>運行日数</dt><dd>10<span>日</span></dd></div><div><dt>実利用人数</dt><dd>72<span>人</span></dd></div><div><dt>延べ乗車回数</dt><dd>342<span>回</span></dd></div></dl><p class="note">当該実証の記録です。現在の運行状況を示すものではありません。</p><a class="text-link" href="danchi-elevator/">仕組み・導入事例を見る <span class="arrow" aria-hidden="true">↗</span></a></article>
+        <article class="work-small" aria-labelledby="consortium-heading"><p class="eyebrow">PRODUCE / 2026年度・取組みの構想</p><h3 id="consortium-heading">人 × モノ × 場をつなぐ。</h3><p>大分未来モビリティ・コンソーシアム。トヨタカローラ大分を地元のハブに、行政・企業・大学・学生・住民をつなぐ取組みを企画・伴走。Garraway 0とGarraway Fの場を活かし、共創と実証を広げます。</p><details class="disclosure consortium-details"><summary>コンソーシアムの構想資料を見る（３点）</summary><div class="disclosure-content"><div class="consortium-gallery">
+              <figure><a class="zoom-image" href="assets/cases/consortium-people.webp?v=20260914-park" data-caption="人 × モノ × 場で、コンソーシアムを動かす"><img src="assets/cases/consortium-people.webp?v=20260914-park" width="1672" height="941" loading="lazy" decoding="async" alt="コンソーシアムの構想図。トヨタカローラ大分を中心に、行政、住民、大学、企業、遊園地などの人と、モビリティ、共創の場を接続"></a><figcaption>人 × モノ × 場で、コンソーシアムを動かす <span>タップして拡大 ↗</span></figcaption></figure>
+              <figure><a class="zoom-image" href="assets/cases/consortium-hubs.webp?v=20260914-park" data-caption="Garraway 0とGarraway Fが、出会いを実装につなぐ"><img src="assets/cases/consortium-hubs.webp?v=20260914-park" width="1672" height="941" loading="lazy" decoding="async" alt="大分のGarraway 0と福岡のGarraway Fを双方向につなぎ、出会い、学び、実証、展開へ進める構想"></a><figcaption>福岡と大分を、双方向につなぐ <span>タップして拡大 ↗</span></figcaption></figure>
+              <figure><a class="zoom-image" href="assets/cases/consortium-dealer.webp" data-caption="販売店だからこそ、地域のハブになれる"><img src="assets/cases/consortium-dealer.webp" width="1536" height="864" loading="lazy" decoding="async" alt="自動車販売店が地域のハブとなり、人、モノ、場をつなぐ事業構想の紹介図"></a><figcaption>販売店の未来を、地域の未来とともにつくる <span>タップして拡大 ↗</span></figcaption></figure>
             </div>
-            <a class="tourism-announcement" href="oita-tourism/">
-                <span class="tourism-announcement-label">NEW APP</span>
-                <span><strong>大分観光・周遊データマップ</strong><small>観光地へのアクセス・現地の移動・観光統計を調べる</small></span>
-                <span class="tourism-announcement-arrow" aria-hidden="true">↗</span>
-            </a>
-        </div>
-    </section>
+            <p class="note">2026年度の取組みを紹介する構想資料です。写真・図版にはイメージを含み、個別の連携・実施内容には検討中のものがあります。</p></div></details></article>
+      </div>
+    </div>
+  </section>
 
-    <!-- News Section -->
-    <section id="news" class="news-section section-border" aria-labelledby="news-heading">
-        <div class="container-custom">
-            <div class="news-layout">
-                <h2 id="news-heading" class="en news-heading">NEWS</h2>
-                <ul class="news-list" role="list">
-<li class="news-item">
+  <section id="tools" class="section" aria-labelledby="tools-heading">
+    <div class="shell">
+      <p class="section-label"><span class="en">APPS &amp; RESOURCES</span><span class="section-number en">03</span></p>
+      <div class="section-head"><h2 id="tools-heading">使ってみる。詳しく知る。</h2><p>移動を支えるアプリ、交通・観光を考えるデータ、<br>使い方がわかるカタログ。目的からお選びください。</p></div>
+      <article class="product" id="yoko-elevator" aria-labelledby="mobility-heading">
+        <div class="product-main">
+          <div class="product-copy"><p class="eyebrow">ライドシェア・送迎アプリ</p><h3 id="mobility-heading">横のエレベーター</h3><p>乗りたい人と、運転する人をつなぐ。<br>地元にある車両や人で始める移動の仕組み。</p><div class="product-price"><p><em>標準アプリ利用料</em></p><strong>0<small>円</small></strong><p>維持・運用費は分担。<br>カスタマイズ・個別支援は別途。</p></div><div class="actions"><a class="button" href="danchi-elevator/">仕組み・使い方を見る <span class="arrow" aria-hidden="true">↗</span></a><a class="text-link" href="#elevator-catalogs">カタログを選ぶ <span class="arrow" aria-hidden="true">↓</span></a></div></div>
+          <figure class="product-visual"><a href="danchi-elevator/" aria-label="横のエレベーターの使い方を読む"><img src="assets/cases/yoko-elevator/user-flow.jpg" width="1536" height="874" alt="実際のアプリ画面。乗降場所と人数の入力、依頼、アルファードの確定通知、乗降場所の写真確認" loading="lazy" decoding="async"></a><figcaption>実際のアプリ画面 / 詳しい操作はWebカタログへ</figcaption></figure>
+        </div>
+        <div class="product-links">
+          <details class="disclosure" id="elevator-pricing"><summary id="elevator-pricing-heading">無料の範囲・費用・カスタマイズについて</summary><div class="disclosure-content"><dl class="pricing-grid"><div><dt>標準アプリを使う</dt><dd>利用料 0円</dd><p>対象の標準機能を無料で利用できます。</p></div><div><dt>使い続ける</dt><dd>維持・運用費を分担</dd><p>データの保存・通信、システムの保守など、必要な費用を分け合います。</p></div><div><dt>変える・支援を受ける</dt><dd>必要な分だけお見積もり</dd><p>カスタマイズ、導入説明、運行設計、データ分析などを個別にご相談いただけます。</p></div></dl><p class="custom-copy"><strong>使い方に合わせてカスタマイズ。</strong>利用者の限定、運行する範囲や時間帯、予約の受け付け方、管理画面や集計項目など。まずは標準機能を活かし、必要な設定の調整や機能の追加・変更をご相談いただけます。対応可否・内容・費用は事前に確認します。</p><p class="note">無料の対象は、所定の標準アプリの利用料です。維持・運用費、カスタマイズ費、個別支援費は別途必要です。カスタマイズや個別支援の購入は、標準アプリ利用の必須条件ではありません。車両・ドライバーの確保、保険、運行に必要な手続き・安全管理などは別途必要です。アプリ利用料無料は、運賃無料を意味しません。</p><p class="custom-copy" style="margin-top:14px">デジタル技術とAIを活用し、開発・運用のコストを削減する。必要なまちが移動の仕組みを導入できるように、標準アプリの利用料を0円にしました。</p><a class="text-link" href="#elevator-consult">導入・カスタマイズを相談する <span aria-hidden="true">↓</span></a></div></details>
+          <div class="catalogs" id="elevator-catalogs"><div><h4 id="elevator-catalog-heading">横のエレベーターのカタログ</h4><p>Webで読む。PDFで保存・共有する。</p></div><div><div class="catalog-row"><span>要約版<small>４ページ</small></span><a href="danchi-elevator/" aria-label="横のエレベーター 要約版をWebで読む">Web <span aria-hidden="true">↗</span></a><a href="assets/catalogs/danchi-elevator-catalog.pdf" target="_blank" rel="noopener" aria-label="横のエレベーター 要約版PDF（4ページ）">PDF <span aria-hidden="true">↗</span></a></div><div class="catalog-row"><span>詳細版<small>12ページ</small></span><a href="danchi-elevator/detail/" aria-label="横のエレベーター 詳細版をWebで読む">Web <span aria-hidden="true">↗</span></a><a href="assets/catalogs/yoko-elevator-detail.pdf" target="_blank" rel="noopener" aria-label="横のエレベーター 詳細版PDF（12ページ）">PDF <span aria-hidden="true">↗</span></a></div><details class="role-catalogs"><summary>ユーザー・ドライバー・管理者用</summary><div class="catalog-row"><span>ユーザー用</span><a href="danchi-elevator/detail/#user" aria-label="ユーザー用カタログ Web">Web ↗</a><a href="assets/catalogs/yoko-elevator-user.pdf" target="_blank" rel="noopener" aria-label="ユーザー用カタログ PDF・4ページ">PDF ↗</a></div><div class="catalog-row"><span>ドライバー用</span><a href="danchi-elevator/detail/#driver" aria-label="ドライバー用カタログ Web">Web ↗</a><a href="assets/catalogs/yoko-elevator-driver.pdf" target="_blank" rel="noopener" aria-label="ドライバー用カタログ PDF・4ページ">PDF ↗</a></div><div class="catalog-row"><span>管理者用</span><a href="danchi-elevator/detail/#admin" aria-label="管理者用カタログ Web">Web ↗</a><a href="assets/catalogs/yoko-elevator-admin.pdf" target="_blank" rel="noopener" aria-label="管理者用カタログ PDF・4ページ">PDF ↗</a></div></details></div></div>
+        </div>
+      </article>
+      <div class="tool-grid">
+        <article class="tool-card" id="creative-case" aria-labelledby="creative-heading"><a class="tool-screen" href="oita-mobility/" aria-label="大分県交通データマップを開く"><img src="assets/cases/atlas-map.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分県交通データマップの実画面。病院や買い物先を地図で確認できます"></a><div class="tool-card-copy"><p class="eyebrow">交通・アクセシビリティ / 公開デモ</p><h3 id="creative-heading">その用事、行って帰れる？</h3><p>交通空白を見つけて解消を考えるアクセシビリティマップ。人口・施設・時刻表などの公開データから、アクセスや送迎資源、改善案を調べます。</p><div class="actions"><a class="button" href="fukuoka-mobility/">福岡県版 <span aria-hidden="true">↗</span></a><a class="button secondary" href="oita-mobility/">大分県版 <span aria-hidden="true">↗</span></a></div><div class="tool-resources"><a href="https://drive.google.com/file/d/1bTt_c9r_rdCrFj-znXEtuUIngGnVp8Ix/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">ビジュアルカタログ ↗</a><a href="oita-mobility/accessibility.html">大分の目的地マップ ↗</a></div><p class="note">分析は収録データと設定条件の範囲で行う公開デモです。</p></div></article>
+        <article class="tool-card" id="tourism-case" aria-labelledby="tourism-heading"><a class="tool-screen" href="oita-tourism/" aria-label="大分観光・周遊データマップを開く"><img src="assets/cases/oita-tourism-home.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分観光・周遊データマップの実画面。アクセス、現地の移動、観光・交通データを調べられます"></a><div class="tool-card-copy"><p class="eyebrow">観光 × 交通 / 公開データ</p><h3 id="tourism-heading">観光の数字を、次の移動へ。</h3><p>大分観光・周遊データマップ。大分県と重点６市町の観光統計を交通データと組み合わせ、行き方・現地の移動・周遊の条件を調べます。</p><div class="actions"><a class="button" href="oita-tourism/">観光アプリを開く <span aria-hidden="true">↗</span></a></div><div class="tool-resources"><a href="oita-tourism/catalog/">使い方 Web ↗</a><a href="oita-tourism/catalog/oita-tourism-catalog.pdf">PDF・18ページ ↗</a></div><details class="disclosure"><summary>調べたいことから選ぶ</summary><div class="tool-resources"><a href="oita-tourism/#access">観光地へのアクセス ↗</a><a href="oita-tourism/#mobility">現地での移動 ↗</a><a href="oita-tourism/?compare=modes#compare">交通利用割合の比較 ↗</a><a href="oita-tourism/#data">出典付きデータ検索・CSV ↗</a></div></details><p class="note">交通は収録時刻表に基づく表示です。統計の対象年・調査方法・未取得項目はアプリ内で確認できます。</p></div></article>
+      </div>
+      <div class="tool-shortcuts"><a href="oita-events/"><span><strong id="event-case-heading">大分県イベントカレンダー</strong><small>地元の催しと、モビリティ連携の接点を探す。</small></span><span class="arrow" aria-hidden="true">↗</span></a><a href="e-palette/"><span><strong>e-Palette 活用事例</strong><small>進化の流れと、用途別の取組みを知る。</small></span><span class="arrow" aria-hidden="true">↗</span></a></div>
+      <aside class="concept" aria-labelledby="mdl-kanmon-heading"><figure class="concept-image"><img src="shimonoseki-destination/assets/night.webp" width="1800" height="1196" loading="lazy" alt="下関から望む関門海峡の夜景。2006年撮影"><figcaption>写真：Takasunrise0921 / CC BY 2.5・トリミング / <a href="shimonoseki-destination/#about">出典・利用条件</a></figcaption></figure><div><p class="eyebrow">研究・提案 / 下関 × 関門</p><h3 id="mdl-kanmon-heading">下関に、もう一泊。</h3><p>食・文化・周遊・宿泊をつなぐ滞在拠点の構想。</p><p class="note">大丸下関店の営業終了後を見据えたMDL独自の提案。公式計画ではなく、事業化・連携・出店等は未決定です。</p></div><a class="text-link" href="shimonoseki-destination/">特設サイトを見る <span class="arrow" aria-hidden="true">↗</span></a></aside>
+    </div>
+  </section>
+
+  <section id="news" class="section news-section" aria-labelledby="news-heading"><div class="shell news-layout"><div class="news-heading"><p class="section-label"><span class="en">NEWS</span></p><h2 id="news-heading">お知らせ</h2></div><div><ul class="news-list"><li class="news-item">
                         <time class="news-date" datetime="2026-09-14" aria-label="公開日 2026年9月14日">2026.09.14</time>
                         <span class="news-label">交通マップ</span>
                         <a class="news-title news-link" href="fukuoka-mobility/">福岡県版の交通データマップを公開しました。60市町村の人口・施設・公開時刻表をもとに、アクセスと改善案を調べられます<span class="news-arrow" aria-hidden="true">→</span></a>
                     </li>
-                    <li class="news-item"><time class="news-date" datetime="2026-09-13">2026.09.13</time><span class="news-label">カタログ更新</span><div class="news-title"><p>「横のエレベーター」のカタログを更新しました。実画面で使い方を紹介。ユーザー用・ドライバー用・管理者用と、要約版／詳細版のWeb・PDFを掲載しています。</p><div class="news-actions"><a class="news-link" href="danchi-elevator/#catalogs">カタログを選ぶ<span class="news-arrow" aria-hidden="true">→</span></a><a class="news-link" href="danchi-elevator/detail/">3者向けの使い方を読む<span class="news-arrow" aria-hidden="true">→</span></a></div></div></li>
-                    <li class="news-item">
+
+<li class="news-item"><time class="news-date" datetime="2026-09-13">2026.09.13</time><span class="news-label">カタログ更新</span><div class="news-title"><p>「横のエレベーター」のカタログを更新しました。実画面で使い方を紹介。ユーザー用・ドライバー用・管理者用と、要約版／詳細版のWeb・PDFを掲載しています。</p><div class="news-actions"><a class="news-link" href="danchi-elevator/#catalogs">カタログを選ぶ<span class="news-arrow" aria-hidden="true">→</span></a><a class="news-link" href="danchi-elevator/detail/">3者向けの使い方を読む<span class="news-arrow" aria-hidden="true">→</span></a></div></div></li>
+
+<li class="news-item">
                         <time class="news-date" datetime="2026-09-13" aria-label="公開日 2026年9月13日">2026.09.13</time>
                         <span class="news-label">使い方ガイド</span>
                         <div class="news-title">
@@ -389,28 +119,31 @@
                             </div>
                         </div>
                     </li>
-                    <li class="news-item">
+                    </ul><details class="news-archive"><summary>これまでのお知らせを読む</summary><ul class="news-list"><li class="news-item">
                         <time class="news-date" datetime="2026-09-13" aria-label="公開日 2026年9月13日">2026.09.13</time>
                         <span class="news-label">観光 × 交通</span>
                         <a class="news-title news-link" href="oita-tourism/">
                             「大分観光・周遊データマップ」を公開しました。観光地への行き方、現地の移動、地域の統計を一つのアプリで確認できます<span class="news-arrow" aria-hidden="true">→</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2026-09-11" aria-label="公開日 2026年9月11日">2026.09.11</time>
                         <span class="news-label">特設サイト</span>
                         <a class="news-title news-link" href="oita-events/">
                             大分県イベントカレンダーを公開しました。県の主催・委託・後援などの関わりと、モビリティ連携候補を確認できます<span class="news-arrow" aria-hidden="true">→</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2026-09-09" aria-label="公開日 2026年9月9日">2026.09.09</time>
                         <span class="news-label">交通マップ</span>
                         <a class="news-title news-link" href="oita-mobility/">
                             大分 交通データマップの公開デモを掲載しました。買物・病院、交通空白、地域の送迎を地図で体験できます<span class="news-arrow" aria-hidden="true">→</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2026-09-08" aria-label="公開日 2026年9月8日">2026.09.08</time>
                         <span class="news-label">国土交通省</span>
                         <div class="news-title">
@@ -419,360 +152,65 @@
                             </a>
                         </div>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2026-08-23" aria-label="公開日 2026年8月23日">2026.08.23</time>
                         <span class="news-label">note</span>
                         <a class="news-title news-link" href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer" aria-label="2025年度国土交通省令和7年度「交通空白」解消等リ・デザイン全面展開プロジェクト　モビリティ人材育成事業の内容をnoteで公開しました（外部サイトを新しいタブで開きます）">
                             2025年度国土交通省令和7年度「交通空白」解消等リ・デザイン全面展開プロジェクト　モビリティ人材育成事業の内容をnoteで公開しました<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2025-07-29" aria-label="イベント開催日 2025年7月29日">2025.07.29</time>
                         <span class="news-label">国土交通省</span>
                         <a class="news-title news-link" href="https://www.mlit.go.jp/commmmons/event/02/" target="_blank" rel="noopener noreferrer" aria-label="2025年7月国土交通省COMmmmONS（コモンズ）kickoffイベントにCEO兼女将の佐藤と最高挑戦責任者の植野が登壇しました（外部サイトを新しいタブで開きます）">
                             2025年7月国土交通省COMmmmONS（コモンズ）kickoffイベントにCEO兼女将の佐藤と最高挑戦責任者の植野が登壇しました<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2025-05-15" aria-label="採択発表日 2025年5月15日">2025.05.15</time>
                         <span class="news-label">国土交通省</span>
                         <a class="news-title news-link" href="https://kotsu-kuhaku.jp/adopter_7/" target="_blank" rel="noopener noreferrer" aria-label="2025年度国土交通省令和7年度「交通空白」解消等リ・デザイン全面展開プロジェクト　モビリティ人材育成事業に採択（外部サイトを新しいタブで開きます）">
                             2025年度国土交通省令和7年度「交通空白」解消等リ・デザイン全面展開プロジェクト　モビリティ人材育成事業に採択<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2025-04-03" aria-label="イベント開催日 2025年4月3日">2025.04.03</time>
                         <span class="news-label">Venture Café</span>
                         <a class="news-title news-link" href="https://venturecafefukuoka.org/sessions/innovators-community-builder-talk/" target="_blank" rel="noopener noreferrer" aria-label="2025年4月Venture Café FukuokaのInnovator's Community Builder Talkに女将が登壇しました（外部サイトを新しいタブで開きます）">
                             2025年4月Venture Café FukuokaのInnovator's Community Builder Talkに女将が登壇しました<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2025-03-28" aria-label="研究会開催日 2025年3月28日">2025.03.28</time>
                         <span class="news-label">JCoMaaS</span>
                         <a class="news-title news-link" href="https://www.jcomaas.org/posts/56600898/" target="_blank" rel="noopener noreferrer" aria-label="2025年3月JCoMaaS研究会に最高挑戦責任者の植野が登壇しました（外部サイトを新しいタブで開きます）">
                             2025年3月JCoMaaS研究会に最高挑戦責任者の植野が登壇しました<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                    <li class="news-item">
+
+<li class="news-item">
                         <time class="news-date" datetime="2025-03-05" aria-label="イベント開催日 2025年3月5日">2025.03.05</time>
                         <span class="news-label">ReVision</span>
                         <a class="news-title news-link" href="https://rev-m.com/event_schedule/mo2025/speakers/" target="_blank" rel="noopener noreferrer" aria-label="2025年3月ReVisionモビリティサミット 2025に最高挑戦責任者の植野が登壇しました（外部サイトを新しいタブで開きます）">
                             2025年3月ReVisionモビリティサミット 2025に最高挑戦責任者の植野が登壇しました<span class="news-arrow" aria-hidden="true">↗</span>
                         </a>
                     </li>
-                </ul>
-            </div>
-        </div>
-    </section>
+                </ul></details></div></div></section>
 
-    <section class="mdl-kanmon" aria-labelledby="mdl-kanmon-heading"><div class="mdl-kanmon-inner"><div><span class="mdl-kanmon-label">MDL SPECIAL CONCEPT / SHIMONOSEKI × KANMON</span><h2 id="mdl-kanmon-heading">下関に、もう一泊。</h2><p>関門の夜を楽しみ、地元に仕事が残る。<br>食・文化・周遊・宿泊をつなぐ、滞在拠点の構想。</p><a class="mdl-kanmon-link" href="shimonoseki-destination/">特設サイトを見る ↗</a><small>大丸下関店の営業終了後を見据えたMDL独自の提案。<br>公式計画ではなく、事業化・連携・出店等は未決定です。</small></div><figure><img src="shimonoseki-destination/assets/night.webp" width="1800" height="1196" loading="lazy" alt="下関から望む関門海峡の夜景。2006年撮影"><figcaption>写真：Takasunrise0921 / CC BY 2.5・トリミング / <a href="shimonoseki-destination/#about">出典・利用条件</a></figcaption></figure></div></section>
+  <section id="vision" class="section" aria-labelledby="about-heading"><div class="shell"><p class="section-label"><span class="en">ABOUT US</span><span class="section-number en">04</span></p><div class="about-grid"><div><h2 id="about-heading">移動を通じて、<br>人と人をつなぐ会社。</h2><p class="company-name">株式会社モビリティデザインラボ</p><p class="company-en">Mobility Design Lab Inc.</p></div><dl class="philosophy"><div><dt>VISION</dt><dd>「つながり」を社会の可能性に変え、<br>地域がもっと笑顔で溢れる社会を目指す。</dd></div><div><dt>MISSION</dt><dd>モビリティを活用し、人と人のつながりをデザインすることで、地方活性化に貢献する。</dd></div></dl></div></div></section>
 
-    <!-- Vision & Mission Section -->
-    <section id="vision" class="section section-border bg-gray-50">
-        <div class="container-custom">
-            <div class="grid md:grid-cols-2 gap-12 md:gap-24">
-                <div>
-                    <h2 class="en text-2xl md:text-4xl font-bold mb-8">VISION</h2>
-                    <p class="mission-vision">
-                        「つながり」を社会の可能性に変え、<br>
-                        地域がもっと笑顔で溢れる社会を目指す。
-                    </p>
-                </div>
-                <div>
-                    <h2 class="en text-2xl md:text-4xl font-bold mb-8">MISSION</h2>
-                    <p class="mission-vision">
-                        モビリティを活用し、<br>
-                        人と人のつながりをデザインすることで、<br>
-                        地方活性化に貢献する。
-                    </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="section section-border">
-        <div class="container-custom">
-            <h2 class="en text-2xl md:text-4xl font-bold mb-16">OUR BUSINESS</h2>
-            
-            <div class="grid md:grid-cols-3 gap-12 md:gap-8">
-                <!-- Service 1 -->
-                <div class="service-block pb-8">
-                    <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="assets/images/creative-co-design.webp" alt="地域住民とモビリティアプリを共創する様子" class="service-image" width="1600" height="844" loading="lazy" decoding="async">
-                    </div>
-                    <h3 class="service-title en mb-6">CREATIVE</h3>
-                    <p class="service-desc">
-                        地域課題に応じたモビリティ設計。<br>
-                        高齢者でも使いやすい簡単UIUXの<br>
-                        オンデマンド定路線型モビリティサービス<br>
-                        「住宅団地のエレベーター」の導入支援。
-                    </p>
-                    <a class="service-case-link" href="#creative-case"><span>観光・交通データアプリの事例を見る</span><span aria-hidden="true">↓</span></a>
-                </div>
-                
-                <!-- Service 2 -->
-                <div class="service-block pb-8">
-                    <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="assets/images/produce-co-creation.webp" alt="多世代・多職種が地域プロジェクトを検討する共創風景" class="service-image" width="1600" height="844" loading="lazy" decoding="async">
-                    </div>
-                    <h3 class="service-title en mb-6">PRODUCE</h3>
-                    <p class="service-desc">
-                        地元住民や企業、行政との協働による<br>
-                        コミュニティハブ構築。<br>
-                        地域活性化イベントの企画・運営支援、<br>
-                        地域資産活用のコンサルティング。
-                    </p>
-                    <a class="service-case-link" href="#produce-case"><span>人材育成・コンソーシアムの事例を見る</span><span aria-hidden="true">↓</span></a>
-                </div>
-                
-                <!-- Service 3 -->
-                <div class="service-block pb-8">
-                    <div class="overflow-hidden rounded-lg shadow-md">
-                        <img src="assets/images/mobility-horizontal-elevator.webp" alt="団地内の小型モビリティを利用する高齢者" class="service-image" width="1600" height="844" loading="lazy" decoding="async">
-                    </div>
-                    <h3 class="service-title en mb-6">MOBILITY</h3>
-                    <p class="service-desc">
-                        乗りたい人と、運転する人をつなぐ<br>
-                        ライドシェア・送迎アプリ<br>
-                        「横のエレベーター」。<br>
-                        使い方に合わせてカスタマイズ。
-                    </p>
-                    <p class="yoko-service-price"><strong>標準アプリ利用料 0円</strong><small>維持・運用費、個別支援等は別途</small></p>
-                    <a class="service-case-link" href="#yoko-elevator"><span>仕組み・料金・カタログを見る</span><span aria-hidden="true">↓</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="section section-border bg-gray-50" aria-labelledby="projects-heading">
-      <div class="container-custom">
-        <div class="works-intro"><h2 id="projects-heading" class="en text-2xl md:text-4xl font-bold">SELECTED WORKS</h2><p>構想を、地域で動く仕組みへ。MDLの紹介事例。</p></div>
-        <nav class="case-index" aria-label="事例のカテゴリ"><a href="#creative-case">01 CREATIVE</a><a href="#produce-case">02 PRODUCE</a><a href="#mobility-case">03 MOBILITY</a></nav>
-
-        <article id="creative-case" class="work-case" aria-labelledby="creative-heading">
-          <div class="case-header"><p class="case-category"><span class="case-number">01</span>CREATIVE</p><p class="case-type">データ可視化・サービスデザイン<br>大分県 / 公開デモ</p></div>
-          <div class="case-feature">
-            <div class="case-copy">
-              <p class="case-kicker">OITA MOBILITY ATLAS</p>
-              <h3 id="creative-heading" class="case-title">その用事、<br>行って帰れる？</h3>
-              <p><strong>大分県交通空白を見つけて解消を考えるアクセシビリティマップ。</strong>病院や買い物先へのアクセス、地域にある送迎、交通空白の候補を地図で確認し、改善案を考えるためのアプリです。</p>
-              <p>人口・施設・時刻表などの公開データをつなぎ、地域の困りごとを、関係者と具体的に話せる形にしました。</p>
-              <div class="case-actions"><a href="fukuoka-mobility/" class="case-button">福岡県版を使う <span aria-hidden="true">↗</span></a><a href="oita-mobility/" class="case-button secondary">大分県版を使う <span aria-hidden="true">↗</span></a><a href="#tourism-case" class="case-button secondary">観光アプリの紹介を見る <span aria-hidden="true">↓</span></a><a href="https://drive.google.com/file/d/1bTt_c9r_rdCrFj-znXEtuUIngGnVp8Ix/view?usp=drivesdk" target="_blank" rel="noopener noreferrer" class="case-button secondary">ビジュアルカタログを見る <span aria-hidden="true">↗</span></a></div>
-              <p class="case-note">カタログは16の実画面で機能と使い方を紹介。分析は収録データと設定条件の範囲で行う公開デモです。</p>
-            </div>
-            <figure class="case-visual">
-              <a class="case-screen" href="oita-mobility/" aria-label="アクセシビリティマップを開く"><img src="assets/cases/atlas-home.webp" width="1348" height="926" loading="lazy" decoding="async" alt="アクセシビリティマップの実画面。目的地、交通空白、地域の送迎、改善案の4つの入口"></a>
-              <a class="case-screen secondary-screen" href="oita-mobility/accessibility.html" aria-label="目的地の地図を開く"><img src="assets/cases/atlas-map.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分県内の病院や買い物先を地図と一覧で確認できる実画面"></a>
-              <figcaption class="case-screen-caption">アプリの実画面 / 2026.09</figcaption>
-            </figure>
-          </div>
-        </article>
-
-        <section id="tourism-case" class="tourism-case" aria-labelledby="tourism-heading">
-          <div class="tourism-case-header"><p>CREATIVE / OITA TOURISM × MOBILITY</p><span>2026.09.13 RELEASE</span></div>
-          <div class="case-feature">
-            <div class="case-copy">
-              <p class="case-kicker">観光と交通を、一緒に考える。</p>
-              <h3 id="tourism-heading" class="case-title">観光の数字を、<br>次の移動につなぐ。</h3>
-              <p><strong>大分観光・周遊データマップ。</strong><br>大分県と重点6市町の観光統計を、交通データと組み合わせて表示。地域の特徴を知り、行き方・現地の移動・周遊の条件を調べられます。</p>
-              <p class="tourism-audience">自治体・観光協会／宿泊・観光施設／交通事業者の方へ</p>
-              <div class="case-actions"><a class="case-button tourism-primary" href="oita-tourism/">観光アプリを開く <span aria-hidden="true">↗</span></a><a class="case-button secondary" href="oita-tourism/catalog/">実画面で見る使い方カタログ <span aria-hidden="true">↗</span></a><a class="case-button secondary" href="oita-tourism/catalog/oita-tourism-catalog.pdf">カタログPDF・18ページ <span aria-hidden="true">↗</span></a></div>
-            </div>
-            <figure class="case-visual">
-              <a class="case-screen" href="oita-tourism/" aria-label="実画面から大分観光・周遊データマップを開く"><img src="assets/cases/oita-tourism-home.webp" width="1348" height="926" loading="lazy" decoding="async" alt="観光・周遊データマップの実画面。調べる地域と使う方を選び、観光地へのアクセス、現地の移動、交通利用割合へ進める"></a>
-              <figcaption class="case-screen-caption">公開アプリの実画面 / 2026.09.13</figcaption>
-            </figure>
-          </div>
-          <nav class="tourism-entries" aria-label="観光アプリで調べること">
-            <a href="oita-tourism/#access"><span class="tourism-entry-number" aria-hidden="true">01</span><span><strong>観光地へのアクセス</strong><small>駅・空港からの行き方と、滞在時間・帰着時刻に合う直通バスの往復候補。</small></span><span aria-hidden="true">↗</span></a>
-            <a href="oita-tourism/#mobility"><span class="tourism-entry-number" aria-hidden="true">02</span><span><strong>観光地での移動</strong><small>近くの乗り場と運行予定を地図で確認。現地をどう回るか考えられます。</small></span><span aria-hidden="true">↗</span></a>
-            <a href="oita-tourism/?compare=modes#compare"><span class="tourism-entry-number" aria-hidden="true">03</span><span><strong>観光・交通データを比較</strong><small>国内客・海外客の交通利用割合や、宿泊・観光施設のデータを比較。</small></span><span aria-hidden="true">↗</span></a>
-          </nav>
-          <div class="tourism-case-footer"><p><strong>177</strong>件の観光データ <span>出典・対象年付き／CSV保存</span></p><a href="oita-tourism/#data">データを探す <span aria-hidden="true">→</span></a></div>
-          <p class="case-note">交通は収録時刻表に基づく表示です。統計の対象年・調査方法・未取得項目は、アプリ内で確認できます。</p>
-        </section>
-
-        <article id="produce-case" class="work-case" aria-labelledby="produce-heading">
-          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-pink)">02</span>PRODUCE</p><p class="case-type">人材育成・地域共創<br>大分から、福岡へ、次の実装へ</p></div>
-          <div class="case-feature">
-            <div class="case-copy">
-              <p class="case-kicker">2025年度 / 国土交通省 モビリティ人材育成事業</p>
-              <h3 id="produce-heading" class="case-title">まちを教室に。<br>実装する過程で、人を育てる。</h3>
-              <p>国土交通省の令和7年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」モビリティ人材育成事業。トヨタカローラ大分を実施主体に、MDLが企画・伴走しました。</p>
-              <div class="training-record"><div class="training-number">35<span>回の取組み</span></div><p>講演・対話から、住民説明、運行準備、OJT実証、結果報告まで。</p></div>
-              <p>行政・企業・大学・学生・住民が、現場で一緒に学び、つくり、動かす。そのプロセスをnoteで紹介しています。</p>
-              <div class="case-actions"><a class="case-button" href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer">人材育成事業のnoteを読む <span aria-hidden="true">↗</span></a></div>
-            </div>
-            <figure class="case-visual training-visual"><a href="https://note.com/mobilitydlab/n/n3378f94a6177?app_launch=false" target="_blank" rel="noopener noreferrer"><img src="assets/cases/training-note.webp" width="1280" height="670" loading="lazy" decoding="async" alt="大分モビリティ人材育成事業のnote見出し画像"></a><figcaption class="case-screen-caption">活動報告 / MDL 最高挑戦責任者 植野直亮のnote</figcaption></figure>
-          </div>
-          <section class="consortium" aria-labelledby="consortium-heading">
-            <p class="case-kicker">2026年度 / 大分未来モビリティ・コンソーシアム</p>
-            <h4 id="consortium-heading" class="case-title">人 × モノ × 場。<br>地域のハブから、次の挑戦を。</h4>
-            <p class="consortium-lead">トヨタカローラ大分を地域のハブに、行政・企業・大学・学生・住民をつなぐ取組み。モビリティや技術、Garraway 0（大分）とGarraway F（福岡）の場を組み合わせ、共創と実証を広げていく構想を、MDLが企画・伴走しています。</p>
-            <div class="consortium-gallery">
-              <figure><a class="zoom-image" href="assets/cases/consortium-people.webp?v=20260914-park" data-caption="人 × モノ × 場で、コンソーシアムを動かす"><img src="assets/cases/consortium-people.webp?v=20260914-park" width="1672" height="941" loading="lazy" decoding="async" alt="コンソーシアムの構想図。トヨタカローラ大分を中心に、行政、住民、大学、企業、遊園地などの人と、モビリティ、共創の場を接続"></a><figcaption>人 × モノ × 場で、コンソーシアムを動かす <span>タップして拡大 ↗</span></figcaption></figure>
-              <figure><a class="zoom-image" href="assets/cases/consortium-hubs.webp?v=20260914-park" data-caption="Garraway 0とGarraway Fが、出会いを実装につなぐ"><img src="assets/cases/consortium-hubs.webp?v=20260914-park" width="1672" height="941" loading="lazy" decoding="async" alt="大分のGarraway 0と福岡のGarraway Fを双方向につなぎ、出会い、学び、実証、展開へ進める構想"></a><figcaption>福岡と大分を、双方向につなぐ <span>タップして拡大 ↗</span></figcaption></figure>
-              <figure><a class="zoom-image" href="assets/cases/consortium-dealer.webp" data-caption="販売店だからこそ、地域のハブになれる"><img src="assets/cases/consortium-dealer.webp" width="1536" height="864" loading="lazy" decoding="async" alt="自動車販売店が地域のハブとなり、人、モノ、場をつなぐ事業構想の紹介図"></a><figcaption>販売店の未来を、地域の未来とともにつくる <span>タップして拡大 ↗</span></figcaption></figure>
-            </div>
-            <p class="case-note">2026年度の取組みを紹介する構想資料です。写真・図版にはイメージを含み、個別の連携・実施内容には検討中のものがあります。</p>
-          </section>
-          <section class="event-case" aria-labelledby="event-case-heading">
-            <a href="oita-events/" aria-label="大分県イベントカレンダーを開く"><img src="assets/cases/oita-events.webp" width="1348" height="926" loading="lazy" decoding="async" alt="大分県イベントカレンダーの実画面。2026年9月から2027年2月までのイベントを掲載"></a>
-            <div><p class="case-kicker">MDL SPECIAL SITE / 2026.09 - 2027.02</p><h4 id="event-case-heading" class="case-title">地域のイベントを、<br>モビリティ連携のきっかけに。</h4><p>開催日や会場に加え、大分県の主催・共催・後援などの関わりを見える化。地域の催しと新しい移動の接点を考えるための特設サイトです。</p><div class="case-actions"><a href="oita-events/" class="case-button light">大分県イベントカレンダーを見る <span aria-hidden="true">↗</span></a></div></div>
-          </section>
-        </article>
-
-        <article id="mobility-case" class="work-case yoko-product" aria-labelledby="mobility-heading">
-          <div class="case-header"><p class="case-category"><span class="case-number" style="background:var(--case-cyan)">03</span>MOBILITY</p><p class="case-type">ライドシェア・送迎アプリ<br>設定調整・カスタマイズ</p></div>
-          <div id="yoko-elevator" class="yoko-hero">
-            <div class="yoko-hero-copy">
-              <p class="yoko-eyebrow">横のエレベーター</p>
-              <h3 id="mobility-heading">乗りたい人と、<br>運転する人を、つなぐ。</h3>
-              <p class="yoko-lead">移動したい人〈ライダー〉と、送迎する人〈ドライバー〉をつなぐマッチングアプリです。地元にある車両や人を活かした移動サービスづくりを支えます。</p>
-              <p class="yoko-custom-lead">標準アプリで小さく始めて、<br>使い方に合わせてカスタマイズ。</p>
-              <div class="yoko-actions"><a class="yoko-button" href="#elevator-catalogs">カタログで詳しく見る <span aria-hidden="true">↓</span></a><a class="yoko-text-link" href="#elevator-consult">導入・カスタマイズを相談する <span aria-hidden="true">↓</span></a></div>
-            </div>
-            <div class="yoko-price-poster">
-              <p class="yoko-price-label">標準アプリ利用料</p>
-              <p class="yoko-zero">0<span>円</span></p>
-              <p class="yoko-free">アプリは、無料。</p>
-              <p class="yoko-price-note">維持・運用費は分担。<br>カスタマイズ・個別支援は別途。</p>
-              <a href="#elevator-pricing" class="yoko-text-link">無料の範囲・費用を見る <span aria-hidden="true">↓</span></a>
-            </div>
-          </div>
-
-          <div class="yoko-how">
-            <ol class="yoko-flow" aria-label="アプリでつながる流れ">
-              <li><span class="yoko-step" aria-hidden="true">01</span><div><span class="yoko-role-label">乗りたい人 / ライダー</span><h4>移動を依頼する。</h4><p>乗る場所・降りる場所・人数を選んで依頼。</p></div></li>
-              <li><span class="yoko-step" aria-hidden="true">02</span><div><span class="yoko-role-label">運転する人 / ドライバー</span><h4>依頼を引き受ける。</h4><p>対応できるドライバーが引き受け、迎えに行く。</p></div></li>
-              <li><span class="yoko-step" aria-hidden="true">03</span><div><span class="yoko-role-label">乗りたい人 / ライダー</span><h4>車を確認して、乗る。</h4><p>確定した車と乗降場所をアプリで確認。</p></div></li>
-            </ol>
-            <figure class="yoko-screen"><a href="danchi-elevator/" aria-label="実際のアプリ画面と使い方をWebカタログで見る"><img src="assets/cases/yoko-elevator/user-flow.jpg" width="1536" height="874" loading="lazy" decoding="async" alt="横のエレベーターの実際のアプリ画面。乗降場所・人数の入力、依頼、アルファードの確定通知、乗降場所の写真確認"></a><figcaption>実際のアプリ画面。画像をタップすると使い方を読めます。</figcaption></figure>
-          </div>
-
-          <section id="elevator-pricing" class="yoko-pricing" aria-labelledby="elevator-pricing-heading">
-            <div class="yoko-section-title"><p class="yoko-eyebrow">費用の考え方</p><h4 id="elevator-pricing-heading">アプリは無料。運用費は分け合う。<br>支援は、必要な分だけ。</h4></div>
-            <dl class="yoko-costs">
-              <div><dt>標準アプリを使う</dt><dd class="yoko-cost-value">利用料 <strong>0円</strong></dd><dd>対象の標準機能を無料で利用できます。</dd></div>
-              <div><dt>使い続ける</dt><dd class="yoko-cost-value">維持・運用費を分担</dd><dd>データの保存・通信、システムの保守など、必要な費用を分け合います。</dd></div>
-              <div><dt>変える・支援を受ける</dt><dd class="yoko-cost-value">必要な分だけお見積もり</dd><dd>カスタマイズ、導入説明、運行設計、データ分析などを個別にご相談いただけます。</dd></div>
-            </dl>
-            <p class="yoko-cost-promise">何が無料で、何に費用がかかるのか。始める前にはっきりお伝えします。</p>
-            <details class="yoko-custom">
-              <summary><span>使い方に合わせて、どこを変えられる？</span><span class="yoko-expand" aria-hidden="true">＋</span></summary>
-              <div class="yoko-custom-content"><p>一からつくらず、必要なところだけ。設定の調整や機能の追加・変更をご相談いただけます。</p><ul><li>利用者を住民や会員に限定したい</li><li>運行する範囲や時間帯を決めたい</li><li>予約の受け付け方を変えたい</li><li>管理画面や集計項目を業務に合わせたい</li></ul><p>まずは標準機能を活かし、足りない部分だけをカスタマイズ。対応可否・内容・費用を事前に確認し、お見積もりします。</p></div>
-            </details>
-            <p class="yoko-terms">無料の対象は、所定の標準アプリの利用料です。維持・運用費、カスタマイズ費、個別支援費は別途必要です。カスタマイズや個別支援の購入は、標準アプリ利用の必須条件ではありません。車両・ドライバーの確保、保険、運行に必要な手続き・安全管理などは別途必要です。アプリ利用料無料は、運賃無料を意味しません。</p>
-          </section>
-
-          <aside class="yoko-manifesto" aria-labelledby="elevator-mission-heading">
-            <p class="yoko-eyebrow">交通空白は、待ってくれない。</p>
-            <h4 id="elevator-mission-heading">移動をあきらめる理由から、<br>コストをなくしたい。</h4>
-            <p>デジタル技術とAIをフル活用し、開発・運用のコストを徹底的に削減していく。<br>必要なまちが、必要な移動の仕組みを導入できるように。<br>私たちは、標準アプリの利用料を0円にしました。</p>
-          </aside>
-
-          <section id="elevator-catalogs" class="yoko-catalogs" aria-labelledby="elevator-catalog-heading">
-            <div class="yoko-section-title"><p class="yoko-eyebrow">横のエレベーター / カタログ</p><h4 id="elevator-catalog-heading"><span class="yoko-title-line">まずは全体像。</span><span class="yoko-title-line">詳しくは、使い方。</span></h4><p>Webですぐ読む。PDFで保存・共有する。目的に合わせて選べます。</p></div>
-            <div class="yoko-editions">
-              <article class="yoko-edition"><div class="yoko-edition-top"><span>まず知りたい方へ</span><span>4 PAGES</span></div><h5>要約版</h5><p>仕組みと、富士見ヶ丘団地の導入事例をひと通り。</p><a class="yoko-button" href="danchi-elevator/">要約版をWebで読む <span aria-hidden="true">→</span></a><a class="yoko-text-link" href="assets/catalogs/danchi-elevator-catalog.pdf" target="_blank" rel="noopener">要約版PDF（4ページ）<span aria-hidden="true">↗</span></a></article>
-              <article class="yoko-edition"><div class="yoko-edition-top"><span>使い方を知りたい方へ</span><span>12 PAGES</span></div><h5>詳細版</h5><p>ユーザー・ドライバー・管理者の操作と運用を、実画面で。</p><a class="yoko-button" href="danchi-elevator/detail/">詳細版をWebで読む <span aria-hidden="true">→</span></a><a class="yoko-text-link" href="assets/catalogs/yoko-elevator-detail.pdf" target="_blank" rel="noopener">詳細版PDF（12ページ）<span aria-hidden="true">↗</span></a></article>
-            </div>
-            <div class="yoko-role-guides" aria-label="立場別のカタログ">
-              <div><h5>ユーザー用</h5><p>依頼から乗車まで</p><nav aria-label="ユーザー用カタログ"><a href="danchi-elevator/detail/#user">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-user.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
-              <div><h5>ドライバー用</h5><p>引き受けから降車まで</p><nav aria-label="ドライバー用カタログ"><a href="danchi-elevator/detail/#driver">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-driver.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
-              <div><h5>管理者用</h5><p>運行の確認と振り返り</p><nav aria-label="管理者用カタログ"><a href="danchi-elevator/detail/#admin">Webで読む <span aria-hidden="true">→</span></a><a href="assets/catalogs/yoko-elevator-admin.pdf" target="_blank" rel="noopener">PDF・4ページ <span aria-hidden="true">↗</span></a></nav></div>
-            </div>
-          </section>
-
-          <div class="yoko-pilot"><div><p class="yoko-eyebrow">2025年度 / 大分市・富士見ヶ丘団地の実証</p><p>トヨタカローラ大分の試乗車<strong>〈アルファード〉</strong>を活用し、地元住民を送迎しました。</p></div><dl><div><dt>運行日数</dt><dd>10<span>日</span></dd></div><div><dt>実利用人数</dt><dd>72<span>人</span></dd></div><div><dt>延べ乗車回数</dt><dd>342<span>回</span></dd></div></dl><p class="yoko-terms">当該実証の記録です。現在の運行状況を示すものではありません。</p></div>
-
-          <section id="elevator-consult" class="yoko-consult" aria-labelledby="elevator-consult-heading"><div><h4 id="elevator-consult-heading">「こんな使い方はできる？」<br>から、ご相談ください。</h4><p>企画書や詳しい仕様書は、まだ必要ありません。<br>誰の移動を支えたいか。どんな車両や人がいるか。<br>そのお話から、無理なく始める方法を一緒に考えます。</p></div><div class="yoko-consult-action"><a class="yoko-button" href="mailto:info@mobilitydlab.com?subject=%E6%A8%AA%E3%81%AE%E3%82%A8%E3%83%AC%E3%83%99%E3%83%BC%E3%82%BF%E3%83%BC%EF%BC%9A%E5%B0%8E%E5%85%A5%E3%83%BB%E3%82%AB%E3%82%B9%E3%82%BF%E3%83%9E%E3%82%A4%E3%82%BA%E3%81%AE%E7%9B%B8%E8%AB%87">導入・カスタマイズを相談する <span aria-hidden="true">↗</span></a><p>メールで相談：info@mobilitydlab.com</p></div></section>
-        </article>
-      </div>
-    </section>
-
-    <!-- Value Proposition -->
-    <section class="section section-border">
-        <div class="container-custom">
-            <h2 class="en text-2xl md:text-4xl font-bold mb-16">VALUE PROPOSITION</h2>
-            
-            <div class="max-w-4xl">
-                <h3 class="text-xl md:text-2xl font-bold mb-6">モビリティを活用した「人と人とのつながり」を軸に、<br>地域課題を解決し、地方創生を実現する唯一無二の総合的サポート</h3>
-                
-                <div class="space-y-12 mt-12">
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">競合との差別化点</h4>
-                        <ul class="space-y-4 list-disc pl-5">
-                            <li>モビリティ設計からコミュニティハブづくり、アプリ開発・運営まで一気通貫したサポート</li>
-                            <li>地域特性に合わせた柔軟でカスタマイズ可能なオンデマンド定路線型モビリティサービス</li>
-                            <li>高齢者や地域住民が使いやすい設計と実績のある「横のエレベーター」サービス</li>
-                        </ul>
-                    </div>
-                    
-                    <div>
-                        <h4 class="text-xl font-bold mb-4">バリュー・プロポジションの特徴</h4>
-                        <ul class="space-y-4 list-disc pl-5">
-                            <li><span class="font-bold">明確さ：</span>「モビリティを軸にした地方創生と地域の笑顔を実現」</li>
-                            <li><span class="font-bold">顧客中心：</span>地域の特性や課題に寄り添い、地域住民にとって本当に使いやすく、喜ばれるサービス設計</li>
-                            <li><span class="font-bold">差別化：</span>競合にはない「モビリティ×コミュニティ×デジタル」を融合した独自のソリューション提供</li>
-                            <li><span class="font-bold">検証可能：</span>富士見ヶ丘団地の実証では、10日間で延べ342回の乗車。利用実績と現場の声を、次の改善に生かす</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="section section-border bg-gray-900 text-white">
-        <div class="container-custom">
-            <h2 class="en text-2xl md:text-4xl font-bold mb-12">CONTACT</h2>
-            
-            <div class="max-w-xl">
-                <p class="text-lg md:text-xl mb-8">
-                    モビリティサービスの導入やコミュニティハブの構築についてのご相談は、以下のメールアドレスまでお問い合わせください。
-                </p>
-                
-                <a href="mailto:info@mobilitydlab.com" class="contact-button inline-block text-xl md:text-2xl font-bold bg-white text-gray-900 px-8 py-4 rounded-lg">
-                    info@mobilitydlab.com
-                </a>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="py-12 bg-black text-white">
-        <div class="container-custom">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-center">
-                <div>
-                    <p class="text-xl md:text-2xl font-bold mb-2">株式会社モビリティデザインラボ</p>
-                    <p class="text-gray-400">Mobility Design Lab Inc.</p>
-                </div>
-                
-                <div class="mt-6 md:mt-0">
-                    <p class="en text-2xl font-bold">MORE MOBILITY, MORE SMILES.</p>
-                </div>
-            </div>
-            
-            <div class="mt-12 pt-6 border-t border-gray-800">
-                <p class="text-sm text-gray-400">&copy; 2023 Mobility Design Lab Inc. All Rights Reserved.</p>
-            </div>
-        </div>
-    </footer>
-    <dialog id="case-lightbox" class="case-lightbox" aria-labelledby="lightbox-caption">
+  <section id="contact" class="contact" aria-labelledby="contact-heading"><span id="elevator-consult" class="anchor-alias"></span><div class="shell"><p class="section-label"><span class="en">LET’S TALK</span></p><div class="contact-grid"><div><h2 id="contact-heading">「こんなこと、できる？」<br>から、はじめましょう。</h2><p>詳しい企画書や仕様書は、まだ必要ありません。<br>地元の困りごとや、実現したいことをお聞かせください。</p></div><div class="contact-actions"><a class="email-link" href="mailto:info@mobilitydlab.com" aria-label="メールで相談する info@mobilitydlab.com">info@mobilitydlab.com <span class="arrow" aria-hidden="true">↗</span></a><small>メールアプリが開きます。移動・共創・アプリ開発のご相談はこちらへ。</small></div></div></div></section>
+</main>
+<footer class="site-footer"><div class="shell footer-inner"><p class="footer-brand">MORE MOBILITY, MORE SMILES.</p><div class="footer-links"><a href="#news">お知らせ</a><a href="#top">トップへ ↑</a><span>© Mobility Design Lab Inc.</span></div></div></footer>
+<dialog id="case-lightbox" class="case-lightbox" aria-labelledby="lightbox-caption">
       <div class="lightbox-toolbar"><p id="lightbox-caption"></p><button class="lightbox-close" type="button" aria-label="拡大画像を閉じる">×</button></div>
       <p class="lightbox-status" role="status"></p><img class="lightbox-image" alt=""><a class="lightbox-original" href="#" target="_blank" rel="noopener">画像だけで開く（拡大表示） ↗</a>
     </dialog>
-    <script src="assets/cases.js?v=20260912-2" defer></script>
-    <script>
-      document.querySelectorAll('.mobile-nav a').forEach(function (link) {
-        link.addEventListener('click', function () {
-          link.closest('details').removeAttribute('open');
-        });
-      });
-    </script>
+
 </body>
 </html>
