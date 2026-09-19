@@ -411,3 +411,16 @@ editRide=function(ride){journeyEdit(ride);journey.edit(ride);};
 const journeyDraft=showDraft;
 showDraft=function(draft){journeyDraft(draft);journey.renderSelection();};
 $('confirm-dialog').addEventListener('close',()=>journey.renderSelection());
+
+// Manual-inspired operation surfaces. Roles, versions and mutations remain in Core.
+function showOperationRecord(id){state.filter='all';$('ride-search').value=id;renderRides();$('rides-section').scrollIntoView({block:'start',behavior:'smooth'});}
+const driverConsole=window.YokoDriver.create({getState:()=>state,notify:message,perform:async(kind,ride)=>{await mutate(kind,{ride_id:ride.id,version:ride.version,stopped:true});if(state.user)await refresh();},setHistory:showOperationRecord});
+const adminConsole=window.YokoAdmin.create({getState:()=>state,showRecord:showOperationRecord});
+const operationsSignedIn=signedIn;
+signedIn=function(result){operationsSignedIn(result);driverConsole.enter(result.user);adminConsole.enter(result.user);if(result.user.role==='driver'){state.filter='history';$('role-title').textContent='ドライバー運行画面';}if(result.user.role==='admin')$('role-title').textContent='運行を見守る';};
+const operationsSignedOut=signedOut;
+signedOut=function(){driverConsole.leave();adminConsole.leave();operationsSignedOut();};
+const operationsRender=render;
+render=function(){operationsRender();driverConsole.sync();adminConsole.sync();};
+const operationsRecovery=renderRecovery;
+renderRecovery=function(){operationsRecovery();driverConsole.controls();adminConsole.controls();};

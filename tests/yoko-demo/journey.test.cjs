@@ -31,7 +31,7 @@ check('Explicit destination correction changes only the destination',()=>assert.
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
   w.HTMLElement.prototype.scrollIntoView=function(){};
   w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return{ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);return{ok:result.status<400,status:result.status,json:async()=>result.data};};
-  for(const file of ['journey-input.js','journey.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
+  for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
   const $=id=>w.document.getElementById(id);
   const settle=async()=>{for(let i=0;i<20;i++)await new Promise(r=>setImmediate(r));};
   const chat=async text=>{$('journey-chat-input').value=text;$('journey-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();};

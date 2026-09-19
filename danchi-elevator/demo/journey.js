@@ -20,6 +20,7 @@
       const row=document.createElement('div');row.className='chat-row '+kind;
       if(kind!=='user'){const avatar=document.createElement('span');avatar.className='guide-avatar';avatar.setAttribute('aria-hidden','true');avatar.textContent='↔';row.append(avatar);}
       const bubble=document.createElement('div');bubble.className='chat-bubble';bubble.textContent=text;row.append(bubble);
+      const time=document.createElement('time');time.className='chat-time';time.dateTime=new Date().toISOString();time.textContent=new Date().toLocaleTimeString('ja-JP',{hour:'2-digit',minute:'2-digit'});row.append(time);
       $('journey-messages').append(row);
       // Keep the visible conversation bounded; no text is sent to an external AI.
       while($('journey-messages').children.length>40)$('journey-messages').firstElementChild.remove();
@@ -83,9 +84,9 @@
       for(const stop of stops){
         if(!points[stop.id])continue;
         const button=document.createElement('button');button.type='button';button.setAttribute('aria-label','地図で'+stop.name+'を選ぶ');
-        const badge=document.createElement('small');badge.className='pin-kind';const label=document.createElement('span');label.textContent=stop.name;button.append(badge,label);
+        const badge=document.createElement('small');badge.className='pin-kind';const label=document.createElement('span');label.textContent=stop.name.replace('ふれあいセンター','ふれあい\nセンター').replace('駅前ロータリー','駅前\nロータリー');button.append(badge,label);
         button.addEventListener('click',event=>{event.preventDefault();event.stopPropagation();chooseStop(stop.id);});
-        const icon=L.divIcon({className:'stop-pin',html:button,iconSize:[120,48],iconAnchor:[60,24]});
+        const icon=L.divIcon({className:'stop-pin',html:button,iconSize:[120,74],iconAnchor:[60,37]});
         const marker=L.marker(points[stop.id],{icon,keyboard:false}).addTo(map);markers.set(stop.id,marker);
       }
       fit();

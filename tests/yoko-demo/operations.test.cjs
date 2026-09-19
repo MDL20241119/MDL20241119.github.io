@@ -1,0 +1,69 @@
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {JSDOM}=require('jsdom');
+const {loadPyodide}=require('pyodide');
+const dir=path.resolve(__dirname,'../../danchi-elevator/demo');
+const checks=[],windows=[];
+function check(name,fn){fn();checks.push(name);}
+(async()=>{
+  const py=await loadPyodide();await py.loadPackage('tzdata');
+  const bundle=JSON.parse(fs.readFileSync(path.join(dir,'core-bundle.json'),'utf8'));
+  for(const[name,source]of Object.entries(bundle.files)){py.FS.mkdirTree('/project/'+name.slice(0,name.lastIndexOf('/')));py.FS.writeFile('/project/'+name,source);}
+  py.FS.writeFile('/project/demo_runtime.py',fs.readFileSync(path.join(dir,'demo_runtime.py'),'utf8'));py.FS.writeFile('/project/fixtures/browser-seed.json',JSON.stringify(bundle.database_seed));
+  py.runPython("import sys;sys.path.insert(0,'/project');from demo_runtime import dispatch_json");
+  function dispatch(actor,route,body){py.globals.set('command',JSON.stringify({actor,path:route,method:body===undefined?'GET':'POST',body}));return JSON.parse(py.runPython("dispatch_json('/tmp/operations-ui.sqlite3',command)"));}
+  assert.equal(dispatch(null,'/demo/initialize',{}).status,200);
+  const settle=async()=>{for(let i=0;i<25;i++)await new Promise(r=>setImmediate(r));};
+  async function open(initial){
+    const dom=new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf8'),{url:'https://example.test/danchi-elevator/demo/',runScripts:'outside-only',pretendToBeVisual:true});
+    const w=dom.window;windows.push(w);let actor=initial;
+    w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};w.HTMLElement.prototype.scrollIntoView=function(){};
+    w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return {ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);return{ok:result.status<400,status:result.status,json:async()=>result.data};};
+    for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
+    await settle();const $=id=>w.document.getElementById(id);
+    return {w,$,chat:async(role,text)=>{$(role+'-chat-input').value=text;$(role+'-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();},refresh:async()=>{$('refresh').click();await settle();}};
+  }
+  const d=await open('driver-a1'),a=await open('admin-a1');
+  const snapshot=actor=>dispatch(actor,'/api/snapshot').data;
+  const initial=snapshot('driver-a1').rides.find(r=>r.status==='requested'),ride=()=>dispatch('driver-a1','/api/rides/'+initial.id).data;
+  check('Driver console shows only the driver surface and the real pending count',()=>{assert.equal(d.$('driver-panel').hidden,false);assert.equal(d.$('admin-panel').hidden,true);assert.equal(d.$('journey-panel').hidden,true);assert.equal(d.$('driver-queue-count').textContent,'1件');assert.equal(d.$('driver-seats').textContent,'3 / 3名');});
+  check('Admin separates requests from people waiting to board',()=>{assert.match(a.$('admin-waiting-orders').textContent,/1/);assert.match(a.$('admin-waiting-people').textContent,/2/);});
+  await d.chat('driver','中央広場の依頼');
+  check('Driver chat locates a stored receipt without accepting it',()=>{assert.ok(d.$('driver-chat-log').querySelector('[data-ops-ride]'));assert.equal(ride().status,'requested');});
+  await d.chat('driver','<img src=x onerror=alert(1)>');
+  check('Untrusted driver chat is text and does not create markup',()=>assert.equal(d.$('driver-chat-log').querySelectorAll('img').length,0));
+  d.$('driver-next').click();await settle();
+  check('A driver action requires a fresh stopped confirmation',()=>{assert.equal(d.$('driver-action-dialog').open,false);assert.equal(ride().status,'requested');assert.match(d.$('message').textContent,/停車/);});
+  d.$('stopped').checked=true;d.$('driver-next').click();await settle();
+  check('Review shows the actual route and passengers before any mutation',()=>{assert.equal(d.$('driver-action-dialog').open,true);assert.match(d.$('driver-action-details').textContent,/中央広場/);assert.match(d.$('driver-action-details').textContent,/2名/);assert.equal(ride().status,'requested');});
+  d.$('driver-action-back').click();await settle();
+  check('Backing out of review leaves the request unassigned',()=>assert.equal(ride().status,'requested'));
+  d.$('driver-next').click();d.$('driver-action-confirm').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
+  check('Repeated confirmation accepts exactly once through Core and updates the route tiles',()=>{assert.equal(ride().status,'assigned');assert.equal(ride().events.length,2);assert.equal(d.$('stopped').checked,false);assert.match(d.$('driver-runs').textContent,/中央広場/);assert.match(d.$('driver-confirmed-count').textContent,/1件 \/ 2名/);assert.equal(d.$('driver-seats').textContent,'1 / 3名');});
+  check('Admin live snapshot reflects assignment while passengers are still waiting',()=>{assert.equal(a.$('admin-waiting-orders').textContent,'0件');assert.equal(a.$('admin-waiting-people').textContent,'2名');assert.equal(a.$('admin-onboard').textContent,'0名');});
+  d.$('driver-exceptions').querySelector('[data-driver-help=absent]').click();await settle();
+  check('No-show guidance never marks a passenger onboard or cancels the ride',()=>{assert.equal(d.$('driver-help-dialog').open,true);assert.equal(ride().status,'assigned');assert.match(d.$('driver-help-dialog').textContent,/連絡・取消を行いません/);});d.$('driver-help-close').click();
+  d.$('stopped').checked=true;await d.chat('driver','降車');
+  check('A chat command cannot skip arrival and boarding',()=>{assert.equal(d.$('driver-action-dialog').open,false);assert.equal(ride().status,'assigned');});
+  await d.chat('driver','到着通知');d.$('driver-action-confirm').click();await settle();
+  check('Arrival command still requires explicit confirmation and resets the stopped check',()=>{assert.equal(ride().status,'arrived');assert.equal(d.$('driver-next').textContent,'乗車を確認');assert.equal(d.$('stopped').checked,false);});
+  d.$('stopped').checked=true;d.$('driver-next').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
+  check('Boarding changes the next route tile and administrator passenger counts',()=>{assert.equal(ride().status,'onboard');assert.equal(d.$('driver-next').textContent,'降車');assert.equal(d.$('driver-runs').querySelector('[aria-current=step]').classList.contains('dropoff'),true);assert.equal(a.$('admin-waiting-people').textContent,'0名');assert.equal(a.$('admin-onboard').textContent,'2名');});
+  d.$('stopped').checked=true;d.$('driver-next').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
+  check('Completion persists history, releases seats and clears the active route',()=>{assert.equal(ride().status,'completed');assert.equal(d.$('driver-confirmed-count').textContent,'0件 / 0名');assert.equal(d.$('driver-seats').textContent,'3 / 3名');assert.equal(d.$('driver-next').disabled,true);assert.match(d.$('rides').textContent,new RegExp(initial.id.slice(-8)));assert.equal(a.$('admin-onboard').textContent,'0名');});
+  await a.chat('admin','中央広場の依頼');
+  check('Admin chat filters the map-linked records by a registered stop',()=>{assert.match(a.$('admin-result-label').textContent,/中央広場/);assert.equal(a.$('admin-result-list').querySelectorAll('[data-admin-ride]').length,2);});
+  await a.chat('admin','受付番号 '+initial.id.slice(-8));a.$('admin-result-list').querySelector('[data-admin-ride]').click();await settle();
+  check('Selecting an administrator result opens the matching existing record',()=>{assert.equal(a.$('ride-search').value,initial.id);assert.equal(a.$('rides').querySelectorAll('[data-ride-card]').length,1);});
+  const before=JSON.stringify(snapshot('admin-a1').rides);await a.chat('admin','降車');await a.chat('admin','<img src=x onerror=alert(1)>');
+  check('Admin chat cannot mutate rides or interpret HTML',()=>{assert.equal(JSON.stringify(snapshot('admin-a1').rides),before);assert.equal(a.$('admin-chat-log').querySelectorAll('img').length,0);});
+  const u=await open('rider-a1');u.$('journey-chat-input').value='ふれあいセンターから駅前へ1人';u.$('journey-chat-form').dispatchEvent(new u.w.Event('submit',{bubbles:true,cancelable:true}));await settle();u.$('journey-confirm').click();await settle();u.$('commit').click();await settle();await d.refresh();
+  d.$('stopped').checked=true;d.$('driver-next').click();await settle();assert.equal(d.$('driver-action-dialog').open,true);
+  u.$('rides').querySelector('[data-action=cancel]').click();await settle();u.$('commit').click();await settle();await d.refresh();
+  check('A cancellation in another role invalidates an open driver confirmation',()=>{assert.equal(d.$('driver-action-dialog').open,false);assert.equal(d.$('stopped').checked,false);assert.equal(d.$('driver-next').disabled,true);assert.match(d.$('message').textContent,/更新/);});
+  d.$('demo-roles').querySelector('[data-demo-role=admin-a1]').click();await settle();
+  check('Role switching restores the original records panel and prevents driver UI leakage',()=>{assert.equal(d.$('driver-panel').hidden,true);assert.equal(d.$('admin-panel').hidden,false);assert.equal(d.$('rides-section').parentElement.id,'work-grid');assert.equal(d.$('driver-action-dialog').open,false);});
+  for(const w of windows)w.close();
+  const result={status:'PASS',count:checks.length,checks,scope:'JSDOM role surfaces and actual Pyodide Core; map rendering and responsive typography are checked in the live browser separately'};fs.writeFileSync(path.join(__dirname,'operations-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+})().catch(error=>{for(const w of windows)w.close();console.error(error);process.exitCode=1;});
