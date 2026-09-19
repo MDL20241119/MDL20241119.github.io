@@ -1,0 +1,49 @@
+{
+  "status": "PASS",
+  "checked_on_utc": "2026-09-19",
+  "version": "0.14.0",
+  "functional_flow_commit": "76e4fbd650641ebc33dac5bebde06e35bd1933ed",
+  "responsive_runtime_commit": "9abf3a18d4feb7b2521a3f48a28e6b96933b35aa",
+  "preview_harness_commit": "24ace1f7408e9d71196b10e1b7db9d630c7c5036",
+  "environment": "Live GitHub Pages, Chrome, synthetic data, ordinary UI actions",
+  "verified_entry_url": "https://mobilitydlab.com/danchi-elevator/demo/?role=user&v=0.14.0",
+  "checks": [
+    "Real GSI background tiles render behind three labelled, fictional stop pins",
+    "Selecting 中央広場 on the map and sending 駅前ロータリーへ2人 in chat updates the same selection summary",
+    "Undo restores the prior draft; selecting the destination on the map and sending 2人 completes the selection again",
+    "Review displays the selected route and passenger count before the explicit booking confirmation",
+    "Explicit confirmation saves receipt ce0fd022 for 中央広場 to 駅前ロータリー, two passengers",
+    "Driver in another tab sees the same receipt and accepts it with the stopped confirmation",
+    "The rider sees 車が確定しました with デモ車両1 and the selected boarding location",
+    "Driver records arrive, board and complete; rider chat reflects those stored states and unlocks the composer after completion",
+    "The versioned user URL opens the updated map/chat screen with no active ride remaining from this test"
+  ],
+  "responsive_review": {
+    "method": "Same-origin iframe with explicit CSS viewport widths; visible DOM geometry and screenshot review",
+    "confirmed_assets": ["journey.css?v=14b", "journey.js?v=14b"],
+    "390px": {
+      "client_width": 375,
+      "scroll_width": 375,
+      "map_left": 15,
+      "map_right": 360,
+      "pin_edges": [[128, 248], [204, 324], [51, 171]],
+      "all_pins_contained": true
+    },
+    "320px": {
+      "client_width": 305,
+      "scroll_width": 305,
+      "map_left": 15,
+      "map_right": 290,
+      "pin_edges": [[93, 213], [169, 289], [16, 136]],
+      "all_pins_contained": true
+    }
+  },
+  "limitations": [
+    "Responsive verification uses a desktop browser iframe, not a physical phone or Safari",
+    "The three stop names and coordinates are fictional; the dashed line is not a calculated driving route",
+    "Chat is a local parser for registered stop names and one to three passengers, not a general AI assistant",
+    "Reservation storage is local to this browser/origin and is not shared across devices",
+    "Role selection is a fictional demo identity; no production authentication, actual rides or external notifications",
+    "No full MLIT conformance claim"
+  ]
+}
