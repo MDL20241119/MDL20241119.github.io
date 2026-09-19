@@ -395,3 +395,19 @@ $('reset-confirm').addEventListener('click',async()=>{
   finally{state.busy=false;$('reset-confirm').disabled=false;}
 });
 window.addEventListener('popstate',()=>{const actor=Object.keys(demoRoleNames).find(id=>demoRoleNames[id]===new URL(location.href).searchParams.get('role'));if(!state.busy&&!state.pending&&actor&&state.user?.id!==actor){signedOut();login(actor,'local-test-only');}});
+
+// Alternative input surface; all reservations still use the shared form/Core.
+const journey=window.YokoJourney.create({getState:()=>state,notify:message});
+const journeySignedIn=signedIn;
+signedIn=function(result){journeySignedIn(result);journey.enter(result.user);if(result.user.role==='rider'){$('workspace-nav').innerHTML='<a href="#journey-panel">地図・チャットで呼ぶ</a><a href="#rides-section">依頼の状況</a>';}};
+const journeySignedOut=signedOut;
+signedOut=function(){journeySignedOut();journey.leave();};
+const journeyRender=render;
+render=function(){journeyRender();journey.sync();};
+const journeyRecovery=renderRecovery;
+renderRecovery=function(){journeyRecovery();journey.renderSelection();};
+const journeyEdit=editRide;
+editRide=function(ride){journeyEdit(ride);journey.edit(ride);};
+const journeyDraft=showDraft;
+showDraft=function(draft){journeyDraft(draft);journey.renderSelection();};
+$('confirm-dialog').addEventListener('close',()=>journey.renderSelection());

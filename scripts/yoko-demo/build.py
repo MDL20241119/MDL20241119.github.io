@@ -30,7 +30,7 @@ def build(source):
             target=temp/name;target.parent.mkdir(parents=True,exist_ok=True);target.write_text(content)
         subprocess.run([sys.executable,'-c',"from app.db import initialize; initialize('seed.sqlite3')"],cwd=temp,check=True)
         seed=(temp/'seed.sqlite3').read_bytes()
-    bundle={'version':'0.13.0-demo','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=source,text=True).strip(),
+    bundle={'version':'0.14.0-demo','source_commit':subprocess.check_output(['git','rev-parse','HEAD'],cwd=source,text=True).strip(),
         'scope':'Unmodified core modules; only fictional fixture display names changed. Browser-only demo, not a public reservation server.',
         'sha256':{k:hashlib.sha256(v.encode()).hexdigest() for k,v in files.items()},'files':files}
     bundle['database_seed']={'encoding':'zlib+base64','sha256':hashlib.sha256(seed).hexdigest(),'data':base64.b64encode(zlib.compress(seed,9)).decode()}
@@ -39,7 +39,7 @@ def build(source):
     html=html.replace('<title>横のエレベーター｜Webアプリ</title>', '<title>横のエレベーター｜3者の体験デモ</title>')
     html=html.replace('<meta name="color-scheme" content="light">', '<meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#17664e">')
     html=html.replace('href="/style.css"','href="./style.css"').replace('<script src="/app.js" defer></script>',
-        '<link rel="stylesheet" href="./demo.css?v=3"><script src="./demo-bridge.js?v=2" defer></script>')
+        '<link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=14" defer></script><script src="./demo-bridge.js?v=14" defer></script>')
     html=html.replace('href="/" aria-label','href="./" aria-label')
     html=html.replace('ローカル試験 <span class="strip-detail">架空データのみ・実際の送迎は行いません','体験デモ <span class="strip-detail">架空の地域・実際の送迎は行いません')
     html=html.replace('Webアプリをはじめる','3つの役割で、体験する')
@@ -53,7 +53,8 @@ def build(source):
 <p class="demo-scope">このブラウザーに保存される体験デモです。別の端末とは共有されません。</p>
 <section id="demo-boot" class="notice" role="status"><b id="demo-boot-title">デモを準備しています…</b><p id="demo-boot-message">初回は動作に必要なファイルを読み込みます。そのままお待ちください。</p><button id="demo-reload" class="secondary" type="button" hidden>もう一度読み込む</button></section>
 </div><main id="main" tabindex="-1">''')
-    html=html.replace('Web試験版 0.12.0','公開体験デモ 0.13.0')
+    html=html.replace('      <div class="work-grid" id="work-grid">',(ROOT/'scripts/yoko-demo/journey.html').read_text()+'\n      <div class="work-grid" id="work-grid">')
+    html=html.replace('Web試験版 0.12.0','公開体験デモ 0.14.0')
     html=html.replace('</footer>','<span><a href="./about.html">このデモについて</a> · <button id="reset-demo" class="text-button" type="button">デモを最初から</button></span></footer>')
     html=html.replace('</body>','''<dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-content"><h2 id="reset-title">デモを最初からやり直しますか？</h2><p>このブラウザーのデモ履歴を初期状態に戻します。他の端末や実際の運行には影響しません。</p><div class="actions"><button id="reset-back" class="secondary" type="button">戻る</button><button id="reset-confirm" class="primary" type="button">初期状態に戻す</button></div></div></dialog></body>''')
     (TARGET/'index.html').write_text(html)

@@ -7,7 +7,7 @@
   <meta name="description" content="場所と人数を選んで呼ぶ。利用者・ドライバー・管理者をつなぐ、横のエレベーターのWebアプリ。">
   <title>横のエレベーター｜3者の体験デモ</title>
   <link rel="stylesheet" href="./style.css">
-  <link rel="stylesheet" href="./demo.css?v=3"><script src="./demo-bridge.js?v=2" defer></script>
+  <link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=14" defer></script><script src="./demo-bridge.js?v=14" defer></script>
 </head>
 <body>
   <a class="skip-link" href="#main">本文へ移動</a>
@@ -85,6 +85,34 @@
         <div class="actions"><button id="prepare-agreements" class="secondary" type="button">選んだ規約への同意を確認する</button><button id="prepare-profile-delete" class="text-button cancel" type="button" hidden>登録情報を削除する</button></div>
         <p class="hint">テスト専用です。実際の氏名・連絡先は入力しないでください。規約同意と、個別の依頼・取消の確認は別です。</p>
       </details>
+<section id="journey-panel" class="journey" aria-labelledby="journey-title" hidden>
+  <div class="journey-heading"><div><p class="eyebrow">MAP & CHAT</p><h2 id="journey-title">地図でも、ことばでも。</h2><p>乗る場所・降りる場所・人数を選んで、出かけましょう。</p></div><span class="journey-area">ひだまり団地 / 体験デモ</span></div>
+  <ol class="journey-steps" aria-label="依頼から乗車までの流れ"><li data-journey-step="1" aria-current="step"><span>01</span><b>場所・人数</b></li><li data-journey-step="2"><span>02</span><b>内容確認</b></li><li data-journey-step="3"><span>03</span><b>車両確定</b></li><li data-journey-step="4"><span>04</span><b>ご乗車</b></li></ol>
+  <div id="journey-status" class="journey-status" role="status" hidden><span class="status-symbol" aria-hidden="true">↔</span><div><b id="journey-status-title"></b><p id="journey-status-text"></p></div></div>
+  <div class="journey-grid">
+    <section class="map-panel" aria-labelledby="map-title">
+      <div class="map-heading"><h3 id="map-title">地図から選ぶ</h3><button id="map-fit" class="text-button" type="button">全体を見る ↗</button></div>
+      <div class="place-tabs" role="group" aria-label="地図で選ぶ項目"><button id="pick-origin" type="button" aria-pressed="true"><small>乗る場所</small><strong id="chosen-origin">選んでください</strong></button><button id="pick-destination" type="button" aria-pressed="false"><small>降りる場所</small><strong id="chosen-destination">選んでください</strong></button></div>
+      <p id="map-prompt" class="map-prompt" role="status">緑のピンを押して、乗る場所を選んでください。</p>
+      <div class="map-frame"><div id="journey-map" aria-label="乗降場所を選ぶ地図"></div><p id="map-error" class="map-error" role="status" hidden>背景地図を読み込めません。ピンかチャットの場所ボタンで選べます。</p></div>
+      <div class="map-foot"><span><i class="legend-dot from"></i>乗る場所 <i class="legend-dot to"></i>降りる場所</span><span>ピンはデモ用の仮の位置です</span></div>
+      <p class="map-note">背景地図：国土地理院。破線は乗降場所の組み合わせを示します。走行経路ではありません。</p>
+    </section>
+    <section class="chat-panel" aria-labelledby="chat-title">
+      <div class="chat-heading"><span class="guide-avatar" aria-hidden="true">↔</span><div><h3 id="chat-title">チャットで入力</h3><p>場所名と人数を送るだけ</p></div><span class="guide-tag">移動ガイド</span></div>
+      <div id="journey-messages" class="chat-messages" role="log" aria-live="polite" aria-relevant="additions text" aria-label="場所と人数の入力履歴"></div>
+      <div id="journey-choices" class="chat-choices" role="group" aria-label="チャットの回答候補"></div>
+      <form id="journey-chat-form" class="chat-composer"><label class="sr-only" for="journey-chat-input">場所や人数をチャットで入力</label><input id="journey-chat-input" type="text" maxlength="160" autocomplete="off" enterkeyhint="send" placeholder="例：中央広場から駅前へ2人"><button id="journey-chat-send" type="submit" aria-label="チャットを送信">送信 <span aria-hidden="true">↑</span></button></form>
+      <p class="chat-help">登録された場所名・1〜3人に対応。送信だけで依頼は確定しません。</p>
+    </section>
+  </div>
+  <section class="journey-summary" aria-labelledby="selection-title"><div class="selection-heading"><h3 id="selection-title">いま選んだ内容</h3><div class="selection-tools"><button id="journey-undo" class="text-button" type="button">一つ戻る</button><button id="journey-clear" class="text-button" type="button">選び直す</button><button id="journey-edit-cancel" class="text-button" type="button" hidden>変更をやめる</button></div></div>
+    <div class="selection-grid"><button id="summary-origin" class="selection-place" type="button"><small>乗る場所</small><strong id="summary-origin-name">未選択</strong></button><span class="selection-arrow" aria-hidden="true">→</span><button id="summary-destination" class="selection-place" type="button"><small>降りる場所</small><strong id="summary-destination-name">未選択</strong></button><div class="selection-people"><span>乗る人数</span><div id="journey-passengers" role="group" aria-label="乗車人数"><button type="button" data-people="1" aria-pressed="false">1人</button><button type="button" data-people="2" aria-pressed="false">2人</button><button type="button" data-people="3" aria-pressed="false">3人</button></div></div></div>
+    <div class="selection-bottom"><p id="journey-summary-hint" role="status">乗る場所・降りる場所・人数を選んでください。</p><button id="journey-confirm" class="primary" type="button" disabled>内容を確認する <span aria-hidden="true">→</span></button></div>
+  </section>
+</section>
+<dialog id="journey-vehicle-dialog" aria-labelledby="journey-vehicle-title"><div class="dialog-content"><p class="eyebrow">YOUR RIDE</p><h2 id="journey-vehicle-title">車が確定しました</h2><svg class="demo-car" viewBox="0 0 240 110" role="img" aria-label="デモ車両のイラスト"><path d="M38 72V42q0-18 20-18h99l35 28h14q12 0 12 14v17H27V72Z" fill="#0c2e66"/><path d="M57 34h40v26H49V45q0-11 8-11Zm50 0h45l29 26h-74Z" fill="#b9e2f4"/><circle cx="63" cy="82" r="17" fill="#172b46"/><circle cx="181" cy="82" r="17" fill="#172b46"/><circle cx="63" cy="82" r="8" fill="#dce8ef"/><circle cx="181" cy="82" r="8" fill="#dce8ef"/><path d="M30 66h16v9H30m168-9h17v9h-17" fill="#d9f4a0"/></svg><p id="journey-vehicle-name" class="vehicle-name"></p><p id="journey-vehicle-pickup"></p><p class="hint">車両・乗降場所の写真と到着予測は未登録です。実際の送迎は行いません。</p><button id="journey-vehicle-close" class="primary wide" type="button">確認しました</button></div></dialog>
+
       <div class="work-grid" id="work-grid">
         <aside id="request-panel" class="card" hidden>
           <p class="eyebrow">REQUEST</p><h2 id="request-title">どこへ行きますか？</h2>
@@ -117,7 +145,7 @@
     </section>
     <div id="message" class="message" role="status" aria-live="polite" hidden></div>
   </main>
-  <footer><span>横のエレベーター / 公開体験デモ 0.13.0</span><span>指定乗降場所間の即時呼出</span><span><a href="./about.html">このデモについて</a> · <button id="reset-demo" class="text-button" type="button">デモを最初から</button></span></footer>
+  <footer><span>横のエレベーター / 公開体験デモ 0.14.0</span><span>指定乗降場所間の即時呼出</span><span><a href="./about.html">このデモについて</a> · <button id="reset-demo" class="text-button" type="button">デモを最初から</button></span></footer>
   <noscript><p class="notice">このWebアプリにはJavaScriptが必要です。ブラウザーの設定で有効にして、再読み込みしてください。</p></noscript>
   <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-content"><p class="eyebrow">CONFIRM</p><h2 id="confirm-title">この内容で依頼しますか？</h2><div id="confirm-details"></div><p id="confirm-expiry" class="hint"></p><div class="actions"><button id="close-dialog" type="button" class="secondary">戻る</button><button id="commit" type="button" class="primary">確認して依頼</button></div></div></dialog>
   <dialog id="payment-dialog" aria-labelledby="payment-title"><div class="dialog-content"><p class="eyebrow">PAYMENT RECORD</p><h2 id="payment-title">決済情報を記録する</h2><p id="payment-target"></p><p class="hint">架空の台帳への記録です。実際の請求・返金は行いません。</p><form id="payment-form"><label for="payment-amount">記録する金額（円）</label><input id="payment-amount" type="number" min="0" max="2147483647" readonly required><label for="payment-status">記録する状態</label><select id="payment-status"><option value="uncollected">未収</option><option value="received">受領済み</option><option value="excluded">決済対象外</option><option value="cancelled">決済キャンセル</option></select><p class="hint">金額は予約の確定運賃、取消後は取消料を使用します。</p><div class="actions"><button id="close-payment" type="button" class="secondary">戻る</button><button id="prepare-payment" type="submit" class="primary">記録内容を確認する</button></div></form></div></dialog>

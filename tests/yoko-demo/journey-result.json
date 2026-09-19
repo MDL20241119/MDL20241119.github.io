@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "count": 17,
+  "checks": [
+    "One-sentence Japanese route and full-width passenger count resolve registered stop IDs",
+    "Passenger-only input preserves the selected route",
+    "Unknown location rejects the entire mixed input without guessing",
+    "Identical origin and destination are rejected across a single input and an existing selection",
+    "Out-of-range, fractional, negative and conflicting counts are rejected",
+    "Suspended stops and ambiguous aliases are not selectable",
+    "Typed OK never creates a booking command",
+    "Explicit destination correction changes only the destination",
+    "Rider starts with no implied route or passenger count",
+    "Chat selection updates the original confirmation form but does not save a ride",
+    "Invalid mixed input leaves all previous form values unchanged",
+    "Chat renders untrusted text without creating markup",
+    "Review uses an actual Core draft and still has no booking side effect",
+    "Explicit confirmation saves exactly one Core ride and locks new input",
+    "Existing change flow still edits the saved reservation through a Core draft",
+    "Cancellation releases the composer for a new request and keeps the cancelled record",
+    "Switching to a driver hides the rider-only map and chat"
+  ],
+  "scope": "Node parser + JSDOM UI with the actual Pyodide Core; live map rendering and IndexedDB are checked separately"
+}
