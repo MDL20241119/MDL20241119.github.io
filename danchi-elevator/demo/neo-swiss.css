@@ -17,3 +17,7 @@ body{line-height:1.5;--accent:#72D7FF}body.driver-ui{--accent:#E7FF38}body.admin
 /* Keep the selected role readable while hovered and match map panel rules. */
 .demo-roles a[aria-current=page]:hover{background:var(--accent)}.admin-board .driver-map-panel{border:1px solid #111}
 @media(max-width:700px){.rider-ui .demo-roles a,.driver-ui .demo-roles a{min-height:56px}}
+
+/* Two large links keep both input methods within one tap on a long phone page. */
+.rider-ui #workspace-nav,.driver-ui #workspace-nav,.admin-ui #workspace-nav{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 0 20px;border:1px solid #111;background:white}.workspace-nav a{justify-content:center;font-size:18px;min-height:56px;padding:12px 8px;border:0}.workspace-nav a+a{border-left:1px solid #111}.workspace-nav a:hover{background:var(--accent)}#map-title,#chat-title,#driver-map-title,#driver-chat-title,#admin-map-title,#admin-chat-title{scroll-margin-top:20px}
+@media(max-width:700px){.rider-ui #workspace-nav a,.driver-ui #workspace-nav a,.admin-ui #workspace-nav a{font-size:16px;min-height:56px;padding:10px 5px}}

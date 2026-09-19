@@ -29,7 +29,7 @@ window.addEventListener('popstate',()=>{const actor=Object.keys(demoRoleNames).f
 // Alternative input surface; all reservations still use the shared form/Core.
 const journey=window.YokoJourney.create({getState:()=>state,notify:message});
 const journeySignedIn=signedIn;
-signedIn=function(result){journeySignedIn(result);journey.enter(result.user);if(result.user.role==='rider'){$('workspace-nav').innerHTML='<a href="#journey-panel">地図・チャットで呼ぶ</a><a href="#rides-section">依頼の状況</a>';}};
+signedIn=function(result){journeySignedIn(result);journey.enter(result.user);if(result.user.role==='rider'){$('workspace-nav').innerHTML='<a href="#map-title">地図で選ぶ</a><a href="#chat-title">チャットで入力</a>';}};
 const journeySignedOut=signedOut;
 signedOut=function(){journeySignedOut();journey.leave();};
 const journeyRender=render;
@@ -47,7 +47,7 @@ function showOperationRecord(id){state.filter='all';$('ride-search').value=id;re
 const driverConsole=window.YokoDriver.create({getState:()=>state,notify:message,perform:async(kind,ride)=>{await mutate(kind,{ride_id:ride.id,version:ride.version,stopped:true});if(state.user)await refresh();},setHistory:showOperationRecord});
 const adminConsole=window.YokoAdmin.create({getState:()=>state,showRecord:showOperationRecord});
 const operationsSignedIn=signedIn;
-signedIn=function(result){operationsSignedIn(result);driverConsole.enter(result.user);adminConsole.enter(result.user);if(result.user.role==='driver'){state.filter='history';$('role-title').textContent='ドライバー運行画面';}if(result.user.role==='admin')$('role-title').textContent='運行を見守る';};
+signedIn=function(result){operationsSignedIn(result);driverConsole.enter(result.user);adminConsole.enter(result.user);if(result.user.role==='driver'){state.filter='history';$('role-title').textContent='ドライバー運行画面';$('workspace-nav').innerHTML='<a href="#driver-map-title">地図で選ぶ</a><a href="#driver-chat-title">チャットで探す</a>';}if(result.user.role==='admin'){$('role-title').textContent='運行を見守る';$('workspace-nav').innerHTML='<a href="#admin-map-title">地図で見る</a><a href="#admin-chat-title">チャットで確認</a>';}};
 const operationsSignedOut=signedOut;
 signedOut=function(){driverConsole.leave();adminConsole.leave();operationsSignedOut();};
 const operationsRender=render;
