@@ -18,6 +18,10 @@ NODE_PATH=/path/to/test-dependencies/node_modules node tests/yoko-demo/operation
 
 `--ui-only` は既存のCoreバンドル・初期DBを保ってUIを生成する。テストにはjsdomとPyodide 314.0.7が必要。
 
+2026-09-20 公開確認（0.17.0c）：地図で乗降場所を選び、チャットで人数を入力して依頼を保存。同じ依頼（試験用受付番号 `88e058c5`）をドライバーへ引き継ぎ、引受→到着→乗車→降車→管理者の完了記録まで確認した。別タブの反映と再読み込み後の履歴保存も確認済み。320×667・390×844の表示領域では3役とも横はみ出しがなく、地図の3ピンが収まる。PCでもユーザーは最大540pxのスマホ型、運行・管理は2列を維持する。詳細は `tests/yoko-demo/manual-browser-result.json`。デスクトップChromiumのiframeでの確認であり、実機スマホ・Safari・実際のソフトウェアキーボードは未試験。
+
+再開時はこの版を起点にする。今回のUI修正・公開確認は完了。次の本番工程は認証付きサーバーでの端末間共有と、国交省原本照合・直接API・MCP・A2Aの受入。ブラウザー体験版の公開を、それらの適合・運用開始とは扱わない。
+
 ## 0.16.0（旧版）
 
 地図・チャットなどを4画面に分けた版。マニュアルの一続きの操作から離れていたため、0.17.0で置き換えた。当時の確認記録は `tests/yoko-demo/mobile-browser-result.json`、`mobile-journey-result.json`、`mobile-operations-result.json` に保存している。

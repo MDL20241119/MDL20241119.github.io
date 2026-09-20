@@ -1,0 +1,298 @@
+{
+  "status": "PASS",
+  "verified_at": "2026-09-20",
+  "ui_version": "0.17.0c",
+  "app_commit": "0fcba2b6f2dcdd6682b6a082f8ba14d7a407e77e",
+  "environment": "Live GitHub Pages in desktop Chromium; 320x667 and 390x844 same-origin iframe display areas, plus 1280px wide iframe and 1348px desktop content viewport. Scrollbars reduce iframe content widths to 305 and 375px.",
+  "test_receipt": "88e058c5",
+  "checks": [
+    "Rider uses one connected map above LINE-style chat with no map/chat view tabs.",
+    "At 390x844 the initial chat composer ends at y=809.23 and the fixed action is hidden, so input is not covered.",
+    "Route selected on the map (ふれあいセンター to 駅前ロータリー) and passenger count 1人 entered in chat update the same confirmation.",
+    "Inputs survive resizing from 390 to 320px; Core review shows the actual route and one passenger.",
+    "320px confirmation has no horizontal overflow; a tall review scrolls inside the dialog and its confirm button is reachable.",
+    "Explicit confirmation saves one ride. The rider record and next-role guide are accessible.",
+    "Rider-to-driver guide selects receipt 88e058c5 over the existing seed request 6ea71437 and marks it as the current experience.",
+    "Driver action without the stopped checkbox is blocked. Each completed operation clears stopped confirmation.",
+    "Explicit accept, arrival, boarding and alighting confirmations progress the same receipt through Core.",
+    "Another rider tab shows the assigned demo vehicle and then arrival; admin shows one onboard and two waiting (the separate seed request).",
+    "Alighting releases seats to 3/3, admin onboard returns to zero, completed total becomes six.",
+    "Driver-to-admin guide opens the same completed receipt and its existing record.",
+    "Rider reload retains the completed receipt in history and receipt search finds it.",
+    "Admin history quick filter displays seven completed/cancelled records without changing operational counts.",
+    "All three roles have no horizontal overflow at 320 and 390px; all three stop buttons are inside each map panel.",
+    "At 1280px driver and admin retain two-column manual-style boards. Rider stays a 540px column on desktop.",
+    "All three public role URLs boot successfully."
+  ],
+  "limitations": [
+    "These are desktop browser display-area checks, not physical smartphone, Safari or real on-screen keyboard tests.",
+    "Browser-only fictional demo: no cross-device server sync, production identity checks, actual rides, LINE delivery or external payment.",
+    "Cancellation, stale-confirmation races, duplicate confirmation and untrusted text were tested in actual-Core JSDOM tests; they were not repeated in this live visual pass.",
+    "This is not MLIT conformance verification."
+  ],
+  "metrics": {
+    "rider390": {
+      "bubbleFont": "18px",
+      "chat": {
+        "height": 325.546875,
+        "width": 349,
+        "x": 13,
+        "y": 527.28125
+      },
+      "composer": {
+        "height": 76,
+        "width": 349,
+        "x": 13,
+        "y": 733.234375
+      },
+      "dock": {
+        "height": 0,
+        "width": 0,
+        "x": 0,
+        "y": 0
+      },
+      "map": {
+        "height": 220,
+        "width": 349,
+        "x": 13,
+        "y": 280.484375
+      },
+      "pins": [
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 128,
+            "y": 394.484375
+          },
+          "contained": true,
+          "text": "乗降場所\n中央広場"
+        },
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 204,
+            "y": 316.484375
+          },
+          "contained": true,
+          "text": "乗降場所\n駅前\nロータリー"
+        },
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 51,
+            "y": 311.484375
+          },
+          "contained": true,
+          "text": "乗降場所\nふれあい\nセンター"
+        }
+      ],
+      "scrollWidth": 375,
+      "width": 375
+    },
+    "rider320": {
+      "bubbleFont": "18px",
+      "chat": {
+        "height": 399.59375,
+        "width": 279,
+        "x": 13,
+        "y": 46.078125
+      },
+      "composer": {
+        "height": 76,
+        "width": 279,
+        "x": 13,
+        "y": 326.078125
+      },
+      "dock": {
+        "height": 138.78125,
+        "width": 305,
+        "x": 0,
+        "y": 528.21875
+      },
+      "map": {
+        "height": 220,
+        "width": 279,
+        "x": 13,
+        "y": -217.515625
+      },
+      "pins": [
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 93,
+            "y": -103.515625
+          },
+          "contained": true,
+          "text": "乗降場所\n中央広場"
+        },
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 169,
+            "y": -181.515625
+          },
+          "contained": true,
+          "text": "降りる場所\n駅前\nロータリー"
+        },
+        {
+          "box": {
+            "height": 74,
+            "width": 120,
+            "x": 16,
+            "y": -186.515625
+          },
+          "contained": true,
+          "text": "乗る場所\nふれあい\nセンター"
+        }
+      ],
+      "scrollWidth": 305,
+      "width": 305
+    },
+    "riderDialog320": {
+      "clientHeight": 641,
+      "clientWidth": 264,
+      "rect": {
+        "height": 643,
+        "top": 12,
+        "width": 281
+      },
+      "scrollHeight": 812,
+      "scrollWidth": 264
+    },
+    "driver390": {
+      "mapHeight": 280,
+      "pins": [
+        {
+          "contained": true,
+          "text": "引受待ち 1件\n中央広場"
+        },
+        {
+          "contained": true,
+          "text": "降車場所\n駅前\nロータリー"
+        },
+        {
+          "contained": true,
+          "text": "乗車場所\nふれあい\nセンター"
+        }
+      ],
+      "role": "driver",
+      "scrollWidth": 375,
+      "width": 375
+    },
+    "driver320": {
+      "mapHeight": 280,
+      "pins": [
+        {
+          "contained": true,
+          "text": "引受待ち 1件\n中央広場"
+        },
+        {
+          "contained": true,
+          "text": "降車場所\n駅前\nロータリー"
+        },
+        {
+          "contained": true,
+          "text": "乗車場所\nふれあい\nセンター"
+        }
+      ],
+      "role": "driver",
+      "scrollWidth": 305,
+      "width": 305
+    },
+    "admin390": {
+      "mapHeight": 280,
+      "pins": [
+        {
+          "contained": true,
+          "text": "乗車場所\n中央広場"
+        },
+        {
+          "contained": true,
+          "text": "降車場所\n駅前\nロータリー"
+        },
+        {
+          "contained": true,
+          "text": "乗降場所\nふれあい\nセンター"
+        }
+      ],
+      "role": "admin",
+      "scrollWidth": 375,
+      "width": 375
+    },
+    "admin320": {
+      "mapHeight": 280,
+      "pins": [
+        {
+          "contained": true,
+          "text": "乗車場所\n中央広場"
+        },
+        {
+          "contained": true,
+          "text": "降車場所\n駅前\nロータリー"
+        },
+        {
+          "contained": true,
+          "text": "乗降場所\nふれあい\nセンター"
+        }
+      ],
+      "role": "admin",
+      "scrollWidth": 305,
+      "width": 305
+    },
+    "admin1280": {
+      "children": [
+        {
+          "height": 563,
+          "width": 719.375,
+          "x": 40,
+          "y": -830.203125
+        },
+        {
+          "height": 563,
+          "width": 449.625,
+          "x": 775.375,
+          "y": -830.203125
+        }
+      ],
+      "columns": "719.375px 449.625px",
+      "display": "grid",
+      "role": "admin",
+      "scrollWidth": 1265,
+      "width": 1265
+    },
+    "driver1280": {
+      "children": [
+        {
+          "height": 558,
+          "width": 701.390625,
+          "x": 40,
+          "y": 653.796875
+        },
+        {
+          "height": 558,
+          "width": 467.609375,
+          "x": 757.390625,
+          "y": 653.796875
+        }
+      ],
+      "columns": "701.391px 467.609px",
+      "display": "grid",
+      "role": "driver",
+      "scrollWidth": 1265,
+      "width": 1265
+    },
+    "riderDesktop": {
+      "composer": 668.859375,
+      "dockVisible": false,
+      "layout": "column",
+      "mainWidth": 540,
+      "scrollWidth": 1348,
+      "width": 1348
+    }
+  }
+}
