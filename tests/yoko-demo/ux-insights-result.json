@@ -1,0 +1,21 @@
+{
+  "status": "PASS",
+  "count": 15,
+  "checks": [
+    "Daily periods use Japan midnight and each metric uses its actual event date",
+    "Completed ratio excludes ongoing rides and waiting time uses boarding records",
+    "Time utilization unions overlaps per vehicle and counts only elapsed operating windows",
+    "Current assignment and occupancy have different explicit denominators",
+    "No schedule means no invented time utilization",
+    "No vehicles or no finished rides produce unavailable ratios rather than fictitious percentages",
+    "Unknown or malformed hours never create a denominator",
+    "Future operating windows have no elapsed availability",
+    "Overnight windows clip to the selected local day",
+    "Missing terminal timestamps are excluded, never replaced by the snapshot clock",
+    "Daily totals, route rankings and request hours reconcile with the summary",
+    "Snapshot limits are disclosed when the record cap is reached",
+    "Itinerary excludes pending, completed and other vehicles and drops off onboard passengers first",
+    "Navigator destinations are allowlisted demo coordinates, never personal or arbitrary text",
+    "Disjoint and nested busy intervals never double count"
+  ]
+}

@@ -2,10 +2,13 @@
   <div class="journey-heading"><div><p class="eyebrow">MAP & CHAT</p><h2 id="journey-title">地図でも、ことばでも。</h2><p>乗る場所・降りる場所・人数を選んで、出かけましょう。</p></div><span class="journey-area">ひだまり団地 / 体験デモ</span></div>
   <ol class="journey-steps" aria-label="依頼から乗車までの流れ"><li data-journey-step="1" aria-current="step"><span>01</span><b>場所・人数</b></li><li data-journey-step="2"><span>02</span><b>内容確認</b></li><li data-journey-step="3"><span>03</span><b>車両確定</b></li><li data-journey-step="4"><span>04</span><b>ご乗車</b></li></ol>
   <div id="journey-status" class="journey-status" role="status" hidden><span class="status-symbol" aria-hidden="true">↔</span><div><b id="journey-status-title"></b><p id="journey-status-text"></p></div></div>
+  <div class="rider-task" aria-live="polite"><b id="rider-task-number">1</b><div><h2 id="rider-task-title">乗る場所を選ぶ</h2><p id="rider-task-hint">地図を2か所タップ → 最後に確認して呼ぶ</p></div></div>
+  <div id="journey-recent" class="recent-trip" aria-label="前回と同じ移動" hidden></div>
   <div class="journey-grid">
     <section class="map-panel" aria-labelledby="map-title">
       <h3 id="map-title" class="sr-only">地図から乗降場所を選ぶ</h3>
       <div class="place-tabs" role="group" aria-label="地図で選ぶ項目"><button id="pick-origin" type="button" aria-pressed="true"><small>乗る場所</small><strong id="chosen-origin">選んでください</strong></button><button id="pick-destination" type="button" aria-pressed="false"><small>降りる場所</small><strong id="chosen-destination">選んでください</strong></button></div>
+      <div class="quick-people" role="group" aria-label="乗る人数を選ぶ"><b>人数</b><button type="button" data-quick-people="1" aria-pressed="true">1人</button><button type="button" data-quick-people="2" aria-pressed="false">2人</button><button type="button" data-quick-people="3" aria-pressed="false">3人</button></div>
       <p id="map-prompt" class="map-prompt" role="status">地図の場所ボタンを押して、乗る場所を選んでください。</p>
       <div class="map-frame"><div id="journey-map" aria-label="乗降場所を選ぶ地図"></div><button id="map-fit" class="map-reset" type="button">全体を見る</button><p id="map-error" class="map-error" role="status" hidden>背景地図を読み込めません。ピンかチャットの場所ボタンで選べます。</p></div>
       <p class="map-note">架空の乗降場所です。破線は走行経路ではありません。</p>

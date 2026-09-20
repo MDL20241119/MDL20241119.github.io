@@ -50,7 +50,7 @@
       map.setView([33.1998,131.5718],14);
       if(window.ResizeObserver){let size='';new ResizeObserver(()=>{const next=el().clientWidth+'x'+el().clientHeight;if(el().clientWidth&&el().clientHeight&&next!==size){size=next;fit();}}).observe(el());}
     }
-    function draw(stops,rides,selected){
+    function draw(stops,rides,selected,itinerary=[]){
       init();if(!map)return;
       const next=JSON.stringify(stops.map(s=>[s.id,s.name]));
       if(next!==key){key=next;markers.forEach(m=>m.remove());markers.clear();
@@ -60,10 +60,12 @@
       }
       for(const [stopId,m] of markers){const b=m.getElement().querySelector('button'),end=selected?.origin_stop_id===stopId?'pickup':selected?.destination_stop_id===stopId?'dropoff':'';b.dataset.end=end;
         const waiting=rides.filter(r=>r.status==='requested'&&r.origin_stop_id===stopId).length;
-        b.querySelector('small').textContent=end==='pickup'?'乗車場所':end==='dropoff'?'降車場所':waiting?`引受待ち ${waiting}件`:'乗降場所';
+        const legs=itinerary.filter(leg=>leg.stopId===stopId);
+        b.querySelector('small').textContent=legs.length?legs.map(leg=>`${leg.number} ${leg.kind==='pickup'?'乗車':'降車'}`).join(' / '):end==='pickup'?'乗車場所':end==='dropoff'?'降車場所':waiting?`引受待ち ${waiting}件`:'乗降場所';
       }
-      const sk=selected?selected.origin_stop_id+':'+selected.destination_stop_id:'';
-      if(sk!==selectionKey){selectionKey=sk;if(line){line.remove();line=null;}if(selected&&points[selected.origin_stop_id]&&points[selected.destination_stop_id])line=L.polyline([points[selected.origin_stop_id],points[selected.destination_stop_id]],{color:'#111111',weight:3,dashArray:'6 8',interactive:false}).addTo(map);}
+      const order=itinerary.length?itinerary.map(leg=>points[leg.stopId]).filter(Boolean):selected?[points[selected.origin_stop_id],points[selected.destination_stop_id]].filter(Boolean):[];
+      const sk=JSON.stringify(order);
+      if(sk!==selectionKey){selectionKey=sk;if(line){line.remove();line=null;}if(order.length>1)line=L.polyline(order,{color:'#111111',weight:3,dashArray:'6 8',interactive:false}).addTo(map);}
     }
     return {draw,fit};
   }

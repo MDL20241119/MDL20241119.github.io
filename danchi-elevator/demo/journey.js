@@ -4,7 +4,7 @@
   const points={'stop-a':[33.1968,131.5718],'stop-b':[33.2024,131.5784],'stop-c':[33.2028,131.5652]};
   const $=id=>document.getElementById(id);
   const terminal=new Set(['completed','cancelled']);
-  const empty=()=>({origin:null,destination:null,passengers:null});
+  const empty=()=>({origin:null,destination:null,passengers:1});
   const names={origin:'乗る場所',destination:'降りる場所'};
   window.YokoJourney={create({getState,notify,onSelection=()=>{}}){
     let person=null,stops=[],selection=empty(),target='origin',undo=[],map=null,route=null,markerKey='',lastActiveId=null,lastCompletion=null,editingId=null;
@@ -47,12 +47,16 @@
       if(Object.entries(update).some(([k,v])=>k!=='passengers'&&!stops.some(s=>s.id===v))){say('その乗降場所は選べません。表示されている場所から選んでください。','error');return false;}
       if(next.passengers!==null&&![1,2,3].includes(next.passengers)){say('このデモでは1〜3人で選んでください。','error');return false;}
       undo.push({...selection});selection=next;lastCompletion=null;nextTarget();writeForm();
-      if(text)say(text,'user');say(prompt());renderSelection();return true;
+      if(text)say(text,'user');say(prompt());renderSelection();
+      // Show the Core's exact confirmation after the last explicit choice.
+      // This prepares only a draft; the rider still presses the final commit.
+      if(complete()&&!locked()&&!$('confirm-dialog').open)$('request-form').requestSubmit();
+      return true;
     }
     function chooseStop(id){
       if(!['origin','destination'].includes(target)){say('変更する場合は、地図の上の「乗る場所」か「降りる場所」を選んでください。');return;}
       const changed=apply({[target]:id},names[target]+'：'+stopName(id));
-      if(changed&&target==='passengers')document.querySelector('.chat-panel').scrollIntoView({block:'center',behavior:'auto'});
+      if(changed&&target==='passengers'&&!complete())document.querySelector('.chat-panel').scrollIntoView({block:'center',behavior:'auto'});
     }
     function setTarget(field){
       if(locked()||fixedStops())return;
@@ -119,6 +123,12 @@
         $('pick-'+field).setAttribute('aria-pressed',String(target===field));
       }
       const active=activeRide(),frozen=locked(),fixed=fixedStops();
+      const task=active&&!getState().editing?['✓','依頼の状況を確認',active.status==='requested'?'ドライバーの引受待ちです。下の案内から運行も体験できます。':'車両と乗降場所を確認できます。']:complete()?['3','この内容で呼ぶ','確認画面で、乗降場所・人数・料金を確かめてください。']:!selection.origin?['1','乗る場所を選ぶ','地図を2か所タップ → 最後に確認して呼ぶ']:['2','降りる場所を選ぶ','次のタップで確認画面へ。人数もここで変更できます。'];
+      $('rider-task-number').textContent=task[0];$('rider-task-title').textContent=task[1];$('rider-task-hint').textContent=task[2];
+      for(const b of panel.querySelectorAll('[data-quick-people]')){b.setAttribute('aria-pressed',String(Number(b.dataset.quickPeople)===selection.passengers));b.disabled=frozen;}
+      const recent=getState().snapshot?.rides.find(r=>r.status==='completed'&&stops.some(s=>s.id===r.origin_stop_id)&&stops.some(s=>s.id===r.destination_stop_id)&&r.origin_stop_id!==r.destination_stop_id&&[1,2,3].includes(r.passengers));
+      const recentBox=$('journey-recent');recentBox.hidden=!recent||!!active||!!selection.origin||!!getState().editing;
+      if(recent){let b=recentBox.querySelector('button');if(!b){b=document.createElement('button');b.type='button';recentBox.append(b);}b.dataset.recentRide=recent.id;b.disabled=frozen;b.replaceChildren();const tag=document.createElement('small');tag.textContent='前回と同じ';const title=document.createElement('span');title.textContent=`${recent.origin_name} → ${recent.destination_name} / ${recent.passengers}人`;b.append(tag,title);}
       $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'③ 下のチャットで人数を選ぶ':(target==='origin'?'① 乗る場所をタップ':'② 降りる場所をタップ');
       for(const id of ['pick-origin','pick-destination','summary-origin','summary-destination'])$(id).disabled=frozen||fixed;
       for(const b of $('journey-passengers').querySelectorAll('button')){b.setAttribute('aria-pressed',String(Number(b.dataset.people)===selection.passengers));b.disabled=frozen;}
@@ -171,6 +181,8 @@
     $('pick-origin').addEventListener('click',()=>setTarget('origin'));$('summary-origin').addEventListener('click',()=>setTarget('origin'));
     $('pick-destination').addEventListener('click',()=>setTarget('destination'));$('summary-destination').addEventListener('click',()=>setTarget('destination'));
     $('journey-passengers').addEventListener('click',event=>{const b=event.target.closest('[data-people]');if(b)apply({passengers:Number(b.dataset.people)},b.dataset.people+'人');});
+    panel.querySelector('.quick-people').addEventListener('click',event=>{const b=event.target.closest('[data-quick-people]');if(b)apply({passengers:Number(b.dataset.quickPeople)},b.dataset.quickPeople+'人');});
+    $('journey-recent').addEventListener('click',event=>{const b=event.target.closest('[data-recent-ride]');if(!b)return;const r=getState().snapshot?.rides.find(r=>r.id===b.dataset.recentRide);if(r)apply({origin:r.origin_stop_id,destination:r.destination_stop_id,passengers:r.passengers},'前回と同じ移動を選びました。');});
     $('journey-chat-form').addEventListener('submit',event=>{
       event.preventDefault();if(locked())return;
       const text=$('journey-chat-input').value.trim();if(!text)return;

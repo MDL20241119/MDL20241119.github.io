@@ -22,7 +22,7 @@
     function go(node){node.scrollIntoView({block:'start',behavior:'auto'});const title=node.matches('h1,h2,h3')?node:node.querySelector('h1,h2,h3,summary');if(title){title.setAttribute('tabindex','-1');title.focus({preventScroll:true});}}
     function open(target){
       if(target==='review'&&role==='rider'){$('journey-selection-details').open=true;go($('journey-selection-details'));return true;}
-      if(target==='operation'&&role==='driver'){go($('driver-operation'));return true;}
+      if(target==='operation'&&role==='driver'){go(document.querySelector('.driver-map-panel'));return true;}
       if(target==='records'){
         if(role==='driver'){$('driver-history').open=true;go($('driver-history'));}
         else if(role==='admin'){adminRecords.open=true;go(adminRecords);}
