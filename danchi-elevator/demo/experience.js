@@ -40,13 +40,15 @@
     function leave(){
       if(riderRecords.contains(records))home.append(records);
       role=null;selection={};next.hidden=true;dock.hidden=true;riderRecords.hidden=true;adminRecords.hidden=true;
-      document.body.classList.remove('manual-experience','is-typing');delete document.body.dataset.experienceRole;delete document.body.dataset.hasActive;
+      document.body.classList.remove('manual-experience','is-typing','has-user-action');delete document.body.dataset.experienceRole;delete document.body.dataset.hasActive;
     }
     function refreshSelection(value){
       if(value)selection=value;
       const s=getState();$('experience-next-button').disabled=!!s.busy||!!s.pending;
       if(role!=='rider')return;
       const active=s.snapshot?.rides.find(r=>!finished(r)),locked=!!s.busy||!!s.pending||!s.snapshot;
+      dock.hidden=!active&&!(selection.origin&&selection.destination&&selection.passengers);
+      document.body.classList.toggle('has-user-action',!dock.hidden);
       const stops=s.snapshot?.services.flatMap(service=>service.stops)||[],name=id=>stops.find(stop=>stop.id===id)?.name||'未選択';
       $('journey-example').disabled=locked||!!(active&&!s.editing);
       $('user-next').disabled=locked;

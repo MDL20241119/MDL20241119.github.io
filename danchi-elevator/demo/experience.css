@@ -22,6 +22,8 @@
 
 /* Passenger: the map and LINE-style conversation are always connected. */
 .rider-ui{padding-bottom:calc(134px + env(safe-area-inset-bottom))}
+.rider-ui:not(.has-user-action){padding-bottom:24px}
+.rider-ui:not(.has-user-action) .message{bottom:12px}
 .rider-ui .topbar,.rider-ui .demo-shell,.rider-ui main,.rider-ui footer{max-width:540px;margin-inline:auto}
 .rider-ui .test-strip{display:none}
 .rider-ui .topbar{padding:7px 12px;gap:8px;min-height:52px}
@@ -60,7 +62,7 @@
 .rider-ui .chat-heading h3{font-size:18px}
 .rider-ui .chat-heading p{display:none}
 #journey-example{font-size:15px;min-height:44px;padding:6px 2px;margin-left:auto;white-space:nowrap}
-.rider-ui .chat-messages{min-height:110px;max-height:140px;padding:12px;scroll-behavior:auto;overscroll-behavior:auto}
+.rider-ui .chat-messages{min-height:110px;max-height:154px;padding:12px;scroll-behavior:auto;overscroll-behavior:auto}
 .rider-ui .chat-row{grid-template-columns:27px minmax(0,1fr);gap:4px 8px;margin-bottom:14px}
 .rider-ui .chat-row.user{grid-template-columns:1fr}
 .rider-ui .chat-row .guide-avatar{width:27px;height:27px}
@@ -166,7 +168,7 @@
   .manual-experience .experience-next button{width:100%;margin-top:12px}
   .rider-ui #journey-map{height:220px}
   .rider-ui .chat-bubble{font-size:18px}
-  .rider-ui .chat-messages{max-height:140px;min-height:110px}
+  .rider-ui .chat-messages{max-height:154px;min-height:110px}
   .rider-ui .chat-heading h3{font-size:17px}
   #journey-example{font-size:14px}
   .rider-ui .place-tabs strong{font-size:17px}
@@ -218,3 +220,5 @@
   .manual-experience dialog .actions button{width:100%;min-height:60px;font-size:20px;white-space:normal}
 }
 @media(prefers-reduced-motion:reduce){.manual-experience *{scroll-behavior:auto!important}}
+
+.rider-ui .chat-messages:has(.chat-row:only-child){min-height:0;max-height:none;flex:initial}

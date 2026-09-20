@@ -38,14 +38,14 @@ check('Explicit destination correction changes only the destination',()=>assert.
   const chat=async text=>{$('journey-chat-input').value=text;$('journey-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();};
   await settle();
   check('Rider starts with no implied route or passenger count',()=>{assert.equal($('journey-confirm').disabled,true);assert.equal($('summary-origin-name').textContent,'未選択');});
-  check('The map and chat stay in one connected rider surface with no separate view tabs',()=>{assert.equal(w.document.body.dataset.experienceRole,'rider');assert.equal($('mobile-nav'),null);assert.equal($('journey-panel').querySelectorAll('.journey-grid>.map-panel,.journey-grid>.chat-panel').length,2);assert.equal(w.document.querySelectorAll('[data-mobile-hidden]').length,0);assert.equal($('user-action-dock').hidden,false);});
+  check('The map and chat stay in one connected rider surface with no separate view tabs',()=>{assert.equal(w.document.body.dataset.experienceRole,'rider');assert.equal($('mobile-nav'),null);assert.equal($('journey-panel').querySelectorAll('.journey-grid>.map-panel,.journey-grid>.chat-panel').length,2);assert.equal(w.document.querySelectorAll('[data-mobile-hidden]').length,0);assert.equal($('user-action-dock').hidden,true);});
   $('user-next').click();await settle();
   check('The bottom action never creates a draft from missing inputs',()=>{assert.equal($('confirm-dialog').open,false);assert.match($('user-next').textContent,/乗る場所/);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
   $('journey-example').click();await settle();
   check('The example only fills the shared route and count without booking',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'1');assert.equal($('confirm-dialog').open,false);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
   $('journey-clear').click();await settle();
   await chat('中央広場から駅前ロータリーへ2人');
-  check('Chat selection updates the original confirmation form but does not save a ride',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'2');assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
+  check('Chat selection updates the original confirmation form but does not save a ride',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'2');assert.equal($('user-action-dock').hidden,false);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
   $('journey-selection-details').open=true;$('journey-chat-input').value='入力途中';$('journey-selection-details').open=false;
   check('Opening and closing the optional review preserves the shared input and unfinished chat',()=>{assert.equal($('journey-chat-input').value,'入力途中');assert.equal($('passengers').value,'2');assert.match($('user-action-caption').textContent,/中央広場.*駅前ロータリー.*2人/);});
   $('summary-destination').click();
