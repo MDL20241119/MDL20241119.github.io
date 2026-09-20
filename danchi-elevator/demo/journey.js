@@ -74,7 +74,7 @@
       tiles.on('tileerror',()=>{$('map-error').hidden=false;});
       tiles.on('load',()=>{const images=[...$('journey-map').querySelectorAll('.leaflet-tile')];if(images.length&&images.every(img=>img.complete&&img.naturalWidth>0))$('map-error').hidden=true;});
       map.setView([33.1998,131.5718],15);
-      if(window.ResizeObserver){let previousWidth=0;new ResizeObserver(()=>{const width=$('journey-map').clientWidth;if(width&&width!==previousWidth){previousWidth=width;map.invalidateSize();fit();}}).observe($('journey-map'));}
+      if(window.ResizeObserver){let previousSize='';new ResizeObserver(()=>{const node=$('journey-map'),size=node.clientWidth+'x'+node.clientHeight;if(node.clientWidth&&node.clientHeight&&size!==previousSize){previousSize=size;fit();}}).observe($('journey-map'));}
     }
     function fit(){if(map&&markers.size){map.invalidateSize();map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,46],maxZoom:15,animate:false});}}
     function buildMarkers(){
@@ -129,7 +129,7 @@
       $('journey-summary-hint').textContent=getState().pending?'送信結果を確認しています。重ねて依頼せず、結果を照合してください。':active&&!getState().editing?'変更・取消は、下の「あなたの依頼」から行えます。':complete()?`${selection.passengers}人 / ${$('service-fare').textContent}。次に確認画面へ進みます。`:'乗る場所・降りる場所・人数を選んでください。';
       const step=active?({requested:2,assigned:3,arrived:4,onboard:4}[active.status]||1):lastCompletion?4:1;setStep(step);
       if(getState().draft&&['request','change'].includes(getState().draft.kind))setStep(2);
-      paintMap();renderChoices();onSelection();
+      paintMap();renderChoices();onSelection({...selection});
     }
     function showStatus(ride){
       $('journey-status').hidden=!ride;if(!ride)return;

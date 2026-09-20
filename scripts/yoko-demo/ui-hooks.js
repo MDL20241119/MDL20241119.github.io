@@ -27,7 +27,7 @@ $('reset-confirm').addEventListener('click',async()=>{
 window.addEventListener('popstate',()=>{const actor=Object.keys(demoRoleNames).find(id=>demoRoleNames[id]===new URL(location.href).searchParams.get('role'));if(!state.busy&&!state.pending&&actor&&state.user?.id!==actor){signedOut();login(actor,'local-test-only');}});
 
 // Alternative input surface; all reservations still use the shared form/Core.
-const journey=window.YokoJourney.create({getState:()=>state,notify:message,onSelection:()=>mobileUI.refreshSelection()});
+const journey=window.YokoJourney.create({getState:()=>state,notify:message,onSelection:selection=>mobileUI.refreshSelection(selection)});
 const journeySignedIn=signedIn;
 signedIn=function(result){journeySignedIn(result);journey.enter(result.user);if(result.user.role==='rider'){$('workspace-nav').innerHTML='<a href="#map-title">地図で選ぶ</a><a href="#chat-title">チャットで入力</a>';}};
 const journeySignedOut=signedOut;

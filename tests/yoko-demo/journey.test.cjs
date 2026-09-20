@@ -40,7 +40,7 @@ check('Explicit destination correction changes only the destination',()=>assert.
   await settle();
   check('Rider starts with no implied route or passenger count',()=>{assert.equal($('journey-confirm').disabled,true);assert.equal($('summary-origin-name').textContent,'未選択');});
   if(phone){
-    check('Phone starts on the map and exposes four named destinations',()=>{assert.equal(w.document.body.dataset.mobileView,'map');assert.equal($('mobile-nav').querySelectorAll('button').length,4);});
+    check('Phone starts on the map and exposes four named destinations',()=>{assert.equal(w.document.body.dataset.mobileView,'map');assert.equal($('mobile-nav').querySelectorAll('button').length,4);assert.equal($('mobile-continue').disabled,true);});
     $('mobile-nav').querySelector('[data-mobile-view=chat]').click();$('journey-chat-input').value='中央広場から';
     $('mobile-nav').querySelector('[data-mobile-view=map]').click();$('mobile-nav').querySelector('[data-mobile-view=chat]').click();
     check('Switching input views preserves an unfinished chat without submitting',()=>{assert.equal($('journey-chat-input').value,'中央広場から');assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});

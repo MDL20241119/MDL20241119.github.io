@@ -48,7 +48,7 @@
       tiles.on('tileerror',()=>{error().hidden=false;});
       tiles.on('load',()=>{const images=[...el().querySelectorAll('.leaflet-tile')];if(images.length&&images.every(i=>i.complete&&i.naturalWidth>0))error().hidden=true;});
       map.setView([33.1998,131.5718],14);
-      if(window.ResizeObserver){let width=0;new ResizeObserver(()=>{if(el().clientWidth&&el().clientWidth!==width){width=el().clientWidth;map.invalidateSize();fit();}}).observe(el());}
+      if(window.ResizeObserver){let size='';new ResizeObserver(()=>{const next=el().clientWidth+'x'+el().clientHeight;if(el().clientWidth&&el().clientHeight&&next!==size){size=next;fit();}}).observe(el());}
     }
     function draw(stops,rides,selected){
       init();if(!map)return;
