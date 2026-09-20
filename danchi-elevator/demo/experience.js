@@ -82,7 +82,7 @@
       if(!selection.passengers){go(document.querySelector('.chat-panel'));$('journey-choices').querySelector('button')?.focus({preventScroll:true});return;}
       if(!$('journey-confirm').disabled)$('journey-confirm').click();
     });
-    $('journey-example').addEventListener('click',()=>{if($('journey-chat-input').disabled)return;$('journey-chat-input').value='中央広場から駅前へ1人';$('journey-chat-form').requestSubmit();});
+    $('journey-example').addEventListener('click',()=>{if($('journey-chat-input').disabled)return;$('journey-chat-input').value='中央広場から駅前へ1人';$('journey-chat-form').requestSubmit();go(document.querySelector('.chat-panel'));});
     $('experience-next-button').addEventListener('click',()=>{
       const s=getState();if(s.busy||s.pending)return;const actor=$('experience-next-button').dataset.actor;
       if(actor){$('demo-roles').querySelector(`[data-demo-role="${actor}"]`).click();return;}

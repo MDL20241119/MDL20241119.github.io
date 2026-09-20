@@ -27,7 +27,7 @@
       $('journey-messages').scrollTop=$('journey-messages').scrollHeight;
     }
     function prompt(){
-      if(!selection.origin)return 'どこから乗りますか？\n地図をタップするか、場所名を送ってください。';
+      if(!selection.origin)return 'どこから乗りますか？\n地図でもチャットでも選べます。';
       if(!selection.destination)return stopName(selection.origin)+'からですね。\n次は、どこで降りますか？';
       if(!selection.passengers)return '何人で乗りますか？\n1〜3人から選ぶか、「2人」のように送ってください。';
       return '場所と人数がそろいました。\n下の「内容を確認する」から、最後に確認しましょう。';
@@ -51,7 +51,8 @@
     }
     function chooseStop(id){
       if(!['origin','destination'].includes(target)){say('変更する場合は、地図の上の「乗る場所」か「降りる場所」を選んでください。');return;}
-      apply({[target]:id},names[target]+'：'+stopName(id));
+      const changed=apply({[target]:id},names[target]+'：'+stopName(id));
+      if(changed&&target==='passengers')document.querySelector('.chat-panel').scrollIntoView({block:'center',behavior:'auto'});
     }
     function setTarget(field){
       if(locked()||fixedStops())return;
@@ -163,7 +164,7 @@
       person=user.role==='rider'?user.id:null;document.body.classList.toggle('rider-ui',!!person);panel.hidden=!person;
       selection=empty();target='origin';undo=[];announced.clear();lastActiveId=null;lastCompletion=null;editingId=null;stops=[];
       $('journey-messages').replaceChildren();$('journey-chat-input').value='';$('journey-status').hidden=true;
-      if(person){say('こんにちは。\n'+prompt());renderSelection();}
+      if(person){say(prompt());renderSelection();}
     }
     function leave(){person=null;panel.hidden=true;document.body.classList.remove('rider-ui');$('journey-vehicle-dialog').close();$('journey-messages').replaceChildren();}
     function edit(ride){selection={origin:ride.origin_stop_id,destination:ride.destination_stop_id,passengers:ride.passengers};undo=[];editingId=ride.id;target=ride.status==='assigned'?'passengers':'origin';say(ride.status==='assigned'?'人数を変更できます。変更後に確認してください。':'依頼内容を変更できます。地図かチャットで選び直してください。');renderSelection();panel.scrollIntoView({block:'start',behavior:'smooth'});}

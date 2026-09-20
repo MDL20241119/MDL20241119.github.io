@@ -23,41 +23,44 @@
 /* Passenger: the map and LINE-style conversation are always connected. */
 .rider-ui{padding-bottom:calc(134px + env(safe-area-inset-bottom))}
 .rider-ui .topbar,.rider-ui .demo-shell,.rider-ui main,.rider-ui footer{max-width:540px;margin-inline:auto}
-.rider-ui .topbar{padding:10px 12px;gap:8px}
+.rider-ui .test-strip{display:none}
+.rider-ui .topbar{padding:7px 12px;gap:8px;min-height:52px}
+.rider-ui .account{display:none}
+.rider-ui .brand:after{content:"体験版";font-size:12px;letter-spacing:0;border:1px solid #111;padding:3px 6px;margin-left:6px}
 .rider-ui .brand{font-size:19px;gap:8px}
 .rider-ui .brand-symbol{height:30px;width:30px}
 .rider-ui .brand small,.rider-ui .account>span{display:none}
 .rider-ui .account .text-button{font-size:14px;min-height:44px;padding:6px 0}
 .rider-ui .demo-shell{padding:0 12px}
-.rider-ui .demo-roles{padding-top:10px;grid-template-columns:1fr 1.23fr .87fr}
-.rider-ui .demo-roles a{font-size:16px;min-height:50px;padding:8px 4px;line-height:1.3}
-.rider-ui .demo-scope{font-size:13px;line-height:1.4;margin:8px 0 0}
-.rider-ui main{padding:12px}
+.rider-ui .demo-roles{padding-top:8px;grid-template-columns:1fr 1.23fr .87fr}
+.rider-ui .demo-roles a{font-size:16px;min-height:44px;padding:8px 4px;line-height:1.3}
+.rider-ui .demo-scope{font-size:12px;line-height:1.4;margin:6px 0 0}
+.rider-ui main{padding:8px 12px 12px}
 .rider-ui .workspace-heading,.rider-ui .journey-heading{display:none}
 .rider-ui .journey{margin:0}
-.rider-ui .journey-steps{margin:0 0 12px;border:1px solid #111;grid-template-columns:repeat(4,minmax(0,1fr))}
-.rider-ui .journey-steps li{min-height:54px;padding:6px 2px;flex-direction:column;gap:2px}
+.rider-ui .journey-steps{margin:0 0 10px;border:1px solid #111;grid-template-columns:repeat(4,minmax(0,1fr))}
+.rider-ui .journey-steps li{min-height:44px;padding:4px 2px;flex-direction:column;gap:2px}
 .rider-ui .journey-steps span{font-size:17px;line-height:1.1}
 .rider-ui .journey-steps b{font-size:14px}
 .rider-ui .journey-steps li:not(:last-child):after{display:none}
 .rider-ui .journey-steps li+li{border-left:1px solid #aaa}
 .rider-ui .journey-grid{display:flex;flex-direction:column;border:1px solid #111;overflow:hidden}
-.rider-ui .map-panel{padding-top:10px}
-.rider-ui .place-tabs{padding:0 10px;gap:8px}
-.rider-ui .place-tabs button{min-height:70px;padding:9px;text-align:left}
-.rider-ui .place-tabs button[aria-pressed=true]{padding:8px}
+.rider-ui .map-panel{padding-top:8px}
+.rider-ui .place-tabs{padding:0 8px 8px;gap:8px}
+.rider-ui .place-tabs button{min-height:62px;padding:7px;text-align:left}
+.rider-ui .place-tabs button[aria-pressed=true]{padding:6px}
 .rider-ui .place-tabs small{font-size:14px;margin-bottom:3px}
 .rider-ui .place-tabs strong{font-size:18px;line-height:1.3}
-.rider-ui .map-prompt{font-size:17px;line-height:1.4;margin:10px;min-height:0;font-weight:700;color:#111}
-.rider-ui #journey-map{height:280px}
-.rider-ui .map-note{font-size:12px;line-height:1.4;margin:0;padding:7px 10px}
+.rider-ui .map-prompt{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;min-height:0}
+.rider-ui #journey-map{height:240px}
+.rider-ui .map-note{font-size:12px;line-height:1.4;margin:0;padding:5px 8px}
 .rider-ui .chat-panel{border:0;border-top:1px solid #111}
-.rider-ui .chat-heading{padding:8px 10px;gap:8px;min-height:48px}
+.rider-ui .chat-heading{padding:4px 10px;gap:8px;min-height:48px}
 .rider-ui .chat-heading>.guide-avatar{width:28px;height:28px;font-size:20px}
 .rider-ui .chat-heading h3{font-size:18px}
 .rider-ui .chat-heading p{display:none}
 #journey-example{font-size:15px;min-height:44px;padding:6px 2px;margin-left:auto;white-space:nowrap}
-.rider-ui .chat-messages{min-height:132px;max-height:190px;padding:14px 12px;scroll-behavior:auto;overscroll-behavior:auto}
+.rider-ui .chat-messages{min-height:110px;max-height:140px;padding:12px;scroll-behavior:auto;overscroll-behavior:auto}
 .rider-ui .chat-row{grid-template-columns:27px minmax(0,1fr);gap:4px 8px;margin-bottom:14px}
 .rider-ui .chat-row.user{grid-template-columns:1fr}
 .rider-ui .chat-row .guide-avatar{width:27px;height:27px}
@@ -70,7 +73,7 @@
 .rider-ui .chat-composer{padding:10px;gap:8px}
 .rider-ui .chat-composer input{min-width:0;min-height:56px;font-size:18px;padding:10px 12px}
 .rider-ui .chat-composer button{min-height:56px;font-size:18px;padding:10px;white-space:nowrap}
-.rider-ui .chat-help{font-size:13px;padding:0 12px 12px;line-height:1.4}
+.rider-ui .chat-help{font-size:12px;padding:0 12px 10px;line-height:1.4;margin:0}
 .rider-ui .journey-summary{border:0;margin:0;padding:14px}
 .rider-ui .selection-heading{display:block}
 .rider-ui .selection-heading h3{font-size:21px;margin:0 0 8px}
@@ -149,7 +152,11 @@
   .manual-experience .demo-roles a{font-size:16px;min-height:50px}
   .manual-experience .demo-scope{font-size:13px;line-height:1.4;margin-top:8px}
   .manual-experience main{padding:14px 12px 24px}
-  .rider-ui main{padding-top:10px}
+  .rider-ui main{padding-top:8px}
+  .manual-experience.rider-ui .topbar{padding:7px 12px}
+  .manual-experience.rider-ui .demo-roles{padding-top:8px}
+  .manual-experience.rider-ui .demo-roles a{min-height:44px}
+  .manual-experience.rider-ui .demo-scope{font-size:12px;line-height:1.4;margin-top:6px}
   .manual-experience .workspace-heading h1{font-size:26px}
   .manual-experience .workspace-heading{margin:0 0 14px;padding-bottom:10px}
   .manual-experience .sync{font-size:12px;margin-top:4px;gap:8px}
@@ -157,9 +164,9 @@
   .manual-experience .experience-next{display:block;padding:14px}
   .manual-experience .experience-next p{font-size:17px}
   .manual-experience .experience-next button{width:100%;margin-top:12px}
-  .rider-ui #journey-map{height:260px}
+  .rider-ui #journey-map{height:220px}
   .rider-ui .chat-bubble{font-size:18px}
-  .rider-ui .chat-messages{max-height:178px;min-height:122px}
+  .rider-ui .chat-messages{max-height:140px;min-height:110px}
   .rider-ui .chat-heading h3{font-size:17px}
   #journey-example{font-size:14px}
   .rider-ui .place-tabs strong{font-size:17px}

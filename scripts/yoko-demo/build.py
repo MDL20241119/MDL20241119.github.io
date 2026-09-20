@@ -45,7 +45,7 @@ def build(source, ui_only=False):
     html=html.replace('<meta name="color-scheme" content="light">', '<meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#F8F7F3">')
     html=html.replace('width=device-width,initial-scale=1','width=device-width,initial-scale=1,viewport-fit=cover')
     html=html.replace('href="/style.css"','href="./style.css"').replace('<script src="/app.js" defer></script>',
-        '<link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14b"><link rel="stylesheet" href="./driver.css?v=15"><link rel="stylesheet" href="./neo-swiss.css?v=15c"><link rel="stylesheet" href="./line-chat.css?v=15"><link rel="stylesheet" href="./experience.css?v=17"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=17" defer></script><script src="./operations.js?v=16b" defer></script><script src="./driver.js?v=17" defer></script><script src="./admin.js?v=17" defer></script><script src="./experience.js?v=17" defer></script><script src="./demo-bridge.js?v=17" defer></script>')
+        '<link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14b"><link rel="stylesheet" href="./driver.css?v=15"><link rel="stylesheet" href="./neo-swiss.css?v=15c"><link rel="stylesheet" href="./line-chat.css?v=15"><link rel="stylesheet" href="./experience.css?v=17b"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=17b" defer></script><script src="./operations.js?v=16b" defer></script><script src="./driver.js?v=17" defer></script><script src="./admin.js?v=17" defer></script><script src="./experience.js?v=17b" defer></script><script src="./demo-bridge.js?v=17" defer></script>')
     html=html.replace('href="/" aria-label','href="./" aria-label')
     html=html.replace('ローカル試験 <span class="strip-detail">架空データのみ・実際の送迎は行いません','体験デモ <span class="strip-detail">架空の地域・実際の送迎は行いません')
     html=html.replace('Webアプリをはじめる','3つの役割で、体験する')
@@ -56,7 +56,7 @@ def build(source, ui_only=False):
     html=html.replace('<form id="login-form">','<form id="login-form" hidden>').replace('<button id="other-login"','<button hidden id="other-login"')
     html=html.replace('<main id="main" tabindex="-1">','''<div class="demo-shell">
 <nav id="demo-roles" class="demo-roles" aria-label="デモの役割を切り替える"><a href="?role=user" data-demo-role="rider-a1">ユーザー用</a><a href="?role=driver" data-demo-role="driver-a1">ドライバー用</a><a href="?role=admin" data-demo-role="admin-a1">管理者用</a></nav>
-<p class="demo-scope">このブラウザーだけに保存するデモです。端末間の共有はありません。</p>
+<p class="demo-scope">この端末だけに保存・実際の送迎は行いません</p>
 <section id="demo-boot" class="notice" role="status"><b id="demo-boot-title">デモを準備しています…</b><p id="demo-boot-message">初回は動作に必要なファイルを読み込みます。そのままお待ちください。</p><button id="demo-reload" class="secondary" type="button" hidden>もう一度読み込む</button></section>
 </div><main id="main" tabindex="-1">''')
     html=re.sub(r'      <div id="driver-safety".*?</div>\n','',html,count=1)
