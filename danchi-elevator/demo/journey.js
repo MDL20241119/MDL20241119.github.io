@@ -27,7 +27,7 @@
       $('journey-messages').scrollTop=$('journey-messages').scrollHeight;
     }
     function prompt(){
-      if(!selection.origin)return 'どこから乗りますか？\n地図の場所ボタンか、場所名で教えてください。';
+      if(!selection.origin)return 'どこから乗りますか？\n地図をタップするか、場所名を送ってください。';
       if(!selection.destination)return stopName(selection.origin)+'からですね。\n次は、どこで降りますか？';
       if(!selection.passengers)return '何人で乗りますか？\n1〜3人から選ぶか、「2人」のように送ってください。';
       return '場所と人数がそろいました。\n下の「内容を確認する」から、最後に確認しましょう。';
@@ -73,7 +73,7 @@
       const tiles=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxZoom:18,attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">地理院タイル</a>'}).addTo(map);
       tiles.on('tileerror',()=>{$('map-error').hidden=false;});
       tiles.on('load',()=>{const images=[...$('journey-map').querySelectorAll('.leaflet-tile')];if(images.length&&images.every(img=>img.complete&&img.naturalWidth>0))$('map-error').hidden=true;});
-      map.setView([33.1998,131.5718],15);
+      map.setView([33.1998,131.5718],15);panel.classList.add('has-map');
       if(window.ResizeObserver){let previousSize='';new ResizeObserver(()=>{const node=$('journey-map'),size=node.clientWidth+'x'+node.clientHeight;if(node.clientWidth&&node.clientHeight&&size!==previousSize){previousSize=size;fit();}}).observe($('journey-map'));}
     }
     function fit(){if(map&&markers.size){map.invalidateSize();map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,46],maxZoom:15,animate:false});}}
@@ -103,7 +103,7 @@
       if(points[selection.origin]&&points[selection.destination])route=L.polyline([points[selection.origin],points[selection.destination]],{color:'#204e83',weight:3,dashArray:'7 9',opacity:.65,interactive:false}).addTo(map);
     }
     function renderChoices(){
-      const choices=$('journey-choices');choices.replaceChildren();
+      const choices=$('journey-choices');choices.replaceChildren();choices.dataset.kind=target==='passengers'||fixedStops()?'people':'stops';
       if(locked())return;
       if(target==='passengers'||fixedStops()){
         for(let n=1;n<=3;n++){const b=document.createElement('button');b.type='button';b.textContent=n+'人';b.setAttribute('aria-label','チャットで'+n+'人を選ぶ');b.addEventListener('click',()=>apply({passengers:n},n+'人'));choices.append(b);}
@@ -118,7 +118,7 @@
         $('pick-'+field).setAttribute('aria-pressed',String(target===field));
       }
       const active=activeRide(),frozen=locked(),fixed=fixedStops();
-      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'乗降場所を選びました。次は人数を選んでください。':'地図の場所ボタンを押して、'+names[target]+'を選んでください。';
+      $('map-prompt').textContent=frozen&&active?'依頼した乗降場所を確認できます。':fixed?'車両確定後は、乗る人数を変更できます。':complete()?'場所と人数がそろいました。内容を確認して進みましょう。':target==='passengers'?'③ 下のチャットで人数を選ぶ':(target==='origin'?'① 乗る場所をタップ':'② 降りる場所をタップ');
       for(const id of ['pick-origin','pick-destination','summary-origin','summary-destination'])$(id).disabled=frozen||fixed;
       for(const b of $('journey-passengers').querySelectorAll('button')){b.setAttribute('aria-pressed',String(Number(b.dataset.people)===selection.passengers));b.disabled=frozen;}
       $('journey-chat-input').disabled=frozen;$('journey-chat-send').disabled=frozen;

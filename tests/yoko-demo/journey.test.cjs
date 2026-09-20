@@ -8,7 +8,6 @@ const dir=path.join(root,'danchi-elevator/demo');
 const parse=require(path.join(dir,'journey-input.js')).parse;
 const stops=[{id:'stop-a',name:'中央広場',active:true},{id:'stop-b',name:'駅前ロータリー',active:true},{id:'stop-c',name:'ふれあいセンター',active:true}];
 const checks=[];
-const phone=process.env.YOKO_TEST_MOBILE==='1';
 function check(name,fn){fn();checks.push(name);}
 check('One-sentence Japanese route and full-width passenger count resolve registered stop IDs',()=>assert.deepEqual(parse('中央広場から駅前ロータリーへ２人でお願いします',{stops}).update,{origin:'stop-a',destination:'stop-b',passengers:2}));
 check('Passenger-only input preserves the selected route',()=>assert.deepEqual(parse('ふたり',{stops,selection:{origin:'stop-a',destination:'stop-b'},target:'passengers'}).update,{passengers:2}));
@@ -29,44 +28,42 @@ check('Explicit destination correction changes only the destination',()=>assert.
   assert.equal(dispatch(null,'/demo/initialize',{}).status,200);
   const dom=new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf8'),{url:'https://example.test/danchi-elevator/demo/?role=user',runScripts:'outside-only',pretendToBeVisual:true});
   const w=dom.window;let actor='rider-a1';
-  const mediaListeners=[];const media={matches:phone,addEventListener:(name,fn)=>mediaListeners.push(fn)};w.matchMedia=()=>media;
+  w.matchMedia=()=>({matches:false,addEventListener(){}});
   w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};
   w.HTMLElement.prototype.scrollIntoView=function(){};
   w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return{ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);return{ok:result.status<400,status:result.status,json:async()=>result.data};};
-  for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','mobile.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
+  for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','experience.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
   const $=id=>w.document.getElementById(id);
   const settle=async()=>{for(let i=0;i<20;i++)await new Promise(r=>setImmediate(r));};
   const chat=async text=>{$('journey-chat-input').value=text;$('journey-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();};
   await settle();
   check('Rider starts with no implied route or passenger count',()=>{assert.equal($('journey-confirm').disabled,true);assert.equal($('summary-origin-name').textContent,'未選択');});
-  if(phone){
-    check('Phone starts on the map and exposes four named destinations',()=>{assert.equal(w.document.body.dataset.mobileView,'map');assert.equal($('mobile-nav').querySelectorAll('button').length,4);assert.equal($('mobile-continue').disabled,true);});
-    $('mobile-nav').querySelector('[data-mobile-view=chat]').click();$('journey-chat-input').value='中央広場から';
-    $('mobile-nav').querySelector('[data-mobile-view=map]').click();$('mobile-nav').querySelector('[data-mobile-view=chat]').click();
-    check('Switching input views preserves an unfinished chat without submitting',()=>{assert.equal($('journey-chat-input').value,'中央広場から');assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
-  }
+  check('The map and chat stay in one connected rider surface with no separate view tabs',()=>{assert.equal(w.document.body.dataset.experienceRole,'rider');assert.equal($('mobile-nav'),null);assert.equal($('journey-panel').querySelectorAll('.journey-grid>.map-panel,.journey-grid>.chat-panel').length,2);assert.equal(w.document.querySelectorAll('[data-mobile-hidden]').length,0);assert.equal($('user-action-dock').hidden,false);});
+  $('user-next').click();await settle();
+  check('The bottom action never creates a draft from missing inputs',()=>{assert.equal($('confirm-dialog').open,false);assert.match($('user-next').textContent,/乗る場所/);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
+  $('journey-example').click();await settle();
+  check('The example only fills the shared route and count without booking',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'1');assert.equal($('confirm-dialog').open,false);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
+  $('journey-clear').click();await settle();
   await chat('中央広場から駅前ロータリーへ2人');
   check('Chat selection updates the original confirmation form but does not save a ride',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'2');assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
-  if(phone){
-    $('mobile-continue').click();
-    check('Continue opens review with the same route and no booking side effect',()=>{assert.equal(w.document.body.dataset.mobileView,'review');assert.equal($('journey-confirm').disabled,false);assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'2');assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
-    media.matches=false;mediaListeners.forEach(fn=>fn());
-    check('Widening restores the desktop layout and hides phone navigation',()=>{assert.equal(w.document.body.classList.contains('mobile-ui'),false);assert.equal($('mobile-nav').hidden,true);});
-    media.matches=true;mediaListeners.forEach(fn=>fn());
-    check('Returning to phone width preserves the review and inputs',()=>{assert.equal(w.document.body.dataset.mobileView,'review');assert.equal($('mobile-nav').hidden,false);assert.equal($('passengers').value,'2');});
-    $('summary-destination').click();
-    check('Editing a place from review opens the map and retains passenger count',()=>{assert.equal(w.document.body.dataset.mobileView,'map');assert.equal($('passengers').value,'2');});
-  }
+  $('journey-selection-details').open=true;$('journey-chat-input').value='入力途中';$('journey-selection-details').open=false;
+  check('Opening and closing the optional review preserves the shared input and unfinished chat',()=>{assert.equal($('journey-chat-input').value,'入力途中');assert.equal($('passengers').value,'2');assert.match($('user-action-caption').textContent,/中央広場.*駅前ロータリー.*2人/);});
+  $('summary-destination').click();
+  check('Editing a selected destination retains the passenger count',()=>assert.equal($('passengers').value,'2'));
   await chat('未登録の病院から駅前へ3人');
   check('Invalid mixed input leaves all previous form values unchanged',()=>{assert.equal($('origin').value,'stop-a');assert.equal($('destination').value,'stop-b');assert.equal($('passengers').value,'2');});
   await chat('<img src=x onerror=alert(1)>');
   check('Chat renders untrusted text without creating markup',()=>assert.equal($('journey-messages').querySelectorAll('img').length,0));
-  $('journey-confirm').click();await settle();
+  $('user-next').click();await settle();
   check('Review uses an actual Core draft and still has no booking side effect',()=>{assert.equal($('confirm-dialog').open,true);assert.match($('confirm-details').textContent,/中央広場/);assert.match($('confirm-details').textContent,/2名/);assert.equal(dispatch('rider-a1','/api/snapshot').data.rides.length,1);});
   $('commit').click();await settle();
   let ride=dispatch('rider-a1','/api/snapshot').data.rides.find(r=>r.status==='requested');
   check('Explicit confirmation saves exactly one Core ride and locks new input',()=>{assert.ok(ride);assert.equal(ride.passengers,2);assert.equal($('journey-chat-input').disabled,true);assert.equal($('journey-confirm').disabled,true);});
-  if(phone)check('A saved request opens status with cancellation still accessible',()=>{assert.equal(w.document.body.dataset.mobileView,'rides');assert.equal($('work-grid').hasAttribute('data-mobile-hidden'),false);assert.ok($('rides').querySelector('[data-action=cancel]'));});
+  check('A saved request opens records with cancellation and the next-role guide accessible',()=>{assert.equal($('rider-records').open,true);assert.equal($('rides-section').parentElement.id,'rider-records');assert.ok($('rides').querySelector('[data-action=cancel]'));assert.equal($('experience-next').hidden,false);assert.equal(w.localStorage.getItem('yoko-demo-experience:ride'),ride.id);});
+  $('experience-next-button').click();await settle();
+  check('The guide selects the newly created receipt over the other pending seed receipt',()=>{assert.equal(w.document.body.dataset.experienceRole,'driver');assert.match($('driver-selected-route').textContent,new RegExp(ride.id.slice(-8)));assert.equal($('stopped').checked,false);assert.equal(dispatch('rider-a1','/api/rides/'+ride.id).data.status,'requested');assert.equal($('user-action-dock').hidden,true);});
+  $('demo-roles').querySelector('[data-demo-role="rider-a1"]').click();await settle();
+  check('Returning to the rider restores the same active receipt and its actions',()=>{assert.equal($('rides-section').parentElement.id,'rider-records');assert.equal($('rider-records').open,true);assert.ok($('rides').querySelector('[data-action=change]'));});
   $('rides').querySelector('[data-action=change]').click();await settle();await chat('3人');$('journey-confirm').click();await settle();$('commit').click();await settle();
   ride=dispatch('rider-a1','/api/rides/'+ride.id).data;
   check('Existing change flow still edits the saved reservation through a Core draft',()=>assert.equal(ride.passengers,3));
@@ -76,5 +73,5 @@ check('Explicit destination correction changes only the destination',()=>assert.
   check('Switching to a driver hides the rider-only map and chat',()=>assert.equal($('journey-panel').hidden,true));
   dom.window.close();
   const result={status:'PASS',count:checks.length,checks,scope:'Node parser + JSDOM UI with the actual Pyodide Core; live map rendering and IndexedDB are checked separately'};
-  fs.writeFileSync(path.join(__dirname,phone?'mobile-journey-result.json':'journey-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+  fs.writeFileSync(path.join(__dirname,'manual-journey-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 })().catch(error=>{console.error(error);process.exitCode=1;});

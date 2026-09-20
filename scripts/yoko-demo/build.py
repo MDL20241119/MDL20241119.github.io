@@ -45,7 +45,7 @@ def build(source, ui_only=False):
     html=html.replace('<meta name="color-scheme" content="light">', '<meta name="color-scheme" content="light"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#F8F7F3">')
     html=html.replace('width=device-width,initial-scale=1','width=device-width,initial-scale=1,viewport-fit=cover')
     html=html.replace('href="/style.css"','href="./style.css"').replace('<script src="/app.js" defer></script>',
-        '<link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14b"><link rel="stylesheet" href="./driver.css?v=15"><link rel="stylesheet" href="./neo-swiss.css?v=15c"><link rel="stylesheet" href="./line-chat.css?v=15"><link rel="stylesheet" href="./mobile.css?v=16b"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=16b" defer></script><script src="./operations.js?v=16b" defer></script><script src="./driver.js?v=16b" defer></script><script src="./admin.js?v=15" defer></script><script src="./mobile.js?v=16b" defer></script><script src="./demo-bridge.js?v=16b" defer></script>')
+        '<link rel="stylesheet" href="../../oita-mobility/assets/leaflet.css"><link rel="stylesheet" href="./demo.css?v=3"><link rel="stylesheet" href="./journey.css?v=14b"><link rel="stylesheet" href="./driver.css?v=15"><link rel="stylesheet" href="./neo-swiss.css?v=15c"><link rel="stylesheet" href="./line-chat.css?v=15"><link rel="stylesheet" href="./experience.css?v=17"><script src="../../oita-mobility/assets/leaflet.js" defer></script><script src="./journey-input.js?v=14" defer></script><script src="./journey.js?v=17" defer></script><script src="./operations.js?v=16b" defer></script><script src="./driver.js?v=17" defer></script><script src="./admin.js?v=17" defer></script><script src="./experience.js?v=17" defer></script><script src="./demo-bridge.js?v=17" defer></script>')
     html=html.replace('href="/" aria-label','href="./" aria-label')
     html=html.replace('ローカル試験 <span class="strip-detail">架空データのみ・実際の送迎は行いません','体験デモ <span class="strip-detail">架空の地域・実際の送迎は行いません')
     html=html.replace('Webアプリをはじめる','3つの役割で、体験する')
@@ -62,7 +62,8 @@ def build(source, ui_only=False):
     html=re.sub(r'      <div id="driver-safety".*?</div>\n','',html,count=1)
     panels='\n'.join((ROOT/f'scripts/yoko-demo/{role}.html').read_text() for role in ['journey','driver','admin'])
     html=html.replace('      <div class="work-grid" id="work-grid">',panels+'\n      <div class="work-grid" id="work-grid">')
-    html=html.replace('Web試験版 0.12.0','公開体験デモ 0.16.0')
+    html=re.sub(r'<div class="support"><b>困ったときは</b>(.*?)</div>',r'<details class="support"><summary>困ったときは</summary>\1</details>',html,count=1)
+    html=html.replace('Web試験版 0.12.0','公開体験デモ 0.17.0')
     html=html.replace('</footer>','<span><a href="./about.html">このデモについて</a> · <button id="reset-demo" class="text-button" type="button">デモを最初から</button></span></footer>')
     html=html.replace('</body>','''<dialog id="reset-dialog" aria-labelledby="reset-title"><div class="dialog-content"><h2 id="reset-title">デモを最初からやり直しますか？</h2><p>このブラウザーのデモ履歴を初期状態に戻します。他の端末や実際の運行には影響しません。</p><div class="actions"><button id="reset-back" class="secondary" type="button">戻る</button><button id="reset-confirm" class="primary" type="button">初期状態に戻す</button></div></div></dialog></body>''')
     (TARGET/'index.html').write_text(html)
@@ -73,7 +74,7 @@ def build(source, ui_only=False):
     ui=ui.replace("${date(snap.as_of)} 時点（日本時間）","${date(snap.as_of)} 更新（このブラウザー）")
     ui += '\n' + (ROOT/'scripts/yoko-demo/ui-hooks.js').read_text()
     (TARGET/'app.js').write_text(ui)
-    print(json.dumps({'ui_version':'0.16.0','core_rebuilt':not ui_only,'core_bytes':(TARGET/'core-bundle.json').stat().st_size}))
+    print(json.dumps({'ui_version':'0.17.0','core_rebuilt':not ui_only,'core_bytes':(TARGET/'core-bundle.json').stat().st_size}))
 
 if __name__=='__main__':
     parser=argparse.ArgumentParser();parser.add_argument('--source',type=Path,required=True);parser.add_argument('--ui-only',action='store_true');args=parser.parse_args();build(args.source,args.ui_only)

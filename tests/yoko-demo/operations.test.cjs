@@ -5,7 +5,6 @@ const {JSDOM}=require('jsdom');
 const {loadPyodide}=require('pyodide');
 const dir=path.resolve(__dirname,'../../danchi-elevator/demo');
 const checks=[],windows=[];
-const phone=process.env.YOKO_TEST_MOBILE==='1';
 function check(name,fn){fn();checks.push(name);}
 (async()=>{
   const py=await loadPyodide();await py.loadPackage('tzdata');
@@ -18,10 +17,10 @@ function check(name,fn){fn();checks.push(name);}
   const settle=async()=>{for(let i=0;i<25;i++)await new Promise(r=>setImmediate(r));};
   async function open(initial){
     const dom=new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf8'),{url:'https://example.test/danchi-elevator/demo/',runScripts:'outside-only',pretendToBeVisual:true});
-    const w=dom.window;windows.push(w);let actor=initial;w.matchMedia=()=>({matches:phone,addEventListener(){}});
+    const w=dom.window;windows.push(w);let actor=initial;w.matchMedia=()=>({matches:false,addEventListener(){}});
     w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};w.HTMLElement.prototype.scrollIntoView=function(){};
     w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return {ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);return{ok:result.status<400,status:result.status,json:async()=>result.data};};
-    for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','mobile.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
+    for(const file of ['journey-input.js','journey.js','operations.js','driver.js','admin.js','experience.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
     await settle();const $=id=>w.document.getElementById(id);
     return {w,$,chat:async(role,text)=>{$(role+'-chat-input').value=text;$(role+'-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();},refresh:async()=>{$('refresh').click();await settle();}};
   }
@@ -30,18 +29,13 @@ function check(name,fn){fn();checks.push(name);}
   const initial=snapshot('driver-a1').rides.find(r=>r.status==='requested'),ride=()=>dispatch('driver-a1','/api/rides/'+initial.id).data;
   check('Driver console shows only the driver surface and the real pending count',()=>{assert.equal(d.$('driver-panel').hidden,false);assert.equal(d.$('admin-panel').hidden,true);assert.equal(d.$('journey-panel').hidden,true);assert.equal(d.$('driver-queue-count').textContent,'1件');assert.equal(d.$('driver-seats').textContent,'3 / 3名');});
   check('Admin separates requests from people waiting to board',()=>{assert.match(a.$('admin-waiting-orders').textContent,/1/);assert.match(a.$('admin-waiting-people').textContent,/2/);});
-  if(phone){
-    check('Driver starts on the pending queue while admin starts on the overview',()=>{assert.equal(d.w.document.body.dataset.mobileView,'queue');assert.equal(a.w.document.body.dataset.mobileView,'overview');});
-    d.$('driver-queue-list').querySelector('[data-driver-select]').click();
-    check('Choosing a pending ride opens driver operation without accepting or checking stopped',()=>{assert.equal(d.w.document.body.dataset.mobileView,'drive');assert.equal(d.$('stopped').checked,false);assert.equal(ride().status,'requested');});
-    d.$('mobile-nav').querySelector('[data-mobile-view=chat]').click();
-  }
+  check('The manual driver board and action remain together while admin defaults to pending',()=>{assert.equal(d.w.document.body.dataset.experienceRole,'driver');assert.equal(a.w.document.body.dataset.experienceRole,'admin');assert.equal(d.$('mobile-nav'),null);assert.equal(d.$('driver-chat-details').open,false);assert.equal(a.$('admin-quick-filters').querySelector('[data-admin-filter=requested]').getAttribute('aria-pressed'),'true');assert.equal(a.$('admin-result-list').querySelectorAll('[data-admin-ride]').length,1);});
+  d.$('driver-queue-list').querySelector('[data-driver-select]').click();
+  check('Selecting a pending receipt changes no state and never checks stopped',()=>{assert.equal(d.$('stopped').checked,false);assert.equal(ride().status,'requested');assert.equal(d.w.document.querySelectorAll('[data-mobile-hidden]').length,0);});
   await d.chat('driver','中央広場の依頼');
   check('Driver chat locates a stored receipt without accepting it',()=>{assert.ok(d.$('driver-chat-log').querySelector('[data-ops-ride]'));assert.equal(ride().status,'requested');});
-  if(phone){
-    d.$('driver-chat-log').querySelector('[data-ops-ride]').click();
-    check('Choosing a chat result opens its operation with the stopped safeguard intact',()=>{assert.equal(d.w.document.body.dataset.mobileView,'drive');assert.equal(d.$('stopped').checked,false);assert.equal(ride().status,'requested');});
-  }
+  d.$('driver-chat-log').querySelector('[data-ops-ride]').click();
+  check('A chat result selects the actual receipt while retaining the stopped safeguard',()=>{assert.equal(d.$('stopped').checked,false);assert.equal(ride().status,'requested');});
   await d.chat('driver','<img src=x onerror=alert(1)>');
   check('Untrusted driver chat is text and does not create markup',()=>assert.equal(d.$('driver-chat-log').querySelectorAll('img').length,0));
   d.$('driver-next').click();await settle();
@@ -65,11 +59,15 @@ function check(name,fn){fn();checks.push(name);}
   check('Boarding changes the next route tile and administrator passenger counts',()=>{assert.equal(ride().status,'onboard');assert.equal(d.$('driver-next').textContent,'降車');assert.equal(d.$('driver-runs').querySelector('[aria-current=step]').classList.contains('dropoff'),true);assert.equal(a.$('admin-waiting-people').textContent,'0名');assert.equal(a.$('admin-onboard').textContent,'2名');});
   d.$('stopped').checked=true;d.$('driver-next').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
   check('Completion persists history, releases seats and clears the active route',()=>{assert.equal(ride().status,'completed');assert.equal(d.$('driver-confirmed-count').textContent,'0件 / 0名');assert.equal(d.$('driver-seats').textContent,'3 / 3名');assert.equal(d.$('driver-next').disabled,true);assert.match(d.$('rides').textContent,new RegExp(initial.id.slice(-8)));assert.equal(a.$('admin-onboard').textContent,'0名');});
+  a.$('admin-quick-filters').querySelector('[data-admin-filter=history]').click();
+  check('Quick filters show persisted completed receipts without changing them',()=>{assert.equal(a.$('admin-result-list').querySelectorAll('[data-admin-ride]').length,2);assert.equal(a.$('admin-quick-filters').querySelector('[data-admin-filter=history]').getAttribute('aria-pressed'),'true');assert.equal(ride().status,'completed');});
+  a.$('admin-quick-filters').querySelector('[data-admin-filter=requested]').click();
+  check('The pending filter accurately shows no pending requests after completion',()=>assert.equal(a.$('admin-result-list').querySelectorAll('[data-admin-ride]').length,0));
   await a.chat('admin','中央広場の依頼');
   check('Admin chat filters the map-linked records by a registered stop',()=>{assert.match(a.$('admin-result-label').textContent,/中央広場/);assert.equal(a.$('admin-result-list').querySelectorAll('[data-admin-ride]').length,2);});
   await a.chat('admin','受付番号 '+initial.id.slice(-8));a.$('admin-result-list').querySelector('[data-admin-ride]').click();await settle();
   check('Selecting an administrator result opens the matching existing record',()=>{assert.equal(a.$('ride-search').value,initial.id);assert.equal(a.$('rides').querySelectorAll('[data-ride-card]').length,1);});
-  if(phone)check('An admin result opens the matching record view',()=>{assert.equal(a.w.document.body.dataset.mobileView,'records');assert.equal(a.$('work-grid').hasAttribute('data-mobile-hidden'),false);});
+  check('An admin result opens the matching detailed record without hiding the overview',()=>{assert.equal(a.$('admin-records').open,true);assert.equal(a.$('admin-panel').hidden,false);});
   const before=JSON.stringify(snapshot('admin-a1').rides);await a.chat('admin','降車');await a.chat('admin','<img src=x onerror=alert(1)>');
   check('Admin chat cannot mutate rides or interpret HTML',()=>{assert.equal(JSON.stringify(snapshot('admin-a1').rides),before);assert.equal(a.$('admin-chat-log').querySelectorAll('img').length,0);});
   const u=await open('rider-a1');u.$('journey-chat-input').value='ふれあいセンターから駅前へ1人';u.$('journey-chat-form').dispatchEvent(new u.w.Event('submit',{bubbles:true,cancelable:true}));await settle();u.$('journey-confirm').click();await settle();u.$('commit').click();await settle();await d.refresh();
@@ -78,7 +76,7 @@ function check(name,fn){fn();checks.push(name);}
   check('A cancellation in another role invalidates an open driver confirmation',()=>{assert.equal(d.$('driver-action-dialog').open,false);assert.equal(d.$('stopped').checked,false);assert.equal(d.$('driver-next').disabled,true);assert.match(d.$('message').textContent,/更新/);});
   d.$('demo-roles').querySelector('[data-demo-role=admin-a1]').click();await settle();
   check('Role switching restores the original records panel and prevents driver UI leakage',()=>{assert.equal(d.$('driver-panel').hidden,true);assert.equal(d.$('admin-panel').hidden,false);assert.equal(d.$('rides-section').parentElement.id,'work-grid');assert.equal(d.$('driver-action-dialog').open,false);});
-  if(phone)check('Changing roles replaces navigation and clears the previous phone view',()=>{assert.equal(d.w.document.body.dataset.mobileView,'overview');assert.equal(d.$('mobile-nav').querySelector('[data-mobile-view=drive]'),null);assert.equal(d.$('mobile-nav').querySelector('[data-mobile-view=overview]').getAttribute('aria-current'),'page');});
+  check('Changing roles clears the previous controls and opens the admin overview',()=>{assert.equal(d.w.document.body.dataset.experienceRole,'admin');assert.equal(d.$('user-action-dock').hidden,true);assert.equal(d.$('admin-records').hidden,false);assert.equal(d.$('admin-records').open,false);});
   for(const w of windows)w.close();
-  const result={status:'PASS',count:checks.length,checks,scope:'JSDOM role surfaces and actual Pyodide Core; map rendering and responsive typography are checked in the live browser separately'};fs.writeFileSync(path.join(__dirname,phone?'mobile-operations-result.json':'operations-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
+  const result={status:'PASS',count:checks.length,checks,scope:'JSDOM role surfaces and actual Pyodide Core; map rendering and responsive typography are checked in the live browser separately'};fs.writeFileSync(path.join(__dirname,'manual-operations-result.json'),JSON.stringify(result,null,2)+'\n');console.log(JSON.stringify(result));
 })().catch(error=>{for(const w of windows)w.close();console.error(error);process.exitCode=1;});
