@@ -7,7 +7,10 @@
     "Boarding changes the next stop and Google Maps destination to dropoff; admin occupancy becomes 16.7% (1/6 seats).",
     "Completion increases completed rides from 6 to 7 and people transported from 7 to 8; assignment and occupancy both return to 0.0%.",
     "Today/7-day/30-day controls and configured 09:00–17:00 elapsed operating windows render analysis with explicit denominators.",
-    "Reloading restores the last completed trip shortcut; one tap opens the exact Core review and Back creates no new ride."
+    "Reloading restores the last completed trip shortcut; one tap opens the exact Core review and Back creates no new ride.",
+    "Final 0.18.1 is visible on all three public role URLs.",
+    "Final public recent-trip selection plus explicit confirm saves a request in two taps.",
+    "All three final role layouts have no horizontal document overflow at 320px and 390px; all driver pins fit inside the 320px map."
   ],
   "rider390": {
     "bodyFont": "18px",
@@ -38,6 +41,62 @@
   "pickupNavigation": "https://www.google.com/maps/dir/?api=1&destination=33.1968%2C131.5718&travelmode=driving&dir_action=navigate",
   "dropoffNavigation": "https://www.google.com/maps/dir/?api=1&destination=33.2024%2C131.5784&travelmode=driving&dir_action=navigate",
   "checkedAt": "2026-09-20T03:09:02.900Z",
-  "scope": "Public Chromium UI using fictional browser-local records. Rider measured at 320×667 and 390×844; driver/admin visually checked at 320px; admin desktop width measured at 1348px. Native iOS/Android, Safari, GPS and live turn-by-turn navigation are not tested.",
-  "status": "PASS"
+  "scope": "Public Chromium UI with fictional browser-local records. Full ride workflow checked on 0.18.0; final 0.18.1 checked for rider two-tap saving, responsive layouts and preserved metrics. Responsive checks use 320×667 and 390×844 iframe viewports; desktop admin width is 1348px. Native devices, Safari, software keyboards, GPS and actual turn-by-turn navigation are not tested.",
+  "driver390Final": {
+    "mapHeight": 320,
+    "mapTop": 574.75,
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "driver320Final": {
+    "mapHeight": 320,
+    "mapTop": 574.75,
+    "pins": [
+      {
+        "bottom": 239,
+        "left": 80,
+        "right": 200,
+        "text": "乗車場所\n中央広場",
+        "top": 163
+      },
+      {
+        "bottom": 161,
+        "left": 156,
+        "right": 276,
+        "text": "降車場所\n駅前\nロータリー",
+        "top": 85
+      },
+      {
+        "bottom": 156,
+        "left": 3,
+        "right": 123,
+        "text": "乗降場所\nふれあい\nセンター",
+        "top": 80
+      }
+    ],
+    "scrollWidth": 305,
+    "width": 305
+  },
+  "admin320Final": {
+    "liveCards": 3,
+    "performanceCards": 4,
+    "scrollWidth": 305,
+    "width": 305
+  },
+  "admin390Final": {
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "rider320Final": {
+    "scrollWidth": 305,
+    "width": 305
+  },
+  "finalVersion": "0.18.1",
+  "status": "PASS",
+  "finalCheckedAt": "2026-09-20T03:15:22.223Z",
+  "urls": {
+    "user": "https://mobilitydlab.com/danchi-elevator/demo/?role=user&v=0.18.1",
+    "driver": "https://mobilitydlab.com/danchi-elevator/demo/?role=driver&v=0.18.1",
+    "admin": "https://mobilitydlab.com/danchi-elevator/demo/?role=admin&v=0.18.1"
+  }
 }
