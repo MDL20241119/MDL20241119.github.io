@@ -19,6 +19,7 @@
       <p class="chat-help">登録された場所名・1〜3人に対応。送信だけで依頼は確定しません。</p>
     </section>
   </div>
+  <button id="mobile-continue" class="primary mobile-only" type="button" disabled>乗る場所と降りる場所を選択</button>
   <section class="journey-summary" aria-labelledby="selection-title"><div class="selection-heading"><h3 id="selection-title">いま選んだ内容</h3><div class="selection-tools"><button id="journey-undo" class="text-button" type="button">一つ戻る</button><button id="journey-clear" class="text-button" type="button">選び直す</button><button id="journey-edit-cancel" class="text-button" type="button" hidden>変更をやめる</button></div></div>
     <div class="selection-grid"><button id="summary-origin" class="selection-place" type="button"><small>乗る場所</small><strong id="summary-origin-name">未選択</strong></button><span class="selection-arrow" aria-hidden="true">→</span><button id="summary-destination" class="selection-place" type="button"><small>降りる場所</small><strong id="summary-destination-name">未選択</strong></button><div class="selection-people"><span>乗る人数</span><div id="journey-passengers" role="group" aria-label="乗車人数"><button type="button" data-people="1" aria-pressed="false">1人</button><button type="button" data-people="2" aria-pressed="false">2人</button><button type="button" data-people="3" aria-pressed="false">3人</button></div></div></div>
     <div class="selection-bottom"><p id="journey-summary-hint" role="status">乗る場所・降りる場所・人数を選んでください。</p><button id="journey-confirm" class="primary" type="button" disabled>内容を確認する <span aria-hidden="true">→</span></button></div>

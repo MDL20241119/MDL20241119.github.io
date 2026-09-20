@@ -1,0 +1,32 @@
+{
+  "status": "PASS",
+  "count": 25,
+  "checks": [
+    "Driver console shows only the driver surface and the real pending count",
+    "Admin separates requests from people waiting to board",
+    "Driver starts on the pending queue while admin starts on the overview",
+    "Choosing a pending ride opens driver operation without accepting or checking stopped",
+    "Driver chat locates a stored receipt without accepting it",
+    "Choosing a chat result opens its operation with the stopped safeguard intact",
+    "Untrusted driver chat is text and does not create markup",
+    "A driver action requires a fresh stopped confirmation",
+    "Review shows the actual route and passengers before any mutation",
+    "Backing out of review leaves the request unassigned",
+    "Stopped confirmation is disabled until the operation and refresh finish",
+    "Repeated confirmation accepts exactly once through Core and updates the route tiles",
+    "Admin live snapshot reflects assignment while passengers are still waiting",
+    "No-show guidance never marks a passenger onboard or cancels the ride",
+    "A chat command cannot skip arrival and boarding",
+    "Arrival command still requires explicit confirmation and resets the stopped check",
+    "Boarding changes the next route tile and administrator passenger counts",
+    "Completion persists history, releases seats and clears the active route",
+    "Admin chat filters the map-linked records by a registered stop",
+    "Selecting an administrator result opens the matching existing record",
+    "An admin result opens the matching record view",
+    "Admin chat cannot mutate rides or interpret HTML",
+    "A cancellation in another role invalidates an open driver confirmation",
+    "Role switching restores the original records panel and prevents driver UI leakage",
+    "Changing roles replaces navigation and clears the previous phone view"
+  ],
+  "scope": "JSDOM role surfaces and actual Pyodide Core; map rendering and responsive typography are checked in the live browser separately"
+}

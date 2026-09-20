@@ -397,7 +397,7 @@ $('reset-confirm').addEventListener('click',async()=>{
 window.addEventListener('popstate',()=>{const actor=Object.keys(demoRoleNames).find(id=>demoRoleNames[id]===new URL(location.href).searchParams.get('role'));if(!state.busy&&!state.pending&&actor&&state.user?.id!==actor){signedOut();login(actor,'local-test-only');}});
 
 // Alternative input surface; all reservations still use the shared form/Core.
-const journey=window.YokoJourney.create({getState:()=>state,notify:message});
+const journey=window.YokoJourney.create({getState:()=>state,notify:message,onSelection:()=>mobileUI.refreshSelection()});
 const journeySignedIn=signedIn;
 signedIn=function(result){journeySignedIn(result);journey.enter(result.user);if(result.user.role==='rider'){$('workspace-nav').innerHTML='<a href="#map-title">地図で選ぶ</a><a href="#chat-title">チャットで入力</a>';}};
 const journeySignedOut=signedOut;
@@ -413,8 +413,8 @@ showDraft=function(draft){journeyDraft(draft);journey.renderSelection();};
 $('confirm-dialog').addEventListener('close',()=>journey.renderSelection());
 
 // Manual-inspired operation surfaces. Roles, versions and mutations remain in Core.
-function showOperationRecord(id){state.filter='all';$('ride-search').value=id;renderRides();$('rides-section').scrollIntoView({block:'start',behavior:'smooth'});}
-const driverConsole=window.YokoDriver.create({getState:()=>state,notify:message,perform:async(kind,ride)=>{await mutate(kind,{ride_id:ride.id,version:ride.version,stopped:true});if(state.user)await refresh();},setHistory:showOperationRecord});
+function showOperationRecord(id){state.filter='all';$('ride-search').value=id;renderRides();mobileUI.open(state.user.role==='driver'?'queue':'records');$('rides-section').scrollIntoView({block:'start',behavior:'smooth'});}
+const driverConsole=window.YokoDriver.create({getState:()=>state,notify:message,perform:async(kind,ride)=>{await mutate(kind,{ride_id:ride.id,version:ride.version,stopped:true});if(state.user)await refresh();},setHistory:showOperationRecord,onSelect:()=>mobileUI.open('drive')});
 const adminConsole=window.YokoAdmin.create({getState:()=>state,showRecord:showOperationRecord});
 const operationsSignedIn=signedIn;
 signedIn=function(result){operationsSignedIn(result);driverConsole.enter(result.user);adminConsole.enter(result.user);if(result.user.role==='driver'){state.filter='history';$('role-title').textContent='ドライバー運行画面';$('workspace-nav').innerHTML='<a href="#driver-map-title">地図で選ぶ</a><a href="#driver-chat-title">チャットで探す</a>';}if(result.user.role==='admin'){$('role-title').textContent='運行を見守る';$('workspace-nav').innerHTML='<a href="#admin-map-title">地図で見る</a><a href="#admin-chat-title">チャットで確認</a>';}};
@@ -424,3 +424,16 @@ const operationsRender=render;
 render=function(){operationsRender();driverConsole.sync();adminConsole.sync();};
 const operationsRecovery=renderRecovery;
 renderRecovery=function(){operationsRecovery();driverConsole.controls();adminConsole.controls();};
+
+// Phone views share these same nodes; navigation never submits a reservation.
+const mobileUI=window.YokoMobile.create({getState:()=>state});
+const mobileSignedIn=signedIn;
+signedIn=function(result){mobileSignedIn(result);mobileUI.enter(result.user);};
+const mobileSignedOut=signedOut;
+signedOut=function(){mobileUI.leave();mobileSignedOut();};
+const mobileRender=render;
+render=function(){mobileRender();mobileUI.sync();};
+const mobileRecovery=renderRecovery;
+renderRecovery=function(){mobileRecovery();mobileUI.refreshSelection();};
+const mobileEdit=editRide;
+editRide=function(ride){mobileEdit(ride);mobileUI.open('review');};

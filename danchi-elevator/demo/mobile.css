@@ -1,0 +1,134 @@
+/* Four task views on phones; the manual's full grid remains on larger screens. */
+.mobile-heading,.mobile-nav,.mobile-only{display:none}
+@media(max-width:700px){
+  html{scroll-padding-bottom:110px;-webkit-text-size-adjust:100%}
+  body.mobile-ui{padding-bottom:calc(82px + env(safe-area-inset-bottom));--mobile-nav-height:76px}
+  .mobile-ui [data-mobile-hidden]{display:none!important}
+  .mobile-ui .mobile-only:not([hidden]){display:block}
+  .mobile-ui main,.mobile-ui.rider-ui main,.mobile-ui.driver-ui main{padding:16px 12px 24px}
+  .mobile-ui .topbar,.mobile-ui.rider-ui .topbar,.mobile-ui.driver-ui .topbar{padding:10px 12px;min-height:58px}
+  .mobile-ui .brand{font-size:19px;letter-spacing:-.04em}
+  .mobile-ui .brand-symbol{width:32px;height:32px}
+  .mobile-ui .brand small{display:none}
+  .mobile-ui #account .text-button{min-height:44px;font-size:14px}
+  .mobile-ui .test-strip{font-size:12px;padding:7px 8px;line-height:1.4}
+  .mobile-ui .demo-shell,.mobile-ui.rider-ui .demo-shell,.mobile-ui.driver-ui .demo-shell{padding:0 12px}
+  .mobile-ui .demo-roles,.mobile-ui.rider-ui .demo-roles,.mobile-ui.driver-ui .demo-roles{padding-top:10px}
+  .mobile-ui .demo-roles a,.mobile-ui.rider-ui .demo-roles a,.mobile-ui.driver-ui .demo-roles a{font-size:16px;min-height:52px}
+  .mobile-ui .demo-scope{font-size:13px;margin:8px 0 0;line-height:1.5}
+  .mobile-ui .workspace-heading,.mobile-ui #workspace-nav{display:none!important}
+  .mobile-ui .mobile-heading{display:flex;gap:10px;justify-content:space-between;align-items:center;margin:0 0 18px;scroll-margin-top:14px}
+  .mobile-heading>div{min-width:0}
+  .mobile-heading .mobile-section-label{font-size:13px;letter-spacing:.08em;font-weight:800;margin:0 0 5px;color:#515151}
+  .mobile-heading h2{font-size:28px;line-height:1.3;margin:0;font-weight:800;outline:none}
+  .mobile-heading #mobile-view-help{font-size:16px;line-height:1.5;margin:8px 0 0;color:#515151}
+  #mobile-refresh{border:1px solid #111;background:white;flex:0 0 46px;min-height:46px;padding:0;font-size:28px;align-self:flex-start}
+  .mobile-ui .mobile-nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));position:fixed;inset:auto 0 0;z-index:1100;border-top:2px solid #111;background:#F8F7F3;padding:0 max(0px,env(safe-area-inset-right)) env(safe-area-inset-bottom) max(0px,env(safe-area-inset-left))}
+  .mobile-nav button{position:relative;display:flex;flex-direction:column;gap:5px;align-items:center;justify-content:center;min-width:0;min-height:76px;padding:8px 2px;border:0;border-radius:0;background:transparent;font-size:16px;font-weight:800;line-height:1.3;color:#515151}
+  .mobile-nav button+button{border-left:1px solid #DADADA}
+  .mobile-nav button[aria-current=page]{background:var(--accent);color:#111;box-shadow:inset 0 4px #111}
+  .mobile-nav svg{width:24px;height:24px}
+  .mobile-nav .has-update:after{content:'';position:absolute;top:10px;left:calc(50% + 14px);width:8px;height:8px;border:2px solid #F8F7F3;border-radius:50%;background:#111}
+  .mobile-ui.mobile-input-focus .mobile-nav{display:none}
+  .mobile-ui.mobile-input-focus{padding-bottom:env(safe-area-inset-bottom)}
+  .mobile-ui #message{bottom:calc(92px + env(safe-area-inset-bottom));max-width:calc(100% - 24px);font-size:17px}
+  .mobile-ui.mobile-input-focus #message{bottom:14px}
+  .mobile-ui .journey{margin-bottom:0}
+  .mobile-ui .journey-grid{display:block;overflow:hidden}
+  .mobile-ui .journey-steps,.mobile-ui .driver-flow{margin-bottom:16px}
+  .mobile-ui .journey-steps li,.mobile-ui .driver-flow li{min-height:66px;padding:8px 2px;gap:3px}
+  .mobile-ui .journey-steps span,.mobile-ui .driver-flow span{font-size:22px}
+  .mobile-ui .journey-steps b,.mobile-ui .driver-flow li{font-size:14px}
+  .mobile-ui .map-heading{padding:7px 10px 4px}
+  .mobile-ui .map-heading h3{font-size:20px}
+  .mobile-ui .map-heading .text-button{min-height:44px;font-size:15px}
+  .mobile-ui .place-tabs{padding:0 10px;gap:8px}
+  .mobile-ui .place-tabs button{min-height:84px;padding:10px 8px}
+  .mobile-ui .place-tabs button[aria-pressed=true]{padding:9px 7px}
+  .mobile-ui .place-tabs small{font-size:15px;margin-bottom:4px}
+  .mobile-ui .place-tabs strong{font-size:18px;overflow-wrap:anywhere}
+  .mobile-ui .map-prompt{font-size:16px;margin:10px;line-height:1.45}
+  .mobile-ui #journey-map,.mobile-ui #driver-map,.mobile-ui #admin-map{height:300px;height:clamp(280px,40svh,350px)}
+  .mobile-ui .map-note,.mobile-ui .driver-map-note{font-size:13px;line-height:1.5}
+  .mobile-ui .leaflet-control-zoom a{width:44px!important;height:44px!important;line-height:44px!important}
+  .mobile-ui #mobile-continue{margin:14px 0 0;width:100%;font-size:20px;min-height:62px;white-space:normal}
+  .mobile-ui .journey-summary{margin:0;padding:18px 12px}
+  .mobile-ui .selection-heading h3{font-size:23px;margin-bottom:8px}
+  .mobile-ui .selection-grid{display:grid;grid-template-columns:1fr;gap:10px}
+  .mobile-ui .selection-arrow{display:none}
+  .mobile-ui .selection-place{display:grid;grid-template-columns:80px minmax(0,1fr);gap:10px;align-items:center;min-height:72px;text-align:left;padding:12px}
+  .mobile-ui .selection-place small{font-size:16px;margin:0}
+  .mobile-ui .selection-place strong{font-size:21px;line-height:1.4}
+  .mobile-ui .selection-people{display:block;margin:8px 0 0;padding:0;grid-column:auto}
+  .mobile-ui .selection-people>span{display:block;font-size:18px;margin-bottom:10px}
+  .mobile-ui #journey-passengers{display:grid;grid-template-columns:repeat(3,1fr);gap:8px}
+  .mobile-ui #journey-passengers button{min-height:62px;font-size:25px}
+  .mobile-ui .selection-bottom{margin-top:18px}
+  .mobile-ui #journey-confirm{width:100%;min-height:66px;font-size:21px}
+  .mobile-ui .chat-panel{border:0}
+  .mobile-ui .chat-heading,.mobile-ui .ops-chat-heading{padding:14px 12px}
+  .mobile-ui .chat-heading h3,.mobile-ui .ops-chat-heading h2{font-size:22px}
+  .mobile-ui .chat-heading p{font-size:15px}
+  .mobile-ui .chat-messages,.mobile-ui .ops-chat-log{min-height:180px;max-height:280px;max-height:clamp(180px,34svh,320px);padding:16px 12px;scroll-behavior:auto;overscroll-behavior:auto}
+  .mobile-ui .chat-bubble,.mobile-ui .ops-bubble{font-size:19px;line-height:1.5;padding:12px 14px}
+  .mobile-ui .chat-row,.mobile-ui .ops-chat-row{margin-bottom:18px}
+  .mobile-ui .chat-choices{gap:8px;padding:4px 12px 14px}
+  .mobile-ui .chat-choices button{font-size:18px;min-height:52px;padding:10px 14px}
+  .mobile-ui .chat-composer,.mobile-ui .ops-chat-form{padding:12px 10px;gap:8px}
+  .mobile-ui .chat-composer input,.mobile-ui .ops-chat-form input{min-width:0;font-size:18px;min-height:58px}
+  .mobile-ui .chat-composer button,.mobile-ui .ops-chat-form button{min-height:58px;font-size:18px;min-width:64px}
+  .mobile-ui .chat-help,.mobile-ui .ops-chat-note{font-size:14px;line-height:1.5}
+  .mobile-ui .ops-chat{margin:0}
+  .mobile-ui .driver-console{display:flex;flex-direction:column;gap:14px}
+  .mobile-ui .driver-context{margin:0;gap:12px;padding:14px;grid-template-columns:minmax(0,1fr) auto;order:0}
+  .mobile-ui .driver-context>div:first-child{display:none}
+  .mobile-ui .driver-context-label{font-size:15px;margin-bottom:4px}
+  .mobile-ui .driver-context strong{font-size:20px}
+  .mobile-ui .driver-capacity strong{font-size:28px}
+  .mobile-ui .driver-flow{order:1;margin:0}
+  .mobile-ui #driver-operation{order:2;margin:0;padding:4px 14px 18px}
+  .mobile-ui .driver-confirmed{order:3;margin:0}
+  .mobile-ui .driver-board{order:4;display:block}
+  .mobile-ui .driver-chat{order:5}
+  .mobile-ui #mobile-driver-selection{order:6;padding:16px;border:1px solid #111;background:white}
+  .mobile-ui #mobile-driver-route{font-size:19px;line-height:1.5;margin:0 0 14px;overflow-wrap:anywhere}
+  .mobile-ui #mobile-driver-open{width:100%;font-size:20px;min-height:62px}
+  .mobile-ui .driver-history{order:7;margin:0}
+  .mobile-ui .driver-reception-counts>div{flex-direction:column;align-items:flex-start;gap:4px}
+  .mobile-ui .driver-reception-counts strong{font-size:52px;line-height:1}
+  .mobile-ui .driver-reception>p{font-size:13px;line-height:1.5}
+  .mobile-ui #driver-queue-list{max-height:none;overflow:visible}
+  .mobile-ui .driver-request-route{font-size:19px;display:flex;flex-direction:column;align-items:flex-start;gap:4px}
+  .mobile-ui .driver-request-route>span{font-size:18px;line-height:1;transform:rotate(90deg);margin-left:4px}
+  .mobile-ui .driver-selected-route{font-size:21px;line-height:1.4;padding:14px;gap:8px;border-radius:0}
+  .mobile-ui .driver-safety .check{font-size:19px;line-height:1.5;min-height:56px}
+  .mobile-ui .driver-safety input{width:26px;height:26px;min-height:26px;flex-shrink:0}
+  .mobile-ui .driver-main-action .primary{font-size:26px;min-height:68px;border-radius:0}
+  .mobile-ui .driver-leg{min-height:145px}
+  .mobile-ui .admin-board,.mobile-ui .admin-find-grid{display:block;margin:0}
+  .mobile-ui .admin-results{margin-top:16px}
+  .mobile-ui .admin-overview-heading{padding:16px 12px;flex-wrap:wrap}
+  .mobile-ui .admin-overview-heading>span{font-size:14px}
+  .mobile-ui .admin-big-metrics strong{font-size:68px;line-height:1.1}
+  .mobile-ui .admin-big-metrics>div{padding:18px 12px}
+  .mobile-ui .admin-small-metrics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:0 12px}
+  .mobile-ui .admin-small-metrics>div{display:block;border:0;padding:14px 0}
+  .mobile-ui .admin-small-metrics dt{font-size:15px}
+  .mobile-ui .admin-small-metrics dd{font-size:26px;margin-top:4px}
+  .mobile-ui #admin-result-list{max-height:480px}
+  .mobile-ui .admin-result-route{font-size:21px}
+  .mobile-ui .ride-search input{min-width:0}
+  .mobile-ui .ride-filters button{font-size:16px;min-height:60px}
+  .mobile-ui .ride-actions{display:grid;grid-template-columns:1fr;gap:10px}
+  .mobile-ui .ride-actions button{min-height:58px;font-size:19px}
+  .mobile-ui .support{margin-top:24px;display:block}
+  .mobile-ui .support b{font-size:18px}
+  .mobile-ui .support p{font-size:15px}
+  .mobile-ui footer{font-size:13px;padding:18px 12px 24px}
+  .mobile-ui footer>span{display:block;margin-bottom:8px}
+  .mobile-ui dialog{max-width:none;width:calc(100% - 24px);max-height:calc(100dvh - 24px);padding:0;overflow:auto}
+  .mobile-ui .dialog-content{padding:24px 16px}
+  .mobile-ui .dialog-content h2{font-size:26px}
+  .mobile-ui dialog .actions{display:flex;flex-direction:column-reverse;gap:12px}
+  .mobile-ui dialog .actions button{width:100%;font-size:20px;min-height:62px;white-space:normal}
+}

@@ -6,7 +6,7 @@
   const terminal=new Set(['completed','cancelled']);
   const empty=()=>({origin:null,destination:null,passengers:null});
   const names={origin:'乗る場所',destination:'降りる場所'};
-  window.YokoJourney={create({getState,notify}){
+  window.YokoJourney={create({getState,notify,onSelection=()=>{}}){
     let person=null,stops=[],selection=empty(),target='origin',undo=[],map=null,route=null,markerKey='',lastActiveId=null,lastCompletion=null,editingId=null;
     const markers=new Map(),announced=new Set();
     const panel=$('journey-panel');
@@ -76,7 +76,7 @@
       map.setView([33.1998,131.5718],15);
       if(window.ResizeObserver){let previousWidth=0;new ResizeObserver(()=>{const width=$('journey-map').clientWidth;if(width&&width!==previousWidth){previousWidth=width;map.invalidateSize();fit();}}).observe($('journey-map'));}
     }
-    function fit(){if(map&&markers.size)map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,46],maxZoom:15,animate:false});}
+    function fit(){if(map&&markers.size){map.invalidateSize();map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,46],maxZoom:15,animate:false});}}
     function buildMarkers(){
       if(!map)return;
       const key=JSON.stringify(stops.map(s=>[s.id,s.name]));if(key===markerKey)return;markerKey=key;
@@ -129,7 +129,7 @@
       $('journey-summary-hint').textContent=getState().pending?'送信結果を確認しています。重ねて依頼せず、結果を照合してください。':active&&!getState().editing?'変更・取消は、下の「あなたの依頼」から行えます。':complete()?`${selection.passengers}人 / ${$('service-fare').textContent}。次に確認画面へ進みます。`:'乗る場所・降りる場所・人数を選んでください。';
       const step=active?({requested:2,assigned:3,arrived:4,onboard:4}[active.status]||1):lastCompletion?4:1;setStep(step);
       if(getState().draft&&['request','change'].includes(getState().draft.kind))setStep(2);
-      paintMap();renderChoices();
+      paintMap();renderChoices();onSelection();
     }
     function showStatus(ride){
       $('journey-status').hidden=!ride;if(!ride)return;

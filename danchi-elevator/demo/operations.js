@@ -38,7 +38,7 @@
   function mapView({id,errorId,onPick}){
     let map=null,line=null,key='',selectionKey='';const markers=new Map();
     const el=()=>document.getElementById(id),error=()=>document.getElementById(errorId);
-    function fit(){if(map&&markers.size)map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,50],maxZoom:15,animate:false});}
+    function fit(){if(map&&markers.size){map.invalidateSize();map.fitBounds([...markers.values()].map(m=>m.getLatLng()),{padding:[60,50],maxZoom:15,animate:false});}}
     function init(){
       if(map){requestAnimationFrame(()=>map.invalidateSize());return;}
       if(!window.L){error().hidden=false;return;}

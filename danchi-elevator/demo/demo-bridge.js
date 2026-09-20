@@ -44,7 +44,7 @@
     document.getElementById('demo-boot-title').textContent='保存データを準備しています…';
     const result=await dispatch({path:'/demo/initialize',method:'POST'});
     if(result.status!==200)throw new Error(result.data.error.message);
-    await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./app.js?v=15c';script.onload=resolve;script.onerror=()=>reject(new Error('画面を読み込めませんでした'));document.head.append(script);});
+    await new Promise((resolve,reject)=>{const script=document.createElement('script');script.src='./app.js?v=16';script.onload=resolve;script.onerror=()=>reject(new Error('画面を読み込めませんでした'));document.head.append(script);});
     ready=true;buttons.forEach(button=>{button.disabled=false;});document.getElementById('demo-boot').hidden=true;
   }
   main().catch(error=>{

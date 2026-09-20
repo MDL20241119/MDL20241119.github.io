@@ -3,7 +3,7 @@
   'use strict';
   const $=id=>document.getElementById(id),O=window.YokoOps;
   const steps={requested:{kind:'accept',label:'引き受ける',step:1,prompt:'乗車場所・降車場所・人数を確認して引き受けてください。',confirm:'この依頼を引き受けますか？',note:'確定すると担当車両が割り当てられます。'},assigned:{kind:'arrive',label:'到着通知',step:2,prompt:'乗車場所に着いたら、安全に停車して到着を知らせます。',confirm:'乗車場所への到着を記録しますか？',note:'指定された場所に到着し、利用者を迎えられる状態か確認してください。'},arrived:{kind:'board',label:'乗車を確認',step:3,prompt:'乗る方・人数・行き先を確かめ、乗車を確認してください。',confirm:'乗車を記録しますか？',note:'表示された人数が乗車したことを確認してください。'},onboard:{kind:'complete',label:'降車',step:4,prompt:'降車場所に着いたら、全員が降りたことを目視で確認します。',confirm:'降車を記録して完了しますか？',note:'全員の降車と、車内の忘れ物を確認してください。'}};
-  window.YokoDriver={create({getState,notify,perform,setHistory}){
+  window.YokoDriver={create({getState,notify,perform,setHistory,onSelect=()=>false}){
     let active=false,selectedId=null,pendingAction=null,lastKey='',submitting=false;
     const historyParent=$('rides-section').parentElement,historyNext=$('rides-section').nextElementSibling;
     const rides=()=>getState().snapshot?.rides||[];
@@ -14,7 +14,7 @@
     function setHtml(id,html){if($(id).innerHTML!==html){const focused=document.activeElement?.dataset.driverSelect;$(id).innerHTML=html;if(focused)[...$(id).querySelectorAll('[data-driver-select]')].find(b=>b.dataset.driverSelect===focused)?.focus({preventScroll:true});}}
     function pick(id,scroll=true){if(busy())return;const ride=rides().find(r=>r.id===id);if(!ride)return;
       if(O.terminal(ride)){setHistory(ride.id);$('driver-history').open=true;$('driver-history').scrollIntoView({block:'start',behavior:'smooth'});return;}
-      selectedId=id;$('stopped').checked=false;sync();if(scroll)$('driver-operation').scrollIntoView({block:'start',behavior:'smooth'});
+      selectedId=id;$('stopped').checked=false;sync();if(scroll&&!onSelect(ride))$('driver-operation').scrollIntoView({block:'start',behavior:'smooth'});
     }
     function choosePlace(id){const matches=rides().filter(r=>!O.terminal(r)&&(r.origin_stop_id===id||r.destination_stop_id===id));if(!matches.length){notify('この場所を乗降する進行中の依頼はありません。');return;}pick(matches.find(r=>r.id===selectedId)?.id||matches[0].id,false);O.say('driver-chat-log',`${stops().find(s=>s.id===id)?.name}の依頼は${matches.length}件です。操作する依頼を選べます。`,'guide',matches.map(r=>({id:r.id,label:`${r.id.slice(-8)} / ${r.passengers}名 / ${O.status[r.status]}`})));}
     function controls(){
@@ -37,6 +37,7 @@
       $('driver-confirmed-count').textContent=`${running.length}件 / ${running.reduce((n,r)=>n+r.passengers,0)}名`;
       setHtml('driver-runs',running.length?running.map(r=>`<article class="driver-run ${r.id===selectedId?'selected':''}"><div class="driver-run-heading"><span class="driver-status">${O.status[r.status]}</span><span>${O.esc(r.id.slice(-8))} / ${O.vehicle(r.vehicle_id)}</span></div><div class="driver-route-pair"><button type="button" class="driver-leg ${r.status==='onboard'?'done':''}" data-driver-select="${O.esc(r.id)}" ${r.status!=='onboard'?'aria-current="step"':''}><small>${r.status==='onboard'?'乗車済み':'乗車場所'}</small><b>${O.esc(r.origin_name)}</b><span>${r.passengers}名</span></button><button type="button" class="driver-leg dropoff" data-driver-select="${O.esc(r.id)}" ${r.status==='onboard'?'aria-current="step"':''}><small>降車場所</small><b>${O.esc(r.destination_name)}</b><span>${r.passengers}名</span></button></div></article>`).join(''):'<p class="driver-empty">引き受けると、ここに乗車・降車の順で表示されます。</p>');
       $('driver-operation-prompt').textContent=step?.prompt||'処理待ちの依頼を選んでください。';$('driver-selected-status').textContent=ride?O.status[ride.status]:'';setHtml('driver-selected-route',ride?O.route(ride):'');
+      $('mobile-driver-route').textContent=ride?`${ride.origin_name} → ${ride.destination_name} / ${ride.passengers}名 / 受付 ${ride.id.slice(-8)}`:'進行中の依頼はありません。';$('mobile-driver-open').disabled=!ride;
       $('driver-exceptions').hidden=!ride||!['assigned','arrived'].includes(ride.status);
       $('driver-panel').querySelectorAll('[data-driver-step]').forEach(n=>{if(Number(n.dataset.driverStep)===step?.step)n.setAttribute('aria-current','step');else n.removeAttribute('aria-current');});
       const key=ride?ride.id+':'+ride.version:'';if(key!==lastKey){lastKey=key;$('stopped').checked=false;}
