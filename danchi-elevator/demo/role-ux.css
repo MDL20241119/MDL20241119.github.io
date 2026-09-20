@@ -1,4 +1,5 @@
 /* Three roles, one manual-derived design system. */
+.manual-experience .brand-symbol{font-size:24px;line-height:1}
 .rider-ui .journey-steps{display:none}
 .rider-task{display:flex;gap:12px;align-items:center;padding:8px 0 12px}
 .rider-task>b{display:grid;place-items:center;background:#72D7FF;border:1px solid #111;flex:0 0 42px;height:48px;font-size:32px;font-weight:900}
@@ -176,6 +177,19 @@
   .analysis-charts{grid-template-columns:1fr;gap:24px}
 }
 @media(max-width:540px){
+  .manual-experience.driver-ui .workspace-heading{gap:4px;margin-bottom:8px;padding-bottom:4px}
+  .manual-experience.driver-ui #role-title{font-size:23px}
+  .manual-experience.driver-ui .sync{font-size:12px}
+  .manual-experience.driver-ui .driver-context{padding:8px 10px;margin-bottom:8px}
+  .manual-experience.driver-ui .driver-context-label{font-size:12px;margin-bottom:0}
+  .manual-experience.driver-ui .driver-context strong{font-size:19px}
+  .driver-ui .driver-map-panel>.driver-section-heading{padding:6px 10px;gap:6px}
+  .driver-ui .driver-map-panel>.driver-section-heading h2{font-size:18px;white-space:nowrap}
+  .driver-ui .driver-map-panel>.driver-section-heading .text-button{font-size:13px;white-space:nowrap;padding-inline:0;min-height:44px}
+  .driver-nav-card{padding:10px;gap:4px}
+  .driver-nav-card h2{font-size:25px}
+  .driver-nav-card>a{font-size:18px;min-height:52px;padding:10px;margin-top:2px}
+  .driver-nav-card>small{font-size:11px;line-height:1.4}
   .rider-task{padding-top:4px;gap:10px}
   .rider-task h2{font-size:22px}
   .rider-task p{font-size:13px}

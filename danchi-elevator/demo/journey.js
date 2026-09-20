@@ -30,7 +30,7 @@
       if(!selection.origin)return 'どこから乗りますか？\n地図でもチャットでも選べます。';
       if(!selection.destination)return stopName(selection.origin)+'からですね。\n次は、どこで降りますか？';
       if(!selection.passengers)return '何人で乗りますか？\n1〜3人から選ぶか、「2人」のように送ってください。';
-      return '場所と人数がそろいました。\n下の「内容を確認する」から、最後に確認しましょう。';
+      return '場所と人数がそろいました。\n確認画面で、場所・人数・料金を確かめてください。';
     }
     function writeForm(){
       for(const [field,id] of [['origin','origin'],['destination','destination'],['passengers','passengers']]){
@@ -137,7 +137,7 @@
       $('journey-edit-cancel').hidden=!getState().editing;$('journey-edit-cancel').disabled=!!getState().busy||!!getState().pending;
       $('journey-confirm').disabled=frozen||!complete();
       $('journey-confirm').textContent=getState().editing?'変更内容を確認する →':active?'依頼を受付済み':'内容を確認する →';
-      $('journey-summary-hint').textContent=getState().pending?'送信結果を確認しています。重ねて依頼せず、結果を照合してください。':active&&!getState().editing?'変更・取消は、下の「あなたの依頼」から行えます。':complete()?`${selection.passengers}人 / ${$('service-fare').textContent}。次に確認画面へ進みます。`:'乗る場所・降りる場所・人数を選んでください。';
+      $('journey-summary-hint').textContent=getState().busy&&getState().pending?'依頼を保存しています。そのままお待ちください。':getState().pending?'送信結果を確認しています。重ねて依頼せず、結果を照合してください。':active&&!getState().editing?'変更・取消は、下の「あなたの依頼」から行えます。':complete()?`${selection.passengers}人 / ${$('service-fare').textContent}。次に確認画面へ進みます。`:'乗る場所・降りる場所・人数を選んでください。';
       const step=active?({requested:2,assigned:3,arrived:4,onboard:4}[active.status]||1):lastCompletion?4:1;setStep(step);
       if(getState().draft&&['request','change'].includes(getState().draft.kind))setStep(2);
       paintMap();renderChoices();onSelection({...selection});

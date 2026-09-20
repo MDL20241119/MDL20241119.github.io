@@ -18,12 +18,12 @@
     }
     function choosePlace(id){const matches=rides().filter(r=>!O.terminal(r)&&(r.origin_stop_id===id||r.destination_stop_id===id));if(!matches.length){notify('この場所を乗降する進行中の依頼はありません。');return;}pick(matches.find(r=>r.id===selectedId)?.id||matches[0].id,false);O.say('driver-chat-log',`${stops().find(s=>s.id===id)?.name}の依頼は${matches.length}件です。操作する依頼を選べます。`,'guide',matches.map(r=>({id:r.id,label:`${r.id.slice(-8)} / ${r.passengers}名 / ${O.status[r.status]}`})));}
     function controls(){
-      if(!active)return;const ride=selected(),step=ride&&steps[ride.status],blocked=busy();
-      $('driver-next').disabled=blocked||!step;$('driver-next').textContent=step?.label||'依頼を選んでください';$('stopped').disabled=blocked;
+      if(!active)return;const ride=selected(),step=ride&&steps[ride.status],blocked=busy(),saving=submitting||getState().busy;
+      $('driver-next').disabled=blocked||!step;$('driver-next').textContent=saving?'保存しています…':step?.label||'依頼を選んでください';$('stopped').disabled=blocked;
       $('driver-action-confirm').disabled=blocked||!pendingAction;
       $('driver-chat-input').disabled=blocked;$('driver-chat-send').disabled=blocked;
       $('driver-exceptions').querySelectorAll('button').forEach(b=>b.disabled=blocked);
-      $('driver-action-hint').textContent=getState().pending?'前の操作の結果を照合してください。':'次の確認画面で確定します。';
+      $('driver-action-hint').textContent=saving?'操作を保存しています。そのままお待ちください。':getState().pending?'前の操作の結果を照合してください。':'次の確認画面で確定します。';
     }
     function sync(){
       if(!active||getState().user?.role!=='driver'||!getState().snapshot)return;

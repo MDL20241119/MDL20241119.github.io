@@ -1,0 +1,43 @@
+{
+  "version": "0.18.0",
+  "checks": [
+    "Two map taps opened the exact Core review; the third explicit tap saved the rider request.",
+    "Initial rider has no horizontal overflow at 320 and 390px display widths.",
+    "Accepting the preferred rider request shows pickup #1 and dropoff #2; admin assignment rate changes from 0.0% to 50.0% (1/2 vehicles).",
+    "Boarding changes the next stop and Google Maps destination to dropoff; admin occupancy becomes 16.7% (1/6 seats).",
+    "Completion increases completed rides from 6 to 7 and people transported from 7 to 8; assignment and occupancy both return to 0.0%.",
+    "Today/7-day/30-day controls and configured 09:00–17:00 elapsed operating windows render analysis with explicit denominators.",
+    "Reloading restores the last completed trip shortcut; one tap opens the exact Core review and Back creates no new ride."
+  ],
+  "rider390": {
+    "bodyFont": "18px",
+    "composer": {
+      "bottom": 954.484375,
+      "height": 76,
+      "left": 13,
+      "right": 362,
+      "top": 878.484375,
+      "width": 349,
+      "x": 13,
+      "y": 878.484375
+    },
+    "map": {
+      "bottom": 645.734375,
+      "height": 220,
+      "left": 13,
+      "right": 362,
+      "top": 425.734375,
+      "width": 349,
+      "x": 13,
+      "y": 425.734375
+    },
+    "scrollWidth": 375,
+    "width": 375
+  },
+  "rideShortId": "b8001ddf",
+  "pickupNavigation": "https://www.google.com/maps/dir/?api=1&destination=33.1968%2C131.5718&travelmode=driving&dir_action=navigate",
+  "dropoffNavigation": "https://www.google.com/maps/dir/?api=1&destination=33.2024%2C131.5784&travelmode=driving&dir_action=navigate",
+  "checkedAt": "2026-09-20T03:09:02.900Z",
+  "scope": "Public Chromium UI using fictional browser-local records. Rider measured at 320×667 and 390×844; driver/admin visually checked at 320px; admin desktop width measured at 1348px. Native iOS/Android, Safari, GPS and live turn-by-turn navigation are not tested.",
+  "status": "PASS"
+}

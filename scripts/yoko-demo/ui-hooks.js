@@ -64,6 +64,15 @@ signedOut=function(){experience.leave();experienceSignedOut();};
 const experienceRender=render;
 render=function(){experienceRender();experience.sync();};
 const experienceRecovery=renderRecovery;
-renderRecovery=function(){experienceRecovery();experience.refreshSelection();};
+let demoCommitLabel=null;
+renderRecovery=function(){
+  experienceRecovery();experience.refreshSelection();
+  const saving=state.busy&&Boolean(state.pending);
+  // A normal in-flight save is not an unknown-result recovery case.
+  // Keep the original recovery controls available after a failed response.
+  $('recovery').hidden=!state.pending||state.busy;
+  if(saving){if(demoCommitLabel===null)demoCommitLabel=$('commit').textContent;$('commit').textContent='保存しています…';}
+  else if(demoCommitLabel!==null){$('commit').textContent=demoCommitLabel;demoCommitLabel=null;}
+};
 const experienceEdit=editRide;
 editRide=function(ride){experienceEdit(ride);experience.open('review');};

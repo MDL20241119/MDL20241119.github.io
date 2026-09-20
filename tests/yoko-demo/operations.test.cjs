@@ -17,12 +17,12 @@ function check(name,fn){fn();checks.push(name);}
   const settle=async()=>{for(let i=0;i<25;i++)await new Promise(r=>setImmediate(r));};
   async function open(initial){
     const dom=new JSDOM(fs.readFileSync(path.join(dir,'index.html'),'utf8'),{url:'https://example.test/danchi-elevator/demo/',runScripts:'outside-only',pretendToBeVisual:true});
-    const w=dom.window;windows.push(w);let actor=initial;w.matchMedia=()=>({matches:false,addEventListener(){}});
+    const w=dom.window;windows.push(w);let actor=initial,loseNextAction=false;w.matchMedia=()=>({matches:false,addEventListener(){}});
     w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};w.HTMLDialogElement.prototype.close=function(){this.open=false;this.dispatchEvent(new w.Event('close'));};w.HTMLElement.prototype.scrollIntoView=function(){};
-    w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return {ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);return{ok:result.status<400,status:result.status,json:async()=>result.data};};
+    w.fetch=async(url,options={})=>{const body=options.body?JSON.parse(options.body):undefined;if(url==='/api/session'){actor=body.username;url='/api/me';}if(url==='/api/logout'){actor=null;return {ok:true,status:200,json:async()=>({logged_out:true})};}const result=dispatch(actor,url,url==='/api/me'?undefined:body);if(loseNextAction&&url.startsWith('/api/actions/')){loseNextAction=false;throw new Error('Simulated lost response after Core commit');}return{ok:result.status<400,status:result.status,json:async()=>result.data};};
     for(const file of ['insights.js','journey-input.js','journey.js','operations.js','driver.js','admin.js','experience.js','app.js'])w.eval(fs.readFileSync(path.join(dir,file),'utf8'));
     await settle();const $=id=>w.document.getElementById(id);
-    return {w,$,chat:async(role,text)=>{$(role+'-chat-input').value=text;$(role+'-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();},refresh:async()=>{$('refresh').click();await settle();}};
+    return {w,$,loseNextAction:()=>{loseNextAction=true;},chat:async(role,text)=>{$(role+'-chat-input').value=text;$(role+'-chat-form').dispatchEvent(new w.Event('submit',{bubbles:true,cancelable:true}));await settle();},refresh:async()=>{$('refresh').click();await settle();}};
   }
   const d=await open('driver-a1'),a=await open('admin-a1');
   const snapshot=actor=>dispatch(actor,'/api/snapshot').data;
@@ -45,7 +45,7 @@ function check(name,fn){fn();checks.push(name);}
   d.$('driver-action-back').click();await settle();
   check('Backing out of review leaves the request unassigned',()=>assert.equal(ride().status,'requested'));
   d.$('driver-next').click();d.$('driver-action-confirm').click();
-  check('Stopped confirmation is disabled until the operation and refresh finish',()=>assert.equal(d.$('stopped').disabled,true));
+  check('An in-flight save is clearly labelled and locked without displaying an unknown-result warning',()=>{assert.equal(d.$('stopped').disabled,true);assert.equal(d.$('recovery').hidden,true);assert.match(d.$('driver-next').textContent,/保存しています/);assert.match(d.$('driver-action-hint').textContent,/保存しています/);});
   d.$('driver-action-confirm').click();await settle();await a.refresh();
   check('Repeated confirmation accepts exactly once through Core and updates the route tiles',()=>{assert.equal(ride().status,'assigned');assert.equal(ride().events.length,2);assert.equal(d.$('stopped').checked,false);assert.match(d.$('driver-runs').textContent,/中央広場/);assert.match(d.$('driver-confirmed-count').textContent,/1件 \/ 2名/);assert.equal(d.$('driver-seats').textContent,'1 / 3名');});
   check('Assigned rides expose pickup navigation and numbered stops without mutating the ride',()=>{assert.match(d.$('driver-nav-kind').textContent,/乗せる/);assert.equal(new URL(d.$('driver-navigate').href).searchParams.get('destination'),'33.1968,131.5718');assert.equal(d.$('driver-itinerary').children.length,2);assert.equal(a.$('admin-assignment-rate').textContent,'50.0%');assert.equal(a.$('admin-occupancy-rate').textContent,'0.0%');});
@@ -54,7 +54,10 @@ function check(name,fn){fn();checks.push(name);}
   check('No-show guidance never marks a passenger onboard or cancels the ride',()=>{assert.equal(d.$('driver-help-dialog').open,true);assert.equal(ride().status,'assigned');assert.match(d.$('driver-help-dialog').textContent,/連絡・取消を行いません/);});d.$('driver-help-close').click();
   d.$('stopped').checked=true;await d.chat('driver','降車');
   check('A chat command cannot skip arrival and boarding',()=>{assert.equal(d.$('driver-action-dialog').open,false);assert.equal(ride().status,'assigned');});
-  await d.chat('driver','到着通知');d.$('driver-action-confirm').click();await settle();
+  d.loseNextAction();await d.chat('driver','到着通知');d.$('driver-action-confirm').click();await settle();
+  check('A lost response still exposes recovery and blocks a new action after Core committed once',()=>{assert.equal(ride().status,'arrived');assert.equal(ride().events.length,3);assert.equal(d.$('recovery').hidden,false);assert.equal(d.$('driver-next').disabled,true);assert.match(d.$('driver-action-hint').textContent,/照合/);});
+  d.$('reconcile').click();await settle();
+  check('Reconciliation restores the normal controls without duplicating the saved operation',()=>{assert.equal(d.$('recovery').hidden,true);assert.equal(d.$('driver-next').disabled,false);assert.equal(ride().events.length,3);});
   check('Arrival command still requires explicit confirmation and resets the stopped check',()=>{assert.equal(ride().status,'arrived');assert.equal(d.$('driver-next').textContent,'乗車を確認');assert.equal(d.$('stopped').checked,false);});
   d.$('stopped').checked=true;d.$('driver-next').click();d.$('driver-action-confirm').click();await settle();await a.refresh();
   check('Boarding changes the next route tile and administrator passenger counts',()=>{assert.equal(ride().status,'onboard');assert.equal(d.$('driver-next').textContent,'降車');assert.equal(d.$('driver-runs').querySelector('[aria-current=step]').classList.contains('dropoff'),true);assert.equal(a.$('admin-waiting-people').textContent,'0名');assert.equal(a.$('admin-onboard').textContent,'2名');});

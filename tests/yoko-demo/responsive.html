@@ -6,6 +6,6 @@
 <label>表示高さ <select id="height"><option value="844">844 px</option><option value="667">667 px</option><option value="960">960 px</option></select></label>
 <label>入口 <select id="role"><option value="user">ユーザー用</option><option value="driver">ドライバー用</option><option value="admin">管理者用</option><option value="">共通入口</option></select></label>
 <button id="reload" type="button">デモを再読込</button>
-<iframe id="preview" title="横のエレベーターのデモ" src="../../danchi-elevator/demo/?role=user&amp;preview=0.18.0"></iframe>
+<iframe id="preview" title="横のエレベーターのデモ" src="../../danchi-elevator/demo/?role=user&amp;preview=0.18.1"></iframe>
 <script>'use strict';document.getElementById('width').addEventListener('change',event=>{document.getElementById('preview').style.width=event.target.value+'px';});document.getElementById('height').addEventListener('change',event=>{document.getElementById('preview').style.height=event.target.value+'px';});function reloadDemo(){const role=document.getElementById('role').value;document.getElementById('preview').src='../../danchi-elevator/demo/?preview='+Date.now()+(role?'&role='+role:'');}document.getElementById('role').addEventListener('change',reloadDemo);document.getElementById('reload').addEventListener('click',reloadDemo);</script>
 </html>
