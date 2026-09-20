@@ -1,0 +1,218 @@
+/* Three roles, one manual-derived design system. */
+.rider-ui .journey-steps{display:none}
+.rider-task{display:flex;gap:12px;align-items:center;padding:8px 0 12px}
+.rider-task>b{display:grid;place-items:center;background:#72D7FF;border:1px solid #111;flex:0 0 42px;height:48px;font-size:32px;font-weight:900}
+.rider-task h2{font-size:23px;line-height:1.3;margin:0 0 4px}
+.rider-task p{font-size:14px;line-height:1.45;margin:0;color:#444}
+.recent-trip{margin:0 0 10px}
+.recent-trip button{width:100%;display:flex;align-items:center;gap:10px;min-height:56px;border:1px solid #111;background:white;color:#111;text-align:left;padding:8px 10px;white-space:normal}
+.recent-trip small{font-size:13px;flex-shrink:0;background:#e8f7fd;padding:5px}
+.recent-trip span{font-size:16px;font-weight:700;line-height:1.35}
+.quick-people{display:flex;gap:8px;align-items:center;padding:0 8px 8px}
+.quick-people>b{font-size:16px;margin-right:auto}
+.quick-people button{font-size:20px;min-height:48px;min-width:58px;border:1px solid #888;background:white;color:#111;padding:6px 10px}
+.quick-people button[aria-pressed=true]{background:#72D7FF;border:2px solid #111;font-weight:800;padding:5px 9px}
+.rider-ui .journey.has-map #journey-choices[data-kind=people]{display:none}
+.rider-ui .place-tabs small{font-size:15px}
+.rider-ui .place-tabs strong{font-size:19px}
+.rider-ui #confirm-dialog .dialog-content{padding:20px}
+.rider-ui #confirm-dialog h2{font-size:25px;margin:0 0 16px;line-height:1.3}
+.rider-ui #confirm-dialog .eyebrow{display:none}
+.rider-ui #confirm-dialog .confirm-route{font-size:26px;line-height:1.4;margin:0}
+.rider-ui #confirm-dialog .confirm-route small{font-size:15px;line-height:1.4;margin:5px 0}
+.rider-ui #confirm-dialog p{font-size:19px;margin:10px 0;line-height:1.45}
+.rider-ui #confirm-dialog p.muted{font-size:15px}
+.rider-ui #confirm-dialog #confirm-expiry{font-size:13px}
+.rider-ui #confirm-dialog .actions{margin-top:14px}
+.rider-ui #confirm-dialog .actions button{min-height:58px;font-size:21px}
+.rider-ui #confirm-dialog .actions .primary{background:#111;color:white}
+.rider-ui #confirm-dialog #close-dialog{background:white;color:#111}
+
+/* The driver's map and the next stop take the largest share of the workspace. */
+.driver-ui .test-strip{display:none}
+.manual-experience.driver-ui .driver-board{display:grid;grid-template-columns:minmax(0,1.8fr) minmax(310px,1fr);align-items:start;gap:20px}
+.driver-nav-card{display:grid;grid-template-columns:1fr auto;gap:6px 16px;align-items:center;padding:18px 20px;background:#E7FF38;border-bottom:1px solid #111}
+.driver-nav-card>span{font-size:16px;font-weight:800;grid-column:1}
+.driver-nav-card h2{font-size:30px;font-weight:900;line-height:1.2;margin:0;grid-column:1;overflow-wrap:anywhere}
+.driver-nav-card p{font-size:17px;line-height:1.4;margin:2px 0 0;grid-column:1}
+.driver-nav-card>a{grid-column:2;grid-row:1/4;display:flex;align-items:center;justify-content:center;max-width:200px;min-height:64px;background:#111;color:white;font-size:19px;font-weight:800;padding:12px 16px;line-height:1.4;text-decoration:none;border:1px solid #111;text-align:center}
+.driver-nav-card>a[aria-disabled=true]{opacity:.6;background:#e8e8df;color:#333;cursor:default}
+.driver-nav-card>small{grid-column:1/-1;font-size:13px;line-height:1.45;margin-top:4px}
+.manual-experience.driver-ui #driver-map{height:450px}
+.driver-ui .driver-map-panel{border:1px solid #111}
+.driver-ui .driver-map-panel>.driver-section-heading{padding:12px 20px}
+.driver-ui .driver-map-panel>.driver-section-heading h2{font-size:22px}
+.driver-ui .driver-map-legend{font-size:13px}
+.driver-ui .driver-map-legend>span:last-child{display:none}
+.driver-ui .driver-map-note{font-size:13px;margin:0;padding:8px 12px;border-bottom:1px solid #111}
+.driver-ui .driver-operation{border:0;background:#fff;margin:0;padding:14px 20px 20px}
+.driver-ui .driver-flow{display:none}
+.driver-ui #driver-selected-route{display:none}
+.driver-ui .driver-operation>.driver-section-heading{padding:0 0 10px}
+.driver-ui .driver-operation>.driver-section-heading h2{font-size:22px}
+.driver-ui #driver-operation-prompt{font-size:18px;margin:12px 0}
+.driver-ui .driver-safety{padding:10px 12px;margin-bottom:12px}
+.driver-ui .driver-safety p{display:none}
+.driver-ui #driver-map-return{display:none}
+.driver-ui #driver-action-hint{font-size:14px}
+.driver-ui .driver-main-action{margin:0}
+.driver-itinerary{border:1px solid #111;background:#fff}
+.driver-itinerary h2{font-size:24px;background:#E7FF38;border-bottom:1px solid #111;padding:16px;margin:0}
+.driver-itinerary p,.driver-itinerary>small{font-size:14px;line-height:1.5;display:block;margin:12px 16px;color:#444}
+#driver-itinerary{padding:0 14px;margin:0;list-style:none}
+#driver-itinerary li{margin-bottom:8px}
+#driver-itinerary button{display:flex;align-items:center;gap:12px;text-align:left;padding:12px;width:100%;background:white;border:1px solid #999;color:#111;white-space:normal}
+#driver-itinerary button[aria-current]{border:2px solid #111;background:#f6ffc0;padding:11px}
+#driver-itinerary button>b{font-size:32px;font-weight:900;align-self:flex-start;min-width:32px;line-height:1.2}
+#driver-itinerary button span{min-width:0;display:flex;flex-direction:column;gap:5px}
+#driver-itinerary small{font-size:15px}
+#driver-itinerary strong{font-size:21px;line-height:1.3}
+#driver-itinerary em{font-style:normal;font-size:13px;color:#555}
+.driver-run-details{margin-top:20px;border:1px solid #111;background:white}
+.driver-run-details>summary{cursor:pointer;font-size:19px;font-weight:700;padding:18px;min-height:58px}
+.driver-ui .driver-reception-counts{padding:12px 16px}
+.driver-ui .driver-reception-counts strong{font-size:38px}
+.driver-ui .driver-queue-column{gap:18px}
+.driver-ui .driver-map-pin small{font-size:12px;white-space:normal}
+
+/* Administrator: current load, period results and auditable denominators. */
+.admin-ui .test-strip{display:none}
+.admin-ui #experience-next{margin-bottom:18px}
+.admin-ui #admin-panel{max-width:1440px}
+.admin-live,.admin-analytics{margin-bottom:24px}
+.analytics-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:16px}
+.analytics-heading .eyebrow{font-size:13px;font-weight:700;letter-spacing:.08em;margin:0 0 6px}
+.analytics-heading h2{font-size:29px;letter-spacing:-.03em;margin:0;line-height:1.3}
+.analytics-heading>p{font-size:14px;margin:0;color:#555}
+.live-kpis{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.live-kpis>article{border:1px solid #111;background:#fff;padding:22px 20px;min-width:0}
+.live-kpis>article:first-child{background:#FF4FC3}
+.live-kpis>article>span{font-size:18px;font-weight:700}
+.live-kpis>article>strong{display:block;font-size:54px;line-height:1.2;font-weight:900;letter-spacing:-.05em;margin:12px 0;font-variant-numeric:tabular-nums}
+.live-kpis>article>p{font-size:15px;line-height:1.5;min-height:45px;margin:0 0 12px}
+.metric-track{height:7px;background:#ddd}
+.metric-track i{display:block;background:#111;height:100%;width:0}
+.admin-analytics{border:1px solid #111;background:white;padding:24px}
+.period-tabs{display:flex;border:1px solid #111;flex-shrink:0}
+.period-tabs button{min-height:52px;font-size:18px;padding:12px 18px;border:0;background:white;color:#111}
+.period-tabs button+button{border-left:1px solid #111}
+.period-tabs button[aria-pressed=true]{background:#111;color:white}
+.analysis-scope{font-size:14px;color:#555;line-height:1.5;margin:0 0 20px}
+.performance-kpis{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));border-block:1px solid #111}
+.performance-kpis article{padding:20px 16px}
+.performance-kpis article+article{border-left:1px solid #ccc}
+.performance-kpis span{display:block;font-size:18px}
+.performance-kpis strong{display:block;font-size:52px;line-height:1.2;margin-top:12px;letter-spacing:-.04em}
+.performance-kpis small{font-size:19px;margin-left:6px;letter-spacing:0}
+.analysis-secondary{display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid #111;gap:24px}
+.analysis-secondary p{display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px;font-size:17px;margin:20px 0}
+.analysis-secondary b{font-size:30px}
+.analysis-secondary small{font-size:13px;color:#555;grid-column:1/-1}
+.analysis-settings{border-bottom:1px solid #ccc;margin-bottom:20px}
+.analysis-settings>summary{font-size:17px;padding:16px 0;cursor:pointer;min-height:56px;font-weight:700}
+.analysis-settings p{font-size:14px;line-height:1.65;margin:10px 0}
+.schedule-inputs{display:flex;align-items:end;gap:10px;flex-wrap:wrap}
+.schedule-inputs label{font-size:16px;display:flex;flex-direction:column;gap:6px}
+.schedule-inputs input{font-size:18px;padding:10px;min-height:52px;max-width:160px;border:1px solid #777}
+.schedule-inputs button{font-size:17px;padding:12px;min-height:52px;background:#111;color:white;border:1px solid #111}
+#admin-schedule-clear{background:white;color:#111}
+#admin-schedule-message{font-size:15px;font-weight:700}
+.analysis-charts{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:28px}
+.analysis-chart{min-width:0;overflow:hidden}
+.analysis-chart:last-child{grid-column:1/-1}
+.analysis-chart h3{font-size:22px;line-height:1.4;margin:8px 0}
+.analysis-chart>p{font-size:14px;color:#555;margin:0 0 18px}
+.trend-chart{display:flex;gap:10px;overflow-x:auto;align-items:flex-end;padding-bottom:8px}
+.trend-column{flex:1 0 36px;min-width:36px;text-align:center}
+.trend-column strong{font-size:17px;display:block;margin-bottom:6px}
+.trend-column>div{height:140px;background:#f2f2ec;display:flex;align-items:flex-end}
+.trend-column i{width:100%;display:block;background:#FF4FC3}
+.trend-column span{font-size:12px;white-space:nowrap;display:block;margin-top:8px}
+.route-bar{display:grid;grid-template-columns:1fr auto;gap:8px;margin-bottom:20px}
+.route-bar>span{font-size:17px;line-height:1.5}
+.route-bar>span>b{font-size:20px;margin-right:5px}
+.route-bar>strong{font-size:22px;white-space:nowrap}
+.route-bar small{font-size:14px;font-weight:400}
+.route-bar>div{grid-column:1/-1;height:8px;background:#eee}
+.route-bar i{height:100%;display:block;background:#111}
+.empty-analysis{font-size:17px;padding:25px 0;color:#555}
+.hours-chart{display:grid;grid-template-columns:repeat(24,minmax(0,1fr));gap:5px}
+.hours-chart>div{min-width:0;text-align:center}
+.hours-chart b{font-size:14px;height:22px;display:block}
+.hours-chart>div>div{height:100px;background:#f0f0ed;display:flex;align-items:end}
+.hours-chart i{display:block;width:100%;background:#72D7FF}
+.hours-chart span{font-size:13px;white-space:nowrap;display:block;height:24px;margin-top:8px;text-align:left}
+.admin-ui .admin-board{margin:24px 0}
+.admin-ui .admin-fleet{margin-top:24px}
+.live-alerts{display:flex;gap:8px 20px;flex-wrap:wrap;margin-bottom:16px;font-size:18px}
+.live-alerts b{font-size:23px;margin-left:6px}
+
+@media(max-width:850px){
+  .manual-experience.driver-ui .driver-board{display:flex;flex-direction:column;gap:16px}
+  .driver-ui .driver-map-panel,.driver-ui .driver-queue-column{width:100%;min-width:0}
+  .manual-experience.driver-ui #driver-map{height:320px}
+  .driver-nav-card{padding:12px;grid-template-columns:1fr;gap:6px}
+  .driver-nav-card h2{font-size:27px}
+  .driver-nav-card>span{font-size:15px}
+  .driver-nav-card p{font-size:16px}
+  .driver-nav-card>a{grid-column:1;grid-row:auto;max-width:none;min-height:56px;font-size:20px;margin-top:4px}
+  .driver-nav-card>small{font-size:12px}
+  .driver-ui .driver-operation{padding:12px}
+  .driver-ui .driver-exceptions button{font-size:17px}
+  .analytics-heading{display:block}
+  .analytics-heading h2{font-size:25px}
+  .analytics-heading>p{margin-top:8px}
+  .live-kpis{gap:8px}
+  .live-kpis>article{padding:14px 12px}
+  .live-kpis>article>span{font-size:15px}
+  .live-kpis>article>strong{font-size:38px}
+  .live-kpis>article>p{font-size:13px}
+  .admin-analytics{padding:18px 14px}
+  .period-tabs{margin-top:14px;width:100%;display:grid;grid-template-columns:repeat(3,1fr)}
+  .period-tabs button{padding:10px 4px}
+  .performance-kpis strong{font-size:40px}
+  .performance-kpis span{font-size:16px}
+  .performance-kpis article{padding:16px 10px}
+  .analysis-charts{grid-template-columns:1fr;gap:24px}
+}
+@media(max-width:540px){
+  .rider-task{padding-top:4px;gap:10px}
+  .rider-task h2{font-size:22px}
+  .rider-task p{font-size:13px}
+  .rider-ui .place-tabs strong{font-size:18px}
+  .recent-trip button{display:block;min-height:52px;padding:8px}
+  .recent-trip small{background:transparent;padding:0;margin-right:8px}
+  .recent-trip span{font-size:15px}
+  .quick-people{gap:7px}
+  .quick-people button{min-width:52px;min-height:48px;font-size:19px}
+  .rider-ui #confirm-dialog{position:fixed;inset:auto 0 0;margin:0;width:100%;max-width:none;max-height:calc(100dvh - 12px);border:1px solid #111;border-bottom:0}
+  .rider-ui #confirm-dialog .dialog-content{padding:18px 16px calc(18px + env(safe-area-inset-bottom))}
+  .rider-ui #confirm-dialog h2{font-size:23px;margin-bottom:12px}
+  .rider-ui #confirm-dialog .actions{flex-direction:column-reverse;gap:8px}
+  .rider-ui #confirm-dialog .actions button{min-height:54px}
+  .rider-ui #confirm-dialog .confirm-route{font-size:24px}
+  .live-kpis{grid-template-columns:1fr 1fr}
+  .live-kpis>article:last-child{grid-column:1/-1;display:grid;grid-template-columns:1fr auto;align-items:center;gap:8px}
+  .live-kpis>article:last-child>strong{margin:0;font-size:32px}
+  .live-kpis>article:last-child>p,.live-kpis>article:last-child>.metric-track{grid-column:1/-1;min-height:0;margin-bottom:0}
+  .live-kpis>article>strong{font-size:40px}
+  .live-kpis>article>p{min-height:40px}
+  .performance-kpis{grid-template-columns:1fr 1fr}
+  .performance-kpis article:nth-child(3){border-left:0;border-top:1px solid #ccc}
+  .performance-kpis article:nth-child(4){border-top:1px solid #ccc}
+  .analysis-secondary{grid-template-columns:1fr;gap:0}
+  .analysis-secondary p{margin:12px 0}
+  .analysis-secondary b{font-size:27px}
+  .analysis-charts{gap:18px}
+  .analysis-chart h3{font-size:21px}
+  .route-bar{grid-template-columns:1fr}
+  .route-bar>strong{font-size:20px}
+  .hours-chart{gap:3px}
+  .hours-chart b{font-size:12px}
+  .hours-chart span{font-size:12px}
+  .schedule-inputs{display:grid;grid-template-columns:1fr 1fr;align-items:end}
+  .schedule-inputs input{width:100%;min-width:0;max-width:none}
+  .schedule-inputs button{font-size:16px}
+  .live-alerts{font-size:16px;gap:4px 12px}
+  .live-alerts b{font-size:21px}
+}

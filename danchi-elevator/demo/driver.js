@@ -40,7 +40,16 @@
       $('driver-exceptions').hidden=!ride||!['assigned','arrived'].includes(ride.status);
       $('driver-panel').querySelectorAll('[data-driver-step]').forEach(n=>{if(Number(n.dataset.driverStep)===step?.step)n.setAttribute('aria-current','step');else n.removeAttribute('aria-current');});
       const key=ride?ride.id+':'+ride.version:'';if(key!==lastKey){lastKey=key;$('stopped').checked=false;}
-      map.draw(stops(),live,ride);controls();
+      const plan=YokoInsights.itinerary(live,snap.vehicles.map(v=>v.id));
+      const leg=ride&&plan.find(item=>item.rideId===ride.id&&item.kind===(ride.status==='onboard'?'dropoff':'pickup'));
+      $('driver-nav-kind').textContent=leg?`順番 ${leg.number} / 次は${leg.kind==='pickup'?'乗せる':'降ろす'}`:ride?'引受前の確認':'次の送迎';
+      $('driver-nav-place').textContent=leg?.name||ride?.origin_name||'引受待ちの依頼はありません';
+      $('driver-nav-detail').textContent=ride?`${ride.passengers}人 / ${ride.origin_name} → ${ride.destination_name}`:'新しい依頼が入ると、ここに表示します。';
+      const nav=$('driver-navigate'),href=leg&&YokoInsights.navigation(leg.stopId);
+      if(href){nav.href=href;nav.removeAttribute('aria-disabled');}else{nav.removeAttribute('href');nav.setAttribute('aria-disabled','true');}
+      $('driver-nav-note').textContent=href?'停車中にナビを設定。架空の地点をGoogle マップに渡します。':'引受後に、次の乗降場所へのナビを開けます。';
+      setHtml('driver-itinerary',plan.length?plan.map(item=>`<li><button type="button" data-driver-select="${O.esc(item.rideId)}" ${item.rideId===ride?.id?'aria-current="step"':''}><b>${item.number}</b><span><small>${item.kind==='pickup'?'乗せる':'降ろす'} / ${item.people}人</small><strong>${O.esc(item.name)}</strong><em>受付 ${O.esc(item.rideId.slice(-8))}</em></span></button></li>`).join(''):'<li class="driver-empty">引き受けると、乗車 → 降車の順が表示されます。</li>');
+      map.draw(stops(),live,ride,plan);controls();
     }
     function review(expected){
       if(busy())return;const r=selected(),step=r&&steps[r.status];if(!step)return;
