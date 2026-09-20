@@ -1,0 +1,330 @@
+{
+  "status": "PASS",
+  "checked_at": "2026-09-20",
+  "verified_commit": "e474a883c8cd933c0d7ca489f26971058125fb23",
+  "asset_version": "16b",
+  "deployment": {
+    "workflow_run": 35479637078,
+    "conclusion": "success"
+  },
+  "scope": "Published GitHub Pages demo in desktop Chromium. Phone sizes use same-origin iframe viewports; no physical phone, Safari, or native software-keyboard test.",
+  "functional": {
+    "receipt": "e53c198b",
+    "route": "ふれあいセンター → 駅前ロータリー",
+    "passengers": 1,
+    "steps": [
+      "Map pickup selection",
+      "Chat destination and passenger input",
+      "Phone review view",
+      "Explicit Core draft confirmation",
+      "Saved request opens status view",
+      "Stored request survives page reload",
+      "Driver selects the matching queue card",
+      "Unchecked stopped guard blocks confirmation",
+      "Fresh stopped check and explicit acceptance",
+      "Rider vehicle confirmation dialog",
+      "Fresh stopped checks and explicit arrival, boarding, completion",
+      "Admin observes one onboard passenger, then zero after completion",
+      "Admin chat receipt search opens the matching completed record",
+      "Rider composer available again after completion"
+    ],
+    "admin_during_boarding": {
+      "requested_orders": 1,
+      "waiting_passengers": 2,
+      "onboard_passengers": 1
+    },
+    "admin_after_completion": {
+      "requested_orders": 1,
+      "waiting_passengers": 2,
+      "onboard_passengers": 0,
+      "completed_records": 5,
+      "cancelled_records": 1
+    },
+    "unsent_input_preserved_across_width_changes": true,
+    "phone_navigation_hidden_while_text_input_focused": true,
+    "phone_navigation_restored_after_submit": true
+  },
+  "local_tests": {
+    "desktop_ui_and_actual_core": 37,
+    "phone_ui_and_actual_core": 49,
+    "phone_additional_navigation_checks": 12
+  },
+  "layout": [
+    {
+      "label": "user-status-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "rides",
+      "width": 375
+    },
+    {
+      "label": "user-map-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 337.59375,
+          "id": "journey-map",
+          "pins": 3,
+          "width": 349
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "map",
+      "width": 375
+    },
+    {
+      "label": "user-map-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 280,
+          "id": "journey-map",
+          "pins": 3,
+          "width": 279
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "map",
+      "width": 305
+    },
+    {
+      "label": "user-chat-320x667",
+      "chatFont": [
+        "19px",
+        "19px",
+        "19px",
+        "19px",
+        "19px",
+        "19px"
+      ],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "chat",
+      "width": 305
+    },
+    {
+      "label": "user-review-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "review",
+      "width": 305
+    },
+    {
+      "label": "driver-queue-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "queue",
+      "width": 305
+    },
+    {
+      "label": "driver-map-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 280,
+          "id": "driver-map",
+          "pins": 3,
+          "width": 279
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "map",
+      "width": 305
+    },
+    {
+      "label": "driver-operation-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "drive",
+      "width": 305
+    },
+    {
+      "label": "driver-chat-320x667",
+      "chatFont": [
+        "19px"
+      ],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "chat",
+      "width": 305
+    },
+    {
+      "label": "admin-map-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 280,
+          "id": "admin-map",
+          "pins": 3,
+          "width": 279
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "map",
+      "width": 305
+    },
+    {
+      "label": "admin-chat-320x667",
+      "chatFont": [
+        "19px",
+        "19px",
+        "19px"
+      ],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "chat",
+      "width": 305
+    },
+    {
+      "label": "admin-record-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "records",
+      "width": 305
+    },
+    {
+      "label": "admin-overview-320x667",
+      "chatFont": [],
+      "height": 667,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 305,
+      "view": "overview",
+      "width": 305
+    },
+    {
+      "label": "admin-overview-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "overview",
+      "width": 375
+    },
+    {
+      "label": "admin-map-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 337.59375,
+          "id": "admin-map",
+          "pins": 3,
+          "width": 349
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "map",
+      "width": 375
+    },
+    {
+      "label": "driver-queue-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "queue",
+      "width": 375
+    },
+    {
+      "label": "driver-map-390x844",
+      "chatFont": [],
+      "height": 844,
+      "maps": [
+        {
+          "allContained": true,
+          "height": 337.59375,
+          "id": "driver-map",
+          "pins": 3,
+          "width": 349
+        }
+      ],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "map",
+      "width": 375
+    },
+    {
+      "label": "user-chat-390x844",
+      "chatFont": [
+        "19px"
+      ],
+      "height": 844,
+      "maps": [],
+      "navButtonMin": 76,
+      "navHeight": 78,
+      "scrollWidth": 375,
+      "view": "chat",
+      "width": 375
+    }
+  ],
+  "desktop": {
+    "chatVisible": true,
+    "columns": "645.266px 537.719px",
+    "layout": "grid",
+    "mapVisible": true,
+    "phoneNavHidden": true,
+    "scrollWidth": 1265,
+    "unsentText": "中央広場から",
+    "width": 1265
+  },
+  "limits": [
+    "Browser demo data is shared only within the same browser/origin.",
+    "The three map stops are fictional; vehicle location and ETA are not implemented.",
+    "No change to Core, database seed, external API, LINE, MLIT, MCP or A2A integration status."
+  ]
+}
