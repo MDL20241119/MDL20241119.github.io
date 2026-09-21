@@ -50,8 +50,9 @@
   "source_application": {
     "base_version": "0.12.0",
     "public_summary": "元アプリの連携コードを再利用し、API・MCP・A2A が共通 Core を呼ぶローカル環境で検査・修正しました。GitHub Pages 上で連携サーバーを本番稼働させたものではありません。",
-    "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/README.md",
-    "core_modules_matching_demo": 12
+    "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/README.md",
+    "core_modules_matching_demo": 12,
+    "repository_commit": "5e96d67801cf93483cab3c1831bb25481e5beea1"
   },
   "production_connection": false,
   "summary": {
@@ -91,7 +92,7 @@
       "getOperationDelays"
     ],
     "regression_tests_added": 12,
-    "report_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+    "report_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
     "scope": "合成データ・ループバックの実 HTTP・模擬 TLS/認証提供者。外部本番未接続。全件はアプリのテスト数であり COMmmmONS の要求数ではありません。",
     "production_connection": false
   },
@@ -121,7 +122,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_updated_terms_get_new_id_and_need_new_agreement"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/terms'].get / 原本 YAML 行 28",
       "gaps": [
@@ -132,7 +133,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -160,7 +161,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_service_filters_pagination_and_qualification_are_real"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/services'].get / 原本 YAML 行 255",
       "gaps": [
@@ -171,7 +172,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -199,7 +200,7 @@
       "test_evidence": [
         "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/services/{id}'].get / 原本 YAML 行 1041",
       "gaps": [
@@ -210,7 +211,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:248",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L248",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L248",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -238,7 +239,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_profile_requires_names_and_update_replaces_omitted_personal_fields"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers'].post / 原本 YAML 行 2073",
       "gaps": [
@@ -249,7 +250,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:110",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L110",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L110",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -277,7 +278,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_physically_delete_profile_agreements_and_cached_personal_data"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}'].get / 原本 YAML 行 2421",
       "gaps": [
@@ -288,7 +289,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -316,7 +317,7 @@
       "test_evidence": [
         "test_catalog.CatalogHTTPTests.test_exact_approval_and_object_authorization_for_profile_update"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}'].put / 原本 YAML 行 2682",
       "gaps": [
@@ -327,7 +328,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:110",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L110",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L110",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -355,7 +356,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_physically_delete_profile_agreements_and_cached_personal_data"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}'].delete / 原本 YAML 行 3069",
       "gaps": [
@@ -366,7 +367,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:185",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L185",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -394,7 +395,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_service_filters_pagination_and_qualification_are_real"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}/services'].get / 原本 YAML 行 3218",
       "gaps": [
@@ -405,7 +406,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -433,7 +434,7 @@
       "test_evidence": [
         "test_catalog.CatalogTests.test_duplicate_agreement_preserves_original_time_and_no_side_effect_repeat"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}/agreements'].post / 原本 YAML 行 3987",
       "gaps": [
@@ -444,7 +445,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:185",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L185",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -472,7 +473,7 @@
       "test_evidence": [
         "test_catalog.CatalogHTTPTests.test_service_terms_have_separate_scope_and_existing_agreements_survive_replacement"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}/agreements'].get / 原本 YAML 行 4259",
       "gaps": [
@@ -483,7 +484,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -511,7 +512,7 @@
       "test_evidence": [
         "test_audit_20260921.AuditHTTPTests.test_date_filters_use_jst_include_endpoints_and_allow_either_bound"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/passengers/{id}/reservations'].get / 原本 YAML 行 4496",
       "gaps": [
@@ -522,7 +523,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/mlit.py:181",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L181",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit.py#L181",
       "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
     },
     {
@@ -550,7 +551,7 @@
       "test_evidence": [
         "test_audit_20260921.AuditHTTPTests.test_explicit_radius_requires_location_even_at_default_value_or_with_id"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/stops'].get / 原本 YAML 行 5322",
       "gaps": [
@@ -561,7 +562,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/catalog.py:271",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L271",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -589,7 +590,7 @@
       "test_evidence": [
         "test_booking.BookingHTTPTests.test_standard_search_confirm_book_201_and_cross_protocol_replay"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/reservations/candidates'].post / 原本 YAML 行 5761",
       "gaps": [
@@ -600,7 +601,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/mlit.py:64",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L64",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit.py#L64",
       "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
     },
     {
@@ -628,7 +629,7 @@
       "test_evidence": [
         "test_booking.BookingHTTPTests.test_lost_booking_response_reconciles_after_restart_without_second_seat"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/reservations'].post / 原本 YAML 行 6609",
       "gaps": [
@@ -639,7 +640,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/mlit.py:83",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L83",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit.py#L83",
       "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
     },
     {
@@ -667,7 +668,7 @@
       "test_evidence": [
         "test_audit_20260921.AuditHTTPTests.test_standard_cannot_change_stops_even_if_core_owner_approved_it"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/reservations/{id}'].put / 原本 YAML 行 7477",
       "gaps": [
@@ -678,7 +679,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/mlit.py:83",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L83",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit.py#L83",
       "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
     },
     {
@@ -706,7 +707,7 @@
       "test_evidence": [
         "test_payments.PaymentHTTPTests.test_standard_get_put_and_mdl_read_use_persisted_data_and_original_replay"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/reservations/{id}/payment'].get / 原本 YAML 行 8549",
       "gaps": [
@@ -717,7 +718,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/payments.py:40",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/payments.py#L40",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/payments.py#L40",
       "code_sha256": "b249c5ac9e5fd713116cef66dcbe114d975765a7d7fde2469d9942e2db969c6f"
     },
     {
@@ -745,7 +746,7 @@
       "test_evidence": [
         "test_payments.PaymentHTTPTests.test_real_lost_put_response_reconciles_after_restart_with_one_ledger_update"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/reservations/{id}/payment'].put / 原本 YAML 行 8741",
       "gaps": [
@@ -756,7 +757,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/payments.py:79",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/payments.py#L79",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/payments.py#L79",
       "code_sha256": "b249c5ac9e5fd713116cef66dcbe114d975765a7d7fde2469d9942e2db969c6f"
     },
     {
@@ -784,7 +785,7 @@
       "test_evidence": [
         "test_observations.ObservationHTTPTests.test_both_standard_operations_and_mdl_views_use_saved_approved_observations"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/vehicle-locations'].get / 原本 YAML 行 9008",
       "gaps": [
@@ -795,7 +796,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/observations.py:162",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L162",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/observations.py#L162",
       "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
     },
     {
@@ -823,7 +824,7 @@
       "test_evidence": [
         "test_observations.ObservationHTTPTests.test_filter_defaults_bounds_and_paging_validate_original_contract"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
       "source_locator": "paths['/operation-delays'].get / 原本 YAML 行 9286",
       "gaps": [
@@ -834,7 +835,7 @@
         "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
       ],
       "code_ref": "integrations/yoko/app/observations.py:162",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L162",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/observations.py#L162",
       "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
     }
   ],
@@ -870,9 +871,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/mlit_contract.py:39",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L39",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit_contract.py#L39",
       "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
     },
     {
@@ -906,9 +907,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/mlit_contract.py:98",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L98",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit_contract.py#L98",
       "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
     },
     {
@@ -942,9 +943,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/mlit_contract.py:46",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L46",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mlit_contract.py#L46",
       "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
     },
     {
@@ -978,9 +979,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/transport_data.py:22",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/transport_data.py#L22",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/transport_data.py#L22",
       "code_sha256": "4ce59da9b4c942108a500f4546e4f58ce17577dfd3beaafde4d4ca9dc11aa602"
     },
     {
@@ -1014,9 +1015,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/delegation.py:16",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/delegation.py#L16",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/delegation.py#L16",
       "code_sha256": "35e2dfa63a20ef0ca1ab3a0b501483699ec05255fb718f6a1f69090f76e3343d"
     },
     {
@@ -1050,9 +1051,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/core.py:286",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/core.py#L286",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/core.py#L286",
       "code_sha256": "4059aa475258e74a9e12338599ab1929deb322e7567264daadc246d7fc83ea22"
     },
     {
@@ -1086,9 +1087,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:90",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L90",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L90",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1122,9 +1123,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:52",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L52",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L52",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1158,9 +1159,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:22",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L22",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L22",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1194,9 +1195,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:93",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L93",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1230,9 +1231,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:40",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L40",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L40",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1266,9 +1267,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:67",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L67",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L67",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1302,9 +1303,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:93",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L93",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1338,9 +1339,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:93",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L93",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1374,9 +1375,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs_validation.py:14",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs_validation.py#L14",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs_validation.py#L14",
       "code_sha256": "24c0a72b3873aab6e000e5eecc687e7d64f8580fbb8a78792607785751a3d865"
     },
     {
@@ -1408,9 +1409,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/gtfs.py:90",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L90",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/gtfs.py#L90",
       "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
     },
     {
@@ -1442,9 +1443,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/LOCAL_PROFILE.md:17",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/LOCAL_PROFILE.md#L17",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/LOCAL_PROFILE.md#L17",
       "code_sha256": "1f5c07e110f68d73d6f5c9a636073cf35d50a8ed14491c5cff40f717d93cd1e6"
     },
     {
@@ -1478,9 +1479,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/catalog.py:185",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/catalog.py#L185",
       "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
     },
     {
@@ -1514,9 +1515,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/core.py:280",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/core.py#L280",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/core.py#L280",
       "code_sha256": "4059aa475258e74a9e12338599ab1929deb322e7567264daadc246d7fc83ea22"
     },
     {
@@ -1550,9 +1551,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/observations.py:118",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L118",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/observations.py#L118",
       "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
     },
     {
@@ -1586,9 +1587,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/direct_api.py:6",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/direct_api.py#L6",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/direct_api.py#L6",
       "code_sha256": "9458d4d8f3448c301bd9c88364a9db0238cfa94bcea5f0c5ada6f2e8b930ae12"
     },
     {
@@ -1622,9 +1623,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/connected.py:48",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/connected.py#L48",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/connected.py#L48",
       "code_sha256": "2bf0cef85cbc8a21fdacfc95be16cf0bc31c21af5993beb0587fdfe3c55ccf80"
     },
     {
@@ -1658,9 +1659,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/mcp_adapter.py:153",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mcp_adapter.py#L153",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mcp_adapter.py#L153",
       "code_sha256": "67a4f19a0ec748e036342558f463182d3ec53eab5a962589edf95765836f10f6"
     },
     {
@@ -1694,9 +1695,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/mcp_adapter.py:47",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mcp_adapter.py#L47",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/mcp_adapter.py#L47",
       "code_sha256": "67a4f19a0ec748e036342558f463182d3ec53eab5a962589edf95765836f10f6"
     },
     {
@@ -1730,9 +1731,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/a2a_adapter.py:232",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/a2a_adapter.py#L232",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/a2a_adapter.py#L232",
       "code_sha256": "1bf32a277e0d0b20c516b2d125f3820fc86896acc61104ff3767512b69236a3d"
     },
     {
@@ -1766,9 +1767,9 @@
       "notes": [
         "この行の判定対象は記載した要件と検証範囲に限ります。"
       ],
-      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/artifacts/test-results/application.json",
       "code_ref": "integrations/yoko/app/agent_actions.py:21",
-      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/agent_actions.py#L21",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/5e96d67801cf93483cab3c1831bb25481e5beea1/integrations/yoko/app/agent_actions.py#L21",
       "code_sha256": "7cc2393c4a6f91095b022f568de2dda0437c527318f60ab6a49dae957743cc6c"
     }
   ],

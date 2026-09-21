@@ -1,0 +1,17 @@
+{
+  "version": "2026.09.21",
+  "code_commit": "5e96d67801cf93483cab3c1831bb25481e5beea1",
+  "verified_at": "2026-09-21",
+  "application_tests": {
+    "passed": 331,
+    "failed": 0,
+    "skipped": 0
+  },
+  "project_database": {
+    "adopted": 61,
+    "individually_searched": 61,
+    "same_year_sources": 33,
+    "related_or_other_year_only": 28
+  },
+  "external_production_connection": false
+}
