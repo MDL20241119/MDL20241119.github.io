@@ -10,6 +10,7 @@
 - `atlas-model.js`: 検索、表示、出典使用箇所の抽出。副作用のない関数。
 - `data/atlas.json`: 本画面の正本。98件の事例、フィールド、153資料、GAP・タグ、8段階の関係、確認事項、更新履歴。
 - `data/methodology.json`: 分類・確認状態・数字・社会実装の定義。atlas内のmethodologyと同時更新。
+- `data/ui-verification.json`: 公開画面の操作結果。確認したコミット・画面幅・対象範囲を記録。
 - `data/quality-report.json`: 自動検査の結果と検証範囲。PASSは全事実の独立検証完了を意味しません。
 - `data/r7-projects.json` / `model.js`: 従来DBの確認記録。今回の再分類前の記録を保持しています。
 
