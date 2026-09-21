@@ -4,3 +4,5 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 
 .summary-state{display:block;font-size:10px;color:#555;border-bottom:1px solid var(--line);margin-bottom:7px;padding-bottom:5px}.project-content{min-width:0;overflow-wrap:anywhere}.project-title{overflow-wrap:anywhere}select:disabled{opacity:.6}#detail-content{overflow-wrap:anywhere}
+
+@media(max-width:360px){.number{gap:12px}.number span{font-size:130px}.number strong{font-size:25px;max-width:none;white-space:nowrap;overflow-wrap:normal}.hero h1{font-size:29px}}
