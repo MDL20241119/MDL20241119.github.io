@@ -1,0 +1,76 @@
+{
+  "updated_at": "2026-09-21",
+  "scope": "大分県総人口・各年10月1日",
+  "values": [
+    {
+      "year": 2000,
+      "value": 1221140,
+      "unit": "人",
+      "kind": "FACT",
+      "status": "ACTUAL",
+      "source_id": "oita-census"
+    },
+    {
+      "year": 2010,
+      "value": 1196529,
+      "unit": "人",
+      "kind": "FACT",
+      "status": "ACTUAL",
+      "source_id": "oita-census"
+    },
+    {
+      "year": 2020,
+      "value": 1123852,
+      "unit": "人",
+      "kind": "FACT",
+      "status": "ACTUAL",
+      "source_id": "oita-census"
+    },
+    {
+      "year": 2030,
+      "value": 1031171,
+      "unit": "人",
+      "kind": "FACT",
+      "status": "PROJECTION",
+      "source_id": "ipss-2023"
+    },
+    {
+      "year": 2040,
+      "value": 936394,
+      "unit": "人",
+      "kind": "FACT",
+      "status": "PROJECTION",
+      "source_id": "ipss-2023"
+    }
+  ],
+  "change": {
+    "kind": "CALCULATION",
+    "evidence_level": "D",
+    "formula": "(936394 / 1221140 - 1) * 100",
+    "value": -23.3,
+    "unit": "%",
+    "comparison": "2000実績→2040推計"
+  },
+  "sources": [
+    {
+      "id": "oita-census",
+      "evidence_level": "A",
+      "title": "人口等基本集計結果による大分県の人口概要",
+      "publisher": "大分県",
+      "url": "https://www.pref.oita.jp/uploaded/attachment/2130773.pdf",
+      "locator": "PDF2ページ・表1",
+      "last_verified": "2026-09-21"
+    },
+    {
+      "id": "ipss-2023",
+      "evidence_level": "A",
+      "title": "日本の地域別将来推計人口（令和5年推計）結果表1",
+      "publisher": "国立社会保障・人口問題研究所",
+      "url": "https://www.ipss.go.jp/pp-shicyoson/j/shicyoson23/2gaiyo_hyo/kekkahyo1.xlsx",
+      "locator": "Sheet1行1825・大分県44000",
+      "last_verified": "2026-09-21"
+    }
+  ],
+  "original_visual": "assets/cases/consortium-cover-original.jpg",
+  "display_note": "人口パネルは原画像上に出典付きHTML/SVGを重ね、国勢調査・社人研の正しい数値を表示。原画像の数値を根拠にしない。"
+}
