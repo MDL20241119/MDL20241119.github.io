@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "updated_at": "2026-09-21",
+  "kinds": {
+    "FACT": "資料で確認した事実。自己報告は独立評価と区別。",
+    "CALCULATION": "入力値・単位・期間・式が追跡できる計算。",
+    "ANALYSIS": "MDLによる分類・比較・解釈。公式分類ではない。",
+    "HYPOTHESIS": "今後検証する能力・対策・接続案。"
+  },
+  "verification_note": "情報の種類と検証状態は別軸。UNKNOWNは第五の事実種別ではなく、未確認状態。A〜Dは点数・優劣ではなく根拠の種類。",
+  "evidence_levels": {
+    "A": "PRIMARY SOURCE / 国・自治体・事業主体・大学等の原資料",
+    "B": "OFFICIAL PROJECT SOURCE / 公式事業ページ・自己報告・公式note",
+    "C": "SECONDARY SOURCE / 新聞・専門メディア等",
+    "D": "MDL ANALYSIS / 分類・計算・比較・タグ・構造分析"
+  },
+  "statuses": {
+    "IMPLEMENTED": "実施確認",
+    "PLANNED": "計画確認",
+    "NOT_CONFIRMED": "未確認",
+    "NOT_IMPLEMENTED": "未実施の明記",
+    "NOT_APPLICABLE": "対象外の明記"
+  },
+  "gaps": [
+    {
+      "id": "PLACE",
+      "name": "PLACE GAP",
+      "label": "場所の空白",
+      "question": "停留所・路線に、たどり着けるか。",
+      "definition": "距離、高低差、地形、路線の届かない居住地。",
+      "capability": "地形・生活動線を調べる力",
+      "learn": "現地観察・住民ニーズ調査"
+    },
+    {
+      "id": "TIME",
+      "name": "TIME GAP",
+      "label": "時間の空白",
+      "question": "必要な時間に、往復できるか。",
+      "definition": "朝夕、夜間、休日、通院の帰りなどの時刻の不一致。",
+      "capability": "目的時刻から往復を設計する力",
+      "learn": "時刻表・帰路の検証"
+    },
+    {
+      "id": "SUPPLY",
+      "name": "SUPPLY GAP",
+      "label": "供給の空白",
+      "question": "車両・運転手・便数は足りるか。",
+      "definition": "運転手・車両・輸送容量の不足や撤退。",
+      "capability": "地域の輸送資源を組み合わせる力",
+      "learn": "運行資源・担い手の調査"
+    },
+    {
+      "id": "DESTINATION",
+      "name": "DESTINATION GAP",
+      "label": "目的地の空白",
+      "question": "行きたい場所まで、つながるか。",
+      "definition": "通院、買物、通学、観光などの目的地との接続不足。",
+      "capability": "生活目的と移動を一緒に設計する力",
+      "learn": "目的地・乗継ぎ・往復の設計"
+    },
+    {
+      "id": "ACCESS",
+      "name": "ACCESS GAP",
+      "label": "利用条件の空白",
+      "question": "予約・料金・身体条件は合うか。",
+      "definition": "デジタル、予約、費用、身体条件等による利用のしにくさ。",
+      "capability": "利用者ごとの障壁を見つける力",
+      "learn": "利用体験・アクセシビリティ調査"
+    },
+    {
+      "id": "OPERATION",
+      "name": "OPERATION GAP",
+      "label": "運営の空白",
+      "question": "誰が担い、誰が支えて続けるか。",
+      "definition": "運営主体、費用負担、連携、安全管理、継続体制の不足。",
+      "capability": "運営・費用負担・合意形成を担う力",
+      "learn": "運営設計・共創・費用検証"
+    }
+  ],
+  "classification_method": "37交通事例の公式ページ本文の事業背景・課題・今後の事業展開を個別に読み、6つの定義との対応を確認して付与。各分類に課題要約、参照節、分類理由、課題の時点を保持。公式分類・因果関係・現在の存否の認定ではない。複数分類を認め、未付与を該当なしとは扱わない。",
+  "social_implementation": "実証後の正式導入・常設のサービスまたは運営体制の確立。実証を動かしただけでは自動的に該当させない。従来DBの広義判定は注記に保持。",
+  "source_boundaries": "37交通事例は今回取得した公式ページ、61人材育成は既存の個別確認記録を継承。リンク到達確認と内容照合を別管理。",
+  "numeric_policy": "未確認はnull。延べ・実人数・登録・乗車人回・便数・定員を区別。異なる期間・単位は合算・順位付けしない。",
+  "graph_policy": "SOURCE_CONFIRMED（資料に関係が明記）/ MDL_ANALYSIS（分析上の接続）/ HYPOTHESIS（検証する提案）。未確認の因果関係を事実の矢印にしない。",
+  "update_owner": "MDL データ編集",
+  "review_rule": "出典・値・定義変更時は対象claim_id、変更前後、理由、確認日をupdate_logへ追記。"
+}
