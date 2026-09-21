@@ -16,10 +16,12 @@
       event.preventDefault();
       previousFocus = link;
       const thumbnail = link.querySelector('img');
-      image.width = thumbnail?.naturalWidth || Number(thumbnail?.getAttribute('width')) || 1536;
-      image.height = thumbnail?.naturalHeight || Number(thumbnail?.getAttribute('height')) || 864;
+      const responsive = link.hasAttribute('data-responsive-image');
+      const selectedSource = responsive ? [...link.querySelectorAll('picture source')].find(source => !source.media || window.matchMedia(source.media).matches) : null;
+      image.width = Number(selectedSource?.getAttribute('width')) || thumbnail?.naturalWidth || Number(thumbnail?.getAttribute('width')) || 1536;
+      image.height = Number(selectedSource?.getAttribute('height')) || thumbnail?.naturalHeight || Number(thumbnail?.getAttribute('height')) || 864;
       if (status) status.textContent = '画像を読み込んでいます…';
-      const fullImage = link.hasAttribute('data-responsive-image') ? (thumbnail?.currentSrc || link.href) : link.href;
+      const fullImage = responsive ? new URL(selectedSource?.getAttribute('srcset') || thumbnail?.getAttribute('src') || link.href, document.baseURI).href : link.href;
       image.src = fullImage;
       image.alt = link.querySelector('img')?.alt || '';
       caption.textContent = link.dataset.caption || image.alt;
