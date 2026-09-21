@@ -19,10 +19,11 @@
       image.width = thumbnail?.naturalWidth || Number(thumbnail?.getAttribute('width')) || 1536;
       image.height = thumbnail?.naturalHeight || Number(thumbnail?.getAttribute('height')) || 864;
       if (status) status.textContent = '画像を読み込んでいます…';
-      image.src = link.href;
+      const fullImage = link.hasAttribute('data-responsive-image') ? (thumbnail?.currentSrc || link.href) : link.href;
+      image.src = fullImage;
       image.alt = link.querySelector('img')?.alt || '';
       caption.textContent = link.dataset.caption || image.alt;
-      original.href = link.href;
+      original.href = fullImage;
       if (image.complete && image.naturalWidth && status) status.textContent = '';
       dialog.showModal();
     });
