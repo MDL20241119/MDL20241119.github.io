@@ -8,3 +8,15 @@
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
 /* The homepage thumbnail uses only the cover title; the full poster carries the corrected live chart. */
 .cover-preview{aspect-ratio:auto}.cover-preview>.cover-preview-image{position:relative;display:block;aspect-ratio:1672/434;overflow:hidden;padding:0;background:#fff}.cover-preview-image>img{position:absolute;inset:0 auto auto 0;width:100%;height:auto}.cover-preview>span:last-child{position:static;display:block}
+
+/* Keep the 2025 field record visible on the homepage. */
+.home-delivered-feature{margin-top:48px;padding-top:38px;border-top:2px solid var(--ink)}
+.home-delivered-feature .year-section-head h3{font-size:clamp(28px,3.1vw,43px);line-height:1.6;margin-top:18px}
+.home-delivered-feature .training-statement h4{font-size:clamp(30px,3.4vw,48px);line-height:1.55;margin:20px 0 22px;letter-spacing:-.045em}
+.home-delivered-feature .pilot-copy h4{font-size:29px;line-height:1.55;margin:17px 0}
+.home-delivered-feature .actions{flex-wrap:wrap;gap:18px 30px}
+.home-delivered-feature .actions .text-link{font-size:12px}
+.support-lead .note{font-size:10px;line-height:1.9;margin-top:14px}
+@media(max-width:900px){.home-delivered-feature .training-statement h4{font-size:32px}.home-delivered-feature .pilot-copy h4{font-size:25px}}
+@media(max-width:600px){.home-delivered-feature{margin-top:32px;padding-top:28px}.home-delivered-feature .year-section-head h3{font-size:26px;line-height:1.7;margin-top:14px}.home-delivered-feature .training-statement h4{font-size:33px;line-height:1.5;margin:20px 0}.home-delivered-feature .pilot-copy h4{font-size:28px;line-height:1.5;margin:13px 0}.home-delivered-feature .pilot-copy h4 br{display:none}.home-delivered-feature .actions{gap:18px}.home-delivered-feature .actions .button,.home-delivered-feature .actions .text-link{font-size:11px}.support-lead .note{font-size:9px}}
+@media(max-width:360px){.home-delivered-feature .year-section-head h3{font-size:24px}.home-delivered-feature .training-statement h4{font-size:30px}.home-delivered-feature .pilot-copy h4{font-size:24px}}

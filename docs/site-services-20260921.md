@@ -47,3 +47,7 @@ Release `d73547645a9aa2b7f9d7eb564393c82c23dbcf4f` passed GitHub Pages build and
 - Homepage links reach the separate 01 and 04 service pages. The accessibility and tourism demo links reach their corresponding live applications.
 - Existing `/#yoko-elevator` opens its enclosing catalog disclosure; all 13 news items remain present. Removed heading-only anchors have no incoming references in the repository.
 - No inquiry was submitted and no business-conversion outcome is claimed.
+
+## Homepage field-record preservation
+
+The owner explicitly requested that the 2025 Toyota Corolla Oita × MDL training-project feature remain visible on the homepage. The homepage therefore retains the full 2025 heading, three real field photographs and captions, 35 activities / 750+ cumulative participations with their definition, the activity process, and Fujimigaoka operating results with source links. The dedicated introduction page supplements this homepage feature. Keep offers 01 and 04 separate.
