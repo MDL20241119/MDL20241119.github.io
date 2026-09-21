@@ -1,0 +1,53 @@
+{
+  "name": "横のエレベーター・ローカル代理窓口",
+  "description": "架空データ専用。本人の予約照会と個別承認済み操作。Task完了は乗車完了を意味しません。",
+  "supportedInterfaces": [
+    {
+      "url": "http://127.0.0.1:8767/a2a",
+      "protocolBinding": "JSONRPC",
+      "protocolVersion": "1.0"
+    }
+  ],
+  "version": "0.12.0",
+  "capabilities": {},
+  "securitySchemes": {
+    "clientId": {
+      "apiKeySecurityScheme": {
+        "description": "事前登録されたローカル検証クライアント",
+        "location": "header",
+        "name": "X-Client-ID"
+      }
+    },
+    "ownerGrant": {
+      "httpAuthSecurityScheme": {
+        "description": "本人がローカル画面で発行する最大300秒の個別委任",
+        "scheme": "Bearer"
+      }
+    }
+  },
+  "securityRequirements": [
+    {
+      "schemes": {
+        "clientId": {},
+        "ownerGrant": {}
+      }
+    }
+  ],
+  "defaultInputModes": [
+    "application/json"
+  ],
+  "defaultOutputModes": [
+    "application/json"
+  ],
+  "skills": [
+    {
+      "id": "own-reservation",
+      "name": "本人の予約",
+      "description": "照会、確認待ち、個別承認済みの依頼・予約・変更・取消。任意テキストの自動解釈は行いません。",
+      "tags": [
+        "synthetic",
+        "owner-approved"
+      ]
+    }
+  ]
+}

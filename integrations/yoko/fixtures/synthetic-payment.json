@@ -1,0 +1,7 @@
+{
+  "is_production": false,
+  "note": "Payment ledger test only. No actual fare, charge, refund, payment provider or card data. Not auto-loaded.",
+  "fare": {"amount": 820, "currency": "JPY", "basis": "synthetic_test_only"},
+  "initial_status": "uncollected",
+  "received_status": "received"
+}

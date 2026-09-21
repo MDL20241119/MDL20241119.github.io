@@ -1,0 +1,8 @@
+{
+  "is_production": false,
+  "note": "明示投入用の架空所要時間。実道路探索・実測・GPSではない。通常起動時に自動投入しない。",
+  "routes": [
+    {"service_id":"service-a","origin_stop_id":"stop-a","destination_stop_id":"stop-b","travel_seconds":600,"max_wait_seconds":1800,"basis":"synthetic_test_only"},
+    {"service_id":"service-a","origin_stop_id":"stop-b","destination_stop_id":"stop-a","travel_seconds":600,"max_wait_seconds":1800,"basis":"synthetic_test_only"}
+  ]
+}

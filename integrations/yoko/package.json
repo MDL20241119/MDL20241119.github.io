@@ -1,0 +1,13 @@
+{
+  "name": "yoko-elevator-local-tests",
+  "version": "0.12.0",
+  "private": true,
+  "description": "Optional DOM integration tests only; the application runtime uses Python standard library.",
+  "scripts": {
+    "test:ui": "node tests/ui-flow.cjs",
+    "test:connected-ui": "node tests/connected-ui.cjs"
+  },
+  "devDependencies": {
+    "jsdom": "26.1.0"
+  }
+}

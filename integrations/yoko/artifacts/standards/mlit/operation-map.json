@@ -1,0 +1,659 @@
+[
+  {
+    "official_document_id": "M16-IF-190",
+    "official_operation_id": "getOperationDelays",
+    "method": "GET",
+    "path": "/operation-delays",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/0/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/0/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.observations.read(delays)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。取得元・観測時刻・鮮度・現在便・閲覧範囲はMDL側で検査。未取得/古い/停止/不完全範囲は標準500 Problem。実観測なし。OBSERVATION_PROFILE.md参照。",
+    "test_id": "test_observations.ObservationHTTPTests.test_both_standard_operations_and_mdl_views_use_saved_approved_observations",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Persisted synthetic incident snapshots with active/resolved transitions, observation freshness and effective_end; explicit complete empty reports differ from unknown; status(default active), vehicle/service AND, inclusive started_at range(default last 24h), pagination; expiry does not resolve incidents; no live collector"
+  },
+  {
+    "official_document_id": "M16-IF-040",
+    "official_operation_id": "postPassengers",
+    "method": "POST",
+    "path": "/passengers",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/1/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/1/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(profile_create)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Own persisted profile; server ID bound to authenticated local rider; exact owner approval"
+  },
+  {
+    "official_document_id": "M16-IF-070",
+    "official_operation_id": "deletePassengersId",
+    "method": "DELETE",
+    "path": "/passengers/{id}",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/2/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/2/responses"
+    },
+    "errors": [
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(profile_delete)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Physical profile and consent deletion; active rides block; revoke sessions/grants; redact profile receipts; retain ride history and minimal audit"
+  },
+  {
+    "official_document_id": "M16-IF-050",
+    "official_operation_id": "getPassengersId",
+    "method": "GET",
+    "path": "/passengers/{id}",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/3/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/3/responses"
+    },
+    "errors": [
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(passenger)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Own persisted profile only; deleted or unregistered returns 404"
+  },
+  {
+    "official_document_id": "M16-IF-060",
+    "official_operation_id": "putPassengersId",
+    "method": "PUT",
+    "path": "/passengers/{id}",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/4/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/4/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(profile_update)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Full replacement of own personal fields; exact approval and version check"
+  },
+  {
+    "official_document_id": "M16-IF-100",
+    "official_operation_id": "getPassengersIdAgreements",
+    "method": "GET",
+    "path": "/passengers/{id}/agreements",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/5/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/5/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(agreements)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Own stored agreements, including historical versions; optional service filter"
+  },
+  {
+    "official_document_id": "M16-IF-090",
+    "official_operation_id": "postPassengersIdAgreements",
+    "method": "POST",
+    "path": "/passengers/{id}/agreements",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/6/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/6/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(agreements_register)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Exact approved terms and consent timestamps; duplicate preserves first timestamp; revised terms need new consent"
+  },
+  {
+    "official_document_id": "M16-IF-140",
+    "official_operation_id": "getPassengersIdReservations",
+    "method": "GET",
+    "path": "/passengers/{id}/reservations",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/7/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/7/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.list_rides(owner_only=True)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_p3.ClientHTTPTests.test_standard_list_maps_every_state_without_inventing_coordinates",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "supported_scope": "本人一覧、ID・状態絞込、認可後のページング。乗車予定日フィルターは未取得エラー。",
+    "success_test_id": "test_p3.ClientHTTPTests.test_standard_list_maps_every_state_without_inventing_coordinates",
+    "local_scope": "Own reservation list; date filters blocked"
+  },
+  {
+    "official_document_id": "M16-IF-080",
+    "official_operation_id": "getPassengersIdServices",
+    "method": "GET",
+    "path": "/passengers/{id}/services",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/8/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/8/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(eligible_services)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Registered self and local eligibility flag; no production residency or identity verification"
+  },
+  {
+    "official_document_id": "M16-IF-130",
+    "official_operation_id": "postReservations",
+    "method": "POST",
+    "path": "/reservations",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/9/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/9/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(book)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。候補期限はMDL側で最長120秒。予約は提示候補に本人passenger_idを付加し、個別承認とヘッダーへ結び付ける。BOOKING_PROFILE.md参照。",
+    "test_id": "test_booking.BookingHTTPTests.test_standard_search_confirm_book_201_and_cross_protocol_replay",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Exact owner-approved unused candidate; recheck profile, terms, fare, time, route, vehicle, capacity and grant; atomic assigned reservation and Outbox; 201 replay; no live ETA"
+  },
+  {
+    "official_document_id": "M16-IF-120",
+    "official_operation_id": "postReservationsCandidates",
+    "method": "POST",
+    "path": "/reservations/candidates",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/10/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/10/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.booking.search",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。候補期限はMDL側で最長120秒。予約は提示候補に本人passenger_idを付加し、個別承認とヘッダーへ結び付ける。BOOKING_PROFILE.md参照。",
+    "test_id": "test_booking.BookingHTTPTests.test_standard_search_confirm_book_201_and_cross_protocol_replay",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Registered eligible rider; one service; fixed stops; general passenger type; no equipment; immediate search of explicit synthetic driver-offered plans; no seat hold; 120-second owner-bound candidate lifetime"
+  },
+  {
+    "official_document_id": "M16-IF-150",
+    "official_operation_id": "putReservationsId",
+    "method": "PUT",
+    "path": "/reservations/{id}",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/11/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/11/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare(change/cancel), Core.mutate(change/cancel)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_p3.ClientHTTPTests.test_standard_change_cancel_and_cross_protocol_replay",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "supported_scope": "本人承認済みの取消、人数変更、引受前の固定乗降場所変更。任意状態変更・サービス変更等は未対応。",
+    "success_test_id": "test_p3.ClientHTTPTests.test_standard_change_cancel_and_cross_protocol_replay",
+    "local_scope": "Approved cancellation; count change; fixed-stop change before assignment; no arbitrary status promotion"
+  },
+  {
+    "official_document_id": "M16-IF-160",
+    "official_operation_id": "getReservationsIdPayment",
+    "method": "GET",
+    "path": "/reservations/{id}/payment",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/12/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/12/responses"
+    },
+    "errors": [
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.payments.read",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。予約IDを決済idへ対応。更新は管理者の個別承認・対象版・操作IDヘッダーに限定。実決済/返金は行わない。PAYMENT_PROFILE.md参照。",
+    "test_id": "test_payments.PaymentHTTPTests.test_standard_get_put_and_mdl_read_use_persisted_data_and_original_replay",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Persisted payment information for own rider or tenant admin; missing row returns 404; id equals reservation ID; no charge/refund execution"
+  },
+  {
+    "official_document_id": "M16-IF-170",
+    "official_operation_id": "putReservationsIdPayment",
+    "method": "PUT",
+    "path": "/reservations/{id}/payment",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/13/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/13/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.prepare/mutate(payment_update)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。予約IDを決済idへ対応。更新は管理者の個別承認・対象版・操作IDヘッダーに限定。実決済/返金は行わない。PAYMENT_PROFILE.md参照。",
+    "test_id": "test_payments.PaymentHTTPTests.test_standard_get_put_and_mdl_read_use_persisted_data_and_original_replay",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Exact admin-approved amount/status and reservation binding; one versioned ledger per confirmed/cancelled ride; amount matched to fare/cancellation fee; preserve positive received records after cancellation; shared atomic audit/Outbox and replay; no provider/refund workflow"
+  },
+  {
+    "official_document_id": "M16-IF-020",
+    "official_operation_id": "getServices",
+    "method": "GET",
+    "path": "/services",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/14/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/14/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(services)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Explicitly configured synthetic service masters; tenant/filter/pagination checks; absent config is an error"
+  },
+  {
+    "official_document_id": "M16-IF-030",
+    "official_operation_id": "getServicesId",
+    "method": "GET",
+    "path": "/services/{id}",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/15/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/15/responses"
+    },
+    "errors": [
+      "401",
+      "403",
+      "404",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(service)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Immediate fixed-stop synthetic service settings; dates, calendar and current service terms"
+  },
+  {
+    "official_document_id": "M16-IF-110",
+    "official_operation_id": "getStops",
+    "method": "GET",
+    "path": "/stops",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/16/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/16/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(stops)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Explicitly configured stop coordinates/periods/pictures; tenant and radius filters; no inferred coordinates"
+  },
+  {
+    "official_document_id": "M16-IF-010",
+    "official_operation_id": "getTerms",
+    "method": "GET",
+    "path": "/terms",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/17/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/17/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.catalog.read(terms)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。MDLの確認・委任・操作IDヘッダーは独立プロファイル。docs/yoko-elevator/P3_LOCAL_PROFILE.md参照。",
+    "test_id": "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Latest platform terms per tenant/category; service terms are separate"
+  },
+  {
+    "official_document_id": "M16-IF-180",
+    "official_operation_id": "getVehicleLocations",
+    "method": "GET",
+    "path": "/vehicle-locations",
+    "request_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/18/request_body"
+    },
+    "response_schema": {
+      "file": "index/operations.json",
+      "pointer": "/operations/18/responses"
+    },
+    "errors": [
+      "400",
+      "401",
+      "403",
+      "500"
+    ],
+    "security": {
+      "declared_in_original": false,
+      "inherited_effective_index_value": [],
+      "decision": "原本に認証宣言なし。MDLローカルの短時間・主体/クライアント/対象/個別操作に結び付けたBearerを適用。外部相手の合意・本番認証は未完了。"
+    },
+    "required_or_conditional": "NEEDS_GUIDANCE_AND_CONTRACT_REVIEW",
+    "applicability_and_basis": "必須対象として保持。対象外の合意なし。",
+    "core_operation": "Core.observations.read(locations)",
+    "adapter": "LOCAL_PARTIAL_IMPLEMENTATION",
+    "extension_difference": "原本本文を保持。取得元・観測時刻・鮮度・現在便・閲覧範囲はMDL側で検査。未取得/古い/停止/不完全範囲は標準500 Problem。実観測なし。OBSERVATION_PROFILE.md参照。",
+    "test_id": "test_observations.ObservationHTTPTests.test_both_standard_operations_and_mdl_views_use_saved_approved_observations",
+    "test_evidence": "artifacts/test-results/application.json; success only within documented local scope, not full conformance",
+    "blocker": null,
+    "local_scope": "Admin-approved synthetic snapshots bound to configured source/version and current vehicle/run; own active rider, assigned driver or tenant admin; GeoJSON and observed timestamp; filter AND/pagination; missing/stale/stopped or partial coverage fails closed; no live collector or ETA"
+  }
+]

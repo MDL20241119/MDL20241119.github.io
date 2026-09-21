@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>技術と標準への対応状況｜横のエレベーター｜MDL</title>
+  <meta name="description" content="横のエレベーターの公開デモ、元アプリの実装・ローカル試験、外部との本番接続を分けて確認。COMmmmONS・GTFS-JP・MCP・A2Aの関係と、根拠付きの標準仕様適合表を公開します。">
+  <link rel="canonical" href="https://mobilitydlab.com/danchi-elevator/standards/">
+  <meta property="og:title" content="閉じたシステムをつくらない。｜横のエレベーターの技術 Evidence">
+  <meta property="og:description" content="何が動き、どこまで確かめたか。公式仕様・コード・テストを照らした確認状況を公開します。">
+  <meta property="og:url" content="https://mobilitydlab.com/danchi-elevator/standards/">
+  <meta property="og:type" content="website">
+  <meta name="theme-color" content="#F8F7F3">
+  <link rel="stylesheet" href="style.css?v=20260921">
+  <script src="app.js?v=20260921" defer></script>
+</head>
+<body>
+  <a class="skip" href="#main">本文へ移動</a>
+  <header class="site-header shell">
+    <a class="brand" href="../../" aria-label="MDL モビリティデザインラボ トップ">MOBILITY<br>DESIGN LAB<span class="brand-dot" aria-hidden="true"></span></a>
+    <nav aria-label="主なページ"><a href="../">横のエレベーター<span aria-hidden="true"> ↗</span></a><a href="../../">MDLについて<span aria-hidden="true"> ↗</span></a></nav>
+  </header>
+  <main id="main">
+    <section class="hero shell" aria-labelledby="hero-title">
+      <p class="eyebrow">YOKO ELEVATOR / TECHNICAL EVIDENCE</p>
+      <div class="hero-grid">
+        <div><h1 id="hero-title">閉じたシステムを<br>つくらない<span class="blue">。</span></h1><p class="lead">地域交通を、一社のシステムに閉じ込めない。<br>行政・交通事業者・MaaS・AIとつながれる基盤へ。</p></div>
+        <div class="hero-aside"><p class="open-word" aria-hidden="true">OPEN &amp;<br>CONNECTED</p><p>何が動き、<br>どこまで確かめたか。</p><p class="small">公式仕様、実装コード、試験結果を照合し、確認できた範囲と残る課題を公開します。</p></div>
+      </div>
+      <div class="hero-bottom"><a class="button primary" href="#matrix">項目別の確認表を見る <span aria-hidden="true">↓</span></a><p>確認日 <time id="checked-date" datetime="2026-09-21">2026.09.21</time><br><span class="small">国の認定・公認を示すものではありません。</span></p></div>
+    </section>
+
+    <nav class="page-nav" aria-label="このページの目次"><div class="shell"><a href="#scope">確認範囲</a><a href="#connection">つながる仕組み</a><a href="#matrix">適合表</a><a href="#sources">公式仕様</a></div></nav>
+
+    <section class="section shell" id="scope" aria-labelledby="scope-title">
+      <div class="section-heading"><p class="eyebrow">01 / THREE SCOPES</p><h2 id="scope-title">「動く」を、<br>3つの範囲で伝える。</h2></div>
+      <div class="scope-grid">
+        <article class="scope-card"><p class="scope-number">01</p><p class="scope-label">PUBLIC DEMO</p><h3>公開デモ</h3><p>利用者・ドライバー・管理者の操作を、ブラウザーで体験できます。</p><p class="scope-detail" id="demo-scope">架空の利用者・運行データを使った体験環境です。実車の予約・配車にはつながりません。</p><a href="../demo/?role=user&amp;v=0.18.1">体験する <span aria-hidden="true">↗</span></a></article>
+        <article class="scope-card"><p class="scope-number">02</p><p class="scope-label">SOURCE &amp; LOCAL TEST</p><h3>元アプリ・ローカル試験</h3><p>実装コードを読み、公式仕様に沿う入力・応答や、業務処理を試験します。</p><p class="scope-detail" id="local-scope">対象コード・試験環境・通過した項目を、下の確認表に記載します。</p><a href="#matrix">試験の範囲を見る <span aria-hidden="true">↓</span></a></article>
+        <article class="scope-card future"><p class="scope-number">03</p><p class="scope-label">EXTERNAL PRODUCTION</p><h3>外部との本番接続</h3><p>交通事業者やMaaSなど、接続先と条件を合意して確認する段階です。</p><p class="scope-detail">本番の接続先・認証・実運行データを使う検証は、別途必要です。</p><span class="scope-state" id="production-state">本番接続は未確認</span></article>
+      </div>
+      <p class="source-note" id="code-scope">公開デモと元アプリは、実行環境を分けて確認しています。</p>
+    </section>
+
+    <section class="connection-section" id="connection" aria-labelledby="connection-title"><div class="shell section">
+      <div class="section-heading"><p class="eyebrow">02 / ONE MOBILITY CORE</p><h2 id="connection-title">窓口が増えても、<br>業務の判断はひとつに。</h2><p class="section-intro">予約や運行の判断を共通の業務基盤に集め、外部との連携方法を分ける。つなぎ先が変わっても、地域の運営を続けやすくするための設計です。</p></div>
+      <figure class="architecture" aria-labelledby="architecture-caption">
+        <div class="roles" aria-label="利用する3つの役割"><span>RIDER <small>利用者</small></span><span>DRIVER <small>運転する人</small></span><span>MANAGER <small>運営する人</small></span></div>
+        <div class="core"><p class="eyebrow">共通の業務基盤</p><h3>Mobility Core</h3><p>予約・運行・利用者情報の処理</p><p class="core-note">通常APIも、AIからの操作も、同じ業務ルールへ</p></div>
+        <div class="connections">
+          <article><span class="connector" aria-hidden="true"></span><p class="layer-tag">交通サービスの連携</p><h4>COMmmmONS</h4><p>地域の予約・運行システムとMaaSをつなぐ、共通のAPI仕様。</p><span class="layer-note">国土交通省の交通標準</span></article>
+          <article><span class="connector" aria-hidden="true"></span><p class="layer-tag">地域の運行情報の共有</p><h4>GTFS-JP</h4><p>停留所や運行条件を、経路検索などで扱えるデータ形式に。</p><span class="layer-note">交通情報のデータ仕様</span></article>
+          <article><span class="connector" aria-hidden="true"></span><p class="layer-tag">AIによる操作・支援</p><h4>MCP / A2A</h4><p>AIがツールを使う、エージェント同士が仕事を渡すための接続方式。</p><span class="layer-note">交通標準とは別の接続層</span></article>
+        </div>
+        <figcaption id="architecture-caption">接続層の役割を示した設計図です。各機能の実装・試験・本番接続の状況は、項目別の確認表で確認できます。</figcaption>
+      </figure>
+      <p class="architecture-note"><span aria-hidden="true">↳</span> AIとの連携ができることと、国の交通標準に適合することは、別々に確かめます。</p>
+    </div></section>
+
+    <section class="section shell" id="matrix" aria-labelledby="matrix-title">
+      <div class="section-heading"><p class="eyebrow">03 / STANDARDS MATRIX</p><h2 id="matrix-title">根拠を開ける、<br>標準仕様適合表。</h2><p class="section-intro">国の公式仕様と実コードを直接照合した確認記録です。公開デモと元アプリを分け、実装状況・試験範囲・未確認の項目を表示します。</p></div>
+      <div class="metrics" aria-label="確認状況の集計">
+        <div><p class="metric-value">19<span>操作</span></p><p>公式COMmmmONS APIの操作数</p></div>
+        <div><p class="metric-value"><span id="operation-count" class="metric-main">—</span><span>/ 19</span></p><p>ローカルで応答を確認した操作</p></div>
+        <div><p class="metric-value"><span id="test-count" class="metric-main">—</span><span>件</span></p><p id="test-count-label">アプリ全体の自動試験</p></div>
+      </div>
+      <p class="count-note">操作数はAPIの入口の数です。19操作で応答を確認しても、全要件への適合や、外部との本番接続を証明するものではありません。</p>
+      <div class="test-summary"><p id="test-scope">自動試験の対象と実行環境は、確認記録から表示します。</p><a id="test-report-link" hidden>試験記録を開く <span aria-hidden="true">↗</span></a></div>
+      <div class="matrix-tools">
+        <label class="search-field"><span>キーワード</span><input id="search" type="search" placeholder="予約、規約、GTFS…" autocomplete="off"></label>
+        <label><span>仕様・接続層</span><select id="standard-filter"><option value="all">すべて</option><option value="commmmons">COMmmmONS</option><option value="gtfs">GTFS-JP</option><option value="maas">MaaSガイドライン</option><option value="mcp">MCP</option><option value="a2a">A2A</option><option value="other">共通・その他</option></select></label>
+        <label><span>実装状況（元アプリ）</span><select id="status-filter"><option value="all">すべて</option><option value="IMPLEMENTED">実装済み</option><option value="PARTIAL">部分実装</option><option value="NOT IMPLEMENTED">未実装</option><option value="NOT APPLICABLE">対象外</option><option value="NEEDS VERIFICATION">追加確認が必要</option></select></label>
+        <button id="reset" class="reset" type="button">絞り込みを解除</button>
+      </div>
+      <div class="matrix-meta"><p id="data-status" role="status">確認データを読み込んでいます。</p><a href="status.json" download>公開データ JSON <span aria-hidden="true">↓</span></a></div>
+      <div class="status-key" aria-label="実装状況の読み方"><span><i class="key-dot implemented" aria-hidden="true"></i>実装済み</span><span><i class="key-dot partial" aria-hidden="true"></i>部分実装</span><span><i class="key-dot missing" aria-hidden="true"></i>未実装</span><span><i class="key-dot na" aria-hidden="true"></i>対象外</span><span><i class="key-dot unknown" aria-hidden="true"></i>追加確認が必要</span></div>
+      <p class="mobile-hint">表は横にスクロールできます。項目名を押すと、根拠と残る課題が開きます。</p>
+      <div class="table-scroll" tabindex="0" role="region" aria-label="標準仕様適合表。横にスクロールできます">
+        <table><caption class="sr-only">標準仕様ごとの公開デモ・元アプリの実装状況と試験記録</caption><thead><tr><th scope="col">仕様・要求項目</th><th scope="col">公開デモ</th><th scope="col">元アプリ・ローカル実装</th><th scope="col">試験記録</th></tr></thead><tbody id="matrix-body"><tr><td colspan="4" class="empty-state">確認データを読み込んでいます。</td></tr></tbody></table>
+      </div>
+      <noscript><p class="data-error">絞り込みと確認表の表示にはJavaScriptが必要です。<a href="status.json">公開データを直接開く</a>こともできます。</p></noscript>
+      <div class="definition-note"><h3>判定の読み方</h3><p>「実装済み」は記載した範囲のコードが存在するという判定です。「試験済み」「本番接続済み」とは分けて表示します。資料や試験で確かめられていない項目は、未実装と断定せず「追加確認が必要」とします。</p></div>
+      <div class="dependencies"><h3>本番につなぐために、残る確認</h3><ul id="dependencies-list"><li>接続する交通事業者・MaaSとのAPI接続条件と認証方式</li><li>地域の運行条件・データ提供条件・実運行データによる結合試験</li><li>本番環境の運用・保守・障害時の対応体制</li></ul></div>
+    </section>
+
+    <section class="sources-section" id="sources" aria-labelledby="sources-title"><div class="shell section">
+      <div class="section-heading"><p class="eyebrow">04 / PRIMARY SOURCES</p><h2 id="sources-title">基準は、<br>公式の一次資料から。</h2><p class="section-intro">適用する標準は、サービスの用途に合わせて選びます。MDL側の過去の要件定義だけを、適合の根拠にはしていません。</p></div>
+      <div class="sources-list">
+        <article><p class="source-id">01</p><div><p class="source-category">対応を表明する範囲で必須</p><h3>COMmmmONS デマンドバス連携API</h3><p>API 1.0.0 / OpenAPI 3.0.4。予約・利用者・サービス・運行情報の19操作。採用する操作の入力・応答と業務上の条件を確認します。</p><a href="https://www.mlit.go.jp/commmmons/document/003/">国土交通省の公式資料 <span aria-hidden="true">↗</span></a><a href="https://www.mlit.go.jp/commmmons/document/003/api/">API仕様を開く <span aria-hidden="true">↗</span></a></div></article>
+        <article><p class="source-id">02</p><div><p class="source-category">運行情報をこの形式で提供する場合に必須</p><h3>GTFS-JP 第4.0版</h3><p>2026年3月19日公開。デマンド型交通の情報を表すFlexを含みます。必要なファイルや項目は、固定路線・予約制などの運行形態によって変わります。</p><a href="https://www.mlit.go.jp/commmmons/document/007/">国土交通省の公式資料 <span aria-hidden="true">↗</span></a></div></article>
+        <article><p class="source-id">03</p><div><p class="source-category">データ連携の設計に推奨</p><h3>MaaS関連データ連携ガイドライン</h3><p>Ver.3.0。データの利用条件・品質・情報保護・関係者の役割を整理するための指針です。ガイドライン自体が一律の遵守義務を課すものではありません。</p><a href="https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000117.html">国土交通省の公式資料 <span aria-hidden="true">↗</span></a></div></article>
+        <article><p class="source-id">04</p><div><p class="source-category">AIと接続する用途で適用 / 外部本番接続は今後確認</p><h3>MCP / A2A</h3><p>AIが業務ツールを使うためのMCPと、AIエージェント間の連携を扱うA2A。国交省の認定や交通標準への適合とは、独立した技術仕様です。</p><a href="https://modelcontextprotocol.io/specification/2026-07-28">MCP公式仕様 <span aria-hidden="true">↗</span></a><a href="https://a2a-protocol.org/latest/specification/">A2A公式仕様 <span aria-hidden="true">↗</span></a></div></article>
+      </div>
+      <p class="source-note">仕様の改訂や接続先の条件が変われば、判定も更新します。確認日と対象バージョンを記録し、未確認事項を残したまま「完全準拠」とは表示しません。</p>
+    </div></section>
+    <section class="contact shell section" aria-labelledby="contact-title"><p class="eyebrow">LET'S MAKE IT WORK</p><h2 id="contact-title">地域の仕組みと、<br>どうつなげよう。</h2><p>構想段階でも、接続先が決まる前でも。<br>続けられる運営から逆算して、一緒に考えます。</p><div class="contact-actions"><a class="button primary" href="mailto:info@mobilitydlab.com?subject=%E7%A4%BE%E4%BC%9A%E5%AE%9F%E8%A3%85%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E3%81%AE%E7%9B%B8%E8%AB%87">社会実装について相談する <span aria-hidden="true">↗</span></a><a class="button" href="../demo/?role=user&amp;v=0.18.1">横のエレベーターを体験する <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer class="site-footer shell"><a class="brand" href="../../">MOBILITY<br>DESIGN LAB</a><p>株式会社モビリティデザインラボ<br><span class="small">社会実装から、逆算する。</span></p><a href="../">横のエレベーターへ戻る <span aria-hidden="true">↗</span></a></footer>
+</body>
+</html>

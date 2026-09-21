@@ -2,20 +2,37 @@
 
 Official site: https://mobilitydlab.com/
 
-## Corporate homepage
+## Corporate homepage — 2026-09-21
 
-The homepage is authored in `index.html`, with its own `assets/home.css` and
-`assets/home.js`. Application pages and their stylesheets remain independent.
+The homepage is authored in `index.html`, `assets/home.css`, and `assets/home.js`.
+It introduces MDL as a company that implements services in society, starting
+from the desired outcome and working back to the customer's current obstacles.
+The design uses PaperWhite, black rules and one Neo Swiss accent per section.
 
-Keep the information order: business overview, field-work examples, apps and
-catalogs, news, company philosophy, and contact. Add new tools to the existing
-apps section rather than another top-of-page banner. Show the latest three news
-items and keep older entries in the expandable archive. Preserve the established
-section IDs, catalog URLs, pricing qualifications, and proposal/demo labels.
+- `/mobility-training/`: all 61 official FY2025 adopted projects, backed by JSON.
+  `data/manifest.json` permits additional fiscal years. Keep unknown, planned,
+  implemented, and unrelated/other-year sources separate. No ranking or score.
+- `/evidence/`: 35 activity records, participant and pilot metric definitions.
+  750+ is MDL's 2026-09-21 reported aggregate; detailed reconciliation is pending.
+- `/danchi-elevator/`: the implementation tool, prices, role demos and catalogs.
+- `/danchi-elevator/standards/`: public compliance matrix, source and test evidence.
+- `integrations/yoko/`: original application plus audited adapter corrections,
+  for local synthetic-data testing. GitHub Pages does not run this API server.
 
-Run `python tests/homepage.py` and `node --check assets/home.js`. The existing
-`tests/responsive.html` harness can display the homepage at phone, tablet and
-desktop widths. It tests layout, not device-specific browser behavior.
+Validation:
+
+```sh
+python3 scripts/check-mdl-release.py
+node tests/training-database.test.mjs
+node --check assets/home.js
+```
+
+`tests/mdl-responsive.html` checks the five pages in 320/390/768/1440px iframes.
+It is not a real-device, Safari, GPS or external-service interoperability test.
+Application test instructions are in `integrations/yoko/README.md`.
+Preserve existing catalogs, application URLs, news archive, pricing scope and
+demo qualifications. Do not call test success government certification or
+complete production conformance.
 
 ## Oita mobility atlas
 

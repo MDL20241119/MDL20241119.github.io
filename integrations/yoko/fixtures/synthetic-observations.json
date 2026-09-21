@@ -1,0 +1,16 @@
+{
+  "is_production": false,
+  "live_source_connected": false,
+  "description": "明示して読み込む架空の位置・遅延。座標は実車の観測ではない。鮮度値は試験設定であり運用SLAではない。",
+  "source": {
+    "vehicle_id": "vehicle-a1",
+    "source_id": "synthetic-observer-a1",
+    "label": "架空の観測試験",
+    "location_ttl_seconds": 60,
+    "delay_ttl_seconds": 300,
+    "enabled": true,
+    "basis": "synthetic_test_only"
+  },
+  "location": {"type": "Point", "coordinates": [139.70012, 35.60034]},
+  "delay_minutes": 5
+}

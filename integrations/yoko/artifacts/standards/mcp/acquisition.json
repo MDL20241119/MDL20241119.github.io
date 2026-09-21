@@ -1,0 +1,91 @@
+{
+  "protocol_version": "2026-07-28",
+  "spec_commit": "24efd6e7cbd7a074e6b3b781eb370891df40afad",
+  "sdk": "mcp",
+  "sdk_version": "2.2.0",
+  "sources": [
+    {
+      "name": "schema-2026-07-28.json",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/schema/2026-07-28/schema.json",
+      "sha256": "ef70b61f99b6d2e5e3b46863822eab08dff6a45bedc7a08914e0e5b133f40203",
+      "bytes": 181474
+    },
+    {
+      "name": "SPEC-LICENSE",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/LICENSE",
+      "sha256": "0382b0057770ca05e9c350a50aa3b1c1fea84da0bc81d723bf00b9aa841be58a",
+      "bytes": 12227
+    },
+    {
+      "name": "SDK-LICENSE",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/python-sdk/v2.2.0/LICENSE",
+      "sha256": "5e13dbbc1d120fc2a03cecde7c91424ae2d7de11b63d58ded2f4431e261ee50d",
+      "bytes": 1071
+    },
+    {
+      "name": "sdk-release.json",
+      "url": "https://pypi.org/pypi/mcp/2.2.0/json",
+      "sha256": "1602180860460573ca677e1acb718598546263370687622329cf39b9b99ba173",
+      "bytes": 9845
+    },
+    {
+      "name": "sdk-types-release.json",
+      "url": "https://pypi.org/pypi/mcp-types/2.2.0/json",
+      "sha256": "b19f240365eaeede2b3efc8032d37b7b3b5a2a38615854adf557e29f6fd28201",
+      "bytes": 4042
+    },
+    {
+      "name": "authorization.mdx",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/docs/specification/2026-07-28/basic/authorization/index.mdx",
+      "sha256": "99e7eeaecad5381649e6dca98cb5b47f314bdda9f1d8cd989299e5fe143a913e",
+      "bytes": 25683
+    },
+    {
+      "name": "streamable-http.mdx",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/docs/specification/2026-07-28/basic/transports/streamable-http.mdx",
+      "sha256": "22574bf11e004068493787203ce92be1162107cad717bcb805a15780d4fa69c9",
+      "bytes": 31155
+    },
+    {
+      "name": "versioning.mdx",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/docs/specification/2026-07-28/basic/versioning.mdx",
+      "sha256": "bc02f271700bdecd88034f2d7801eb09110a71d65876487378d94e48dfeb90dc",
+      "bytes": 11293
+    },
+    {
+      "name": "discover.mdx",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/docs/specification/2026-07-28/server/discover.mdx",
+      "sha256": "3fe1f5b5f1528014216b1e49cc3363b3c689c36bcb80a6957ddca6a04cea409c",
+      "bytes": 3636
+    },
+    {
+      "name": "tools.mdx",
+      "url": "https://raw.githubusercontent.com/modelcontextprotocol/modelcontextprotocol/24efd6e7cbd7a074e6b3b781eb370891df40afad/docs/specification/2026-07-28/server/tools.mdx",
+      "sha256": "ed550806a58eb7744b858fb9f26001aa5e55dac9e2babe88317cc81d9d4c490d",
+      "bytes": 23788
+    }
+  ],
+  "checked_at_utc": "2026-09-19T18:05:05.354863+00:00",
+  "sdk_wheel_verification": [
+    {
+      "filename": "mcp-2.2.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/1b/ff/8e7eade68b8a28f7da0ed1085544341b51f9c935dbf6b95c76b7edfea6a0/mcp-2.2.0-py3-none-any.whl",
+      "sha256": "bde982589473a060ae145e3406e9a5333fe538c97229ba841f5a7f92be004f81",
+      "bytes": 365656,
+      "pypi_digest_matches": true,
+      "wheel_in_deliverable": false
+    },
+    {
+      "filename": "mcp_types-2.2.0-py3-none-any.whl",
+      "url": "https://files.pythonhosted.org/packages/8f/d7/6ffba5d8cd5dd9b8a19478875c50e04945314ba5074e84d749283f27f62d/mcp_types-2.2.0-py3-none-any.whl",
+      "sha256": "ea476b73ee86709ab5abc9452385ed36cc05907e582355622e294595c9a04f13",
+      "bytes": 69106,
+      "pypi_digest_matches": true,
+      "wheel_in_deliverable": false
+    }
+  ],
+  "licenses": {
+    "spec": "SPEC-LICENSE: Apache-2.0 transition; non-relicensed contributions retain MIT; non-spec documentation CC-BY-4.0. Original notice retained.",
+    "sdk": "SDK-LICENSE: MIT"
+  }
+}

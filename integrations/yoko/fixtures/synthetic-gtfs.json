@@ -1,0 +1,27 @@
+{
+  "profile": "mdl-synthetic-fixed-stop-flex-v1",
+  "basis": "synthetic_test_only",
+  "service_id": "service-a",
+  "feed_start_date": "2026-09-19",
+  "feed_end_date": "2027-09-18",
+  "feed_version": "20260919_synthetic_v0.7.0",
+  "agency": {
+    "id": "synthetic-agency",
+    "name": "架空試験交通",
+    "kana": "かくうしけんこうつう",
+    "url": "https://example.com/"
+  },
+  "publisher": {
+    "name": "架空試験データ提供者",
+    "kana": "かくうしけんでーたていきょうしゃ",
+    "url": "https://example.com/"
+  },
+  "booking_url": "https://example.com/",
+  "route_type": 3,
+  "payment_method": 0,
+  "transfers": 0,
+  "stops": {
+    "stop-a": {"id":"synthetic-A", "name":"テスト乗降場所A", "kana":"てすとじょうこうばしょえー"},
+    "stop-b": {"id":"synthetic-B", "name":"テスト乗降場所B", "kana":"てすとじょうこうばしょびー"}
+  }
+}

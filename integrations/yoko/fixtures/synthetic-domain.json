@@ -1,0 +1,110 @@
+{
+  "fixture_kind": "synthetic_internal_domain_only",
+  "is_production": false,
+  "is_official_api_schema": false,
+  "note": "全件架空。実在住民、連絡先、現在地、公式スキーマを表さない。",
+  "tenants": [
+    {
+      "id": "test-a",
+      "name": "テスト事業者A"
+    },
+    {
+      "id": "test-b",
+      "name": "テスト事業者B"
+    }
+  ],
+  "users": [
+    {
+      "id": "rider-a1",
+      "tenant_id": "test-a",
+      "role": "rider"
+    },
+    {
+      "id": "rider-a2",
+      "tenant_id": "test-a",
+      "role": "rider"
+    },
+    {
+      "id": "driver-a1",
+      "tenant_id": "test-a",
+      "role": "driver"
+    },
+    {
+      "id": "driver-a2",
+      "tenant_id": "test-a",
+      "role": "driver"
+    },
+    {
+      "id": "admin-a1",
+      "tenant_id": "test-a",
+      "role": "admin"
+    },
+    {
+      "id": "rider-b1",
+      "tenant_id": "test-b",
+      "role": "rider"
+    }
+  ],
+  "services": [
+    {
+      "id": "service-a",
+      "tenant_id": "test-a",
+      "name": "架空指定乗降サービスA",
+      "timezone": "Asia/Tokyo",
+      "call_mode": "immediate",
+      "fare": {
+        "amount": 0,
+        "currency": "JPY",
+        "basis": "synthetic_test_only"
+      }
+    }
+  ],
+  "stops": [
+    {
+      "id": "stop-a",
+      "service_id": "service-a",
+      "name": "テスト乗降場所A"
+    },
+    {
+      "id": "stop-b",
+      "service_id": "service-a",
+      "name": "テスト乗降場所B"
+    },
+    {
+      "id": "stop-c",
+      "service_id": "service-a",
+      "name": "テスト乗降場所C"
+    }
+  ],
+  "vehicles": [
+    {
+      "id": "vehicle-a1",
+      "tenant_id": "test-a",
+      "service_id": "service-a",
+      "capacity": 3,
+      "driver_id": "driver-a1"
+    },
+    {
+      "id": "vehicle-a2",
+      "tenant_id": "test-a",
+      "service_id": "service-a",
+      "capacity": 3,
+      "driver_id": "driver-a2"
+    }
+  ],
+  "requests": [
+    {
+      "fixture_id": "base-request",
+      "rider_id": "rider-a1",
+      "service_id": "service-a",
+      "origin_stop_id": "stop-a",
+      "destination_stop_id": "stop-b",
+      "passengers": 1,
+      "operation_id": "synthetic-op-a1",
+      "idempotency_key": "synthetic-key-a1"
+    }
+  ],
+  "notification_mode": "fake_outbox_only",
+  "payment_mode": "disabled",
+  "live_vehicle_access": false
+}

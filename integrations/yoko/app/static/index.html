@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <meta name="description" content="場所と人数を選んで呼ぶ。利用者・ドライバー・管理者をつなぐ、横のエレベーターのWebアプリ。">
+  <title>横のエレベーター｜Webアプリ</title>
+  <link rel="stylesheet" href="/style.css">
+  <script src="/app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="test-strip"><span class="dot"></span> ローカル試験 <span class="strip-detail">架空データのみ・実際の送迎は行いません</span></div>
+  <header class="topbar">
+    <a class="brand" href="/" aria-label="横のエレベーター ホーム"><span class="brand-symbol" aria-hidden="true">↔</span><span>横のエレベーター<small>MOBILITY DESIGN LAB</small></span></a>
+    <div id="account" class="account"></div>
+  </header>
+  <main id="main" tabindex="-1">
+    <section id="login" class="login-layout">
+      <div class="intro">
+        <p class="eyebrow">いつもの場所から、その先へ。</p>
+        <h1>その一歩を、<br>もっと気軽に。</h1>
+        <p class="lead">乗る場所と降りる場所を選んで、呼ぶ。<br>地域の移動をつなぐ、横のエレベーター。</p>
+        <div class="route-art" aria-hidden="true"><span class="art-stop">A</span><span class="art-line"></span><span class="art-car">↔</span><span class="art-line"></span><span class="art-stop">B</span></div>
+        <ol class="intro-steps"><li><b>01</b>場所・人数を選ぶ</li><li><b>02</b>内容を確認して呼ぶ</li><li><b>03</b>車の到着を待つ</li></ol>
+      </div>
+      <section class="card login-card">
+        <p class="eyebrow">WEB APP</p><h2>Webアプリをはじめる</h2>
+        <p class="muted">入口を選ぶと、架空のアカウントで試せます。<br>保存した依頼は、3者の画面で共有されます。</p>
+        <div id="web-entry">
+          <div class="role-entries" aria-label="テストする役割を選ぶ">
+            <button type="button" class="role-entry" data-login="rider-a1"><span class="entry-icon" aria-hidden="true">01</span><span><b>利用者として試す</b><small>場所と人数を選んで、車を呼ぶ</small></span><span aria-hidden="true">→</span></button>
+            <button type="button" class="role-entry" data-login="driver-a1"><span class="entry-icon" aria-hidden="true">02</span><span><b>ドライバーとして試す</b><small>依頼を引き受けて、乗降を記録する</small></span><span aria-hidden="true">→</span></button>
+            <button type="button" class="role-entry" data-login="admin-a1"><span class="entry-icon" aria-hidden="true">03</span><span><b>管理者として試す</b><small>依頼と車両の状況を確認する</small></span><span aria-hidden="true">→</span></button>
+          </div>
+          <button id="other-login" type="button" class="text-button" aria-controls="login-form" aria-expanded="false">別のテストアカウントを使う</button>
+        </div>
+        <form id="login-form">
+          <label for="username">テストアカウント</label>
+          <select id="username" name="username">
+            <option value="rider-a1">利用者 A1</option><option value="rider-a2">利用者 A2</option>
+            <option value="driver-a1">ドライバー A1</option><option value="driver-a2">ドライバー A2</option>
+            <option value="admin-a1">管理者 A</option><option value="rider-b1">別事業者の利用者 B1</option>
+          </select>
+          <label for="password">テストパスワード</label>
+          <input id="password" type="password" autocomplete="off" value="local-test-only" required>
+          <p class="hint">共通：local-test-only（このローカル試験専用）</p>
+          <button class="primary wide" type="submit">テストをはじめる <span aria-hidden="true">→</span></button>
+        </form>
+        <p class="small login-note">役割を変えるときはログアウトしてください。同時に試すときは別のブラウザーまたはプロファイルを使います。実際の利用者情報は入力しないでください。</p>
+      </section>
+    </section>
+    <section id="workspace" hidden>
+      <div class="workspace-heading"><div><p class="eyebrow" id="role-kicker"></p><h1 id="role-title"></h1></div><div class="sync"><span id="sync-state">接続を確認中</span><button id="refresh" class="text-button" type="button">更新 ↻</button></div></div>
+      <nav id="workspace-nav" class="workspace-nav" aria-label="画面内の移動"></nav>
+      <div id="connection-notice" class="notice warning" role="status" hidden>接続を確認できません。表示している依頼は最後に取得した情報です。通信が戻ったら「更新」で確認してください。</div>
+      <div id="recovery" class="notice warning" hidden><h2>前の操作の結果を確認します</h2><p>応答を確認できていません。新しい依頼を作る前に、保存済みの結果を照合してください。</p><p id="recovery-id" class="small"></p><div class="actions"><button id="reconcile" type="button" class="secondary">結果を照合</button><button id="retry" type="button" class="secondary">同じ操作を再送</button></div></div>
+      <div id="driver-safety" class="notice" hidden><label class="check"><input type="checkbox" id="stopped">安全な場所に停車しています</label><p class="hint">引受・到着・乗降の記録は、停車してから行ってください。操作ごとに確認します。</p></div>
+      <div id="admin-stats" class="stats" hidden></div>
+      <details id="offer-panel" class="card" hidden>
+        <summary>引受できる便を提示する</summary>
+        <p class="hint">架空の試験用です。提示した便は、利用者の予約時に空席を確保します。安全に停車して操作してください。</p>
+        <form id="offer-form">
+          <label for="offer-route">乗降場所</label><select id="offer-route"></select>
+          <label for="offer-pickup">計画乗車時刻（日本時間）</label><input id="offer-pickup" type="datetime-local" required>
+          <label for="offer-name">車両の呼び名（架空）</label><input id="offer-name" maxlength="100" value="架空の試験車両" required>
+          <button class="secondary" type="submit">提示内容を確認する</button>
+        </form>
+      </details>
+      <section id="offers-panel" class="card" hidden><h2>提示中の便</h2><div id="offers-list"></div></section>
+      <details id="profile-panel" class="card" hidden>
+        <summary>利用登録・規約の確認</summary>
+        <p id="profile-status" class="hint">登録状況を確認中</p>
+        <form id="profile-form">
+          <label for="profile-last-name">姓（架空のテスト名）</label><input id="profile-last-name" maxlength="100" autocomplete="off" required>
+          <label for="profile-first-name">名（架空のテスト名）</label><input id="profile-first-name" maxlength="100" autocomplete="off" required>
+          <button id="prepare-profile" type="submit" class="secondary">登録内容を確認する</button>
+        </form>
+        <div id="terms-list"></div>
+        <div class="actions"><button id="prepare-agreements" class="secondary" type="button">選んだ規約への同意を確認する</button><button id="prepare-profile-delete" class="text-button cancel" type="button" hidden>登録情報を削除する</button></div>
+        <p class="hint">テスト専用です。実際の氏名・連絡先は入力しないでください。規約同意と、個別の依頼・取消の確認は別です。</p>
+      </details>
+      <div class="work-grid" id="work-grid">
+        <aside id="request-panel" class="card" hidden>
+          <p class="eyebrow">REQUEST</p><h2 id="request-title">どこへ行きますか？</h2>
+          <form id="request-form">
+            <label for="service">利用するサービス</label><select id="service"></select>
+            <div class="stop-fields"><label for="origin">乗る場所</label><select id="origin"></select><button id="swap-stops" class="text-button swap-stops" type="button" aria-label="乗る場所と降りる場所を入れ替える">↕ 入れ替える</button><label for="destination">降りる場所</label><select id="destination"></select></div>
+            <label for="passengers">人数</label><select id="passengers"><option value="1">1名</option><option value="2">2名</option><option value="3">3名</option></select>
+            <p id="service-fare" class="fare-note"></p><p class="hint">乗降場所の写真：未登録</p>
+            <button id="prepare-request" type="submit" class="primary wide">内容を確認する →</button>
+            <button id="stop-editing" type="button" class="text-button" hidden>変更をやめる</button>
+            <button id="search-candidates" type="button" class="secondary wide" hidden>引受済みの便を探す</button>
+            <div id="candidates" aria-live="polite"></div>
+          </form>
+        </aside>
+        <section id="rides-section" class="ride-column" aria-labelledby="rides-title">
+          <div class="section-heading"><h2 id="rides-title">依頼の状況</h2><span class="small">最新200件まで</span></div>
+          <div id="ride-filters" class="ride-filters" role="group" aria-label="依頼の表示範囲">
+            <button type="button" data-filter="active" aria-pressed="true">進行中 <span data-count="active">0</span></button>
+            <button type="button" data-filter="history" aria-pressed="false">完了・取消 <span data-count="history">0</span></button>
+            <button type="button" data-filter="all" aria-pressed="false">すべて <span data-count="all">0</span></button>
+          </div>
+          <label class="search-label" for="ride-search">乗降場所・受付番号で探す</label>
+          <div class="ride-search"><input id="ride-search" type="search" maxlength="100" placeholder="場所の名前・受付番号" autocomplete="off"><button id="clear-search" class="text-button" type="button">クリア</button></div>
+          <p id="ride-count" class="hint" role="status" aria-live="polite"></p>
+          <div id="rides"></div>
+        </section>
+        <aside id="vehicles-panel" hidden><h2>担当車両</h2><div id="vehicles"></div></aside>
+      </div>
+      <div class="support"><b>困ったときは</b><p>接続が切れた場合は「更新」で最新状況を確認してください。結果不明の操作は、同じ操作IDで照合できます。<br>問い合わせ先：このテストを実施している運営担当者（本番窓口は未設定）</p></div>
+    </section>
+    <div id="message" class="message" role="status" aria-live="polite" hidden></div>
+  </main>
+  <footer><span>横のエレベーター / Web試験版 0.12.0</span><span>指定乗降場所間の即時呼出</span></footer>
+  <noscript><p class="notice">このWebアプリにはJavaScriptが必要です。ブラウザーの設定で有効にして、再読み込みしてください。</p></noscript>
+  <dialog id="confirm-dialog" aria-labelledby="confirm-title"><div class="dialog-content"><p class="eyebrow">CONFIRM</p><h2 id="confirm-title">この内容で依頼しますか？</h2><div id="confirm-details"></div><p id="confirm-expiry" class="hint"></p><div class="actions"><button id="close-dialog" type="button" class="secondary">戻る</button><button id="commit" type="button" class="primary">確認して依頼</button></div></div></dialog>
+  <dialog id="payment-dialog" aria-labelledby="payment-title"><div class="dialog-content"><p class="eyebrow">PAYMENT RECORD</p><h2 id="payment-title">決済情報を記録する</h2><p id="payment-target"></p><p class="hint">架空の台帳への記録です。実際の請求・返金は行いません。</p><form id="payment-form"><label for="payment-amount">記録する金額（円）</label><input id="payment-amount" type="number" min="0" max="2147483647" readonly required><label for="payment-status">記録する状態</label><select id="payment-status"><option value="uncollected">未収</option><option value="received">受領済み</option><option value="excluded">決済対象外</option><option value="cancelled">決済キャンセル</option></select><p class="hint">金額は予約の確定運賃、取消後は取消料を使用します。</p><div class="actions"><button id="close-payment" type="button" class="secondary">戻る</button><button id="prepare-payment" type="submit" class="primary">記録内容を確認する</button></div></form></div></dialog>
+</body>
+</html>

@@ -1,0 +1,72 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "MDL local A2A Part.data application envelope",
+  "description": "独自の業務データ契約。A2A 1.0自体の公式スキーマは同梱a2a.proto。実行は別途本人が承認した操作の参照のみ。",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "action": {
+          "const": "read_reservation"
+        },
+        "reservation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        }
+      },
+      "required": [
+        "action",
+        "reservation_id"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "action": {
+          "const": "execute"
+        }
+      },
+      "required": [
+        "action"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "action": {
+          "const": "execute"
+        },
+        "operation_id": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "idempotency_key": {
+          "type": "string",
+          "pattern": "^[A-Za-z0-9_-]{1,100}$"
+        },
+        "kind": {
+          "enum": [
+            "request",
+            "book",
+            "change",
+            "cancel"
+          ]
+        },
+        "operation_digest": {
+          "type": "string",
+          "pattern": "^[0-9a-f]{64}$"
+        }
+      },
+      "required": [
+        "action",
+        "operation_id",
+        "idempotency_key",
+        "kind",
+        "operation_digest"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}

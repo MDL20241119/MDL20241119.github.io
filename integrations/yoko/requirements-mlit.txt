@@ -1,0 +1,3 @@
+# Optional local standard-adapter and contract-test dependencies.
+openapi-schema-validator==0.6.3
+PyYAML==6.0.3

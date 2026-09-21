@@ -1,0 +1,1928 @@
+{
+  "schema_version": "1.0.0",
+  "checked_on": "2026-09-21",
+  "title": "横のエレベーター 標準仕様適合マトリクス（公開版）",
+  "scope": "公式 API 19 操作と横断要件 26 項目を、公開デモ・元アプリのローカル試験・外部本番接続に分けて記録。全本文要件の網羅数ではありません。",
+  "public_demo": {
+    "version": "0.18.1",
+    "url": "https://mobilitydlab.com/danchi-elevator/demo/?role=user&v=0.18.1",
+    "public_summary": "公開体験版は同じブラウザー内で動く Pyodide + SQLite のデモです。外部の予約 API・MCP・A2A サーバーは提供していません。",
+    "architecture": "JavaScript UI → WebWorker/Pyodide → 同じ Python Mobility Core → SQLite/IndexedDB",
+    "external_api": false,
+    "source_verification": {
+      "checked_on": "2026-09-21",
+      "files": [
+        {
+          "url": "https://mobilitydlab.com/danchi-elevator/demo/demo-bridge.js",
+          "status": 200,
+          "sha256": "e26219c2977b2e76634c66b77842d9489d75e0db3638e2f8d12949276c197d8e",
+          "repository_sha256": "e26219c2977b2e76634c66b77842d9489d75e0db3638e2f8d12949276c197d8e",
+          "equal": true,
+          "bytes": 4102
+        },
+        {
+          "url": "https://mobilitydlab.com/danchi-elevator/demo/demo-worker.js",
+          "status": 200,
+          "sha256": "03bf2764a1c1f1dc1ee929bdae8e896f8c6e8e1097ad40e9ef143c8e7858b3c3",
+          "repository_sha256": "03bf2764a1c1f1dc1ee929bdae8e896f8c6e8e1097ad40e9ef143c8e7858b3c3",
+          "equal": true,
+          "bytes": 2618
+        },
+        {
+          "url": "https://mobilitydlab.com/danchi-elevator/demo/demo_runtime.py",
+          "status": 200,
+          "sha256": "627eb356480da1773f9c30fb7c69947477298d49c9d48804e26b9293a2d2fc2f",
+          "repository_sha256": "627eb356480da1773f9c30fb7c69947477298d49c9d48804e26b9293a2d2fc2f",
+          "equal": true,
+          "bytes": 4671
+        },
+        {
+          "url": "https://mobilitydlab.com/danchi-elevator/demo/core-bundle.json",
+          "status": 200,
+          "sha256": "82537dda6c7e11d04574a46201106bb1b8fdaffcfbe39b374cee065d153b1d51",
+          "repository_sha256": "82537dda6c7e11d04574a46201106bb1b8fdaffcfbe39b374cee065d153b1d51",
+          "equal": true,
+          "bytes": 178310
+        }
+      ]
+    }
+  },
+  "source_application": {
+    "base_version": "0.12.0",
+    "public_summary": "元アプリの連携コードを再利用し、API・MCP・A2A が共通 Core を呼ぶローカル環境で検査・修正しました。GitHub Pages 上で連携サーバーを本番稼働させたものではありません。",
+    "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/README.md",
+    "core_modules_matching_demo": 12
+  },
+  "production_connection": false,
+  "summary": {
+    "official_operation_count": 19,
+    "successful_operation_count": 19,
+    "cross_cutting_requirement_count": 26,
+    "total_rows": 45,
+    "tests": 331,
+    "meaning": "全 19 操作について限定条件の成功系を確認。19/19 の完全適合を意味しません。"
+  },
+  "test_report": {
+    "status": "PASS",
+    "tests": 331,
+    "passed": 331,
+    "failed": 0,
+    "skipped": 0,
+    "checked_at_utc": "2026-09-21T03:49:39.065922+00:00",
+    "successful_operations": [
+      "getTerms",
+      "getServices",
+      "getServicesId",
+      "postPassengers",
+      "getPassengersId",
+      "putPassengersId",
+      "deletePassengersId",
+      "getPassengersIdServices",
+      "postPassengersIdAgreements",
+      "getPassengersIdAgreements",
+      "getPassengersIdReservations",
+      "getStops",
+      "postReservationsCandidates",
+      "postReservations",
+      "putReservationsId",
+      "getReservationsIdPayment",
+      "putReservationsIdPayment",
+      "getVehicleLocations",
+      "getOperationDelays"
+    ],
+    "regression_tests_added": 12,
+    "report_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+    "scope": "合成データ・ループバックの実 HTTP・模擬 TLS/認証提供者。外部本番未接続。全件はアプリのテスト数であり COMmmmONS の要求数ではありません。",
+    "production_connection": false
+  },
+  "operations": [
+    {
+      "id": "M16-IF-010",
+      "operation_id": "getTerms",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/terms",
+      "requirement": "プラットフォーム規約一覧を取得",
+      "rule": "カテゴリごとに最新の規約を取得し、改訂時は新しいterms_idを発行する。ユーザー同意のterms_idとの照合で再同意を判断する。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "規約をカテゴリ・サービス範囲で取得。改訂時は新しい ID を発行。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_updated_terms_get_new_id_and_need_new_agreement"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/terms'].get / 原本 YAML 行 28",
+      "gaps": [
+        "ローカルの合成規約のみ。実事業者の規約・責任分界は未設定。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-020",
+      "operation_id": "getServices",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/services",
+      "requirement": "サービスの概要情報一覧を取得",
+      "rule": "検索条件は基本AND、ID配列はOR。service_idsは他条件より優先。status省略時upcoming,active。概要にはoperation_settings/reservable_areas/area_transitionsを含めない。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "名称・地域・状態・ID の絞り込み、概要と詳細の分離。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_service_filters_pagination_and_qualification_are_real"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/services'].get / 原本 YAML 行 255",
+      "gaps": [
+        "公式本文の AND 条件と ID 優先の併記は追加確認。現コードは AND。実サービスのマスター未接続。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-030",
+      "operation_id": "getServicesId",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/services/{id}",
+      "requirement": "サービスの詳細情報を取得",
+      "rule": "サービス詳細はoperation_settings/reservable_areas/area_transitionsを含む。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "固定乗降場所・即時利用の運行設定とサービス詳細を返す。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogHTTPTests.test_all_eleven_added_standard_operations_success_over_real_http"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/services/{id}'].get / 原本 YAML 行 1041",
+      "gaps": [
+        "固定乗降場所に限定。エリア型・将来時刻の予約設定、実際の運行条件は未対応。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:248",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L248",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-040",
+      "operation_id": "postPassengers",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "POST",
+      "path": "/passengers",
+      "requirement": "ユーザー情報を新規登録",
+      "rule": "氏名のfirst_name/last_nameの組またはカナのfirst_name_kana/last_name_kanaの組が必要。schema requiredには表現されていない。 自宅予約時はhome_address.locationが必要。location指定時はtypeとcoordinatesの両方が必要。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "本人が確認したプロフィールを作成。氏名またはカナの組を本文条件に沿って検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_profile_requires_names_and_update_replaces_omitted_personal_fields"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers'].post / 原本 YAML 行 2073",
+      "gaps": [
+        "合成アカウントへの登録。実本人確認・契約・個人情報管理運用は未検証。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:110",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L110",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-050",
+      "operation_id": "getPassengersId",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/passengers/{id}",
+      "requirement": "ユーザー情報を取得",
+      "rule": "指定IDの利用者を取得する。不存在は404応答を定義。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "本人の保存済みプロフィールを取得し、他人の参照を拒否。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_physically_delete_profile_agreements_and_cached_personal_data"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}'].get / 原本 YAML 行 2421",
+      "gaps": [
+        "本番認証主体との対応付けは未接続。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-060",
+      "operation_id": "putPassengersId",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "PUT",
+      "path": "/passengers/{id}",
+      "requirement": "ユーザー情報を更新",
+      "rule": "氏名またはカナの一組必須は本文要件。schemaの必須キーワードだけでは検証不能。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "個別承認と版の整合を確認して本人の情報を更新。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogHTTPTests.test_exact_approval_and_object_authorization_for_profile_update"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}'].put / 原本 YAML 行 2682",
+      "gaps": [
+        "実認証提供者と運用規約の接続・相互検証が残る。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:110",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L110",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-070",
+      "operation_id": "deletePassengersId",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "DELETE",
+      "path": "/passengers/{id}",
+      "requirement": "ユーザー情報を削除（同意情報含む）",
+      "rule": "物理削除で同意情報も削除し、削除後の利用者取得と同意取得は404。個別同意削除APIは定義していない。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "プロフィール・同意・関連する保存済み個人情報を物理削除し、その後の照会を拒否。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_physically_delete_profile_agreements_and_cached_personal_data"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}'].delete / 原本 YAML 行 3069",
+      "gaps": [
+        "進行中の予約がある削除は拒否するローカル方針。取消・保存義務等の本番運用合意が必要。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-080",
+      "operation_id": "getPassengersIdServices",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/passengers/{id}/services",
+      "requirement": "ユーザーが利用可能なサービスの概要情報一覧を取得",
+      "rule": "ユーザーが利用資格を持つサービスだけを返す。概要schemaはGET /servicesと共通。検索条件は同APIと同様。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "本人の利用資格と事業者範囲に基づくサービス照会。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_service_filters_pagination_and_qualification_are_real"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}/services'].get / 原本 YAML 行 3218",
+      "gaps": [
+        "資格は合成設定。地域・契約別の資格審査と、ID 優先検索の意味は追加確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-090",
+      "operation_id": "postPassengersIdAgreements",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "POST",
+      "path": "/passengers/{id}/agreements",
+      "requirement": "ユーザーの規約同意を登録",
+      "rule": "重複するterms_idもエラーにせず200。各同意のstatusはcreatedまたはalready_agreed。規約改訂後の新IDには別途同意が必要。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "同意済み terms_id の再送を already_agreed とし、元の同意時刻を保存。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_duplicate_agreement_preserves_original_time_and_no_side_effect_repeat"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}/agreements'].post / 原本 YAML 行 3987",
+      "gaps": [
+        "実規約の改訂・本人の同意取得手順は本番で未確認。同一本文内の重複項目はローカル制約で拒否。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-100",
+      "operation_id": "getPassengersIdAgreements",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/passengers/{id}/agreements",
+      "requirement": "ユーザーの規約同意一覧を取得",
+      "rule": "過去に同意した規約をterms_id単位で取得。service_idフィルタが任意。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "本人の過去の terms_id ごとの同意を取得、service_id による絞り込み。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_catalog.CatalogHTTPTests.test_service_terms_have_separate_scope_and_existing_agreements_survive_replacement"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}/agreements'].get / 原本 YAML 行 4259",
+      "gaps": [
+        "本番同意履歴・移行・保管方針は未確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-140",
+      "operation_id": "getPassengersIdReservations",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/passengers/{id}/reservations",
+      "requirement": "ユーザーの予約一覧を取得",
+      "rule": "指定ユーザーの予約一覧を返す。状態・乗車予定日時の検索条件を扱う。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "所有者・状態・ID・JST の乗車予定日で絞り込んでからページ分割。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_audit_20260921.AuditHTTPTests.test_date_filters_use_jst_include_endpoints_and_allow_either_bound"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/passengers/{id}/reservations'].get / 原本 YAML 行 4496",
+      "gaps": [
+        "予定日時が不明な即時呼出を含む日付検索は明示エラー。requested→tentative の意味、no_show、データ大量時の整合は追加確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/mlit.py:181",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L181",
+      "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
+    },
+    {
+      "id": "M16-IF-110",
+      "operation_id": "getStops",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/stops",
+      "requirement": "乗降場所一覧を取得",
+      "rule": "固定乗降場を検索。stop_ids優先。nameは部分一致だがsearch_wordsは検索対象外。locationのみ指定時radius=500m。radiusだけの指定は無効。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "固定乗降場所・名称・位置/半径を照会。明示 radius 単独を拒否。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_audit_20260921.AuditHTTPTests.test_explicit_radius_requires_location_even_at_default_value_or_with_id"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/stops'].get / 原本 YAML 行 5322",
+      "gaps": [
+        "実座標未接続。AND 条件と stop_ids 優先の併記は追加確認。name の検索対象は名称のみ。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/catalog.py:271",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L271",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M16-IF-120",
+      "operation_id": "postReservationsCandidates",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "POST",
+      "path": "/reservations/candidates",
+      "requirement": "予約候補を生成",
+      "rule": "候補なしはcandidates=[]と理由。各候補にreservation_requestとdisplayを分けて返す。候補要求の補助機能配列は空配列でも必須。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "単一サービス・固定乗降場所・一般区分の候補と条件を返す。未設定と候補なしを分離。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_booking.BookingHTTPTests.test_standard_search_confirm_book_201_and_cross_protocol_replay"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/reservations/candidates'].post / 原本 YAML 行 5761",
+      "gaps": [
+        "自宅/エリア型、複数サービス、設備指定、到着時刻指定、実車最適配車は対象外。候補あり時の理由は公式 schema に合わせ省略。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/mlit.py:64",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L64",
+      "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
+    },
+    {
+      "id": "M16-IF-130",
+      "operation_id": "postReservations",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "POST",
+      "path": "/reservations",
+      "requirement": "予約を登録",
+      "rule": "事前候補のcandidate_idとreservation_requestを照合し、不一致を拒否する。schema検証に加え保存候補との意味的整合性検証が必要。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "保存した candidate_id と候補条件を照合。本人承認、定員、再送を一取引で処理。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_booking.BookingHTTPTests.test_lost_booking_response_reconciles_after_restart_without_second_seat"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/reservations'].post / 原本 YAML 行 6609",
+      "gaps": [
+        "合成便の確定予約のみ。事業者間の認証・課金・実運行への接続は未実施。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/mlit.py:83",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L83",
+      "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
+    },
+    {
+      "id": "M16-IF-150",
+      "operation_id": "putReservationsId",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "PUT",
+      "path": "/reservations/{id}",
+      "requirement": "予約を更新",
+      "rule": "変更可能なのはpassenger_count/accessibility_feature_count/statusのみ。状態変更はtentative→cancelledまたはconfirmed→cancelled。スキーマに列挙された全状態へ自由に変更できる意味ではない。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "人数変更・取消を共通 Core で処理。乗降場所変更・任意状態変更を拒否。車両の任意情報を同値照合。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_audit_20260921.AuditHTTPTests.test_standard_cannot_change_stops_even_if_core_owner_approved_it"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/reservations/{id}'].put / 原本 YAML 行 7477",
+      "gaps": [
+        "一般区分・設備指定なしに限定。仮予約の確定期限の意味は追加確認。実事業者の取消条件との接続未確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/mlit.py:83",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit.py#L83",
+      "code_sha256": "7bc27cdb97bcb8fc081d75fc0044755a443f2b14d621c9a5d782b9a84ff1b035"
+    },
+    {
+      "id": "M16-IF-160",
+      "operation_id": "getReservationsIdPayment",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/reservations/{id}/payment",
+      "requirement": "予約の決済情報を取得",
+      "rule": "予約IDに紐づく決済情報を返す。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "予約に対応する管理者確認済みの金額・決済状態を読み出す。未取得を 0 円にしない。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_payments.PaymentHTTPTests.test_standard_get_put_and_mdl_read_use_persisted_data_and_original_replay"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/reservations/{id}/payment'].get / 原本 YAML 行 8549",
+      "gaps": [
+        "合成台帳。実決済・決済代行との接続は未実施。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/payments.py:40",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/payments.py#L40",
+      "code_sha256": "b249c5ac9e5fd713116cef66dcbe114d975765a7d7fde2469d9942e2db969c6f"
+    },
+    {
+      "id": "M16-IF-170",
+      "operation_id": "putReservationsIdPayment",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "PUT",
+      "path": "/reservations/{id}/payment",
+      "requirement": "予約の決済情報を登録または更新",
+      "rule": "決済は予約ごとに1件、独立したIDなし。PUTで新規と更新を兼用。金額は0以上の整数円。分割払い・複数登録は対象外。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "予約ごとに 1 件の決済情報を管理者の個別承認で保存。再送・競合・取消との整合を確認。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_payments.PaymentHTTPTests.test_real_lost_put_response_reconciles_after_restart_with_one_ledger_update"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/reservations/{id}/payment'].put / 原本 YAML 行 8741",
+      "gaps": [
+        "実課金・返金は行わない。原本本文の独立 ID なしと応答 id 必須は予約 ID の対応で扱う限定解釈。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/payments.py:79",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/payments.py#L79",
+      "code_sha256": "b249c5ac9e5fd713116cef66dcbe114d975765a7d7fde2469d9942e2db969c6f"
+    },
+    {
+      "id": "M16-IF-180",
+      "operation_id": "getVehicleLocations",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/vehicle-locations",
+      "requirement": "車両の位置情報を取得",
+      "rule": "vehicle_ids優先。ID配列内OR、複数条件のANDで車両位置を取得。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "取得時刻と鮮度を持つ保存済み合成位置を返す。未取得・期限切れを空の成功にしない。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_observations.ObservationHTTPTests.test_both_standard_operations_and_mdl_views_use_saved_approved_observations"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/vehicle-locations'].get / 原本 YAML 行 9008",
+      "gaps": [
+        "実 GPS 未接続。全対象の有効観測がないとエラー。vehicle_ids 優先と複合検索の意味は追加確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/observations.py:162",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L162",
+      "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
+    },
+    {
+      "id": "M16-IF-190",
+      "operation_id": "getOperationDelays",
+      "standard": "COMmmmONS",
+      "standard_id": "C-API",
+      "method": "GET",
+      "path": "/operation-delays",
+      "requirement": "運行遅延情報を取得",
+      "rule": "status省略時active。started_at_from/to両省略なら直近24時間。to指定時from必須。vehicle_idsを優先。",
+      "applicability_condition": "COMmmmONSデマンドバス事業者側インターフェースとして当該機能を提供するとき。閉じた体験版だけに一律法的義務があるという意味ではない。",
+      "priority": "外部連携時に適用",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開ブラウザーデモに標準 HTTP API はありません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "既定の active・直近 24 時間、期間・ページ分割、未取得と明示的遅延なしの区別。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル HTTP の限定条件",
+      "test_evidence": [
+        "test_observations.ObservationHTTPTests.test_filter_defaults_bounds_and_paging_validate_original_contract"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "source_locator": "paths['/operation-delays'].get / 原本 YAML 行 9286",
+      "gaps": [
+        "合成観測のみ。実データ提供者、vehicle_ids 優先の複合検索、本番更新頻度は追加確認。",
+        "外部との本番接続は未実施。"
+      ],
+      "notes": [
+        "各操作の一部条件を試験した記録です。全ての入力・本文要件・運用条件の適合証明ではありません。"
+      ],
+      "code_ref": "integrations/yoko/app/observations.py:162",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L162",
+      "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
+    }
+  ],
+  "requirements": [
+    {
+      "id": "C-COMMON-001",
+      "standard_id": "C-API",
+      "requirement": "必須項目・型・enum・数値範囲",
+      "source_locator": "paths.*.parameters/requestBody/responses",
+      "rule": "OpenAPIのrequired/allOf/oneOf/enum/minimum等を適用する。本文要件は別に検証する。",
+      "applicability_condition": "実装する各API",
+      "mdl_priority_proposal": "必須（適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "COMmmmONS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "公式原本の SHA-256 を固定し、要求・応答の schema を検証。本文制約も個別検査。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_p3.ClientHTTPTests.test_standard_request_and_response_validate_against_unchanged_source"
+      ],
+      "gaps": [
+        "全本文要件・組合せの網羅適合は未確立。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/mlit_contract.py:39",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L39",
+      "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
+    },
+    {
+      "id": "C-COMMON-002",
+      "standard_id": "C-API",
+      "requirement": "エラー構造",
+      "source_locator": "info.description + paths.*.responses.4xx/5xx",
+      "rule": "個別定義はapplication/json、type/title必須、status/detail/instance任意のRFC9457型。401/403等の推奨応答例を含む。",
+      "applicability_condition": "外部APIにエラーを返す場合",
+      "mdl_priority_proposal": "必須（適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "COMmmmONS",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "type/title と宣言済み応答 schema を満たすエラー形を検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_p3.ClientHTTPTests.test_standard_guard_and_errors_keep_source_contract"
+      ],
+      "gaps": [
+        "独自の競合・過負荷エラーを原本の宣言コードに写すローカル方針は相互運用で確認。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/mlit_contract.py:98",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L98",
+      "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
+    },
+    {
+      "id": "C-COMMON-003",
+      "standard_id": "C-API",
+      "requirement": "ページング",
+      "source_locator": "GET /services, /stops, /vehicle-locations, /operation-delays 等 parameters",
+      "rule": "offsetは整数0以上・既定0、limitは整数1..100・既定20。",
+      "applicability_condition": "当該一覧API",
+      "mdl_priority_proposal": "必須（適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "COMmmmONS",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "offset/limit の既定値・上下限を検証し、絞り込み後に total とページを返す。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_p3.ClientHTTPTests.test_standard_authorization_pagination_filters_and_invalid_inputs"
+      ],
+      "gaps": [
+        "同時更新中の大規模 DB スナップショット保証は未検証。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/mlit_contract.py:46",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mlit_contract.py#L46",
+      "code_sha256": "b33aa33347bee4490636b7f88862d82df855e7f4ee804ecf7b6f8c0b7a642c5f"
+    },
+    {
+      "id": "C-COMMON-004",
+      "standard_id": "C-API",
+      "requirement": "座標・日時の意味",
+      "source_locator": "各location/coordinatesおよびdate-timeフィールド",
+      "rule": "位置はGeoJSON Point、WGS84で[longitude, latitude]の2要素。日時はRFC3339 date-time。",
+      "applicability_condition": "位置・日時を連携するとき",
+      "mdl_priority_proposal": "必須（適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "COMmmmONS",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "経度・緯度を順序付きで扱い、範囲・日時・営業日の境界を検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_transport_data.TransportBoundaryTests.test_geojson_longitude_latitude_maps_to_named_gtfs_fields"
+      ],
+      "gaps": [
+        "実測座標・実運行時刻の正確性は別途確認。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/transport_data.py:22",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/transport_data.py#L22",
+      "code_sha256": "4ce59da9b4c942108a500f4546e4f58ce17577dfd3beaafde4d4ca9dc11aa602"
+    },
+    {
+      "id": "C-COMMON-005",
+      "standard_id": "C-API",
+      "requirement": "認証方式の未規定",
+      "source_locator": "security/securitySchemes/header parameters 未定義",
+      "rule": "原本に方式の指定はない。認証不要という意味ではない。接続相手との方式、権限、鍵管理を別途合意する。",
+      "applicability_condition": "本番個人情報・予約操作への接続",
+      "mdl_priority_proposal": "本番必須（MDL安全要件）",
+      "official_normative_strength": "公式APIでは方式未規定",
+      "standard": "COMmmmONS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "ローカルの本人委任・役割・所有者確認と、模擬外部認証の検証を実装。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_external_auth.ExternalAuthTests.test_oauth_issuer_audience_active_expiry_scope_client_and_role"
+      ],
+      "gaps": [
+        "本番接続相手の認証方式・クライアント登録・鍵・契約は外部依存。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/delegation.py:16",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/delegation.py#L16",
+      "code_sha256": "35e2dfa63a20ef0ca1ab3a0b501483699ec05255fb718f6a1f69090f76e3343d"
+    },
+    {
+      "id": "C-COMMON-006",
+      "standard_id": "C-API",
+      "requirement": "timeout・再送・一般冪等キーの未規定",
+      "source_locator": "原本全体。agreementsの重複応答は個別規定",
+      "rule": "一般的なIdempotency-Key、timeout秒数、retry回数は未定義。MDL運用要件として決め、国の必須仕様とは呼ばない。",
+      "applicability_condition": "通信を伴う書込みAPI",
+      "mdl_priority_proposal": "本番必須（MDL安全要件）",
+      "official_normative_strength": "公式APIでは未規定",
+      "standard": "COMmmmONS",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "共通操作台帳、再送、失われた応答の照合、期限と回数上限をローカルで検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_p3.ClientHTTPTests.test_actual_lost_response_reconciles_after_server_restart"
+      ],
+      "gaps": [
+        "MDL 独自の安全要件。国交省がキーや秒数を定めたとは表現しない。本番 SLA は未検証。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/core.py:286",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/core.py#L286",
+      "code_sha256": "4059aa475258e74a9e12338599ab1929deb322e7567264daadc246d7fc83ea22"
+    },
+    {
+      "id": "G4-001",
+      "standard_id": "GTFS4",
+      "requirement": "対象と版",
+      "source_locator": "概要1.1, 1.3, 改訂履歴",
+      "rule": "第4.0版はSchedule/Realtime/GBFS、デマンド型交通のFlexも対象。",
+      "applicability_condition": "運行情報を経路検索等へ配布するとき",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "標準の適用範囲",
+      "standard": "GTFS-JP",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "第 4 版を踏まえた固定乗降場所の合成 Schedule/Flex 出力。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_fixed_stop_flex_fare_readings_and_coordinates"
+      ],
+      "gaps": [
+        "Realtime は未実装。GBFS は今回の送迎用途の対象外。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:90",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L90",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-002",
+      "standard_id": "GTFS4",
+      "requirement": "配布ファイルと文字形式",
+      "source_locator": "第1部I.2-3 本文p8-9 / PDF15-16",
+      "rule": "zip直下にCSVの.txt、GeoJSONはlocations.geojson。文字/フィールド/ファイル名規則を守る。",
+      "applicability_condition": "GTFS-JP出力を提供するとき",
+      "mdl_priority_proposal": "必須（GTFS-JP適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "UTF-8 CSV の .txt を ZIP 直下へ出力し、出力が決定的であることを確認。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_fully_deterministic_feed_and_public_ids_survive_restart"
+      ],
+      "gaps": [
+        "確認対象は合成の固定乗降場所プロファイル。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:52",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L52",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-003",
+      "standard_id": "GTFS4",
+      "requirement": "基本必須ファイル",
+      "source_locator": "第1部I.8.2 本文p15 / PDF22",
+      "rule": "feed_info/agency/routes/trips/stop_times/fare_attributes/translations。固定乗降場ありはstopsも必要。calendar/calendar_dates等は条件による。",
+      "applicability_condition": "GTFS-JP Schedule出力",
+      "mdl_priority_proposal": "必須（GTFS-JP適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "基本必須ファイルと固定乗降場所・運行日の条件付ファイルを出力し欠落を拒否。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_domestic_required_tables_and_fields_are_checked"
+      ],
+      "gaps": [
+        "ファイルがあることだけを適合の全根拠にしない。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:22",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L22",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-004",
+      "standard_id": "GTFS4",
+      "requirement": "無料運行の運賃",
+      "source_locator": "第1部I.8.2 本文p15 / PDF22、II.9",
+      "rule": "無償交通でもfare_attributesを設定する。fare_rulesは全線同額の均一運賃以外で条件付必須。",
+      "applicability_condition": "無料の送迎をGTFS-JPで公開するとき",
+      "mdl_priority_proposal": "必須（GTFS-JP適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "既知の均一運賃を fare_attributes に出力。未知を 0 円に変換しない。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_unknown_or_invalid_fare_is_not_zero"
+      ],
+      "gaps": [
+        "合成の均一運賃に限定。実運賃・区間別運賃は未検証。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-005",
+      "standard_id": "GTFS4",
+      "requirement": "翻訳と読み仮名",
+      "source_locator": "第1部I.8.2 本文p15 / PDF22、II.11",
+      "rule": "translationsは必須。読み仮名は必須、英語は推奨。",
+      "applicability_condition": "GTFS-JP Schedule出力",
+      "mdl_priority_proposal": "必須（GTFS-JP適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "名称と ja-Hrkt の読み仮名を出力、未設定・変更不一致を検査。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_public_ids_readings_mappings_and_changed_names"
+      ],
+      "gaps": [
+        "読み仮名は合成設定。実名の確認と推奨の英語翻訳は別途対応。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:40",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L40",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-006",
+      "standard_id": "GTFS4",
+      "requirement": "実在運行日・有効期限・更新",
+      "source_locator": "第1部I.5-6 本文p11-13 / PDF18-20",
+      "rule": "feedの有効期間と運行日を定義し、変更・期限到来時に更新、feed_version更新。未検証のデモ時刻を実運行として配布しない。",
+      "applicability_condition": "実データのGTFS-JP配布",
+      "mdl_priority_proposal": "本番必須",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "共通営業日から有効期間・日跨ぎ・祝日を算出して矛盾を検査。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_holiday_override_and_overnight_service_day"
+      ],
+      "gaps": [
+        "実在運行日・正確なマスター・更新責任者・配布先は未設定。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:67",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L67",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-007",
+      "standard_id": "GTFS4",
+      "requirement": "Flexの選択",
+      "source_locator": "第1部I.8.2 本文p16 / PDF23",
+      "rule": "location_groups/location_group_stops/locations.geojson/booking_rulesは任意。エリア型か固定乗降場型かに合わせ採用し、全てのファイルを強制しない。",
+      "applicability_condition": "デマンド型交通を経路検索等へ記述するとき",
+      "mdl_priority_proposal": "推奨（対応連携先がある場合）",
+      "official_normative_strength": "任意",
+      "standard": "GTFS-JP",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "固定乗降場所で利用可能な予約時間帯を Flex として表現。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_exported_window_edges_are_accepted_by_planned_ride_core"
+      ],
+      "gaps": [
+        "エリア型の locations.geojson は今回対象外。外部経路検索での解釈は未確認。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-008",
+      "standard_id": "GTFS4",
+      "requirement": "予約締切の表現",
+      "source_locator": "第1部II.21 booking_rules 本文p88-90 / PDF95-97",
+      "rule": "booking_type 0/1/2、1はprior_notice_duration_min必須、2はprior_notice_last_day/last_time等の条件を適用。",
+      "applicability_condition": "booking_rules採用時",
+      "mdl_priority_proposal": "必須（採用時）",
+      "official_normative_strength": "条件付必須・条件付禁止",
+      "standard": "GTFS-JP",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "booking_type=0 の即時予約を採用し、未対応の予約種別を拒否。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_domestic_checks_reject_area_expansion_bad_refs_and_booking_types"
+      ],
+      "gaps": [
+        "booking_type=1/2 の事前締切は未実装。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:93",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L93",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "G4-009",
+      "standard_id": "GTFS4",
+      "requirement": "GTFS-JP適合の判定方法",
+      "source_locator": "第1部I.9 本文p19 / PDF26",
+      "rule": "必須、条件付必須、条件付禁止と、各値の必須規則を全て満たす。ファイル名だけやJSON出力だけでは準拠判定不可。",
+      "applicability_condition": "GTFS-JP準拠を対外表明するとき",
+      "mdl_priority_proposal": "必須（適合表明時）",
+      "official_normative_strength": "仕様要求",
+      "standard": "GTFS-JP",
+      "status": "NEEDS VERIFICATION",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "NEEDS VERIFICATION",
+        "note": "国内必須項目・参照・読み仮名・座標・許可ファイルを自動検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_gtfs.GtfsTests.test_domestic_checks_reject_missing_reading_wrong_coordinate_or_currency"
+      ],
+      "gaps": [
+        "実フィードは未検証。外部 validator の今回再実行・第三者取込確認は未実施で、全面適合未確立。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs_validation.py:14",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs_validation.py#L14",
+      "code_sha256": "24c0a72b3873aab6e000e5eecc687e7d64f8580fbb8a78792607785751a3d865"
+    },
+    {
+      "id": "G4-010",
+      "standard_id": "GTFS4",
+      "requirement": "GBFS の適用判断と Realtime の今後",
+      "source_locator": "概要1.4 / 第2部 / 第3部",
+      "rule": "Realtimeは動的運行情報配信を行う段階、GBFSはシェアモビリティ用途。通常の送迎予約にGBFSを一律適用しない。",
+      "applicability_condition": "当該データ配信機能を提供する場合",
+      "mdl_priority_proposal": "将来対応",
+      "official_normative_strength": "用途に応じた適用",
+      "standard": "GTFS-JP",
+      "status": "NOT APPLICABLE",
+      "demo_status": {
+        "status": "NOT APPLICABLE",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "NOT APPLICABLE",
+        "note": "GBFS は今回の固定乗降場所の送迎用途に適用しない。"
+      },
+      "test_status": "NOT APPLICABLE",
+      "test_scope": "用途と資料の照合",
+      "test_evidence": [],
+      "gaps": [
+        "Realtime は将来、実車観測と配信先が決まった段階で検討。"
+      ],
+      "source_url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/gtfs.py:90",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/gtfs.py#L90",
+      "code_sha256": "2c2ba3706028a9354ce8d834606648681e5df65adaa4a64cf8344bc2e3ce4f44"
+    },
+    {
+      "id": "M3-001",
+      "standard_id": "MAAS3",
+      "requirement": "ガイドラインの位置づけ",
+      "source_locator": "2(1) 本文p8 / PDF9",
+      "rule": "連携を促すモデル例であり、ガイドラインに従う義務を課すものではない。関係法令や契約上の義務とは別。",
+      "applicability_condition": "MaaS連携を設計するとき",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "任意のモデル例",
+      "standard": "MaaS",
+      "status": "NOT APPLICABLE",
+      "demo_status": {
+        "status": "NOT APPLICABLE",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "NOT APPLICABLE",
+        "note": "本行はガイドラインの性質の解説であり、実装・自動試験の判定対象外。ガイドラインの利用は他の M3 行で扱う。"
+      },
+      "test_status": "NOT APPLICABLE",
+      "test_scope": "用途と資料の照合",
+      "test_evidence": [],
+      "gaps": [
+        "接続契約・法令上の個別判断は別途必要。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/LOCAL_PROFILE.md:17",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/LOCAL_PROFILE.md#L17",
+      "code_sha256": "1f5c07e110f68d73d6f5c9a636073cf35d50a8ed14491c5cff40f717d93cd1e6"
+    },
+    {
+      "id": "M3-002",
+      "standard_id": "MAAS3",
+      "requirement": "個人情報・同意・利用契約",
+      "source_locator": "6(3) 本文p14-16 / PDF15-17",
+      "rule": "取得方法、利用規約、関係者間の契約、利用者同意、匿名化等の必要な手続を用途に応じて確認する。",
+      "applicability_condition": "個人を識別し得る予約・位置データ等の利用/外部連携",
+      "mdl_priority_proposal": "本番必須（適用法令・契約確認）",
+      "official_normative_strength": "留意事項。個別の法的判断は別途",
+      "standard": "MaaS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "同意・改訂・本人情報の削除を合成データで検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_catalog.CatalogTests.test_physically_delete_profile_agreements_and_cached_personal_data"
+      ],
+      "gaps": [
+        "実際の規約・事業者契約・個人情報運用の審査は未実施。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/catalog.py:185",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/catalog.py#L185",
+      "code_sha256": "9096cf186e4e29b3b50fe92a669149d60bf340adac439f4d6ee581f8dce0fcda"
+    },
+    {
+      "id": "M3-003",
+      "standard_id": "MAAS3",
+      "requirement": "情報保護と運用保守",
+      "source_locator": "6(4), 6(5)B(3), C(3)-(4) 本文p16,22",
+      "rule": "個人情報を含む予約・移動・決済データのセキュリティ、バックアップ、管理報告、継続的保守を設計する。",
+      "applicability_condition": "本番サービスと外部データ連携",
+      "mdl_priority_proposal": "本番必須（MDL運用要件）",
+      "official_normative_strength": "ガイドラインのモデル",
+      "standard": "MaaS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "権限境界、操作履歴、外部送信待ち記録、資格情報を除いた復旧を検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_local_operations.LocalOperationsTests.test_backup_omits_credentials_and_keeps_domain_and_task"
+      ],
+      "gaps": [
+        "本番運用の責任者・監視・保守・保管・災害復旧目標の合意は未実施。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/core.py:280",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/core.py#L280",
+      "code_sha256": "4059aa475258e74a9e12338599ab1929deb322e7567264daadc246d7fc83ea22"
+    },
+    {
+      "id": "M3-004",
+      "standard_id": "MAAS3",
+      "requirement": "データ品質と責任",
+      "source_locator": "6(5)A(2)-(3), C(3) 本文p20-22",
+      "rule": "データの取得元、正確性の限界、更新方法、提供者との変更調整を明示する。",
+      "applicability_condition": "第三者への交通情報提供",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "ガイドラインのモデル",
+      "standard": "MaaS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "取得元・取得時刻・期限・未取得を区別し、品質の不明を成功に置換しない。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_observations.ObservationTests.test_unconfigured_missing_and_explicit_empty_are_distinct"
+      ],
+      "gaps": [
+        "取得元は合成設定。実データの正確性・提供責任・変更連絡の合意が必要。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/observations.py:118",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/observations.py#L118",
+      "code_sha256": "3e5cf63b7a36dda6ccef4ebdd6a34f561bba1aca806dfa424b18a470069eb521"
+    },
+    {
+      "id": "M3-005",
+      "standard_id": "MAAS3",
+      "requirement": "他社連携とAPIの開放度",
+      "source_locator": "6(5)D 本文p23、11(1) 本文p53",
+      "rule": "他プラットフォーム連携を想定する。オープンデータと無認証API公開を同一視せず、データ別の利用契約・アクセス条件を定める。",
+      "applicability_condition": "MaaS等への外部連携",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "ガイドラインのモデル",
+      "standard": "MaaS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "通常 API と標準・AI 連携を分け、認可を共通 Core で再確認。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_a2a.TaskTests.test_cross_adapter_operation_is_not_repeated"
+      ],
+      "gaps": [
+        "外部連携先・アクセス契約・許可範囲は未設定。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/direct_api.py:6",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/direct_api.py#L6",
+      "code_sha256": "9458d4d8f3448c301bd9c88364a9db0238cfa94bcea5f0c5ada6f2e8b930ae12"
+    },
+    {
+      "id": "M3-006",
+      "standard_id": "MAAS3",
+      "requirement": "技術方式は例示",
+      "source_locator": "11(2) 本文p54 / PDF55",
+      "rule": "REST/HTTPS/JSON/GTFS/OAuth2.0を例示するが、全方式の一律採用義務ではない。",
+      "applicability_condition": "連携方式を選ぶとき",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "選択肢の例示",
+      "standard": "MaaS",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "HTTPS・JSON・OAuth 相当の模擬提供者で選択した方式を検証。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_external_auth.ExternalAuthTests.test_official_sdks_over_tls_cross_adapter_exactly_once"
+      ],
+      "gaps": [
+        "各方式を国の一律必須要求とは扱わない。実認証提供者との本番接続は未実施。"
+      ],
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/connected.py:48",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/connected.py#L48",
+      "code_sha256": "2bf0cef85cbc8a21fdacfc95be16cf0bc31c21af5993beb0587fdfe3c55ccf80"
+    },
+    {
+      "id": "MCP-001",
+      "standard_id": "MCP",
+      "requirement": "MCP版を固定する",
+      "source_locator": "2026-07-28 specification; versioning Negotiation",
+      "rule": "現行は2026-07-28。各requestでprotocolVersionを宣言し、HTTPはMCP-Protocol-Versionを用いる。server/discover等の現行仕様を検証する。",
+      "applicability_condition": "外部MCPプロトコル提供を表明するとき",
+      "mdl_priority_proposal": "将来対応",
+      "official_normative_strength": "仕様要求",
+      "standard": "MCP",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "2026-07-28・公式 SDK 2.2.0、discover/ヘッダ/ツールを実ローカル HTTP で確認。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_mcp.MCPTests.test_discover_and_list_are_modern_and_only_advertise_tools"
+      ],
+      "gaps": [
+        "外部クライアントとの本番接続は未実施。認証はローカルまたは模擬提供者。"
+      ],
+      "source_url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/mcp_adapter.py:153",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mcp_adapter.py#L153",
+      "code_sha256": "67a4f19a0ec748e036342558f463182d3ec53eab5a962589edf95765836f10f6"
+    },
+    {
+      "id": "MCP-002",
+      "standard_id": "MCP",
+      "requirement": "MCPと共通業務コアの境界",
+      "source_locator": "MCP specification scope + MDL architecture decision",
+      "rule": "内部ツール関数は外部MCP準拠の証拠ではない。wire protocol/transport/authの検証を業務ロジック検証と分離する。",
+      "applicability_condition": "AIツール連携を設計するとき",
+      "mdl_priority_proposal": "推奨",
+      "official_normative_strength": "一部はMDL設計提案",
+      "standard": "MCP",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "MCP は変換層。予約・承認・再送は API と同じ Core を呼ぶ。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_mcp.MCPTests.test_inline_tool_without_discovery_returns_same_core_reservation"
+      ],
+      "gaps": [
+        "MCP の試験結果から COMmmmONS 適合を推定しない。"
+      ],
+      "source_url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/mcp_adapter.py:47",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/mcp_adapter.py#L47",
+      "code_sha256": "67a4f19a0ec748e036342558f463182d3ec53eab5a962589edf95765836f10f6"
+    },
+    {
+      "id": "A2A-001",
+      "standard_id": "A2A",
+      "requirement": "A2A版・AgentCard・認証",
+      "source_locator": "§3.6, §7, §8",
+      "rule": "最新公開仕様1.0.0、wire versionは1.0。対応interface、securityと権限を宣言・検証し、productionは暗号化通信。",
+      "applicability_condition": "外部A2Aプロトコル提供を表明するとき",
+      "mdl_priority_proposal": "将来対応",
+      "official_normative_strength": "仕様要求",
+      "standard": "A2A",
+      "status": "PARTIAL",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "PARTIAL",
+        "note": "wire 1.0・公式 SDK 1.1.4、Agent Card と永続 Task を実ローカル HTTP で確認。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_a2a.HttpTests.test_official_sdk_card_send_get_list_cancel_and_resume"
+      ],
+      "gaps": [
+        "外部エージェント・本番鍵・認証事業者の接続は未実施。"
+      ],
+      "source_url": "https://a2a-protocol.org/latest/specification/",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/a2a_adapter.py:232",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/a2a_adapter.py#L232",
+      "code_sha256": "1bf32a277e0d0b20c516b2d125f3820fc86896acc61104ff3767512b69236a3d"
+    },
+    {
+      "id": "A2A-002",
+      "standard_id": "A2A",
+      "requirement": "AI連携と国の交通標準の分離",
+      "source_locator": "Appendix B + C-API scope + MDL architecture decision",
+      "rule": "MCP/A2Aの実装はCOMmmmONS適合を証明しない。通常APIと同じMobility Coreへ委譲する設計はMDLの整合性確保策。",
+      "applicability_condition": "対外説明と複数インターフェース設計",
+      "mdl_priority_proposal": "必須（表現の正確性）",
+      "official_normative_strength": "MDL設計・説明判断",
+      "standard": "A2A",
+      "status": "IMPLEMENTED",
+      "demo_status": {
+        "status": "NOT IMPLEMENTED",
+        "note": "公開体験版では外部連携・配布機能として提供していません。"
+      },
+      "source_status": {
+        "status": "IMPLEMENTED",
+        "note": "A2A・MCP・通常 API は確認済み操作と同じ業務 Core を共有。"
+      },
+      "test_status": "PASS",
+      "test_scope": "合成データ・ローカル試験",
+      "test_evidence": [
+        "test_a2a.TaskTests.test_cross_adapter_operation_is_not_repeated"
+      ],
+      "gaps": [
+        "国の交通標準と AI 通信方式は別層であり、互いの適合根拠にしない。"
+      ],
+      "source_url": "https://a2a-protocol.org/latest/specification/",
+      "notes": [
+        "この行の判定対象は記載した要件と検証範囲に限ります。"
+      ],
+      "test_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/artifacts/test-results/application.json",
+      "code_ref": "integrations/yoko/app/agent_actions.py:21",
+      "code_url": "https://github.com/MDL20241119/MDL20241119.github.io/blob/main/integrations/yoko/app/agent_actions.py#L21",
+      "code_sha256": "7cc2393c4a6f91095b022f568de2dda0437c527318f60ab6a49dae957743cc6c"
+    }
+  ],
+  "external_dependencies": [
+    "接続する交通事業者・MaaS 等の実 API エンドポイントと相互運用試験環境。",
+    "本番の認証提供者・登録クライアント・鍵・アクセス権限と契約。",
+    "実サービスの運行条件・利用資格・規約・運賃・取得元を確認したマスター。",
+    "実車の位置・遅延の取得、実決済・通知など、合成台帳の外側にあるシステム。",
+    "本番のホスティング・監視・保守担当・保存期間・バックアップと復旧手順の合意。"
+  ],
+  "official_sources": [
+    {
+      "id": "C-CATALOG",
+      "title": "COMmmmONS公式公開資料一覧",
+      "url": "https://www.mlit.go.jp/commmmons/document/",
+      "sha256": "8cfbbc6e863ac07a23e573854b201a05975e3af0b192ac591d1ec74b8358cd9b"
+    },
+    {
+      "id": "C-API",
+      "title": "デマンドバスシステム連携API標準仕様書 API",
+      "url": "https://www.mlit.go.jp/commmmons/document/003/api/commmmons_doc_003-07_ver01.yaml",
+      "version": "1.0.0",
+      "sha256": "d0462291f46f8353f4a1d7ee7fd40562137b3e3d4e36af40fab945f1a679f0bc"
+    },
+    {
+      "id": "C-GUIDE",
+      "title": "デマンドバスシステム連携API標準仕様書 ガイダンス",
+      "url": "https://www.mlit.go.jp/commmmons/document/003/commmmons_doc_003-01_ver01.pdf",
+      "version": "1.0",
+      "sha256": "a31d9bde13f3b9b8d66cd88139eaa83b739bd09e37563f9f830b016337549546"
+    },
+    {
+      "id": "C-FUNCTION",
+      "title": "デマンドバスシステム連携API標準仕様書 機能一覧",
+      "url": "https://www.mlit.go.jp/commmmons/document/003/commmmons_doc_003-04_ver01.pdf",
+      "sha256": "566d7770f78fcd90a7895fe9ef6a9061ba7817bd04320594725bcae8605c3ebd"
+    },
+    {
+      "id": "C-TABLE",
+      "title": "デマンドバスシステム連携API標準仕様書 テーブル定義",
+      "url": "https://www.mlit.go.jp/commmmons/document/003/commmmons_doc_003-09_ver01.pdf",
+      "sha256": "fe4226e74f5fc3e99a64a175937035d4bbfe4a27f0a58e68a205058404af1aac"
+    },
+    {
+      "id": "GTFS4",
+      "title": "公共交通運行情報標準データ仕様 GTFS-JP 第4.0版 仕様編",
+      "url": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "version": "4.0",
+      "sha256": "42a1151a6b1a2bd5a00c4a44412293b8ef2f7068b7d66d25adf8ba94084203bb"
+    },
+    {
+      "id": "MAAS3",
+      "title": "MaaS関連データの連携に関するガイドライン Ver.3.0",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001598537.pdf",
+      "version": "3.0",
+      "sha256": "8549cfec13503b5bfd25ee5fb1de44326cf6fa4450fe8bb66e8fe5d21f56cdca"
+    },
+    {
+      "id": "MCP",
+      "title": "Model Context Protocol specification / versioning",
+      "url": "https://modelcontextprotocol.io/specification/2026-07-28",
+      "version": "2026-07-28"
+    },
+    {
+      "id": "A2A",
+      "title": "Agent2Agent Protocol Specification",
+      "url": "https://a2a-protocol.org/latest/specification/",
+      "version": "1.0.0"
+    }
+  ],
+  "unresolved_official_points": [
+    {
+      "id": "UNC-01",
+      "kind": "official_source_inconsistency",
+      "source_ids": [
+        "C-CATALOG",
+        "C-GUIDE"
+      ],
+      "finding": "公開一覧は2026-02-12、ガイダンスv1.0改訂履歴は2026-02-13。",
+      "decision": "日付を一つに丸めず両方を記録。APIファイルSHAを固定。"
+    },
+    {
+      "id": "UNC-02",
+      "kind": "schema_vs_prose",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "passengersの氏名またはカナ一組必須という本文条件がrequired/anyOfに符号化されていない。",
+      "decision": "本文条件もテストし、schemaのみ合格を完全適合と呼ばない。"
+    },
+    {
+      "id": "UNC-03",
+      "kind": "schema_vs_prose",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "no_candidate_reasonは本文では候補あり時null、schemaはnullableなしのstring enum。",
+      "decision": "候補あり時は任意fieldの省略で両立させる案。接続相手との検証を要する。"
+    },
+    {
+      "id": "UNC-04",
+      "kind": "broad_prose_vs_specific_schema",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "概要の200以外RFC9457という説明に対し、201成功・204応答の個別定義が存在する。",
+      "decision": "個別operation responseを優先する解釈を明記し、曖昧さを記録する。"
+    },
+    {
+      "id": "UNC-05",
+      "kind": "cross_document_mismatch",
+      "source_ids": [
+        "C-FUNCTION",
+        "C-API"
+      ],
+      "finding": "機能一覧の一部同意処理IF-IDがAPI原本と食い違う。API原本ではPOST同意090/GET同意100。",
+      "decision": "機械連携索引はpath/method/operationIdを主キーとし、PDFの誤記を自動補完しない。"
+    },
+    {
+      "id": "UNC-06",
+      "kind": "not_specified",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "認証方式、監査ログ項目、一般冪等キー、timeout、retry、レート制限はAPI原本に定義なし。",
+      "decision": "MDL安全・運用要件として別表化。未規定を無対策の根拠にしない。"
+    },
+    {
+      "id": "UNC-07",
+      "kind": "not_a_production_endpoint",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "servers.urlはhttp://standards.swagger.io/v1。実事業者や国交省の本番接続先ではない。",
+      "decision": "外部接続先・認証情報・連携契約を外部依存として別途取得する。"
+    },
+    {
+      "id": "UNC-08",
+      "kind": "limited_actual_scope",
+      "source_ids": [
+        "GTFS4"
+      ],
+      "finding": "GTFS-JP v4はFlex拡張を含むが、資料のGoogle対応状況は2025年12月末時点の説明。",
+      "decision": "2026年現在の特定経路検索サービス掲載可否まで保証しない。"
+    },
+    {
+      "id": "UNC-09",
+      "kind": "query_semantics_ambiguity",
+      "source_ids": [
+        "C-API"
+      ],
+      "finding": "GET /servicesとGET /stopsは条件をANDで評価と記しつつ、service_ids/stop_idsを他条件より優先すると併記する。他条件を無視する範囲は明示されていない。",
+      "decision": "複合検索の優先解釈は追加確認とし、現行AND動作を完全適合と判定しない。ID指定で入力schema検証を迂回しない。radius明示時のlocation必須は独立した本文条件として検証する。"
+    }
+  ],
+  "release_language": "COMmmmONS デマンドバス連携 API 仕様を踏まえた限定範囲を実装・ローカル試験。国交省認定・公認・全面準拠・外部本番接続済みとは表現しません。"
+}

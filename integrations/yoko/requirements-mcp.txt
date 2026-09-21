@@ -1,0 +1,3 @@
+# Optional MCP adapter and full local contract-test environment.
+-r requirements-mlit.txt
+mcp==2.2.0

@@ -1,0 +1,62 @@
+// DOM interaction tests with explicit API doubles; no rendered-browser claim.
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const path=require('node:path');
+const {randomUUID}=require('node:crypto');
+const {JSDOM}=require('jsdom');
+const root=path.resolve(__dirname,'..');
+const dom=new JSDOM(fs.readFileSync(path.join(root,'app/static/index.html'),'utf8'),{url:'https://localhost:8768',runScripts:'outside-only'});
+const w=dom.window;
+w.HTMLDialogElement.prototype.showModal=function(){this.open=true;};
+w.HTMLDialogElement.prototype.close=function(){this.open=false;};
+w.crypto.randomUUID=randomUUID;
+const calls=[],checks=[];
+w.$=id=>w.document.getElementById(id);
+w.state={user:{id:'rider-a1',role:'rider'},busy:false,pending:null};
+w.showDraft=draft=>{w.state.draft=draft;w.$('confirm-dialog').showModal();};
+w.signedOut=()=>{w.state.user=null;};
+w.savePending=()=>{};w.renderRecovery=()=>{};w.message=value=>{w.lastMessage=value;};
+let releaseApproval;
+w.api=async(url,data)=>{
+  calls.push({url,data});
+  if(url==='/api/oauth-options')return [{adapter:'mcp',resource:'https://localhost:8768/mcp',identity_id:'identity-test',clients:['approved-client']}];
+  if(url==='/api/oauth-approvals'&&data){await new Promise(resolve=>{releaseApproval=resolve;});return {approval_id:'grant-test',client_id:data.client_id,resource:'https://localhost:8768/mcp',expires_at:'2099-01-01T00:00:00Z'};}
+  if(url==='/api/oauth-approvals/revoke')return {revoked:true};
+  if(url==='/api/oauth-approvals')return [{id:'grant-test',client_id:'approved-client',expires_at:9999999999,revoked:0,operation_json:JSON.stringify({kind:'request',operation_id:'known-operation'})}];
+  throw new Error('Unexpected request');
+};
+const tick=()=>new Promise(resolve=>setTimeout(resolve,0));
+function pass(name){checks.push(name);console.log('PASS '+name);}
+(async()=>{
+  w.eval(fs.readFileSync(path.join(root,'app/static/connected.js'),'utf8'));
+  assert.equal(w.$('login-form').hidden,true);
+  assert.equal(w.$('web-entry').hidden,true);
+  assert.equal(w.document.querySelector('.login-card a').pathname,'/auth/line/start');
+  pass('HTTPS page directs login to LINE and hides test-password entry');
+  w.showDraft({id:'draft-test',kind:'request',details:{origin_stop_id:'stop-a',destination_stop_id:'stop-b',passengers:1}});
+  await tick();assert.equal(w.$('delegate-panel').hidden,false);
+  assert.match(w.$('delegate-target').textContent,/approved-client/);
+  pass('Only registered client/resource options appear after reviewing a rider draft');
+  w.$('delegate-confirm').click();w.$('delegate-confirm').click();
+  assert.equal(calls.filter(c=>c.url==='/api/oauth-approvals').length,1);
+  assert.equal(w.$('commit').disabled,true);releaseApproval();await tick();
+  const sent=calls.find(c=>c.url==='/api/oauth-approvals').data;
+  assert.equal(sent.operation.payload.draft_id,'draft-test');assert.equal(sent.expires_in,180);
+  assert.equal(w.state.pending.body.operation_id,sent.operation.operation_id);
+  assert.equal(w.state.pending.body.idempotency_key,sent.operation.idempotency_key);
+  assert.match(w.lastMessage,/まだ確認していません/);
+  pass('One approval preserves exact draft and retry keys without claiming booking completion');
+  w.$('delegate-revoke').click();await tick();
+  assert.equal(calls.at(-1).data.grant_id,'grant-test');
+  assert.match(w.$('delegate-receipt').textContent,/実行済みの予約は取り消されません/);
+  pass('Revocation explains that an executed booking needs its separate cancellation');
+  w.$('inspect-delegations').click();await tick();
+  assert.match(w.$('existing-delegations').textContent,/known-operation/);
+  pass('Recovery list shows server-retained approvals after an uncertain response');
+  w.state.pending=null;w.state.user.role='admin';w.showDraft({id:'admin-draft',kind:'payment_update',details:{}});await tick();
+  assert.equal(w.$('delegate-panel').hidden,true);
+  pass('Unsupported role and operation do not offer rider agent delegation');
+  w.signedOut();assert.equal(w.$('delegate-receipt').hidden,true);assert.equal(w.$('existing-delegations').textContent,'');
+  pass('Signing out removes previous-user approval details');
+  fs.writeFileSync(path.join(root,'artifacts/test-results/connected-ui-dom.json'),JSON.stringify({status:'PASS',checked_at:new Date().toISOString(),scope:'DOM_WITH_API_DOUBLES_NOT_RENDERED_BROWSER',checks},null,2)+'\n');
+})().catch(error=>{console.error(error);process.exitCode=1;}).finally(()=>w.close());

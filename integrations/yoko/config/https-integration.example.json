@@ -1,0 +1,12 @@
+{
+  "origin": "https://localhost:8768",
+  "line_channel_id": "REPLACE_WITH_REGISTERED_CHANNEL_ID",
+  "line_secret_env": "YOKO_LINE_CHANNEL_SECRET",
+  "oauth_issuer": "https://identity.example.invalid",
+  "oauth_discovery_url": "https://identity.example.invalid/.well-known/openid-configuration",
+  "oauth_introspection_url": "https://identity.example.invalid/oauth/introspect",
+  "oauth_client_id": "yoko-resource-server",
+  "oauth_secret_env": "YOKO_OAUTH_INTROSPECTION_SECRET",
+  "trusted_clients": ["REPLACE_WITH_PREREGISTERED_CLIENT_ID"],
+  "ca_file": null
+}

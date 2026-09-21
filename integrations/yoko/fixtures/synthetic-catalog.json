@@ -1,0 +1,27 @@
+{
+  "is_production": false,
+  "note": "全件架空の設定・座標。実際の地点、運行日、規約本文、公開フィードではない。自動投入しない。",
+  "profile": {"first_name":"試験一","last_name":"架空","email":"rider@example.invalid"},
+  "terms": {"service_id":null,"category":"platform","name":"架空テスト規約","url":"https://example.invalid/yoko/terms/v1","agreement_required":true},
+  "service": {
+    "service_id":"service-a","access_scope":"registered_user_only",
+    "start_datetime":"2026-01-01T00:00:00+09:00","end_datetime":"2099-12-31T23:59:59+09:00",
+    "cities":[],
+    "operating_hours": {
+      "monday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "tuesday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "wednesday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "thursday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "friday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "saturday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "sunday":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}],
+      "holidays":[{"start_time_offset_sec":0,"end_time_offset_sec":86400}]
+    },
+    "special_operating_hours":[],"holiday_dates":[]
+  },
+  "stops": [
+    {"stop_id":"stop-a","location":{"type":"Point","coordinates":[139.5,35.5]},"start_datetime":"2026-01-01T00:00:00+09:00","end_datetime":null,"pictures":[]},
+    {"stop_id":"stop-b","location":{"type":"Point","coordinates":[139.501,35.501]},"start_datetime":"2026-01-01T00:00:00+09:00","end_datetime":null,"pictures":[]},
+    {"stop_id":"stop-c","location":{"type":"Point","coordinates":[139.6,35.6]},"start_datetime":"2026-01-01T00:00:00+09:00","end_datetime":null,"pictures":[]}
+  ]
+}
