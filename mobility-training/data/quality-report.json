@@ -8,8 +8,8 @@
   "fields": 1879,
   "sources": 153,
   "claims": 2742,
-  "unknown_values": 982,
-  "needs_verification": 1058,
+  "unknown_values": 981,
+  "needs_verification": 1057,
   "source_links_reachable": 150,
   "source_links_need_verification": [
     {
@@ -49,12 +49,82 @@
   "ui_verification": {
     "checked_at": "2026-09-21",
     "release": "collections-20260921",
+    "ui_release_commit": "189052af34c683f62c5a0d61ce27cba880a88573",
     "url": "https://mobilitydlab.com/mobility-training/",
-    "status": "PENDING_PUBLIC_REVIEW",
-    "scope": "3区分の案内・MDL実績紹介・公式事例リンクを更新。公開版での確認結果を追記します。",
-    "checks": [],
+    "status": "PASS",
+    "scope": "公開ページの操作・目視確認。交通空白37紹介事例、人材育成61採択事業、MDL大分の実績を区別する表示を確認。",
+    "viewport": {
+      "width": 1363,
+      "height": 936
+    },
+    "responsive_check": {
+      "method": "同一オリジンの公開テストページ内のChromium iframe。実機端末ではない。",
+      "frame_widths": [
+        320,
+        390,
+        768,
+        1440
+      ],
+      "actual_viewports": [
+        305,
+        375,
+        753,
+        1425
+      ],
+      "pages": [
+        "/",
+        "/mobility-training/",
+        "/evidence/"
+      ],
+      "horizontal_overflow": false,
+      "broken_images": []
+    },
+    "checks": [
+      {
+        "check": "3つの入口",
+        "result": "交通空白37事例・モビリティ人材育成61採択・MDL大分の実績を別のカードで案内。98件の混在表示を廃止。"
+      },
+      {
+        "check": "MDL実績",
+        "result": "写真と35活動・750人以上、MDLの役割を表示。富士見が丘の10日・72人・342人回は別集計として表示。"
+      },
+      {
+        "check": "750人以上のSOURCE",
+        "result": "MDL活動集計、延べ参加人数、実証参加を含むこと、ユニーク参加者数との違いを表示。出典パネルの開閉を確認。"
+      },
+      {
+        "check": "事例検索・公式への遷移",
+        "result": "青森の交通空白事例1件を表示。事例名のクリックで国交省公式紹介を別タブで開くことを確認。"
+      },
+      {
+        "check": "人材育成への切替",
+        "result": "61/61事業と人材育成の活動フィルタを表示。交通GAPフィルタは非表示。公式個別紹介と採択一覧PDFのリンク名を区別。"
+      },
+      {
+        "check": "項目比較・MDLの整理",
+        "result": "大分の11項目の各セルにSOURCE。MDLの整理・出典ボタンで詳細と公式採択一覧へのリンクを表示。"
+      },
+      {
+        "check": "トップページ",
+        "result": "NATIONAL PROJECT DATABASEの大見出しを国交省交通空白解消プロジェクトに変更。交通37事例と人材育成61採択を別リンクで案内。"
+      },
+      {
+        "check": "MDL実績詳細ページ",
+        "result": "35/35活動、延べ750人以上、MDL活動集計と定義を確認。旧来の集計警告表記を使用しない。"
+      },
+      {
+        "check": "レイアウト",
+        "result": "Atlasのトップ・MDL写真紹介とホームの国交省プロジェクト案内を目視確認。幅別検査では横溢れ・画像欠損なし。"
+      }
+    ],
+    "static_validation": {
+      "atlas_evidence": "PASS",
+      "html_ids_and_local_image_paths": "PASS",
+      "homepage_regression": "履歴を使う既存tests/homepage.pyは参照コミット496c341がローカル履歴にないため完走できず。変更箇所は公開DOM・幅別検査で確認。"
+    },
     "limitations": [
-      "データ構造検査と画面操作の確認は別です。原典の事実・数字の追加再検証ではありません。"
+      "実機端末での検査とは異なります。",
+      "全98件の原典内容の再検証ではありません。リンクの到達・表示とデータ構造の検査を区別しています。"
     ]
   }
 }

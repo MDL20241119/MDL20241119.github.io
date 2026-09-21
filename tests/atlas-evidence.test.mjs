@@ -33,6 +33,7 @@ const oita=d.cases.find(c=>c.id==='r7-058');
 assert.equal(oita.fields.activity_count.value,35);assert.equal(oita.activities.length,35);
 assert.equal(oita.fields.participants.value,750);assert.equal(oita.fields.participants.qualifier,'at_least');assert.equal(oita.fields.participants.verification_status,'USER_REPORTED');assert.equal(oita.fields.participants.status,'IMPLEMENTED');
 assert(oita.fields.participants.source_ids.includes('mdl-oita-report'));assert(!oita.fields.participants.source_ids.includes('r7-058-s1'));
+assert.equal(oita.fields.lecture.status,'IMPLEMENTED');assert.equal(oita.fields.lecture.kind,'ANALYSIS');assert(oita.fields.lecture.source_fact.includes('専門家の講演'));
 assert.equal(oita.fields.social_implementation.value,null);assert.equal(oita.fields.social_implementation.status,'NOT_CONFIRMED');
 
 assert.deepEqual(d.collections.map(c=>c.id),['traffic','training','mdl']);
