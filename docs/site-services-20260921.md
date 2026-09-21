@@ -24,7 +24,7 @@ Separate introduction URLs: `/mobility-support/` and `/venture-support/`. Nation
 | Refutation | complete | Owner challenged overlap of 01/04; separate pages and buyer objectives. Independent review flagged ambiguous completed/ongoing wording. |
 | Execution design | complete | Root homepage, two introduction pages, shared responsive CSS, original cover plus precise live population panel. No new tracking or personal-data collection. |
 | Evidence freeze | complete | Existing 35 activities / 750+ cumulative participations retained with owner attribution; FY2026 ongoing, not a completion claim. Population corrected against official records. |
-| Audience interface | partial | HTML, links and image references checked locally; public browser review follows publication. |
+| Audience interface | complete | Local structure/link checks and public Chromium review passed for the homepage and both service pages. Separate entry points, population sources, gallery and demos were exercised. |
 | Learning | not executed | No conversion or reader-comprehension effect measured. Technical validation is not evidence of commercial effectiveness. |
 
 Independent first-pass reviews covered service clarity and population evidence. Subsequent review confirmed the scope boundary and required cautious wording for FY2026 activities.
@@ -36,3 +36,14 @@ Independent first-pass reviews covered service clarity and population evidence. 
 Correct values and source locations are in `/mobility-support/population-evidence.json` and in the visible source disclosure. 2000–2020 are census counts; 2030–2040 are IPSS 2023 projections. The 2000→2040 comparison is an MDL calculation, −23.3%, not the original graphic’s −38%.
 
 Continue if visitors can choose 01 or 04 from their purpose and reach the matching case/scope. Revise labels if people confuse program delivery with new-venture discovery. Changes remain reversible in Git.
+
+## Publication verification
+
+Release `d73547645a9aa2b7f9d7eb564393c82c23dbcf4f` passed GitHub Pages build and deployment on 2026-09-21. The public homepage and both introduction pages were reviewed in Chromium.
+
+- At iframe widths 320, 390, 768 and 1440 px (content viewports 305, 375, 753 and 1425 px), all three pages had no horizontal overflow or reported broken images. Desktop and narrow layouts were visually inspected. This is browser width testing, not physical-device testing.
+- The population panel fully covers the original incorrect values and shows the corrected census/projection series and −23.3% calculation. The source disclosure opens and contains five data rows with primary-source links.
+- The consortium gallery opens and closes its image dialog with the correct caption.
+- Homepage links reach the separate 01 and 04 service pages. The accessibility and tourism demo links reach their corresponding live applications.
+- Existing `/#yoko-elevator` opens its enclosing catalog disclosure; all 13 news items remain present. Removed heading-only anchors have no incoming references in the repository.
+- No inquiry was submitted and no business-conversion outcome is claimed.
