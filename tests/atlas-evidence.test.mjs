@@ -31,9 +31,25 @@ for(const f of [...claims,...d.headline_metrics,...d.social_issues]){
 for(const q of d.quality_issues){if(q.field_id)assert(claimIds.has(q.field_id),q.id+' dangling issue');if(q.source_id)assert(sources.has(q.source_id));}
 const oita=d.cases.find(c=>c.id==='r7-058');
 assert.equal(oita.fields.activity_count.value,35);assert.equal(oita.activities.length,35);
-assert.equal(oita.fields.participants.value,750);assert.equal(oita.fields.participants.qualifier,'at_least');assert.equal(oita.fields.participants.verification_status,'USER_REPORTED');
+assert.equal(oita.fields.participants.value,750);assert.equal(oita.fields.participants.qualifier,'at_least');assert.equal(oita.fields.participants.verification_status,'USER_REPORTED');assert.equal(oita.fields.participants.status,'IMPLEMENTED');
 assert(oita.fields.participants.source_ids.includes('mdl-oita-report'));assert(!oita.fields.participants.source_ids.includes('r7-058-s1'));
 assert.equal(oita.fields.social_implementation.value,null);assert.equal(oita.fields.social_implementation.status,'NOT_CONFIRMED');
+
+assert.deepEqual(d.collections.map(c=>c.id),['traffic','training','mdl']);
+assert.equal(d.collections.find(c=>c.id==='mdl').case_id,oita.id);assert.equal(oita.dataset,'training');
+assert.deepEqual(['operating_days','actual_users','total_rides'].map(k=>oita.fields[k].value),[10,72,342]);
+assert.equal(oita.fields.total_rides.unit,'人回');
+for(const c of d.cases){
+ const url=new URL(c.official_url);
+ assert(['kotsu-kuhaku.jp','www.mlit.go.jp'].includes(url.hostname),c.id+' non-official case link');
+ assert(sources.has(c.official_source_id),c.id+' missing official source');
+ assert(c.official_link_checked_at,c.id+' unchecked official link');
+ if(c.official_link_type==='CASE_DETAIL')assert(url.pathname.endsWith('/detail.php')&&url.searchParams.has('CN'));
+ else {assert.equal(c.official_link_type,'ADOPTION_LIST');assert(url.pathname.endsWith('/001889172.pdf'));assert(c.official_link_label.includes('PDF'));}
+}
+assert.equal(d.cases.filter(c=>c.official_link_type==='CASE_DETAIL').length,40);
+assert.equal(d.cases.filter(c=>c.dataset==='traffic'&&c.official_link_type==='CASE_DETAIL').length,37);
+
 const aomori=d.cases.find(c=>c.id==='gap-006');assert.equal(aomori.fields.activation.value,calculatePercentage(36,98));assert.equal(aomori.fields.activation.period,aomori.fields.actual_users.period);
 assert.equal(calculatePercentage(1,0),null);assert.equal(calculatePercentage(null,98),null);
 for(const [id,total] of [['r7-037',177],['r7-054',288],['r7-059',204],['r7-061',247]]){const f=d.cases.find(c=>c.id===id).fields.participants;assert.equal(f.kind,'CALCULATION');assert.equal(f.inputs.reduce((s,x)=>s+x.value,0),total);for(const input of f.inputs)assert(sources.has(input.source_id));}
@@ -53,7 +69,7 @@ assert(usedIn(d,'mdl-oita-report').some(x=>x.claim_id==='r7-058:participants'));
 assert(sourceFilter(sources.get('population-2024'),{category:'統計',dataset:'social',level:'A'}));
 assert(gapCounts(d.cases.filter(c=>c.dataset==='traffic'),d.gaps).every(g=>g.count>=0&&g.count<=37));
 const fields=d.cases.flatMap(c=>Object.values(c.fields));
-const report={version:'1.0.0',checked_at:d.updated_at,structural_checks:'PASS',cases:d.cases.length,traffic_cases:37,training_projects:61,fields:fields.length,sources:d.sources.length,claims:claims.length,unknown_values:fields.filter(f=>f.value===null).length,needs_verification:d.quality_issues.length,source_links_reachable:d.sources.filter(s=>s.link_status==='REACHABLE').length,source_links_need_verification:d.sources.filter(s=>s.url&&s.link_status!=='REACHABLE').map(s=>({id:s.id,url:s.url,status:s.http_status||s.link_status})),non_public_sources:d.sources.filter(s=>!s.url).map(s=>({id:s.id,access:s.access})),checks:['37+61母集団・固有ID','全フィールドの証拠属性と出典参照','元資料→使用項目の逆引き','未確認のnull・計画/実施の分離','35活動・750人以上の申告定義','37交通事例のURL取得','計算入力・式・単位・対象期間','8段階Graphの参照・関係種別','URL安全性・表示エスケープ','検索・GAP・計画/実施フィルタ'],limits:['人材育成61事業の全原典の内容を今回再検証したものではありません。既存の確認記録を継承しています。','構造検査PASSは全ての事実・成果の検証完了を意味しません。','750人以上は原票との突合が未了です。','リンク到達確認は内容の根拠性の確認とは別です。'],ui_verification:fs.existsSync(new URL('../mobility-training/data/ui-verification.json',import.meta.url))?JSON.parse(fs.readFileSync(new URL('../mobility-training/data/ui-verification.json',import.meta.url),'utf8')):'公開画面で別途確認'};
+const report={version:'1.0.0',checked_at:d.updated_at,structural_checks:'PASS',cases:d.cases.length,traffic_cases:37,training_projects:61,fields:fields.length,sources:d.sources.length,claims:claims.length,unknown_values:fields.filter(f=>f.value===null).length,needs_verification:d.quality_issues.length,source_links_reachable:d.sources.filter(s=>s.link_status==='REACHABLE').length,source_links_need_verification:d.sources.filter(s=>s.url&&s.link_status!=='REACHABLE').map(s=>({id:s.id,url:s.url,status:s.http_status||s.link_status})),non_public_sources:d.sources.filter(s=>!s.url).map(s=>({id:s.id,access:s.access})),checks:['37+61母集団・固有ID','全フィールドの証拠属性と出典参照','元資料→使用項目の逆引き','未確認のnull・計画/実施の分離','35活動・750人以上のMDL活動集計と定義','37交通事例のURL取得','計算入力・式・単位・対象期間','8段階Graphの参照・関係種別','URL安全性・表示エスケープ','検索・GAP・計画/実施フィルタ'],limits:['人材育成61事業の全原典の内容を今回再検証したものではありません。既存の確認記録を継承しています。','構造検査PASSは全ての事実・成果の検証完了を意味しません。','750人以上はMDL活動集計による延べ参加人数です。実証参加を含み、ユニーク参加者数とは区別します。','リンク到達確認は内容の根拠性の確認とは別です。'],ui_verification:fs.existsSync(new URL('../mobility-training/data/ui-verification.json',import.meta.url))?JSON.parse(fs.readFileSync(new URL('../mobility-training/data/ui-verification.json',import.meta.url),'utf8')):'公開画面で別途確認'};
 fs.writeFileSync(new URL('../mobility-training/data/quality-report.json',import.meta.url),JSON.stringify(report,null,2)+'\n');
 console.log(JSON.stringify(report,null,2));
 

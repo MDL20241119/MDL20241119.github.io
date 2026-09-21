@@ -8,7 +8,7 @@
     "region": "大分県大分市・別府市",
     "implementingBody": "トヨタカローラ大分株式会社",
     "mdlRole": "企画・運営支援、議論の進行、実証設計・仕組みづくり等",
-    "nationalDatabaseUrl": "/mobility-training/?project=r7-058"
+    "nationalDatabaseUrl": "https://www.mlit.go.jp/report/press/content/001889172.pdf#page=6"
   },
   "methodology": {
     "unit": "原表に記載された活動項目",
@@ -20,7 +20,7 @@
       "日付の空欄や年の不整合は補正せず、確認状況を表示しています。",
       "活動の種類は閲覧のための編集分類です。単一の工程に限定する評価ではありません。",
       "事業側の報告・記録に基づきます。第三者による独立した成果評価ではありません。",
-      "750+はMDLから提示された延べ参加人数です。原資料との集計範囲・重複条件の突合は継続中で、実人数や比較可能な統一指標ではありません。"
+      "750人以上はMDLの活動集計。実証参加を含む延べ参加人数で、同じ人の複数回参加を含みます。"
     ]
   },
   "metrics": [
@@ -47,15 +47,14 @@
       "label": "PARTICIPATIONS",
       "title": "延べ参加人数",
       "unit": "人以上",
-      "definition": "35の社会実装活動への延べ参加人数として、2026年9月21日にMDLから提示された集計値。",
+      "definition": "MDL活動集計。講義・協議・フィールドワーク・実証参加等を含む延べ参加人数。同じ人の複数回参加を含み、ユニーク参加者数とは区別しています。",
       "sourceIds": [
         "mdl-participations"
       ],
-      "limitation": "実人数ではありません。元資料との集計範囲・重複条件の突合は継続中です。全国比較DBの他事業と同一基準の人数とは扱いません。",
+      "limitation": "同じ人の複数回参加を含む延べ人数です。ユニーク参加者数や延べ乗車人回とは区別します。",
       "period": "2025年度の35の社会実装活動",
-      "verification": "MDL申告集計値（原資料との突合は継続中）",
-      "verificationStatus": "user_reported",
-      "reconciliationStatus": "pending"
+      "verification": "MDL活動集計（事業側の公表値）",
+      "verificationStatus": "user_reported"
     },
     {
       "id": "days",
@@ -940,10 +939,10 @@
       "id": "mdl-participations",
       "title": "MDL集計：35の社会実装活動における延べ参加人数",
       "publisher": "株式会社モビリティデザインラボ",
-      "type": "MDLからの申告集計値",
-      "url": null,
+      "type": "MDL活動実績報告",
+      "url": "https://mobilitydlab.com/evidence/#actions",
       "locator": "2026年9月21日提示「35回の社会実装活動に、延べ750人以上が参加」",
-      "access": "今回の公開にあたりMDLが提示。原資料との集計範囲・重複条件の突合は継続中。",
+      "access": "MDLの事業記録に基づく公表値。実証参加を含む延べ人数として掲載。",
       "checkedAt": "2026-09-21",
       "sourceGrade": "direct_user_assertion",
       "verification": "user_reported"

@@ -1,6 +1,6 @@
 export const kinds={FACT:'資料で確認した事実',CALCULATION:'本サイトの計算',ANALYSIS:'MDLの分析・分類',HYPOTHESIS:'検証前の仮説'};
 export const statuses={IMPLEMENTED:'実施確認',PLANNED:'計画確認',NOT_CONFIRMED:'未確認',NOT_IMPLEMENTED:'未実施確認',NOT_APPLICABLE:'対象外'};
-export const verificationLabels={VERIFIED:'資料確認',PREVIOUSLY_REVIEWED:'既存の確認記録',NEEDS_VERIFICATION:'要確認',USER_REPORTED:'MDL申告・未突合',NOT_CONFIRMED:'未確認'};
+export const verificationLabels={VERIFIED:'資料確認',PREVIOUSLY_REVIEWED:'既存の確認記録',NEEDS_VERIFICATION:'要確認',USER_REPORTED:'MDL活動集計',NOT_CONFIRMED:'未確認'};
 export const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const safeURL=v=>{if(typeof v!=='string'||!v.trim())return null;try{const u=new URL(v,typeof location==='object'?location.href:'https://mobilitydlab.com/mobility-training/');return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}};
 export const norm=v=>String(v??'').normalize('NFKC').toLocaleLowerCase('ja');

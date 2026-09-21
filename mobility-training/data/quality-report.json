@@ -5,12 +5,12 @@
   "cases": 98,
   "traffic_cases": 37,
   "training_projects": 61,
-  "fields": 1876,
+  "fields": 1879,
   "sources": 153,
-  "claims": 2739,
+  "claims": 2742,
   "unknown_values": 982,
-  "needs_verification": 1061,
-  "source_links_reachable": 149,
+  "needs_verification": 1058,
+  "source_links_reachable": 150,
   "source_links_need_verification": [
     {
       "id": "r7-009-s2",
@@ -24,10 +24,6 @@
       "access": "LOCAL_RESEARCH"
     },
     {
-      "id": "mdl-oita-report",
-      "access": "INTERNAL_DECLARATION"
-    },
-    {
       "id": "oita-register",
       "access": "INTERNAL_ORIGINAL"
     }
@@ -37,7 +33,7 @@
     "全フィールドの証拠属性と出典参照",
     "元資料→使用項目の逆引き",
     "未確認のnull・計画/実施の分離",
-    "35活動・750人以上の申告定義",
+    "35活動・750人以上のMDL活動集計と定義",
     "37交通事例のURL取得",
     "計算入力・式・単位・対象期間",
     "8段階Graphの参照・関係種別",
@@ -47,66 +43,18 @@
   "limits": [
     "人材育成61事業の全原典の内容を今回再検証したものではありません。既存の確認記録を継承しています。",
     "構造検査PASSは全ての事実・成果の検証完了を意味しません。",
-    "750人以上は原票との突合が未了です。",
+    "750人以上はMDL活動集計による延べ参加人数です。実証参加を含み、ユニーク参加者数とは区別します。",
     "リンク到達確認は内容の根拠性の確認とは別です。"
   ],
   "ui_verification": {
     "checked_at": "2026-09-21",
-    "release_commit": "a4fecef10e2b3267381c0651118fd08c761d2153",
+    "release": "collections-20260921",
     "url": "https://mobilitydlab.com/mobility-training/",
-    "status": "PASS",
-    "scope": "公開ページのデスクトップ操作・目視確認。全98件のデータ構造検査とは別。",
-    "viewport": {
-      "width": 1363,
-      "height": 936
-    },
-    "data_sha256": "282bc2908c44b27ce8b9b900c8cb40a7908b7ceda047570d36f75f9465b5e26b",
-    "checks": [
-      {
-        "check": "トップ指標",
-        "result": "37交通事例・61人材育成・35活動・750人以上を表示。全指標にSOURCE。"
-      },
-      {
-        "check": "750人以上のSOURCE",
-        "result": "延べ人数、MDL申告、原票未突合、実人数ではないことを表示。"
-      },
-      {
-        "check": "事例検索・データセット",
-        "result": "青森キーワードと交通空白選択で該当交通事例1件。"
-      },
-      {
-        "check": "計算の出典",
-        "result": "青森市36.7%から36人・98人の入力項目と同一期間・式を表示。"
-      },
-      {
-        "check": "Source Library",
-        "result": "AIデマンドで3資料を表示。USED INから青森市のPLACE GAP根拠へ移動。"
-      },
-      {
-        "check": "活動確認状態",
-        "result": "計画確認のみ22件。PBLと計画確認11件。独立したモデル計算と一致。"
-      },
-      {
-        "check": "項目比較",
-        "result": "人材育成11項目、11事例121セルにSOURCEを表示。表内に横スクロールを保持。"
-      },
-      {
-        "check": "Evidence Graph",
-        "result": "大分の8段階7関係を表示。分析・仮説・未確認を区別。"
-      },
-      {
-        "check": "大分の旧リンク",
-        "result": "#r7-058で詳細を開き35活動・750人以上を表示。閉じると旧ハッシュを除去。"
-      },
-      {
-        "check": "レイアウト",
-        "result": "トップと詳細を目視確認。1363px幅でページ全体の横溢れなし。"
-      }
-    ],
+    "status": "PENDING_PUBLIC_REVIEW",
+    "scope": "3区分の案内・MDL実績紹介・公式事例リンクを更新。公開版での確認結果を追記します。",
+    "checks": [],
     "limitations": [
-      "モバイル実機は今回の確認対象外。レスポンシブCSSを実装し静的確認。",
-      "CSV保存ファイルのブラウザーによる内容照合は未実施。",
-      "原典の事実・数字の追加再検証ではありません。"
+      "データ構造検査と画面操作の確認は別です。原典の事実・数字の追加再検証ではありません。"
     ]
   }
 }

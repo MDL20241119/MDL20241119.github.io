@@ -83,5 +83,6 @@
   "numeric_policy": "未確認はnull。延べ・実人数・登録・乗車人回・便数・定員を区別。異なる期間・単位は合算・順位付けしない。",
   "graph_policy": "SOURCE_CONFIRMED（資料に関係が明記）/ MDL_ANALYSIS（分析上の接続）/ HYPOTHESIS（検証する提案）。未確認の因果関係を事実の矢印にしない。",
   "update_owner": "MDL データ編集",
-  "review_rule": "出典・値・定義変更時は対象claim_id、変更前後、理由、確認日をupdate_logへ追記。"
+  "review_rule": "出典・値・定義変更時は対象claim_id、変更前後、理由、確認日をupdate_logへ追記。",
+  "mdl_reporting": "MDLの実績は事業側の活動記録・実証結果報告に基づく公表値。情報の集計主体と、延べ人数・実人数・乗車人回の定義を示す。国の採択件数とMDLの実績件数は合算しない。"
 }
