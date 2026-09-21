@@ -15,7 +15,7 @@
   };
 
   async function start() {
-    const response = await fetch('./data.json');
+    const response = await fetch('./data.json', {cache:'no-cache'});
     if (!response.ok) throw new Error('Evidence data unavailable');
     const data = await response.json();
     if (!Array.isArray(data.activities) || data.activities.length !== 35) throw new Error('Invalid activity data');
