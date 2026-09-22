@@ -38,7 +38,10 @@ complete production conformance.
 
 ### Atlas 2.0 — 2026-09-22
 
-- `/oita-mobility/`: PEOPLE finds timetable-based round-trip candidates using
+- `/oita-mobility/`: PEOPLE starts with current location or one of 18 municipalities.
+  The selected area reveals its map above the origin, destination and time form; an
+  explicit checkbox includes destinations in other municipalities. City selection
+  passes to ATLAS as a coarse municipality code. PEOPLE finds timetable-based round-trip candidates using
   origin, destination, activity time, dwell time and return deadline. Walking
   and transfers reuse the existing accessibility engine. Thirty/sixty-minute
   opportunity counts distinguish missing evidence from zero candidates.
