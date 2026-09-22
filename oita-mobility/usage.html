@@ -17,7 +17,7 @@
   <nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a></nav>
 </header>
 <main id="main">
-  <div class="usage-heading"><span class="usage-kicker">PUBLIC DEMO GUIDE</span><h1>安心して試すために。</h1><p>このデモでわかることと、データを扱うときの約束。</p><small>対象：大分 交通データ 公開デモ（/oita-mobility/） · 更新：2026年9月9日</small></div>
+  <div class="usage-heading"><span class="usage-kicker">PUBLIC DEMO GUIDE</span><h1>安心して試すために。</h1><p>このデモでわかることと、データを扱うときの約束。</p><small>対象：大分モビリティ・アトラス（/oita-mobility/） · 更新：2026年9月22日</small></div>
   <div class="usage-cards">
     <a class="usage-card blue" href="#demo"><span>01 · 結果の見方</span><h2>検討の入口に使う</h2><p>実績・推計・仮定と、まだ確認できていないことを確かめます。</p><b>デモの範囲を見る →</b></a>
     <a class="usage-card teal" href="#privacy"><span>02 · 入力と共有</span><h2>公開できる情報で試す</h2><p>氏名や個人の移動履歴、非公開の費用は、この公開デモに入力しないでください。</p><b>保存・共有の扱いを見る →</b></a>
@@ -43,6 +43,9 @@
       <tr><th scope="row">サイトを開く</th><td>GitHub Pagesへページ・データのリクエストを送ります。GitHubはセキュリティ目的で訪問者のIPアドレスを記録します。<a href="https://docs.github.com/en/pages/getting-started-with-github-pages/what-is-github-pages#data-collection">GitHubの説明</a> / <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement">プライバシー声明</a></td></tr>
       <tr><th scope="row">背景地図を表示</th><td>国土地理院（cyberjapandata.gsi.go.jp）に、表示範囲を表すタイル座標を送ります。接続元IP等も通信に伴います。<a href="https://www.gsi.go.jp/GSI/puraibasi-porisi.htm">国土地理院のプライバシーポリシー</a></td></tr>
       <tr><th scope="row">入力・ファイル読込</th><td>この画面内のメモリーで処理します。自動アップロードは行いません。外部の出典リンクを開く場合は、そのリンク先への通信が発生します。</td></tr>
+      <tr><th scope="row">PEOPLEの「現在地を使う」</th><td>許可した場合だけ現在地を取得し、往復計算のため画面内で利用します。精密な位置を検索記録へ保存・自動送信しません。地図を表示すると、上記のタイル通信が発生します。</td></tr>
+      <tr><th scope="row">PEOPLEの検索記録・移動の申告</th><td>結果画面で記録ボタンを押したときだけ、出発市町村・目的の種類・希望時間帯・判定・記録区分・記録月を、この端末のlocalStorageに最大5,000件保存します。氏名、ID、精密な位置、施設名、正確な日時は含めません。自動送信や県全体の集計は行いません。削除はATLASの「この端末の記録を削除」から行えます。検索件数・本人申告件数は実人数と異なり、重複や未回答を含みます。共有CSVには同一条件5件以上の集計のみ含めますが、匿名性を保証するものではありません。</td></tr>
+      <tr><th scope="row">ATLASからLABへ条件を引き継ぐ</th><td>選んだ市町村・施設・日時・徒歩等の条件、公表区域の代表点と人口、計算結果を同じタブのsessionStorageに一時保存します。画面の移動後も比較の基準として利用し、タブを閉じると破棄されます。自宅の精密な位置やPEOPLEの検索記録を引き継ぐものではありません。</td></tr>
       <tr><th scope="row">「自治体の条件を保存」</th><td>条件の名前・根拠・数値等を、同じブラウザーのlocalStorageに保存します。ページを閉じても残ります。削除するには、ブラウザー設定でmobilitydlab.comのサイトデータを消去してください。同じドメインの他の保存設定も消える場合があります。共用端末での保存には注意してください。</td></tr>
       <tr><th scope="row">目的地の「条件を共有」</th><td>目的地の種類と自治体だけをURLに含めます。検索語、出発地、地区の声、調査記録は含めません。</td></tr>
       <tr><th scope="row">交通空白の「条件を共有」</th><td>自治体・日付・距離・便数・選択した目的地等をURLの末尾に含めます。条件名、自由記述の根拠、追加した輸送資源は含めません。URLを受け取った人は条件を読めます。文字の変換は暗号化ではありません。</td></tr>

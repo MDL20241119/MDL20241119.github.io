@@ -36,6 +36,44 @@ complete production conformance.
 
 ## Oita mobility atlas
 
+### Atlas 2.0 — 2026-09-22
+
+- `/oita-mobility/`: PEOPLE finds timetable-based round-trip candidates using
+  origin, destination, activity time, dwell time and return deadline. Walking
+  and transfers reuse the existing accessibility engine. Thirty/sixty-minute
+  opportunity counts distinguish missing evidence from zero candidates.
+- `/oita-mobility/atlas.html`: ATLAS compares populated 1km representative
+  points under one explicit facility/time/profile. The denominator is the
+  bundled 2020 population with known values, including unknown-access cells;
+  these figures are not actual passengers or confirmed mobility deprivation.
+- `/oita-mobility/policy.html`: LAB inherits the baseline in sessionStorage,
+  recalculates bus changes, and labels other interventions as user assumptions.
+  Unknown-before/after cells do not count as measured population gains. Cost
+  per net candidate person-year is absent for missing costs or nonpositive gains.
+- `/oita-mobility/analysis.html` retains the previous analysis homepage. Older
+  map/ridership/cost anchors redirect here. Existing detailed tools stay available.
+
+The new worker admits only GTFS feeds with known validity for the selected day.
+Excluded/expired feeds remain in result evidence. Timetable candidates are not
+confirmed journeys: fares, real-time disruptions, rail, facility acceptance,
+walking routes, vehicle capacity and unknown accessibility need confirmation.
+No invented live location, price or guaranteed last-return time is displayed.
+
+Demand records are optional and device-local, capped at 5,000. Search records
+and self-reported outcomes are separate; coordinates, facility names, exact
+dates, identities and free text are never stored in these records. Shared CSV
+aggregates require at least five identical records. This is not a prefecture-wide
+collection backend or a legal anonymity guarantee. See `usage.html`.
+
+Targeted regression checks:
+
+```sh
+node --test tests/atlas-v2.test.mjs tests/accessibility.test.mjs tests/planning.test.mjs tests/gaps.test.mjs
+```
+
+`tests/atlas-v2-responsive.html` is a noindex iframe harness for 320/390/768/1440
+CSS-pixel layouts. It does not claim real-device Safari, GPS or live-operations validation.
+
 The complete static application is published at `/oita-mobility/`. It includes destinations, municipal transport-gap conditions, local transport resources, timetable planning and conditional analysis. The company homepage links to the tool from NEWS.
 
 All application files and datasets are committed in this repository. GitHub Pages publishes `main` at the root; `.nojekyll` keeps the static output unchanged. No build step or application backend is needed. Do not commit secrets or restricted input data. Background maps are requested from the Geospatial Information Authority of Japan; GitHub Pages hosts the application and its bundled datasets.
