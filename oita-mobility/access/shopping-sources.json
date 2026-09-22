@@ -1,0 +1,1979 @@
+{
+  "checkedAt": "2026-09-22",
+  "scope": "公式店舗案内で確認した収録範囲。県内全店ではありません。",
+  "positionMethod": "公式店舗案内の地図マーカーまたは地図中心。入口・歩道は未確認。",
+  "records": [
+    {
+      "id": "shopping-sunlive-00",
+      "category": "shopping",
+      "name": "リブホール川崎店",
+      "address": "大分県速見郡日出町大字川崎字新田837-1",
+      "city": "日出町",
+      "openingHours": "9:00 ～ 20:00",
+      "parking": "102台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/lw_kawasaki/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.36782885,131.5437806; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.36782885,
+      "lon": 131.5437806,
+      "url": "https://www.sunlive.co.jp/shop/lw_kawasaki/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-01",
+      "category": "shopping",
+      "name": "マルショク豊岡店",
+      "address": "大分県速見郡日出町豊岡字神上3310",
+      "city": "日出町",
+      "openingHours": "9:30 ～ 20:00",
+      "parking": "33台",
+      "accessibilityReported": [
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e8%b1%8a%e5%b2%a1%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.36331276,131.5016699; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.36331276,
+      "lon": 131.5016699,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e8%b1%8a%e5%b2%a1%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-02",
+      "category": "shopping",
+      "name": "マルショク大学通り店",
+      "address": "大分県別府市上人西町4組の1",
+      "city": "別府市",
+      "openingHours": "9:00 ～ 21:00",
+      "parking": "56台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "段差のない出入り口"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e5%a4%a7%e5%ad%a6%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.31274614,131.4932773; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.31274614,
+      "lon": 131.4932773,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e5%a4%a7%e5%ad%a6%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-03",
+      "category": "shopping",
+      "name": "マルショク鶴高通り店",
+      "address": "大分県別府市石垣西8-5-23",
+      "city": "別府市",
+      "openingHours": "9:00 ～ 21:00",
+      "parking": "47台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%b6%b4%e9%ab%98%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.301874,131.491177; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.301874,
+      "lon": 131.491177,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%b6%b4%e9%ab%98%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-04",
+      "category": "shopping",
+      "name": "マルショクやまなみ店",
+      "address": "大分県別府市大字鶴見字砂原130-1",
+      "city": "別府市",
+      "openingHours": "食品 9：00～22：00 衣料 9：00～21：00",
+      "parking": "149台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e3%82%84%e3%81%be%e3%81%aa%e3%81%bf%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.31374584,131.4797401; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.31374584,
+      "lon": 131.4797401,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e3%82%84%e3%81%be%e3%81%aa%e3%81%bf%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-05",
+      "category": "shopping",
+      "name": "マルショク関の江店",
+      "address": "大分県別府市内竃北新田25-1",
+      "city": "別府市",
+      "openingHours": "［食 品］9:00 ～ 22:00 ［衣料品］9:00 ～ 21:00",
+      "parking": "179台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "段差のない出入り口"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%96%a2%e3%81%ae%e6%b1%9f%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.340895,131.492738; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.340895,
+      "lon": 131.492738,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%96%a2%e3%81%ae%e6%b1%9f%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-06",
+      "category": "shopping",
+      "name": "マルショク流川通り店",
+      "address": "大分県別府市楠町4-10",
+      "city": "別府市",
+      "openingHours": "9:00 ～ 22:00",
+      "parking": "61台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%b5%81%e5%b7%9d%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.275952,131.503885; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.275952,
+      "lon": 131.503885,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%b5%81%e5%b7%9d%e9%80%9a%e3%82%8a%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-07",
+      "category": "shopping",
+      "name": "マルショク浜脇店",
+      "address": "大分県別府市浜脇2-2-6",
+      "city": "別府市",
+      "openingHours": "9:00 ～ 19:00",
+      "parking": "16台",
+      "accessibilityReported": [
+        "介助犬同伴可",
+        "段差のない出入り口"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%b5%9c%e8%84%87%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.26982016,131.5075815; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.26982016,
+      "lon": 131.5075815,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%b5%9c%e8%84%87%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-08",
+      "category": "shopping",
+      "name": "マルショク餅ケ浜店",
+      "address": "大分県別府市餅ケ浜町7-10",
+      "city": "別府市",
+      "openingHours": "食品 9：00～22：00 衣料 9：00～21：00",
+      "parking": "93台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%a4%85%e3%82%b1%e6%b5%9c%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.29232385,131.502378; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.29232385,
+      "lon": 131.502378,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%a4%85%e3%82%b1%e6%b5%9c%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-09",
+      "category": "shopping",
+      "name": "サンリブ明野",
+      "address": "大分県大分市明野北5-15-16",
+      "city": "大分市",
+      "openingHours": "［1F］9：00～21：00 ［2F］9：00～20：00",
+      "parking": "231台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%82%b5%e3%83%b3%e3%83%aa%e3%83%96%e6%98%8e%e9%87%8e/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.23118533,131.6604137; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.23118533,
+      "lon": 131.6604137,
+      "url": "https://www.sunlive.co.jp/shop/%e3%82%b5%e3%83%b3%e3%83%aa%e3%83%96%e6%98%8e%e9%87%8e/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-10",
+      "category": "shopping",
+      "name": "リブホール大在店",
+      "address": "大分県大分市大字城原尾崎2551-3",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 20:00",
+      "parking": "70台",
+      "accessibilityReported": [
+        "介助犬同伴可",
+        "段差のない出入り口"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/lw_ohzai/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.239926,131.724465; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.239926,
+      "lon": 131.724465,
+      "url": "https://www.sunlive.co.jp/shop/lw_ohzai/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-11",
+      "category": "shopping",
+      "name": "マルショク高城店",
+      "address": "大分県大分市高城本町7-10",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 22:00",
+      "parking": "103台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%ab%98%e5%9f%8e%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.24386511,131.6547167; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.24386511,
+      "lon": 131.6547167,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e9%ab%98%e5%9f%8e%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-12",
+      "category": "shopping",
+      "name": "マルショク東大道店",
+      "address": "大分県大分市東大道1-12-17",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 22:00",
+      "parking": "93台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%9d%b1%e5%a4%a7%e9%81%93%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.23073212,131.6020596; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.23073212,
+      "lon": 131.6020596,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e6%9d%b1%e5%a4%a7%e9%81%93%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-13",
+      "category": "shopping",
+      "name": "リブホール鶴崎店",
+      "address": "大分県大分市中鶴崎2-4-21",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 21:00",
+      "parking": "53台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/lw_turusaki/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.240399,131.692185; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.240399,
+      "lon": 131.692185,
+      "url": "https://www.sunlive.co.jp/shop/lw_turusaki/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-14",
+      "category": "shopping",
+      "name": "マルショク舞鶴店",
+      "address": "大分市舞鶴町2-1-5",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 22:00",
+      "parking": "36台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e8%88%9e%e9%b6%b4%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.24100716,131.6159347; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.24100716,
+      "lon": 131.6159347,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e8%88%9e%e9%b6%b4%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-15",
+      "category": "shopping",
+      "name": "サンリブわさだ",
+      "address": "大分県大分市大字木上2059",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 21:45",
+      "parking": "602台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%82%b5%e3%83%b3%e3%83%aa%e3%83%96%e3%82%8f%e3%81%95%e3%81%a0/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.18579946,131.5699053; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.18579946,
+      "lon": 131.5699053,
+      "url": "https://www.sunlive.co.jp/shop/%e3%82%b5%e3%83%b3%e3%83%aa%e3%83%96%e3%82%8f%e3%81%95%e3%81%a0/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-16",
+      "category": "shopping",
+      "name": "サンリブBUONO（ブオノ）萩原",
+      "address": "大分県大分市萩原2-3-29",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 20:00",
+      "parking": "287台",
+      "accessibilityReported": [
+        "車椅子貸し出し",
+        "身障者専用駐車場",
+        "介助犬同伴可"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/s-b-hagiwara/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.248825,131.638761; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.248825,
+      "lon": 131.638761,
+      "url": "https://www.sunlive.co.jp/shop/s-b-hagiwara/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-sunlive-17",
+      "category": "shopping",
+      "name": "マルショク坂ノ市店",
+      "address": "大分県大分市坂ノ市南1-13-5",
+      "city": "大分市",
+      "openingHours": "9:00 ～ 21:00",
+      "parking": "85台",
+      "accessibilityReported": [
+        "介助犬同伴可",
+        "段差のない出入り口"
+      ],
+      "sourceUrl": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e5%9d%82%e3%83%8e%e5%b8%82%e5%ba%97/",
+      "sourceName": "サンリブグループ 公式店舗ページ",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official iframe maps/embed/v1/view center=33.230557,131.750182; no marker coordinates supplied",
+      "checkedAt": "2026-09-08",
+      "lat": 33.230557,
+      "lon": 131.750182,
+      "url": "https://www.sunlive.co.jp/shop/%e3%83%9e%e3%83%ab%e3%82%b7%e3%83%a7%e3%82%af%e5%9d%82%e3%83%8e%e5%b8%82%e5%ba%97/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-aeon-hita",
+      "category": "shopping",
+      "name": "イオン日田店",
+      "address": "大分県日田市南元町14-22",
+      "city": "日田市",
+      "openingHours": "月〜日 1階 9:00〜22:00、2階 9:00〜21:00",
+      "parking": null,
+      "accessibilityReported": [],
+      "sourceUrl": "https://tenpo.aeon-kyushu.info/detail/hita/",
+      "sourceName": "イオン九州 公式店舗ページ",
+      "coordinatePrecision": "official_store_geocoordinates",
+      "needsCoordinateConfirmation": false,
+      "coordinateEvidence": "Official Store JSON-LD geo GeoCoordinates; corroborated by page __NEXT_DATA__ location.latlng",
+      "checkedAt": "2026-09-08",
+      "lat": 33.3153013,
+      "lon": 130.9391676,
+      "url": "https://tenpo.aeon-kyushu.info/detail/hita/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-big-hita",
+      "category": "shopping",
+      "name": "ザ・ビッグ日田店",
+      "address": "大分県日田市庄手６６１−１",
+      "city": "日田市",
+      "openingHours": "月〜日 9:00〜22:00",
+      "parking": null,
+      "accessibilityReported": [],
+      "sourceUrl": "https://tenpo.aeon-kyushu.info/detail/big-hita/",
+      "sourceName": "イオン九州 公式店舗ページ",
+      "coordinatePrecision": "official_store_geocoordinates",
+      "needsCoordinateConfirmation": false,
+      "coordinateEvidence": "Official Store JSON-LD geo GeoCoordinates; corroborated by page __NEXT_DATA__ location.latlng",
+      "checkedAt": "2026-09-08",
+      "lat": 33.3129303,
+      "lon": 130.9221988,
+      "url": "https://tenpo.aeon-kyushu.info/detail/big-hita/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-shinsen-tomoda",
+      "category": "shopping",
+      "name": "新鮮市場 友田店",
+      "address": "大分県日田市大字友田802-1",
+      "city": "日田市",
+      "openingHours": "10:00 ～ 20:00",
+      "parking": null,
+      "accessibilityReported": [
+        "多目的トイレ"
+      ],
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-59",
+      "sourceName": "新鮮市場 公式店舗一覧",
+      "coordinatePrecision": "official_map_center",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official Google Maps link ll=33.324262,130.910918 with cid=7963428260522225515; ll is a map center, not an explicit place point",
+      "checkedAt": "2026-09-08",
+      "lat": 33.324262,
+      "lon": 130.910918,
+      "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-59",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-acoop-kusu",
+      "category": "shopping",
+      "name": "JAファーマーズ Aコープくす店",
+      "address": "大分県玖珠郡玖珠町大字塚脇六十六間651番地",
+      "city": "玖珠町",
+      "openingHours": "9:30〜20:00",
+      "parking": "160台",
+      "accessibilityReported": [],
+      "sourceUrl": "https://www.acoop-kyushu.jp/store/archives/4",
+      "sourceName": "Aコープ九州 公式店舗ページ",
+      "coordinatePrecision": "official_map_viewport",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official Google Maps iframe pb viewport !2d131.15974394530508!3d33.27330346695156; place identifier is present but no explicit marker point",
+      "checkedAt": "2026-09-08",
+      "lat": 33.27330346695156,
+      "lon": 131.15974394530508,
+      "url": "https://www.acoop-kyushu.jp/store/archives/4",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "shopping-hirose-kusu",
+      "category": "shopping",
+      "name": "HIヒロセ スーパーコンボ玖珠店",
+      "address": "大分県玖珠郡玖珠町大字山田字門出329番1",
+      "city": "玖珠町",
+      "openingHours": "9:00〜20:00",
+      "parking": null,
+      "accessibilityReported": [],
+      "sourceUrl": "https://www.hihirose.com/shoplist/shop/storecode4/",
+      "sourceName": "HIヒロセ 公式店舗ページ",
+      "coordinatePrecision": "official_map_viewport",
+      "needsCoordinateConfirmation": true,
+      "coordinateEvidence": "Official Google Maps iframe pb viewport !2d131.14670301580003!3d33.27621888082413; place identifier is present but no explicit marker point",
+      "checkedAt": "2026-09-08",
+      "lat": 33.27621888082413,
+      "lon": 131.14670301580003,
+      "url": "https://www.hihirose.com/shoplist/shop/storecode4/",
+      "source": "各店舗の公式案内"
+    },
+    {
+      "id": "marumiya-shop-135",
+      "name": "マルミヤストア 蛎瀬店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県中津市大字蛎瀬字龍頭860-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E8%9B%8E%E7%80%AC%E5%BA%97/@33.6022075,131.2072809,17z/data=!3m1!4b1!4m2!3m1!1s0x14e3d9ee42a69823:0xd9b87d506d66d04b",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-135"
+    },
+    {
+      "id": "marumiya-shop-137",
+      "name": "マルミヤストア 安心院店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県宇佐市安心院町下毛2118\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:30",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92872-0521+%E5%A4%A7%E5%88%86%E7%9C%8C%E5%AE%87%E4%BD%90%E5%B8%82%E5%AE%89%E5%BF%83%E9%99%A2%E7%94%BA%E4%B8%8B%E6%AF%9B%EF%BC%92%EF%BC%91%EF%BC%91%EF%BC%98/@33.4389837,131.3549544,17z/data=!4m16!1m9!3m8!1s0x3544016721f4a02d:0x3f999dd98a28a315!2z44CSODcyLTA1MjEg5aSn5YiG55yM5a6H5L2Q5biC5a6J5b-D6Zmi55S65LiL5q-b77yS77yR77yR77yY!3b1!8m2!3d33.4385628!4d131.3548984!10e5!16s%2Fg%2F11clp3m3g7!3m5!1s0x3544016721f4a02d:0x3f999dd98a28a315!8m2!3d33.4385628!4d131.3548984!16s%2Fg%2F11clp3m3g7?entry=ttu",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-137"
+    },
+    {
+      "id": "marumiya-shop-139",
+      "name": "マルミヤストア 院内店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県宇佐市院内町大字副1139-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                19:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E9%99%A2%E5%86%85%E5%BA%97/@33.4275743,131.3196617,17z/data=!3m1!4b1!4m6!3m5!1s0x354401ad162c3e4d:0xffe029901624857f!8m2!3d33.4275743!4d131.3222366!16s%2Fg%2F1tcxs0n2?entry=ttu",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-139"
+    },
+    {
+      "id": "marumiya-shop-118",
+      "name": "マルミヤストア 日田店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県日田市大字渡里字大道町53-5\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%EF%BC%88%E6%A0%AA%EF%BC%89%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E6%97%A5%E7%94%B0%E5%BA%97/@33.334442,130.9360689,17z/data=!3m1!4b1!4m2!3m1!1s0x3541698ccbf6c80f:0x6aea5ddefdafaeee",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-118"
+    },
+    {
+      "id": "marumiya-shop-120",
+      "name": "マルミヤストア 竹田店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県竹田市大字拝田原731\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E7%AB%B9%E7%94%B0%E5%BA%97/@32.955899,131.3722086,17z/data=!3m1!4b1!4m2!3m1!1s0x3546ce6f10786415:0x7d37a93f2028e4e0",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-120"
+    },
+    {
+      "id": "marumiya-shop-132",
+      "name": "マルミヤストア 湯布院店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県由布市湯布院町川上3090-8\n                                                                                                    (Google map)",
+      "openingHours": "10:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E6%B9%AF%E5%B8%83%E9%99%A2%E5%BA%97/@33.2671378,131.3563835,17z/data=!3m1!4b1!4m6!3m5!1s0x3546add5d6647d51:0xa9a2f8f3d03d1c16!8m2!3d33.2671333!4d131.3589584!16s%2Fg%2F11bwq4yztk?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-132"
+    },
+    {
+      "id": "marumiya-shop-108",
+      "name": "マルミヤストア 庄内店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県由布市庄内町大龍1660-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92879-5413+%E5%A4%A7%E5%88%86%E7%9C%8C%E7%94%B1%E5%B8%83%E5%B8%82%E5%BA%84%E5%86%85%E7%94%BA%E5%A4%A7%E9%BE%8D%EF%BC%91%EF%BC%96%EF%BC%96%EF%BC%90%E2%88%92%EF%BC%91/@33.1804272,131.4337607,17z/data=!3m1!4b1!4m2!3m1!1s0x3546b073f814bfd3:0x74f49f0e25e08a1b",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-108"
+    },
+    {
+      "id": "marumiya-shop-106",
+      "name": "マルミヤストア 挾間店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県由布市挾間町向原311-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                23:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E6%8C%BE%E9%96%93%E5%BA%97/@33.1978918,131.5078292,17z/data=!3m1!4b1!4m6!3m5!1s0x3546a490915886eb:0x1564cd2bae060505!8m2!3d33.1978873!4d131.5104041!16s%2Fg%2F1tjtg1zj?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-106"
+    },
+    {
+      "id": "marumiya-shop-128",
+      "name": "マルミヤストア 別府駅店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県別府市駅前町11-7\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E5%88%A5%E5%BA%9C%E9%A7%85%E5%BA%97/@33.2788179,131.4982744,17z/data=!3m1!4b1!4m2!3m1!1s0x3546a6e811c86659:0x54556009602e4ad2",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-128"
+    },
+    {
+      "id": "marumiya-shop-124",
+      "name": "マルミヤストア 金池南店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県大分市金池南2-2631-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                23:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E9%87%91%E6%B1%A0%E5%8D%97%E5%BA%97/@33.2284035,131.6062783,17z/data=!3m1!4b1!4m2!3m1!1s0x35469f6703baade7:0x41917811df7e112b",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-124"
+    },
+    {
+      "id": "marumiya-shop-130",
+      "name": "マルミヤストア 敷戸店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県大分市敷戸西町1-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92870-1103+%E5%A4%A7%E5%88%86%E7%9C%8C%E5%A4%A7%E5%88%86%E5%B8%82%E6%95%B7%E6%88%B8%E8%A5%BF%E7%94%BA%EF%BC%91%E2%88%92%EF%BC%91/@33.1873277,131.6210359,17z/data=!3m1!4b1!4m2!3m1!1s0x354698c0d11a02e7:0x3827b0ab4b99aa2b",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-130"
+    },
+    {
+      "id": "marumiya-shop-126",
+      "name": "マルミヤストア 鶴崎森店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字森六反田605\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E9%B6%B4%E5%B4%8E%E6%A3%AE%E5%BA%97/@33.2199791,131.6774698,17z/data=!3m1!4b1!4m2!3m1!1s0x35469e7f37c1acab:0x5de89ecbd42fec2a",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-126"
+    },
+    {
+      "id": "marumiya-shop-141",
+      "name": "マルミヤストア 大在店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県大分市大在中央1-11-11\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E5%A4%A7%E5%9C%A8%E5%BA%97/@33.2462054,131.7171809,17z/data=!3m1!4b1!4m6!3m5!1s0x3544275daad26231:0xbbfd0ff584df79f3!8m2!3d33.2462009!4d131.7197558!16s%2Fg%2F11s3hym7yw?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-141"
+    },
+    {
+      "id": "marumiya-shop-112",
+      "name": "マルミヤストア 戸次店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字中戸次4560-2\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                23:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92879-7761+%E5%A4%A7%E5%88%86%E7%9C%8C%E5%A4%A7%E5%88%86%E5%B8%82%E4%B8%AD%E6%88%B8%E6%AC%A1%EF%BC%94%EF%BC%95%EF%BC%96%EF%BC%90%E2%88%92%EF%BC%92/@33.1532484,131.6544784,17z/data=!3m1!4b1!4m2!3m1!1s0x3546990bd298e5f3:0x26a49bed2d4f509b",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-112"
+    },
+    {
+      "id": "marumiya-shop-80",
+      "name": "マルミヤストア 野田店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県臼杵市大字野田六反田160\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E9%87%8E%E7%94%B0%E5%BA%97/@33.1097191,131.7739759,17z/data=!3m1!4b1!4m6!3m5!1s0x354684dc9395729b:0x6d13c78f16d48ef4!8m2!3d33.1097146!4d131.7765508!16s%2Fg%2F1tf84wxl?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-80"
+    },
+    {
+      "id": "marumiya-shop-82",
+      "name": "マルミヤストア つくみ店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県津久見市高洲町3819-8\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.com/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E3%83%BC%E3%81%A4%E3%81%8F%E3%81%BF%E5%BA%97/@33.0747219,131.8634193,17z/data=!3m1!4b1!4m2!3m1!1s0x354686f1fd5cc331:0xe7f67e9edec52d14",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-82"
+    },
+    {
+      "id": "marumiya-shop-114",
+      "name": "マルミヤストア 三重店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県豊後大野市三重町赤嶺字塚田2976-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                23:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2%E4%B8%89%E9%87%8D%E5%BA%97/@32.98271,131.5834936,17z/data=!3m1!4b1!4m2!3m1!1s0x3546c01224e21a3f:0xe989da5c8c19072f",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-114"
+    },
+    {
+      "id": "marumiya-shop-72",
+      "name": "マルミヤストア 中ノ島店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市中ノ島東町3-30\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2/@32.9542901,131.9025161,17z/data=!3m1!4b1!4m2!3m1!1s0x354689ebd5464741:0xcafef961c476e22d",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-72"
+    },
+    {
+      "id": "marumiya-shop-88",
+      "name": "マルミヤストア 長島店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市長島町2-3-15\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92876-0813+%E5%A4%A7%E5%88%86%E7%9C%8C%E4%BD%90%E4%BC%AF%E5%B8%82%E9%95%B7%E5%B3%B6%E7%94%BA%EF%BC%92%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%91%EF%BC%95/@32.9617426,131.9085095,21z/data=!4m6!3m5!1s0x354689c4dec242d3:0x49c9118f0fea1483!8m2!3d32.9617426!4d131.9087442!16s%2Fg%2F11cllyq_hr?entry=ttu",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-88"
+    },
+    {
+      "id": "marumiya-shop-86",
+      "name": "マルミヤストア 野口店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市大字鶴望2830-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                22:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E9%87%8E%E5%8F%A3%E5%BA%97/@32.9661112,131.8776204,17z/data=!3m1!4b1!4m6!3m5!1s0x3546899ffcaefe31:0x108f34b18227a8e7!8m2!3d32.9661067!4d131.8801953!16s%2Fg%2F1tlcyz_1?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-86"
+    },
+    {
+      "id": "marumiya-shop-78",
+      "name": "マルミヤストア 蛇崎店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市大字池田2136\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                23:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E8%9B%87%E5%B4%8E%E5%BA%97/@32.9462944,131.8995079,17z/data=!3m1!4b1!4m6!3m5!1s0x354689f2fee5e507:0xfe25fb80ffc7e3cd!8m2!3d32.9462899!4d131.9020828!16s%2Fg%2F1tdcpb4n?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-78"
+    },
+    {
+      "id": "marumiya-shop-74",
+      "name": "マルミヤストア 弥生店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市弥生大字井崎1330-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E5%BC%A5%E7%94%9F%E5%BA%97/@32.9714133,131.8373891,17z/data=!3m1!4b1!4m6!3m5!1s0x35468eacd5d3c32f:0x99ccf0d873b18027!8m2!3d32.9714088!4d131.839964!16s%2Fg%2F1td9nb4g?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-74"
+    },
+    {
+      "id": "marumiya-shop-76",
+      "name": "マルミヤストア 蒲江店",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市蒲江蒲江浦3361-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                19:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%83%9E%E3%83%AB%E3%83%9F%E3%83%A4%E3%82%B9%E3%83%88%E3%82%A2+%E8%92%B2%E6%B1%9F%E5%BA%97/@32.7978209,131.9223833,17z/data=!3m1!4b1!4m6!3m5!1s0x35465f5dd748c599:0x2ed9ee6d7a1d92ba!8m2!3d32.7978164!4d131.9249582!16s%2Fg%2F1tmz4r31?hl=ja&entry=ttu&g_ep=EgoyMDI0MDgyMS4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-76"
+    },
+    {
+      "id": "marumiya-shop-159",
+      "name": "道の駅宇目",
+      "brand": "マルミヤストア",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市宇目大字南田原2513-5\n                                                                                                    (Google map)",
+      "openingHours": "10:00\n                                                ～\n                                                17:00",
+      "mapUrl": "https://www.google.co.jp/maps/place/%E3%80%92879-3302+%E5%A4%A7%E5%88%86%E7%9C%8C%E4%BD%90%E4%BC%AF%E5%B8%82%E5%AE%87%E7%9B%AE%E5%A4%A7%E5%AD%97%E5%8D%97%E7%94%B0%E5%8E%9F%EF%BC%92%EF%BC%95%EF%BC%91%EF%BC%93%E2%88%92%EF%BC%95/@32.8041533,131.6081306,17z/data=!3m1!4b1!4m6!3m5!1s0x3546e78529ac2fd3:0x4635886873928313!8m2!3d32.8041533!4d131.6107109!16s%2Fg%2F11t2x7_5yq?hl=ja&entry=ttu",
+      "sourceUrl": "https://marumiya.marumiya-store.co.jp/shops/#shop-159"
+    },
+    {
+      "id": "shinsen-shop-339",
+      "name": "新鮮市場 杵築店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県杵築市大字杵築字北浜665-88\n                                                                                                    (Google map)",
+      "openingHours": "9：30\n                                                ～\n                                                20：00",
+      "mapUrl": "https://www.google.com/maps/place/%E6%96%B0%E9%AE%AE%E5%B8%82%E5%A0%B4+%E6%9D%B5%E7%AF%89%E5%BA%97/@33.4190377,131.6203942,17z/data=!3m2!4b1!5s0x354422c996e7f65b:0x63352edf905b07c5!4m6!3m5!1s0x354423c046b0d1e1:0xd38535ba3fa620ad!8m2!3d33.4190332!4d131.6229691!16s%2Fg%2F11zg1v32x5?hl=ja&entry=ttu&g_ep=EgoyMDI2MDcwNi4wIKXMDSoASAFQAw%3D%3D",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-339"
+    },
+    {
+      "id": "shinsen-shop-55",
+      "name": "新鮮市場 大貞店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県中津市大字大貞字中ノ林389-2\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.564784,131.213351&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=4496568121241353981",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-55"
+    },
+    {
+      "id": "shinsen-shop-57",
+      "name": "新鮮市場 宇佐店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県宇佐市大字葛原字東ノ田234\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.537345,131.337299&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=14348812800283964445",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-57"
+    },
+    {
+      "id": "shinsen-shop-59",
+      "name": "新鮮市場 友田店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県日田市大字友田802-1\n                                                                                                    (Google map)",
+      "openingHours": "10:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.324262,130.910918&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=7963428260522225515",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-59"
+    },
+    {
+      "id": "shinsen-shop-61",
+      "name": "新鮮市場 山の手店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県別府市山の手町3250-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.281124,131.485631&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=15279233740755143356",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-61"
+    },
+    {
+      "id": "shinsen-shop-63",
+      "name": "新鮮市場 鶴見店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県別府市馬場1組3\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.306303,131.475767&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=4829805677619543316",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-63"
+    },
+    {
+      "id": "shinsen-shop-65",
+      "name": "新鮮市場 南大分店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字豊饒2-5-14\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.208718,131.596823&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=12446805554413474543",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-65"
+    },
+    {
+      "id": "shinsen-shop-67",
+      "name": "新鮮市場 野津原店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字野津原字小深町892-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.161383,131.528724&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=18300542568325351955",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-67"
+    },
+    {
+      "id": "shinsen-shop-69",
+      "name": "新鮮市場 新川店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市新川町2-1396-6\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.251391,131.609152&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=3128882722162984740",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-69"
+    },
+    {
+      "id": "shinsen-shop-71",
+      "name": "新鮮市場 花高松店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市花高松1-2-8\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.248871,131.662503&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=12408363483863194684",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-71"
+    },
+    {
+      "id": "shinsen-shop-73",
+      "name": "新鮮市場 大在店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市汐見2-310\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.243466,131.735164&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=11292709484640787326",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-73"
+    },
+    {
+      "id": "shinsen-shop-75",
+      "name": "新鮮市場 松岡店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字松岡字市場5171-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.179337,131.665469&z=14&t=m&hl=ja&gl=JP&mapclient=embed&cid=18058761417221717370",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-75"
+    },
+    {
+      "id": "shinsen-shop-83",
+      "name": "新鮮市場 判田店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県大分市大字下判田字用作2267-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                21:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.163959,131.645945&z=14&t=m&hl=ja&gl=JP&mapclient=embed&cid=17600415058305760497",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-83"
+    },
+    {
+      "id": "shinsen-shop-77",
+      "name": "新鮮市場 臼杵店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県臼杵市大字野田字唐木田214-1\n                                                                                                    (Google map)",
+      "openingHours": "9:00\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=33.111804,131.781866&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=4948742501635099716",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-77"
+    },
+    {
+      "id": "shinsen-shop-79",
+      "name": "新鮮市場 三重店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県豊後大野市三重町小坂字柳井瀬4109-16\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=32.994652,131.616114&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=18362254937539214461",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-79"
+    },
+    {
+      "id": "shinsen-shop-81",
+      "name": "新鮮市場 佐伯店",
+      "brand": "新鮮市場",
+      "shopType": "supermarket",
+      "address": "大分県佐伯市大字女島8988-1\n                                                                                                    (Google map)",
+      "openingHours": "9:30\n                                                ～\n                                                20:00",
+      "mapUrl": "https://www.google.com/maps?ll=32.959803,131.915009&z=16&t=m&hl=ja&gl=US&mapclient=embed&cid=4735087612125293568",
+      "sourceUrl": "https://shinsen.marumiya-store.co.jp/shops/#shop-81"
+    },
+    {
+      "id": "tokiwa-facility4",
+      "name": "トキハインダストリー 富士見が丘店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市富士見が丘西1丁目3番1号",
+      "openingHours": "1階 9:30～20:00\n2階 10:00～18:00",
+      "mapUrl": "https://maps.google.com/maps?ll=33.182112,131.543481&z=16&t=m&hl=ja-JP&gl=US&mapclient=embed&q=%E3%80%92870-1177%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%A4%A7%E5%88%86%E5%B8%82%E5%AF%8C%E5%A3%AB%E8%A6%8B%E3%81%8C%E4%B8%98%E8%A5%BF%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%93%E2%88%92%EF%BC%91",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility4.html"
+    },
+    {
+      "id": "tokiwa-facility1",
+      "name": "トキハインダストリー あけのアクロスタウン",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市明野東1丁目1番1号",
+      "openingHours": "本館(地階・1階) 9:30～20:00\n本館(2階・3階・4階)・新館 10:00～20:00\n新館レストラン街 11:00～ ※閉店時間は店舗によって異なります。",
+      "mapUrl": "https://maps.google.com/maps?ll=33.223583,131.65316&z=16&t=m&hl=ja-JP&gl=US&mapclient=embed&q=%E3%80%92870-0161%20%E5%A4%A7%E5%88%86%E7%9C%8C%E5%A4%A7%E5%88%86%E5%B8%82%E6%98%8E%E9%87%8E%E6%9D%B1%EF%BC%91%E4%B8%81%E7%9B%AE%EF%BC%91",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility1.html"
+    },
+    {
+      "id": "tokiwa-facility2",
+      "name": "トキハインダストリー 南大分店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市田中町二丁目4番18号",
+      "openingHours": "9:00～20:00",
+      "mapUrl": "https://www.google.com/maps/@33.2115475,131.5907032,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility2.html"
+    },
+    {
+      "id": "tokiwa-facility6",
+      "name": "トキハインダストリー 若草公園店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市中央町2丁目5番3号",
+      "openingHours": "9:30～21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2364547,131.6060937,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility6.html"
+    },
+    {
+      "id": "tokiwa-facility7",
+      "name": "トキハインダストリー わさだタウンスーパーマーケット",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分県大分市玉沢字楠本755-1",
+      "openingHours": "10:00～20:00",
+      "mapUrl": "https://www.google.com/maps/@33.1885659,131.5816231,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility7.html"
+    },
+    {
+      "id": "tokiwa-facility16",
+      "name": "アテオ高江店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市高江南1-11",
+      "openingHours": "9:30～21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1648547,131.6214518,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility16.html"
+    },
+    {
+      "id": "tokiwa-facility17",
+      "name": "トキハインダストリー 鶴見園店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "別府市鶴見園町2番25号",
+      "openingHours": "1階 9:30～20:00\n2階 10:00～19:00",
+      "mapUrl": "https://www.google.com/maps/@33.2852121,131.4792539,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility17.html"
+    },
+    {
+      "id": "tokiwa-facility23",
+      "name": "トキハインダストリー 長洲店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "宇佐市沖須町1丁目20番地",
+      "openingHours": "10:00～19:30",
+      "mapUrl": "https://www.google.com/maps/@33.5669152,131.3638933,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility23.html"
+    },
+    {
+      "id": "tokiwa-facility27",
+      "name": "トキハインダストリー 佐伯店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "佐伯市大字池田2064番地",
+      "openingHours": "1階 9:30～20:00\n2階 10:00〜19:00",
+      "mapUrl": "https://www.google.com/maps/@32.9443321,131.901145,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility27.html"
+    },
+    {
+      "id": "tokiwa-facility15",
+      "name": "アテオ南明野店",
+      "brand": "トキハインダストリー",
+      "shopType": "supermarket",
+      "address": "大分市明野高尾3丁目1番1号オアシスパーク明野",
+      "openingHours": "9:30～21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2101981,131.6496614,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.tokiwa-industry.co.jp/shops/facility15.html"
+    },
+    {
+      "id": "cosmos-22941",
+      "name": "ドラッグストアコスモス 中津北店",
+      "brand": "コスモス",
+      "aliases": [
+        "なかつきた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0007大分県中津市蛎瀬８３８−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.6014231,131.2067147,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/22941.html"
+    },
+    {
+      "id": "cosmos-44400",
+      "name": "ドラッグストアコスモス 大分新川店",
+      "brand": "コスモス",
+      "aliases": [
+        "おおいたしんかわ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0015大分県大分市新川西２丁目１−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2483891,131.6060407,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44400.html"
+    },
+    {
+      "id": "cosmos-22927",
+      "name": "ドラッグストアコスモス 佐伯向島店",
+      "brand": "コスモス",
+      "aliases": [
+        "さいきほうじま"
+      ],
+      "shopType": "drugstore",
+      "address": "〒876-0844大分県佐伯市向島２丁目１−１８",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.956527,131.896464,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/22927.html"
+    },
+    {
+      "id": "cosmos-40563",
+      "name": "ドラッグストアコスモス 大在店",
+      "brand": "コスモス",
+      "aliases": [
+        "おおざい"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0265大分県大分市竹下２丁目３−７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2418003,131.7296548,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/40563.html"
+    },
+    {
+      "id": "cosmos-48699",
+      "name": "ドラッグストアコスモス 森町バイパス店",
+      "brand": "コスモス",
+      "aliases": [
+        "もりまちばいぱす"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0127大分県大分市森町５２６−１",
+      "openingHours": "ドラッグストア：10:00〜21:00処方せん受付：月〜土 9:30〜18:30 （定休日：日・祝）",
+      "mapUrl": "https://www.google.com/maps/@33.2278713,131.6817681,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48699.html"
+    },
+    {
+      "id": "cosmos-42253",
+      "name": "ドラッグストアコスモス 森町店",
+      "brand": "コスモス",
+      "aliases": [
+        "もりまち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0140大分県大分市森町西１丁目１−１",
+      "openingHours": "ドラッグストア：10:00〜21:00処方せん受付：月・火・木・金 9:00〜13:00/14:00〜19:00、水 9:00〜13:00/14:00〜18:00、土 9:00〜14:00 （定休日：日・祝）",
+      "mapUrl": "https://www.google.com/maps/@33.2323785,131.6761743,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/42253.html"
+    },
+    {
+      "id": "cosmos-41485",
+      "name": "ドラッグストアコスモス 賀来店",
+      "brand": "コスモス",
+      "aliases": [
+        "かく"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0892大分県大分市賀来新川１丁目１−１７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2133892,131.5744496,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41485.html"
+    },
+    {
+      "id": "cosmos-21425",
+      "name": "ドラッグストアコスモス 上宗方店",
+      "brand": "コスモス",
+      "aliases": [
+        "かみむなかた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-1152大分県大分市上宗方６６７−４１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1923555,131.5761068,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/21425.html"
+    },
+    {
+      "id": "cosmos-47883",
+      "name": "ドラッグストアコスモス 大分空港店",
+      "brand": "コスモス",
+      "aliases": [
+        "おおいたくうこう"
+      ],
+      "shopType": "drugstore",
+      "address": "〒873-0421大分県国東市武蔵町糸原上神手４１２９−１０",
+      "openingHours": "9:00〜20:00",
+      "mapUrl": "https://www.google.com/maps/@33.480938,131.7204974,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47883.html"
+    },
+    {
+      "id": "cosmos-47371",
+      "name": "ドラッグストアコスモス 王子港町店",
+      "brand": "コスモス",
+      "aliases": [
+        "おうじみなとまち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0004大分県大分市王子港町１−３１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2450637,131.5889094,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47371.html"
+    },
+    {
+      "id": "cosmos-47067",
+      "name": "ドラッグストアコスモス 下郡バイパス店",
+      "brand": "コスモス",
+      "aliases": [
+        "しもごおりばいぱす"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0943大分県大分市片島３７８−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2189392,131.624255,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47067.html"
+    },
+    {
+      "id": "cosmos-46909",
+      "name": "ドラッグストアコスモス 中津田尻店",
+      "brand": "コスモス",
+      "aliases": [
+        "なかつたじり"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-0123大分県中津市田尻１１８６−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5908284,131.2381055,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46909.html"
+    },
+    {
+      "id": "cosmos-46848",
+      "name": "ドラッグストアコスモス 江無田店",
+      "brand": "コスモス",
+      "aliases": [
+        "えむた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒875-0023大分県臼杵市江無田１４７９−３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1267509,131.7818172,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46848.html"
+    },
+    {
+      "id": "cosmos-46879",
+      "name": "ドラッグストアコスモス 南荘園店",
+      "brand": "コスモス",
+      "aliases": [
+        "みなみそうえん"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0904大分県別府市南荘園町４−４",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2876232,131.4809878,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46879.html"
+    },
+    {
+      "id": "cosmos-46930",
+      "name": "ドラッグストアコスモス やまなみ店",
+      "brand": "コスモス",
+      "aliases": [
+        ""
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0913大分県別府市春木町１５−３３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3093604,131.4875792,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46930.html"
+    },
+    {
+      "id": "cosmos-46442",
+      "name": "ドラッグストアコスモス 東元町店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひがしもとまち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0841大分県大分市六坊北町６−２７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2268193,131.6177394,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46442.html"
+    },
+    {
+      "id": "cosmos-46190",
+      "name": "ドラッグストアコスモス 宇佐店",
+      "brand": "コスモス",
+      "aliases": [
+        "うさ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-0456大分県宇佐市辛島１９８−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5324417,131.3390685,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46190.html"
+    },
+    {
+      "id": "cosmos-45438",
+      "name": "ドラッグストアコスモス 竹田店",
+      "brand": "コスモス",
+      "aliases": [
+        "たけた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒878-0025大分県竹田市拝田原山下２１２",
+      "openingHours": "9:00〜20:00",
+      "mapUrl": "https://www.google.com/maps/@32.9610747,131.3827255,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/45438.html"
+    },
+    {
+      "id": "cosmos-44646",
+      "name": "ドラッグストアコスモス 大畑店",
+      "brand": "コスモス",
+      "aliases": [
+        "おばたけ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0848大分県別府市大畑町３２−１９",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3045931,131.4706193,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44646.html"
+    },
+    {
+      "id": "cosmos-44189",
+      "name": "ドラッグストアコスモス 三佐店",
+      "brand": "コスモス",
+      "aliases": [
+        "みさ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0108大分県大分市三佐３丁目２−１０",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2511359,131.6790258,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44189.html"
+    },
+    {
+      "id": "cosmos-43670",
+      "name": "ドラッグストアコスモス 下郡店",
+      "brand": "コスモス",
+      "aliases": [
+        "しもごおり"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0955大分県大分市下郡南３丁目６−１１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2227028,131.634156,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43670.html"
+    },
+    {
+      "id": "cosmos-43687",
+      "name": "ドラッグストアコスモス 友田店",
+      "brand": "コスモス",
+      "aliases": [
+        "ともだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒877-0077大分県日田市南友田町９６２−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3254938,130.909022,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43687.html"
+    },
+    {
+      "id": "cosmos-42963",
+      "name": "ドラッグストアコスモス 脇津留店",
+      "brand": "コスモス",
+      "aliases": [
+        "わきつる"
+      ],
+      "shopType": "drugstore",
+      "address": "〒876-0047大分県佐伯市鶴岡西町２丁目３２５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.9610469,131.8623888,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/42963.html"
+    },
+    {
+      "id": "cosmos-42468",
+      "name": "ドラッグストアコスモス 荘園店",
+      "brand": "コスモス",
+      "aliases": [
+        "そうえん"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0838大分県別府市荘園町２０−２３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.289648,131.4794024,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/42468.html"
+    },
+    {
+      "id": "cosmos-42079",
+      "name": "ドラッグストアコスモス 平田店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひらた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0024大分県別府市平田町４−３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3198398,131.4955928,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/42079.html"
+    },
+    {
+      "id": "cosmos-41805",
+      "name": "ドラッグストアコスモス 西大在店",
+      "brand": "コスモス",
+      "aliases": [
+        "にしおおざい"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0242大分県大分市角子南１丁目１−４１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2430836,131.7066525,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41805.html"
+    },
+    {
+      "id": "cosmos-41133",
+      "name": "ドラッグストアコスモス 大分高田店",
+      "brand": "コスモス",
+      "aliases": [
+        "おおいたたかだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0118大分県大分市下徳丸１４",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2117814,131.6889689,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41133.html"
+    },
+    {
+      "id": "cosmos-41126",
+      "name": "ドラッグストアコスモス 日出店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひじ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-1506大分県速見郡日出町３８７８−４",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3735476,131.5347217,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41126.html"
+    },
+    {
+      "id": "cosmos-40556",
+      "name": "ドラッグストアコスモス 新地店",
+      "brand": "コスモス",
+      "aliases": [
+        "しんち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒875-0023大分県臼杵市江無田２３１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1251595,131.7933987,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/40556.html"
+    },
+    {
+      "id": "cosmos-40525",
+      "name": "ドラッグストアコスモス 日ノ出店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひので"
+      ],
+      "shopType": "drugstore",
+      "address": "〒877-0082大分県日田市日ノ出町３−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3325528,130.9398562,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/40525.html"
+    },
+    {
+      "id": "cosmos-18784",
+      "name": "ドラッグストアコスモス 下池永店",
+      "brand": "コスモス",
+      "aliases": [
+        "しもいけなが"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0011大分県中津市下池永５６１−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.587728,131.216438,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/18784.html"
+    },
+    {
+      "id": "cosmos-15103",
+      "name": "ドラッグストアコスモス 湯布院店",
+      "brand": "コスモス",
+      "aliases": [
+        "ゆふいん"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-5102大分県由布市湯布院町川上１０７４−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2671819,131.3615571,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/15103.html"
+    },
+    {
+      "id": "cosmos-13772",
+      "name": "ドラッグストアコスモス 明野店",
+      "brand": "コスモス",
+      "aliases": [
+        "あけの"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0165大分県大分市明野北５丁目１−３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2258942,131.6582653,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/13772.html"
+    },
+    {
+      "id": "cosmos-12775",
+      "name": "ドラッグストアコスモス 臼杵店",
+      "brand": "コスモス",
+      "aliases": [
+        "うすき"
+      ],
+      "shopType": "drugstore",
+      "address": "〒875-0052大分県臼杵市市浜１３７１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1134104,131.7835773,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/12775.html"
+    },
+    {
+      "id": "cosmos-11617",
+      "name": "ドラッグストアコスモス 高松東店",
+      "brand": "コスモス",
+      "aliases": [
+        "たかまつひがし"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0916大分県大分市高松東２−６−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2462806,131.6604806,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/11617.html"
+    },
+    {
+      "id": "cosmos-11167",
+      "name": "ドラッグストアコスモス 挾間北方店",
+      "brand": "コスモス",
+      "aliases": [
+        "はさまきたがた"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-5518大分県由布市挾間町北方下角１００−３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2060791,131.524831,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/11167.html"
+    },
+    {
+      "id": "cosmos-10412",
+      "name": "ドラッグストアコスモス 三重店",
+      "brand": "コスモス",
+      "aliases": [
+        "みえ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-7105大分県豊後大野市三重町芦刈４８１−７９",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.9936339,131.6138252,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/10412.html"
+    },
+    {
+      "id": "cosmos-44134",
+      "name": "ドラッグストアコスモス 津久見店",
+      "brand": "コスモス",
+      "aliases": [
+        "つくみ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-2412大分県津久見市高洲町１６−２３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.0743747,131.8677485,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44134.html"
+    },
+    {
+      "id": "cosmos-41447",
+      "name": "ドラッグストアコスモス 佐伯女島店",
+      "brand": "コスモス",
+      "aliases": [
+        "さいきめじま"
+      ],
+      "shopType": "drugstore",
+      "address": "〒876-0823大分県佐伯市女島２丁目８９０３−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.9607105,131.9164935,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41447.html"
+    },
+    {
+      "id": "cosmos-46602",
+      "name": "ドラッグストアコスモス 下郡東店",
+      "brand": "コスモス",
+      "aliases": [
+        "しもごうりひがし"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0953大分県大分市下郡東１丁目５−２０",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2289046,131.636023,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46602.html"
+    },
+    {
+      "id": "cosmos-41294",
+      "name": "ドラッグストアコスモス 豊後高田店",
+      "brand": "コスモス",
+      "aliases": [
+        "ぶんごたかだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-0617大分県豊後高田市高田２２５２−２",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5574142,131.4300957,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41294.html"
+    },
+    {
+      "id": "cosmos-43939",
+      "name": "ドラッグストアコスモス 国東店",
+      "brand": "コスモス",
+      "aliases": [
+        "くにさき"
+      ],
+      "shopType": "drugstore",
+      "address": "〒873-0511大分県国東市国東町小原１９２６−２",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5484248,131.7360718,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43939.html"
+    },
+    {
+      "id": "cosmos-41591",
+      "name": "ドラッグストアコスモス 石垣店",
+      "brand": "コスモス",
+      "aliases": [
+        "いしがき"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0919大分県別府市石垣東５丁目２−４５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.297352,131.4988703,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41591.html"
+    },
+    {
+      "id": "cosmos-40686",
+      "name": "ドラッグストアコスモス 鶴見店",
+      "brand": "コスモス",
+      "aliases": [
+        "つるみ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0840大分県別府市鶴見４９１−５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3085919,131.4745274,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/40686.html"
+    },
+    {
+      "id": "cosmos-18449",
+      "name": "ドラッグストアコスモス 鶴居店",
+      "brand": "コスモス",
+      "aliases": [
+        "つるい"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0162大分県中津市永添４００−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5738069,131.1975283,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/18449.html"
+    },
+    {
+      "id": "cosmos-16995",
+      "name": "ドラッグストアコスモス 三重市場店",
+      "brand": "コスモス",
+      "aliases": [
+        "みえいちば"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-7131大分県豊後大野市三重町市場７０５−４",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.976491,131.5828389,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/16995.html"
+    },
+    {
+      "id": "cosmos-16650",
+      "name": "ドラッグストアコスモス 杵築猪尾店",
+      "brand": "コスモス",
+      "aliases": [
+        "きつきいのお"
+      ],
+      "shopType": "drugstore",
+      "address": "〒873-0005大分県杵築市猪尾６０−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.409704,131.620235,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/16650.html"
+    },
+    {
+      "id": "cosmos-16599",
+      "name": "ドラッグストアコスモス 畑中店",
+      "brand": "コスモス",
+      "aliases": [
+        "はたけなか"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0856大分県大分市畑中１丁目３−５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2064624,131.6012547,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/16599.html"
+    },
+    {
+      "id": "cosmos-15158",
+      "name": "ドラッグストアコスモス 中津蛭子店",
+      "brand": "コスモス",
+      "aliases": [
+        "なかつえびす"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0065大分県中津市蛭子町２丁目１０−２",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.6014646,131.1926828,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/15158.html"
+    },
+    {
+      "id": "cosmos-48217",
+      "name": "ドラッグストアコスモス 玖珠山田店",
+      "brand": "コスモス",
+      "aliases": [
+        "くすやまだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-4412大分県玖珠郡玖珠町山田１０−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.279731,131.137289,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48217.html"
+    },
+    {
+      "id": "cosmos-47470",
+      "name": "ドラッグストアコスモス 日田若宮店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひたわかみや"
+      ],
+      "shopType": "drugstore",
+      "address": "〒877-0000大分県日田市竹田４１７−４",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3112488,130.9416985,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47470.html"
+    },
+    {
+      "id": "cosmos-47302",
+      "name": "ドラッグストアコスモス 佐伯常盤店",
+      "brand": "コスモス",
+      "aliases": [
+        "さいきときわ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒876-0851大分県佐伯市常盤東町７−７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.9651596,131.9032573,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47302.html"
+    },
+    {
+      "id": "cosmos-43748",
+      "name": "ドラッグストアコスモス 四日市店",
+      "brand": "コスモス",
+      "aliases": [
+        "よっかいち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-0455大分県宇佐市閤３５５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5273102,131.3344027,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43748.html"
+    },
+    {
+      "id": "cosmos-40891",
+      "name": "ドラッグストアコスモス 玖珠店",
+      "brand": "コスモス",
+      "aliases": [
+        "くす"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-4414大分県玖珠郡玖珠町大隈１７５−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2661033,131.165541,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/40891.html"
+    },
+    {
+      "id": "cosmos-41690",
+      "name": "ドラッグストアコスモス 杵築店",
+      "brand": "コスモス",
+      "aliases": [
+        "きつき"
+      ],
+      "shopType": "drugstore",
+      "address": "〒873-0006大分県杵築市大内４５３２−７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.422159,131.6316648,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/41690.html"
+    },
+    {
+      "id": "cosmos-44264",
+      "name": "ドラッグストアコスモス 坂ノ市店",
+      "brand": "コスモス",
+      "aliases": [
+        "さかのいち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0307大分県大分市坂ノ市中央３丁目４−１０",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2346297,131.751708,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44264.html"
+    },
+    {
+      "id": "cosmos-44608",
+      "name": "ドラッグストアコスモス 中の島店",
+      "brand": "コスモス",
+      "aliases": [
+        "なかのしま"
+      ],
+      "shopType": "drugstore",
+      "address": "〒876-0843大分県佐伯市中の島１丁目７−７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@32.9570254,131.9038219,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44608.html"
+    },
+    {
+      "id": "cosmos-48781",
+      "name": "ドラッグストアコスモス 西本町店",
+      "brand": "コスモス",
+      "aliases": [
+        "にしほんまち"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-0471大分県宇佐市四日市３８０−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5353626,131.3235089,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48781.html"
+    },
+    {
+      "id": "cosmos-48088",
+      "name": "ドラッグストアコスモス 鬼崎店",
+      "brand": "コスモス",
+      "aliases": [
+        "おにざき"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-5501大分県由布市挾間町鬼崎１８２−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1956818,131.5306454,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48088.html"
+    },
+    {
+      "id": "cosmos-46428",
+      "name": "ドラッグストアコスモス 日田三和店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひたみわ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒877-0000大分県日田市三和１５８−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3370721,130.9419212,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46428.html"
+    },
+    {
+      "id": "cosmos-45490",
+      "name": "ドラッグストアコスモス 日出駅前店",
+      "brand": "コスモス",
+      "aliases": [
+        "ひじえきまえ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒879-1505大分県速見郡日出町川崎８４５−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3682517,131.5414685,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/45490.html"
+    },
+    {
+      "id": "cosmos-12676",
+      "name": "ドラッグストアコスモス 大貞店",
+      "brand": "コスモス",
+      "aliases": [
+        "おおさだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0153大分県中津市大貞３８９−５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5645848,131.2122357,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/12676.html"
+    },
+    {
+      "id": "cosmos-10962",
+      "name": "ドラッグストアコスモス 相原店",
+      "brand": "コスモス",
+      "aliases": [
+        "あいはら"
+      ],
+      "shopType": "drugstore",
+      "address": "〒871-0022大分県中津市相原３３０６",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5702007,131.1871087,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/10962.html"
+    },
+    {
+      "id": "cosmos-47951",
+      "name": "ドラッグストアコスモス 光吉店",
+      "brand": "コスモス",
+      "aliases": [
+        "みつよし"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-1132大分県大分市光吉１１７３",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1968906,131.6040644,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47951.html"
+    },
+    {
+      "id": "cosmos-47326",
+      "name": "ドラッグストアコスモス 城原店",
+      "brand": "コスモス",
+      "aliases": [
+        "じょうはる"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0267大分県大分市城原１８１９−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2366792,131.7286091,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/47326.html"
+    },
+    {
+      "id": "cosmos-46527",
+      "name": "ドラッグストアコスモス 汐見店",
+      "brand": "コスモス",
+      "aliases": [
+        "しおみ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0253大分県大分市汐見２丁目３４−３１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2429981,131.7375154,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46527.html"
+    },
+    {
+      "id": "cosmos-43229",
+      "name": "ドラッグストアコスモス わさだ店",
+      "brand": "コスモス",
+      "aliases": [
+        ""
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-1151大分県大分市市１２６７",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1886336,131.5762618,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43229.html"
+    },
+    {
+      "id": "cosmos-48910",
+      "name": "ドラッグストアコスモス 寒田店",
+      "brand": "コスモス",
+      "aliases": [
+        "そうだ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-1123大分県大分市寒田１０１１−１",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.1871359,131.6095769,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48910.html"
+    },
+    {
+      "id": "cosmos-43823",
+      "name": "ドラッグストアコスモス 猪野店",
+      "brand": "コスモス",
+      "aliases": [
+        "いの"
+      ],
+      "shopType": "drugstore",
+      "address": "〒870-0134大分県大分市猪野１２５２",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2240103,131.6650458,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43823.html"
+    },
+    {
+      "id": "cosmos-44523",
+      "name": "ドラッグストアコスモス 柳ヶ浦店",
+      "brand": "コスモス",
+      "aliases": [
+        "やなぎがうら"
+      ],
+      "shopType": "drugstore",
+      "address": "〒872-0033大分県宇佐市住吉町１丁目１０",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.5661533,131.3622043,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/44523.html"
+    },
+    {
+      "id": "cosmos-46510",
+      "name": "ドラッグストアコスモス 別府中島店",
+      "brand": "コスモス",
+      "aliases": [
+        "べっぷなかしま"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0901大分県別府市中島町８−２",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2745124,131.4937058,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/46510.html"
+    },
+    {
+      "id": "cosmos-43458",
+      "name": "ドラッグストアコスモス 天満店",
+      "brand": "コスモス",
+      "aliases": [
+        "てんまん"
+      ],
+      "shopType": "drugstore",
+      "address": "〒874-0906大分県別府市天満町１５−１５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.2880002,131.4931452,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/43458.html"
+    },
+    {
+      "id": "cosmos-48262",
+      "name": "ドラッグストアコスモス 玉川店",
+      "brand": "コスモス",
+      "aliases": [
+        "たまがわ"
+      ],
+      "shopType": "drugstore",
+      "address": "〒877-0000大分県日田市十二町７９２−５",
+      "openingHours": "10:00〜21:00",
+      "mapUrl": "https://www.google.com/maps/@33.3206899,130.9289195,16z/data=!10m1!1e1!12b1?source=apiv3&rapsrc=apiv3",
+      "sourceUrl": "https://www.cosmospc.co.jp/shop/kyushu/oita/48262.html"
+    }
+  ]
+}

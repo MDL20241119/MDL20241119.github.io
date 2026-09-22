@@ -50,7 +50,7 @@ export function pointJourneys(n,origin,destination,start,o,walkBudget=o.totalWal
         if(onboard.length&&drop!=='1'){
           if(o.wheelchair&&accessibility(n,c.stopKey)==='no'){}else if(['2','3'].includes(drop)&&o.reservation==='no'){}else for(const board of onboard){
             const unknowns=unique([...board.unknowns,...(['2','3'].includes(drop)?['降車の事前手配']:[]),...(o.wheelchair&&accessibility(n,c.stopKey)==='unknown'?['降車場所の車いす対応']:[])]);
-            const leg={mode:'bus',trip:t.baseKey,route:t.route,routeName:n.routes[t.route]?.name??t.route,from:n.stops[board.boardStop],to:n.stops[c.stopKey],departure:board.boardTime,arrival:c.arrival,wait:board.boardTime-board.arrival};
+            const leg={mode:'bus',trip:t.baseKey,tripKey:t.key,boardSequence:board.boardSequence,alightSequence:c.stop_sequence,route:t.route,routeName:n.routes[t.route]?.name??t.route,from:n.stops[board.boardStop],to:n.stops[c.stopKey],departure:board.boardTime,arrival:c.arrival,wait:board.boardTime-board.arrival};
             insert(arrivals,c.stopKey,{arrival:c.arrival,rideArrival:c.arrival,walk:board.walk,uncertain:unknowns.length,unknowns,path:[...board.path,leg],lastTripKey:t.key,lastTripId:t.id,lastRouteId:t.routeId,fromStop:c.stopKey,boardings:round},ctx);
           }
         }
@@ -58,7 +58,7 @@ export function pointJourneys(n,origin,destination,start,o,walkBudget=o.totalWal
         for(const l of previous.get(c.stopKey)??[]){if(l.lastTripKey===t.key)continue;const rule=l.lastTripId?transfer(n,l,c.stopKey,t):null;if(rule?.transfer_type==='3')continue;if(['4','5'].includes(rule?.transfer_type)){ctx.unsupported=true;continue;}
           const ready=l.lastTripId?(rule?.transfer_type==='2'?Math.max(l.arrival,l.rideArrival+Number(rule.min_transfer_time||0)):l.arrival+(rule?.transfer_type==='1'?0:180)):l.arrival;if(ready>c.departure)continue;
           const unknowns=unique([...l.unknowns,...(['2','3'].includes(pickup)?['乗車の事前手配']:[]),...(o.wheelchair&&wheelchair!=='1'?['車両の車いす対応']:[]),...(o.wheelchair&&accessibility(n,c.stopKey)==='unknown'?['乗車場所の車いす対応']:[])]);
-          const candidate={...l,boardStop:c.stopKey,boardTime:c.departure,unknowns,uncertain:unknowns.length};
+          const candidate={...l,boardStop:c.stopKey,boardTime:c.departure,boardSequence:c.stop_sequence,unknowns,uncertain:unknowns.length};
           if(!onboard.some(b=>b.walk<=candidate.walk+.001&&b.uncertain<=candidate.uncertain))onboard=[...onboard.filter(b=>!(candidate.walk<=b.walk+.001&&candidate.uncertain<=b.uncertain)),candidate];
         }
       }

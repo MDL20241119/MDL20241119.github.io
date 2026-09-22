@@ -36,6 +36,24 @@ complete production conformance.
 
 ## Oita mobility atlas
 
+### Shopping and route maps — 2026-09-22
+
+- 321 destinations, including 145 shopping locations across 16 municipalities
+  (71 supermarkets/food stores, 73 drugstores, one home centre). Source URLs,
+  addresses, source map coordinates, position qualifications and check dates are
+  retained in `access/shopping-sources.json`; rebuild with
+  `node scripts/build-shopping-destinations.mjs`.
+- PEOPLE shows searchable, paginated destination cards, shop types and proximity
+  order. The map supports selecting/switching endpoints and round-trip searches.
+- Bus geometry follows the selected GTFS trip and is clipped to the actual
+  boarding/alighting calls, including loop direction. Pink is outbound, blue is
+  inbound. Walking remains an explicitly approximate dotted line. Missing or
+  inconsistent bus shapes show boarding/alighting points without an invented line.
+- These are published scheduled routes, not a GPS trace or a road-navigation API.
+
+Checks: `node --test tests/route-map.test.mjs tests/route-shapes-real.test.mjs` and
+`node scripts/build-shopping-destinations.mjs --check`.
+
 ### Atlas 2.0 — 2026-09-22
 
 - `/oita-mobility/`: PEOPLE starts with current location or one of 18 municipalities.
@@ -85,7 +103,7 @@ The initial transfer preserves the public output of Oita atlas version 7 (source
 
 ## Neo Swiss design
 
-The atlas now carries the Neo Swiss design published in Sites version 8 (source `5871c5c826ac9271a7b8540567954d6e96236aac`). A shared `oita-mobility/assets/neo-swiss.css` theme supplies paper-white surfaces, ruled grids, large collection counts and cyan/pink/yellow tool accents across all five pages. Mobile entry cards and map controls use the same hierarchy. The directory counts describe the current bundled coverage: 199 destinations, 18 municipalities, 15 transport-resource examples and 16 public GTFS files.
+The atlas now carries the Neo Swiss design published in Sites version 8 (source `5871c5c826ac9271a7b8540567954d6e96236aac`). A shared `oita-mobility/assets/neo-swiss.css` theme supplies paper-white surfaces, ruled grids, large collection counts and cyan/pink/yellow tool accents across all five pages. Mobile entry cards and map controls use the same hierarchy. The directory counts describe the current bundled coverage: 321 destinations, 18 municipalities, 15 transport-resource examples and 16 public GTFS files.
 
 GitHub Pages links, contact URLs, privacy disclosures and storage-domain instructions remain specific to `mobilitydlab.com/oita-mobility/`. The existing analytical engines, data, sharing safeguards and source notices are retained. Validation covers local page references, existing element IDs, identical stylesheet delivery and `node tests/publication.mjs`.
 

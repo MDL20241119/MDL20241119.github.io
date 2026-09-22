@@ -5,7 +5,7 @@
   "sourceHashes": {
     "data/gtfs/catalog.json": "e9a86683995dd20f2ecce20c83113421c3f008186740f1be1e22646cbf2540af",
     "data/map-data.json": "d0a07d45d05937bd775110e3a7269ff3a6dac4cf528deaec5ca80e96a9b52fba",
-    "access/destinations.json": "175311b8f4533b93677d7fc4b4223fb37514690e237c61d01e2f11aed9f2dac9",
+    "access/destinations.json": "4f58ec99d7cbc38411a4097e70c36c3d5d10ffb18966841c5be3e874af267406",
     "gaps/resources.json": "1cebff61ff2416f0c470a83ab15f9fa5a63416f68a3eaa47f006cd015f504469",
     "gaps/data/sources.json": "ed48e2740c09a76725562a165d605adb792be9427fad5216766e655c5091f96b",
     "gaps/data/municipalities.geojson": "af48357dd401dc2c1337c7a807e934c0a0b3e5d924b0dd38015a5ecdeb2a2409",
@@ -2431,14 +2431,502 @@
         {
           "name": "HIヒロセ 公式店舗ページ",
           "url": "https://www.hihirose.com/shoplist/shop/storecode4/"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-135"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-137"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-139"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-118"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-120"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-132"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-108"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-106"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-128"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-124"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-130"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-126"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-141"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-112"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-80"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-82"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-114"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-72"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-88"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-86"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-78"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-74"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-76"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://marumiya.marumiya-store.co.jp/shops/#shop-159"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-339"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-55"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-57"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-61"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-63"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-65"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-67"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-69"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-71"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-73"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-75"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-83"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-77"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-79"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://shinsen.marumiya-store.co.jp/shops/#shop-81"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility4.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility1.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility2.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility6.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility7.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility16.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility17.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility23.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility27.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.tokiwa-industry.co.jp/shops/facility15.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/22941.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44400.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/22927.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/40563.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48699.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/42253.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41485.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/21425.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47883.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47371.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47067.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46909.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46848.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46879.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46930.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46442.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46190.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/45438.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44646.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44189.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43670.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43687.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/42963.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/42468.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/42079.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41805.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41133.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41126.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/40556.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/40525.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/18784.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/15103.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/13772.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/12775.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/11617.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/11167.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/10412.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44134.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41447.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46602.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41294.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43939.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41591.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/40686.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/18449.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/16995.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/16650.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/16599.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/15158.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48217.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47470.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47302.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43748.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/40891.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/41690.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44264.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44608.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48781.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48088.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46428.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/45490.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/12676.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/10962.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47951.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/47326.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46527.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43229.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48910.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43823.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/44523.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/46510.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/43458.html"
+        },
+        {
+          "name": "各店舗の公式案内",
+          "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48262.html"
         }
       ],
       "dataAsOf": null,
       "retrievedAt": null,
-      "checkedAt": "2026-09-08",
+      "checkedAt": null,
       "sourceUpdatedAt": null,
       "updateFrequency": null,
-      "coverage": "別府市 / 大分市 / 日出町 / 日田市 / 玖珠町。所在地の収録。全施設・当日の利用可否は未検証。",
+      "coverage": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。",
       "format": "公開案内 → JSON",
       "license": null,
       "licenseUrl": null,
@@ -2465,7 +2953,7 @@
       "localFiles": [
         "access/destinations.json"
       ],
-      "records": 23,
+      "records": 145,
       "recordUnit": "施設",
       "valueType": "公表施設情報（現況は未確認）",
       "layerIds": [
@@ -2495,7 +2983,129 @@
         "shopping-big-hita",
         "shopping-shinsen-tomoda",
         "shopping-acoop-kusu",
-        "shopping-hirose-kusu"
+        "shopping-hirose-kusu",
+        "marumiya-shop-135",
+        "marumiya-shop-137",
+        "marumiya-shop-139",
+        "marumiya-shop-118",
+        "marumiya-shop-120",
+        "marumiya-shop-132",
+        "marumiya-shop-108",
+        "marumiya-shop-106",
+        "marumiya-shop-128",
+        "marumiya-shop-124",
+        "marumiya-shop-130",
+        "marumiya-shop-126",
+        "marumiya-shop-141",
+        "marumiya-shop-112",
+        "marumiya-shop-80",
+        "marumiya-shop-82",
+        "marumiya-shop-114",
+        "marumiya-shop-72",
+        "marumiya-shop-88",
+        "marumiya-shop-86",
+        "marumiya-shop-78",
+        "marumiya-shop-74",
+        "marumiya-shop-76",
+        "marumiya-shop-159",
+        "shinsen-shop-339",
+        "shinsen-shop-55",
+        "shinsen-shop-57",
+        "shinsen-shop-61",
+        "shinsen-shop-63",
+        "shinsen-shop-65",
+        "shinsen-shop-67",
+        "shinsen-shop-69",
+        "shinsen-shop-71",
+        "shinsen-shop-73",
+        "shinsen-shop-75",
+        "shinsen-shop-83",
+        "shinsen-shop-77",
+        "shinsen-shop-79",
+        "shinsen-shop-81",
+        "tokiwa-facility4",
+        "tokiwa-facility1",
+        "tokiwa-facility2",
+        "tokiwa-facility6",
+        "tokiwa-facility7",
+        "tokiwa-facility16",
+        "tokiwa-facility17",
+        "tokiwa-facility23",
+        "tokiwa-facility27",
+        "tokiwa-facility15",
+        "cosmos-22941",
+        "cosmos-44400",
+        "cosmos-22927",
+        "cosmos-40563",
+        "cosmos-48699",
+        "cosmos-42253",
+        "cosmos-41485",
+        "cosmos-21425",
+        "cosmos-47883",
+        "cosmos-47371",
+        "cosmos-47067",
+        "cosmos-46909",
+        "cosmos-46848",
+        "cosmos-46879",
+        "cosmos-46930",
+        "cosmos-46442",
+        "cosmos-46190",
+        "cosmos-45438",
+        "cosmos-44646",
+        "cosmos-44189",
+        "cosmos-43670",
+        "cosmos-43687",
+        "cosmos-42963",
+        "cosmos-42468",
+        "cosmos-42079",
+        "cosmos-41805",
+        "cosmos-41133",
+        "cosmos-41126",
+        "cosmos-40556",
+        "cosmos-40525",
+        "cosmos-18784",
+        "cosmos-15103",
+        "cosmos-13772",
+        "cosmos-12775",
+        "cosmos-11617",
+        "cosmos-11167",
+        "cosmos-10412",
+        "cosmos-44134",
+        "cosmos-41447",
+        "cosmos-46602",
+        "cosmos-41294",
+        "cosmos-43939",
+        "cosmos-41591",
+        "cosmos-40686",
+        "cosmos-18449",
+        "cosmos-16995",
+        "cosmos-16650",
+        "cosmos-16599",
+        "cosmos-15158",
+        "cosmos-48217",
+        "cosmos-47470",
+        "cosmos-47302",
+        "cosmos-43748",
+        "cosmos-40891",
+        "cosmos-41690",
+        "cosmos-44264",
+        "cosmos-44608",
+        "cosmos-48781",
+        "cosmos-48088",
+        "cosmos-46428",
+        "cosmos-45490",
+        "cosmos-12676",
+        "cosmos-10962",
+        "cosmos-47951",
+        "cosmos-47326",
+        "cosmos-46527",
+        "cosmos-43229",
+        "cosmos-48910",
+        "cosmos-43823",
+        "cosmos-44523",
+        "cosmos-46510",
+        "cosmos-43458",
+        "cosmos-48262"
       ],
       "positionNote": "報告された施設所在地、または公式地図の概略位置。入口・現地精度は未確認。",
       "quality": {
@@ -2507,7 +3117,7 @@
         "coverage": {
           "state": "PARTIAL",
           "label": "収録範囲に限定",
-          "evidence": "別府市 / 大分市 / 日出町 / 日田市 / 玖珠町。所在地の収録。全施設・当日の利用可否は未検証。"
+          "evidence": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。"
         },
         "position": {
           "state": "UNKNOWN",
@@ -4958,7 +5568,7 @@
     }
   ],
   "overview": {
-    "destinations": 199,
+    "destinations": 321,
     "resources": 15,
     "locatedResources": 12,
     "lastRetrieved": "2026-09-09"
@@ -5078,9 +5688,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 9,
+            "count": 52,
             "unit": "買物の施設",
-            "evidence": "9 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "52 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5208,9 +5818,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 7,
+            "count": 20,
             "unit": "買物の施設",
-            "evidence": "7 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "20 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5337,10 +5947,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 9,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "9 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5468,9 +6078,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 3,
+            "count": 9,
             "unit": "買物の施設",
-            "evidence": "3 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "9 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5597,10 +6207,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 14,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "14 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5727,10 +6337,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 5,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "5 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5857,10 +6467,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 2,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -5987,10 +6597,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 2,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6117,10 +6727,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 1,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "1 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6247,10 +6857,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 3,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "3 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6377,10 +6987,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 8,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "8 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6507,10 +7117,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 4,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "4 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6637,10 +7247,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 6,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "6 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6767,10 +7377,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 2,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7028,9 +7638,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 2,
+            "count": 4,
             "unit": "買物の施設",
-            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "4 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7288,9 +7898,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 2,
+            "count": 4,
             "unit": "買物の施設",
-            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "4 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7490,7 +8100,7 @@
       "name": "スーパー・買物",
       "category": "shopping",
       "available": true,
-      "count": 23,
+      "count": 145,
       "datasetIds": [
         "dest-shopping"
       ]

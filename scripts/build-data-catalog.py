@@ -129,7 +129,8 @@ for source, rows in place_groups.items():
         if any(r['category'] == 'clinic' for r in rows): cats.append('healthcare')
     d = dataset(id, '買物の目的地（公式案内から収録）' if shopping else source, cats[0], categories=cats,
         provider=source, sourceUrl=one(r.get('sourceUrl') for r in rows), sourceUrls=sources(rows),
-        dataAsOf=one(r.get('dataAsOf') for r in rows), retrievedAt=one(r.get('retrievedAt') for r in rows),
+        dataAsOf=one(r.get('dataAsOf') for r in rows),
+        retrievedAt=one(r.get('retrievedAt') for r in rows) if all(r.get('retrievedAt') for r in rows) else None,
         checkedAt=one(r.get('checkedAt') for r in rows), sourceUpdatedAt=one(r.get('sourceUpdatedAt') for r in rows),
         license=one(r.get('license') for r in rows), licenseUrl=one(r.get('licenseUrl') for r in rows),
         dataClass=None if shopping else 'OPEN', status='PARTIAL', analysisReady='PARTIAL',
