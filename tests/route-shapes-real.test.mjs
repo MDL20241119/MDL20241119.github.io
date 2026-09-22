@@ -46,9 +46,9 @@ test('Expanded shops retain original identifiers, unique source links and munici
  const features=(await read('gaps/data/municipalities.geojson')).features;
  const shops=buildShops(snapshot,features);
  assert.deepEqual(places.filter(p=>p.category==='shopping'),shops);
- assert.equal(places.length,321);assert.equal(shops.length,145);
+ assert.equal(places.length,333);assert.equal(shops.length,157);
  assert.equal(new Set(places.map(p=>p.id)).size,places.length);
- assert.equal(new Set(shops.map(p=>p.city)).size,16);
+ assert.equal(new Set(shops.map(p=>p.city)).size,17);
  for(const p of shops){assert(p.address);assert(p.sourceUrl.startsWith('https://'));assert(!p.sourceUrl.includes('shinsenichiba.'));}
  assert(shops.some(p=>p.name.includes('富士見が丘')));
 });

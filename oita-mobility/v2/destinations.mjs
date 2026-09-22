@@ -1,7 +1,7 @@
 import {distance} from '../lab/gtfs.mjs';
 import {normalizeCategory,validPoint} from './model.mjs';
 
-export const SHOP_TYPES={supermarket:'スーパー・食品店',drugstore:'ドラッグストア・薬局',convenience:'コンビニ',department:'百貨店・商業施設',homecenter:'ホームセンター・日用品',food:'パン・生鮮・直売所',other:'その他のお店'};
+export const SHOP_TYPES={supermarket:'スーパー・食品店',drugstore:'ドラッグストア',convenience:'コンビニ',department:'百貨店・商業施設',homecenter:'ホームセンター・日用品',food:'パン・生鮮・直売所',other:'その他のお店'};
 export function shopType(p){return Object.hasOwn(SHOP_TYPES,p.shopType)?p.shopType:normalizeCategory(p.category)==='shopping'?'supermarket':null;}
 export function searchText(value){return String(value??'').normalize('NFKC').toLocaleLowerCase('ja').replace(/[ァ-ヶ]/g,c=>String.fromCharCode(c.charCodeAt(0)-0x60)).replace(/[\s・･ー‐‑–—−-]/g,'');}
 export function matchingDestinations(places,{category='all',type='all',query='',home=null}={}){

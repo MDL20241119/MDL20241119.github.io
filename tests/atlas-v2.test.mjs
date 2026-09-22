@@ -8,7 +8,8 @@ const fields={
   agency:[{agency_id:'s',agency_name:'Synthetic test only',agency_url:'https://example.org',agency_timezone:'Asia/Tokyo'}],
   routes:[{route_id:'r',agency_id:'s',route_long_name:'Test',route_type:'3'}],
   stops:[{stop_id:'A',stop_name:'A',stop_lat:'33',stop_lon:'131'},{stop_id:'B',stop_name:'B',stop_lat:'33',stop_lon:'131.02'}],
-  trips:[{trip_id:'out',route_id:'r',service_id:'s'},{trip_id:'back',route_id:'r',service_id:'s'}],
+  trips:[{trip_id:'out',route_id:'r',service_id:'s',shape_id:'out-shape'},{trip_id:'back',route_id:'r',service_id:'s',shape_id:'back-shape'}],
+  shapes:['out','back'].flatMap(direction=>(direction==='out'?[[33,131],[33.001,131.01],[33,131.02]]:[[33,131.02],[33.001,131.01],[33,131]]).map(([lat,lon],i)=>({shape_id:direction+'-shape',shape_pt_lat:String(lat),shape_pt_lon:String(lon),shape_pt_sequence:String(i+1)}))),
   calendar:[{service_id:'s',start_date:'20260901',end_date:'20260930',monday:'1',tuesday:'1',wednesday:'1',thursday:'1',friday:'1',saturday:'1',sunday:'1'}],
   calendar_dates:[{service_id:'s',date:'20261001',exception_type:'1'}],
   feed_info:[{feed_publisher_name:'Test only',feed_publisher_url:'https://example.org',feed_lang:'ja',feed_start_date:'20260901',feed_end_date:'20260930'}],
@@ -26,7 +27,7 @@ const options={departure:32400,activityFrom:34200,activityTo:34200,dwell:30,dead
 const request={mode:'journey',files:[fixture],home:{lat:33,lon:131},facilities:[{id:'b',name:'Test B',lat:33,lon:131.02}],options};
 async function run(data){messages=[];await self.onmessage({data:{id:1,...data}});const final=messages.at(-1);assert(!final.error,final.error);assert.equal(final.done,true);return final;}
 
-test('Worker returns a valid round trip with no fabricated fare',async()=>{const d=await run({...request,date:'2026-09-22'});const r=d.results[0].result;assert.equal(r.state,'candidate');assert.equal(r.homeAt,37800);assert.equal(r.cost,null);});
+test('Worker returns a valid round trip, direction-specific geometry and no fabricated fare',async()=>{const d=await run({...request,date:'2026-09-22'});const r=d.results[0].result;assert.equal(r.state,'candidate');assert.equal(r.homeAt,37800);assert.equal(r.cost,null);const out=r.outbound.path.find(l=>l.mode==='bus').geometry,back=r.inbound.path.find(l=>l.mode==='bus').geometry;assert.equal(out.kind,'gtfs-shape');assert.deepEqual(out.points,[[33,131],[33.001,131.01],[33,131.02]]);assert.deepEqual(back.points,[...out.points].reverse());});
 test('Expired feed with an added service exception cannot produce a round-trip candidate',async()=>{const d=await run({...request,date:'2026-10-01'});const r=d.results[0].result;assert.equal(r.state,'unknown');assert.equal(r.outbound,undefined);assert.equal(d.evidence.feeds[0].coverage,'outside');});
 test('Valid walking-only candidate is preserved when transport data has expired',async()=>{const d=await run({...request,date:'2026-10-01',facilities:[{id:'near',name:'Near',lat:33,lon:131.001}],options:{...options,maxWalk:500,totalWalk:1000}});assert.equal(d.results[0].result.state,'candidate');});
 test('Real Kamenoi expired date exposes no selectable trips',async()=>{const d=await run({mode:'trips',date:'2027-03-21',files:catalog.filter(f=>f.name==='亀の井バス')});assert.equal(d.evidence.feeds[0].coverage,'outside');assert.equal(d.trips.length,0);});

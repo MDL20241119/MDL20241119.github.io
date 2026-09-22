@@ -129,8 +129,7 @@ for source, rows in place_groups.items():
         if any(r['category'] == 'clinic' for r in rows): cats.append('healthcare')
     d = dataset(id, '買物の目的地（公式案内から収録）' if shopping else source, cats[0], categories=cats,
         provider=source, sourceUrl=one(r.get('sourceUrl') for r in rows), sourceUrls=sources(rows),
-        dataAsOf=one(r.get('dataAsOf') for r in rows),
-        retrievedAt=one(r.get('retrievedAt') for r in rows) if all(r.get('retrievedAt') for r in rows) else None,
+        dataAsOf=one(r.get('dataAsOf') for r in rows), retrievedAt=one(r.get('retrievedAt') for r in rows) if all(r.get('retrievedAt') for r in rows) else None,
         checkedAt=one(r.get('checkedAt') for r in rows), sourceUpdatedAt=one(r.get('sourceUpdatedAt') for r in rows),
         license=one(r.get('license') for r in rows), licenseUrl=one(r.get('licenseUrl') for r in rows),
         dataClass=None if shopping else 'OPEN', status='PARTIAL', analysisReady='PARTIAL',
@@ -140,7 +139,7 @@ for source, rows in place_groups.items():
         limitations=unique([r.get('dataNote') for r in rows] + ['受付時間・当日の利用資格・入口までの歩行経路は未確認。', '収録なしは施設なしを意味しません。'] + (['公式案内の事実情報。包括的なオープンライセンスは未確認。', '公式地図の中心などによる概略位置を含みます。'] if shopping else [])),
         records=len(rows), recordUnit='施設', valueType='公表施設情報（現況は未確認）',
         recordIds=[r['id'] for r in rows],
-        usedFor=[usage('目的地の表示・選択した施設への往復', 'accessibility.html'), usage('選択時：交通空白の往復条件', 'transport-gaps.html')],
+        usedFor=[usage('地図で行き先を選び往復検索', 'index.html'), usage('目的地の表示・選択した施設への往復', 'accessibility.html'), usage('選択時：交通空白の往復条件', 'transport-gaps.html')],
         localFiles=['access/destinations.json'], layerIds=unique({'hospital':'hospitals','clinic':'clinics','school':'schools','shopping':'shops','civic':'civic','library':'civic'}[r['category']] for r in rows),
         scope='目的地', positionNote='報告された施設所在地、または公式地図の概略位置。入口・現地精度は未確認。')
 
@@ -240,7 +239,7 @@ missing = [
     ('taxi','タクシーの供給・予約可能台数','transport','過去の公表タクシーODはありますが、現時点の供給状況ではありません。'),
     ('roads','歩行道路・歩道段差','terrain','現在の徒歩計算は直線距離に補正係数を掛けた概算です。'),
     ('elevation','標高・傾斜','terrain','実際の坂道・勾配を計算には反映していません。'),
-    ('pharmacies','薬局の所在地・営業時間','healthcare','薬局の一覧は未収録。'),
+    ('pharmacies','薬局の所在地・営業時間','healthcare','調剤薬局の一覧は未収録。買物候補には一部のドラッグストアを収録。'),
     ('welfare','福祉施設・通いの場の一覧','welfare','移動支援事例の収録と、福祉施設・通いの場の網羅は別です。'),
     ('mobile-shopping','移動販売の運行日・区域','shopping','店舗の所在地や買物送迎と、移動販売の運行情報は別です。'),
     ('childcare','保育施設・学校の網羅的な一覧','education','学校は自治体公表データの一部のみ。'),

@@ -5,7 +5,7 @@
   "sourceHashes": {
     "data/gtfs/catalog.json": "e9a86683995dd20f2ecce20c83113421c3f008186740f1be1e22646cbf2540af",
     "data/map-data.json": "d0a07d45d05937bd775110e3a7269ff3a6dac4cf528deaec5ca80e96a9b52fba",
-    "access/destinations.json": "4f58ec99d7cbc38411a4097e70c36c3d5d10ffb18966841c5be3e874af267406",
+    "access/destinations.json": "c99c298757dd1357fadbffe92128730d13ec5fd8528591b7b870c7a7989fb450",
     "gaps/resources.json": "1cebff61ff2416f0c470a83ab15f9fa5a63416f68a3eaa47f006cd015f504469",
     "gaps/data/sources.json": "ed48e2740c09a76725562a165d605adb792be9427fad5216766e655c5091f96b",
     "gaps/data/municipalities.geojson": "af48357dd401dc2c1337c7a807e934c0a0b3e5d924b0dd38015a5ecdeb2a2409",
@@ -1763,6 +1763,10 @@
       ],
       "usedFor": [
         {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
+        {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
         },
@@ -1955,7 +1959,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -1993,6 +1997,10 @@
         "自治体公表の施設位置。入口・歩行経路・最新の利用可否は未確認。"
       ],
       "usedFor": [
+        {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
         {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
@@ -2045,7 +2053,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -2085,6 +2093,10 @@
         "自治体公表の施設位置。入口・歩行経路・最新の利用可否は未確認。"
       ],
       "usedFor": [
+        {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
         {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
@@ -2142,7 +2154,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -2181,6 +2193,10 @@
         "自治体公表の施設位置。入口・歩行経路・最新の利用可否は未確認。"
       ],
       "usedFor": [
+        {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
         {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
@@ -2235,7 +2251,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -2273,6 +2289,10 @@
         "自治体公表の施設位置。入口・歩行経路・最新の利用可否は未確認。"
       ],
       "usedFor": [
+        {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
         {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
@@ -2326,7 +2346,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -2919,6 +2939,54 @@
         {
           "name": "各店舗の公式案内",
           "url": "https://www.cosmospc.co.jp/shop/kyushu/oita/48262.html"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/14"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/13"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/12"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/11"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/10"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/9"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/8"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/7"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/6"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/5"
+        },
+        {
+          "name": "Aコープ九州 公式店舗ページ",
+          "url": "https://www.acoop-kyushu.jp/store/archives/3"
+        },
+        {
+          "name": "ショッピングセンターはなだ 公式案内",
+          "url": "https://himeshima-hanada.com/"
         }
       ],
       "dataAsOf": null,
@@ -2926,7 +2994,7 @@
       "checkedAt": null,
       "sourceUpdatedAt": null,
       "updateFrequency": null,
-      "coverage": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。",
+      "coverage": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 姫島村 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。",
       "format": "公開案内 → JSON",
       "license": null,
       "licenseUrl": null,
@@ -2942,6 +3010,10 @@
       ],
       "usedFor": [
         {
+          "label": "地図で行き先を選び往復検索",
+          "url": "index.html"
+        },
+        {
           "label": "目的地の表示・選択した施設への往復",
           "url": "accessibility.html"
         },
@@ -2953,7 +3025,7 @@
       "localFiles": [
         "access/destinations.json"
       ],
-      "records": 145,
+      "records": 157,
       "recordUnit": "施設",
       "valueType": "公表施設情報（現況は未確認）",
       "layerIds": [
@@ -3105,7 +3177,19 @@
         "cosmos-44523",
         "cosmos-46510",
         "cosmos-43458",
-        "cosmos-48262"
+        "cosmos-48262",
+        "shopping-acoop-14",
+        "shopping-acoop-13",
+        "shopping-acoop-12",
+        "shopping-acoop-11",
+        "shopping-acoop-10",
+        "shopping-acoop-9",
+        "shopping-acoop-8",
+        "shopping-acoop-7",
+        "shopping-acoop-6",
+        "shopping-acoop-5",
+        "shopping-acoop-3",
+        "shopping-hanada-himeshima"
       ],
       "positionNote": "報告された施設所在地、または公式地図の概略位置。入口・現地精度は未確認。",
       "quality": {
@@ -3117,7 +3201,7 @@
         "coverage": {
           "state": "PARTIAL",
           "label": "収録範囲に限定",
-          "evidence": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。"
+          "evidence": "中津市 / 佐伯市 / 別府市 / 国東市 / 大分市 / 姫島村 / 宇佐市 / 日出町 / 日田市 / 杵築市 / 津久見市 / 玖珠町 / 由布市 / 竹田市 / 臼杵市 / 豊後大野市 / 豊後高田市。所在地の収録。全施設・当日の利用可否は未検証。"
         },
         "position": {
           "state": "UNKNOWN",
@@ -3132,7 +3216,7 @@
         "analysis": {
           "state": "PARTIAL",
           "label": "用途・条件に制約",
-          "evidence": "目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
+          "evidence": "地図で行き先を選び往復検索 / 目的地の表示・選択した施設への往復 / 選択時：交通空白の往復条件"
         }
       }
     },
@@ -5089,7 +5173,7 @@
       "analysisReady": "NOT_READY",
       "processing": null,
       "limitations": [
-        "薬局の一覧は未収録。"
+        "調剤薬局の一覧は未収録。買物候補には一部のドラッグストアを収録。"
       ],
       "usedFor": [],
       "localFiles": [],
@@ -5568,7 +5652,7 @@
     }
   ],
   "overview": {
-    "destinations": 321,
+    "destinations": 333,
     "resources": 15,
     "locatedResources": 12,
     "lastRetrieved": "2026-09-09"
@@ -6208,9 +6292,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 14,
+            "count": 17,
             "unit": "買物の施設",
-            "evidence": "14 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "17 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6338,9 +6422,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 5,
+            "count": 7,
             "unit": "買物の施設",
-            "evidence": "5 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "7 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6598,9 +6682,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 2,
+            "count": 3,
             "unit": "買物の施設",
-            "evidence": "2 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "3 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -6858,9 +6942,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 3,
+            "count": 5,
             "unit": "買物の施設",
-            "evidence": "3 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "5 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7118,9 +7202,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 4,
+            "count": 6,
             "unit": "買物の施設",
-            "evidence": "4 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "6 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7248,9 +7332,9 @@
           },
           "shopping": {
             "status": "PARTIAL",
-            "count": 6,
+            "count": 7,
             "unit": "買物の施設",
-            "evidence": "6 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
+            "evidence": "7 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -7507,10 +7591,10 @@
             "datasetId": null
           },
           "shopping": {
-            "status": "NOT_AVAILABLE",
-            "count": 0,
+            "status": "PARTIAL",
+            "count": 1,
             "unit": "買物の施設",
-            "evidence": "対応するレイヤー／この自治体のレコードを既存ファイルに収録していません。外部データや実際のサービスの有無は未確認。",
+            "evidence": "1 買物の施設を既存ファイル内で確認。カテゴリ全体の網羅性は未確認。",
             "datasetId": "dest-shopping"
           },
           "education": {
@@ -8100,7 +8184,7 @@
       "name": "スーパー・買物",
       "category": "shopping",
       "available": true,
-      "count": 145,
+      "count": 157,
       "datasetIds": [
         "dest-shopping"
       ]
