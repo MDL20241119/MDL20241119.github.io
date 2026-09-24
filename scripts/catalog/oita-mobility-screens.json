@@ -1,0 +1,110 @@
+[
+  {
+    "file": "oita-mobility/guide/screens/people.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/index.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1276,
+    "height": 966,
+    "sha256": "ffc51c82556c1fd93c9e8d202d73e66041c68016ec7ffc45020e247a97a3ad1d"
+  },
+  {
+    "file": "oita-mobility/guide/screens/conditions.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/index.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "8304bacb0edc7f27bae154e79530f1d269fa1aa3b8e794774cd4d957ffae69e9"
+  },
+  {
+    "file": "oita-mobility/guide/screens/opportunity.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/index.html#opportunity-section",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "444068baf85619c42a6e1d1fc8d7d467e6b8ab341dc0cecf33b55151c650cbfe"
+  },
+  {
+    "file": "oita-mobility/guide/screens/atlas.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/atlas.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1276,
+    "height": 930,
+    "sha256": "d7a7c738e727b742a96c394b7cd473b3ba619a7a54433f446cc2708d996f823b"
+  },
+  {
+    "file": "oita-mobility/guide/screens/resources.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/atlas.html?city=44201#resource-list",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "e59a7fa1d7049a313be624eff8157be4a5dda41327506db71a16e583f0bb86b5"
+  },
+  {
+    "file": "oita-mobility/guide/screens/lab.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/policy.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1363,
+    "height": 936,
+    "sha256": "3dd9e253da3a3b6cf0c27ea5e1ddb522ea1e02f8e248f640bfdb1bef751466ee"
+  },
+  {
+    "file": "oita-mobility/guide/screens/comparison.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/policy.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "06f9db15c6d037ebdec56267514c6e565d47cf2ed8fb70340985dad35d9d9e40"
+  },
+  {
+    "file": "oita-mobility/guide/screens/learning.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/policy.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "b45ca0465cd80c48c1079be3355607dc3081ec8810fa7578ce9d3bd5cfed02b3"
+  },
+  {
+    "file": "oita-mobility/guide/screens/legacy.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/lab.html#example",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "631de6a035e0f29c8b1e0f681644b4cfb5ea9f71435ec7fb4e51ac6004dbd353"
+  },
+  {
+    "file": "oita-mobility/guide/screens/data.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/data-catalog.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "94a40b0980ee69d5041b4222f0182e8b399d39b163e88c93fe014288aeed9acd"
+  },
+  {
+    "file": "oita-mobility/guide/screens/data-gap.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/data-catalog.html#data-gap",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "ffa279ce8994b7910a666373e7f47e56b3dc2ccd10f3aeeaeac7130624886170"
+  },
+  {
+    "file": "oita-mobility/guide/screens/provenance.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/data-catalog.html",
+    "captured": "2026-09-24",
+    "type": "live-browser-screenshot",
+    "width": 1348,
+    "height": 926,
+    "sha256": "ac491fc2c86eeda1971378ab1bc0f61443cf7fade4a6787c377a8266ef5e2102"
+  }
+]
