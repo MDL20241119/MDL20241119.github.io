@@ -1,0 +1,46 @@
+{
+  "executed_at": "2026-09-25T00:02:34.751014+00:00",
+  "environment": "local synthetic data; Node 24 / SQLite",
+  "suites": [
+    {
+      "suite": "integration",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "--test-reporter=tap",
+        "tests/integration.test.ts"
+      ],
+      "exit_code": 0,
+      "tests": 20,
+      "log": "tests/results/integration.txt"
+    },
+    {
+      "suite": "domain",
+      "command": [
+        "node",
+        "--test",
+        "--test-reporter=tap",
+        "tests/domain.test.mjs"
+      ],
+      "exit_code": 0,
+      "tests": 22,
+      "log": "tests/results/domain.txt"
+    },
+    {
+      "suite": "sqlite",
+      "command": [
+        "python3",
+        "tests/concurrency_test.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "log": "tests/results/sqlite.txt"
+    }
+  ],
+  "total_local_tests": 46,
+  "external_connections_tested": 0,
+  "full_acceptance_complete": false,
+  "integration_test_sha256": "8079eb5b81fb010985cb7d03a64cf28026f7cf72a025806d6a8f2b26487e8386"
+}

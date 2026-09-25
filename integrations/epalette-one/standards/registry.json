@@ -1,0 +1,126 @@
+{
+  "recorded_at": "2026-09-24T23:59:08.764358+00:00",
+  "sources": [
+    {
+      "name": "mcp",
+      "version": "2026-07-28",
+      "commit": "24efd6e7cbd7a074e6b3b781eb370891df40afad",
+      "source": "https://github.com/modelcontextprotocol/modelcontextprotocol/blob/24efd6e7cbd7a074e6b3b781eb370891df40afad/schema/2026-07-28/schema.json",
+      "retrieved_at": "2026-09-24T23:23:32.925743+00:00",
+      "path": "standards/upstream/mcp/schema.json",
+      "licence": "Apache-2.0 / MIT legacy contributions; see bundled LICENSE",
+      "bytes": 181475,
+      "sha256": "2ae26eb52861cfcc52cb4c27980623b984d7f6caece2ef06fdf160ee1913f9f0"
+    },
+    {
+      "name": "a2a",
+      "version": "1.0",
+      "commit": "afda8316c64951a2ecb2a0d3d10867405d2b4095",
+      "source": "https://github.com/a2aproject/A2A/blob/afda8316c64951a2ecb2a0d3d10867405d2b4095/specification/a2a.proto",
+      "retrieved_at": "2026-09-24T23:23:35.321790+00:00",
+      "path": "standards/upstream/a2a/a2a.proto",
+      "licence": "Apache-2.0",
+      "bytes": 35943,
+      "sha256": "45bfa50ca5732d81439e0b853425123c04e8e5a1721d8bdddf3ae9454f81008f"
+    },
+    {
+      "name": "demand",
+      "version": "1.0.0",
+      "source": "https://www.mlit.go.jp/commmmons/document/003/commmmons_doc_003_ver01.zip",
+      "retrieved_at": "2026-09-24T23:23:00.233358+00:00",
+      "archive": {
+        "bytes": 8956538,
+        "sha256": "0559ec827f82208c87a4919322f2aa83be23fd70b55c6d47420af8b507381eda"
+      },
+      "archive_member": "API/commmmons_doc_003-07_ver01.yaml",
+      "path": "standards/upstream/commmmons/demand.yaml",
+      "licence": "PDL1.0 subject to exclusions; see ATTRIBUTION.md",
+      "bytes": 491367,
+      "sha256": "d0462291f46f8353f4a1d7ee7fd40562137b3e3d4e36af40fab945f1a679f0bc"
+    },
+    {
+      "name": "qr-hub",
+      "version": "1.0.0",
+      "source": "https://www.mlit.go.jp/commmmons/document/004/commmmons_doc_004_ver01.zip",
+      "retrieved_at": "2026-09-24T23:23:12.093331+00:00",
+      "archive": {
+        "bytes": 9181994,
+        "sha256": "c51d228efe8bb6b932b6bc705e064ca9c5e20385563d4e6cfd48859f7a7a2ad6"
+      },
+      "archive_member": "API（仲介HUBシステム）/commmmons_doc_004-07-01_ver01.yaml",
+      "path": "standards/upstream/commmmons/qr-hub.yaml",
+      "licence": "PDL1.0 subject to exclusions; see ATTRIBUTION.md",
+      "bytes": 10982,
+      "sha256": "a499e2779f2aa4548b7219016883453e0ce7b159f59136c0ea4354ade8af76a3"
+    },
+    {
+      "name": "qr-maas",
+      "version": "1.0.0",
+      "source": "https://www.mlit.go.jp/commmmons/document/004/commmmons_doc_004_ver01.zip",
+      "retrieved_at": "2026-09-24T23:23:12.093331+00:00",
+      "archive": {
+        "bytes": 9181994,
+        "sha256": "c51d228efe8bb6b932b6bc705e064ca9c5e20385563d4e6cfd48859f7a7a2ad6"
+      },
+      "archive_member": "API（MaaSシステム）/commmmons_doc_004-07-02_ver01.yaml",
+      "path": "standards/upstream/commmmons/qr-maas.yaml",
+      "licence": "PDL1.0 subject to exclusions; see ATTRIBUTION.md",
+      "bytes": 5109,
+      "sha256": "594dbdc92abe5f3a297ca3afa46ec5b72eae3c10eb9a9196f73dcc1977534610"
+    },
+    {
+      "name": "qr-auth",
+      "version": "1.0.0",
+      "source": "https://www.mlit.go.jp/commmmons/document/004/commmmons_doc_004_ver01.zip",
+      "retrieved_at": "2026-09-24T23:23:12.093331+00:00",
+      "archive": {
+        "bytes": 9181994,
+        "sha256": "c51d228efe8bb6b932b6bc705e064ca9c5e20385563d4e6cfd48859f7a7a2ad6"
+      },
+      "archive_member": "API（認証システム）/commmmons_doc_004-07-01_ver01.yaml",
+      "path": "standards/upstream/commmmons/qr-auth.yaml",
+      "licence": "PDL1.0 subject to exclusions; see ATTRIBUTION.md",
+      "bytes": 9940,
+      "sha256": "3c853d950afab62915323e1851f2c46b39688906731e5fc60ebc4ade53529539"
+    },
+    {
+      "name": "GTFS-JP",
+      "version": "v4",
+      "source": "https://www.mlit.go.jp/commmmons/document/007/commmmons_doc_007-01_ver01.pdf",
+      "retrieved_at": "2026-09-24T23:30:50.366903+00:00",
+      "path": null,
+      "redistributed": false,
+      "licence": "MLIT PDL1.0 subject to exclusions",
+      "bytes": 6851604,
+      "sha256": "42a1151a6b1a2bd5a00c4a44412293b8ef2f7068b7d66d25adf8ba94084203bb"
+    }
+  ],
+  "derivatives": [
+    {
+      "path": "lib/integration/contracts/qr-maas.json",
+      "bytes": 1958,
+      "sha256": "d0e2afbabb0ff16543f0a6635786f59b5022b90a80333d3d060934368f7be67a"
+    },
+    {
+      "path": "lib/integration/contracts/qr-hub.json",
+      "bytes": 4783,
+      "sha256": "35119683c7cd8399c646fd4214124c197a970b34a016f5a667f42f6588dc9202"
+    },
+    {
+      "path": "lib/integration/contracts/validators.mjs",
+      "bytes": 1125174,
+      "sha256": "39578587c251808fb08601fa6f0efc04363ba89a61a073d69f1f0153af66d28d"
+    },
+    {
+      "path": "lib/integration/contracts/demand.json",
+      "bytes": 83436,
+      "sha256": "54c547de203cc5db8eb7abd144c0f5efeeb7fd82402ef79b9e9c10e8e59c17b0"
+    },
+    {
+      "path": "lib/integration/contracts/qr-auth.json",
+      "bytes": 4272,
+      "sha256": "341a83bb30996a41b4900079be8f443a81985644330284030fb479201cc006c3"
+    }
+  ],
+  "note": "Versions pinned for this implementation. Prior-project test results are not evidence of e-Palette conformance."
+}

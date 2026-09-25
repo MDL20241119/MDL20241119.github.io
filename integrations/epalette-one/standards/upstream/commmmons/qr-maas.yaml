@@ -1,0 +1,134 @@
+openapi: 3.0.3
+info:
+  title: QRチケット相互運用API標準仕様書（MaaSシステム）
+  description: |-
+    本ドキュメントは、QRチケット相互運用におけるMaaSシステム（ユーザーアプリおよびバックエンド）向けAPI仕様を定義した OpenAPI 定義です。<br>各 API は、認証システムからのチケット利用状態の通知を受け付け、アプリ上の表示を同期させるなど、システム間の相互接続性向上を意図して設計されています。<br>HTTP ステータスコードが `200 OK` 以外の場合のレスポンス構造は RFC 9457 に準拠しています。<br>本仕様書に記載されている HTTP ステータスコードは、各 API において一般的に想定されるステータスコードの推奨例です。<br>実装にあたっては、これらを基準としつつ、サービスの要件や運用状況に応じて必要に応じたステータスコードを柔軟に追加してください。
+  contact:
+    url: https://www.mlit.go.jp/commmmons/
+  version: 1.0.0
+paths:
+  /notify-authenticated-ticket:
+    post:
+      tags:
+        - notify-authenticated-ticket
+      summary: (M13-IF-040)QRチケット状態受付API
+      description: |-
+        認証システムからチケットの認証情報を受け付ける。
+      operationId: putNotify-authenticated-ticket
+      requestBody:
+        $ref: "#/components/requestBodies/NotifyAuthenticatedTicketRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/Result"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+
+components:
+  requestBodies:
+    NotifyAuthenticatedTicketRequest:
+      description: "チケット認証通知リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              datetime_at:
+                $ref: "#/components/schemas/datetime_at"
+              location:
+                $ref: "#/components/schemas/location"
+              terminal_type:
+                $ref: "#/components/schemas/terminal_type"
+              common_ticket_id:
+                $ref: "#/components/schemas/common_ticket_id"
+              use_type:
+                $ref: "#/components/schemas/use_type"
+  responses:
+    Result:
+      description: 処理結果
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              result:
+                type: boolean
+                description: |-
+                  処理結果
+    BadRequest:
+      description: |-
+        データ異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    NotFound:
+      description: |-
+        データ項目異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    InternalServerError:
+      description: |-
+        サーバー処理異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+  schemas:
+    request_id:
+      type: string
+      description: |-
+        APIの実行を特定するためのID。UUIDをセットする
+    exec_datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        API実行日時
+    datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        認証が実行された日時<br/>- t_usage_log.exec_at
+    location:
+      type: string
+      description: |-
+        認証が実行された場所<br/>- t_usage_log.location
+    terminal_type:
+      type: string
+      description: |-
+        認証時に使用された機器<br/>- t_usage_log.terminal_type
+    common_ticket_id:
+      type: string
+      description: |-
+        認証されたチケットを特定するためのID<br/>- t_usage_log.common_ticket_id
+    use_type:
+      type: string
+      enum: ["start", "entry", "exit", "use", "refund", "cancel"]
+      description: |-
+        認証のタイプ
+          start: 発券 entry: 入場 exit: 出場 use: 利用開始宣言 refund: 払戻 cancel: 取消<br/>- t_usage_log.use_type

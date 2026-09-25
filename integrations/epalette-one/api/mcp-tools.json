@@ -1,0 +1,456 @@
+{
+  "protocolVersion": "2026-07-28",
+  "authentication": "Delegated bearer; host access gate configuration and target client verification still required",
+  "tools": [
+    {
+      "name": "search_trips",
+      "description": "指定日・乗降場所・人数から乗車可能な便を検索します。日時や場所を推測しないでください。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "date": {
+            "type": "string",
+            "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+          },
+          "fromStop": {
+            "type": "string",
+            "enum": [
+              "oita-station",
+              "community-hub"
+            ]
+          },
+          "toStop": {
+            "type": "string",
+            "enum": [
+              "oita-station",
+              "community-hub"
+            ]
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "wheelchairs": {
+            "type": "integer",
+            "minimum": 0,
+            "maximum": 1,
+            "default": 0
+          }
+        },
+        "required": [
+          "date",
+          "fromStop",
+          "toStop",
+          "count"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_my_reservations",
+      "description": "認証された本人の乗車予約を確認します。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_vehicle_status",
+      "description": "管理者が許可された車両状態と取得時刻を確認します。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_charge_plan",
+      "description": "管理者が普通・急速の充電時間と開始期限を計算します。不明な入力は推測しません。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "vehicleId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_today_actions",
+      "description": "管理者が必要な充電・返却・引継ぎを確認します。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prepare_ride_booking",
+      "description": "乗車予約案を作成し本人の確認URLを返します。まだ予約は確定しません。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "tripId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "fromStop": {
+            "type": "string",
+            "const": "oita-station"
+          },
+          "toStop": {
+            "type": "string",
+            "const": "community-hub"
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "tripId",
+          "count",
+          "fromStop",
+          "toStop",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prepare_ride_cancellation",
+      "description": "自分の予約の取消案を作り、本人の確認URLを返します。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "reservationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "reservationId",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prepare_charge_request",
+      "description": "充電担当者への依頼案を作成します。実機を操作しません。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "bookingId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "stationId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "owner": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "vehicleId",
+          "bookingId",
+          "stationId",
+          "owner",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prepare_vehicle_booking",
+      "description": "車両の利用予約案を作ります。乗客の乗車予約とは別です。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "vehicleId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "driverId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "title": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "purpose": {
+            "type": "string",
+            "enum": [
+              "shuttle",
+              "ondemand",
+              "shop",
+              "charge"
+            ]
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "end": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "route": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "distance": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 500
+          },
+          "targetSoc": {
+            "type": "number",
+            "minimum": 0,
+            "maximum": 100
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "vehicleId",
+          "driverId",
+          "title",
+          "purpose",
+          "start",
+          "end",
+          "route",
+          "distance",
+          "targetSoc",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "prepare_on_demand_request",
+      "description": "オンデマンド乗車依頼の案を作ります。承認後も配車待ちです。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "fromStop": {
+            "type": "string",
+            "const": "oita-station"
+          },
+          "toStop": {
+            "type": "string",
+            "const": "community-hub"
+          },
+          "start": {
+            "type": "string",
+            "format": "date-time"
+          },
+          "count": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 8
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "fromStop",
+          "toStop",
+          "start",
+          "count",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "get_proposal",
+      "description": "本人の承認待ち内容と実行結果を確認します。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "proposalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          }
+        },
+        "required": [
+          "proposalId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
+      "name": "execute_approved",
+      "description": "有効な本人承認がある内容だけを実行します。承認済みフラグの指定はできません。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {
+          "proposalId": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "requestId": {
+            "type": "string",
+            "minLength": 8,
+            "maxLength": 100,
+            "pattern": "^[\\w.-]+$",
+            "description": "一つの依頼に一つのID。再送時は同じIDを使う。",
+            "x-mcp-header": "Request-Id"
+          }
+        },
+        "required": [
+          "proposalId",
+          "requestId"
+        ],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": false,
+        "destructiveHint": true,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    }
+  ]
+}

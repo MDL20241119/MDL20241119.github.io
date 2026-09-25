@@ -1,0 +1,142 @@
+TAP version 13
+# Subtest: AT-01: SOC event changes next-use readiness
+ok 1 - AT-01: SOC event changes next-use readiness
+  ---
+  duration_ms: 3.404172
+  type: 'test'
+  ...
+# Subtest: AT-02: old SOC is unknown and cannot produce a charge plan
+ok 2 - AT-02: old SOC is unknown and cannot produce a charge plan
+  ---
+  duration_ms: 0.428796
+  type: 'test'
+  ...
+# Subtest: AT-06: expired driver cannot check in
+ok 3 - AT-06: expired driver cannot check in
+  ---
+  duration_ms: 0.293823
+  type: 'test'
+  ...
+# Subtest: AT-07: missing physical checks blocks start
+ok 4 - AT-07: missing physical checks blocks start
+  ---
+  duration_ms: 0.608007
+  type: 'test'
+  ...
+# Subtest: AT-08: reference reverse deadlines 10:40, 14:30, 14:45
+ok 5 - AT-08: reference reverse deadlines 10:40, 14:30, 14:45
+  ---
+  duration_ms: 13.417296
+  type: 'test'
+  ...
+# Subtest: AT-09: connected at 0 kW is not charging or complete
+ok 6 - AT-09: connected at 0 kW is not charging or complete
+  ---
+  duration_ms: 0.425011
+  type: 'test'
+  ...
+# Subtest: AT-10: lower delivered power extends estimate
+ok 7 - AT-10: lower delivered power extends estimate
+  ---
+  duration_ms: 0.624171
+  type: 'test'
+  ...
+# Subtest: AT-11: unknown charger access cannot be assigned
+ok 8 - AT-11: unknown charger access cannot be assigned
+  ---
+  duration_ms: 1.010403
+  type: 'test'
+  ...
+# Subtest: AT-12: shared charger power is divided
+ok 9 - AT-12: shared charger power is divided
+  ---
+  duration_ms: 0.277398
+  type: 'test'
+  ...
+# Subtest: AT-13: vehicle conversion buffer rejects overlapping ride
+ok 10 - AT-13: vehicle conversion buffer rejects overlapping ride
+  ---
+  duration_ms: 0.472402
+  type: 'test'
+  ...
+# Subtest: AT-14: ticket capacity is per overlapping segment
+ok 11 - AT-14: ticket capacity is per overlapping segment
+  ---
+  duration_ms: 0.392432
+  type: 'test'
+  ...
+# Subtest: AT-16: unresolved orders prevent return receipt
+ok 12 - AT-16: unresolved orders prevent return receipt
+  ---
+  duration_ms: 0.449378
+  type: 'test'
+  ...
+# Subtest: AT-17: hold cannot be cleared with an active fault
+ok 13 - AT-17: hold cannot be cleared with an active fault
+  ---
+  duration_ms: 0.307233
+  type: 'test'
+  ...
+# Subtest: AT-18: charge start does not complete return
+ok 14 - AT-18: charge start does not complete return
+  ---
+  duration_ms: 0.299211
+  type: 'test'
+  ...
+# Subtest: AT-21: inactive recipient cannot acknowledge
+ok 15 - AT-21: inactive recipient cannot acknowledge
+  ---
+  duration_ms: 0.302086
+  type: 'test'
+  ...
+# Subtest: AT-22: impossible target is not clamped to 100%
+ok 16 - AT-22: impossible target is not clamped to 100%
+  ---
+  duration_ms: 0.138869
+  type: 'test'
+  ...
+# Subtest: duplicate boarding does not double count
+ok 17 - duplicate boarding does not double count
+  ---
+  duration_ms: 0.314785
+  type: 'test'
+  ...
+# Subtest: unpaid ready order cannot be handed out
+ok 18 - unpaid ready order cannot be handed out
+  ---
+  duration_ms: 0.57055
+  type: 'test'
+  ...
+# Subtest: paid cancellation keeps refund pending
+ok 19 - paid cancellation keeps refund pending
+  ---
+  duration_ms: 0.225099
+  type: 'test'
+  ...
+# Subtest: charge request is a task and not a vehicle command
+ok 20 - charge request is a task and not a vehicle command
+  ---
+  duration_ms: 0.387544
+  type: 'test'
+  ...
+# Subtest: cross-midnight reverse planning preserves dates
+ok 21 - cross-midnight reverse planning preserves dates
+  ---
+  duration_ms: 0.080882
+  type: 'test'
+  ...
+# Subtest: last stock cannot be oversold sequentially
+ok 22 - last stock cannot be oversold sequentially
+  ---
+  duration_ms: 0.356878
+  type: 'test'
+  ...
+1..22
+# tests 22
+# suites 0
+# pass 22
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 107.829299

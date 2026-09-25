@@ -1,0 +1,130 @@
+TAP version 13
+# Subtest: INT-01 common tickets and capacity across UI/API/protocol adapters
+ok 1 - INT-01 common tickets and capacity across UI/API/protocol adapters
+  ---
+  duration_ms: 4.933647
+  type: 'test'
+  ...
+# Subtest: INT-02 MCP stateless discover/list/call local protocol contract (external AI pending)
+ok 2 - INT-02 MCP stateless discover/list/call local protocol contract (external AI pending)
+  ---
+  duration_ms: 8.177567
+  type: 'test'
+  ...
+# Subtest: INT-03 A2A v1 local task lifecycle and caller isolation (external peer pending)
+ok 3 - INT-03 A2A v1 local task lifecycle and caller isolation (external peer pending)
+  ---
+  duration_ms: 8.517771
+  type: 'test'
+  ...
+# Subtest: INT-04 approved commit retry never repeats a ticket and changed messageId payload fails
+ok 4 - INT-04 approved commit retry never repeats a ticket and changed messageId payload fails
+  ---
+  duration_ms: 1.024034
+  type: 'test'
+  ...
+# Subtest: INT-05 capacity, wheelchair uncertainty and vehicle conversion collision fail
+ok 5 - INT-05 capacity, wheelchair uncertainty and vehicle conversion collision fail
+  ---
+  duration_ms: 1.333049
+  type: 'test'
+  ...
+# Subtest: INT-06 passenger/driver scope and other subject access enforced
+ok 6 - INT-06 passenger/driver scope and other subject access enforced
+  ---
+  duration_ms: 0.681438
+  type: 'test'
+  ...
+# Subtest: INT-07 agent approval, expiry, changed version, wrong CSRF and subject all refused
+ok 7 - INT-07 agent approval, expiry, changed version, wrong CSRF and subject all refused
+  ---
+  duration_ms: 0.534095
+  type: 'test'
+  ...
+# Subtest: INT-08 reservation and approval audit refer to real caller and final outcome
+ok 8 - INT-08 reservation and approval audit refer to real caller and final outcome
+  ---
+  duration_ms: 0.553144
+  type: 'test'
+  ...
+# Subtest: INT-09 adopted COMmmmONS requests and responses validate against original schemas
+ok 9 - INT-09 adopted COMmmmONS requests and responses validate against original schemas
+  ---
+  duration_ms: 11.995523
+  type: 'test'
+  ...
+# Subtest: INT-10 query filters combine; unassigned on-demand stays waiting, not tentative
+ok 10 - INT-10 query filters combine; unassigned on-demand stays waiting, not tentative
+  ---
+  duration_ms: 1.610988
+  type: 'test'
+  ...
+# Subtest: INT-11 GTFS schedule references/dates/fares/24h and explicit Flex windows
+ok 11 - INT-11 GTFS schedule references/dates/fares/24h and explicit Flex windows
+  ---
+  duration_ms: 2.379066
+  type: 'test'
+  ...
+# Subtest: INT-12 feed export and local ZIP validation do not claim external import
+ok 12 - INT-12 feed export and local ZIP validation do not claim external import
+  ---
+  duration_ms: 5.252608
+  type: 'test'
+  ...
+# Subtest: INT-13 QR partner binding, single use, replay and altered replay (local fixture only)
+ok 13 - INT-13 QR partner binding, single use, replay and altered replay (local fixture only)
+  ---
+  duration_ms: 0.985445
+  type: 'test'
+  ...
+# Subtest: INT-14 stale or missing telemetry prevents credible charge and trip readiness
+ok 14 - INT-14 stale or missing telemetry prevents credible charge and trip readiness
+  ---
+  duration_ms: 0.692894
+  type: 'test'
+  ...
+# Subtest: INT-15 AC/DC numbers come from deterministic calculator; unknown access not certain
+ok 15 - INT-15 AC/DC numbers come from deterministic calculator; unknown access not certain
+  ---
+  duration_ms: 1.734325
+  type: 'test'
+  ...
+# Subtest: INT-16 prompt injection cannot add role, change actor or expose controls
+ok 16 - INT-16 prompt injection cannot add role, change actor or expose controls
+  ---
+  duration_ms: 0.334304
+  type: 'test'
+  ...
+# Subtest: INT-17 calculator/provider failures return explicit MCP tool error
+ok 17 - INT-17 calculator/provider failures return explicit MCP tool error
+  ---
+  duration_ms: 0.72965
+  type: 'test'
+  ...
+# Subtest: INT-18 synthetic provenance is retained across protocols and feed
+ok 18 - INT-18 synthetic provenance is retained across protocols and feed
+  ---
+  duration_ms: 0.458371
+  type: 'test'
+  ...
+# Subtest: INT-19 exposed tool allowlist cannot call vehicle controls or arbitrary command
+ok 19 - INT-19 exposed tool allowlist cannot call vehicle controls or arbitrary command
+  ---
+  duration_ms: 0.210918
+  type: 'test'
+  ...
+# Subtest: INT-20 local schemas do not imply actual clients or operators connected
+ok 20 - INT-20 local schemas do not imply actual clients or operators connected
+  ---
+  duration_ms: 70.059774
+  type: 'test'
+  ...
+1..20
+# tests 20
+# suites 0
+# pass 20
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 529.331437

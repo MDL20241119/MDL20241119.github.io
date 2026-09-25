@@ -1,0 +1,21 @@
+{
+  "updated_at": "2026-09-24T23:59:08.764358+00:00",
+  "data_mode": "synthetic",
+  "external_test_connections": [],
+  "production_connections": [],
+  "target_ai_services": [],
+  "traffic_operators": [],
+  "qr_hubs": [],
+  "required_evidence": [
+    "counterparty",
+    "protocol_version",
+    "authentication_method",
+    "scopes",
+    "tested_operations",
+    "environment",
+    "tested_at",
+    "evidence_reference",
+    "limitations"
+  ],
+  "note": "No external client, traffic operator, vehicle or QR hub has been connected. Host publication is not an interoperability test."
+}

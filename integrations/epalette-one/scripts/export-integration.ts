@@ -1,0 +1,12 @@
+import fs from 'node:fs';
+import {GET} from '../app/api/v1/openapi/route';
+import {tools,schema} from '../lib/integration/catalog';
+import {agentCard} from '../lib/integration/a2a';
+import {inputs} from '../lib/integration/core';
+const save=(name:string,value:unknown)=>fs.writeFileSync('api/'+name,JSON.stringify(value,null,2)+'\n');
+const origin='https://epalette-one.delpiero.chatgpt.site';
+save('openapi.json',await (await GET(new Request(origin+'/api/v1/openapi'))).json());
+save('mcp-tools.json',{protocolVersion:'2026-07-28',authentication:'Delegated bearer; host access gate configuration and target client verification still required',tools});
+save('a2a-agent-card.json',agentCard(origin));
+save('a2a-task-data.schema.json',{$schema:'https://json-schema.org/draft/2020-12/schema',title:'e-Palette ONE A2A v1 DataPart.data',oneOf:Object.entries(inputs).map(([name,input])=>({type:'object',properties:{name:{const:name},args:schema(input)},required:['name','args'],additionalProperties:false}))});
+console.log('Exported OpenAPI, MCP tools, A2A card and task data schema');

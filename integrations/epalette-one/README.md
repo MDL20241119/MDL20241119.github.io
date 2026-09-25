@@ -30,3 +30,20 @@ python3 tests/concurrency_test.py
 - [要件との受入対応表](docs/ACCEPTANCE.md)
 
 車両接続情報や実際の乗客・注文・運行データは含めません。秘密情報はサーバー側の環境変数で管理します。
+
+## 生成AI・交通標準連携（v1.1）
+
+「その他 → AI・ほかの交通サービスとつなぐ」から検索、充電計算、本人確認を操作できます。同じD1データを使用する通常API、MCP 2026-07-28、A2A 1.0、COMmmmONSの限定アダプターを追加しました。外部AI・交通事業者・実車は未接続です。
+
+- [接続方法・本人承認・未完了条件](docs/AI-INTEGRATION.md)
+- [規格別・20項目の適合状況](standards/CONFORMANCE.md)
+- [API定義](api/openapi.json)、[MCPツール](api/mcp-tools.json)、[A2Aカード](api/a2a-agent-card.json)
+- [原本・版・ハッシュ](standards/registry.json)、[外部接続の記録](standards/connections.json)
+
+```sh
+node --import ./scripts/sites-env.mjs ./node_modules/wrangler/bin/wrangler.js d1 execute DB --local --config dist/server/wrangler.json --persist-to .wrangler/state --file drizzle/0001_first_morph.sql
+pnpm run test:integration
+pnpm run spec:export
+```
+
+追加マイグレーションは初回のみ適用します。20件の追加試験は合成データによるローカル検証であり、20項目すべての外部受入完了を表しません。
