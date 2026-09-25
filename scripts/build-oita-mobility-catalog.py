@@ -240,7 +240,7 @@ def reader_card(r):
     return f'''<article class="reader-card" id="route-{r['id']}" style="--accent:{COLORS[r['group']]}">
     <div class="reader-person"><h3>{e(r['who'])}</h3><p>{e(r['goal'])}</p></div>
     <div class="reader-detail"><p class="reader-learn">{e(r['learn'])}</p><nav class="route-steps" aria-label="{e(r['who'])}の読む順番">{steps}</nav><p class="reader-more">{e(r['more'])}</p></div>
-    <div class="reader-actions"><a class="reader-pages" href="#{r['start']}"><small>まず読むページ</small><strong><span>P</span>{r['pages']}</strong><span>説明を読む →</span></a><a class="reader-app" href="{APP+r['url']}">{e(r['app_label'])} ↗</a></div></article>'''
+    <div class="reader-actions"><a class="reader-pages" href="#{r['start']}"><small>まず読むページ</small><strong><span>P</span>{r['pages']}</strong><span>読む →</span></a><a class="reader-app" href="{APP+r['url']}">{e(r['app_label'])} ↗</a></div></article>'''
 
 def key_html(p):
     value,unit,label,note=navigation['highlights'][p['id']]
@@ -287,7 +287,7 @@ html+='</section><nav class="reader-shortcuts" aria-label="読む人別の入口
 html+=''.join(sections)
 html+='''<section class="closing" id="start"><p class="eyebrow">P18　 ACTION / START HERE</p><h2>行きたいところへ、<br>行ける地域を。</h2><p>調べる道具から、地域で使える仕組みへ。<br>まずは、一つの用事を選んで試してください。</p><div class="hero-actions"><a class="button" href="../">地域と目的地を選ぶ →</a><a href="oita-mobility-catalog.pdf">PDF・18ページを開く ↗</a><a href="#purpose">読む人別ガイドに戻る ↑</a></div><p class="consult">本番開発・データ連携・地域での活用のご相談<br><a href="mailto:info@mobilitydlab.com">info@mobilitydlab.com ↗</a></p></section></main>
 <footer class="site-foot"><p>MOBILITY DESIGN LAB / OITA MOBILITY ATLAS 2.0</p><p>制作：株式会社モビリティデザインラボ。画面撮影・内容確認：2026年9月24日。<br>出典：公開アプリ・各データの原典。地図：地理院タイル。画面内の出典表示を保持しています。<br>写真内の数値は操作例です。データの基準日・取得日・有効期間は、アプリの出典で確認できます。</p><nav><a href="../usage.html">利用条件・データの扱い</a><a href="../data-catalog.html">データ・出典</a><a href="../../">MDLサイト</a></nav></footer></body></html>'''
-html=html.replace('2026年9月24日更新',navigation['edition_ja']+' 読者別ガイド改訂').replace('guide.css?v=20260924','guide.css?v=20260926.1')
+html=html.replace('2026年9月24日更新',navigation['edition_ja']+' 読者別ガイド改訂').replace('guide.css?v=20260924','guide.css?v=20260926.2')
 html=html.replace('画面撮影・内容確認：2026年9月24日。','画面撮影・内容確認：2026年9月24日。読者別案内改訂：'+navigation['edition_ja']+'。')
 (OUT/'index.html').write_text(html)
 print(json.dumps({'pdf':str(pdf),'pages':18,'web':str(OUT/'index.html'),'screens':len(list((OUT/'screens').glob('*.jpg')))},ensure_ascii=False))

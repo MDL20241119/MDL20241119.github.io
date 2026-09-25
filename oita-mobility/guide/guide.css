@@ -6,7 +6,7 @@
 @media print{.site-head nav,.hero-actions,.chapter-open,.contents{display:none}.site-head,main,.site-foot{width:100%}.cover,.chapter,.closing{break-inside:avoid}.chapter{padding:24px 0}body{background:#fff}a{text-decoration:none}}
 
 /* Reader-first edition: page numbers are navigation, not decorative counters. */
-html{scroll-padding-top:115px}
+html{scroll-behavior:auto;scroll-padding-top:115px}
 .site-head{position:sticky;top:0;background:var(--paper);z-index:20}
 .cover{padding-top:52px;gap:42px}
 .hero-actions .button{background:var(--yellow);color:var(--ink);font-size:16px}
