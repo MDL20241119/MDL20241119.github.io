@@ -1,5 +1,5 @@
 {
-  "executed_at": "2026-09-25T00:02:34.751014+00:00",
+  "executed_at": "2026-09-25T01:36:16.206816+00:00",
   "environment": "local synthetic data; Node 24 / SQLite",
   "suites": [
     {
@@ -9,11 +9,10 @@
         "--import",
         "tsx",
         "--test",
-        "--test-reporter=tap",
         "tests/integration.test.ts"
       ],
       "exit_code": 0,
-      "tests": 20,
+      "tests": 30,
       "log": "tests/results/integration.txt"
     },
     {
@@ -21,7 +20,6 @@
       "command": [
         "node",
         "--test",
-        "--test-reporter=tap",
         "tests/domain.test.mjs"
       ],
       "exit_code": 0,
@@ -39,8 +37,13 @@
       "log": "tests/results/sqlite.txt"
     }
   ],
-  "total_local_tests": 46,
+  "total_local_tests": 56,
   "external_connections_tested": 0,
   "full_acceptance_complete": false,
-  "integration_test_sha256": "8079eb5b81fb010985cb7d03a64cf28026f7cf72a025806d6a8f2b26487e8386"
+  "integration_test_sha256": "854a4cd651323f359636443f72639326b6d9d6ead37accd37849cd2e6160fe3a",
+  "browser_checks": [
+    "Local preview: own reservation to confirmation to cancellation, 2 taps",
+    "Local preview: search, review and book through 390 CSS px iframe",
+    "320 and 390 CSS px iframe layout review; not a real-device or senior usability study"
+  ]
 }

@@ -8,6 +8,7 @@ for(const file of ['demand','qr-maas']){
  const doc=JSON.parse(fs.readFileSync(`lib/integration/contracts/${file}.json`,'utf8'));ajv.addSchema(doc,file);
  for(const [path,ops]of Object.entries(doc.paths))for(const [method,op]of Object.entries(ops)){
   if(!op.operationId)continue;const prefix=(file+'_'+op.operationId).replaceAll('-','_');
+  const params=(op.parameters??[]).filter(p=>p.in==='query');const qid=prefix+'_query';ajv.addSchema({type:'object',properties:Object.fromEntries(params.map(p=>[p.name,p.schema])),required:params.filter(p=>p.required).map(p=>p.name),additionalProperties:false},qid);exports[qid]=qid;
   const ptr=`${file}#/paths/${path.replaceAll('~','~0').replaceAll('/','~1')}/${method}`;
   if(op.requestBody){const ref=op.requestBody.$ref?file+op.requestBody.$ref:`${ptr}/requestBody`;const pointer=ref+'/content/application~1json/schema';exports[prefix+'_request']=pointer;}
   for(const [code,response]of Object.entries(op.responses??{})){

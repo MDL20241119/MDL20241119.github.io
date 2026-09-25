@@ -108,8 +108,8 @@
     },
     {
       "path": "lib/integration/contracts/validators.mjs",
-      "bytes": 1125174,
-      "sha256": "39578587c251808fb08601fa6f0efc04363ba89a61a073d69f1f0153af66d28d"
+      "bytes": 1174516,
+      "sha256": "dfd539c618ecc2883ccdc33f5fb26b5d49ad66808d61537832186febec624a52"
     },
     {
       "path": "lib/integration/contracts/demand.json",
@@ -122,5 +122,6 @@
       "sha256": "341a83bb30996a41b4900079be8f443a81985644330284030fb479201cc006c3"
     }
   ],
-  "note": "Versions pinned for this implementation. Prior-project test results are not evidence of e-Palette conformance."
+  "note": "Versions pinned for this implementation. Prior-project test results are not evidence of e-Palette conformance.",
+  "derivatives_generated_at": "2026-09-25T01:33:09.835088+00:00"
 }

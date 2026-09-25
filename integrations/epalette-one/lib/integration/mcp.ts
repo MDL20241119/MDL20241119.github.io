@@ -16,7 +16,7 @@ export async function handleMcp(request:Request,invoke:Invoke,visible=tools){
  if(!version||meta?.['io.modelcontextprotocol/protocolVersion']!==version||request.headers.get('Mcp-Method')!==body.method||(body.method==='tools/call'&&decodeHeader(request.headers.get('Mcp-Name'))!==body.params?.name))return rpcError(body.id,-32020,'Header mismatch');
  if(version!==MCP_VERSION)return rpcError(body.id,-32022,'Unsupported protocol version',400,{requested:version,supported:[MCP_VERSION]});
  if(!meta?.['io.modelcontextprotocol/clientCapabilities']||typeof meta['io.modelcontextprotocol/clientCapabilities']!=='object'||Array.isArray(meta['io.modelcontextprotocol/clientCapabilities']))return rpcError(body.id,-32602,'Per-request clientCapabilities is required');
- const resultMeta={'io.modelcontextprotocol/serverInfo':{name:'epalette-one',version:'1.1.0'}};
+ const resultMeta={'io.modelcontextprotocol/serverInfo':{name:'epalette-one',version:'1.2.0'}};
  if(body.method==='server/discover')return rpc(body.id,{resultType:'complete',supportedVersions:[MCP_VERSION],capabilities:{tools:{}},_meta:resultMeta,cacheScope:'private',ttlMs:0,instructions:'Synthetic sandbox. Search and planning use the shared business core. Proposals require human approval at approvalUrl. No vehicle control.'});
  if(body.method==='tools/list'){if(body.params?.cursor)return rpcError(body.id,-32602,'Cursor is not supported');return rpc(body.id,{resultType:'complete',tools:visible,cacheScope:'private',ttlMs:0,_meta:resultMeta});}
  if(body.method!=='tools/call')return rpcError(body.id,-32601,'Method not found',404);

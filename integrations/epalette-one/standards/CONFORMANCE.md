@@ -1,17 +1,17 @@
 # 標準適合・受入状況
 
-2026-09-25。対象はe-Palette ONE v1.1の合成データ検証版です。
+2026-09-25。対象はe-Palette ONE v1.2の合成データ検証版です。
 
-**本番MVPは未完了です。20項目を対応づけたローカル自動試験20件の通過と、20項目の外部受入完了を分けます。** 既存業務22件・D1更新SQLのSQLite試験4件も実行済み。対象AI、他交通事業者、QR認証ハブ、実車との接続は0件です。
+**本番MVPは未完了です。20項目を対応づけたローカル自動試験20件と追加の照会・取消試験10件の通過と、20項目の外部受入完了を分けます。** 既存業務22件・D1更新SQLのSQLite試験4件も実行済み。対象AI、他交通事業者、QR認証ハブ、実車との接続は0件です。
 
 ## 規格別
 
 | 対象 | 実装 | ローカル検証 | 外部テスト接続 | 本番接続 |
 |---|---|---|---|---|
-| 通常API | 共通業務12操作、確認画面、監査、D1保存 | 業務・本人確認・更新競合、ブラウザで検索→確定 | 未実施 | 未実施 |
+| 通常API | 共通業務13操作、確認画面、監査、D1保存 | 業務・本人確認・更新競合、ブラウザで検索→確定 | 未実施 | 未実施 |
 | MCP 2026-07-28 | stateless POST、discover/list/call、ヘッダー・入力検証 | Request/Responseハンドラーと原本JSON Schema | 対象AI未接続 | 未接続 |
 | A2A v1.0 JSONRPC | AgentCard、SendMessage/GetTask/CancelTask、構造化依頼 | 保存タスクの再送・再開・結果・所有者分離 | 外部エージェント未接続 | 未接続 |
-| COMmmmONS デマンド1.0.0 | 19操作中4操作の限定プロファイル | 原本から生成した入出力検査、取消・検索意味 | 交通事業者未接続 | 未接続 |
+| COMmmmONS デマンド1.0.0 | 19操作中10操作の限定プロファイル | 原本から生成した入出力検査、取消・検索意味 | 交通事業者未接続 | 未接続 |
 | GTFS-JP v4 Schedule | 同じ予定から10ファイルのZIP、限定した参照・日時・運賃検査 | 合成ZIPと24時以降、壊れた参照 | 配布先・経路検索側の取込未検証 | 未接続 |
 | GTFS Flex | 明示された乗降点・時間帯の変換関数 | 合成窓・booking_rulesの検査のみ | 未実施 | 未接続 |
 | GTFS Realtime | 未実装。HTTPは503 | 未接続時の失敗を明示 | 未実施 | 未接続 |
@@ -31,7 +31,7 @@ MCPはRequestを直接渡すローカル試験であり、ChatGPT等の実クラ
 | INT-06 | passenger/driver/manager、scope、本人、SQLの別workspace分離 | 実組織の割当、添付・写真・CSV含む認証横断試験 |
 | INT-07 | 承認なし、期限切れ、変更後、CSRF不一致、別人・AI承認拒否 | 実AIと本人認証の一連の操作 |
 | INT-08 | 承認・ticket・本人IDの記録と状態整合。SQL監査1回 | 実外部ID相関、保存期間・訂正運用 |
-| INT-09 | 採用した4操作の原本入出力検査 | 未実装15操作、相手先が要求するプロファイル |
+| INT-09 | 採用した10操作の原本入出力検査 | 未実装9操作、相手先が要求するプロファイル |
 | INT-10 | AND検索、本人予約、取消、未配車をwaitingで保持 | COMmmmONS仮予約・期限・更新の未実装部分 |
 | INT-11 | Schedule参照・時刻・日付・運賃、Flex明示窓 | JP v4全検査、区域、予約条件、Realtime・鮮度 |
 | INT-12 | ZIP出力と限定検査、外部取込未検証を区別 | 更新配信・外部検索サービスの取込確認 |
@@ -41,12 +41,12 @@ MCPはRequestを直接渡すローカル試験であり、ChatGPT等の実クラ
 | INT-16 | 追加role/approved/自由文指示からの昇格・任意命令拒否 | 実AI・外部データを使った攻撃シナリオ |
 | INT-17 | 処理失敗はMCP isError、予約成立結果なし | 外部障害・部分成功・照会による回復 |
 | INT-18 | demo/source/qualityとSYNTHETICフィード識別 | 本番環境・本番秘密情報の分離を実構成で確認 |
-| INT-19 | 12操作の許可リスト、VCI/駆動/扉/鍵/充電開始なし | 正式車両接続後も制御経路がないことを確認 |
+| INT-19 | 13操作の許可リスト、VCI/駆動/扉/鍵/充電開始なし | 正式車両接続後も制御経路がないことを確認 |
 | INT-20 | 接続件数0を明示し規格・対象機能を記録 | 対象AI・事業者ごとの試験証跡、版、制約、担当 |
 
 ## Web画面の確認
 
-管理画面「その他」→連携画面→EP-01充電計算、便検索→内容確認→確定をローカルpreviewで実操作しました。予約の確定結果、普通/急速の時間、日付を含む期限表示を確認。確定は1回のボタン操作です。65歳以上を含む被験者試験、WCAG 2.2 AA全項目の適合評価、実端末での95% 2秒以内は未実施です。
+管理画面「その他」→連携画面→EP-01充電計算、便検索→内容確認→確定をローカルpreviewで実操作しました。予約の確定結果、普通/急速の時間、日付を含む期限表示を確認。確定は1回のボタン操作です。v1.2では本人予約の一覧→取消内容の確認→取消結果の反映を2操作で確認し、390 CSS px幅で便検索→確認→予約も実操作しました。320/390 CSS pxのiframeで表示を確認していますが、実端末の試験ではありません。65歳以上を含む被験者試験、WCAG 2.2 AA全項目の適合評価、実端末での95% 2秒以内は未実施です。
 
 ## 原本と証跡
 
@@ -58,22 +58,40 @@ MCPはRequestを直接渡すローカル試験であり、ChatGPT等の実クラ
 
 | 操作ID | HTTP | 実装範囲 |
 |---|---|---|
-| `getTerms` | `GET /terms` | 未実装：501 |
-| `getServices` | `GET /services` | 未実装：501 |
-| `getServicesId` | `GET /services/{id}` | 未実装：501 |
+| `getTerms` | `GET /terms` | 同意不要の検証案内のみ。カテゴリ絞込 |
+| `getServices` | `GET /services` | 合成サービス。ID/名称/自治体/状態のAND検索・ページング |
+| `getServicesId` | `GET /services/{id}` | 合成サービス詳細・明示日付の営業時間・予約条件 |
 | `postPassengers` | `POST /passengers` | 未実装：501 |
 | `getPassengersId` | `GET /passengers/{id}` | 未実装：501 |
 | `putPassengersId` | `PUT /passengers/{id}` | 未実装：501 |
 | `deletePassengersId` | `DELETE /passengers/{id}` | 未実装：501 |
-| `getPassengersIdServices` | `GET /passengers/{id}/services` | 未実装：501 |
+| `getPassengersIdServices` | `GET /passengers/{id}/services` | 本人のprivate検証サービスのみ |
 | `postPassengersIdAgreements` | `POST /passengers/{id}/agreements` | 未実装：501 |
 | `getPassengersIdAgreements` | `GET /passengers/{id}/agreements` | 未実装：501 |
 | `getPassengersIdReservations` | `GET /passengers/{id}/reservations` | 本人・日付/状態/IDのAND検索・ページング |
-| `getStops` | `GET /stops` | 未実装：501 |
+| `getStops` | `GET /stops` | 固定2点。AND検索・経度緯度/半径・ページング |
 | `postReservationsCandidates` | `POST /reservations/candidates` | 指定2点・乗車時刻・一般区分・配車済み便の候補 |
 | `postReservations` | `POST /reservations` | 本人確認済みproposalに一致する予約のみ |
 | `putReservationsId` | `PUT /reservations/{id}` | 本人予約の取消のみ。その他の変更は未実装 |
-| `getReservationsIdPayment` | `GET /reservations/{id}/payment` | 未実装：501 |
+| `getReservationsIdPayment` | `GET /reservations/{id}/payment` | 本人の無料予約はexcluded、取消後cancelled。実決済は未接続 |
 | `putReservationsIdPayment` | `PUT /reservations/{id}/payment` | 未実装：501 |
 | `getVehicleLocations` | `GET /vehicle-locations` | 未実装：501 |
 | `getOperationDelays` | `GET /operation-delays` | 未実装：501 |
+
+
+## 追加の回帰試験10件
+
+| ID | 検証内容 |
+|---|---|
+| NET-01 | 追加6操作の原本応答検査、一覧と詳細の項目分離、同意不要の検証案内 |
+| NET-02 | 複合AND検索、ページング、終了境界と既定状態 |
+| NET-03 | 明示日付、運行の空き時間、深夜24時以降の保持 |
+| NET-04 | 経度緯度順、既定半径500m、nameのみの検索、範囲不正拒否 |
+| NET-05 | 重複・未定義条件、整数型、実在しない日付の拒否 |
+| NET-06 | 無料/取消の支払状態、有料未接続を成功扱いしない |
+| NET-07 | 利用者・支払情報の本人分離、readスコープ必須 |
+| NET-08 | 通常API・MCP・A2A・標準照会が同一カタログを返す |
+| NET-09 | 取消案は空席を変えず、本人確定後1回だけ戻す。取消期限 |
+| NET-10 | 車両予定と連動、全予定取消時にサービスを捏造しない、本番設定なしを拒否 |
+
+合計56件はローカル合成データの自動試験です。原本の型検査に加え、上記の意味条件を検証します。残る9操作は利用者登録・更新・削除、同意、支払更新、車両位置、運行遅延などです。地域・実事業者のプロファイル、実組織・外部認証、第三者による適合評価は別途必要です。

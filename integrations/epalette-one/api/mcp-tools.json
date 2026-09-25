@@ -3,6 +3,22 @@
   "authentication": "Delegated bearer; host access gate configuration and target client verification still required",
   "tools": [
     {
+      "name": "get_service_catalog",
+      "description": "利用できるサービス・乗降点・運行日・予約条件を取得します。検索前にIDと条件を確認してください。",
+      "inputSchema": {
+        "type": "object",
+        "properties": {},
+        "required": [],
+        "additionalProperties": false
+      },
+      "annotations": {
+        "readOnlyHint": true,
+        "destructiveHint": false,
+        "idempotentHint": true,
+        "openWorldHint": false
+      }
+    },
+    {
       "name": "search_trips",
       "description": "指定日・乗降場所・人数から乗車可能な便を検索します。日時や場所を推測しないでください。",
       "inputSchema": {

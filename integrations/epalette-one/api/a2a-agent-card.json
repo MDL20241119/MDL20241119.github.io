@@ -1,7 +1,7 @@
 {
   "name": "e-Palette ONE",
   "description": "合成データで乗車予約案・車両状況・充電計画を扱う検証用エージェント。変更には本人確認が必要。",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "supportedInterfaces": [
     {
       "url": "https://epalette-one.delpiero.chatgpt.site/a2a",

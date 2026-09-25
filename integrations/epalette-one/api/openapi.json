@@ -2,7 +2,7 @@
   "openapi": "3.1.0",
   "info": {
     "title": "e-Palette ONE Shared Business API",
-    "version": "1.1.0",
+    "version": "1.2.0",
     "description": "合成データによる限定公開の検証版。AIと画面が同じ予約・車両予定を使用。外部AI/OAuth接続は未検証。"
   },
   "servers": [
@@ -25,6 +25,55 @@
     }
   },
   "paths": {
+    "/api/v1/actions/get_service_catalog": {
+      "post": {
+        "operationId": "get_service_catalog",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
     "/api/v1/actions/search_trips": {
       "post": {
         "operationId": "search_trips",

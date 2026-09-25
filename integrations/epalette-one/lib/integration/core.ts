@@ -1,4 +1,6 @@
 import { z } from 'zod';
+import {stops,serviceId,passengerType,transportBookings,serviceCatalogue,validCalendarDate} from './network';
+export {stops,serviceId,passengerType} from './network';
 import { AppState, Command, DomainError, applyCommand, estimate, nextBooking, readiness, inputDate } from '../model';
 
 export type Role = 'passenger'|'driver'|'manager';
@@ -11,12 +13,10 @@ export type State = AppState & {integration?:IntegrationData};
 export const data=(s:State):IntegrationData=>s.integration??{proposals:[],reservations:[],agentTasks:[]};
 export function fail(status:number,message:string):never {throw new DomainError(status,message);}
 export function canonical(value:unknown):string {if(Array.isArray(value))return '['+value.map(canonical).join(',')+']';if(value&&typeof value==='object')return '{'+Object.entries(value).sort(([a],[b])=>a.localeCompare(b)).map(([k,v])=>JSON.stringify(k)+':'+canonical(v)).join(',')+'}';return JSON.stringify(value);}
-export const stops=[{id:'oita-station',name:'大分駅前',kana:'おおいたえきまえ',lat:33.2328,lon:131.6067},{id:'community-hub',name:'地域拠点',kana:'ちいききょてん',lat:33.223,lon:131.594}] as const;
-export const serviceId='mdl-demo-fixed-stops';
-export const passengerType='demo-general';
 const id=z.string().min(1).max(100);
 const strict=(shape:z.ZodRawShape)=>z.object(shape).strict();
 export const inputs={
+ get_service_catalog:strict({}),
  search_trips:strict({date:z.string().regex(/^\d{4}-\d{2}-\d{2}$/),fromStop:z.enum(['oita-station','community-hub']),toStop:z.enum(['oita-station','community-hub']),count:z.number().int().min(1).max(8),wheelchairs:z.number().int().min(0).max(1).default(0)}),
  get_my_reservations:strict({}),
  get_vehicle_status:strict({vehicleId:id.optional()}),
@@ -31,14 +31,15 @@ export const inputs={
  execute_approved:strict({proposalId:id}),
 } as const;
 export type ToolName=keyof typeof inputs;
-export function parseInput(name:string,args:unknown):Record<string,unknown>{const schema=inputs[name as ToolName];if(!schema)fail(404,'この機能は公開されていません。');const result=schema.safeParse(args);if(!result.success)fail(400,'必要な入力、型、日時を確認してください。未定義の項目は指定できません。');return result.data;}
+export function parseInput(name:string,args:unknown):Record<string,unknown>{const schema=inputs[name as ToolName];if(!schema)fail(404,'この機能は公開されていません。');const result=schema.safeParse(args);if(!result.success)fail(400,'必要な入力、型、日時を確認してください。未定義の項目は指定できません。');if(name==='search_trips'&&!validCalendarDate(String((result.data as Record<string,unknown>).date)))fail(400,'実在する利用日を指定してください。');return result.data;}
 export function permit(p:Principal,name:string){const management=['get_vehicle_status','get_charge_plan','get_today_actions','prepare_charge_request','prepare_vehicle_booking'];if(management.includes(name)&&p.role!=='manager')fail(403,'管理者の権限が必要です。');if(name.startsWith('prepare_')&&p.role==='driver')fail(403,'運転者の委任には予約変更の権限がありません。');const scope=name.startsWith('prepare_')?'proposals:write':name==='execute_approved'?'approved:execute':'read';if(!p.scopes.includes(scope))fail(403,'この接続に必要な権限がありません。');}
-export function tripRecords(s:State){return s.bookings.filter(b=>['shuttle','ondemand'].includes(b.purpose)&&b.route==='大分駅前 → 地域拠点').map(b=>{const used=s.tickets.filter(t=>t.bookingId===b.id&&t.status!=='cancelled'&&t.from===0&&t.to>=1).reduce((n,t)=>n+t.count,0);return {id:b.id,name:b.title,start:b.start,end:b.end,status:b.status,vehicleId:b.vehicleId,fromStop:stops[0].id,toStop:stops[1].id,available:Math.max(0,b.seats-used),fare:0,currency:'JPY',quality:'synthetic',serviceId,preparation:readiness(s,s.vehicles.find(v=>v.id===b.vehicleId)!,b)};});}
+export function tripRecords(s:State){return transportBookings(s).map(b=>{const used=s.tickets.filter(t=>t.bookingId===b.id&&t.status!=='cancelled'&&t.from===0&&t.to>=1).reduce((n,t)=>n+t.count,0);return {id:b.id,name:b.title,start:b.start,end:b.end,status:b.status,vehicleId:b.vehicleId,fromStop:stops[0].id,toStop:stops[1].id,available:Math.max(0,b.seats-used),fare:0,currency:'JPY',quality:'synthetic',serviceId,preparation:readiness(s,s.vehicles.find(v=>v.id===b.vehicleId)!,b)};});}
 export function ownReservations(s:State,p:Principal){return data(s).reservations.filter(r=>r.subject===p.subject).map(r=>({...r,status:s.tickets.find(t=>t.id===r.ticketId)?.status??'unavailable',trip:tripRecords(s).find(t=>t.id===r.tripId)}));}
 export function getProposal(s:State,p:Principal,id:string){const a=data(s).proposals.find(a=>a.id===id&&a.subject===p.subject);if(!a)fail(404,'確認内容が見つかりません。');return a;}
 export function publicProposal(a:Proposal){const {csrf,command,...rest}=a;void csrf;void command;return {...rest,approvalUrl:`/approvals/${encodeURIComponent(a.id)}`,notice:'本人または権限を持つ担当者が確認するまで、予約・依頼は確定しません。'};}
 export function readAction(s:State,p:Principal,name:string,args:Record<string,unknown>,now:string):unknown{
  permit(p,name);
+ if(name==='get_service_catalog')return serviceCatalogue(s);
  if(name==='search_trips'){
   if(args.wheelchairs!==0)fail(422,'車いす設備は未設定です。対応可能として予約を受け付けられません。');
   return {mode:'demo',asOf:s.clock,serviceId,stops,notice:'合成データです。実際の送迎は予約されません。',trips:tripRecords(s).filter(t=>inputDate(t.start).slice(0,10)===args.date&&t.fromStop===args.fromStop&&t.toStop===args.toStop&&t.available>=Number(args.count)&&t.status==='confirmed'&&t.start>=s.clock&&!['blocked','unknown'].includes(t.preparation.type))};
@@ -56,7 +57,7 @@ export function prepare(s:State,p:Principal,name:string,args:Record<string,unkno
   const trip=tripRecords(s).find(t=>t.id===args.tripId);if(!trip||trip.status!=='confirmed'||trip.start<s.clock)fail(422,'受付可能な便が見つかりません。');if(args.count as number>trip.available)fail(409,'空席が不足しています。');if(['blocked','unknown'].includes(trip.preparation.type))fail(422,'車両の準備状態を確認できません。');
   command={type:'create_ticket',bookingId:trip.id,count:args.count,from:0,to:1};summary={title:'乗車予約',tripId:trip.id,from:'大分駅前',to:'地域拠点',start:trip.start,end:trip.end,count:args.count,amount:trip.fare,currency:'JPY',payment:'検証用の無料運行。課金されません。',preparation:trip.preparation.label};
  } else if(name==='prepare_ride_cancellation'){
-  const r=ownReservations(s,p).find(r=>r.ticketId===args.reservationId);if(!r)fail(404,'自分の予約が見つかりません。');command={type:'ticket_action',id:r.ticketId,action:'cancel'};summary={title:'乗車予約の取消',reservationId:r.ticketId,start:r.trip?.start,count:r.count,amount:0,currency:'JPY'};
+  const r=ownReservations(s,p).find(r=>r.ticketId===args.reservationId);if(!r)fail(404,'自分の予約が見つかりません。');if(!r.trip||r.trip.start<s.clock)fail(422,'乗車時刻を過ぎた予約は担当者へ連絡してください。');command={type:'ticket_action',id:r.ticketId,action:'cancel'};summary={title:'乗車予約の取消',reservationId:r.ticketId,from:stops.find(x=>x.id===r.fromStop)?.name,to:stops.find(x=>x.id===r.toStop)?.name,start:r.trip.start,count:r.count,amount:0,currency:'JPY',payment:'検証用の無料運行。取消による課金はありません。'};
  } else if(name==='prepare_charge_request'){command={type:'assign_charge',...args};summary={title:'充電の担当者への依頼',...args,notice:'実機の充電開始・充電器の外部予約は行いません。'};
  } else if(name==='prepare_vehicle_booking'){command={type:'create_booking',...args};summary={title:'車両の利用予約',...args};
  } else if(name==='prepare_on_demand_request'){command={type:'create_ride',from:stops[0].name,to:stops[1].name,start:args.start,count:args.count};summary={title:'オンデマンドの乗車依頼',...args,notice:'担当者の配車確定まで未割当です。送迎の成立ではありません。'};

@@ -6,6 +6,25 @@
       "type": "object",
       "properties": {
         "name": {
+          "const": "get_service_catalog"
+        },
+        "args": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
           "const": "search_trips"
         },
         "args": {
