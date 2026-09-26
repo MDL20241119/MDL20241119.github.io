@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-09-26",
+  "designReference": "https://ginger.sakatashop.jp/",
+  "use": "大分の景観紹介を含むコンソーシアム構想サイトの構成素材。写真素材としての再配布を目的にしない。",
+  "transform": "色・内容は変更せず、Web向けの縮小・WebP圧縮のみ。表示枠によるトリミングあり。",
+  "photos": [
+    {
+      "files": [
+        "oita-yufudake-spring.webp",
+        "oita-yufudake-spring-small.webp"
+      ],
+      "title": "由布岳（春）",
+      "provider": "由布市",
+      "sourcePage": "https://www.city.yufu.oita.jp/kankou/photomovie",
+      "sourceImage": "https://www.city.yufu.oita.jp/uploads/kanko_img/dl/08.jpg",
+      "permission": "営利・非営利を問わず無償利用可。データ自体の販売は不可。",
+      "visibleCredit": "由布市フォトアルバム"
+    },
+    {
+      "files": [
+        "oita-yufudake-train.webp",
+        "oita-yufudake-train-small.webp"
+      ],
+      "title": "由布岳と列車",
+      "provider": "由布市",
+      "sourcePage": "https://www.city.yufu.oita.jp/kankou/photomovie",
+      "sourceImage": "https://www.city.yufu.oita.jp/uploads/kanko_img/dl/09.jpg",
+      "permission": "営利・非営利を問わず無償利用可。データ自体の販売は不可。",
+      "visibleCredit": "由布市フォトアルバム"
+    },
+    {
+      "files": [
+        "oita-kinrinko-autumn.webp",
+        "oita-kinrinko-autumn-small.webp"
+      ],
+      "title": "金鱗湖（紅葉）",
+      "provider": "由布市",
+      "sourcePage": "https://www.city.yufu.oita.jp/kankou/photomovie",
+      "sourceImage": "https://www.city.yufu.oita.jp/uploads/kanko_img/dl/16.jpg",
+      "permission": "営利・非営利を問わず無償利用可。データ自体の販売は不可。",
+      "visibleCredit": "由布市フォトアルバム"
+    },
+    {
+      "files": [
+        "oita-beppu-bay.webp",
+        "oita-beppu-bay-small.webp"
+      ],
+      "title": "鳥越大橋からの景色",
+      "provider": "別府市",
+      "sourcePage": "https://beppu-tourism.com/photo/4411/",
+      "sourceImage": "https://beppu-tourism.com/wp-content/uploads/gallery/0210.jpg",
+      "terms": "https://beppu-tourism.com/terms/",
+      "permission": "私用・商用利用可。申請・著作権表示不要。作品を構成するための加工可。画像素材としての二次配布は禁止。",
+      "visibleCredit": "別府市／別府たび"
+    }
+  ],
+  "fonts": {
+    "name": "Noto Serif JP",
+    "weight": 900,
+    "license": "SIL Open Font License 1.1",
+    "source": "https://github.com/google/fonts/tree/main/ofl/notoserifjp",
+    "licenseFile": "OFL-NotoSerifJP.txt",
+    "use": "見出し文字のサブセットをローカル配信"
+  }
+}

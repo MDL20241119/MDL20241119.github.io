@@ -90,7 +90,8 @@ home=home.replace('</footer>','<details class="photo-credits"><summary>写真に
 quick_links = '<nav class="resource-shortcuts" aria-label="4つのコンテンツ">'+''.join(f'<a href="explore/?view={r["id"]}"><b>{r["number"]}</b>{r["label"]}<span aria-hidden="true">↗</span></a>' for r in RESOURCES)+'</nav>'
 home = home.replace('<section class="manifesto wrap"', resource_section()+community_section()+'<section class="manifesto wrap"', 1)
 home = home.replace('<p class="photo-context">写真：大分の風景',quick_links+'<p class="photo-context">写真：大分の風景',1)
-(OUT/'index.html').write_text(home)
+# The source-led homepage is maintained separately. Never replace it with this
+# historical Ver.0.3 template when regenerating the operating guide.
 
 (OUT/'explore').mkdir(exist_ok=True)
 tool_nav = ''.join(f'<a href="?view={r["id"]}" data-view="{r["id"]}"><span>{r["number"]}</span>{r["label"]}</a>' for r in RESOURCES)
