@@ -24,3 +24,7 @@ PDF再生成: `python3 scripts/build-oita-consortium-pdf.py --content oita-mirai
 `explore/` は `oita-events/`、`oita-mobility/`、`oita-mobility/analysis.html`、`mobility-training/` の元ページをiframeで表示します。データ・検索機能・本文の複製はありません。各タブは `?view=events|mobility|analysis|learning` で共有可能。元ページを直接開くリンクを常設します。
 
 トップ: Bauhaus Cartoon（`bauhaus.css`）。Garraway0の実写写真はトップにも掲載。活動の詳細写真: `activity/`。キャラクター画像は内蔵画像生成、Garraway0写真は公式サイト・公式note掲載素材をユーザーの指定で使用。写真出典は `assets/garraway0-sources.json`。コンソーシアム本文・説明書ではモビリティデザインラボを省略しません。
+
+トップの掲載順は、構想の目的 → コンソーシアムの役割 → 運営の基本 → 活動・拠点の写真 → 参加方法 → 構想説明書 → コンソーシアムから生まれたコンテンツ。4つの既存コンテンツは、大きな見出しとカラーパネルで重要な取組みとして紹介。読む順番は、まず構想理解と参加方法を優先します。
+
+メインのキャラクターは `assets/oita-mobility-duo.png`。e-Paletteを思わせる箱型シャトルと空飛ぶモビリティに、温泉の湯けむりと別府湾の波を取り入れたオリジナルイラスト。

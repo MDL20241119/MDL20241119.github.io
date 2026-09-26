@@ -32,7 +32,7 @@ def community_section():
 
 def header(guide=False):
     pre = '../' if guide else './'
-    menu = [('私たちが目指すもの', pre+'#vision'), ('調べる・学ぶ', pre+'#explore'), ('活動・拠点', pre+'activity/'), ('参加するには', pre+'#join'), ('構想説明書', pre+'guide/')]
+    menu = [('コンソーシアムとは', pre+'#vision'), ('活動・拠点', pre+'activity/'), ('運営・参加', pre+'#operations'), ('構想説明書', pre+'guide/'), ('生まれたコンテンツ', pre+'#explore')]
     nav = ''.join(f'<a href="{url}"'+(' aria-current="page"' if guide and title=='構想説明書' else '')+f'>{title}</a>' for title,url in menu)
     return f'''<a class="skip" href="#main">本文へ移動</a><header class="site-head"><a class="brand" href="{pre}"><span class="brand-mark" aria-hidden="true">O.</span><span>大分未来モビリティ・<br>コンソーシアム<small>OITA MIRAI MOBILITY CONSORTIUM</small></span></a><nav class="desktop-nav" aria-label="メインメニュー">{nav}</nav><details class="mobile-menu"><summary>MENU</summary><nav aria-label="モバイルメニュー">{nav}</nav></details></header>'''
 
