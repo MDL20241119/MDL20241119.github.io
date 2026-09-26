@@ -92,3 +92,5 @@
 .vision-page .brand,.vision-page .desktop-nav a{text-shadow:0 1px 5px #0008}
 .vision-page .desktop-nav a:last-child,.vision-page .mobile-menu summary{text-shadow:none}
 .scenic-index{background:#302013a6}
+
+.scenic-manifesto{display:block;width:100%;padding:0;margin:0;border:0;background:transparent}
