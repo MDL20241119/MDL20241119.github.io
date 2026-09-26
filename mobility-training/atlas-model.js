@@ -1,9 +1,10 @@
-export const kinds={FACT:'資料で確認した事実',CALCULATION:'本サイトの計算',ANALYSIS:'MDLの分析・分類',HYPOTHESIS:'検証前の仮説'};
+export const kinds={FACT:'資料で確認した事実',CALCULATION:'本サイトの計算',ANALYSIS:'モビリティデザインラボの分析・分類',HYPOTHESIS:'検証前の仮説'};
 export const statuses={IMPLEMENTED:'実施確認',PLANNED:'計画確認',NOT_CONFIRMED:'未確認',NOT_IMPLEMENTED:'未実施確認',NOT_APPLICABLE:'対象外'};
-export const verificationLabels={VERIFIED:'資料確認',PREVIOUSLY_REVIEWED:'既存の確認記録',NEEDS_VERIFICATION:'要確認',USER_REPORTED:'MDL活動集計',NOT_CONFIRMED:'未確認'};
-export const escapeHTML=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+export const verificationLabels={VERIFIED:'資料確認',PREVIOUSLY_REVIEWED:'既存の確認記録',NEEDS_VERIFICATION:'要確認',USER_REPORTED:'モビリティデザインラボ活動集計',NOT_CONFIRMED:'未確認'};
+export const companyName=v=>String(v??'').replace(/\bMDL(?![A-Za-z0-9_-])/g,'モビリティデザインラボ');
+export const escapeHTML=v=>companyName(v).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 export const safeURL=v=>{if(typeof v!=='string'||!v.trim())return null;try{const u=new URL(v,typeof location==='object'?location.href:'https://mobilitydlab.com/mobility-training/');return ['https:','http:'].includes(u.protocol)?u.href:null;}catch{return null;}};
-export const norm=v=>String(v??'').normalize('NFKC').toLocaleLowerCase('ja');
+export const norm=v=>companyName(v).normalize('NFKC').toLocaleLowerCase('ja');
 export function displayValue(f){if(!f||f.value===null||f.value===undefined)return '未確認';if(typeof f.value==='boolean')return f.value?'該当':'該当なし';return `${typeof f.value==='number'?f.value.toLocaleString('ja-JP'):f.value}${f.unit?' '+f.unit:''}${f.qualifier==='at_least'?'以上':''}`;}
 const activityKeys=['lecture','pbl','fieldwork','resident_participation','student_participation','demonstration','actual_operation','social_implementation','continuity'];
 export function filterCases(cases,{query='',dataset='',gap='',issue='',prefecture='',activity='',status='',needs=false}={}){const terms=norm(query).split(/\s+/).filter(Boolean);return cases.filter(c=>{if(dataset&&c.dataset!==dataset)return false;if(prefecture&&!c.region.includes(prefecture))return false;if(gap&&!c.gaps.some(g=>g.gap_id===gap))return false;if(issue&&!c.tags.some(t=>t.label===issue))return false;if(activity&&status&&c.fields[activity]?.status!==status)return false;if(!activity&&status&&!activityKeys.some(k=>c.fields[k]?.status===status))return false;if(activity&&!status&&!['IMPLEMENTED','PLANNED'].includes(c.fields[activity]?.status))return false;if(needs&&!Object.values(c.fields).some(f=>['NEEDS_VERIFICATION','USER_REPORTED','NOT_CONFIRMED'].includes(f.verification_status)))return false;const text=norm([c.name,c.region,c.operator,...c.tags.map(t=>t.label),...Object.values(c.fields).map(f=>[f.value,f.note].join(' '))].join(' '));return terms.every(t=>text.includes(t));});}

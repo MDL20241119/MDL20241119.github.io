@@ -115,23 +115,23 @@ window.OITA_PHOTOS = {
   },
   "technology": {
     "src": "./assets/mdl-creative.webp",
-    "title": "MDL公式サイト掲載の共創イメージ",
-    "caption": "MDL共創イメージ／掲載イベントとは異なります",
+    "title": "モビリティデザインラボ公式サイト掲載の共創イメージ",
+    "caption": "モビリティデザインラボ共創イメージ／掲載イベントとは異なります",
     "alt": "テーブルを囲み共創を検討する人々のイメージ",
     "source": "https://mobilitydlab.com/assets/images/creative-co-design.webp",
     "author": "Mobility Design Lab Inc.",
-    "license": "MDL公式サイト",
+    "license": "モビリティデザインラボ公式サイト",
     "licenseUrl": "https://mobilitydlab.com/",
     "edits": "縮小・WebP変換。表示時にトリミング。掲載イベントの記録写真ではありません。"
   },
   "community": {
     "src": "./assets/mdl-produce.webp",
-    "title": "MDL公式サイト掲載の共創イメージ",
-    "caption": "MDL共創イメージ／掲載イベントとは異なります",
+    "title": "モビリティデザインラボ公式サイト掲載の共創イメージ",
+    "caption": "モビリティデザインラボ共創イメージ／掲載イベントとは異なります",
     "alt": "テーブルを囲み共創を検討する人々のイメージ",
     "source": "https://mobilitydlab.com/assets/images/produce-co-creation.webp",
     "author": "Mobility Design Lab Inc.",
-    "license": "MDL公式サイト",
+    "license": "モビリティデザインラボ公式サイト",
     "licenseUrl": "https://mobilitydlab.com/",
     "edits": "縮小・WebP変換。表示時にトリミング。掲載イベントの記録写真ではありません。"
   }
