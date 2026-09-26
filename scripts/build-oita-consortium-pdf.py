@@ -2,8 +2,8 @@
 """Render the canonical consortium JSON and guide HTML as a 12-page PDF.
 
 Dependencies: reportlab, beautifulsoup4. Example:
-python build_pdf.py --content ../oita-consortium/content.json \
-  --guide ../oita-consortium/guide/index.html --font-dir ./fonts \
+python build_pdf.py --content ../oita-mirai-mobility-consortium/content.json \
+  --guide ../oita-mirai-mobility-consortium/guide/index.html --font-dir ./fonts \
   --output oita-consortium-concept-v03.pdf
 """
 import argparse, json, re, html, os
@@ -130,17 +130,19 @@ class Book:
         self.p('構想説明書',M,202,CW,size=47,leading=61,bold=True)
         self.p(s.select_one('.statement'),M,285,CW,size=22,leading=32,bold=True,color=DARK)
         self.p(s.select_one('.hero-summary'),M,396,CW,size=16.5,leading=25,color=MUTED)
-        self.box(M,478,CW,212,PALE,None)
+        self.box(M,478,CW,240,PALE,None)
         self.p('4',M+20,487,68,size=60,leading=75,bold=True,color=ORANGE)
         self.p(s.select_one('.cover-card h2'),M+104,501,480,size=21,leading=28,bold=True)
+        y=548
         for i,li in enumerate(s.select('.cover-card li')):
-            spans=li.find_all('span');y=548+i*31
+            spans=li.find_all('span')
             self.label(plain(spans[0]),M+25,y,40,size=16)
-            self.p(spans[1],M+68,y,528,size=17,leading=24,bold=True)
-        self.label('読むページを選ぶ',M,716,size=15)
+            end=self.p(spans[1],M+68,y,528,size=17,leading=24,bold=True)
+            y=end+9
+        self.label('読むページを選ぶ',M,739,size=15)
         short=['全体像','3つの参加方法','参加・会費','運営の4機能','役割・意思決定','プロジェクトの進め方','契約・お金の流れ','名称・情報のルール','大分に残す成果','将来の法人化','設立準備の進め方']
         for i,p in enumerate(self.data['pages']):
-            col=0 if i<6 else 1;row=i if i<6 else i-6;x=M+col*320;y=750+row*23
+            col=0 if i<6 else 1;row=i if i<6 else i-6;x=M+col*320;y=768+row*22
             self.p(f'{i+2:02d}',x,y,34,size=13,bold=True,color=DARK)
             self.p(short[i],x+37,y,267,size=13.5,color=INK)
             self.c.linkRect('',p['id'],(x,H-y-21,x+302,H-y+2),thickness=0)
@@ -228,16 +230,16 @@ class Book:
             right=node.find('div',recursive=False)
             end=self.p(right.strong,M+212,y+12,CW-212,size=17,leading=24,bold=True)
             end=self.p(right.p,M+212,end+5,CW-212,size=16,leading=22)
-            y=max(y+89,end+12)
+            y=max(y+80,end+12)
         y+=10;box=s.select_one('.decision-box')
-        self.box(M,y,CW,135,PALE,None)
+        self.box(M,y,CW,172,PALE,None)
         self.p(box.h3,M+18,y+14,CW-36,size=19,leading=26,bold=True)
         yy=y+53
         for row in box.select('.decision-row'):
             self.p(row.b,M+18,yy,126,size=16,leading=22,bold=True,color=DARK)
             end=self.p(row.span,M+156,yy,CW-174,size=16,leading=22)
             yy=end+9
-        self.note(s.select_one('.note'),y+145)
+        self.note(s.select_one('.note'),max(y+182,yy+3))
 
     def projects(self,s,y):
         x=M+61
@@ -264,9 +266,9 @@ class Book:
             title=markup(node.h3).replace('<br/>','')
             self.p(title,M+92,y+24,330,size=22,leading=30,bold=True)
             manager=node.select_one('.manager')
-            self.p(manager.span,M+434,y+19,170,size=13,leading=18,bold=True,color=DARK)
+            self.p(manager.span,M+402,y+19,202,size=13,leading=18,bold=True,color=DARK)
             name=''.join(str(n) for n in manager.contents if n is not manager.span)
-            self.p(name,M+434,y+47,172,size=26,leading=34,bold=True,color=DARK)
+            self.p(name,M+402,y+47,202,size=18 if i==0 else 26,leading=24 if i==0 else 34,bold=True,color=DARK)
             yy=y+99
             for pp in node.find_all('p',recursive=False):
                 yy=self.p(pp,M+20,yy,CW-40,size=16.5,leading=24)+9
@@ -352,7 +354,7 @@ class Book:
         a=s.select_one('.actions a')
         if a:
             self.c.linkURL(a['href'],(M,H-901,M+CW,H-877),relative=0,thickness=0)
-            self.p('構想のホームページへ → mobilitydlab.com/oita-consortium/',M,880,CW,size=13,leading=19,bold=True,color=DARK)
+            self.p('構想のホームページへ →',M,879,CW,size=13,leading=19,bold=True,color=DARK)
 
     def build(self):
         self.cover()
