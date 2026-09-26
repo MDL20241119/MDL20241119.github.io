@@ -1,0 +1,1242 @@
+[
+  {
+    "id": "01",
+    "name": "うさトリイライナー",
+    "motif": "宇佐神宮",
+    "region": "宇佐市",
+    "mobility": "観光電動トラム",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "朱色の鳥居を、車体のフレームに。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      19,
+      81,
+      366,
+      383
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "02",
+    "name": "はちまんウイング",
+    "motif": "八幡様と白鳩の象徴",
+    "region": "宇佐市など",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "白鳩の翼と、空を飛ぶローター。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      397,
+      81,
+      367,
+      383
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "03",
+    "name": "おうじんスカイ",
+    "motif": "応神天皇の創作イメージ",
+    "region": "宇佐市など",
+    "mobility": "古代船型の空飛ぶモビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "古代の装いと、空に浮かぶ舟。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      776,
+      81,
+      369,
+      383
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "04",
+    "name": "ゆけむりパレット",
+    "motif": "温泉",
+    "region": "別府市など",
+    "mobility": "自動運転シャトル",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "湯けむりと手ぬぐいで、お出迎え。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      1157,
+      81,
+      360,
+      383
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "05",
+    "name": "せきツインズ",
+    "motif": "関アジ・関サバ",
+    "region": "大分市佐賀関",
+    "mobility": "連結型の海上モビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "銀のアジと青いサバが、並んで進む。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      19,
+      542,
+      366,
+      394
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "06",
+    "name": "かぼすエア",
+    "motif": "かぼす",
+    "region": "県内各地",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "丸いかぼすと、葉っぱの翼。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      397,
+      542,
+      367,
+      394
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "07",
+    "name": "たかモンライド",
+    "motif": "高崎山のニホンザル",
+    "region": "大分市",
+    "mobility": "パーソナルモビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "親しみのある表情と、身軽な足まわり。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      776,
+      542,
+      369,
+      394
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "08",
+    "name": "そうりんクルーズ",
+    "motif": "大友宗麟と南蛮交流",
+    "region": "大分市など",
+    "mobility": "南蛮船型の未来モビリティ",
+    "theme": "ご指定の8つ・主役候補",
+    "feature": "南蛮船を、未来の移動拠点に。",
+    "image": "assets/mascots/sheet-1.png",
+    "crop": [
+      1157,
+      542,
+      360,
+      394
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "09",
+    "name": "ゆけむりん",
+    "motif": "別府温泉",
+    "region": "別府市",
+    "mobility": "自動運転シャトル",
+    "theme": "温泉と湯のまち",
+    "feature": "湯けむりの輪郭が、そのまま目印に。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      16,
+      96,
+      371,
+      369
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "10",
+    "name": "うみじごクルー",
+    "motif": "海地獄",
+    "region": "別府市",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "温泉と湯のまち",
+    "feature": "青い湯の池を、空飛ぶ機体に。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      399,
+      96,
+      366,
+      369
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "11",
+    "name": "あかゆホッパー",
+    "motif": "血の池地獄",
+    "region": "別府市",
+    "mobility": "ホバークラフト",
+    "theme": "温泉と湯のまち",
+    "feature": "赤い湯と気泡が、元気な表情に。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      777,
+      96,
+      365,
+      369
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "12",
+    "name": "タケガワラ号",
+    "motif": "竹瓦温泉",
+    "region": "別府市",
+    "mobility": "レトロ電気タクシー",
+    "theme": "温泉と湯のまち",
+    "feature": "唐破風の屋根と、レトロな車体。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      1154,
+      96,
+      367,
+      369
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "13",
+    "name": "すなゆローバー",
+    "motif": "別府の砂湯",
+    "region": "別府市",
+    "mobility": "砂地ローバー",
+    "theme": "温泉と湯のまち",
+    "feature": "砂の丸みと、大きなタイヤ。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      16,
+      540,
+      371,
+      385
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "14",
+    "name": "ゆのはなドロン",
+    "motif": "明礬温泉の湯の花小屋",
+    "region": "別府市",
+    "mobility": "配送ドローン",
+    "theme": "温泉と湯のまち",
+    "feature": "湯の花小屋の三角屋根が、空を飛ぶ。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      399,
+      540,
+      366,
+      385
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "15",
+    "name": "ラムネポッド",
+    "motif": "長湯温泉",
+    "region": "竹田市",
+    "mobility": "小型電動ポッド",
+    "theme": "温泉と湯のまち",
+    "feature": "温泉の泡を、丸いポッドに。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      777,
+      540,
+      365,
+      385
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "16",
+    "name": "あまがせスイスイ",
+    "motif": "天ヶ瀬温泉と玖珠川",
+    "region": "日田市",
+    "mobility": "水陸両用モビリティ",
+    "theme": "温泉と湯のまち",
+    "feature": "川の波と湯おけを、水陸両用の形に。",
+    "image": "assets/mascots/sheet-2.png",
+    "crop": [
+      1154,
+      540,
+      367,
+      385
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "17",
+    "name": "かぼコプター",
+    "motif": "かぼす",
+    "region": "県内各地",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "おいしい大分",
+    "feature": "かぼすの輪切りが、回転翼に。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      24,
+      77,
+      366,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "18",
+    "name": "とりてんウイング",
+    "motif": "とり天",
+    "region": "大分市・別府市など",
+    "mobility": "小型飛行機",
+    "theme": "おいしい大分",
+    "feature": "とり天の衣が、機体と翼に。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      402,
+      77,
+      360,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "19",
+    "name": "しいたけトラム",
+    "motif": "乾しいたけ",
+    "region": "県内各地",
+    "mobility": "路面電車",
+    "theme": "おいしい大分",
+    "feature": "しいたけの笠が、路面電車の屋根に。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      774,
+      77,
+      363,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "20",
+    "name": "だんごじるバス",
+    "motif": "だんご汁",
+    "region": "県内各地",
+    "mobility": "地域シャトル",
+    "theme": "おいしい大分",
+    "feature": "汁椀と平たいだんごが、地域のバスに。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      1149,
+      77,
+      362,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "21",
+    "name": "やせうまスクーター",
+    "motif": "やせうま",
+    "region": "県内各地",
+    "mobility": "電動キックスクーター",
+    "theme": "おいしい大分",
+    "feature": "幅広い麺を、スクーターの曲線に。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      24,
+      534,
+      366,
+      388
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "22",
+    "name": "りゅうきゅうクルー",
+    "motif": "りゅうきゅう",
+    "region": "県内各地",
+    "mobility": "小型電動ボート",
+    "theme": "おいしい大分",
+    "feature": "器の船体に、魚と薬味を積んで。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      402,
+      534,
+      360,
+      388
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "23",
+    "name": "せきアジセイル",
+    "motif": "関あじ",
+    "region": "大分市佐賀関",
+    "mobility": "帆走モビリティ",
+    "theme": "おいしい大分",
+    "feature": "背びれを帆にして、海風を受ける。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      774,
+      534,
+      363,
+      388
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "24",
+    "name": "せきサバマリン",
+    "motif": "関さば",
+    "region": "大分市佐賀関",
+    "mobility": "小型潜水艇",
+    "theme": "おいしい大分",
+    "feature": "サバの模様と丸い窓で、海中を探る。",
+    "image": "assets/mascots/sheet-3.png",
+    "crop": [
+      1149,
+      534,
+      362,
+      388
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "25",
+    "name": "ゆふツイン",
+    "motif": "由布岳",
+    "region": "由布市など",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "山・海・水の風景",
+    "feature": "由布岳の二つの峰が、飛行機の輪郭に。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      8,
+      79,
+      372,
+      379
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "26",
+    "name": "くじゅうトレッカー",
+    "motif": "くじゅう連山",
+    "region": "九重町・竹田市など",
+    "mobility": "探査ローバー",
+    "theme": "山・海・水の風景",
+    "feature": "連なる山と、力強い六輪の足まわり。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      392,
+      79,
+      374,
+      379
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "27",
+    "name": "きんりんボート",
+    "motif": "金鱗湖",
+    "region": "由布市",
+    "mobility": "湖の電動ボート",
+    "theme": "山・海・水の風景",
+    "feature": "湖面の丸みと、霧の表情。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      778,
+      79,
+      367,
+      379
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "28",
+    "name": "どうもんゴー",
+    "motif": "青の洞門",
+    "region": "中津市",
+    "mobility": "トンネル型EV",
+    "theme": "山・海・水の風景",
+    "feature": "岩のトンネルが、走る車体に。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      1157,
+      79,
+      371,
+      379
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "29",
+    "name": "やばけいレール",
+    "motif": "耶馬渓",
+    "region": "中津市",
+    "mobility": "モノレール",
+    "theme": "山・海・水の風景",
+    "feature": "岩峰と紅葉を、レールでつなぐ。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      8,
+      526,
+      372,
+      403
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "30",
+    "name": "たきホバー",
+    "motif": "原尻の滝",
+    "region": "豊後大野市",
+    "mobility": "ホバークラフト",
+    "theme": "山・海・水の風景",
+    "feature": "幅広い滝が、浮かぶスカートに。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      392,
+      526,
+      374,
+      403
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "31",
+    "name": "いなずみサブ",
+    "motif": "稲積水中鍾乳洞",
+    "region": "豊後大野市",
+    "mobility": "水中探査艇",
+    "theme": "山・海・水の風景",
+    "feature": "鍾乳石の形を、潜水艇の背びれに。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      778,
+      526,
+      367,
+      403
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "32",
+    "name": "べっぷベイクルー",
+    "motif": "別府湾",
+    "region": "別府市・大分市など",
+    "mobility": "電動フェリー",
+    "theme": "山・海・水の風景",
+    "feature": "湾に昇る朝日を、フェリーの顔に。",
+    "image": "assets/mascots/sheet-4.png",
+    "crop": [
+      1157,
+      526,
+      371,
+      403
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "33",
+    "name": "うさトリイ号",
+    "motif": "宇佐神宮",
+    "region": "宇佐市",
+    "mobility": "観光トラム",
+    "theme": "名跡とまちのかたち",
+    "feature": "鳥居の下を、みんなが乗れる空間に。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      18,
+      79,
+      425,
+      351
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "34",
+    "name": "うすきストーン",
+    "motif": "臼杵石仏",
+    "region": "臼杵市",
+    "mobility": "低速電動モビリティ",
+    "theme": "名跡とまちのかたち",
+    "feature": "穏やかな石の表情と、ゆっくり動く足。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      455,
+      79,
+      425,
+      351
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "35",
+    "name": "おかじょうグライド",
+    "motif": "岡城跡",
+    "region": "竹田市",
+    "mobility": "グライダー",
+    "theme": "名跡とまちのかたち",
+    "feature": "石垣と桜に、飛ぶ翼を組み合わせる。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      892,
+      79,
+      431,
+      351
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "36",
+    "name": "ふないキャブ",
+    "motif": "府内城",
+    "region": "大分市",
+    "mobility": "電気タクシー",
+    "theme": "名跡とまちのかたち",
+    "feature": "白壁と瓦屋根を、まちのタクシーに。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      1335,
+      79,
+      422,
+      351
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "37",
+    "name": "きつきリフト",
+    "motif": "杵築の坂道と城下町",
+    "region": "杵築市",
+    "mobility": "坂道の小型リフト",
+    "theme": "名跡とまちのかたち",
+    "feature": "坂道の形を、乗り物の両側に。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      18,
+      490,
+      425,
+      330
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "38",
+    "name": "まめだトコトコ",
+    "motif": "豆田町",
+    "region": "日田市",
+    "mobility": "街歩きシャトル",
+    "theme": "名跡とまちのかたち",
+    "feature": "町家の白壁と格子を、車体の表情に。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      455,
+      490,
+      425,
+      330
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "39",
+    "name": "ふきじルーフ",
+    "motif": "富貴寺",
+    "region": "豊後高田市",
+    "mobility": "小型電動カート",
+    "theme": "名跡とまちのかたち",
+    "feature": "木造の屋根を、静かなカートに。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      892,
+      490,
+      431,
+      330
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "40",
+    "name": "しょうわライナー",
+    "motif": "昭和の町",
+    "region": "豊後高田市",
+    "mobility": "ボンネット型電気バス",
+    "theme": "名跡とまちのかたち",
+    "feature": "丸いボンネットで、懐かしい町を走る。",
+    "image": "assets/mascots/sheet-5.png",
+    "crop": [
+      1335,
+      490,
+      422,
+      330
+    ],
+    "imageSize": [
+      1774,
+      887
+    ]
+  },
+  {
+    "id": "41",
+    "name": "たけアミーゴ",
+    "motif": "別府竹細工",
+    "region": "別府市",
+    "mobility": "自転車モビリティ",
+    "theme": "工芸・祭り・物語",
+    "feature": "竹の編み目と、大きな二つの車輪。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      8,
+      92,
+      373,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "42",
+    "name": "おんたローリー",
+    "motif": "小鹿田焼",
+    "region": "日田市",
+    "mobility": "一輪型配送ロボット",
+    "theme": "工芸・祭り・物語",
+    "feature": "器の模様が、一輪ロボットの顔に。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      393,
+      92,
+      371,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "43",
+    "name": "ひめキツネフライ",
+    "motif": "姫島のキツネ踊り",
+    "region": "姫島村",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "工芸・祭り・物語",
+    "feature": "キツネの表情と、扇のような翼。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      776,
+      92,
+      370,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "44",
+    "name": "きっちょむトライク",
+    "motif": "吉四六話",
+    "region": "臼杵市野津町など",
+    "mobility": "電動三輪車",
+    "theme": "工芸・祭り・物語",
+    "feature": "とんちの表情と、三輪の軽快さ。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      1158,
+      92,
+      370,
+      377
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "45",
+    "name": "ひたゲタスケート",
+    "motif": "日田下駄",
+    "region": "日田市",
+    "mobility": "電動スケート",
+    "theme": "工芸・祭り・物語",
+    "feature": "下駄の歯に、走る車輪を添える。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      8,
+      543,
+      373,
+      387
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "46",
+    "name": "ぎおんフロート",
+    "motif": "日田祇園",
+    "region": "日田市",
+    "mobility": "祭りの電動フロート",
+    "theme": "工芸・祭り・物語",
+    "feature": "祭りの高さと賑わいを、一台に。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      393,
+      543,
+      371,
+      387
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "47",
+    "name": "ちくらくナイト",
+    "motif": "竹楽",
+    "region": "竹田市",
+    "mobility": "夜道の電動シャトル",
+    "theme": "工芸・祭り・物語",
+    "feature": "竹灯籠の光で、夜道を案内する。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      776,
+      543,
+      370,
+      387
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "48",
+    "name": "すいごうクルー",
+    "motif": "水郷日田の屋形船",
+    "region": "日田市",
+    "mobility": "電動屋形船",
+    "theme": "工芸・祭り・物語",
+    "feature": "屋形船と提灯で、水辺をゆっくり。",
+    "image": "assets/mascots/sheet-6.png",
+    "crop": [
+      1158,
+      543,
+      370,
+      387
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "49",
+    "name": "くにさきウイング",
+    "motif": "国東の石塔と六郷満山文化",
+    "region": "国東市など",
+    "mobility": "空飛ぶモビリティ",
+    "theme": "大分をめぐる仲間",
+    "feature": "石塔の屋根が、空を飛ぶ翼に。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      24,
+      84,
+      361,
+      386
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "50",
+    "name": "なかつカラカー",
+    "motif": "中津からあげ",
+    "region": "中津市",
+    "mobility": "配送ロボット",
+    "theme": "大分をめぐる仲間",
+    "feature": "からあげの衣と、配達ボックス。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      397,
+      84,
+      367,
+      386
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "51",
+    "name": "つくみドルフィン",
+    "motif": "津久見のイルカ",
+    "region": "津久見市",
+    "mobility": "水上タクシー",
+    "theme": "大分をめぐる仲間",
+    "feature": "イルカの流線形で、水面を進む。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      776,
+      84,
+      372,
+      386
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "52",
+    "name": "ひじカレイダイブ",
+    "motif": "城下かれい",
+    "region": "日出町",
+    "mobility": "海底探査艇",
+    "theme": "大分をめぐる仲間",
+    "feature": "平たいカレイの体を、海底探査艇に。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      1160,
+      84,
+      352,
+      386
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "53",
+    "name": "さいきスシロボ",
+    "motif": "佐伯寿司",
+    "region": "佐伯市",
+    "mobility": "配達モビリティ",
+    "theme": "大分をめぐる仲間",
+    "feature": "大きな寿司を、配達ロボットに。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      24,
+      535,
+      361,
+      400
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "54",
+    "name": "ここのえリンク",
+    "motif": "九重“夢”大吊橋",
+    "region": "九重町",
+    "mobility": "空中ゴンドラ",
+    "theme": "大分をめぐる仲間",
+    "feature": "吊橋の線を、ゴンドラの輪郭に。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      397,
+      535,
+      367,
+      400
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "55",
+    "name": "きりかぶグライダー",
+    "motif": "伐株山",
+    "region": "玖珠町",
+    "mobility": "グライダー",
+    "theme": "大分をめぐる仲間",
+    "feature": "平らな山頂と、長く伸びる翼。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      776,
+      535,
+      372,
+      400
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "56",
+    "name": "ジオローバー",
+    "motif": "豊後大野の柱状節理",
+    "region": "豊後大野市",
+    "mobility": "六輪探査車",
+    "theme": "大分をめぐる仲間",
+    "feature": "柱状の岩と六輪で、大地を探る。",
+    "image": "assets/mascots/sheet-7.png",
+    "crop": [
+      1160,
+      535,
+      352,
+      400
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "A",
+    "name": "うさぐうパレット",
+    "motif": "宇佐神宮の社殿",
+    "mobility": "e-Palette型シャトル",
+    "region": "宇佐市",
+    "theme": "追加デザイン",
+    "feature": "社殿の屋根と朱色の柱を、箱型の車体に。大きな窓で、みんなを乗せる。",
+    "image": "assets/mascots/focus-a.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "B",
+    "name": "うさパレット",
+    "motif": "宇佐神宮の鳥居",
+    "mobility": "e-Palette型シャトル",
+    "region": "宇佐市",
+    "theme": "追加デザイン",
+    "feature": "反り上がる鳥居と黒い輪。まちを案内する、お出迎えのキャラクター。",
+    "image": "assets/mascots/focus-b.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "C",
+    "name": "はちまんジョビー",
+    "motif": "八幡様の創作イメージ",
+    "mobility": "Joby型の空飛ぶモビリティ",
+    "region": "宇佐市",
+    "theme": "追加デザイン",
+    "feature": "やさしい守り神の表情と、白鳩のモチーフ。空から大分を見守る。",
+    "image": "assets/mascots/focus-c.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "D",
+    "name": "うさぐうスカイ",
+    "motif": "宇佐神宮の社殿",
+    "mobility": "空飛ぶクルマ",
+    "region": "宇佐市",
+    "theme": "追加デザイン",
+    "feature": "二つ並ぶ屋根と朱色の柱。社殿の形を、空に浮かぶ機体へ。",
+    "image": "assets/mascots/focus-d.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "E",
+    "name": "うさぐうライド",
+    "motif": "宇佐神宮の社殿",
+    "mobility": "コンパクトな電気自動車",
+    "region": "宇佐市",
+    "theme": "追加デザイン",
+    "feature": "丸い車体と大きなタイヤ。社殿の表情をそのままに、地上を走る兄弟キャラ。",
+    "image": "assets/mascots/focus-e.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  },
+  {
+    "id": "F",
+    "name": "ハーモニースカイ",
+    "motif": "ハーモニーランド",
+    "mobility": "Joby型の空飛ぶモビリティ",
+    "region": "日出町",
+    "theme": "追加デザイン",
+    "feature": "リボンと観覧車が目印。遊園地の楽しさを、白とピンクの機体に。",
+    "image": "assets/mascots/focus-f.png",
+    "crop": [
+      0,
+      0,
+      1536,
+      1024
+    ],
+    "imageSize": [
+      1536,
+      1024
+    ]
+  }
+]
