@@ -1,0 +1,60 @@
+[
+  {
+    "file": "beppu.webp",
+    "width": 1600,
+    "height": 900,
+    "src": "./assets/beppu.webp",
+    "title": "田ノ浦ビーチから望む別府湾・別府市（2021年）",
+    "caption": "田ノ浦ビーチから望む別府湾・別府市（2021年）",
+    "alt": "田ノ浦ビーチから望む別府湾・別府市（2021年）",
+    "author": "Project Kei",
+    "source": "https://commons.wikimedia.org/wiki/File:Beppu_City_and_Beppu_Bay.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "edits": "既存の縮小・WebP変換版を再利用。表示枠に応じたトリミング。写真には各記載のCCライセンスを適用。",
+    "position": "50% 80%"
+  },
+  {
+    "file": "opam.webp",
+    "width": 1000,
+    "height": 750,
+    "src": "./assets/opam.webp",
+    "title": "大分県立美術館 OPAM（2015年）",
+    "caption": "大分県立美術館 OPAM（2015年）",
+    "alt": "大分県立美術館 OPAM（2015年）",
+    "author": "大分帰省中",
+    "source": "https://commons.wikimedia.org/wiki/File:Oita_OPAM_1.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "edits": "既存の縮小・WebP変換版を再利用。表示枠に応じたトリミング。写真には各記載のCCライセンスを適用。",
+    "position": "50% 65%"
+  },
+  {
+    "file": "airport.webp",
+    "width": 1000,
+    "height": 360,
+    "src": "./assets/airport.webp",
+    "title": "大分空港 旅客ターミナルとエプロン（2018年）",
+    "caption": "大分空港 旅客ターミナルとエプロン（2018年）",
+    "alt": "大分空港 旅客ターミナルとエプロン（2018年）",
+    "author": "Project Kei",
+    "source": "https://commons.wikimedia.org/wiki/File:Oita_Airport_Passenger_Terminal_and_Apron.jpg",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "edits": "既存の縮小・WebP変換版を再利用。表示枠に応じたトリミング。写真には各記載のCCライセンスを適用。"
+  },
+  {
+    "file": "park.webp",
+    "width": 1000,
+    "height": 666,
+    "src": "./assets/park.webp",
+    "title": "くじゅう周辺の緑の風景（2023年）",
+    "caption": "くじゅう周辺の緑の風景（2023年）",
+    "alt": "くじゅう周辺の緑の風景（2023年）",
+    "author": "Raita Futo",
+    "source": "https://commons.wikimedia.org/wiki/File:Kuju_green_fields_(53032548236).jpg",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "edits": "既存の縮小・WebP変換版を再利用。表示枠に応じたトリミング。写真には各記載のCCライセンスを適用。"
+  }
+]
