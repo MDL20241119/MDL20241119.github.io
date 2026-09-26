@@ -9,8 +9,7 @@ export async function authenticate(request:Request,channel:Principal['channel'])
  const authorization=request.headers.get('authorization');
  if(authorization){const m=/^Bearer epo\.([a-f0-9-]{36})\.([a-f0-9]{64})$/.exec(authorization);if(!m)fail(401,'認証情報を確認してください。');const row=await db().prepare('SELECT * FROM integration_credentials WHERE id = ?').bind(m[1]).first<{owner:string;subject:string;role:Role;token_hash:string;expires_at:string;revoked:number}>();if(!row||row.revoked||row.expires_at<=new Date().toISOString()||await digest(m[2])!==row.token_hash)fail(401,'接続キーが無効、期限切れ、または解除済みです。');return {workspace:row.owner,subject:row.subject,role:row.role,channel,scopes:row.role==='driver'?['read']:scopes,delegationId:m[1]};}
  const user=await getChatGPTUser();if(user)return {workspace:user.userId,subject:user.userId,role:'manager',channel,scopes};
- // Preview-only identity is never enabled in the production Worker.
- if(process.env.NODE_ENV==='development'){const who=await identity();return {workspace:who.owner,subject:who.owner,role:'manager',channel,scopes};}
+ // Preview and production both require identity; the public demo is client-only.
  fail(401,'サインインまたは許可された接続が必要です。');
 }
 export async function browserPrincipal():Promise<Principal>{const who=await identity();return {workspace:who.owner,subject:who.owner,role:'manager',channel:'web',scopes};}

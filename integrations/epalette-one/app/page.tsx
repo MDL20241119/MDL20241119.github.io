@@ -1,2 +1,4 @@
 import ConsoleApp from './console';
-export default function Home(){return <ConsoleApp/>;}
+import {seedState} from '@/lib/model';
+export const dynamic='force-dynamic';
+export default function Home(){return <ConsoleApp guest initialState={seedState()}/>;}

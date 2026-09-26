@@ -1,3 +1,4 @@
+import {newId} from '../id.js';
 import { z } from 'zod';
 import {stops,serviceId,passengerType,transportBookings,serviceCatalogue,validCalendarDate} from './network';
 export {stops,serviceId,passengerType} from './network';
@@ -63,9 +64,9 @@ export function prepare(s:State,p:Principal,name:string,args:Record<string,unkno
  } else if(name==='prepare_on_demand_request'){command={type:'create_ride',from:stops[0].name,to:stops[1].name,start:args.start,count:args.count};summary={title:'オンデマンドの乗車依頼',...args,notice:'担当者の配車確定まで未割当です。送迎の成立ではありません。'};
  } else fail(404,'変更案を作成できません。');
  applyCommand(s,command,p.subject); // Validate against exactly the same rules as the human UI; discard this preview.
- const next=structuredClone(s);next.integration=data(next);const a:Proposal={id:proposalId,subject:p.subject,role:p.role,channel:p.channel,action:name,args,command,summary,createdAt:now,expiresAt:new Date(Date.parse(now)+10*60000).toISOString(),baseVersion:s.version+1,status:'pending',csrf:crypto.randomUUID()};next.integration.proposals.push(a);return event(next,p,'内容確認を依頼',now);
+ const next=structuredClone(s);next.integration=data(next);const a:Proposal={id:proposalId,subject:p.subject,role:p.role,channel:p.channel,action:name,args,command,summary,createdAt:now,expiresAt:new Date(Date.parse(now)+10*60000).toISOString(),baseVersion:s.version+1,status:'pending',csrf:newId()};next.integration.proposals.push(a);return event(next,p,'内容確認を依頼',now);
 }
-function event(s:State,p:Principal,label:string,now:string){s.version++;s.events.unshift({id:crypto.randomUUID(),time:now,label,actor:p.subject});s.events=s.events.slice(0,100);return s;}
+function event(s:State,p:Principal,label:string,now:string){s.version++;s.events.unshift({id:newId(),time:now,label,actor:p.subject});s.events=s.events.slice(0,100);return s;}
 export function approve(s:State,p:Principal,proposalId:string,csrf:string,decision:'approve'|'reject',now:string):State{
  if(p.channel!=='web')fail(403,'本人が確認画面で承認してください。');const a=getProposal(s,p,proposalId);
  if(a.status!=='pending'||a.csrf!==csrf||a.expiresAt<=now)fail(403,'確認内容が無効、または期限切れです。新しい内容を確認してください。');

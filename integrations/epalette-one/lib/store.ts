@@ -3,7 +3,7 @@ import { env } from 'cloudflare:workers';
 import { getChatGPTUser } from '@/app/chatgpt-auth';
 import { AppState, seedState, applyCommand, Command, DomainError } from './model';
 export function db():D1Database {const binding=(env as unknown as {DB?:D1Database}).DB;if(!binding)throw new DomainError(503,'保存先に接続できません。時間をおいて再度お試しください。');return binding;}
-export async function identity(){if((await headers()).has('authorization'))throw new DomainError(403,'この画面用APIは本人のサインインが必要です。');const user=await getChatGPTUser();if(user)return {owner:user.userId,actor:user.displayName};if(process.env.NODE_ENV==='development')return {owner:'local-preview',actor:'検証管理者'};throw new DomainError(401,'サインインが必要です。');}
+export async function identity(){if((await headers()).has('authorization'))throw new DomainError(403,'この画面用APIは本人のサインインが必要です。');const user=await getChatGPTUser();if(user)return {owner:user.userId,actor:user.displayName};throw new DomainError(401,'サインインが必要です。');}
 export async function readState(owner:string){let row=await db().prepare('SELECT state FROM workspaces WHERE owner = ?').bind(owner).first<{state:string}>();if(!row){const s=seedState();await db().prepare('INSERT OR IGNORE INTO workspaces (owner,state,version) VALUES (?,?,?)').bind(owner,JSON.stringify(s),s.version).run();row=await db().prepare('SELECT state FROM workspaces WHERE owner = ?').bind(owner).first<{state:string}>();}return JSON.parse(row!.state) as AppState;}
 export async function digest(value:string){return Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(value)))).map(x=>x.toString(16).padStart(2,'0')).join('');}
 export async function execute(owner:string,actor:string,key:string,expected:number,command:Command,reducer?:(state:AppState)=>AppState){

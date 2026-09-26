@@ -1,25 +1,25 @@
-✔ AT-01: SOC event changes next-use readiness (3.201001ms)
-✔ AT-02: old SOC is unknown and cannot produce a charge plan (0.47792ms)
-✔ AT-06: expired driver cannot check in (0.275274ms)
-✔ AT-07: missing physical checks blocks start (0.572743ms)
-✔ AT-08: reference reverse deadlines 10:40, 14:30, 14:45 (12.822132ms)
-✔ AT-09: connected at 0 kW is not charging or complete (0.470719ms)
-✔ AT-10: lower delivered power extends estimate (0.633324ms)
-✔ AT-11: unknown charger access cannot be assigned (1.310554ms)
-✔ AT-12: shared charger power is divided (0.27192ms)
-✔ AT-13: vehicle conversion buffer rejects overlapping ride (0.467093ms)
-✔ AT-14: ticket capacity is per overlapping segment (0.401314ms)
-✔ AT-16: unresolved orders prevent return receipt (1.428532ms)
-✔ AT-17: hold cannot be cleared with an active fault (0.414364ms)
-✔ AT-18: charge start does not complete return (0.24591ms)
-✔ AT-21: inactive recipient cannot acknowledge (0.343407ms)
-✔ AT-22: impossible target is not clamped to 100% (0.146922ms)
-✔ duplicate boarding does not double count (0.329226ms)
-✔ unpaid ready order cannot be handed out (0.259721ms)
-✔ paid cancellation keeps refund pending (0.248114ms)
-✔ charge request is a task and not a vehicle command (0.321565ms)
-✔ cross-midnight reverse planning preserves dates (0.077787ms)
-✔ last stock cannot be oversold sequentially (0.409988ms)
+✔ AT-01: SOC event changes next-use readiness (3.047049ms)
+✔ AT-02: old SOC is unknown and cannot produce a charge plan (0.421035ms)
+✔ AT-06: expired driver cannot check in (0.289397ms)
+✔ AT-07: missing physical checks blocks start (0.544111ms)
+✔ AT-08: reference reverse deadlines 10:40, 14:30, 14:45 (11.995536ms)
+✔ AT-09: connected at 0 kW is not charging or complete (0.363028ms)
+✔ AT-10: lower delivered power extends estimate (0.770633ms)
+✔ AT-11: unknown charger access cannot be assigned (1.34464ms)
+✔ AT-12: shared charger power is divided (0.599395ms)
+✔ AT-13: vehicle conversion buffer rejects overlapping ride (0.760407ms)
+✔ AT-14: ticket capacity is per overlapping segment (0.375386ms)
+✔ AT-16: unresolved orders prevent return receipt (0.570201ms)
+✔ AT-17: hold cannot be cleared with an active fault (0.300343ms)
+✔ AT-18: charge start does not complete return (0.237879ms)
+✔ AT-21: inactive recipient cannot acknowledge (0.31806ms)
+✔ AT-22: impossible target is not clamped to 100% (0.535508ms)
+✔ duplicate boarding does not double count (0.320344ms)
+✔ unpaid ready order cannot be handed out (0.30463ms)
+✔ paid cancellation keeps refund pending (0.221945ms)
+✔ charge request is a task and not a vehicle command (0.293924ms)
+✔ cross-midnight reverse planning preserves dates (0.171539ms)
+✔ last stock cannot be oversold sequentially (0.362848ms)
 ℹ tests 22
 ℹ suites 0
 ℹ pass 22
@@ -27,4 +27,4 @@
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 105.015427
+ℹ duration_ms 117.327113

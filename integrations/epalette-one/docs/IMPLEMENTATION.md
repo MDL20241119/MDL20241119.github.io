@@ -1,6 +1,8 @@
 # e-Palette ONE — 管理者Webアプリ実装メモ
 
-更新: 2026-09-25 / 車両連携前提のMVP・機能検証版
+更新: 2026-09-26 / 車両連携前提のMVP・機能検証版
+
+UI刷新とログイン不要の入口については [UI-UX-REDESIGN.md](UI-UX-REDESIGN.md) を参照。公開体験はタブ内の合成データのみ。以下のD1・認証機能は `/workspace` の保存用管理画面に適用し、匿名体験からは利用しない。
 
 ## 動く範囲
 
@@ -49,7 +51,7 @@ ACは実効上限と効率、DCはSOC帯ごとの受入制限・共有出力・�
 
 ## API
 
-- `GET /api/state`: 自分の検証状態。匿名は401。開発プレビューだけローカル模擬ユーザーを許可。
+- `GET /api/state`: 認証された自分の検証状態。開発・本番とも匿名は401。公開体験はこのAPIを使用しない。
 - `POST /api/commands`: 業務の状態変更。Idempotency-KeyとexpectedVersion必須。
 - `GET /api/export`: 自分の予定CSV。表計算式として解釈されるセルをエスケープ。
 - `POST /api/integrations/vehicle`: 実車未接続時は503で拒否。

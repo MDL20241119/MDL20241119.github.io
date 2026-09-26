@@ -1,3 +1,4 @@
+import {newId} from './id.js';
 export type Purpose = 'shuttle' | 'ondemand' | 'shop' | 'charge';
 export type Quality = 'demo' | 'measured' | 'manual' | 'estimated' | 'unavailable';
 export type Reading<T> = { value: T | null; observedAt: string; receivedAt: string; source: string; quality: Quality; unit?: string };
@@ -65,7 +66,7 @@ function text(v:unknown,max=200){requireThat(typeof v==='string'&&v.trim().lengt
 function validISO(v:unknown){requireThat(typeof v==='string'&&Number.isFinite(Date.parse(v)),'日時を確認してください。');return new Date(v as string).toISOString();}
 export type Command={type:string;[key:string]:unknown};
 export function applyCommand(input:AppState,c:Command,actor='管理者'):AppState{
- const s=structuredClone(input); const id=()=>crypto.randomUUID(); const vehicle=(v:unknown)=>{const x=s.vehicles.find(x=>x.id===v);if(!x)throw new DomainError(404,'車両が見つかりません。');return x;}; const booking=(v:unknown)=>{const b=s.bookings.find(x=>x.id===v);if(!b)throw new DomainError(404,'予定が見つかりません。');return b;};
+ const s=structuredClone(input); const id=()=>newId(); const vehicle=(v:unknown)=>{const x=s.vehicles.find(x=>x.id===v);if(!x)throw new DomainError(404,'車両が見つかりません。');return x;}; const booking=(v:unknown)=>{const b=s.bookings.find(x=>x.id===v);if(!b)throw new DomainError(404,'予定が見つかりません。');return b;};
  let label='';
  switch(c.type){
  case 'create_booking':{
