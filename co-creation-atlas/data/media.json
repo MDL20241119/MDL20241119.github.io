@@ -514,5 +514,101 @@
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
     "rightsUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+  },
+  {
+    "assetId": "manufacturing-usa-mxd-testbed",
+    "caseId": "manufacturing-usa",
+    "name": "Manufacturing USA",
+    "title": "Manufacturing USA MxD",
+    "credit": "MxD",
+    "sourceUrl": "https://www.nist.gov/image/manufacturing-usa-mxd",
+    "license": "NIST editorial image permission — attribution and NIST mention required",
+    "licenseUrl": "https://www.nist.gov/image/manufacturing-usa-mxd",
+    "rightsUrl": "https://www.nist.gov/image/manufacturing-usa-mxd",
+    "status": "cleared-editorial-only",
+    "imageDate": "2019-02-12",
+    "alt": "MxDの工場フロアに設けられたDiscrete Manufacturing Testbedで、産業用ロボットと生産設備を案内する技術者。",
+    "caption": "NISTが紹介するManufacturing USA参加機関MxDのDiscrete Manufacturing Testbed。シカゴのInnovation Center内で技術者が設備を案内する様子（2019年撮影）。",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "local": "assets/manufacturing-usa-mxd-testbed.jpg",
+    "changes": "EXIFの向きを確認して縮小。JPEGに変換・再圧縮。色変更なし。切り抜きなし。",
+    "verified": "2026-09-27",
+    "hero": false,
+    "feature": false
+  },
+  {
+    "assetId": "manufacturing-usa-niimbl-training",
+    "caseId": "manufacturing-usa",
+    "name": "Manufacturing USA",
+    "title": "NIIMBL Training",
+    "credit": "Photo courtesy of the Biotechnology Training and Education Center at North Carolina State University, a NIIMBL partner",
+    "sourceUrl": "https://www.nist.gov/image/photocourtesyofbtecnorthcarolinastateuniversitypng",
+    "license": "NIST editorial image permission — attribution and NIST mention required",
+    "licenseUrl": "https://www.nist.gov/image/photocourtesyofbtecnorthcarolinastateuniversitypng",
+    "rightsUrl": "https://www.nist.gov/image/photocourtesyofbtecnorthcarolinastateuniversitypng",
+    "status": "cleared-editorial-only",
+    "imageDate": "撮影日不詳（2019-03-22公開）",
+    "alt": "North Carolina State UniversityのBTECで、保護衣を着た研修参加者がバイオ医薬品製造用の設備と制御盤を学ぶ様子。",
+    "caption": "NISTが紹介するNIIMBLパートナー、North Carolina State UniversityのBTECでのバイオ医薬品製造研修。Manufacturing USAの人材育成活動の一例（2019年公開、撮影日不詳）。",
+    "dimensions": [
+      1600,
+      1580
+    ],
+    "local": "assets/manufacturing-usa-niimbl-training.jpg",
+    "changes": "EXIFの向きを確認して縮小。JPEGに変換・再圧縮。色変更なし。切り抜きなし。",
+    "verified": "2026-09-27",
+    "hero": false,
+    "feature": false
+  },
+  {
+    "assetId": "openlab-rektorshuset-exterior",
+    "caseId": "openlab-stockholm",
+    "name": "Openlab Stockholm",
+    "title": "KTH Rektorshus 01.jpg",
+    "credit": "Boberger",
+    "sourceUrl": "https://commons.wikimedia.org/wiki/File:KTH_Rektorshus_01.jpg",
+    "license": "CC BY-SA 3.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "rightsUrl": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "status": "cleared-cc",
+    "imageDate": "2011-09-28",
+    "alt": "Openlabが後に入居したKTH旧Rektorshusetの赤れんがの外観。2011年撮影。",
+    "caption": "Openlabが2015年に再利用したKTH旧Rektorshusetの外観。2011年9月撮影の入居前の姿。",
+    "dimensions": [
+      1600,
+      1063
+    ],
+    "local": "assets/openlab-rektorshuset-exterior.jpg",
+    "changes": "EXIFの向きを確認して縮小。JPEGに変換・再圧縮。色変更なし。表示枠に合わせた切り抜きが生じる場合あり。",
+    "verified": "2026-09-27",
+    "hero": false,
+    "feature": false
+  },
+  {
+    "assetId": "massrobotics-event-space-2022",
+    "caseId": "massrobotics",
+    "name": "MassRobotics",
+    "title": "L-22-03-18-A_009",
+    "credit": "Department of Labor / Scott Eisen",
+    "sourceUrl": "https://www.flickr.com/photos/usdol/51945080772/",
+    "license": "CC BY 2.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+    "rightsUrl": "https://commons.wikimedia.org/wiki/File:L-22-03-18-A_009_(51945080772).jpg",
+    "status": "cleared-cc",
+    "imageDate": "2022-03-18",
+    "alt": "MassRoboticsのイベント会場で、登壇者と着席した参加者が労働とロボティクスについて討議する様子。",
+    "caption": "MassRoboticsで2022年3月18日に開かれた労働とロボティクスの討議。登壇席と客席を含む現地イベント会場の様子。",
+    "local": "assets/massrobotics-event-space-2022.jpg",
+    "dimensions": [
+      1600,
+      1067
+    ],
+    "changes": "EXIFの向きを確認して縮小。JPEGを再圧縮。色変更なし。表示枠に合わせた切り抜きが生じる場合あり。",
+    "verified": "2026-09-27",
+    "hero": false,
+    "feature": false
   }
 ]

@@ -284,7 +284,17 @@
     "themes": [
       "city",
       "people"
-    ]
+    ],
+    "image": "assets/openlab-rektorshuset-exterior.jpg",
+    "imageAlt": "Openlabが後に入居したKTH旧Rektorshusetの赤れんがの外観。2011年撮影。",
+    "imageNoCrop": false,
+    "imageCredit": "Boberger",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:KTH_Rektorshus_01.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/3.0/",
+    "imageLicense": "CC BY-SA 3.0",
+    "imageDate": "2011-09-28",
+    "imageChanges": "EXIFの向きを確認して縮小。JPEGに変換・再圧縮。色変更なし。表示枠に合わせた切り抜きが生じる場合あり。",
+    "imageCaption": "Openlabが2015年に再利用したKTH旧Rektorshusetの外観。2011年9月撮影の入居前の姿。"
   },
   {
     "id": "forum-virium-helsinki",
@@ -2313,7 +2323,17 @@
     "themes": [
       "people",
       "prototype"
-    ]
+    ],
+    "image": "assets/massrobotics-event-space-2022.jpg",
+    "imageAlt": "MassRoboticsのイベント会場で、登壇者と着席した参加者が労働とロボティクスについて討議する様子。",
+    "imageNoCrop": false,
+    "imageCredit": "Department of Labor / Scott Eisen",
+    "imageSource": "https://www.flickr.com/photos/usdol/51945080772/",
+    "imageRights": "https://creativecommons.org/licenses/by/2.0/",
+    "imageLicense": "CC BY 2.0",
+    "imageDate": "2022-03-18",
+    "imageChanges": "EXIFの向きを確認して縮小。JPEGを再圧縮。色変更なし。表示枠に合わせた切り抜きが生じる場合あり。",
+    "imageCaption": "MassRoboticsで2022年3月18日に開かれた労働とロボティクスの討議。登壇席と客席を含む現地イベント会場の様子。"
   },
   {
     "id": "robohouse",
@@ -4151,6 +4171,16 @@
     "number": "28",
     "themes": [
       "business"
-    ]
+    ],
+    "image": "assets/manufacturing-usa-mxd-testbed.jpg",
+    "imageAlt": "MxDの工場フロアに設けられたDiscrete Manufacturing Testbedで、産業用ロボットと生産設備を案内する技術者。",
+    "imageNoCrop": true,
+    "imageCredit": "MxD",
+    "imageSource": "https://www.nist.gov/image/manufacturing-usa-mxd",
+    "imageRights": "https://www.nist.gov/image/manufacturing-usa-mxd",
+    "imageLicense": "NIST editorial image permission — attribution and NIST mention required",
+    "imageDate": "2019-02-12",
+    "imageChanges": "EXIFの向きを確認して縮小。JPEGに変換・再圧縮。色変更なし。切り抜きなし。",
+    "imageCaption": "NISTが紹介するManufacturing USA参加機関MxDのDiscrete Manufacturing Testbed。シカゴのInnovation Center内で技術者が設備を案内する様子（2019年撮影）。"
   }
 ]
