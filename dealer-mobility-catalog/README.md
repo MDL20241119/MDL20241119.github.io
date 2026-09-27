@@ -2,13 +2,15 @@
 
 町いちばん活動メニューと価値・資金循環カタログ。販売店の経営会議向け。
 
-- [B HTMLスライド](https://mobilitydlab.com/dealer-mobility-catalog/)：106枚。8つの活動メニュー、全88掲載記録、決定事項を収録。
+- [動くHTMLスライド](https://mobilitydlab.com/dealer-mobility-catalog/)：4ページ。活動・記録の深掘り、収入試算、着手条件の確認。Neo Swissの意匠。
+- [ページ一覧・数字台帳・操作方法](interactive-notes.md)
+- [106枚のカタログ](https://mobilitydlab.com/dealer-mobility-catalog/catalog.html)：従来版。全88掲載記録を収録。
 - [A 設計図](https://mobilitydlab.com/dealer-mobility-catalog/blueprint.html)：ガバニングメッセージ、論点、ヘッド台帳、証拠対応表。
 - [編集用データ](content.json)：各ページの文言と出所。
 
 ## 使い方
 
-「目次・事例検索」から活動、地域、事例IDを検索できます。「会議表示」で1ページずつ投影、「原寸で読む」で細部を確認できます。左右の矢印キーでもページを移動できます。資料は1920×1080で作成し、通常表示では縦に並びます。
+カード・棒を押すと右から出所付きの根拠パネルが開きます。会費は有料契約者数を動かして試算し、着手条件はスイッチで仮に確認できます。→／Space、←、1〜4、O（一覧）、D（自動デモ）、Escに対応。#staticと動きを減らす設定では完成状態を表示します。
 
 冒頭と最終ページの共通論点は、①活動、②役割、③還元と負担、④検証です。各個票には、事実、支払者、運営への還流、住民・地元企業・販売店・地域への還元、追加確認を配置しています。
 
@@ -22,13 +24,13 @@
 
 ## 再生成
 
-`content.json`と`blueprint.md`を編集してから、PythonでHTMLを再生成できます。元資料を複製せず、要約・分析と参照先を格納しています。
+動く版は`interactive-template.html`と共通データ`content.json`から再生成します。`python build_interactive.py`で単一の`index.html`ができます。従来の106枚版は`content.json`と`blueprint.md`から`render.py`で再生成します。元資料を複製せず、要約・分析と参照先を格納しています。
 
 ```bash
 python -m pip install Pillow fonttools markdown budoux
 python render.py --font /path/to/NotoSansJP.ttf --qa /tmp/dealer-catalog-qa
 ```
 
-Google FontsのNoto Sans JPを読み込み、表示に必要な文字のサブセットもHTMLに埋め込んでいます。フォントの著作権表示とSIL Open Font License 1.1は[FONT-LICENSE.txt](FONT-LICENSE.txt)に記載しています。
+動く版の外部読み込みはGoogle FontsのNoto Sans JPのみ。従来版にはフォントのサブセットを埋め込んでいます。フォントの著作権表示とSIL Open Font License 1.1は[FONT-LICENSE.txt](FONT-LICENSE.txt)に記載しています。
 
 作成日：2026年9月27日。
