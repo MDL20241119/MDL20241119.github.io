@@ -18,6 +18,8 @@ for item in MEDIA:
             raise ValueError('外部写真の埋め込み方法を確認してください')
     elif not (ROOT/item['local']).is_file():
         raise ValueError('写真ファイルがありません: '+item['local'])
+    elif (ROOT/item['local']).stat().st_size == 0:
+        raise ValueError('写真ファイルが空です: '+item['local'])
 COUNTERS=json.loads((ROOT/'data/counterpoints.json').read_text())
 THEMES={'city':('まち・暮らしをよくする','市民の課題、地域での共創・実証を知りたい。'),'people':('仲間・チームをつくる','異なる専門性を持つ人の集め方を知りたい。'),'prototype':('試作・実証の場をつくる','設備・専門家・現場をどうつなぐか知りたい。'),'business':('事業化につなげる','実証の先の購入・契約・事業移管を知りたい。'),'digital':('データ・仮想空間で試す','都市モデルやデジタルツインを活かしたい。'),'future':('アートから未来を考える','科学や表現から、新しい問いを見つけたい。')}
 DATE='2026.09.27'
