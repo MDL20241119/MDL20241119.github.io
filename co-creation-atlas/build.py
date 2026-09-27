@@ -22,23 +22,25 @@ def case_link(code,text=None):
 def credit(m):
     if not m:return ''
     date=f' · {e(m.get("imageDate",""))}' if m.get('imageDate') else ''
-    license_url=m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl']
+    license_url=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl']
     license_link=external(license_url,e(m.get('license','利用条件')))
     changes=(' · '+e(m['changes'])) if m.get('changes') else ''
-    return f'<figcaption class="credit">{e(m.get("title",m.get("name","")))}{date}<br>PHOTO: {e(m["credit"])} · {external(m["sourceUrl"],"掲載元")} · {license_link}{changes}</figcaption>'
+    caption=f'<strong>{e(m["caption"])}</strong><br>' if m.get('caption') else ''
+    return f'<figcaption class="credit">{caption}{e(m.get("title",m.get("name","")))}{date}<br>PHOTO: {e(m["credit"])} · {external(m["sourceUrl"],"掲載元")} · {license_link}{changes}</figcaption>'
 
 def photo(m,alt='',cls='',prefix='',loading='lazy'):
-    return f'<figure class="{cls} {"no-crop" if m.get("status")=="cleared-editorial-only" else ""}"><img src="{prefix}{e(m["local"])}" alt="{e(alt or m.get("alt",m.get("name","")))}" loading="{loading}" width="1600" height="1000">{credit(m)}</figure>'
+    width,height=m.get('dimensions',[1600,1000])
+    return f'<figure class="{cls} {"no-crop" if m.get("status")=="cleared-editorial-only" else ""}"><img src="{prefix}{e(m["local"])}" alt="{e(alt or m.get("alt",m.get("name","")))}" loading="{loading}" width="{width}" height="{height}">{credit(m)}</figure>'
 def media_for(c):return [m for m in MEDIA if m.get('caseId')==c['id']]
 for n,c in enumerate(DATA,1):
     c['number']=f'{n:02d}';ms=media_for(c)
     if ms:
-        m=ms[0];c['image']=m['local'];c['imageAlt']=m.get('alt',c['name']);c['imageNoCrop']=m.get('status')=='cleared-editorial-only';c['imageCredit']=m['credit'];c['imageSource']=m['sourceUrl'];c['imageRights']=m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl'];c['imageLicense']=m['license']
+        m=ms[0];c['image']=m['local'];c['imageAlt']=m.get('alt',c['name']);c['imageNoCrop']=m.get('status')=='cleared-editorial-only';c['imageCredit']=m['credit'];c['imageSource']=m['sourceUrl'];c['imageRights']=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl'];c['imageLicense']=m['license'];c['imageDate']=m.get('imageDate','');c['imageChanges']=m.get('changes','');c['imageCaption']=m.get('caption','')
     else:c.pop('image',None)
     if 'stages' not in c:c['stages']=[c['stage']]
 
 def head(title,description,url,prefix=''):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260927.5"><link rel="stylesheet" href="{prefix}map.css?v=20260927.5"><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260927.5"></script><script defer src="{prefix}app.js?v=20260927.5"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260927.6"><link rel="stylesheet" href="{prefix}map.css?v=20260927.6"><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260927.6"></script><script defer src="{prefix}app.js?v=20260927.6"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
 def header(prefix=''):
     nav=f'<a href="{prefix}#explore">事例を探す</a><a href="{prefix}#chapters">工程別の目次</a><a href="{prefix}#insights">比較して学ぶ</a><a href="{prefix}#playbook">実装ガイド</a><a href="{prefix}#sources">出典</a>'
     return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'

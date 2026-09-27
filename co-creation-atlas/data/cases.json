@@ -597,7 +597,10 @@
     "imageLicense": "Ars-related editorial press permission; underlying CC BY-NC-ND 4.0",
     "themes": [
       "future"
-    ]
+    ],
+    "imageDate": "2025-09-05",
+    "imageChanges": "縮小表示のみ。色変更・切り抜きなし。",
+    "imageCaption": ""
   },
   {
     "id": "cern-ideasquare",
@@ -757,7 +760,10 @@
       "people",
       "prototype",
       "future"
-    ]
+    ],
+    "imageDate": "2026-03-12 publication; photo date unspecified",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "geidai-future-art",
@@ -1042,7 +1048,10 @@
     "themes": [
       "people",
       "prototype"
-    ]
+    ],
+    "imageDate": "2025-09-23",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "microsoft-garage",
@@ -1306,7 +1315,17 @@
     "themes": [
       "people",
       "business"
-    ]
+    ],
+    "image": "assets/station-f-hall.jpg",
+    "imageAlt": "STATION Fの中央ホール。大空間の中にワークスペースや交流の場が並ぶ。",
+    "imageNoCrop": false,
+    "imageCredit": "Artvill",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:Int%C3%A9rieur_de_la_Station_F_juin_2022_3.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageDate": "2022-06-21",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": "STATION Fの中央ホール。大空間の中にワークスペースや交流の場が並ぶ。"
   },
   {
     "id": "digital-catapult",
@@ -1609,12 +1628,15 @@
     "imageNoCrop": false,
     "imageCredit": "ScribblingGeek",
     "imageSource": "https://commons.wikimedia.org/wiki/File:Punggol_Digital_District.jpg",
-    "imageRights": "https://commons.wikimedia.org/wiki/File:Punggol_Digital_District.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
     "imageLicense": "CC BY-SA 4.0",
     "themes": [
       "city",
       "digital"
-    ]
+    ],
+    "imageDate": "2025-09（キャプション。アップロード2025-10-11）",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "project-plateau",
@@ -1887,7 +1909,17 @@
     "themes": [
       "prototype",
       "digital"
-    ]
+    ],
+    "image": "assets/arena-shopfloor.jpg",
+    "imageAlt": "ARENA2036の実験フロア。会員企業の作業・プロジェクト・デモ設備が集まる。",
+    "imageNoCrop": false,
+    "imageCredit": "Kalligraphia",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:ARENA2036_Shopfloor.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageDate": "2024-07-10",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": "ARENA2036の実験フロア。会員企業の作業・プロジェクト・デモ設備が集まる。"
   },
   {
     "id": "science-tokyo-robotics-innovation-center",
@@ -2137,7 +2169,17 @@
     "themes": [
       "prototype",
       "business"
-    ]
+    ],
+    "image": "assets/newlab-interior.jpg",
+    "imageAlt": "Newlab Brooklynの共用空間。旧造船所の鉄骨と天窓が残る内部（2017年撮影）。",
+    "imageNoCrop": false,
+    "imageCredit": "dianaconnolly101",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:New_Lab_Brooklyn_Shipyard_IMG_8195_(31828821823).jpg",
+    "imageRights": "https://creativecommons.org/licenses/by/2.0/",
+    "imageLicense": "CC BY 2.0",
+    "imageDate": "2017-01-31",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": "Newlab Brooklynの共用空間。旧造船所の鉄骨と天窓が残る内部（2017年撮影）。"
   },
   {
     "id": "massrobotics",
@@ -2709,12 +2751,15 @@
     "imageNoCrop": false,
     "imageCredit": "Coreyfein01",
     "imageSource": "https://commons.wikimedia.org/wiki/File:MichiganCentral2024.jpg",
-    "imageRights": "https://commons.wikimedia.org/wiki/File:MichiganCentral2024.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
     "imageLicense": "CC BY-SA 4.0",
     "themes": [
       "prototype",
       "business"
-    ]
+    ],
+    "imageDate": "2024-06-09",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "marineterrein-amsterdam",
@@ -2892,11 +2937,14 @@
     "imageNoCrop": false,
     "imageCredit": "Marineterrein",
     "imageSource": "https://commons.wikimedia.org/wiki/File:Amsterdam_Drone_Lab.jpg",
-    "imageRights": "https://commons.wikimedia.org/wiki/File:Amsterdam_Drone_Lab.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by/3.0/",
     "imageLicense": "CC BY 3.0",
     "themes": [
       "city"
-    ]
+    ],
+    "imageDate": "2021-01-13（公開ファイル情報）",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "test-in-tallinn",
@@ -3353,11 +3401,14 @@
     "imageNoCrop": false,
     "imageCredit": "Marvel44",
     "imageSource": "https://commons.wikimedia.org/wiki/File:BMW_Startup_Garage_Office_2.jpg",
-    "imageRights": "https://commons.wikimedia.org/wiki/File:BMW_Startup_Garage_Office_2.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
     "imageLicense": "CC BY-SA 4.0",
     "themes": [
       "business"
-    ]
+    ],
+    "imageDate": "2017-08-18",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": ""
   },
   {
     "id": "volvo-campx",
@@ -3804,7 +3855,17 @@
     "themes": [
       "prototype",
       "business"
-    ]
+    ],
+    "image": "assets/hvm-factory2050.jpg",
+    "imageAlt": "HVM Catapultの構成機関AMRCが運営するFactory 2050。シェフィールドの研究施設。",
+    "imageNoCrop": false,
+    "imageCredit": "Chemical Engineer",
+    "imageSource": "https://commons.wikimedia.org/wiki/File:AMRC_2050_22_10_2018_1.jpg",
+    "imageRights": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "imageLicense": "CC BY-SA 4.0",
+    "imageDate": "2018-10-22",
+    "imageChanges": "縮小・表示枠に合わせた切り抜き。色変更なし。",
+    "imageCaption": "HVM Catapultの構成機関AMRCが運営するFactory 2050。シェフィールドの研究施設。"
   },
   {
     "id": "fraunhofer-ahead",
