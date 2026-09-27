@@ -1,0 +1,29 @@
+{
+  "checkedAt": "2026-09-27",
+  "treatment": "WebP conversion and layout crops; no content manipulation.",
+  "photos": [
+    {
+      "file": "mobility-epalette.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Toyota_e-Palette_02.jpg",
+      "creator": "TTTNIS",
+      "license": "CC0 1.0",
+      "licenseUrl": "https://creativecommons.org/publicdomain/zero/1.0/",
+      "description": "2025-03-20 exhibition/reference vehicle, not the Oita delivery vehicle"
+    },
+    {
+      "file": "mobility-hover.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Baien_Hovercraft_at_Oita_Airport_Hovercraft_Terminal-Baien03.jpg",
+      "creator": "Aixips",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "description": "Baien at Oita Airport, 2023-09-10 public display. Derivative under same license."
+    },
+    {
+      "file": "mobility-air.webp",
+      "source": "https://commons.wikimedia.org/wiki/File:Joby_Aviation_S4_experimental_eVTOL_aircraft_at_Edwards_AFB.jpg",
+      "creator": "Harlan Huntington / U.S. Air Force",
+      "license": "Public Domain",
+      "description": "Experimental eVTOL at Edwards AFB, 2023-09-20. Future concept reference, not Oita operation."
+    }
+  ]
+}
