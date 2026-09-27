@@ -6,6 +6,18 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parent
 DATA=json.loads((ROOT/'data/cases.json').read_text())
 MEDIA=json.loads((ROOT/'data/media.json').read_text()) if (ROOT/'data/media.json').exists() else []
+# Every published case must retain a real, attributed photograph.
+missing_photos={c['id'] for c in DATA}-{m.get('caseId') for m in MEDIA}
+if missing_photos:
+    raise ValueError('写真がない事例: '+', '.join(sorted(missing_photos)))
+for item in MEDIA:
+    for key in ('caseId','sourceUrl','credit','alt','license'):
+        if not item.get(key): raise ValueError(f'写真の{key}が未記入: {item.get("assetId")}')
+    if item.get('remote'):
+        if item.get('status')!='provider-embed' or not item['remote'].startswith('https://'):
+            raise ValueError('外部写真の埋め込み方法を確認してください')
+    elif not (ROOT/item['local']).is_file():
+        raise ValueError('写真ファイルがありません: '+item['local'])
 COUNTERS=json.loads((ROOT/'data/counterpoints.json').read_text())
 THEMES={'city':('まち・暮らしをよくする','市民の課題、地域での共創・実証を知りたい。'),'people':('仲間・チームをつくる','異なる専門性を持つ人の集め方を知りたい。'),'prototype':('試作・実証の場をつくる','設備・専門家・現場をどうつなぐか知りたい。'),'business':('事業化につなげる','実証の先の購入・契約・事業移管を知りたい。'),'digital':('データ・仮想空間で試す','都市モデルやデジタルツインを活かしたい。'),'future':('アートから未来を考える','科学や表現から、新しい問いを見つけたい。')}
 DATE='2026.09.27'
@@ -29,19 +41,27 @@ def credit(m):
     caption=f'<strong>{e(m["caption"])}</strong><br>' if m.get('caption') else ''
     return f'<figcaption class="credit">{caption}{e(m.get("title",m.get("name","")))}{date}<br>PHOTO: {e(m["credit"])} · {external(m["sourceUrl"],"掲載元")} · {license_link}{changes}</figcaption>'
 
+def media_url(m,prefix=""):
+    return m.get("remote") or prefix+m["local"]
+def no_crop(m):
+    return m.get("noCrop",False) or m.get("status")=="cleared-editorial-only"
+
 def photo(m,alt='',cls='',prefix='',loading='lazy'):
     width,height=m.get('dimensions',[1600,1000])
-    return f'<figure class="{cls} {"no-crop" if m.get("status")=="cleared-editorial-only" else ""}"><img src="{prefix}{e(m["local"])}" alt="{e(alt or m.get("alt",m.get("name","")))}" loading="{loading}" width="{width}" height="{height}">{credit(m)}</figure>'
+    visual=f'<img src="{e(media_url(m,prefix))}" alt="{e(alt or m.get("alt",m.get("name","")))}" loading="{loading}" width="{width}" height="{height}">'
+    if m.get('status')=='provider-embed':
+        visual=f'<a class="photo-source-link" href="{e(m["sourceUrl"])}" target="_blank" rel="noopener noreferrer" aria-label="{e(m["name"])}の写真を掲載元で見る">{visual}</a>'
+    return f'<figure class="{cls} {"no-crop" if no_crop(m) else ""}">{visual}{credit(m)}</figure>'
 def media_for(c):return [m for m in MEDIA if m.get('caseId')==c['id']]
 for n,c in enumerate(DATA,1):
     c['number']=f'{n:02d}';ms=media_for(c)
     if ms:
-        m=ms[0];c['image']=m['local'];c['imageAlt']=m.get('alt',c['name']);c['imageNoCrop']=m.get('status')=='cleared-editorial-only';c['imageCredit']=m['credit'];c['imageSource']=m['sourceUrl'];c['imageRights']=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl'];c['imageLicense']=m['license'];c['imageDate']=m.get('imageDate','');c['imageChanges']=m.get('changes','');c['imageCaption']=m.get('caption','')
+        m=ms[0];c['image']=media_url(m);c['imageAlt']=m.get('alt',c['name']);c['imageNoCrop']=no_crop(m);c['imageEmbedSource']=m['sourceUrl'] if m.get('status')=='provider-embed' else '';c['imageCredit']=m['credit'];c['imageSource']=m['sourceUrl'];c['imageRights']=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl'];c['imageLicense']=m['license'];c['imageDate']=m.get('imageDate','');c['imageChanges']=m.get('changes','');c['imageCaption']=m.get('caption','')
     else:c.pop('image',None)
     if 'stages' not in c:c['stages']=[c['stage']]
 
 def head(title,description,url,prefix=''):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260927.7"><link rel="stylesheet" href="{prefix}map.css?v=20260927.7"><link rel="stylesheet" href="{prefix}learning.css?v=20260927.7"><script defer src="{prefix}learning.js?v=20260927.7"></script><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260927.7"></script><script defer src="{prefix}app.js?v=20260927.7"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.8"><link rel="stylesheet" href="{prefix}map.css?v=20260928.8"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.8"><script defer src="{prefix}learning.js?v=20260928.8"></script><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.8"></script><script defer src="{prefix}app.js?v=20260928.8"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
 def header(prefix=''):
     nav=f'<a href="{prefix}learn/first-co-creation/">基礎を学ぶ</a><a href="{prefix}#start">8工程で学ぶ</a><a href="{prefix}#explore">事例を探す</a><a href="{prefix}learn/choose/">比較する</a><a href="{prefix}learn/workbook/">実践シート</a><a href="{prefix}learn/library/">原典</a>'
     return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'
@@ -53,8 +73,11 @@ def cards():
     ordered=sorted(DATA,key=lambda c:featured.index(c['id']) if c['id'] in featured else 100+DATA.index(c))
     for c in ordered:
         ms=media_for(c);m=ms[0] if ms else None
-        visual=f'<div class="card-photo {"no-crop" if m.get("status")=="cleared-editorial-only" else ""}"><img src="{e(m["local"])}" alt="{e(m.get("alt",c["name"]))}" loading="lazy" width="800" height="500"><span class="card-no">{c["number"]}</span><span class="card-type">{e(TYPES[c["type"]])}</span></div>' if m else f'<div class="card-typographic color-{c["stage"]}"><span class="card-no">{c["number"]}</span><div class="display">{e(c.get("shortName",c["name"]))}</div></div>'
-        out.append(f'<article class="case-card" data-id="{e(c["id"])}"><a href="{path(c)}" aria-label="{e(c["name"])}の詳細を読む">{visual}</a><div class="card-body"><div class="card-place">{e(c["country"])} / {e(c["city"])}</div><h3><a href="{path(c)}">{e(c["name"])}</a></h3><p class="card-learning-label">この事例から学べること</p><div class="tagline">{e(c["tagline"])}</div><p class="card-summary">{e(c["lead"])}</p><div class="card-stage">{c["stage"]:02d} {STAGES[c["stage"]]} <span>／ {e(TYPES[c["type"]])}</span></div><div class="card-foot"><span>{external(c["sources"][0]["url"],"公式サイト")}</span><a href="{path(c)}"><strong>事例を読む →</strong></a></div></div>{f"<div class=\"card-credit\">PHOTO: {e(m['credit'])} · 利用条件は詳細ページに記載</div>" if m else ""}</article>')
+        visual=f'<div class="card-photo {"no-crop" if no_crop(m) else ""}"><img src="{e(media_url(m))}" alt="{e(m.get("alt",c["name"]))}" loading="lazy" width="800" height="500"><span class="card-no">{c["number"]}</span><span class="card-type">{e(TYPES[c["type"]])}</span></div>' if m else f'<div class="card-typographic color-{c["stage"]}"><span class="card-no">{c["number"]}</span><div class="display">{e(c.get("shortName",c["name"]))}</div></div>'
+        image_href=m['sourceUrl'] if m and m.get('status')=='provider-embed' else path(c)
+        image_label=(c['name']+'の写真を掲載元で見る') if m and m.get('status')=='provider-embed' else c['name']+'の詳細を読む'
+        photo_note=(f'<span class="card-photo-context">{e(m.get("scope","写真"))} · {e(m.get("imageDate",""))}</span>' if m.get('scope') else '') if m else ''
+        out.append(f'<article class="case-card" data-id="{e(c["id"])}"><a href="{e(image_href)}" aria-label="{e(image_label)}">{visual}</a><div class="card-body"><div class="card-place">{e(c["country"])} / {e(c["city"])}</div><h3><a href="{path(c)}">{e(c["name"])}</a></h3><p class="card-learning-label">この事例から学べること</p><div class="tagline">{e(c["tagline"])}</div><p class="card-summary">{e(c["lead"])}</p><div class="card-stage">{c["stage"]:02d} {STAGES[c["stage"]]} <span>／ {e(TYPES[c["type"]])}</span></div><div class="card-foot"><span>{external(c["sources"][0]["url"],"公式サイト")}</span><a href="{path(c)}"><strong>事例を読む →</strong></a></div></div>{f"<div class=\"card-credit\">{photo_note}PHOTO: {e(m['credit'])} · 利用条件は詳細ページに記載</div>" if m else ""}</article>')
     return ''.join(out)
 STAGE_DESC=[
 ('誰の、どんな困りごとか。','当事者と現場を観察し、解く課題を選ぶ。技術や設備の導入を課題そのものにしない。','課題・当事者・現状値・課題オーナー'),
