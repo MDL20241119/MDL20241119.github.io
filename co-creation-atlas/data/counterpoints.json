@@ -1,0 +1,176 @@
+[
+  {
+    "id": "sidewalk-toronto-termination",
+    "code": "COUNTER-01",
+    "type": "terminated-project",
+    "title": "Sidewalk Toronto：構想の魅力だけでは事業と公共の権限は接続しない",
+    "name": "Sidewalk Toronto / Quayside",
+    "date": "2020-05-07撤退発表／2020-05-17計画開発契約終了",
+    "summary": "2017年に始まったSidewalk LabsとWaterfront Torontoの協働は、2020年5月に計画開発契約を終了した。終了通知そのものが公開されている。市の報告は、企業がCOVID-19による経済・不動産市場の不確実性と財務成立性を理由に撤退したと記録する。一方、土地、公共機関の権限、データ・知財、プライバシーの論点は、それ以前から契約上の重要事項として扱われていた。",
+    "whatItChallenges": "有名企業、高度な技術、魅力的な都市ビジョンがそろえば、実装へ進めるという推論。",
+    "mechanism": "【本調査の分析】構想作成の合意は、土地の権利取得、公共予算、データ統治、運営契約の合意とは異なる。事業性が変われば、前段の大きな投資があっても終了し得る。",
+    "doNotConclude": "「プライバシー批判だけが撤退を引き起こした」「スマートシティ全体が失敗した」とは結論づけない。Quayside地区そのものの開発は別の枠組みで継続した。",
+    "implication": "【提案】構想・試験・恒久実装を別の意思決定として扱い、各段階で権限、費用負担、土地・データの権利、撤退時の復旧と情報引継ぎを定める。企業の撤退後にも市民の生活と公共資産を維持できる状態を実装条件にする。",
+    "metric": null,
+    "evidence": [
+      {
+        "claim": "2020年5月7日付のSidewalk Labsの解除通知と、5月17日発効の終了が原本で確認できる。",
+        "sourceId": "SID-01",
+        "kind": "fact",
+        "asOf": "2020-05-17"
+      },
+      {
+        "claim": "2018年の計画開発契約は、計画の作成自体は実施権限を与えず、政府・土地所有者等の承認が必要と明記。",
+        "sourceId": "SID-01",
+        "kind": "fact",
+        "asOf": "2018-07-31"
+      },
+      {
+        "claim": "トロント市報告は、経済不確実性による財務成立性を会社の撤退理由として記録し、過去の交渉論点にデータ統治等を列挙。",
+        "sourceId": "SID-02",
+        "kind": "fact",
+        "asOf": "2020",
+        "limit": "撤退理由は会社説明の公的記録であり、全原因の因果分解ではない。"
+      }
+    ],
+    "sources": [
+      {
+        "id": "SID-01",
+        "title": "Plan Development Agreement (as amended) – Terminated Effective May 17, 2020",
+        "url": "https://www.waterfrontoronto.ca/sites/default/files/documents/plan-development-agreement-amendments-and-sidewalk-labs--termination-notice---termination-effective-date---may-17-2020.pdf",
+        "publisher": "Waterfront Toronto / Sidewalk Labs",
+        "published": "2020-05-07通知・2020-05-17終了",
+        "locator": "PDF p.1; p.20 Sections 1.05–1.06",
+        "claim": "終了原本と計画・実施・土地権利の分離",
+        "grade": "official",
+        "verified": "2026-09-27"
+      },
+      {
+        "id": "SID-02",
+        "title": "Update on Waterfront Toronto's Quayside Project",
+        "url": "https://www.toronto.ca/legdocs/mmis/2020/ex/bgrd/backgroundfile-158871.pdf",
+        "publisher": "City of Toronto",
+        "published": "2020",
+        "locator": "PDF p.5 Sidewalk Labs withdrawal; pp.6–7 future project and digital governance",
+        "claim": "撤退理由の記録、権限・プライバシー等の交渉論点、次計画への移行",
+        "grade": "official",
+        "verified": "2026-09-27"
+      },
+      {
+        "id": "SID-03",
+        "title": "Statement from Waterfront Toronto Board Chair, Stephen Diamond",
+        "url": "https://www.waterfrontoronto.ca/news/statement-waterfront-toronto-board-chair-stephen-diamond-0",
+        "publisher": "Waterfront Toronto",
+        "published": "2020-05-07",
+        "locator": "本文",
+        "claim": "撤退公表と地区開発の継続方針",
+        "grade": "official",
+        "verified": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "id": "amsterdam-90-project-audit",
+    "code": "COUNTER-02",
+    "type": "original-research",
+    "title": "「Living Lab」という名称だけでは、市民との共創を判定できない",
+    "name": "Steen & van Bueren (2017)",
+    "date": "2017-07",
+    "summary": "アムステルダム地域の持続可能な都市イノベーション90件を、研究者が定義した9条件で調べた研究では、利用者との開発・共創を含む全条件を満たしたのは12件だった。「living lab」を名称に含む14件のうち適合したのは3件。名称より実際の開発過程と利用者の意思決定への関与を確かめる必要がある。",
+    "whatItChallenges": "テスト参加者がいる、センサーがある、拠点をラボと名づけた、という事実だけで共創を実現したとみなすこと。",
+    "mechanism": "研究は、利用者の行動データを集めること、利用者を想定して設計すること、利用者と意思決定しながら開発することを区別した。",
+    "doNotConclude": "12/90は世界の成功率ではない。2017年の特定地域における、スノーボール抽出・公開資料中心・1研究者による定義適合性の調査であり、社会的成果の優劣を測った実験ではない。",
+    "implication": "【提案】本カタログでも「市民が試す」「市民が意見を返す」「市民が課題・設計・継続を共に決める」を区別する。未公開の権限は「ない」と断定せず未確認と表示する。",
+    "metric": {
+      "value": "12 / 90",
+      "label": "研究者が設定したLiving Labの9条件に適合（2017年アムステルダム調査）",
+      "asOf": "2017",
+      "sourceId": "AUD-01"
+    },
+    "evidence": [
+      {
+        "claim": "90件中12件、living labという名の14件中3件が研究の定義に適合。",
+        "sourceId": "AUD-01",
+        "kind": "fact",
+        "asOf": "2017",
+        "limit": "評価定義と抽出地域・時点が限定され、効果・成功率とは異なる。"
+      }
+    ],
+    "sources": [
+      {
+        "id": "AUD-01",
+        "title": "The Defining Characteristics of Urban Living Labs",
+        "url": "https://timreview.ca/article/1088",
+        "publisher": "Kris Steen / Ellen van Bueren, Technology Innovation Management Review",
+        "published": "2017-07",
+        "locator": "Living Labs in Practice; User involvement challenges",
+        "claim": "90件調査、12件適合、3/14、方法と定義",
+        "grade": "research",
+        "verified": "2026-09-27"
+      },
+      {
+        "id": "AUD-02",
+        "title": "The Defining Characteristics of Urban Living Labs",
+        "url": "https://research.tudelft.nl/en/publications/the-defining-characteristics-of-urban-living-labs/",
+        "publisher": "TU Delft Research Portal",
+        "published": "2017",
+        "locator": "Abstract / Publication details",
+        "claim": "原著書誌情報と調査対象（AUD-01と同一研究）",
+        "grade": "research",
+        "verified": "2026-09-27"
+      }
+    ]
+  },
+  {
+    "id": "europe-24-labs-policy-deficits",
+    "code": "COUNTER-03",
+    "type": "original-research",
+    "title": "実験が動いても、政策と暮らしが変わるとは限らない",
+    "name": "Cuomo, Ravazzi & Nesti (2026)",
+    "date": "2026-07-31刊行／対象2018–2022年設置の24ラボ",
+    "summary": "欧州都市の24のLiving Labsを分析した2026年の原著は、住民ニーズとの不一致、反復試験の制約、行政・企業・研究者・市民の役割混乱、学習によって実施過程を修正する力の弱さが、政策への効果を制約すると報告した。政治的な関与も重要だった。技術の作動確認だけで公共政策の変化を説明しないことが要点である。",
+    "whatItChallenges": "実証数・参加者数・イベント数が増えれば、自治体の仕事や住民の生活が持続的に改善するという推論。",
+    "mechanism": "【本調査の分析】研究の指摘を運営設計へ翻訳すると、募集前の住民課題確認、比較を伴う再試験、役割の明記、結果に基づく行政判断という接続が必要になる。",
+    "doNotConclude": "24例からすべてのLiving Labが無効だとは推定できない。研究自身も、手法固有の欠陥と設計・実施段階の不備を区別する。無作為対照試験による政策効果推定ではない。",
+    "implication": "【提案】実証の出口を「動作した」ではなく「担当部局が何を変えるか」に置く。住民の便益・負担、予算化、規程や調達条件の修正を評価票へ加え、継続・変更・中止の根拠を公開する。",
+    "metric": {
+      "value": "24",
+      "label": "欧州都市の分析対象ラボ（効果の順位・成功数ではない）",
+      "asOf": "2026年刊行",
+      "sourceId": "POL-01"
+    },
+    "evidence": [
+      {
+        "claim": "2018–2022年に設置された24のラボの実施過程を調べ、ニーズ不整合・反復制約・役割混乱・学習の弱さを指摘。",
+        "sourceId": "POL-01",
+        "kind": "fact",
+        "asOf": "2026-07-31",
+        "limit": "研究対象の範囲を超えた普遍的失敗率や因果効果の推計ではない。"
+      }
+    ],
+    "sources": [
+      {
+        "id": "POL-01",
+        "title": "Triggering policy innovation through living labs: addressing design and implementation deficits",
+        "url": "https://iris.unito.it/retrieve/handle/2318/2153611/2057910/Triggering%20policy%20innovation%20through%20living%20labs%20%20addressing%20design%20and%20implementation%20deficits.pdf",
+        "publisher": "Federico Cuomo / Stefania Ravazzi / Giorgia Nesti; University of Turin repository",
+        "published": "2026-07-31",
+        "locator": "PDF pp.2–3 Abstract / Introduction",
+        "claim": "24ラボ、対象期間、4つの実装上の問題（原著・CC BY 4.0）",
+        "grade": "research",
+        "verified": "2026-09-27"
+      },
+      {
+        "id": "POL-02",
+        "title": "Triggering policy innovation through living labs: addressing design and implementation deficits",
+        "url": "https://www.tandfonline.com/doi/full/10.1080/13511610.2026.2710096",
+        "publisher": "Innovation: The European Journal of Social Science Research / Taylor & Francis",
+        "published": "2026-07-31",
+        "locator": "Abstract / Discussion / Conclusions",
+        "claim": "原著の刊行情報・研究結果（POL-01と同一研究）",
+        "grade": "research",
+        "verified": "2026-09-27"
+      }
+    ]
+  }
+]
