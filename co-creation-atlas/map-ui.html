@@ -1,0 +1,28 @@
+<div id="map-view" role="tabpanel" aria-labelledby="map-tab" hidden>
+  <div class="map-guide"><div><span class="eyebrow">WORLD EXPLORER / 場所から出会う</span><h3>地域を選んで、拠点を見つける。</h3></div><p>地図のマーク、または拠点名を選ぶと<br>「何を学べるか」がわかります。</p></div>
+  <div class="map-toolbar">
+    <div class="map-regions" role="group" aria-label="地域を選んで地図と一覧を絞り込む">
+      <button type="button" data-map-region="world" aria-pressed="true">世界 <span data-region-count="world">28</span></button>
+      <button type="button" data-map-region="north-america" aria-pressed="false">北米 <span data-region-count="north-america"></span></button>
+      <button type="button" data-map-region="europe" aria-pressed="false">ヨーロッパ <span data-region-count="europe"></span></button>
+      <button type="button" data-map-region="asia" aria-pressed="false">アジア <span data-region-count="asia"></span></button>
+    </div>
+    <label class="map-country-label">国から探す<select id="map-country"><option value="">すべての国</option></select></label>
+  </div>
+  <div class="map-workspace">
+    <div class="map-surface">
+      <div class="map-caption"><span id="map-scope">世界の拠点</span><span id="map-status" role="status" aria-live="polite"></span></div>
+      <div class="map-canvas">
+        <svg id="world-map" viewBox="0 0 1200 600" tabindex="0" role="group" aria-label="共創拠点の地図。マークから拠点を選択。矢印キーで移動、プラスとマイナスで拡大縮小、Homeで全拠点を表示。"><g class="map-grid">__GRID__</g><g class="map-countries">__COUNTRIES__</g><g id="map-geography" aria-hidden="true"></g><g id="map-markers"></g></svg>
+        <div class="map-controls"><button type="button" id="zoom-in" aria-label="地図を拡大">＋</button><button type="button" id="zoom-out" aria-label="地図を縮小">−</button></div>
+        <div class="map-canvas-actions"><button type="button" id="map-reset">↗ 全拠点を画面に収める</button><button type="button" id="map-touch" aria-pressed="false">地図を動かす</button></div>
+        <div id="map-empty" hidden><strong>該当する拠点がありません。</strong><p>検索条件を減らして、もう一度お試しください。</p><button type="button" data-map-clear>絞り込みを解除</button></div>
+      </div>
+      <div class="map-key"><span><i class="key-pin"></i>1拠点</span><span><i class="key-cluster">3拠点</i>近くの拠点をまとめて表示</span><span><i class="key-selected"></i>選択中</span></div>
+      <p class="map-attribution">所在地は概略・代表地点です。訪問先は公式サイトで確認。地図：<a href="https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/" target="_blank" rel="noopener noreferrer">Natural Earth</a>（Public domain）</p>
+    </div>
+    <aside id="map-panel" class="map-browser" aria-label="地図の拠点一覧と選択した拠点"></aside>
+  </div>
+  <div class="map-list-link"><p>同じ条件で、各事例の説明をまとめて読みたい方へ</p><button class="btn black" data-view="list">事例一覧に切り替える →</button></div>
+  <dialog id="map-detail-dialog" class="map-detail-sheet"><div class="map-sheet-top"><strong>拠点を選ぶ・詳しく知る</strong><button type="button" data-map-dialog-close aria-label="詳細を閉じて地図に戻る">地図へ戻る ×</button></div><div class="map-detail-body"></div></dialog>
+</div>

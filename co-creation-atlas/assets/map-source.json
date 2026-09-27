@@ -1,0 +1,10 @@
+{
+  "dataset": "ne_110m_admin_0_countries",
+  "publisher": "Natural Earth",
+  "source": "https://www.naturalearthdata.com/downloads/110m-cultural-vectors/110m-admin-0-countries/",
+  "terms": "https://www.naturalearthdata.com/about/",
+  "license": "Public domain",
+  "sourceSha256": "6866c877d39cba9c357620878839b336d569f8c662d3cfab4cb1dbe2d39c977f",
+  "processing": "緯度経度を等距円筒図法のSVGパスへ変換。小数2桁へ丸め。代表地点の案内図。",
+  "verified": "2026-09-27"
+}

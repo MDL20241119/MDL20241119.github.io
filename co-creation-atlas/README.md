@@ -37,3 +37,9 @@ Ars Electronica の写真は同施設に関する編集記事での掲載許可�
 地形は Natural Earth 110m land（Public domain）の緯度経度データを等距円筒図法で表示しています。領有権や法的境界を示す地図ではありません。
 
 欧文見出しは Barlow Condensed Black、日本語は Noto Sans JP のローカルサブセットです。各 SIL Open Font License は `assets/*font-license.txt` に同梱。本文に新しい文字を追加した際は、日本語フォントの文字収録範囲も確認してください。未収録文字はシステムフォントへフォールバックします。
+
+## 地図 UI（2026-09-27）
+
+地域と国の選択を一覧と連動。地図の集合表示は拠点数、単独地点は都市名で案内し、拠点名一覧からも選択できます。スマートフォンでは選択情報をダイアログで表示し、地図の移動は専用ボタンで有効にします。地図は代表地点の概略図で、詳細な訪問経路を示すものではありません。
+
+`map-ui.html`、`map.js`、`map.css` が地図の表示・操作を担当。国形状はNatural Earth 110m Admin 0 Countries（Public domain）から変換し、元データのハッシュと出典を `assets/map-source.json` に保持しています。`assets/map-countries.json` は描画用パスです。
