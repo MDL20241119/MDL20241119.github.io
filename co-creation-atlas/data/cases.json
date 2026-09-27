@@ -135,7 +135,10 @@
       }
     ],
     "shortName": "MIT D-Lab",
-    "number": "01"
+    "number": "01",
+    "themes": [
+      "city"
+    ]
   },
   {
     "id": "openlab-stockholm",
@@ -277,7 +280,11 @@
       }
     ],
     "shortName": "Openlab Stockholm",
-    "number": "02"
+    "number": "02",
+    "themes": [
+      "city",
+      "people"
+    ]
   },
   {
     "id": "forum-virium-helsinki",
@@ -440,7 +447,11 @@
       }
     ],
     "shortName": "Forum Virium Helsinki",
-    "number": "03"
+    "number": "03",
+    "themes": [
+      "city",
+      "digital"
+    ]
   },
   {
     "id": "ars-electronica-futurelab",
@@ -583,7 +594,10 @@
     "imageCredit": "NeXus Print / Dai Nippon Printing (JP), Ars Electronica Futurelab (AT). Photo: Bettina Gangl",
     "imageSource": "https://photos.ars.electronica.art/picture.php?/7841/category/56",
     "imageRights": "https://photos.ars.electronica.art/",
-    "imageLicense": "Ars-related editorial press permission; underlying CC BY-NC-ND 4.0"
+    "imageLicense": "Ars-related editorial press permission; underlying CC BY-NC-ND 4.0",
+    "themes": [
+      "future"
+    ]
   },
   {
     "id": "cern-ideasquare",
@@ -738,7 +752,12 @@
     "imageCredit": "© CERN",
     "imageSource": "https://ideasquare.cern/node/484",
     "imageRights": "https://copyright.web.cern.ch/",
-    "imageLicense": "CERN audiovisual terms — educational and informational use only"
+    "imageLicense": "CERN audiovisual terms — educational and informational use only",
+    "themes": [
+      "people",
+      "prototype",
+      "future"
+    ]
   },
   {
     "id": "geidai-future-art",
@@ -885,7 +904,10 @@
       }
     ],
     "shortName": "Geidai Future Art",
-    "number": "06"
+    "number": "06",
+    "themes": [
+      "future"
+    ]
   },
   {
     "id": "aalto-design-factory",
@@ -1016,7 +1038,11 @@
     "imageCredit": "Aalto Design Factory",
     "imageSource": "https://www.flickr.com/photos/aaltodesignfactory/54945780700/",
     "imageRights": "https://www.flickr.com/photos/aaltodesignfactory/sets/72177720332449817/",
-    "imageLicense": "Official press/media permission"
+    "imageLicense": "Official press/media permission",
+    "themes": [
+      "people",
+      "prototype"
+    ]
   },
   {
     "id": "microsoft-garage",
@@ -1148,7 +1174,11 @@
       }
     ],
     "shortName": "Microsoft Garage",
-    "number": "08"
+    "number": "08",
+    "themes": [
+      "people",
+      "digital"
+    ]
   },
   {
     "id": "station-f",
@@ -1272,7 +1302,11 @@
     ],
     "videos": [],
     "shortName": "STATION F",
-    "number": "09"
+    "number": "09",
+    "themes": [
+      "people",
+      "business"
+    ]
   },
   {
     "id": "digital-catapult",
@@ -1445,7 +1479,10 @@
       }
     ],
     "shortName": "Digital Catapult",
-    "number": "10"
+    "number": "10",
+    "themes": [
+      "digital"
+    ]
   },
   {
     "id": "punggol-digital-district",
@@ -1573,7 +1610,11 @@
     "imageCredit": "ScribblingGeek",
     "imageSource": "https://commons.wikimedia.org/wiki/File:Punggol_Digital_District.jpg",
     "imageRights": "https://commons.wikimedia.org/wiki/File:Punggol_Digital_District.jpg",
-    "imageLicense": "CC BY-SA 4.0"
+    "imageLicense": "CC BY-SA 4.0",
+    "themes": [
+      "city",
+      "digital"
+    ]
   },
   {
     "id": "project-plateau",
@@ -1705,7 +1746,10 @@
       }
     ],
     "shortName": "Project PLATEAU",
-    "number": "12"
+    "number": "12",
+    "themes": [
+      "digital"
+    ]
   },
   {
     "id": "arena2036",
@@ -1839,7 +1883,11 @@
       }
     ],
     "shortName": "ARENA2036",
-    "number": "13"
+    "number": "13",
+    "themes": [
+      "prototype",
+      "digital"
+    ]
   },
   {
     "id": "science-tokyo-robotics-innovation-center",
@@ -1940,7 +1988,10 @@
     ],
     "videos": [],
     "shortName": "Science Tokyo RIC",
-    "number": "14"
+    "number": "14",
+    "themes": [
+      "prototype"
+    ]
   },
   {
     "id": "newlab-brooklyn",
@@ -2082,7 +2133,11 @@
     ],
     "videos": [],
     "shortName": "Newlab Brooklyn",
-    "number": "15"
+    "number": "15",
+    "themes": [
+      "prototype",
+      "business"
+    ]
   },
   {
     "id": "massrobotics",
@@ -2212,7 +2267,11 @@
       }
     ],
     "shortName": "MassRobotics",
-    "number": "16"
+    "number": "16",
+    "themes": [
+      "people",
+      "prototype"
+    ]
   },
   {
     "id": "robohouse",
@@ -2354,7 +2413,11 @@
     ],
     "videos": [],
     "shortName": "RoboHouse",
-    "number": "17"
+    "number": "17",
+    "themes": [
+      "people",
+      "prototype"
+    ]
   },
   {
     "id": "arm-robotics-manufacturing-hub",
@@ -2481,7 +2544,11 @@
       }
     ],
     "shortName": "ARM Robotics Hub",
-    "number": "18"
+    "number": "18",
+    "themes": [
+      "prototype",
+      "business"
+    ]
   },
   {
     "id": "michigan-central-newlab-detroit",
@@ -2643,7 +2710,11 @@
     "imageCredit": "Coreyfein01",
     "imageSource": "https://commons.wikimedia.org/wiki/File:MichiganCentral2024.jpg",
     "imageRights": "https://commons.wikimedia.org/wiki/File:MichiganCentral2024.jpg",
-    "imageLicense": "CC BY-SA 4.0"
+    "imageLicense": "CC BY-SA 4.0",
+    "themes": [
+      "prototype",
+      "business"
+    ]
   },
   {
     "id": "marineterrein-amsterdam",
@@ -2822,7 +2893,10 @@
     "imageCredit": "Marineterrein",
     "imageSource": "https://commons.wikimedia.org/wiki/File:Amsterdam_Drone_Lab.jpg",
     "imageRights": "https://commons.wikimedia.org/wiki/File:Amsterdam_Drone_Lab.jpg",
-    "imageLicense": "CC BY 3.0"
+    "imageLicense": "CC BY 3.0",
+    "themes": [
+      "city"
+    ]
   },
   {
     "id": "test-in-tallinn",
@@ -2976,7 +3050,10 @@
       }
     ],
     "shortName": "Test in Tallinn",
-    "number": "21"
+    "number": "21",
+    "themes": [
+      "city"
+    ]
   },
   {
     "id": "doll-living-lab",
@@ -3142,7 +3219,10 @@
     ],
     "videos": [],
     "shortName": "DOLL Living Lab",
-    "number": "22"
+    "number": "22",
+    "themes": [
+      "city"
+    ]
   },
   {
     "id": "bmw-startup-garage",
@@ -3274,7 +3354,10 @@
     "imageCredit": "Marvel44",
     "imageSource": "https://commons.wikimedia.org/wiki/File:BMW_Startup_Garage_Office_2.jpg",
     "imageRights": "https://commons.wikimedia.org/wiki/File:BMW_Startup_Garage_Office_2.jpg",
-    "imageLicense": "CC BY-SA 4.0"
+    "imageLicense": "CC BY-SA 4.0",
+    "themes": [
+      "business"
+    ]
   },
   {
     "id": "volvo-campx",
@@ -3412,7 +3495,11 @@
       }
     ],
     "shortName": "CampX by Volvo Group",
-    "number": "24"
+    "number": "24",
+    "themes": [
+      "people",
+      "business"
+    ]
   },
   {
     "id": "firstbuild",
@@ -3563,7 +3650,11 @@
       }
     ],
     "shortName": "FirstBuild",
-    "number": "25"
+    "number": "25",
+    "themes": [
+      "prototype",
+      "business"
+    ]
   },
   {
     "id": "hvm-catapult",
@@ -3709,7 +3800,11 @@
     ],
     "videos": [],
     "shortName": "HVM Catapult",
-    "number": "26"
+    "number": "26",
+    "themes": [
+      "prototype",
+      "business"
+    ]
   },
   {
     "id": "fraunhofer-ahead",
@@ -3835,7 +3930,10 @@
     ],
     "videos": [],
     "shortName": "Fraunhofer / AHEAD",
-    "number": "27"
+    "number": "27",
+    "themes": [
+      "business"
+    ]
   },
   {
     "id": "manufacturing-usa",
@@ -3989,6 +4087,9 @@
       }
     ],
     "shortName": "Manufacturing USA",
-    "number": "28"
+    "number": "28",
+    "themes": [
+      "business"
+    ]
   }
 ]
