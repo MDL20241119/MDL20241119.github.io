@@ -489,7 +489,8 @@
     "changes": "縮小・表示枠に合わせた切り抜き。色変更なし。",
     "license": "CC BY-SA 4.0",
     "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-    "rightsUrl": "https://creativecommons.org/licenses/by-sa/4.0/"
+    "rightsUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "revision": "dfb20e49"
   },
   {
     "assetId": "hvm-future",

@@ -44,7 +44,9 @@ def credit(m):
     return f'<figcaption class="credit">{caption}{e(m.get("title",m.get("name","")))}{date}<br>PHOTO: {e(m["credit"])} · {external(m["sourceUrl"],"掲載元")} · {license_link}{changes}</figcaption>'
 
 def media_url(m,prefix=""):
-    return m.get("remote") or prefix+m["local"]
+    if m.get("remote"): return m["remote"]
+    revision='?v='+m['revision'] if m.get('revision') else ''
+    return prefix+m['local']+revision
 def no_crop(m):
     return m.get("noCrop",False) or m.get("status")=="cleared-editorial-only"
 
