@@ -13,7 +13,7 @@ if(root){
  if(!DATA.some(d=>d.country===country))country='';
  search.value=query.get('q')||'';region.value=query.get('region')||'';type.value=query.get('type')||'';theme.value=query.get('theme')||'';
  if(stage||type.value)document.querySelector('.advanced-filters').open=true;
- const fulltext=new Map(DATA.map(d=>[d.id,norm([d.name,d.nameJa,d.country,d.city,d.tagline,d.lead,d.operator,d.operatingModel,d.payer,d.transfer,...(d.themes||[]).map(t=>THEMES[t]),...(d.tags||[]),...(d.stages||[]).map(s=>STAGES[s])].join(' '))]));
+ const fulltext=new Map(DATA.map(d=>[d.id,norm([d.name,d.nameJa,d.country,d.city,d.tagline,d.lead,d.operator,d.operatingModel,d.payer,d.transfer,d.valueChainSearch,...(d.themes||[]).map(t=>THEMES[t]),...(d.tags||[]),...(d.stages||[]).map(s=>STAGES[s])].join(' '))]));
  const cardOrder=new Map(cards.map((c,i)=>[c.dataset.id,i]));
  const mapApi=window.createAtlasMap({data:DATA,stages:STAGES,onFilter:(r,c)=>{region.value=r;country=c;apply();},onClear:reset});
  function updateURL(){const p=new URLSearchParams();if(search.value.trim())p.set('q',search.value.trim());if(theme.value)p.set('theme',theme.value);if(region.value)p.set('region',region.value);if(type.value)p.set('type',type.value);if(stage)p.set('stage',stage);if(country)p.set('country',country);if(view==='map')p.set('view','map');history.replaceState(null,'',`${location.pathname}${p.size?'?'+p:''}${location.hash}`);}

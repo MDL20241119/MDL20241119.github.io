@@ -1,10 +1,12 @@
 """Build the public, source-backed MDL co-creation atlas. Python standard library only."""
 import json, html
 import learning
+import value_chain
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
 DATA=json.loads((ROOT/'data/cases.json').read_text())
+CHAINS=value_chain.read(DATA)
 MEDIA=json.loads((ROOT/'data/media.json').read_text()) if (ROOT/'data/media.json').exists() else []
 # Every published case must retain a real, attributed photograph.
 missing_photos={c['id'] for c in DATA}-{m.get('caseId') for m in MEDIA}
@@ -22,7 +24,7 @@ for item in MEDIA:
         raise ValueError('写真ファイルが空です: '+item['local'])
 COUNTERS=json.loads((ROOT/'data/counterpoints.json').read_text())
 THEMES={'city':('まち・暮らしをよくする','市民の課題、地域での共創・実証を知りたい。'),'people':('仲間・チームをつくる','異なる専門性を持つ人の集め方を知りたい。'),'prototype':('試作・実証の場をつくる','設備・専門家・現場をどうつなぐか知りたい。'),'business':('事業化につなげる','実証の先の購入・契約・事業移管を知りたい。'),'digital':('データ・仮想空間で試す','都市モデルやデジタルツインを活かしたい。'),'future':('アートから未来を考える','科学や表現から、新しい問いを見つけたい。')}
-DATE='2026.09.27'
+DATE='2026.09.28'
 BASE='https://mobilitydlab.com/co-creation-atlas/'
 STAGES=['','課題を捉える','未来を問う','仲間をつくる','デジタルで試す','現物をつくる','現場で確かめる','事業にする','社会へ広げる']
 TYPES={'university':'大学・研究機関','company':'企業・事業化制度','city':'都市・地域の実証','network':'産業・研究ネットワーク'}
@@ -65,11 +67,11 @@ for n,c in enumerate(DATA,1):
     if 'stages' not in c:c['stages']=[c['stage']]
 
 def head(title,description,url,prefix=''):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.8"><link rel="stylesheet" href="{prefix}map.css?v=20260928.8"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.8"><script defer src="{prefix}learning.js?v=20260928.8"></script><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.8"></script><script defer src="{prefix}app.js?v=20260928.8"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.9"><link rel="stylesheet" href="{prefix}map.css?v=20260928.9"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.9"><link rel="stylesheet" href="{prefix}value-chain.css?v=20260928.9"><script defer src="{prefix}learning.js?v=20260928.9"></script><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.9"></script><script defer src="{prefix}app.js?v=20260928.9"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
 def header(prefix=''):
     nav=f'<a href="{prefix}learn/first-co-creation/">基礎を学ぶ</a><a href="{prefix}#start">8工程で学ぶ</a><a href="{prefix}#explore">事例を探す</a><a href="{prefix}learn/choose/">比較する</a><a href="{prefix}learn/workbook/">実践シート</a><a href="{prefix}learn/library/">原典</a>'
     return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'
-def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 2.0 · 調査確認日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'
+def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 2.1 · 調査確認日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'
 def video_dialog():return '<dialog class="video-dialog" id="video-dialog"><div class="dialog-top"><strong class="dialog-title">公式動画</strong><button type="button" data-close>閉じる ×</button></div><div class="dialog-body"></div><p>動画が再生できない場合は、各項目の「公式サイトで見る」をご利用ください。</p></dialog>'
 def cards():
     out=[]
@@ -102,11 +104,12 @@ def map_ui():
 def build_index():
     countries=len(set(c['country'] for c in DATA));source_count=len(set(s['url'] for c in DATA for s in c['sources']))
     hero=next((m for m in MEDIA if m.get('hero')),MEDIA[0] if MEDIA else None)
-    out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}の共創拠点・リビングラボ・事業化制度を、8つの工程で比較。世界地図、検索、写真・動画、一次情報で読み解く。',BASE),header(),'<main id="main">']
+    out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}の共創拠点・リビングラボ・事業化制度を、インプット・価値創造機能・アウトプット・アウトカムで解説。社会実装から逆算した工夫を一次情報で読み解く。',BASE),header(),'<main id="main">']
     out.append(f'''<section class="hero"><div class="hero-copy"><p class="eyebrow">MDL RESEARCH / SPECIAL ISSUE 01<br>OPEN INNOVATION × LIVING LAB × CITY</p><h1 class="display"><span>WORLD</span><span>CO-CREATION</span><span>ATLAS.</span></h1><div><p class="hero-sub">世界の共創から、<br>地域と事業のつくり方を学ぶ。</p><p class="hero-small">リビングラボ、まちづくり、オープンイノベーション。<br>基礎から世界{countries}か国・{len(DATA)}の事例、運営、実践シートまで。<br>あなたの課題に合う進め方を見つける学習アトラス。</p><div class="hero-actions"><a class="btn black" href="#start">8つの工程から学ぶ ↓</a><a class="hero-help" href="learn/first-co-creation/">はじめての共創 →</a></div></div></div><div class="hero-visual"><div class="hero-photo">{f'<img src="{e(hero["local"])}" alt="{e(hero.get("alt",hero["name"]))}" width="1600" height="1000" fetchpriority="high">' if hero else ''}<a href="#explore" class="photo-chip" data-view-link="map" aria-label="世界地図から事例を探す"><span class="display">EXPLORE THE WORLD.</span><span class="photo-chip-ja">世界地図で探す ↓</span></a></div><div class="hero-stats"><div><strong>{len(DATA):02d}</strong><span>CASES / 拠点・制度</span></div><div><strong>{countries:02d}</strong><span>COUNTRIES / 国</span></div><div><strong>08</strong><span>STEPS / 工程</span></div></div></div><div class="hero-credit">{credit(hero) if hero else ''}</div></section>''')
     out.append('<div class="section-index"><p class="eyebrow">CONTENTS / 読みたいところから</p><div class="links"><a href="learn/"><b>01</b>教材の全体像</a><a href="#explore"><b>02</b>世界の事例</a><a href="#insights"><b>03</b>横断分析</a><a href="learn/workbook/"><b>04</b>自分の計画へ</a></div></div>')
     out.append(learning.entry())
-    out.append('<section id="start" class="start-guide"><div class="intro-strip"><h2>このサイトで、<br>わかること。</h2><div class="intro-topics"><div><b>01</b><strong>共創の仕組み</strong><p>どんな場で、誰が何をするのか。</p></div><div><b>02</b><strong>運営・資金・成果</strong><p>誰が負担し、何が確認できたのか。</p></div><div><b>03</b><strong>日本で活かす条件</strong><p>取り入れるヒントと、注意すべき点。</p></div></div></div><div class="purpose-heading"><div><p class="eyebrow">START HERE / 8つの工程から選ぶ</p><h2>まずは、知りたい工程から。</h2></div><p>進め方・記入例・自分で使うシートへ。必要な工程から始め、見直しながら行き来できます。</p></div><div class="purpose-grid">')
+    out.append(value_chain.framework())
+    out.append('<section id="start" class="start-guide"><div class="intro-strip"><h2>このサイトで、<br>わかること。</h2><div class="intro-topics"><div><b>01</b><strong>共創の仕組み</strong><p>どんな場で、誰が何をするのか。</p></div><div><b>02</b><strong>運営・資金・成果</strong><p>誰が負担し、何が確認できたのか。</p></div><div><b>03</b><strong>日本で活かす条件</strong><p>取り入れるヒントと、注意すべき点。</p></div></div></div><div class="purpose-heading"><div><p class="eyebrow">VALUE CREATION / 価値創造機能の8ステップ</p><h2>価値を生み出す、8つの工程。</h2></div><p>4つの切り口のうち「価値創造機能」を具体化する工程です。進め方・記入例・実践シートを使い、必要な工程から始めて行き来します。</p></div><div class="purpose-grid">')
     for i,(question,desc,result) in enumerate(STAGE_DESC,1):
         n=sum(i in c['stages'] for c in DATA)
         out.append(f'<a class="purpose-card" href="learn/step-{i:02d}/"><span class="display">{i:02d}</span><div><h3>{STAGES[i]}</h3><p>{e(question)}</p></div><span class="purpose-count">実践教材・{n}事例 →</span></a>')
@@ -155,6 +158,12 @@ def build_case(c):
     if m:out.append(photo(m,cls='detail-photo',prefix=prefix,loading='eager'))
     else:out.append(f'<div class="detail-photo"><div class="display">{c["stage"]:02d}<br>{["","DISCOVER.","QUESTION.","CONNECT.","SIMULATE.","PROTOTYPE.","EXPERIMENT.","ADOPT.","SCALE."][c["stage"]]}</div></div>')
     out.append(f'</section><dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
+    if c['id'] in CHAINS:
+        row = CHAINS[c['id']]
+        out[-1] = out[-1].replace('<div class="detail-layout">', value_chain.glance(row)+'<div class="detail-layout">')
+        out[-1] = out[-1].replace('<p class="toc-guide">知りたい項目から読む</p>', value_chain.toc()+'<details class="vc-extra-toc"><summary>運営・根拠・応用も読む ＋</summary>')
+        out[-1] = out[-1].replace('08 元サイト・出典へ</a></nav>', '08 元サイト・出典へ</a></details></nav>')
+        out.append(value_chain.case_sections(row))
     out.append(f'<section class="detail-section" id="mechanism"><h2><span class="display">01</span>どう動かしているのか。</h2>{para(c["operatingModel"])}<ol class="process">'+''.join(f'<li>{e(p)}</li>' for p in c['process'])+'</ol></section>')
     out.append(f'<section class="detail-section" id="funding"><h2><span class="display">02</span>誰が負担し、誰が担うか。</h2>{para(c["payer"])}<p class="note-inline">制度やプログラムの財源と、各参加企業・地域に発生する費用は同じではありません。公開範囲を超える案件別予算・契約条件は未確認です。</p></section>')
     out.append('<section class="detail-section" id="evidence"><h2><span class="display">03</span>確認できたこと。</h2>')
