@@ -15,7 +15,7 @@ def e(value):
 def read(data):
     source = ROOT/'data/value-chains.json'
     if not source.exists():
-        raise FileNotFoundError('全28事例の価値創造データが必要です: '+str(source))
+        raise FileNotFoundError('全事例の価値創造データが必要です: '+str(source))
     rows = json.loads(source.read_text())
     chains = {row['id']:row for row in rows}
     assert len(chains) == len(rows), 'Duplicate value-chain case id'
@@ -59,7 +59,7 @@ def block(item, tag='div', cls=''):
     return f'<{tag} class="vc-block {e(cls)}"><p>{e(item["text"])}</p><div class="vc-evidence"><span class="vc-kind {e(kind)}">{KINDS[kind]}</span>{refs}</div></{tag}>'
 
 def framework():
-    return '''<section class="vc-framework" id="value-creation"><div class="vc-framework-heading"><p class="eyebrow">INPUT → FUNCTION → OUTPUT → OUTCOME</p><h2>社会実装までを、<br>4つの切り口で読む。</h2><p>誰の課題に、どんな資源を持ち込み、どう価値へ変えるか。<br>全28事例を同じ構造で読み解きます。</p></div><div class="vc-flow"><div><span class="vc-flow-no">I / INPUT</span><h3>インプット</h3><p>人・場所・関係・お金・知識・課題</p><small>何を持ち込むか</small></div><div class="vc-flow-function"><span class="vc-flow-no">II / FUNCTION</span><h3>価値創造機能</h3><p>資源をつなぎ、検証し、実装へ進める</p><small>既存の8ステップは、この中の工程</small></div><div><span class="vc-flow-no">III / OUTPUT</span><h3>アウトプット</h3><p>試作品・検証結果・契約・標準・事業</p><small>直接、何が生まれたか</small></div><div><span class="vc-flow-no">IV / OUTCOME</span><h3>アウトカム</h3><p>継続利用・行動変化・事業や暮らしの改善</p><small>利用した結果、何が変わったか</small></div></div><p class="vc-framework-note"><strong>社会実装から逆算：</strong>導入する人、支払う人、運用する人を確かめ、検証結果を次の課題と資源配分へ戻します。工程は必要に応じて行き来します。</p><a class="vc-framework-link" href="#explore">28事例の具体的な工夫を読む ↓</a></section>'''
+    return '''<section class="vc-framework" id="value-creation"><div class="vc-framework-heading"><p class="eyebrow">INPUT → FUNCTION → OUTPUT → OUTCOME</p><h2>社会実装までを、<br>4つの切り口で読む。</h2><p>誰の課題に、どんな資源を持ち込み、どう価値へ変えるか。<br>全28事例を同じ構造で読み解きます。</p></div><div class="vc-flow"><div><span class="vc-flow-no">I / INPUT</span><h3>インプット</h3><p>人・場所・関係・お金・知識・課題</p><small>何を持ち込むか</small></div><div class="vc-flow-function"><span class="vc-flow-no">II / FUNCTION</span><h3>価値創造機能</h3><p>資源をつなぎ、検証し、実装へ進める</p><small>既存の8ステップは、この中の工程</small></div><div><span class="vc-flow-no">III / OUTPUT</span><h3>アウトプット</h3><p>試作品・検証結果・契約・標準・事業</p><small>直接、何が生まれたか</small></div><div><span class="vc-flow-no">IV / OUTCOME</span><h3>アウトカム</h3><p>継続利用・行動変化・事業や暮らしの改善</p><small>利用した結果、何が変わったか</small></div></div><p class="vc-framework-note"><strong>社会実装から逆算：</strong>導入する人、支払う人、運用する人を確かめ、検証結果を次の課題と資源配分へ戻します。工程は必要に応じて行き来します。</p><div class="vc-framework-actions"><a class="vc-framework-link" href="learn/value-creation/">4つの切り口・インプットの分類を学ぶ →</a><a class="vc-framework-link" href="#explore">28事例の具体的な工夫を読む ↓</a></div></section>'''
 
 def glance(row):
     parts = '<section class="vc-glance"><div><p class="eyebrow">VALUE CREATION / 価値が生まれる仕組み</p><h2>この事例を、4つの切り口で。</h2><p>'+e(row['summary'])+'</p></div><nav class="vc-jump" aria-label="価値創造の4つの切り口">'

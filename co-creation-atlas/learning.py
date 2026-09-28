@@ -1,6 +1,7 @@
 """Source-backed curriculum and browser-local worksheets. Standard library only."""
 import html
 import json
+import value_guide
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
@@ -72,6 +73,7 @@ def case_bridge(case):
 def build_hub():
     out = page_start('世界の共創から、実践の方法を学ぶ。','基礎を理解する。事例を読み解く。自分の計画をつくる。8つの工程を行き来しながら、地域と事業のつくり方を考える学習アトラス。')
     out.append('<div class="learn-route"><a href="first-co-creation/"><span>初めて学ぶ</span><b>3分野の違いから →</b></a><a href="#eight-steps"><span>実務で使う</span><b>必要な工程と記入例へ ↓</b></a><a href="roles-and-work/"><span>責任者として考える</span><b>体制・仕事・財源へ →</b></a></div>')
+    out.append('<div class="learn-fit-note"><p><strong>事例を読むための共通の軸：</strong>インプット → 価値創造機能 → アウトプット → アウトカム。<a href="value-creation/">4つの切り口と社会実装からの逆算を学ぶ →</a></p></div>')
     out.append('<section class="learn-overview"><p class="eyebrow">THREE LENSES / 3分野の関係</p><h2>同じ「共創」でも、見る問いが違う。</h2><div class="learn-three"><article><span>01 / LIVING LAB</span><h3>リビングラボ</h3><p>生活者と、暮らしの中で<br>何をつくり、どう確かめるか。</p></article><article><span>02 / PLACE & COMMUNITY</span><h3>まちづくり</h3><p>誰にとって、どんな地域にし、<br>誰が支え続けるか。</p></article><article><span>03 / OPEN INNOVATION</span><h3>オープンイノベーション</h3><p>何を自分で持ち、何を外部と<br>組み合わせ、価値につなげるか。</p></article></div><p class="learn-caption">MDLによる学習用の整理。互いに重なりますが、同義でも上下関係でもありません。<a href="first-co-creation/">定義・向き不向き・原典を読む →</a></p></section>')
     out.append('<section id="eight-steps"><div class="learn-section-head"><p class="eyebrow">START HERE / 8つの工程から選ぶ</p><h2>いま必要な工程から、手を動かす。</h2><p>順番どおりに進む必要はありません。デジタルを使わない、前の工程へ戻る、その地域で続ける選択もあります。</p></div><div class="learn-stage-grid">')
     for lesson in sorted([l for l in LESSONS if l['category']=='steps'], key=lambda l:l['step']): out.append(lesson_card(lesson))
@@ -124,6 +126,8 @@ def build_lesson(lesson):
     cat = CATEGORIES[lesson['category']]
     display = f'STEP {lesson["step"]:02d}.' if lesson.get('step') else {'basics':'THE BASICS.','town':'MAKE PLACES WORK.','operations':'KEEP IT RUNNING.','cases':'FOLLOW THE DECISION.','troubleshooting':'PAUSE. LOOK. ADAPT.'}[lesson['category']]
     out = page_start(lesson['title'],lesson['summary'],lesson['id'],display,cat+' / '+lesson.get('kicker',''))
+    if lesson.get('step') or lesson['id'] == 'first-co-creation':
+        out.append('<div class="learn-fit-note"><p><strong>8工程は、価値創造機能の中にあります。</strong>資源を持ち込み、働きかけ、直接の成果と利用者・地域の変化を分けて確かめます。<a href="../value-creation/">4つの切り口の読み方 →</a></p></div>')
     if lesson.get('step') == 7:
         out.append('<div class="learn-fit-note"><p><strong>まちづくり・地域運営での読み方：</strong>この工程の「事業にする」には、公共サービス・地域活動として続けることも含みます。商業化だけを出口にせず、利用者、費用負担者、運営者、意思決定者を分けて確認し、維持管理・引継ぎ・見直しの条件を決めます。</p></div>')
     out.append(f'<div class="learn-objectives"><div><p class="eyebrow">AFTER THIS LESSON</p><h2>読んだ後、できること。</h2><p class="meta">読む目安 {e(lesson.get("minutes",8))}分 / 演習の時間は含みません</p></div>{bullets(lesson["goals"])}</div>')
@@ -210,18 +214,22 @@ def build_library():
 def build_updates():
     count = len({m['caseId'] for m in MEDIA})
     out = page_start('根拠と、更新を残す。','どこまで確かめたか。何を変えたか。未確認のことと、次に確かめることを明示します。','updates','KEEP LEARNING.')
-    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / TWO ENTRANCES, ONE ATLAS</p><h2>二つの入口、一つの事例基盤。</h2><p>「共創拠点・リビングラボ」と「まちづくり・地域運営」から、重複を除いた{len(DATA)}記事を探せます。両方の関心に応える記事には、二つの入口から到達できます。入口別の件数は重なりを含みます。</p><p>全記事をインプット・価値創造機能・アウトプット・アウトカムで整理。8ステップは価値創造機能の工程として扱い、公共サービス・地域活動として続ける形も読み取れるようにしました。</p><p>追加事例は公式資料をもとに、対象単位・確認時点・成果の範囲・未確認点を記載しています。施設の成果と地区全体の変化、実装実績と将来計画を区別します。記事間の参考比較は、実際の関与を示す関係と分けています。</p><p>写真の利用条件が未確認の追加事例は、写真を無断転載せず、名称と公式情報へのリンクで案内しています。写真掲載の有無は事例の評価ではありません。</p><a class="btn" href="../../#explore">二つの入口から探す →</a></section>')
-    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / PHOTOGRAPHS</p><h2>先行公開の28事例に、現場を知る写真を。</h2><p>施設の外観・館内、実証地区、制作や事業化の活動を、{count}事例・{len(MEDIA)}点の写真で紹介しています。一覧・地図・詳細ページから見られます。</p><p>撮影年、入居前・旧拠点の区別、写真に写る対象、出典と利用条件を併記。FirstBuildは大学のFlickr公開写真を出典リンク付きで埋め込んでいます。</p><a class="btn" href="../../#explore">写真から事例を探す →</a></section>')
+    out.append('<section class="learn-content-section"><p class="eyebrow">2026.09.28 / EVIDENCE REVIEW</p><h2>主張と出典の対応を、点検しました。</h2><p>全事例の出典情報を点検し、主要な数値・現況を一次資料と照合しました。全文の独立検証は未完了です。</p><ul><li>オガール：別資料を指していたPDFを正しい内閣府・国土交通省資料へ差し替え。公共分の事業費と、2014年度の来訪・雇用の根拠を分けました。</li><li>Seoul Innovation Park：公開資料で確認できない終了後の引き継ぎを示唆する表現を修正しました。</li><li>写真：松本の所在地建物、日立の視察現場などを照合。対象地区や旧拠点の写真には、現在の施設・活動写真と誤認しない説明を付けました。</li></ul><p>各記事の冒頭から、出典の発行者・公表日・確認箇所・確認日へ移動できます。確認日は資料を確認した日であり、成果の発生日ではありません。写真は現況や効果を証明する資料として扱いません。</p><a class="btn" href="../../#sources">情報源と編集方針を見る →</a></section>')
+    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / TWO ENTRANCES, ONE ATLAS</p><h2>二つの入口、一つの事例基盤。</h2><p>「共創拠点・リビングラボ」と「まちづくり・地域運営」から、重複を除いた{len(DATA)}記事を探せます。両方の関心に応える記事には、二つの入口から到達できます。入口別の件数は重なりを含みます。</p><p>全記事をインプット・価値創造機能・アウトプット・アウトカムで整理。8ステップは価値創造機能の工程として扱い、公共サービス・地域活動として続ける形も読み取れるようにしました。</p><p>追加事例は公式資料をもとに、対象単位・確認時点・成果の範囲・未確認点を記載しています。施設の成果と地区全体の変化、実装実績と将来計画を区別します。記事間の参考比較は、実際の関与を示す関係と分けています。</p><p>写真には出典・撮影時点・利用条件を記載。施設・活動の写真と、入居建物・対象地区・過去の風景を区別し、写っていない設備や成果を写真から推定しません。</p><a class="btn" href="../../#explore">二つの入口から探す →</a></section>')
+    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / PHOTOGRAPHS</p><h2>すべての事例に、対象を知る写真を。</h2><p>施設の外観・館内、活動、対象地区や入居建物を、{count}事例・{len(MEDIA)}点の写真で紹介しています。一覧・地図・詳細ページから見られます。</p><p>撮影年、入居前・旧拠点の区別、写真に写る対象、出典と利用条件を併記。配信元が提供する埋め込み写真は、公式の表示方法と出典リンクで掲載しています。</p><a class="btn" href="../../#explore">写真から事例を探す →</a></section>')
     out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.27 / LEARNING EDITION</p><h2>事例を読むサイトから、計画をつくる教材へ。</h2><ul><li>既存の28事例と8工程を維持し、{len(LESSONS)}の教材を追加。</li><li>3分野の基礎、まちづくり5テーマ、8工程の実践、運営・費用、3案件の判断経緯、つまずきの教材を掲載。</li><li>ブラウザに保存できる実践シートと、条件別の事例比較、読む順番のある原典ライブラリを追加。</li><li>施設・活動写真を14事例・30点に拡充。撮影時点・出典・利用条件を各写真に表示。</li></ul><h3>編集の約束</h3><p>定義と確認した事実、運営者の報告、MDLの解釈、架空の記入例、未実施の検証案を分けます。未公表の費用・人員・意思決定は推測で補いません。成果の観察と因果の確認、実証の継続と恒久的な土地利用の決定を区別します。</p><h3>学習への効果は、まだ未検証です。</h3><p>教材を読んだ人が、課題・当事者・責任者・費用負担・検証方法・継続条件を説明できるかを、今後の利用者テストで確かめる必要があります。シートの記入数や閲覧数を、学習効果の証明とは扱いません。</p><p>確認方法の案：教材を読む前と読んだ後に同じ案件の計画を書き、根拠・未確認点・判断条件を第三者が確認する。使えなかった箇所と戻った工程も記録し、教材を改訂する。この評価は未実施です。</p><a class="btn" href="../../#sources">事例の原典・写真の利用条件へ →</a></section>')
     save_page(out,'updates')
 
 def build_all():
+    guide = page_start('共創の価値を、4つの切り口で読む。','インプットの分類、8工程の位置づけ、成果と変化の違いを学び、社会実装の条件から計画を逆算します。','value-creation','FROM INPUT TO OUTCOME.')
+    guide.append(value_guide.guide_content(len(DATA)))
+    save_page(guide, 'value-creation')
     build_hub()
     for lesson in LESSONS: build_lesson(lesson)
     build_workbook()
     build_choose()
     build_library()
     build_updates()
-    urls = [BASE] + [BASE+'cases/'+c['id']+'/' for c in DATA] + [BASE+'learn/'] + [BASE+'learn/'+slug+'/' for slug in [l['id'] for l in LESSONS]+['workbook','choose','library','updates']]
-    (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{e(url)}</loc><lastmod>2026-09-27</lastmod></url>' for url in urls)+'</urlset>')
+    urls = [BASE] + [BASE+'cases/'+c['id']+'/' for c in DATA] + [BASE+'learn/'] + [BASE+'learn/'+slug+'/' for slug in [l['id'] for l in LESSONS]+['workbook','choose','library','updates','value-creation']]
+    (ROOT/'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?><urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">'+''.join(f'<url><loc>{e(url)}</loc><lastmod>2026-09-28</lastmod></url>' for url in urls)+'</urlset>')
     print(f'Built {len(LESSONS)} lessons, workbook, condition finder and source library.')

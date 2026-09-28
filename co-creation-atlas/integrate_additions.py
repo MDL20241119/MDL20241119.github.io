@@ -14,6 +14,7 @@ def main(paths):
     chains=json.loads((ROOT/'data/value-chains.json').read_text())
     fits=json.loads((ROOT/'data/learning-case-fit.json').read_text())
     entries=json.loads((ROOT/'data/entries.json').read_text())
+    photo_cases={m['caseId'] for m in json.loads((ROOT/'data/media.json').read_text())}
     groups=[(cases,'id'),(chains,'id'),(fits,'caseId')]
     records=[]
     for path in paths:
@@ -27,7 +28,8 @@ def main(paths):
         assert r['fit']['unit'] in {'place','organization','district','program','network'}, cid
         assert set(r['fit']['exits']) <= {'purchase','public-service','local-operation','education','research','licensing'}, cid
         assert not any(d['name']==c['name'] and d['id']!=cid for d in cases), 'Duplicate case name: '+c['name']
-        c['photoPending']=True
+        if cid in photo_cases:c.pop('photoPending',None)
+        else:c['photoPending']=True
         for (target,key),value in zip(groups,[c,r['chain'],r['fit']]):
             index=next((i for i,d in enumerate(target) if d[key]==cid),None)
             if index is None:target.append(value)
