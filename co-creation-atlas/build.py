@@ -4,6 +4,7 @@ import learning
 import value_chain
 import atlas_routes
 import evidence
+import catalog
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
@@ -120,6 +121,8 @@ def build_index():
     countries=len(set(c['country'] for c in DATA));source_count=len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url')))
     hero=next((m for m in MEDIA if m.get('hero')),MEDIA[0] if MEDIA else None)
     out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}の共創拠点・リビングラボ・事業化制度を、インプット・価値創造機能・アウトプット・アウトカムで解説。社会実装から逆算した工夫を一次情報で読み解く。',BASE),header(),'<main id="main">']
+    out[0] = catalog.styles(out[0])
+    out.append(catalog.entry())
     out.append(atlas_routes.hero(DATA,MEDIA,photo))
     out.append('<div class="section-index"><p class="eyebrow">CONTENTS / 読みたいところから</p><div class="links"><a href="learn/"><b>01</b>教材の全体像</a><a href="#explore"><b>02</b>世界の事例</a><a href="#insights"><b>03</b>横断分析</a><a href="learn/workbook/"><b>04</b>自分の計画へ</a></div></div>')
     learning_start = len(out)
@@ -225,5 +228,6 @@ build_index()
 for c in DATA:build_case(c)
 learning.build_all()
 atlas_routes.build_compare(DATA,head,header,footer)
+catalog.build(ROOT,head,header,footer,BASE)
 (ROOT/'data/cases.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2))
 print(f'Built {len(DATA)} cases and index. {len(MEDIA)} photographs. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')
