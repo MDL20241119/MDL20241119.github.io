@@ -35,6 +35,11 @@ REGIONS={'north-america':'北米','europe':'ヨーロッパ','asia':'アジア',
 def e(v): return html.escape(str(v if v is not None else ''),quote=True)
 def para(v): return ''.join(f'<p>{e(x)}</p>' for x in str(v).split('\n') if x.strip())
 def external(url,text,cl=''): return f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer" class="{cl}">{text} ↗</a>'
+def source_link(source, text=None, cl=''):
+    if source.get('access') == 'private':
+        assert not source.get('url'), 'Private source URLs must not enter public data'
+        return f'<span class="{e(cl)}">{e(source["title"])}</span>'
+    return external(source['url'], e(source['title']) if text is None else text, cl)
 def path(c): return f'cases/{c["id"]}/'
 def case_link(code,text=None):
     c=next((c for c in DATA if c['code']==code),None)
@@ -112,7 +117,7 @@ def map_ui():
     return (ROOT/'map-ui.html').read_text().replace('__GRID__',grid).replace('__COUNTRIES__',paths).replace('拠点','事例').replace('>28<','>'+str(len(DATA))+'<')
 
 def build_index():
-    countries=len(set(c['country'] for c in DATA));source_count=len(set(s['url'] for c in DATA for s in c['sources']))
+    countries=len(set(c['country'] for c in DATA));source_count=len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url')))
     hero=next((m for m in MEDIA if m.get('hero')),MEDIA[0] if MEDIA else None)
     out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}の共創拠点・リビングラボ・事業化制度を、インプット・価値創造機能・アウトプット・アウトカムで解説。社会実装から逆算した工夫を一次情報で読み解く。',BASE),header(),'<main id="main">']
     out.append(atlas_routes.hero(DATA,MEDIA,photo))
@@ -159,7 +164,7 @@ def build_index():
     out.append(f'''<section id="sources"><div class="section-head pink"><div><p class="eyebrow">05 / EVIDENCE & EDITORIAL POLICY</p><div class="display">BACK TO THE SOURCE.</div><h2>原典から読み、確かめる。</h2></div><p>{source_count}件の重複を除く事例出典を掲載。<br>各詳細ページから、主張を支える原典へ移動できます。</p></div><div class="method"><div><h3>事実、自己報告、分析を分ける。</h3><dl class="legend"><dt>確認した事実</dt><dd>公式の制度、募集条件、組織、公開した活動。</dd><dt>運営者の報告</dt><dd>運営主体が公表した実績。独立した効果測定とは限りません。</dd><dt>MDLの分析</dt><dd>複数事例から整理した意味・応用条件。公式見解ではありません。</dd><dt>提案・未実施</dt><dd>検証方法、実行手順、継続・変更・停止条件の提案。</dd></dl><p>情報が見つからなかった項目は「未確認」としています。「存在しない」とは断定しません。費用対効果・導入率の分母が違う場合は、順位や統合スコアを算出していません。</p></div><div><h3>調査範囲と更新方針</h3><p>これまでの共創・リビングラボ・アート共創調査を起点に、公開版は{len(DATA)}事例を、運営者・行政の一次資料と原著を中心に整理しています。目的・工程の分類は、公開情報に基づく編集上の整理です。既存の調査資料を手掛かりに、公開主張の根拠は各事例の原典で示しています。</p><p>北米・欧州・アジア・中南米等の{countries}か国を対象とする選定事例集です。世界全域の網羅調査や代表サンプルではありません。未掲載の地域・条件への一般化には追加調査が必要です。</p><p>掲載日は{DATE}。数値は各項目の対象年・公表時点を併記。募集終了、運営者変更、集計定義の変更は、元の記述をそのまま継承せず見直しています。</p></div></div><details><summary class="compare-toggle">基礎を押さえる：用語集 ＋</summary><div class="table-wrap"><table><thead><tr><th>用語</th><th>このレポートでの読み方</th><th>混同しないこと</th></tr></thead><tbody><tr><td>オープンイノベーション</td><td>組織の内外の知識・技術・資源を組み合わせて価値をつくる考え方。</td><td>交流イベントを開催しただけでは、価値の実現は確認できない。</td></tr><tr><td>リビングラボ</td><td>生活者が共同設計に関わり、実生活の環境で研究・開発・評価を反復する仕組み。</td><td>利用者を試験参加者として招くテストベッドと、意思決定に参加する共創は異なる。</td></tr><tr><td>PoC / PoV</td><td>概念や技術が成立するかを試す段階／利用者や買い手にとっての価値を確かめる段階。</td><td>成立した試験と、続く運用・事業を区別する。</td></tr><tr><td>Venture Client</td><td>企業がスタートアップの顧客となり、購入を通じて技術を検証・採用する方式。</td><td>株式投資をするCVCや、無償の協業相談とは異なる。</td></tr><tr><td>社会実装</td><td>本レポートでは、実際の現場で、責任者・財源・運用体制を持って価値提供が続く状態。</td><td>実証の実施数や公開デモの数で代用しない。</td></tr></tbody></table></div></details>''')
     out.append('<details><summary class="compare-toggle">原典の一覧：28事例・基礎資料 ＋</summary><div class="source-list"><div class="source-item"><span class="label">FOUNDATION 01</span><p>'+external('https://enoll.org/living-labs/','ENoLL｜What are Living Labs')+'</p><p>利用者中心、実生活環境、共創の定義。確認日 2026-09-27。</p></div><div class="source-item"><span class="label">FOUNDATION 02</span><p>'+external('https://timreview.ca/article/1088','Steen & van Bueren (2017)｜The Defining Characteristics of Urban Living Labs')+'</p><p>90案件の定義適合性を検討した原著。全世界の成功率ではない。</p></div>')
     for c in DATA:
-        out.append(f'<div class="source-item"><span class="label">CASE {c["number"]}</span><p><a href="{path(c)}#evidence-sources">{e(c["name"])}｜出典と確認した内容</a></p><p>{len(c["sources"])}件の参照資料を掲載。</p>'+''.join(f'<p>{external(s["url"],e(s["title"]))}</p><div class="meta">{e(s.get("publisher",""))} · {e(s.get("published","日付記載なし"))}</div>' for s in c['sources'])+'</div>')
+        out.append(f'<div class="source-item"><span class="label">CASE {c["number"]}</span><p><a href="{path(c)}#evidence-sources">{e(c["name"])}｜出典と確認した内容</a></p><p>{len(c["sources"])}件の参照資料を掲載。</p>'+''.join(f'<p>{source_link(s)}</p><div class="meta">{e(s.get("publisher",""))} · {e(s.get("published","日付記載なし"))}</div>' for s in c['sources'])+'</div>')
     out.append('</div></details><details><summary class="compare-toggle">写真・動画のクレジットと利用条件 ＋</summary><div class="source-list">')
     out.append(f'<div class="source-item"><h3>写真の対象と確認範囲</h3><p>{len(DATA)}事例に関連する{len(MEDIA)}点を掲載しています。施設・活動そのものの写真に加え、入居建物、旧拠点、対象地区の写真を含みます。何を写した写真か、撮影時点と合わせて確認してください。</p><a href="learn/updates/">今回の修正と確認範囲を見る →</a></div>')
     out.append('<div class="source-item"><h3>動画・360°体験</h3><p>各事例の公式公開コンテンツへリンクしています。埋め込みは再生を選んだ後に読み込み、配信者の設定に従います。動画本体の再配布は行っていません。</p></div>')
@@ -189,10 +194,10 @@ def build_case(c):
     out.append('<section class="detail-section" id="evidence"><h2><span class="display">03</span>確認できたこと。</h2>')
     source_by_id={t["id"]:t for t in c["sources"]}
     metric=c.get('metric')
-    if metric:out.append(f'<div class="metric-block"><div class="display">{e(metric["value"])}</div><div><p><strong>{e(metric["label"])}</strong></p><p>{e(metric["asOf"])}</p>{external(source_by_id[metric["sourceId"]]["url"],"この数字の原典を読む","ref")}</div></div>')
+    if metric:out.append(f'<div class="metric-block"><div class="display">{e(metric["value"])}</div><div><p><strong>{e(metric["label"])}</strong></p><p>{e(metric["asOf"])}</p>{source_link(source_by_id[metric["sourceId"]],"この数字の原典を読む","ref")}</div></div>')
     for z in c['evidence']:
         kind='運営者の報告' if z['kind']=='self-report' else '確認した事実'
-        out.append(f'<div class="evidence-item"><span class="fact {e(z["kind"])}">{kind}</span><span class="meta"> {e(z.get("asOf",""))}</span><h3>{e(z["claim"])}</h3><p><strong>読み取れる範囲：</strong>{e(z.get("limit",""))}</p>{external(source_by_id[z["sourceId"]]["url"],"原典で確かめる","ref")} <a class="source-note-link" href="#{e(z["sourceId"])}">出典の説明 ↓</a></div>')
+        out.append(f'<div class="evidence-item"><span class="fact {e(z["kind"])}">{kind}</span><span class="meta"> {e(z.get("asOf",""))}</span><h3>{e(z["claim"])}</h3><p><strong>読み取れる範囲：</strong>{e(z.get("limit",""))}</p>{source_link(source_by_id[z["sourceId"]],"原典で確かめる","ref")} <a class="source-note-link" href="#{e(z["sourceId"])}">出典の説明 ↓</a></div>')
     out.append(f'</section><section class="detail-section analysis" id="transfer"><span class="label">MDL ANALYSIS</span><h2 style="margin-top:16px"><span class="display">04</span>日本で活かすなら。</h2>{para(c["transfer"])}</section><section class="detail-section limit" id="limits"><h2><span class="display">05</span>そのまま真似できないこと。</h2>{para(c["limits"])}</section><section class="detail-section test" id="next-test"><span class="label">PROPOSAL / 未実施の検証案</span><h2 style="margin-top:16px"><span class="display">06</span>次に、何を確かめるか。</h2>{para(c["nextTest"])}</section>')
     out.append('<section class="detail-section" id="media"><h2><span class="display">07</span>現場を、写真と動画で。</h2>')
     for x in ms[1:]:out.append(photo(x,prefix=prefix))
@@ -208,7 +213,7 @@ def build_case(c):
     if not ms:out.append('<p class="note-inline">掲載許諾を確認できない写真は転載せず、公式ページでご覧いただけるようにしています。</p>')
     out.append('</section><section class="detail-section" id="evidence-sources"><h2><span class="display">08</span>原典を読む。</h2><p class="meta">制度の説明と運営者による実績報告を区別しています。日付記載のない資料は、公表時点を確定できません。確認日は資料を確認した日であり、活動や成果が発生した日ではありません。</p>')
     for s in c['sources']:
-        out.append(f'<div class="source-item" id="{e(s["id"])}"><span class="label">{e(s["id"])}</span><p>{external(s["url"],e(s["title"]))}</p><p>{e(s.get("claim",""))}</p><div class="meta">{e(s.get("publisher",""))} · 公表：{e(s.get("published","日付記載なし"))}<br>確認箇所：{e(s.get("locator","本文"))} · 確認日：{e(s.get("verified","2026-09-27"))}</div></div>')
+        out.append(f'<div class="source-item" id="{e(s["id"])}"><span class="label">{e(s["id"])}</span><p>{source_link(s)}</p><p>{e(s.get("claim",""))}</p><div class="meta">{e(s.get("publisher",""))} · 公表：{e(s.get("published","日付記載なし"))}<br>確認箇所：{e(s.get("locator","本文"))} · 確認日：{e(s.get("verified","2026-09-27"))}</div></div>')
     out.append('</section></article></div>')
     out.append(learning.case_bridge(c))
 
@@ -221,4 +226,4 @@ for c in DATA:build_case(c)
 learning.build_all()
 atlas_routes.build_compare(DATA,head,header,footer)
 (ROOT/'data/cases.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2))
-print(f'Built {len(DATA)} cases and index. {len(MEDIA)} photographs. '+str(len(set(s['url'] for c in DATA for s in c['sources'])))+' unique case sources.')
+print(f'Built {len(DATA)} cases and index. {len(MEDIA)} photographs. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')

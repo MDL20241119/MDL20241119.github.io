@@ -18,7 +18,7 @@ the 87-case dataset with an earlier 28-case draft.
 | Reverse design for implementation | Per-case mechanisms plus a consolidated six-question reading guide |
 | Learning materials | 21 lessons, a four-part reading guide, workbook and comparison tools |
 | Photos | 103 entries covering all 87 cases; 99 local assets and 4 provider embeds |
-| References | 515 case-source records, 430 distinct case-source URLs |
+| References | 515 case-source records, 429 distinct public URLs and one private supplied source |
 | Reader annotations | Short photo scope labels and compact source links; longer media details are expandable |
 
 The alternative 28-case renderer is superseded by the current renderer; its

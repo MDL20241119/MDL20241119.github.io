@@ -8673,14 +8673,15 @@
       },
       {
         "id": "garraway-f-src2",
-        "title": "GarrawayFってなに？（提供資料）",
-        "url": "https://drive.google.com/file/d/1fYSqAxnpIUqFRBlvID_1wAqhf-kAwnqa/view",
+        "title": "Garraway F運営者提供資料（非公開）",
+        "url": "",
         "publisher": "Garraway F",
         "published": "日付記載なし",
         "locator": "pp.2–4：場の目的・3属性・4機能／p.31：HV電源／p.35：APM／p.41：車載電池リユース／pp.43・45：人材・運営",
         "claim": "社会課題・挑戦者・技術をつなぐ仕組みと、実証・商品化・導入に進んだ事例",
         "grade": "official",
-        "verified": "2026-09-28"
+        "verified": "2026-09-28",
+        "access": "private"
       },
       {
         "id": "garraway-f-src3",
