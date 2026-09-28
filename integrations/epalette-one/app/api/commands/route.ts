@@ -1,0 +1,3 @@
+import { identity,execute,responseError,checkOrigin } from '@/lib/store';
+import { DomainError } from '@/lib/model';
+export async function POST(request:Request){try{checkOrigin(request);const who=await identity();const raw=await request.text();if(raw.length>20000)throw new DomainError(413,'入力が長すぎます。');const data=JSON.parse(raw);const key=request.headers.get('Idempotency-Key');if(!key||key.length>120||!Number.isInteger(data.expectedVersion)||!data.command||typeof data.command.type!=='string')throw new DomainError(400,'操作内容を確認してください。');return Response.json({state:await execute(who.owner,who.actor,key,data.expectedVersion,data.command)},{headers:{'Cache-Control':'no-store'}});}catch(e){return responseError(e);}}

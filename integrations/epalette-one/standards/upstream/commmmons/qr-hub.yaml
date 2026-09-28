@@ -1,0 +1,295 @@
+openapi: 3.0.4
+info:
+  title: QRチケット相互運用API標準仕様書（仲介HUBシステム）
+  description: |-
+    本ドキュメントは、QRチケット相互運用におけるチケット仲介HUBシステム向けAPI仕様を定義した OpenAPI 定義です。<br>各 API は、MaaS事業者と認証事業者間の通信を仲介し、チケットの発行・QRコード生成・利用状態の連携といった処理を円滑化することを意図して設計されています。<br>HTTP ステータスコードが `200 OK` 以外の場合のレスポンス構造は RFC 9457 に準拠しています。<br>本仕様書に記載されている HTTP ステータスコードは、各 API において一般的に想定されるステータスコードの推奨例です。<br>実装にあたっては、これらを基準としつつ、サービスの要件や運用状況に応じて必要に応じたステータスコードを柔軟に追加してください。
+  contact:
+    url: https://www.mlit.go.jp/commmmons/
+  version: 1.0.0
+paths:
+  /issue-ticket:
+    post:
+      tags:
+        - issue-ticket
+      summary: (M13-IF-010)仲介QRチケット発行API
+      description: |-
+        MaaSシステムからチケット発行の要求を受け付け、認証システムへチケット発行を要求する。
+      operationId: putIssue-ticket
+      requestBody:
+        $ref: "#/components/requestBodies/IssueTicketRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/IssuedTickets"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+  /generate-qrcode:
+    post:
+      tags:
+        - generate-qrcode
+      summary: (M13-IF-020)仲介QRチケット生成API
+      description: |-
+        MaaSシステムからQRコードの発券要求を受け付け、認証システムへQRコードを通知する。
+      operationId: putGenerate-qrcode
+      requestBody:
+        $ref: "#/components/requestBodies/GenerateQrCodeRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/QrCodeData"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+  /notify-authenticated-ticket:
+    post:
+      tags:
+        - notify-authenticated-ticket
+      summary: (M13-IF-030)QRチケット状態仲介API
+      description: |-
+        認証システムからチケットの認証情報を受け付け、他システムへ通知する。
+      operationId: putNotify-authenticated-ticket
+      requestBody:
+        $ref: "#/components/requestBodies/NotifyAuthenticatedTicketRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/Result"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+components:
+  requestBodies:
+    IssueTicketRequest:
+      description: "チケット発行リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              maas_system_id:
+                $ref: "#/components/schemas/maas_system_id"
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              purchase_datetime_at:
+                $ref: "#/components/schemas/purchase_datetime_at"
+              common_sales_ticket_id:
+                $ref: "#/components/schemas/common_sales_ticket_id"
+              usable_period:
+                $ref: "#/components/schemas/usable_period"
+    GenerateQrCodeRequest:
+      description: "QRコード生成リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              maas_system_id:
+                $ref: "#/components/schemas/maas_system_id"
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              common_ticket_id:
+                $ref: "#/components/schemas/common_ticket_id"
+              validity_period_at:
+                $ref: "#/components/schemas/validity_period_at"
+    NotifyAuthenticatedTicketRequest:
+      description: "チケット認証通知リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              authentication_system_id:
+                $ref: "#/components/schemas/authentication_system_id"
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              datetime_at:
+                $ref: "#/components/schemas/datetime_at"
+              location:
+                $ref: "#/components/schemas/location"
+              terminal_type:
+                $ref: "#/components/schemas/terminal_type"
+              common_ticket_id:
+                $ref: "#/components/schemas/common_ticket_id"
+              use_type:
+                $ref: "#/components/schemas/use_type"
+  responses:
+    IssuedTickets:
+      description: 発行済共通チケットデータ
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              common_ticket_id:
+                type: object
+                properties:
+                  adult:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/common_ticket_id"
+                  child:
+                    type: array
+                    items:
+                      $ref: "#/components/schemas/common_ticket_id"
+                description: |-
+                  発行されたチケットの共通チケットID<br/>- m_ticket_registry.common_ticket_id
+    QrCodeData:
+      description: |-
+        QRコードデータ
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              qr_code:
+                type: string
+                format: byte
+                description: |-
+                  QRコードのデータ<br/>- m_ticket_registry.qr_code_data
+    Result:
+      description: |-
+        処理結果
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              result:
+                type: boolean
+                description: |-
+                  処理結果
+    BadRequest:
+      description: |-
+        データ異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    NotFound:
+      description: |-
+        データ項目異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    InternalServerError:
+      description: |-
+        サーバー処理異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+  schemas:
+    maas_system_id:
+      type: integer
+      format: int32
+      description: |-
+        MaaSシステムを特定するためのID<br/>- m_system.system_id
+    request_id:
+      type: string
+      description: |-
+        APIの実行を特定するためのID。UUIDをセットする<br/>- m_ticket_registry.request_id
+    exec_datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        API実行日時<br/>- m_ticket_registry.issued_at
+    purchase_datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        チケットの購入日時
+    common_sales_ticket_id:
+      type: string
+      description: |-
+        発行するチケットの商品を特定するためのID<br/>- m_ticket_routing_rule.maas_ticket_id
+    usable_period:
+      type: object
+      properties:
+        start_at:
+          type: string
+          format: date-time
+          description: |-
+            チケットの利用可能期間における開始日時<br/>- m_ticket_registry.valid_from
+        end_at:
+          type: string
+          format: date-time
+          description: |-
+            チケットの利用可能期間における終了日時<br/>- m_ticket_registry.valid_to
+        quantity:
+          type: object
+          properties:
+            adult:
+              type: integer
+              format: int32
+              description: |-
+                おとなが利用するチケットの数量
+            child:
+              type: integer
+              format: int32
+              description: |-
+                こどもが利用するチケットの数量
+    common_ticket_id:
+      type: string
+      description: |-
+        チケットを特定するためのID<br/>- m_ticket_registry.common_ticket_id
+    validity_period_at:
+      type: string
+      format: date-time
+      description: |-
+        生成するQRコードの有効期限<br/>- m_ticket_registry.qr_valid_until
+    authentication_system_id:
+      type: integer
+      format: int32
+      description: |-
+        認証システムを特定するためのID
+    datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        認証が実行された日時
+    location:
+      type: string
+      description: |-
+        認証が実行された場所
+    terminal_type:
+      type: string
+      description: |-
+        認証時に使用された機器
+    use_type:
+      type: string
+      enum: ["start", "entry", "exit", "use", "refund", "cancel"]
+      description: |-
+        認証のタイプ
+          start: 発券 entry: 入場 exit: 出場 use: 利用開始宣言 refund: 払戻 cancel: 取消
