@@ -95,7 +95,14 @@ def case_sections(row):
     for key,label in [('overview','誰の課題を、どう扱ったか'),('output','生まれたもの'),('outcome','確認できた変化')]:
         out.append(f'<div class="vc-project-part"><h3>{label}</h3>'+block(project[key])+'</div>')
     out.append(f'<p class="vc-project-gap"><strong>評価の限界：</strong>{e(project["gap"])}</p></section>')
-    out.append('<section class="detail-section vc-backcast" id="vc-backcast"><p class="eyebrow">DESIGN BACKWARDS FROM IMPLEMENTATION</p><h2>社会実装から逆算して、<br>何を先に整えているか。</h2><p class="vc-intro">実証の先にある導入・運用・継続から、この事例の設計を読み解きます。仕組みの存在と、全案件で成果が出たことは別に扱います。</p><div>')
+    if row.get('relatedProjects'):
+        out.append('<section class="detail-section" id="vc-related-projects"><p class="eyebrow">CONNECTED PRACTICE / 実際の関与を確認した取り組み</p><h2>個別案件から、地区・事業間のつながりへ。</h2><p>同じ組織が関与する別の取り組みを、事業期間と成果の単位を分けて読みます。記事数を増やすために重複掲載はしていません。</p>')
+        for item in row['relatedProjects']:
+            out.append('<h3>'+e(item['title'])+'</h3>'+block(item))
+        if row.get('relatedProjectGaps'):
+            out.append('<aside class="vc-gaps"><h3>期間・数値の読み方</h3><ul>'+''.join('<li>'+e(v)+'</li>' for v in row['relatedProjectGaps'])+'</ul></aside>')
+        out.append('</section>')
+    out.append('<section class="detail-section vc-backcast" id="vc-backcast"><p class="eyebrow">DESIGN BACKWARDS FROM IMPLEMENTATION</p><h2>社会実装から逆算して、<br>何を先に整えているか。</h2><p class="vc-intro">実証の先にある導入・運用・継続から、この事例の設計を読み解きます。原典で確認できる仕組みと、MDLの設計解釈・他地域へ応用するための提案を区別して読んでください。「提案」「未実施」と記す内容は、当地で実施済みの工夫ではありません。仕組みの存在と、全案件で成果が出たことも別に扱います。</p><div>')
     for n,item in enumerate(row['backcast'],1):
         out.append(f'<section><span class="vc-backcast-no">{n:02d}</span><div><h3>{e(item["title"])}</h3>'+block(item)+'</div></section>')
     out.append('</div></section><div class="vc-supporting"><p class="eyebrow">MORE DETAIL / 運営・根拠・応用</p><h2>運営の全体像と、学びを深める資料。</h2><p>費用負担、公表値、応用条件、写真・動画、原典を続けて確認できます。</p></div>')

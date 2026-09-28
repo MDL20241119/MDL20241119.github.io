@@ -124,6 +124,8 @@ def build_lesson(lesson):
     cat = CATEGORIES[lesson['category']]
     display = f'STEP {lesson["step"]:02d}.' if lesson.get('step') else {'basics':'THE BASICS.','town':'MAKE PLACES WORK.','operations':'KEEP IT RUNNING.','cases':'FOLLOW THE DECISION.','troubleshooting':'PAUSE. LOOK. ADAPT.'}[lesson['category']]
     out = page_start(lesson['title'],lesson['summary'],lesson['id'],display,cat+' / '+lesson.get('kicker',''))
+    if lesson.get('step') == 7:
+        out.append('<div class="learn-fit-note"><p><strong>まちづくり・地域運営での読み方：</strong>この工程の「事業にする」には、公共サービス・地域活動として続けることも含みます。商業化だけを出口にせず、利用者、費用負担者、運営者、意思決定者を分けて確認し、維持管理・引継ぎ・見直しの条件を決めます。</p></div>')
     out.append(f'<div class="learn-objectives"><div><p class="eyebrow">AFTER THIS LESSON</p><h2>読んだ後、できること。</h2><p class="meta">読む目安 {e(lesson.get("minutes",8))}分 / 演習の時間は含みません</p></div>{bullets(lesson["goals"])}</div>')
     if lesson.get('forWhom') or lesson.get('prerequisite'):
         out.append(f'<div class="learn-fit-note"><p><strong>こんな人へ：</strong>{e(lesson.get("forWhom","このテーマを自分の案件で考えたい方"))}<br><strong>読む前に：</strong>{e(lesson.get("prerequisite","自分が取り組む課題を一つ思い浮かべてください。"))}</p></div>')
@@ -208,7 +210,8 @@ def build_library():
 def build_updates():
     count = len({m['caseId'] for m in MEDIA})
     out = page_start('根拠と、更新を残す。','どこまで確かめたか。何を変えたか。未確認のことと、次に確かめることを明示します。','updates','KEEP LEARNING.')
-    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / PHOTOGRAPHS</p><h2>28事例すべてに、現場を知る写真を。</h2><p>施設の外観・館内、実証地区、制作や事業化の活動を、{count}事例・{len(MEDIA)}点の写真で紹介しています。一覧・地図・詳細ページから見られます。</p><p>撮影年、入居前・旧拠点の区別、写真に写る対象、出典と利用条件を併記。FirstBuildは大学のFlickr公開写真を出典リンク付きで埋め込んでいます。</p><a class="btn" href="../../#explore">写真から事例を探す →</a></section>')
+    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / TWO ENTRANCES, ONE ATLAS</p><h2>二つの入口、一つの事例基盤。</h2><p>「共創拠点・リビングラボ」と「まちづくり・地域運営」から、重複を除いた{len(DATA)}記事を探せます。両方の関心に応える記事には、二つの入口から到達できます。入口別の件数は重なりを含みます。</p><p>全記事をインプット・価値創造機能・アウトプット・アウトカムで整理。8ステップは価値創造機能の工程として扱い、公共サービス・地域活動として続ける形も読み取れるようにしました。</p><p>追加事例は公式資料をもとに、対象単位・確認時点・成果の範囲・未確認点を記載しています。施設の成果と地区全体の変化、実装実績と将来計画を区別します。記事間の参考比較は、実際の関与を示す関係と分けています。</p><p>写真の利用条件が未確認の追加事例は、写真を無断転載せず、名称と公式情報へのリンクで案内しています。写真掲載の有無は事例の評価ではありません。</p><a class="btn" href="../../#explore">二つの入口から探す →</a></section>')
+    out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.28 / PHOTOGRAPHS</p><h2>先行公開の28事例に、現場を知る写真を。</h2><p>施設の外観・館内、実証地区、制作や事業化の活動を、{count}事例・{len(MEDIA)}点の写真で紹介しています。一覧・地図・詳細ページから見られます。</p><p>撮影年、入居前・旧拠点の区別、写真に写る対象、出典と利用条件を併記。FirstBuildは大学のFlickr公開写真を出典リンク付きで埋め込んでいます。</p><a class="btn" href="../../#explore">写真から事例を探す →</a></section>')
     out.append(f'<section class="learn-content-section"><p class="eyebrow">2026.09.27 / LEARNING EDITION</p><h2>事例を読むサイトから、計画をつくる教材へ。</h2><ul><li>既存の28事例と8工程を維持し、{len(LESSONS)}の教材を追加。</li><li>3分野の基礎、まちづくり5テーマ、8工程の実践、運営・費用、3案件の判断経緯、つまずきの教材を掲載。</li><li>ブラウザに保存できる実践シートと、条件別の事例比較、読む順番のある原典ライブラリを追加。</li><li>施設・活動写真を14事例・30点に拡充。撮影時点・出典・利用条件を各写真に表示。</li></ul><h3>編集の約束</h3><p>定義と確認した事実、運営者の報告、MDLの解釈、架空の記入例、未実施の検証案を分けます。未公表の費用・人員・意思決定は推測で補いません。成果の観察と因果の確認、実証の継続と恒久的な土地利用の決定を区別します。</p><h3>学習への効果は、まだ未検証です。</h3><p>教材を読んだ人が、課題・当事者・責任者・費用負担・検証方法・継続条件を説明できるかを、今後の利用者テストで確かめる必要があります。シートの記入数や閲覧数を、学習効果の証明とは扱いません。</p><p>確認方法の案：教材を読む前と読んだ後に同じ案件の計画を書き、根拠・未確認点・判断条件を第三者が確認する。使えなかった箇所と戻った工程も記録し、教材を改訂する。この評価は未実施です。</p><a class="btn" href="../../#sources">事例の原典・写真の利用条件へ →</a></section>')
     save_page(out,'updates')
 

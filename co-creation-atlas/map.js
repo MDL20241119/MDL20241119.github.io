@@ -4,7 +4,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
   const $ = s => document.querySelector(s);
   const map = $('#world-map'), layer = $('#map-markers'), panel = $('#map-panel');
   const dialog = $('#map-detail-dialog'), countrySelect = $('#map-country');
-  const regionNames = {world:'世界', 'north-america':'北米', europe:'ヨーロッパ', asia:'アジア'};
+  const regionNames = {world:'世界', 'north-america':'北米', europe:'ヨーロッパ', asia:'アジア','latin-america':'中南米',africa:'アフリカ',oceania:'オセアニア'};
   const esc = s => String(s ?? '').replace(/[&<>"']/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const shortCity = d => ({'project-plateau':'東京','manufacturing-usa':'ゲイザースバーグ','hvm-catapult':'シェフィールド','bmw-startup-garage':'ミュンヘン近郊','punggol-digital-district':'シンガポール'}[d.id] || d.city.split(/[（／・]/)[0]);
   const xy = d => [(d.lng + 180) * 1200 / 360, (90 - d.lat) * 600 / 180];
@@ -57,7 +57,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
     layer.innerHTML = sorted.map((g,i) => {
       const many=g.items.length>1, active=g.items.some(d=>d.id===selected), grouped=!selected&&groupIds.length&&g.items.some(d=>groupIds.includes(d.id));
       const title=many?clusterName(g):shortCity(g.items[0]);
-      const a11y=many?`${title}周辺の${g.items.length}拠点を選ぶ`:`${g.items[0].name}／${g.items[0].city}の概要を表示`;
+      const a11y=many?`${title}周辺の${g.items.length}事例を選ぶ`:`${g.items[0].name}／${g.items[0].city}の概要を表示`;
       const key=g.items.map(d=>d.id).sort().join('|');
       const px=g.x/unit, py=g.y/unit, tw=Math.min(168,[...title].reduce((n,c)=>n+(c.charCodeAt(0)>255?12:7),0)+10);
       let label='';
@@ -66,7 +66,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
         if (rect[0]<box[0]/unit+4 || rect[0]+tw>(box[0]+box[2])/unit-4 || occupied.some(r=>intersects(rect,r))) continue;
         occupied.push(rect); label=`<text class="marker-place" y="${offset*unit}" font-size="${12*unit}">${esc(title)}</text>`;break;
       }
-      const shape=many?`<rect class="marker-cluster" x="${-29*unit}" y="${-19*unit}" width="${58*unit}" height="${38*unit}" rx="${4*unit}"/><text class="marker-count" font-size="${13*unit}">${g.items.length}拠点</text>`:`<circle class="marker-single" r="${10*unit}"/><circle class="marker-core" r="${3*unit}"/>`;
+      const shape=many?`<rect class="marker-cluster" x="${-29*unit}" y="${-19*unit}" width="${58*unit}" height="${38*unit}" rx="${4*unit}"/><text class="marker-count" font-size="${13*unit}">${g.items.length}事例</text>`:`<circle class="marker-single" r="${10*unit}"/><circle class="marker-core" r="${3*unit}"/>`;
       return `<g class="map-marker ${many?'is-cluster':'is-single'} ${active||grouped?'selected':''}" tabindex="0" role="button" aria-pressed="${!!(active||grouped)}" aria-label="${esc(a11y)}" data-map-key="${esc(key)}" data-map-group="${i}" transform="translate(${g.x} ${g.y})"><title>${esc(a11y)}</title><rect class="marker-hit" x="${-28*unit}" y="${-25*unit}" width="${56*unit}" height="${50*unit}"/>${shape}${label}</g>`;
     }).join('');
     layer.querySelectorAll('[data-map-group]').forEach(el => {
@@ -93,13 +93,13 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
     const d=items.find(x=>x.id===selected), group=groupIds.length?items.filter(x=>groupIds.includes(x.id)):items;
     let html;
     if(d) {
-      html=`<div class="map-preview"><button type="button" class="map-back" data-map-back>← ${groupIds.length?'この周辺の拠点':'拠点一覧'}に戻る</button><div class="map-preview-heading"><p class="eyebrow">CASE ${esc(d.number)} / ${esc(d.country)}</p><p class="map-city">${esc(d.city)}</p><h3>${esc(d.shortName||d.name)}</h3><span class="map-stage-tag">${esc(stages[d.stage])}</span></div>${d.image?`<figure class="map-preview-photo">${d.imageEmbedSource?`<a href="${esc(d.imageEmbedSource)}" target="_blank" rel="noopener noreferrer" aria-label="写真を掲載元で見る">`:""}<img src="${esc(d.image)}" alt="${esc(d.imageAlt||d.name)}" class="${d.imageNoCrop?'uncropped':''}" loading="lazy">${d.imageEmbedSource?"</a>":""}<figcaption>${d.imageCaption?`${esc(d.imageCaption)}<br>`:""}${d.imageDate?`${esc(d.imageDate)} · `:""}PHOTO: ${esc(d.imageCredit)} · <a href="${esc(d.imageSource)}" target="_blank" rel="noopener noreferrer">掲載元</a> · <a href="${esc(d.imageRights)}" target="_blank" rel="noopener noreferrer">${esc(d.imageLicense)}</a>${d.imageChanges?`<br>${esc(d.imageChanges)}`:""}</figcaption></figure>`:''}<div class="map-preview-copy"><p class="eyebrow">この事例から学べること</p><p class="map-preview-learning">${esc(d.tagline)}</p><p class="map-location-note">${esc(d.locationNote||'代表所在地です。正確な訪問先は公式サイトで確認してください。')}</p><a class="btn black" href="cases/${esc(d.id)}/">仕組み・成果を詳しく読む →</a><a class="map-official" href="${esc(d.sources[0].url)}" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a></div></div>`;
+      html=`<div class="map-preview"><button type="button" class="map-back" data-map-back>← ${groupIds.length?'この周辺の事例':'事例一覧'}に戻る</button><div class="map-preview-heading"><p class="eyebrow">CASE ${esc(d.number)} / ${esc(d.country)}</p><p class="map-city">${esc(d.city)}</p><h3>${esc(d.shortName||d.name)}</h3><span class="map-stage-tag">${esc(stages[d.stage])}</span></div>${d.image?`<figure class="map-preview-photo">${d.imageEmbedSource?`<a href="${esc(d.imageEmbedSource)}" target="_blank" rel="noopener noreferrer" aria-label="写真を掲載元で見る">`:""}<img src="${esc(d.image)}" alt="${esc(d.imageAlt||d.name)}" class="${d.imageNoCrop?'uncropped':''}" loading="lazy">${d.imageEmbedSource?"</a>":""}<figcaption>${d.imageCaption?`${esc(d.imageCaption)}<br>`:""}${d.imageDate?`${esc(d.imageDate)} · `:""}PHOTO: ${esc(d.imageCredit)} · <a href="${esc(d.imageSource)}" target="_blank" rel="noopener noreferrer">掲載元</a> · <a href="${esc(d.imageRights)}" target="_blank" rel="noopener noreferrer">${esc(d.imageLicense)}</a>${d.imageChanges?`<br>${esc(d.imageChanges)}`:""}</figcaption></figure>`:''}<div class="map-preview-copy"><p class="eyebrow">この事例から学べること</p><p class="map-preview-learning">${esc(d.entry?.learning?.[new URLSearchParams(location.search).get("lens")]||d.tagline)}</p><p class="map-location-note">${esc(d.locationNote||'代表所在地です。正確な訪問先は公式サイトで確認してください。')}</p><a class="btn black" href="cases/${esc(d.id)}/${['co','place'].includes(new URLSearchParams(location.search).get('lens'))?'?lens='+new URLSearchParams(location.search).get('lens'):''}">仕組み・成果を詳しく読む →</a><a class="map-official" href="${esc(d.sources[0].url)}" target="_blank" rel="noopener noreferrer">公式サイトを見る ↗</a></div></div>`;
     } else {
-      html=`<div class="map-browser-heading"><p class="eyebrow">${groupIds.length?'SELECTED AREA / 選んだエリア':'PLACES / 拠点名からも選べます'}</p><h3>${groupIds.length?'この周辺の拠点':(country||regionNames[region||'world'])+'の拠点'}<span>${group.length}</span></h3><p>${group.length?'気になる拠点を選ぶと、概要を表示します。':'条件を減らして探し直してください。'}</p>${groupIds.length?'<button type="button" class="map-back" data-map-all>← 条件に合う全拠点に戻る</button>':''}</div><div class="map-place-list">${listMarkup(group)}</div>${group.length?'':'<button type="button" class="map-clear" data-map-clear>絞り込みを解除</button>'}`;
+      html=`<div class="map-browser-heading"><p class="eyebrow">${groupIds.length?'SELECTED AREA / 選んだエリア':'PLACES / 事例名からも選べます'}</p><h3>${groupIds.length?'この周辺の事例':(country||regionNames[region||'world'])+'の事例'}<span>${group.length}</span></h3><p>${group.length?'気になる事例を選ぶと、概要を表示します。':'条件を減らして探し直してください。'}</p>${groupIds.length?'<button type="button" class="map-back" data-map-all>← 条件に合う全事例に戻る</button>':''}</div><div class="map-place-list">${listMarkup(group)}</div>${group.length?'':'<button type="button" class="map-clear" data-map-clear>絞り込みを解除</button>'}`;
     }
     panel.innerHTML=html;panel.scrollTop=0;
     dialog.querySelector('.map-detail-body').innerHTML=html;
-    $('#map-status').textContent=d?`選択中：${d.shortName||d.name}`:groupIds.length?`この周辺に${group.length}拠点`:`${items.length}拠点を表示`;
+    $('#map-status').textContent=d?`選択中：${d.shortName||d.name}`:groupIds.length?`この周辺に${group.length}事例`:`${items.length}事例を表示`;
   }
   function openSheet() { if(mobile()&&!dialog.open)dialog.showModal(); }
   function choose(d,fromMarker=false) {
@@ -141,7 +141,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
       const countries=[...new Set(available.filter(d=>!region||d.region===region).map(d=>d.country))].sort((a,b)=>a.localeCompare(b,'ja'));
       if(country&&!countries.includes(country))countries.push(country);
       countrySelect.innerHTML='<option value="">すべての国</option>'+countries.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');countrySelect.value=country;
-      $('#map-scope').textContent=(country||regionNames[region||'world'])+'の拠点';$('#map-empty').hidden=items.length>0;
+      $('#map-scope').textContent=(country||regionNames[region||'world'])+'の事例';$('#map-empty').hidden=items.length>0;
       renderPanel();schedule();
     },
     setVisible(value) { visible=value;if(!visible&&dialog.open)dialog.close();if(visible)requestAnimationFrame(resize); }

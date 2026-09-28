@@ -11,11 +11,19 @@
       "終了後の修理・改善を担う地域側の担当者"
     ],
     "participation": "当事者・専門家が共同設計し、案の選択と現地試験に関与する。終了後の予算・知財・事業継続に対する当事者の決定権は未確認。",
-    "exits": ["education", "local-operation"],
+    "exits": [
+      "education",
+      "local-operation"
+    ],
     "exitNote": "設計能力を地域へ残し、地域運営につなぐ学び。参加者の追跡回答は、全案件の長期継続を示すものではない。",
     "confirmed": "Co-Design Summitの共同試作手順とIDDSの教育活動を確認。IDDSの継続的な学習共有は回答者ベースの自己報告。",
     "unknowns": "案件の総費用・必要な運営人員、地域ホストの報酬、知財・権限移管、試作品の長期利用率は未確認。",
-    "sourceIds": ["s01-f01-src01", "s01-f01-src02", "s01-f01-src03", "s01-f01-src04"]
+    "sourceIds": [
+      "s01-f01-src01",
+      "s01-f01-src02",
+      "s01-f01-src03",
+      "s01-f01-src04"
+    ]
   },
   {
     "caseId": "openlab-stockholm",
@@ -29,11 +37,20 @@
       "授業後の引取部署と検証予算の調整"
     ],
     "participation": "学生が利用者を調査し試作する。課題提供組織は最低3回参加して継続支援する。利用者の課題採択・正式導入の決定権は未確認。",
-    "exits": ["education", "public-service"],
+    "exits": [
+      "education",
+      "public-service"
+    ],
     "exitNote": "教育成果を公共サービスの検証へ渡す学び。参加無料や追加助成は、恒久導入の予算・調達を保証しない。",
     "confirmed": "20週間の授業、課題側の参加条件、2025年の修了案件向け助成を確認。2026年春の公共課題は教育実施の記録。",
     "unknowns": "授業・現場双方の総費用と必要人員、修了後の正式予算化・調達・継続利用率、2026年の追加助成条件は未確認。",
-    "sourceIds": ["s01-f02-src01", "s01-f02-src02", "s01-f02-src03", "s01-f02-src04", "s01-f02-src05"]
+    "sourceIds": [
+      "s01-f02-src01",
+      "s01-f02-src02",
+      "s01-f02-src03",
+      "s01-f02-src04",
+      "s01-f02-src05"
+    ]
   },
   {
     "caseId": "forum-virium-helsinki",
@@ -47,11 +64,20 @@
       "実証評価と終了後の引継ぎを担う部署"
     ],
     "participation": "CommuniCityでは住民と現場職員が課題形成・共同開発・実証に参加。住民が採択・本予算化を決める権限は未確認。",
-    "exits": ["public-service", "purchase"],
+    "exits": [
+      "public-service",
+      "purchase"
+    ],
     "exitNote": "実証から公共サービス・調達への引継ぎを考える学び。101実証を101件の正式導入・調達とは扱わない。",
     "confirmed": "短期実証の運営手順とCommuniCityの実施・一部利用開始を確認。欧州全体、FVH担当、市域内の件数は範囲が異なる。",
     "unknowns": "会社の年次予算・職員数は公表。案件別総費用・必要人員、全件の継続契約率、助成終了後の負担者は未確認。",
-    "sourceIds": ["s01-f03-src01", "s01-f03-src02", "s01-f03-src03", "s01-f03-src04", "s01-f03-src05"]
+    "sourceIds": [
+      "s01-f03-src01",
+      "s01-f03-src02",
+      "s01-f03-src03",
+      "s01-f03-src04",
+      "s01-f03-src05"
+    ]
   },
   {
     "caseId": "ars-electronica-futurelab",
@@ -65,11 +91,17 @@
       "対話の知見を研究判断へ返す記録と担当者"
     ],
     "participation": "来場者が体験し、解釈や将来像を提示する。Deep Mirrorは任意参加で記録確認・削除を説明。研究仕様・投資判断への決定権は未確認。",
-    "exits": ["research"],
+    "exits": [
+      "research"
+    ],
     "exitNote": "公開展示から研究の問いや仕様を見直す学び。来場者の反応を需要・購入意思・社会的合意へ直接置き換えない。",
     "confirmed": "企業との共同研究、2026年9月のHello Worlds!開設、対話と記録管理の設計を確認。長期の研究影響は未確認。",
     "unknowns": "Futurelab単体・個別展示の総費用と人員、知財条件、対話が変更した研究仕様、独立した効果評価は未確認。",
-    "sourceIds": ["s02-f01-src01", "s02-f01-src02", "s02-f01-src03"]
+    "sourceIds": [
+      "s02-f01-src01",
+      "s02-f01-src02",
+      "s02-f01-src03"
+    ]
   },
   {
     "caseId": "cern-ideasquare",
@@ -83,11 +115,19 @@
       "材料・移動・成果報告を引き受ける主催者"
     ],
     "participation": "学生・科学者等が共同試作し、CBI-FPでは対象利用者との接点を持つ。利用者の課題採択・事業化の決定権は未確認。",
-    "exits": ["education", "research"],
+    "exits": [
+      "education",
+      "research"
+    ],
     "exitNote": "初期探索と学際教育を組み合わせる学び。試作品・解決案は量産、起業、正式調達の達成数を意味しない。",
     "confirmed": "施設の利用・安全条件とCBI-FPの14週間の教育を確認。71学生・13解決案は同プログラムの過去3年間の報告。",
     "unknowns": "施設全体・学生1人当たりの総費用と必要人員、個別知財契約、全教育案件の商用化・公共便益は未確認。",
-    "sourceIds": ["s02-f02-src01", "s02-f02-src02", "s02-f02-src03", "s02-f02-src04"]
+    "sourceIds": [
+      "s02-f02-src01",
+      "s02-f02-src02",
+      "s02-f02-src03",
+      "s02-f02-src04"
+    ]
   },
   {
     "caseId": "geidai-future-art",
@@ -101,11 +141,20 @@
       "芸術的価値と受益者への変化を捉える評価"
     ],
     "participation": "研究者・学生・芸術家等が公募や共同研究に参加し、資格は枠別に異なる。生活者の関与方法と採択・継続の決定権は案件別で未確認。",
-    "exits": ["research", "education", "local-operation"],
+    "exits": [
+      "research",
+      "education",
+      "local-operation"
+    ],
     "exitNote": "研究・教育から都市や地域での実践へ接続する学び。2026年秋以降の都市実証計画を恒久運営の実績としない。",
     "confirmed": "6研究領域、公募の採択・助成決定、大学間マッチングファンドを確認。都心型アートセンターの発表には今後の計画を含む。",
     "unknowns": "研究場全体と案件別の総費用・専任人員、継続運営の負担者、受益者分布、共通の実装率は未確認。",
-    "sourceIds": ["s02-f03-src01", "s02-f03-src02", "s02-f03-src03", "s02-f03-src04"]
+    "sourceIds": [
+      "s02-f03-src01",
+      "s02-f03-src02",
+      "s02-f03-src03",
+      "s02-f03-src04"
+    ]
   },
   {
     "caseId": "aalto-design-factory",
@@ -119,11 +168,20 @@
       "成果と知財を引き渡す条件の事前合意"
     ],
     "participation": "学生と企業担当者が反復開発し、利用者調査も実施する。利用者の最終仕様・商品化の決定権は未確認。",
-    "exits": ["education", "research"],
+    "exits": [
+      "education",
+      "research"
+    ],
     "exitNote": "企業課題を用いた教育と試作成果の移転を学ぶ。知財の引渡し・特許出願は量産や販売の完了を示さない。",
     "confirmed": "PdPのチーム構成、スポンサー負担・知財引渡し、設備利用条件を確認。Torgglerの特許出願は単独案件の報告。",
     "unknowns": "拠点総費用・必要職員数、企業担当者の工数、追加試作・量産費、全案件の商品化・継続率は未確認。",
-    "sourceIds": ["AD-01", "AD-02", "AD-03", "AD-04", "AD-05"]
+    "sourceIds": [
+      "AD-01",
+      "AD-02",
+      "AD-03",
+      "AD-04",
+      "AD-05"
+    ]
   },
   {
     "caseId": "microsoft-garage",
@@ -137,11 +195,18 @@
       "継続案件を受け取る事業部と正式な稼働時間"
     ],
     "participation": "社員・インターン等が発想・チーム形成・試作に参加する。参加者の事業部移管・製品採用の決定権は未確認。",
-    "exits": ["research"],
+    "exits": [
+      "research"
+    ],
     "exitNote": "実験から研究・事業部の判断へ情報を渡す学び。個別の製品・業務成果はプログラム全体の製品化率を示さない。",
     "confirmed": "拠点・オンライン支援とInnovation Studioの機能を確認。顧客向けはprivate preview。Pathfinderの短縮効果は単一案件の自己報告。",
     "unknowns": "総費用・専任人員・社員工数、正式移管の条件、全応募を分母とする製品化・中止率は未確認。",
-    "sourceIds": ["MG-01", "MG-02", "MG-03", "MG-05"]
+    "sourceIds": [
+      "MG-01",
+      "MG-02",
+      "MG-03",
+      "MG-05"
+    ]
   },
   {
     "caseId": "station-f",
@@ -155,11 +220,19 @@
       "滞在費や参加条件による障壁への配慮"
     ],
     "participation": "起業家がプログラムへ応募・推薦を通じて参加する。支援対象者や地域住民が採択・運営方針を共同決定する権限は未確認。",
-    "exits": ["purchase"],
+    "exits": [
+      "purchase"
+    ],
     "exitNote": "顧客への販売に向けた起業支援を考える学習上の分類。累計支援数、資金調達額、売上目標を販売実績と同一視しない。",
     "confirmed": "Founders・Fighters等の参加条件とF/aiの選考・採択構成を確認。累計支援9,000超は同時入居や存続企業数ではない。",
     "unknowns": "キャンパス総運営費・必要人員、生活費を含む総参加費、選抜効果を除いた支援効果、全参加企業の継続売上は未確認。",
-    "sourceIds": ["SF-01", "SF-02", "SF-03", "SF-04", "SF-05"]
+    "sourceIds": [
+      "SF-01",
+      "SF-02",
+      "SF-03",
+      "SF-04",
+      "SF-05"
+    ]
   },
   {
     "caseId": "digital-catapult",
@@ -173,11 +246,21 @@
       "実証後のデータ更新・保守費を担う導入者"
     ],
     "participation": "産業課題の所有者とSMEが共同開発・実証する。住民参加は別枠の研究公募の対象。住民の採択・導入決定権は未確認。",
-    "exits": ["research", "purchase"],
+    "exits": [
+      "research",
+      "purchase"
+    ],
     "exitNote": "産業の研究開発を導入・購入判断へつなぐ学び。2027年実施予定の募集条件を完了実績として扱わない。",
     "confirmed": "センター開所とLarne港での排出量ベースライン作成を確認。47tCO₂eは削減量ではない。産業課題型の2026年募集は今後の支援。",
     "unknowns": "案件総費用・専任人員、助成後の利用・保守費、個別契約、全採択の商用契約率は未確認。",
-    "sourceIds": ["DC-01", "DC-02", "DC-03", "DC-04", "DC-07", "DC-08"]
+    "sourceIds": [
+      "DC-01",
+      "DC-02",
+      "DC-03",
+      "DC-04",
+      "DC-07",
+      "DC-08"
+    ]
   },
   {
     "caseId": "punggol-digital-district",
@@ -191,11 +274,20 @@
       "障害・安全・保守を引き受ける運用責任者"
     ],
     "participation": "開発者・大学・入居企業等が研究・試験へ接続する構成。住民・利用者の共同設計の範囲、設備制御・案件採否の決定権は未確認。",
-    "exits": ["local-operation", "research", "education"],
+    "exits": [
+      "local-operation",
+      "research",
+      "education"
+    ],
     "exitNote": "地区の研究・教育を設備運用へ近づける学び。ODPの機能説明を地区全域の実運用成果に置き換えない。",
     "confirmed": "地区とSITの統合、ODPの設備接続用途を確認。LaunchPad @ PDDの2026年後半からの段階整備は計画として公表。",
     "unknowns": "基盤維持費・専任人員、接続料金・審査、データアクセス階層、事故・介入率、全区画の稼働状況は未確認。",
-    "sourceIds": ["PD-01", "PD-02", "PD-03", "PD-04"]
+    "sourceIds": [
+      "PD-01",
+      "PD-02",
+      "PD-03",
+      "PD-04"
+    ]
   },
   {
     "caseId": "project-plateau",
@@ -209,11 +301,19 @@
       "更新・保守・教育を継続する予算と担当者"
     ],
     "participation": "自治体・開発者等が整備・活用に参加する。住民への接続は用途別で、全国共通の共同設計手順や住民の決定権は未確認。",
-    "exits": ["public-service", "local-operation"],
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
     "exitNote": "共通データを行政・地域の日常運用へ定着させる学び。整備都市数や補助採択を業務定着の実績とは扱わない。",
     "confirmed": "2025年度末329都市の整備、標準・OSS・研修・補助等を確認。2026年の自治体交流会は活用・継続運用の課題も記録。",
     "unknowns": "自治体ごとの総保有費用・必要人員、更新頻度、業務定着率、住民便益は未確認。試験提供のMCPに本番運用保証はない。",
-    "sourceIds": ["PL-01", "PL-02", "PL-03", "PL-04"]
+    "sourceIds": [
+      "PL-01",
+      "PL-02",
+      "PL-03",
+      "PL-04"
+    ]
   },
   {
     "caseId": "arena2036",
@@ -227,11 +327,19 @@
       "共通データモデルと接続試験を運営する技術者"
     ],
     "participation": "会員企業・大学・研究者が共同開発・接続試験に参加し、入会は理事会が判断する。現場従業員・市民の共同決定権は未確認。",
-    "exits": ["research"],
+    "exits": [
+      "research"
+    ],
     "exitNote": "共同研究と相互運用の基盤づくりを学ぶ。共通試験環境や展示の存在は、各社の正式導入・量産を保証しない。",
     "confirmed": "入会手順、研究調整チーム、会員資金によるARENA2036-XのAAS・データスペース試験環境を確認。",
     "unknowns": "会費・案件総費用・必要人員、平均準備期間、データ基盤の実利用量、正式導入率・投資回収は未確認。",
-    "sourceIds": ["AR-01", "AR-02", "AR-03", "AR-04", "AR-05"]
+    "sourceIds": [
+      "AR-01",
+      "AR-02",
+      "AR-03",
+      "AR-04",
+      "AR-05"
+    ]
   },
   {
     "caseId": "science-tokyo-robotics-innovation-center",
@@ -245,11 +353,18 @@
       "利用料金・データ・知財・安全責任の制度設計"
     ],
     "participation": "研究者・技術者・オペレーター・企業の協働を構想する。学外利用は制度準備中で、利用者の移管承認・停止の決定権は未確認。",
-    "exits": ["research", "education"],
+    "exits": [
+      "research",
+      "education"
+    ],
     "exitNote": "研究開発した技術を安定運用と利用支援へ渡す学び。センター開所を、外部向け共同利用サービスの開始と同一視しない。",
     "confirmed": "2026年4月の本格稼働と2室の機能分担を確認。学内外の2026年度試験利用に向けて料金・条件を準備中。",
     "unknowns": "整備・運営費と必要人員、外部料金・契約、待ち時間、故障率、データ・知財とバイオ安全責任は未確認。",
-    "sourceIds": ["s05-f01-01", "s05-f01-02", "s05-f01-03"]
+    "sourceIds": [
+      "s05-f01-01",
+      "s05-f01-02",
+      "s05-f01-03"
+    ]
   },
   {
     "caseId": "newlab-brooklyn",
@@ -263,11 +378,19 @@
       "実証後の公共調達・維持管理へ渡す手順"
     ],
     "participation": "企業と行政現場が実証を設計し、充電実証では利用者が試用する。利用者の採択・本調達・継続運営の決定権は未確認。",
-    "exits": ["public-service", "purchase"],
+    "exits": [
+      "public-service",
+      "purchase"
+    ],
     "exitNote": "都市実証から公共サービス・競争的調達へ渡す学び。実証企業の受注や、無料利用から有料事業への成立は保証されない。",
     "confirmed": "試作・現場接続機能、2024年の無料充電実証と利用記録、市の公共充電網・RFPへの展開を確認。",
     "unknowns": "標準会費・案件総費用・必要人員、恒久運用の採算、許認可・保険負担、全案件の調達転換率は未確認。",
-    "sourceIds": ["s05-f02-01", "s05-f02-02", "s05-f02-04", "s05-f02-05"]
+    "sourceIds": [
+      "s05-f02-01",
+      "s05-f02-02",
+      "s05-f02-04",
+      "s05-f02-05"
+    ]
   },
   {
     "caseId": "massrobotics",
@@ -281,11 +404,20 @@
       "メーカー・顧客と検証する接点"
     ],
     "participation": "入居企業や選抜チームが設備・専門支援を使って開発する。最終利用者の共同設計、入居・支援方針への決定権は未確認。",
-    "exits": ["research", "purchase"],
+    "exits": [
+      "research",
+      "purchase"
+    ],
     "exitNote": "試作から顧客開拓・商用導入へ向かう支援の学び。入居やFellowship採択は販売・導入の達成を示さない。",
     "confirmed": "月額入居・最低3か月・設備追加料金なしの条件、過去2期の助成、2026年Fellowship第2期9社の選抜を確認。",
     "unknowns": "月額水準・総運営費・必要人員、予約待ち、消耗品・保険・保守負担、選抜企業の商用導入率は未確認。",
-    "sourceIds": ["s05-f03-01", "s05-f03-02", "s05-f03-03", "s05-f03-04", "s05-f03-05"]
+    "sourceIds": [
+      "s05-f03-01",
+      "s05-f03-02",
+      "s05-f03-03",
+      "s05-f03-04",
+      "s05-f03-05"
+    ]
   },
   {
     "caseId": "robohouse",
@@ -299,11 +431,20 @@
       "完成品化・保守を引き取る外部導入者"
     ],
     "participation": "現場従業員を試験と意思決定に参加させると明記。従業員の選出方法、同意・拒否権、最終導入権限は未確認。",
-    "exits": ["research", "purchase", "education"],
+    "exits": [
+      "research",
+      "purchase",
+      "education"
+    ],
     "exitNote": "試作・学生教育から製品導入者へ渡す学び。RoboHouseは最終製品を製造しないため、その後の責任主体が必要。",
     "confirmed": "期間別の試作支援と従業員参加を確認。Lamme Textileの装置はPoC開発段階の報告で、恒久導入効果は未確認。",
     "unknowns": "個別見積額・必要人員、完成品化と保守費、反対意見の反映、導入後の身体負荷・投資回収は未確認。",
-    "sourceIds": ["s05-f04-01", "s05-f04-02", "s05-f04-03", "s05-f04-04"]
+    "sourceIds": [
+      "s05-f04-01",
+      "s05-f04-02",
+      "s05-f04-03",
+      "s05-f04-04"
+    ]
   },
   {
     "caseId": "arm-robotics-manufacturing-hub",
@@ -317,11 +458,17 @@
       "業者選定と導入を支える中立的な調整"
     ],
     "participation": "製造現場を訪問し、作業と働く人への影響を確認する。企業は導入を義務づけられない。従業員個人の共同設計・導入拒否権は未確認。",
-    "exits": ["purchase"],
+    "exits": [
+      "purchase"
+    ],
     "exitNote": "診断・PoCからRFPと外部インテグレーターへの発注へ進む学び。助成による無償支援は機器購入・恒久運用費を含むとは限らない。",
     "confirmed": "対象11郡の利用条件と診断・PoC・RFP支援を確認。Kensonでは成果を外部業者へ渡して統合へ進んだと報告。",
     "unknowns": "案件総費用・必要人員、購入・教育・保守費、非導入理由、実装率の厳密な観察期間と投資回収は未確認。",
-    "sourceIds": ["s05-f05-01", "s05-f05-02", "s05-f05-03"]
+    "sourceIds": [
+      "s05-f05-01",
+      "s05-f05-02",
+      "s05-f05-03"
+    ]
   },
   {
     "caseId": "michigan-central-newlab-detroit",
@@ -336,11 +483,21 @@
       "住民への情報提供と地域人材の訓練"
     ],
     "participation": "企業が実証し、住民への情報公開や地域人材の訓練経路を設ける。住民の実証採否・土地利用・投資の決定権は未確認。",
-    "exits": ["purchase", "local-operation", "education"],
+    "exits": [
+      "purchase",
+      "local-operation",
+      "education"
+    ],
     "exitNote": "実証から初期生産・地域運用・人材育成へ接続する学び。The 23rdの構想や地区の経済波及推計を量産・個別採算の証明としない。",
     "confirmed": "Newlabの試作機能、TIZ・AAIRの調整支援と訓練を確認。The 23rdは初期生産支援の計画として報告。",
     "unknowns": "地区・拠点・案件別の総費用と必要人員、量産達成件数、住民への便益分配、個別サービスの採算は未確認。",
-    "sourceIds": ["s05-f06-01", "s05-f06-02", "s05-f06-03", "s05-f06-04", "s05-f06-06"]
+    "sourceIds": [
+      "s05-f06-01",
+      "s05-f06-02",
+      "s05-f06-03",
+      "s05-f06-04",
+      "s05-f06-06"
+    ]
   },
   {
     "caseId": "marineterrein-amsterdam",
@@ -354,11 +511,22 @@
       "利用者の反応と地区計画への意見を返す手続き"
     ],
     "participation": "実験では利用者と反復検証する。地区計画では意見募集と回答・修正の記録がある。個別実験の採否を市民が決める権限は未確認。",
-    "exits": ["local-operation", "public-service", "research"],
+    "exits": [
+      "local-operation",
+      "public-service",
+      "research"
+    ],
     "exitNote": "暫定利用の研究を地区運営や公共計画へ返す学び。計画への意見反映と、個々の技術の恒久導入は分けて判断する。",
     "confirmed": "2025年の現場運営者交代、実験申請の計画・予算要件、地区計画への330件の意見と修正、Shuttercamの試験を確認。",
     "unknowns": "現運営契約額・案件費・必要人員、審査期間、実験別の決定権、地区外導入率と継続費用は未確認。",
-    "sourceIds": ["MTA-01", "MTA-02", "MTA-03", "MTA-04", "MTA-05", "MTA-06"]
+    "sourceIds": [
+      "MTA-01",
+      "MTA-02",
+      "MTA-03",
+      "MTA-04",
+      "MTA-05",
+      "MTA-06"
+    ]
   },
   {
     "caseId": "test-in-tallinn",
@@ -372,11 +540,19 @@
       "実証評価と正式調達を分ける判断手順"
     ],
     "participation": "市が住民への説明・利用者参加を支援する。企業・専門部局が実証を進めるが、市民の採択・継続の共同決定権は未確認。",
-    "exits": ["public-service", "purchase"],
+    "exits": [
+      "public-service",
+      "purchase"
+    ],
     "exitNote": "市の資産での実証を公共サービス・調達判断へつなぐ学び。実証採択と正式購入は別で、TrackDeepも紹介時は調達協議段階。",
     "confirmed": "庁内調整・選考の仕組みと2026年2月の6件採択を確認。調達協議の事例は確認できるが契約締結は未確認。",
     "unknowns": "市と企業の総費用・必要人員、現行全案件の共通条件、調達転換率、当地への雇用・税収・便益は未確認。",
-    "sourceIds": ["TAL-01", "TAL-02", "TAL-03", "TAL-04"]
+    "sourceIds": [
+      "TAL-01",
+      "TAL-02",
+      "TAL-03",
+      "TAL-04"
+    ]
   },
   {
     "caseId": "doll-living-lab",
@@ -390,11 +566,21 @@
       "購入側と結果をレビューし次の判断へ渡す運営者"
     ],
     "participation": "企業・研究者・購入側がユースケースと検証を進める。生活者との共同設計の範囲、市民の採択・調達決定権は未確認。",
-    "exits": ["purchase", "public-service", "research"],
+    "exits": [
+      "purchase",
+      "public-service",
+      "research"
+    ],
     "exitNote": "実地比較から都市設備の改善・調達へ進む学び。実証とレビューは認証や購入保証ではなく、住宅地での受容も別に確かめる。",
     "confirmed": "自治体所有と運営・保守の分担、協働契約から評価までの手順、映像データの実地試験を確認。75超の事例は自己報告。",
     "unknowns": "総運営費・会員別費用・必要人員、標準期間、調達成約率、市外導入後の保守成績、現行の全提供機能は未確認。",
-    "sourceIds": ["DOL-01", "DOL-02", "DOL-03", "DOL-04", "DOL-05"]
+    "sourceIds": [
+      "DOL-01",
+      "DOL-02",
+      "DOL-03",
+      "DOL-04",
+      "DOL-05"
+    ]
   },
   {
     "caseId": "bmw-startup-garage",
@@ -408,11 +594,18 @@
       "知財と後続供給条件を交渉する体制"
     ],
     "participation": "スタートアップとBMWの実務部門が技術を検証し、後続契約は研究開発・購買が交渉する。最終利用者の共同決定権は未確認。",
-    "exits": ["purchase"],
+    "exits": [
+      "purchase"
+    ],
     "exitNote": "有償パイロットを継続供給へ渡す学び。初回の発注と量産・追加契約は別判断で、全採択への継続購入保証はない。",
     "confirmed": "初回購入・約4か月の検証・知財保持の方針を確認。既存供給者と有償後続案件を公表するが、集計範囲・時点が異なる。",
     "unknowns": "案件別対価・総費用・必要人員、個別契約、継続売上・利益、同一採択年の供給転換率は未確認。",
-    "sourceIds": ["bmw-01", "bmw-02", "bmw-03", "bmw-04"]
+    "sourceIds": [
+      "bmw-01",
+      "bmw-02",
+      "bmw-03",
+      "bmw-04"
+    ]
   },
   {
     "caseId": "volvo-campx",
@@ -426,11 +619,18 @@
       "価値検証の範囲・品質・継続判断基準"
     ],
     "participation": "スタートアップ・事業部・顧客が共同開発と試験に関与する。実証範囲は社内委員会が承認。利用者の仕様・実証継続に対する共同決定権は未確認。",
-    "exits": ["purchase"],
+    "exits": [
+      "purchase"
+    ],
     "exitNote": "有償の価値検証からサービス販売へ進む学び。3系統の支援数を合算せず、試験件数を販売成功数と扱わない。",
     "confirmed": "通常3〜6か月の価値検証と社内接続の手順を確認。AiDENの単独案件は顧客試験後、2025年秋の試行販売へ到達。",
     "unknowns": "個別対価・総費用・必要人員、知財帰属・支払条件、事業部別採用率、試行販売の利益と継続収益は未確認。",
-    "sourceIds": ["campx-01", "campx-02", "campx-03", "campx-05"]
+    "sourceIds": [
+      "campx-01",
+      "campx-02",
+      "campx-03",
+      "campx-05"
+    ]
   },
   {
     "caseId": "firstbuild",
@@ -444,11 +644,19 @@
       "投稿の知財・報酬条件と親会社への移管手順"
     ],
     "participation": "利用者がアイデア投稿・試作への意見・初回購入者テストに関わり、社内チームが候補を評価する。投稿者の採用・量産決定権は未確認。",
-    "exits": ["purchase"],
+    "exits": [
+      "purchase"
+    ],
     "exitNote": "共同試作から少量販売・親会社の販売網へ渡す学び。投稿時に運営会社へ与える利用許諾と、投稿者の報酬・利益の保証は別に扱う。",
     "confirmed": "100超の製品・機能と37件のブランド移行を2024年に自己報告。Sourdough Sidekickは2026年5月に全国販売へ到達。",
     "unknowns": "拠点運営費・必要人員・親会社補填、個別製品の利益と長期利用、投稿別の報酬条件は未確認。",
-    "sourceIds": ["firstbuild-01", "firstbuild-02", "firstbuild-03", "firstbuild-04", "firstbuild-05"]
+    "sourceIds": [
+      "firstbuild-01",
+      "firstbuild-02",
+      "firstbuild-03",
+      "firstbuild-04",
+      "firstbuild-05"
+    ]
   },
   {
     "caseId": "hvm-catapult",
@@ -462,11 +670,22 @@
       "工場への引継ぎと必要技能の育成"
     ],
     "participation": "企業が課題を持ち込み専門家と開発し、産業パートナーは戦略策定にも参加する。現場従業員の選択・導入に対する決定権は未確認。",
-    "exits": ["research", "purchase", "education"],
+    "exits": [
+      "research",
+      "purchase",
+      "education"
+    ],
     "exitNote": "応用研究を生産現場の投資・受注・技能へつなぐ学び。初回相談無料は全サービス無償を意味せず、HVMは一律の助成制度ではない。",
     "confirmed": "センターへの案件接続、技術・供給網・人材支援を確認。LISI AEROSPACEの生産性・雇用・受注は単一工場の自己報告。",
     "unknowns": "案件総費用・必要人員、現行財源配分、設備予約制約、全利用企業の導入率と費用対効果は未確認。",
-    "sourceIds": ["hvm-01", "hvm-02", "hvm-03", "hvm-04", "hvm-05", "hvm-06"]
+    "sourceIds": [
+      "hvm-01",
+      "hvm-02",
+      "hvm-03",
+      "hvm-04",
+      "hvm-05",
+      "hvm-06"
+    ]
   },
   {
     "caseId": "fraunhofer-ahead",
@@ -480,11 +699,19 @@
       "研究契約・ライセンス・事業化条件の交渉"
     ],
     "participation": "研究者・起業チーム・外部専門家が事業化を進め、顧客課題を検証する。顧客・地域住民の採択や知財条件への決定権は未確認。",
-    "exits": ["licensing", "research"],
+    "exits": [
+      "licensing",
+      "research"
+    ],
     "exitNote": "技術を契約研究・知財利用・起業へ渡す学び。研究機構全体の産業収入とAHEADの支援効果は分けて評価する。",
     "confirmed": "機構全体の産業契約・ライセンス収入、AHEADの段階審査・支援条件を確認。2025年の起業29社と新規支援89案件は異なる母集団。",
     "unknowns": "AHEAD案件別総費用・必要人員、個別ライセンス条件、支援による増分効果、起業後の利益・公共便益は未確認。",
-    "sourceIds": ["fraunhofer-01", "fraunhofer-02", "fraunhofer-03", "fraunhofer-04"]
+    "sourceIds": [
+      "fraunhofer-01",
+      "fraunhofer-02",
+      "fraunhofer-03",
+      "fraunhofer-04"
+    ]
   },
   {
     "caseId": "manufacturing-usa",
@@ -498,10 +725,1487 @@
       "技能の枠組みと教育成果を測る仕組み"
     ],
     "participation": "企業・大学・政府が会員として共同研究・教育に参加する。訓練参加者や従業員の研究選定・運営への決定権は未確認。",
-    "exits": ["research", "education"],
+    "exits": [
+      "research",
+      "education"
+    ],
     "exitNote": "共通研究基盤と人材育成を複数企業へ広げる学び。案件数・参加人数は商用導入、訓練修了、就職の達成数ではない。",
     "confirmed": "FY2023の16研究所集計で共同R&Dと教育参加を報告。2025年に職種・技能の共通枠組みを公開。報告書名・公開年・対象年度は異なる。",
     "unknowns": "研究所ごとの会費・案件費・必要人員、知財利用条件、継続公費への依存、商用導入率・教育後の所得効果は未確認。",
-    "sourceIds": ["mfgusa-02", "mfgusa-03", "mfgusa-05", "mfgusa-07"]
+    "sourceIds": [
+      "mfgusa-02",
+      "mfgusa-03",
+      "mfgusa-05",
+      "mfgusa-07"
+    ]
+  },
+  {
+    "caseId": "kamakura-living-lab",
+    "unit": "district",
+    "unitNote": "今泉台を起点にした地域共創活動",
+    "challenge": "生活者の困りごとを企業が引き受けられる製品課題へ変えたい。",
+    "needs": [
+      "地域の募集・調整役",
+      "企業の設計・製造責任者",
+      "生活の場で使う試作",
+      "意見の採否を返す記録"
+    ],
+    "participation": "住民は初期の対話、模型・試作品、生活内試験に参加。最終投資・知財の決定権は未確認。",
+    "exits": [
+      "purchase",
+      "local-operation"
+    ],
+    "exitNote": "家具の商品提供への経路を確認。地域運営への学びはあるが、住宅地再生の達成を示すものではない。",
+    "confirmed": "住民募集の役割分担と家具の商品化過程。",
+    "unknowns": "案件予算、利益配分、長期利用、地域の意思決定権。",
+    "sourceIds": [
+      "kamakura-living-lab-01",
+      "kamakura-living-lab-02",
+      "kamakura-living-lab-03"
+    ]
+  },
+  {
+    "caseId": "yokohama-livinglab-support",
+    "unit": "network",
+    "unitNote": "市域のラボを結ぶ中間支援ネットワーク",
+    "challenge": "個別の地域活動を、企業や専門家の支援につなげて続けたい。",
+    "needs": [
+      "地域の実行主体",
+      "市と民間の窓口",
+      "事業化の専門支援",
+      "地区ごとの成果と収支記録"
+    ],
+    "participation": "住民・地域団体の対話と事業参加を支援する。各地区の議決権、予算権、代表性は個別確認が必要。",
+    "exits": [
+      "local-operation",
+      "public-service"
+    ],
+    "exitNote": "地域の運営と公共的課題への接続を学ぶ。行政調達や全市制度への採用を一律に確認したものではない。",
+    "confirmed": "支援法人、4者協定、地区ごとの活動と空き家活用例。",
+    "unknowns": "法人・地区間の財源配分、採択権限、長期効果。",
+    "sourceIds": [
+      "yokohama-livinglab-support-01",
+      "yokohama-livinglab-support-02",
+      "yokohama-livinglab-support-03",
+      "yokohama-livinglab-support-04"
+    ]
+  },
+  {
+    "caseId": "wise-living-lab",
+    "unit": "place",
+    "unitNote": "郊外まちづくりの活動拠点と終了した貸出機能",
+    "challenge": "住民の企画を場所の運営につなぎ、機能変更時にも継続条件を考えたい。",
+    "needs": [
+      "企画する地域の担い手",
+      "活動場所と支援窓口",
+      "用途・費用の明示",
+      "終了時の移行計画"
+    ],
+    "participation": "地域の人が自分の活動を企画・開催した実績。施設の閉鎖・貸出終了を決める権限を住民が持つかは未確認。",
+    "exits": [
+      "local-operation",
+      "education"
+    ],
+    "exitNote": "地域活動や学びの場への接続。現時点で旧共創スペースを予約できるという意味ではない。",
+    "confirmed": "開設、住民企画の実施、2025年3月末の貸出終了。",
+    "unknowns": "終了理由、代替場所、総費用、長期の地域効果。",
+    "sourceIds": [
+      "wise-living-lab-01",
+      "wise-living-lab-02",
+      "wise-living-lab-03",
+      "wise-living-lab-04"
+    ]
+  },
+  {
+    "caseId": "minamaki-lab",
+    "unit": "place",
+    "unitNote": "駅前の地域活動・エリアマネジメント拠点",
+    "challenge": "施設整備を住民の日常的な企画と地域運営につなげたい。",
+    "needs": [
+      "拠点の管理者",
+      "住民の企画を受け止める担当",
+      "広場等で試す場所",
+      "日常の費用・負担の把握"
+    ],
+    "participation": "住民は地域活動の参加者・企画者として関与する。投資や施設管理に関する決定権は未確認。",
+    "exits": [
+      "local-operation",
+      "education"
+    ],
+    "exitNote": "地域活動・学びの場への実装を扱う。沿線全体の再開発の効果を示す出口ではない。",
+    "confirmed": "駅前拠点、広場との関係、多主体の参加、2026年の施設案内。",
+    "unknowns": "利用者数、運営収支、企画の採否、住民の予算決定権、人口・交流への追加的効果は未確認。沿線再整備の受賞をラボの社会効果の証明としない。",
+    "sourceIds": [
+      "minamaki-lab-01",
+      "minamaki-lab-02",
+      "minamaki-lab-03"
+    ]
+  },
+  {
+    "caseId": "omuta-living-lab",
+    "unit": "program",
+    "unitNote": "地域主体が運営する共創・課題探索プログラム",
+    "challenge": "企業の技術仮説と生活者の課題がずれるのを防ぎたい。",
+    "needs": [
+      "地域に根差す調整主体",
+      "福祉・制度の知見",
+      "問い直せる企業担当者",
+      "実験後の地域への返答"
+    ],
+    "participation": "生活者を共創相手として扱い、VRでは若者やシニアが撮影にも参加。正式な投資・知財の決定権は未確認。",
+    "exits": [
+      "research",
+      "education",
+      "local-operation"
+    ],
+    "exitNote": "研究・企業研修・地域活動への接続を確認。商用製品の販売実績とは区別する。",
+    "confirmed": "地域価値を重視する受入方針、運営主体、2018年共同実験、VR活動。",
+    "unknowns": "地域主体の方針は確認できるが、案件の採否記録、契約上の拒否権、収支、参加者への利益還元、VRの長期的効果は未確認。",
+    "sourceIds": [
+      "omuta-living-lab-01",
+      "omuta-living-lab-02",
+      "omuta-living-lab-03"
+    ]
+  },
+  {
+    "caseId": "nec-shirahama-living-lab",
+    "unit": "program",
+    "unitNote": "企業が地域との関係を使って仮説を検証する活動",
+    "challenge": "事業投資前に生活者の反応と重要な仮説を確かめたい。",
+    "needs": [
+      "地域との調整担当",
+      "事業側の仮説責任者",
+      "比較できる実験設計",
+      "否定結果を受け止める判断"
+    ],
+    "participation": "住民や事業者は調査・試行へ参加。観光AI研究では来訪者が評価者となり、共同所有や議決権は未確認。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "学会発表・仮説更新を確認。販売や行政調達に到達したことを示すものではない。",
+    "confirmed": "ラボの2022年立ち上げ、小規模実験の方針、2026年研究の非有意結果。",
+    "unknowns": "仮説検証が速くなったという説明は企業側の報告で、比較時間・費用は未確認。27人の実験は有意差がなく、受容向上や事業成果を断定できない。",
+    "sourceIds": [
+      "nec-shirahama-living-lab-01",
+      "nec-shirahama-living-lab-02",
+      "nec-shirahama-living-lab-03"
+    ]
+  },
+  {
+    "caseId": "quintbridge",
+    "unit": "place",
+    "unitNote": "NTT西日本全社ではなく、大阪の共創施設と接続する支援制度を対象。",
+    "challenge": "企業・自治体の課題と外部の技術を出会いだけで終わらせず、検証と採用判断へ渡したい。",
+    "needs": [
+      "課題所有者と採用部門",
+      "紹介を引き継ぐ担当",
+      "実証の予算と安全条件",
+      "継続契約を判断する基準"
+    ],
+    "participation": "会員は交流・相談やイベント主催に参加し、選考型制度へ応募できる。出資・導入の最終決定権は会員全体に共有されない。",
+    "exits": [
+      "purchase",
+      "education"
+    ],
+    "exitNote": "学習と事業共創からサービス提供を目指す。採択や共創登録を購入契約・長期継続の完了数として数えない。",
+    "confirmed": "現行の相談・実証支援、2026年の事業紹介、過去の開業時点を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "quintbridge-src1",
+      "quintbridge-src2",
+      "quintbridge-src3"
+    ]
+  },
+  {
+    "caseId": "garraway-f",
+    "unit": "place",
+    "unitNote": "九州全域の開発事業ではなく、天神の交流拠点を対象とする。",
+    "challenge": "所属や世代の異なる人が、自分の関心を言葉にして共同活動の相手へ出会う入口をつくりたい。",
+    "needs": [
+      "関心を聞くスタッフ",
+      "参加者の同意",
+      "移転後の正確な設備情報",
+      "交流後の任意追跡"
+    ],
+    "participation": "つながりを求める人が登録して無料参加する。作業のみの利用とは区別され、事業・運営予算の決定権が全参加者にあるとは確認できない。",
+    "exits": [
+      "education",
+      "local-operation"
+    ],
+    "exitNote": "交流と学びから共同活動へ進む入口。導入・調達・地域課題の改善実績は未確認で、出口は設計上の接続可能性として扱う。",
+    "confirmed": "新拠点の所在地・登録・交流方法と、過去の運営支援を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "garraway-f-src1",
+      "garraway-f-src2",
+      "garraway-f-src3"
+    ]
+  },
+  {
+    "caseId": "shibuya-qws",
+    "unit": "place",
+    "unitNote": "渋谷再開発地区全体ではなく、15階の施設とQWSチャレンジを対象。",
+    "challenge": "事業になる前の違和感や問いを、他者との対話と小さな試験によって具体的な活動にしたい。",
+    "needs": [
+      "問いを持つチーム",
+      "相談と他分野への接点",
+      "試作・発表の時間",
+      "期間後の継続判断"
+    ],
+    "participation": "公募選考で採択されたチームが活動し、会員や専門家と交流する。無料枠の利用と施設の運営方針への決定権は異なる。",
+    "exits": [
+      "education",
+      "research"
+    ],
+    "exitNote": "探索・試作の学習や研究への接続を学ぶ。発表会の登壇を事業導入や商業契約の実績として数えない。",
+    "confirmed": "募集要件、#28の期間、運営会社を確認。導入成果は未確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "shibuya-qws-src1",
+      "shibuya-qws-src2",
+      "shibuya-qws-src3"
+    ]
+  },
+  {
+    "caseId": "100banch",
+    "unit": "place",
+    "unitNote": "施設とGARAGE Programを比較し、運営法人の設立を施設開設と区別する。",
+    "challenge": "まだ市場が定まらない若い実践者の案を、場所・仲間・短期実験によって検証可能にしたい。",
+    "needs": [
+      "実践者とメンター",
+      "短期の試作場所",
+      "材料費と安全担当",
+      "実験後の継続責任"
+    ],
+    "participation": "選考されたチームが試作・報告し、メンバーを主な構成員とする法人が運営する。全員の同等の議決権や資金配分権限は未確認。",
+    "exits": [
+      "education",
+      "research"
+    ],
+    "exitNote": "試作と実験知を次の研究・事業へ渡す。模擬現場の検証を商用導入・社会全体の環境効果に置き換えない。",
+    "confirmed": "運営移行、3カ月の支援手順、2026年の具体的試作を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "100banch-src1",
+      "100banch-src2",
+      "100banch-src3"
+    ]
+  },
+  {
+    "caseId": "josephs",
+    "unit": "organization",
+    "unitNote": "独立会社JOSEPHSとその公開型ラボ。Fraunhoferという研究機関全体とは別の対象単位。",
+    "challenge": "開発途上の構想を一般利用者の行動で確かめ、設計変更につなげたい。",
+    "needs": [
+      "試験したい問いと変更可能な仕様",
+      "体験設計と対話を担う専門担当",
+      "発話以外の反応を含む記録",
+      "依頼者側の採否・改善責任者"
+    ],
+    "participation": "来場者は体験と意見提供に参加。課題採択、知財、発売の決定権は未確認。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "調査結果を企業・研究機関の開発判断へ渡す出口。一般販売やライセンス成立を確認したケースではない。",
+    "confirmed": "独立法人化、無料公開体験、Test Spaceの定性調査と提言を確認。",
+    "unknowns": "案件単価、年間財源構成、設計変更の採用率、発売後の継続効果は未確認。",
+    "sourceIds": [
+      "josephs-src01",
+      "josephs-src02",
+      "josephs-src03"
+    ]
+  },
+  {
+    "caseId": "de-ceuvel",
+    "unit": "place",
+    "unitNote": "De Ceuvelの敷地・協会・場の運営を対象とする。Amsterdam Noordの再開発全体やMetabolic全社とは別。",
+    "challenge": "遊休地の循環型実験と地域活動を、利用契約の終了後までつなぎたい。",
+    "needs": [
+      "期限付き土地契約の明示",
+      "入居者と専門家の役割分担",
+      "環境効果と営業収支の別管理",
+      "更新・移転・撤去の引継ぎ計画"
+    ],
+    "participation": "入居者は改修・活動に関与し、来訪者は文化企画等へ参加。土地利用更新の決定権が参加者に移るわけではない。",
+    "exits": [
+      "local-operation",
+      "research"
+    ],
+    "exitNote": "仕事・文化・飲食と技術実験を地域で運用する出口。恒久存続や敷地全体の循環達成を意味しない。",
+    "confirmed": "2014年開業、2026年の活動、2027年1月31日までの期限を運営者資料で確認。",
+    "unknowns": "期限後の存続、現行賃貸料、移転撤去費用、長期環境収支は未確認。",
+    "sourceIds": [
+      "de-ceuvel-src01",
+      "de-ceuvel-src02",
+      "de-ceuvel-src03"
+    ]
+  },
+  {
+    "caseId": "barcelona-superblocks",
+    "unit": "program",
+    "unitNote": "市のSuperblocks施策。評価は主にPoblenou・Sant Antoni・Hortaに限定し、Barcelona Urban Labとは分ける。",
+    "challenge": "道路を生活の場に変え、その便益と周辺負担を同じ土俵で評価したい。",
+    "needs": [
+      "道路と生活空間の設計権限",
+      "地区内外を含む交通・環境測定",
+      "年齢別利用と住民経験の把握",
+      "改修と再評価をつなぐ部門間調整"
+    ],
+    "participation": "住民等の意見と利用経験を収集。参加活動の実施を、全住民の合意や住民への道路決定権移管とは扱わない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "道路・公共空間として供用する出口。短期実証の存在だけで全市への展開や健康効果を確定しない。",
+    "confirmed": "三地区の実施と2025年公表の評価、地区別の異なる結果を確認。",
+    "unknowns": "2026年の全市実施範囲、総維持費、疾病への因果効果は未確認。",
+    "sourceIds": [
+      "barcelona-superblocks-src01",
+      "barcelona-superblocks-src02",
+      "barcelona-superblocks-src03"
+    ]
+  },
+  {
+    "caseId": "ogal-shiwa",
+    "unit": "district",
+    "unitNote": "駅西側の官民複合開発地区を対象とし、紫波町全域の人口・財政とは評価範囲を分ける。",
+    "challenge": "駅前の公有地を、公共需要を満たしながら維持可能な民間事業と生活拠点へつなげたい。",
+    "needs": [
+      "公共床・民間床・土地の責任を分け、利用需要と運営能力に合わせて段階投資する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "町民・企業の意見聴取と専門家会議を確認。全町民がテナント採択や投資額を決定する仕組みは未確認。",
+    "exits": [
+      "public-service",
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "情報交流館、役場、民間複合施設等の街区別整備と運用を確認。",
+    "unknowns": "地区全体の総投資、現在の施設別収支、長期修繕積立、公費の純回収は未確認。",
+    "sourceIds": [
+      "ogal-shiwa-src01",
+      "ogal-shiwa-src02"
+    ]
+  },
+  {
+    "caseId": "takamatsu-marugamemachi",
+    "unit": "district",
+    "unitNote": "主な機構は丸亀町A街区。中心市街地計画の区域全体は反証用の別境界であり同一母集団ではない。",
+    "challenge": "細分化された土地と店舗の意思決定を調整し、商業・居住機能を更新したい。",
+    "needs": [
+      "所有権と使用権を分けた合意形成を学び、街区評価と中心市街地評価を二層で設ける。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "地権者の契約合意を基礎とする。買物客や周辺住民の採択権・異議申立て制度は資料から確認できない。",
+    "exits": [
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "A街区に商業・住宅・コミュニティ用途を含む再開発建物を整備。",
+    "unknowns": "A街区の現在の営業利益、賃料・公共支援の内訳、長期修繕負担、住民への分配効果は未確認。",
+    "sourceIds": [
+      "takamatsu-marugamemachi-src01",
+      "takamatsu-marugamemachi-src02"
+    ]
+  },
+  {
+    "caseId": "aburatsu-shopping-street",
+    "unit": "district",
+    "unitNote": "油津商店街の誘致と地域運営を対象とし、中心市街地油津地区の統計は広域評価として区別する。",
+    "challenge": "空き店舗への参入を増やしつつ、短期の誘致活動を地元に残る継続事業へつなげたい。",
+    "needs": [
+      "責任者の目標と期限だけでなく、物件調整、実装会社、予算、後継運営を一組で設計する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "地元の会社・商店・住民を巻き込む活動を確認。誘致担当者の採用と出店者の経営判断、住民参加の範囲は同一ではない。",
+    "exits": [
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "市の最終フォローアップに新規参入28店舗が記録される。",
+    "unknowns": "誘致店舗別の長期生存、利益、維持管理費、任期後の担当・資金と純雇用は未確認。",
+    "sourceIds": [
+      "aburatsu-shopping-street-src01",
+      "aburatsu-shopping-street-src02"
+    ]
+  },
+  {
+    "caseId": "onagawa-reconstruction-rengamichi",
+    "unit": "district",
+    "unitNote": "女川駅前・レンガみち・隣接施設群を一地区として扱う。全町134事業の費用や成果をこの地区だけに帰属しない。",
+    "challenge": "被災後の生活・商業を再建し、人口規模に合う機能と維持可能な拠点を残したい。",
+    "needs": [
+      "将来人口を踏まえ公共機能を集約し、復旧投資と長期の営業・維持負担を区別する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "町民・事業者は施設利用と店舗営業に関わる。道路利用の決定権や全住民の予算決定権は公開資料から確定しない。",
+    "exits": [
+      "public-service",
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "2015年に駅・温泉、交流館、シーパルピア、2016年にハマテラスを開業。",
+    "unknowns": "レンガみちの使用許可・占用・清掃修繕分担、施設別収支、住民利用と観光利用の分離データは未確認。",
+    "sourceIds": [
+      "onagawa-reconstruction-rengamichi-src01",
+      "onagawa-reconstruction-rengamichi-src02",
+      "onagawa-reconstruction-rengamichi-src03"
+    ]
+  },
+  {
+    "caseId": "kitakyushu-renovation",
+    "unit": "program",
+    "unitNote": "小倉魚町を起点とし黒崎にも展開するリノベーション事業。市域全体の経済効果とは別単位。",
+    "challenge": "遊休不動産を活用する案を、所有者と運営者が継続できる事業へ変えたい。",
+    "needs": [
+      "実物件・所有者・金融を参加条件に含め、試作の評価を実施者と収支にまで広げる。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "所有者・受講者・専門家が実物件の案を共同検討。投資と賃貸の最終判断は権利者・資金提供者に残る。",
+    "exits": [
+      "education",
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "初年度2回のスクールから3件の遊休物件が改修され、カフェ・シェアオフィス等へ転用されたと国資料に記載。",
+    "unknowns": "全提案の採択率、個別物件の長期収支と法令対応費、雇用の純増・継続、公共支援総額は未確認。",
+    "sourceIds": [
+      "kitakyushu-renovation-src01",
+      "kitakyushu-renovation-src02",
+      "kitakyushu-renovation-src03"
+    ]
+  },
+  {
+    "caseId": "kampung-admiralty",
+    "unit": "place",
+    "unitNote": "単一複合施設の計画・共同運営を比較。全国のITH制度やシンガポール全体の成果には拡張しない。",
+    "challenge": "高齢者が医療、食、ケア、交流へアクセスする際の移動負担と、公共サービスの分断をどう減らすか。",
+    "needs": [
+      "共置機関間の調整役",
+      "日常活動を担う施設運営者",
+      "利用負担を追う評価設計"
+    ],
+    "participation": "住民の活動参加・ボランティアは確認。整備予算・施設選定に対する住民の最終決定権は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "建物整備から公共サービスと地域活動の継続運営への接続を扱う。",
+    "confirmed": "住宅と公共サービスが共置された実施設、および完成後の管理委員会と共同活動の仕組み。",
+    "unknowns": "CSC本文は2019年の事例説明で、ページ更新日を現在の実績年に置き換えない。医療負担や孤立低減の因果効果、現在の部門間費用配分は未確認。",
+    "sourceIds": [
+      "kampung-admiralty-s1",
+      "kampung-admiralty-s2",
+      "kampung-admiralty-s3"
+    ]
+  },
+  {
+    "caseId": "stockport-interchange",
+    "unit": "place",
+    "unitNote": "Interchange開発を1事例とする。市中心部再生全体や個々のバス路線を別事例として数えない。",
+    "challenge": "乗換施設が周辺市街地から切り離される問題を、日常の公共空間と住宅を重ねることでどう改善するか。",
+    "needs": [
+      "交通と都市再生の共同計画",
+      "公共空間の維持責任",
+      "用途別の費用・利用評価"
+    ],
+    "participation": "公園利用と地域イベントは確認。開発方針への住民の決定権や、現在の共同運営への代表参加は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "公共交通と公共空間の継続運用。住宅・商業の事業採算は本資料だけでは評価しない。",
+    "confirmed": "稼働するバス結節点、屋上公園、住宅・商業空間、鉄道駅への歩行・自転車接続。",
+    "unknowns": "イベント数は地域の活動量であり、健康改善や自動車から公共交通への転換率ではない。住宅賃料、公園の維持費、再生による排除・転居の影響は未確認。",
+    "sourceIds": [
+      "stockport-interchange-s1",
+      "stockport-interchange-s2",
+      "stockport-interchange-s3"
+    ]
+  },
+  {
+    "caseId": "wester-hailes-westside-shed",
+    "unit": "place",
+    "unitNote": "稼働中のWestside Shedを比較単位とし、Trust全体の事業やCanalside構想を混ぜない。",
+    "challenge": "住民の地域計画を文書だけにせず、費用をかけずに資源へアクセスできる日常サービスへどうつなぐか。",
+    "needs": [
+      "住民に説明責任を持つ運営組織",
+      "貸出資産の整備・保管",
+      "専門サービス団体との連携"
+    ],
+    "participation": "Trust会員がアイデアを出し実施案へ投票する。地域全体を代表する比率とShed個別の予算決定手順は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "地域計画から地域運営への実装。工具・自転車の利用条件は異なる。",
+    "confirmed": "地域計画を背景とするShed、自転車貸出、工具受取、ワークショップ等への入口。",
+    "unknowns": "Canalside Community Hub構想とは別事業。Shedの通年開館状況、利用件数、維持費、交通転換・不平等縮小の定量効果は未確認。",
+    "sourceIds": [
+      "wester-hailes-westside-shed-s1",
+      "wester-hailes-westside-shed-s2",
+      "wester-hailes-westside-shed-s3"
+    ]
+  },
+  {
+    "caseId": "bremen-mobilpunkt",
+    "unit": "network",
+    "unitNote": "mobil.punktを1ネットワーク事例として扱う。市内の全カーシェア拠点・車両を同ブランドへ合算しない。",
+    "challenge": "住宅地の駐車圧力を下げながら、必要な時に車を使える移動機会をどう保障するか。",
+    "needs": [
+      "公道空間を配分する自治体",
+      "継続提供する車両事業者",
+      "非利用者も含む評価"
+    ],
+    "participation": "利用者・非利用者調査は確認。住民の拠点立地に対する決定権は今回未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "道路空間政策をカーシェアの継続運営へ接続する。",
+    "confirmed": "公道上のカーシェア拠点と、事業者による車両利用サービス。2025年にも新拠点を確認。",
+    "unknowns": "2025調査の代替推計は市内カーシェア全体であり、mobil.punkt単独の因果効果ではない。自己選択・仮想的な購入回避を含む解釈に注意。拠点別収支は未確認。",
+    "sourceIds": [
+      "bremen-mobilpunkt-s1",
+      "bremen-mobilpunkt-s2",
+      "bremen-mobilpunkt-s3",
+      "bremen-mobilpunkt-s4"
+    ]
+  },
+  {
+    "caseId": "cic-tokyo",
+    "unit": "place",
+    "unitNote": "CIC Tokyo施設を入口とし、代表例は別機能のCIC Instituteによる実装支援。CIC全世界の成果と混ぜない。",
+    "challenge": "スタートアップの技術を導入企業の業務へ組み込み、実証支援終了後も利用できる状態にしたい。",
+    "needs": [
+      "採用企業の業務責任者",
+      "技術側の運用チーム",
+      "初期経費と継続予算",
+      "導入後の利用・負担の記録"
+    ],
+    "participation": "施設利用者と採択スタートアップは同一集合ではない。実装は提供企業と導入企業が進め、購入者は利用を選ぶが採用決裁の主体ではない。",
+    "exits": [
+      "purchase"
+    ],
+    "exitNote": "採用企業によるサービス提供開始を確認。採択・施設入居・補助の受領を購入契約や環境効果と同一視しない。",
+    "confirmed": "実装支援の役割、採用先の提供開始、施設の月額利用モデルを確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "cic-tokyo-src1",
+      "cic-tokyo-src2",
+      "cic-tokyo-src3"
+    ]
+  },
+  {
+    "caseId": "station-ai",
+    "unit": "place",
+    "unitNote": "愛知県の戦略全体ではなく、名古屋の施設と会員支援を対象。",
+    "challenge": "既存産業の現場・顧客・技術と、外部の成長企業を結び、継続的な協業へ渡したい。",
+    "needs": [
+      "地域企業の課題責任者",
+      "事業展開するスタートアップ",
+      "相談・審査の運営",
+      "補助終了後の評価"
+    ],
+    "participation": "要件に基づく会員参加と、別審査の支援・投資を区別する。一般来訪者が投資・導入・支援配分を決めるとは確認できない。",
+    "exits": [
+      "purchase",
+      "research"
+    ],
+    "exitNote": "施設内の採用や企業との協業へ接続する。協業300件以上は検討を含むため、導入・売上の実績数として使わない。",
+    "confirmed": "公的な参加・負担条件、運営者の1年報告、施設での採用例を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "station-ai-src1",
+      "station-ai-src2",
+      "station-ai-src3"
+    ]
+  },
+  {
+    "caseId": "koil",
+    "unit": "place",
+    "unitNote": "柏の葉スマートシティ全域やKOILシリーズ全施設ではなく、KOIL本体を対象。",
+    "challenge": "作業場所と相談・試作の支援を持続的に提供し、設備が変わっても利用者の開発を止めない仕組みを考えたい。",
+    "needs": [
+      "利用者の目的を聞く人",
+      "保守と講習の予算",
+      "正確な稼働情報",
+      "停止時の代替支援"
+    ],
+    "participation": "入会面談・契約を経て参加し、日常相談から支援につながる。機器の新規利用や稼働は別条件で、現在の休止を確認する必要がある。",
+    "exits": [
+      "research",
+      "purchase"
+    ],
+    "exitNote": "試作・事業開発へつなぐ支援を比較する。工房の現在の利用可能性と、過去の製作能力を分け、施設利用を事業導入の達成とはしない。",
+    "confirmed": "現行面談・利用制度と、2025年の一部終了、2026年の休止を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "koil-src1",
+      "koil-src2",
+      "koil-src3",
+      "koil-src4"
+    ]
+  },
+  {
+    "caseId": "kashiwanoha-minsta",
+    "unit": "program",
+    "unitNote": "柏の葉の生活者が参加する市民共創プログラム",
+    "challenge": "市民の提案を設計者の判断と公共空間の利用へ接続したい。",
+    "needs": [
+      "生活者の参加機会",
+      "回答できる行政・設計者",
+      "意見と採否の記録",
+      "供用後の管理評価"
+    ],
+    "participation": "生活者がテーマに応じ参加し、図面への質問・提案も行う。公園の予算や設計の最終権限は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "公共空間の整備・運営につながる計画経路。代表公園の供用実績を意味しない。",
+    "confirmed": "2020年開始の運営、対話型公園計画、2027年3月開園予定。",
+    "unknowns": "公園は計画段階で、2027年3月という開園予定は実績ではない。予算、採否の全履歴、住民の代表性、維持管理の分担と開園後の効果は未確認。",
+    "sourceIds": [
+      "kashiwanoha-minsta-01",
+      "kashiwanoha-minsta-02",
+      "kashiwanoha-minsta-03"
+    ]
+  },
+  {
+    "caseId": "matsumoto-health-lab",
+    "unit": "organization",
+    "unitNote": "市民の健康づくりと企業の開発をつなぐ一般財団法人",
+    "challenge": "住民が協力する開発支援を、住民への継続的な価値還元と両立したい。",
+    "needs": [
+      "会員との信頼",
+      "企業の受託案件",
+      "評価する専門機関",
+      "参加・データ・費用の規定"
+    ],
+    "participation": "会員はアイデア創出やモニターに参加。企業の開発決定権・利益の配分は個別契約として未確認。",
+    "exits": [
+      "research",
+      "public-service"
+    ],
+    "exitNote": "研究データ取得と住民向け健康サービスへの経路。全案件の商品化や健康効果を意味しない。",
+    "confirmed": "財団の沿革、受託収益還元の方針、調査の実施、会員規約と機能移管。",
+    "unknowns": "公開実績件数は健康改善や販売成功の指標ではない。公費・受託収益・会員負担の比率、案件ごとの倫理審査と謝礼、長期的な健康成果は今回未確認。",
+    "sourceIds": [
+      "matsumoto-health-lab-01",
+      "matsumoto-health-lab-02",
+      "matsumoto-health-lab-03",
+      "matsumoto-health-lab-04"
+    ]
+  },
+  {
+    "caseId": "ncgg-living-lab",
+    "unit": "place",
+    "unitNote": "生活模擬環境と専門家を備えた介護・生活支援ロボット実証拠点",
+    "challenge": "生活・介護支援技術の性能と現場での利用条件を確かめたい。",
+    "needs": [
+      "生活模擬空間",
+      "臨床・介護・工学の専門家",
+      "客観計測",
+      "実環境と安全管理"
+    ],
+    "participation": "高齢者・介護者の動作や負担を評価する。試験への参加が研究方針の議決権を意味するかは未確認。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "共同研究・評価と実環境での検証への経路。全機器の導入・保険適用・販売実績ではない。",
+    "confirmed": "相談・評価機能、2022年設立、2025年拡張、2026年住宅拠点。",
+    "unknowns": "各機器の臨床効果、採用件数、費用対効果、一般住宅での長期利用は今回未確認。共同研究数や受賞は、全製品の有効性・安全性の証明ではない。",
+    "sourceIds": [
+      "ncgg-living-lab-01",
+      "ncgg-living-lab-02",
+      "ncgg-living-lab-03"
+    ]
+  },
+  {
+    "caseId": "paris-oasis-courtyards",
+    "unit": "program",
+    "unitNote": "パリ市の校庭転換施策。全市展開と十校庭の欧州先行事業の成果範囲を分ける。",
+    "challenge": "学校の気候適応を、子どもの多様な利用と日常の管理に接続したい。",
+    "needs": [
+      "子どもが参加できる共同設計",
+      "技術職員と学校の調整",
+      "気候と利用の前後評価",
+      "工事後の手入れと地域開放の担当"
+    ],
+    "participation": "子どもと教職員が共同設計し、保護者・住民が活動に関わる。最終施工仕様や予算の決定権を子どもが持つとは確認しない。",
+    "exits": [
+      "public-service",
+      "education"
+    ],
+    "exitNote": "学校の日常利用、教育、条件付きの地域利用が出口。緑化の完成だけでは運営の成功を判断しない。",
+    "confirmed": "共同設計、改修、評価方法、維持課題と2026年予算継続を確認。",
+    "unknowns": "学校別総費用と維持工数、全校の利用変化と健康への因果効果は未確認。",
+    "sourceIds": [
+      "paris-oasis-courtyards-src01",
+      "paris-oasis-courtyards-src02",
+      "paris-oasis-courtyards-src03",
+      "paris-oasis-courtyards-src04"
+    ]
+  },
+  {
+    "caseId": "bologna-commons-pacts",
+    "unit": "program",
+    "unitNote": "市全域のCommons Pacts制度を対象とする。個々の広場や地域の家の活動を別事例として合算しない。",
+    "challenge": "市民の提案を、公共性を守りながら責任ある共同管理へつなげたい。",
+    "needs": [
+      "対象と公共目的の明示",
+      "市と市民の責任と支援の合意",
+      "非公式グループが参加できる入口",
+      "活動の記録と変更・終了の手続き"
+    ],
+    "participation": "市民側と市が協定内容を合意し、活動を担う。制度上の参加可能性と、全住民への実質的な公平性は区別する。",
+    "exits": [
+      "local-operation",
+      "public-service"
+    ],
+    "exitNote": "協定を通じた地域活動と公共資源の共同管理が出口。行政責任の全面放棄や民営化と同一には扱わない。",
+    "confirmed": "協定の定義と公開情報、2023年施行の新規則への移行を確認。",
+    "unknowns": "協定別費用、担い手交代、全件の継続率、公共空間改善の比較評価は未確認。",
+    "sourceIds": [
+      "bologna-commons-pacts-src01",
+      "bologna-commons-pacts-src02",
+      "bologna-commons-pacts-src03"
+    ]
+  },
+  {
+    "caseId": "nyc-plaza-program",
+    "unit": "program",
+    "unitNote": "NYCの広場制度を対象とし、PSEPは関連する維持支援として扱う。Open Streets全体の成果を合算しない。",
+    "challenge": "道路を広場に変え、運営能力の弱い地域でも日常の品質を維持したい。",
+    "needs": [
+      "仮設と恒久整備の段階設計",
+      "場所ごとの運営パートナー",
+      "能力差に応じた資金と保守支援",
+      "事務と活動を続ける技術支援"
+    ],
+    "participation": "地域団体が場所ごとのパートナーとして運営する。道路の正式な整備判断と、住民の利用・運営参加の権限は区別する。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "市の公共空間として供用し、地域パートナーが日常運営する出口。仮設段階から維持責任を確認する。",
+    "confirmed": "仮設・恒久の整備過程、運営者一覧、PSEPの支援内容を確認。",
+    "unknowns": "広場別総費用、現行の支援配分結果、全広場の公平性・商業効果は未確認。",
+    "sourceIds": [
+      "nyc-plaza-program-src01",
+      "nyc-plaza-program-src02",
+      "nyc-plaza-program-src03",
+      "nyc-plaza-program-src04"
+    ]
+  },
+  {
+    "caseId": "atami-ginza-renovation",
+    "unit": "district",
+    "unitNote": "熱海銀座商店街とそこでの改修実践を主対象とする。市全域の観光回復や企業全事業とは区別する。",
+    "challenge": "観光地の空き店舗を埋めるだけでなく、住民と事業者が続けられるまちなかの機能を増やしたい。",
+    "needs": [
+      "区域を狭く定義して空き物件の変化を測り、創業支援と個別物件の引継ぎを組み合わせる。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "創業者・地域人材の交流と物件活用を扱う。市民会議の参加と事業資金・用途の最終決定権は別である。",
+    "exits": [
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "既存店舗の新たな利用と、市のリノベーション・創業支援の接続方針を確認。",
+    "unknowns": "現時点の固定区域空室率、各店の継続利益・賃料負担、総改修費、観光要因との因果分離は未確認。",
+    "sourceIds": [
+      "atami-ginza-renovation-src01",
+      "atami-ginza-renovation-src02",
+      "atami-ginza-renovation-src03"
+    ]
+  },
+  {
+    "caseId": "toyama-port-lrt",
+    "unit": "network",
+    "unitNote": "富山港線と富山駅南北接続を対象とする。市内全公共交通・都市政策全体とは異なる評価単位。",
+    "challenge": "利用が減る既存鉄道を、日常の移動に選ばれ、更新費も支えられる公共交通へ変えたい。",
+    "needs": [
+      "交通施設を単独導入せず、頻度、乗継、目的地、施設更新財源と運行責任を同時に設計する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "利用者調査と市民・企業の寄附を確認。住民がダイヤ・投資の最終決定を担う制度は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "2006年のLRT化と2020年の南北接続・直通運転を実施。",
+    "unknowns": "現在の路線単独収支、公共負担と保守更新総額、沿線施策を分離した純便益は未確認。",
+    "sourceIds": [
+      "toyama-port-lrt-src01",
+      "toyama-port-lrt-src02",
+      "toyama-port-lrt-src03",
+      "toyama-port-lrt-src04"
+    ]
+  },
+  {
+    "caseId": "minamimachida-grandberry-park",
+    "unit": "district",
+    "unitNote": "商業施設単体ではなく、駅・鶴間公園・パークライフ・サイト等を含む約22haの再編地区。",
+    "challenge": "駅、商業、公園を別々の目的地から、買物をしない人も使える連続した生活拠点へ変えたい。",
+    "needs": [
+      "一体設計と単一運営を混同せず、公共と商業の境界で利用ルール・清掃・修繕・費用を調整する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "公園・地区の使い方を住民ワークショップで検討した。住民が商業テナントや指定管理者の最終採択を行う制度は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "駅・商業・都市公園の一体再整備と、施設別の運営体制を整えた。",
+    "unknowns": "公共・民間の総費用と現在の委託料、境界部分の維持責任、非購買利用者の便益、既存商業への影響は未確認。",
+    "sourceIds": [
+      "minamimachida-grandberry-park-src01",
+      "minamimachida-grandberry-park-src02",
+      "minamimachida-grandberry-park-src03",
+      "minamimachida-grandberry-park-src04"
+    ]
+  },
+  {
+    "caseId": "berlin-jelbi",
+    "unit": "network",
+    "unitNote": "Jelbiのアプリ・拠点・運営を1事例とする。個々の拠点数を事例数にしない。",
+    "challenge": "共有交通の選択肢を増やしつつ、返却車両による歩道阻害とサービスの分断をどう抑えるか。",
+    "needs": [
+      "公共交通を核にする調整者",
+      "土地と返却場所",
+      "現場巡回と通報対応"
+    ],
+    "participation": "利用と通報の入口は確認。住民による配置・料金の共同決定までは未確認。",
+    "exits": [
+      "purchase",
+      "public-service"
+    ],
+    "exitNote": "統合サービスの購入・利用を、街路で維持可能な日常運用につなぐ。",
+    "confirmed": "物理拠点とアプリを組み合わせたサービス体系、および誤駐車に対応する巡回運営。",
+    "unknowns": "2025年末値は2026年現在の拠点数ではない。貸出回数・アプリDLは固有利用者や車保有削減を示さない。非スマートフォン利用者への代替と収支は未確認。",
+    "sourceIds": [
+      "berlin-jelbi-s1",
+      "berlin-jelbi-s2",
+      "berlin-jelbi-s3"
+    ]
+  },
+  {
+    "caseId": "curitiba-ruas-cidadania",
+    "unit": "network",
+    "unitNote": "Ruas da Cidadaniaという分散サービス体系を1事例とする。BRTネットワーク全体とは別。",
+    "challenge": "行政手続や生活支援のために中心部まで移動する負担を、地域のサービス配置でどう減らすか。",
+    "needs": [
+      "地域窓口へ人員を出す部局",
+      "利用条件の案内",
+      "建物と歩行環境の保守"
+    ],
+    "participation": "公共サービスの利用者として住民が関わる。制度の共同設計や予算の住民決定は今回未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "行政・生活支援の公共サービスとして継続運営する仕組みを扱う。",
+    "confirmed": "地区で利用できる行政・相談サービスの窓口ネットワーク。Santa Felicidadeでは交通ターミナルとの隣接を確認。",
+    "unknowns": "ネットワーク内の施設構成は一様ではない。移動時間節減、申請完了率、職員配置と維持費の全体比較は未確認。市の利便性説明を因果評価と扱わない。",
+    "sourceIds": [
+      "curitiba-ruas-cidadania-s1",
+      "curitiba-ruas-cidadania-s2",
+      "curitiba-ruas-cidadania-s3"
+    ]
+  },
+  {
+    "caseId": "bogota-transmicable-manitas",
+    "unit": "district",
+    "unitNote": "Manitas周辺とケーブル接続を地区事例として扱う。全市のManzanas del Cuidado制度や全線交通実績とは区別。",
+    "challenge": "丘陵地の移動制約と無償ケアの時間負担が重なる住民に、行政・学習・ケアの機会をどう届けるか。",
+    "needs": [
+      "交通と生活部門の調整",
+      "ケアされる人と担う人の同時支援",
+      "時間負担を追う評価"
+    ],
+    "participation": "Manitasでケア担い手と担当機関の対話を確認。公共予算の決定権を住民が持つことまでは未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "交通・行政・ケアの公共サービス提供へ接続。",
+    "confirmed": "公共交通に接続したManitas周辺の行政・ケアサービスの集積。2020年からの提供を市が確認。",
+    "unknowns": "所要時間短縮はケーブル区間についての市の説明で、全住民のドアツードア時間ではない。ケアの利用件数と固有人数、全市制度とManitasの成果を区別。統合効果の因果評価は未確認。",
+    "sourceIds": [
+      "bogota-transmicable-manitas-s1",
+      "bogota-transmicable-manitas-s2",
+      "bogota-transmicable-manitas-s3"
+    ]
+  },
+  {
+    "caseId": "fukuoka-growth-next",
+    "unit": "place",
+    "unitNote": "福岡市全体の創業政策ではなく、FGN施設と接続する支援事業を対象。",
+    "challenge": "起業家の段階に合う支援を選び、専門家の助言を具体的な経営実務へつなげたい。",
+    "needs": [
+      "段階に応じた相談窓口",
+      "課題別の専門家",
+      "実務を担う支援工数",
+      "支援前後の比較記録"
+    ],
+    "participation": "創業相談の入口と、公募・書類・面接による成長支援の選抜を区別する。採択企業以外の住民が配分を決める制度は未確認。",
+    "exits": [
+      "education",
+      "purchase"
+    ],
+    "exitNote": "経営学習と実務改善から成長・取引へつなぐ支援。採択数を売上増加・投資実行・地域全体の雇用創出とみなさない。",
+    "confirmed": "2026年度採択と支援手順、2024年度の運営体制変更、追加人員の役割を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "fukuoka-growth-next-src1",
+      "fukuoka-growth-next-src2",
+      "fukuoka-growth-next-src3",
+      "fukuoka-growth-next-src4"
+    ]
+  },
+  {
+    "caseId": "pynt",
+    "unit": "network",
+    "unitNote": "日建設計の共創プラットフォーム。飯田橋・竹橋の拠点、共同体と選考型プログラムを区別する。",
+    "challenge": "単発の交流を、専門職が継続参加する課題解決と実装へつなげたい。",
+    "needs": [
+      "専門家の伴走",
+      "当事者参画",
+      "実証資金"
+    ],
+    "participation": "社員の紹介によるゲスト利用・会員登録が基本。FUTURE LENSは別の選考型制度であり、一般利用から助成へ自動的に進むわけではない。",
+    "exits": [
+      "research",
+      "local-operation"
+    ],
+    "exitNote": "当事者参加を自社オフィス改修へ反映する出口が報告される。外部の購入契約や全案件の事業化率は未確認。",
+    "confirmed": "複数拠点と参加経路、助成と専門家伴走、改修への接続を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "pynt-src1",
+      "pynt-src2",
+      "pynt-src3"
+    ]
+  },
+  {
+    "caseId": "impact-hub-tokyo",
+    "unit": "place",
+    "unitNote": "目黒の東京拠点と運営会社を対象とする。京都や世界のImpact HUBは別運営であり実績を合算しない。",
+    "challenge": "独立した起業家や芸術家が、孤立せずに目的を問い直し協力相手を探せる日常をつくりたい。",
+    "needs": [
+      "日常の対話",
+      "異業種交流",
+      "創作支援"
+    ],
+    "participation": "継続利用は月額会員契約が基本。現在のベーシックは最低3か月と解約予告60日を伴い、単発イベントや過去の助成企画とは条件が異なる。",
+    "exits": [
+      "local-operation",
+      "education"
+    ],
+    "exitNote": "制作・展示と学びの交流が確認できる出口。継続した共同受注や作家の収入増加を裏付ける追跡値は未確認。",
+    "confirmed": "東京拠点の運営者説明、現在の契約条件、過去の創作企画を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "impact-hub-tokyo-src1",
+      "impact-hub-tokyo-src2",
+      "impact-hub-tokyo-src3"
+    ]
+  },
+  {
+    "caseId": "hitachi-kyosonomori",
+    "unit": "place",
+    "unitNote": "中央研究所内に設けた顧客・パートナー協創拠点",
+    "challenge": "研究の知見を顧客の課題と事業化判断へ接続したい。",
+    "needs": [
+      "研究者とデザイナー",
+      "課題を持つ顧客",
+      "試作と検証の場",
+      "採用する事業側の担当"
+    ],
+    "participation": "顧客とパートナーが協創へ参加。庭園来訪者を研究案件の共同決定者とは扱わない。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "共同研究・試作・事業化検討への経路。拠点固有の販売・ライセンス成果は未確認。",
+    "confirmed": "2019年開設、顧客との進行方法、2026年の管理活動。",
+    "unknowns": "施設ごとの案件数・事業化率・売上は未確認。NEXPERIENCE全体の実績を本拠点の効果としない。顧客参加と一般住民の決定権、庭園公開と研究設備利用は別である。",
+    "sourceIds": [
+      "hitachi-kyosonomori-01",
+      "hitachi-kyosonomori-02",
+      "hitachi-kyosonomori-03"
+    ]
+  },
+  {
+    "caseId": "ihi-yokohama-ibase",
+    "unit": "place",
+    "unitNote": "研究実験棟内で顧客との共同試作を行う共創拠点",
+    "challenge": "顧客の作業課題を共同試作と事業判断までつなげたい。",
+    "needs": [
+      "課題を持つ顧客",
+      "研究者と試作設備",
+      "事業部門の担当",
+      "実証・知財の合意"
+    ],
+    "participation": "顧客企業と事業・研究者が共同で検討。一般住民の公募や共同決定の制度は確認できない。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "共同研究、試作、特許共同出願への経路。ライセンス収入や販売実績までは未確認。",
+    "confirmed": "2019年開所、i-Base第一号案件の共同開発、2024年の大学連携活動。",
+    "unknowns": "第一号案件の実証後の結果、販売・採用数、全体の案件継続率、共創による開発時間短縮は未確認。知財の共同出願は権利化や事業収益の証明ではない。",
+    "sourceIds": [
+      "ihi-yokohama-ibase-01",
+      "ihi-yokohama-ibase-02",
+      "ihi-yokohama-ibase-03"
+    ]
+  },
+  {
+    "caseId": "citylab-berlin",
+    "unit": "organization",
+    "unitNote": "CityLABを運営組織として扱い、KiezlaborとFairgnügenは内部の実践例。ベルリンの全デジタル政策ではない。",
+    "challenge": "利用者とつくるデジタル試作を、更新し続ける公共サービスへ渡したい。",
+    "needs": [
+      "行政側の課題とデータ担当",
+      "利用者との早期検証",
+      "公開可能な技術と方法",
+      "正式サイトへの引取と保守責任"
+    ],
+    "participation": "市民と職員が調査・試作に参加。予算・採択・本番サービスの決定権が市民へ全面移管される制度とは確認しない。",
+    "exits": [
+      "public-service",
+      "research"
+    ],
+    "exitNote": "行政サービスへの統合と再利用可能な知見が出口。ラボへの相談だけで採用・助成を保証しない。",
+    "confirmed": "運営・資金主体と、Fairgnügenの2025年の公式サイト統合を確認。",
+    "unknowns": "サービス別維持費、部局間の責任契約、実利用と生活改善の追跡は未確認。",
+    "sourceIds": [
+      "citylab-berlin-src01",
+      "citylab-berlin-src02",
+      "citylab-berlin-src03"
+    ]
+  },
+  {
+    "caseId": "hiedanranta",
+    "unit": "district",
+    "unitNote": "Hiedanranta地区を対象とし、市所有会社の全事業や個別実験と混同しない。Centre Iは地区の一部。",
+    "challenge": "循環型の現場実験を、長期の地区計画と恒久インフラへつなげたい。",
+    "needs": [
+      "市と開発会社の責任分担",
+      "実験と本設計をつなぐ調整主体",
+      "研究と施工の工程の同期",
+      "維持費・性能・許認可の採用条件"
+    ],
+    "participation": "市民等は詳細計画案へ意見を提出できる。実験への参加と、法定計画や開発投資の決裁権は別に扱う。",
+    "exits": [
+      "public-service",
+      "local-operation",
+      "research"
+    ],
+    "exitNote": "恒久的な地区整備と地域運営、再利用できる研究知が出口。全実験の本設採用を保証するものではない。",
+    "confirmed": "2020年マスタープラン、2026年Centre I案と公覧、研究による実装障壁を確認。",
+    "unknowns": "全実験の採用率、地区総費用、供用後の環境性能と長期維持費は未確認。",
+    "sourceIds": [
+      "hiedanranta-src01",
+      "hiedanranta-src02",
+      "hiedanranta-src03",
+      "hiedanranta-src04"
+    ]
+  },
+  {
+    "caseId": "ghent-circulation-plan",
+    "unit": "program",
+    "unitNote": "ヘント中心部のCirculation Plan。都市全体の環境政策や駐車政策すべてとは区別する。",
+    "challenge": "通過交通を減らしつつ、生活や仕事に必要な到達性を保ちたい。",
+    "needs": [
+      "通過交通と目的地交通の把握",
+      "環状道路を含む経路設計",
+      "必要なサービスのアクセス条件",
+      "住民調査と反復的な交通評価"
+    ],
+    "participation": "住民・利用者の意見を評価で把握する。調査への回答を、全住民の合意や道路決定権の移管と同一視しない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "公共の交通規則と道路運用として継続する出口。空間の改修だけでなく経路・規則の維持が必要となる。",
+    "confirmed": "2017年の導入、二段階評価、残る問題箇所と因果の留保を確認。",
+    "unknowns": "現行全指標、統合費用、他施策から分離した長期効果は未確認。",
+    "sourceIds": [
+      "ghent-circulation-plan-src01",
+      "ghent-circulation-plan-src02",
+      "ghent-circulation-plan-src03"
+    ]
+  },
+  {
+    "caseId": "matsuyama-hanazono-street",
+    "unit": "district",
+    "unitNote": "松山市駅と城山公園を結ぶ花園町通りの整備区間250m。市駅前広場の後年事業は別事業とする。",
+    "challenge": "道路の交通機能を守りながら、減った歩行と沿道の活動を回復し、滞在できる空間へ変えたい。",
+    "needs": [
+      "車線数を先に決めず、交通処理と歩行・滞在需要を実験で確認し、沿道の使い方と維持責任を同時に設計する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "市民・専門家・行政が模型や実験で検討し、地権者・テナントへ戸別訪問した。住民の最終許認可権は確認できない。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "車道縮小、自転車道・歩道・滞在設備の整備を2017年度に完成。",
+    "unknowns": "現在の保守分担・費用、売上と交通安全の純効果、イベント時以外の利用分布は未確認。",
+    "sourceIds": [
+      "matsuyama-hanazono-street-src01",
+      "matsuyama-hanazono-street-src02",
+      "matsuyama-hanazono-street-src03"
+    ]
+  },
+  {
+    "caseId": "marunouchi-nakadori",
+    "unit": "district",
+    "unitNote": "丸の内仲通りの道路活用区間を対象とする。大丸有地区全体の再開発・企業活動の成果とは区別する。",
+    "challenge": "業務地区の道路を通行だけでなく滞在・交流に使い、物流・安全と継続運営を両立させたい。",
+    "needs": [
+      "ベンチ設置だけでなく、占用・道路使用・警備・利用者負担を一本の窓口で調整する運営を設計する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "主催者が団体へ相談し、道路・交通・地元と調整する。沿道利害者の協議と一般市民の意思決定権は同一ではない。",
+    "exits": [
+      "local-operation",
+      "public-service",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "時間帯限定のテラスと道路催事の運用窓口、期間限定の人中心道路実験を確認。",
+    "unknowns": "占用料・協力金の最新実額と使途内訳、公共維持費、通常時と実験時の比較評価、物流・非来場者への影響は未確認。",
+    "sourceIds": [
+      "marunouchi-nakadori-src01",
+      "marunouchi-nakadori-src02",
+      "marunouchi-nakadori-src03"
+    ]
+  },
+  {
+    "caseId": "sapporo-kita3-plaza",
+    "unit": "place",
+    "unitNote": "市北3条広場単体を対象とする。指定管理会社全体や地下歩行空間の損益・効果とは区別する。",
+    "challenge": "公共広場の日常利用と催事を両立し、冬季を含む管理と地域活動を財政的に続けたい。",
+    "needs": [
+      "整備時の公共貢献と日常管理を接続し、利用料金、指定管理費、自主事業の赤字を隠さず分けて評価する。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "設置時の意見募集と主催者等のアンケートを確認。2023年料金変更は意見への応答だが、全住民が経営判断を行う制度ではない。",
+    "exits": [
+      "local-operation",
+      "public-service"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "指定管理による広場供用、催事受入、年次評価・収支公表、設営撤去料金の改定を確認。",
+    "unknowns": "広場が周辺売上・回遊を増やした純効果、非催事利用者の代表調査、長期の大規模更新費は未確認。原協定は改定と併読が必要。",
+    "sourceIds": [
+      "sapporo-kita3-plaza-src01",
+      "sapporo-kita3-plaza-src02",
+      "sapporo-kita3-plaza-src03",
+      "sapporo-kita3-plaza-src04"
+    ]
+  },
+  {
+    "caseId": "fukuoka-yatai-program",
+    "unit": "program",
+    "unitNote": "福岡市の屋台公募・適正営業制度が対象。座標は天神の代表位置で、市内全営業区画の範囲ではない。",
+    "challenge": "観光・交流の屋台文化を残しながら、新規参入、公衆衛生、通行と地域生活の共生を両立させたい。",
+    "needs": [
+      "参入募集と公共空間の管理条件を一体にし、営業時間外の保管・仕込み・清掃まで事業設計に含める。",
+      "資産所有者・運営者・予算責任者の権限を分ける",
+      "整備費と継続維持費を別に確保する",
+      "区域と期間を固定した成果・負担の評価"
+    ],
+    "participation": "公募応募者は審査を受けて候補者となる。説明会は営業者の経験を共有するが、参加自体が選考上の採択を保証しない。",
+    "exits": [
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "民間サービスの購入と地域運営に着地する。開業・入居を長期収益性や全住民への便益と同一視しない。",
+    "confirmed": "条例・規則、公募と段階審査の制度を運用し、過去公募から営業した店への取材を公開。",
+    "unknowns": "公募期別の生存・利益・本人労働時間、公共管理総額、通行環境・住民負担の代表調査は未確認。法的適用は個別に要確認。",
+    "sourceIds": [
+      "fukuoka-yatai-program-src01",
+      "fukuoka-yatai-program-src02",
+      "fukuoka-yatai-program-src03",
+      "fukuoka-yatai-program-src04"
+    ]
+  },
+  {
+    "caseId": "boston-gohubs",
+    "unit": "program",
+    "unitNote": "実証と拡大調達を含む市のプログラムを1事例にする。未確認の後続設備を開業済みと数えない。",
+    "challenge": "交通の選択肢と居心地を地域で両立させ、どの組合せに投資すべきかを小規模な検証から判断する。",
+    "needs": [
+      "現地の需要観察",
+      "設備別の維持責任",
+      "対照を含む評価"
+    ],
+    "participation": "住民の意見を実証配置に用い、公共空間機能への関心を調査。行政予算の共同決定や拒否権は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "小規模実証から公共空間・交通サービスの設計調達へ接続。後続完成は未確認。",
+    "confirmed": "East Bostonの実証拠点、設計ガイド、評価報告、後続の拡大支援調達仕様。",
+    "unknowns": "2021実証と2024拡大RFPを混同しない。拡大分の落札・完成数と2026年の各設備稼働は未確認。実証の前年比増加は対照群付きの因果効果ではない。",
+    "sourceIds": [
+      "boston-gohubs-s1",
+      "boston-gohubs-s2",
+      "boston-gohubs-s3"
+    ]
+  },
+  {
+    "caseId": "nordstan-mobility-hotel",
+    "unit": "place",
+    "unitNote": "Nordstanの具体施設を1事例とする。MOVE21の全都市実証や研究成果全体は含めない。",
+    "challenge": "都心の業務で車を減らす際に、道具・資材・故障対応・作業者設備の不足をどう解消するか。",
+    "needs": [
+      "業務需要を持つ利用企業",
+      "機能を補完する入居事業者",
+      "助成後の費用分担"
+    ],
+    "participation": "企業間の連携と業務試行。住民による企画・予算の共同決定は未確認。",
+    "exits": [
+      "purchase",
+      "local-operation"
+    ],
+    "exitNote": "研究実証の支援を受けた場所から、企業の業務利用とサービス購入への接続を扱う。",
+    "confirmed": "修理・配送・資材受取・電池交換と共用空間を組み合わせた商業施設内の拠点。",
+    "unknowns": "MOVE21は終了済みだがNordstanのサービス案内は継続。現在の全入居者稼働・総収支と、排出・労働生産性の比較実測は未確認。市の排出削減目標を施設実績にしない。",
+    "sourceIds": [
+      "nordstan-mobility-hotel-s1",
+      "nordstan-mobility-hotel-s2",
+      "nordstan-mobility-hotel-s3"
+    ]
+  },
+  {
+    "caseId": "flanders-hoppin",
+    "unit": "network",
+    "unitNote": "Hoppinの物理拠点体系を1事例とする。デマンド交通等を含む政策全体の成果とは分ける。",
+    "challenge": "自治体ごとの拠点整備を、利用者が迷わず使える広域ネットワークにするには何を共通条件にするか。",
+    "needs": [
+      "共通の最低品質",
+      "自治体の管理責任",
+      "サービス情報の更新"
+    ],
+    "participation": "全利用者へのアクセシビリティを要件化。個別立地の住民共同決定や代表参加の実績は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "品質条件と補助を通じた公共交通拠点の実装・運営。",
+    "confirmed": "共通品質と情報共有の条件、自治体への整備補助、拠点検索に載る物理ネットワーク。",
+    "unknowns": "予定される約2,000拠点は完成実績ではない。先行拠点には現行品質要件を満たさないものもある。全域の適合率、利用・交通転換、維持費は未確認。",
+    "sourceIds": [
+      "flanders-hoppin-s1",
+      "flanders-hoppin-s2",
+      "flanders-hoppin-s3"
+    ]
+  },
+  {
+    "caseId": "groningen-drenthe-reis-via-hub",
+    "unit": "network",
+    "unitNote": "Reis via Hubのネットワークを1事例とする。個々の施設数を事例数にしない。",
+    "challenge": "都市と農村を結ぶ乗換を、負担ではなく生活に役立つ接点にするには何を現地へ組み合わせるか。",
+    "needs": [
+      "基幹交通と末端交通の接続",
+      "拠点別の機能調整",
+      "管理者をまたぐ改善対応"
+    ],
+    "participation": "住民・企業のアイデアを受け付ける。採択・予算配分における住民の決定権は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "地域の交通と生活サービスの継続運営。",
+    "confirmed": "共通案内を持つ交通結節点ネットワークと、拠点ごとに異なる接続・生活支援設備。",
+    "unknowns": "全拠点に同じ設備はない。背景ページの個人名等は更新時点が不明で現職として扱わない。交通利用増、生活機能の採算、非利用者のアクセス改善は未確認。",
+    "sourceIds": [
+      "groningen-drenthe-reis-via-hub-s1",
+      "groningen-drenthe-reis-via-hub-s2",
+      "groningen-drenthe-reis-via-hub-s3"
+    ]
+  },
+  {
+    "caseId": "minneapolis-mobility-hubs",
+    "unit": "network",
+    "unitNote": "市の拠点ネットワークを1事例とする。広域交通当局の後続計画やMaaS構想を完成実績へ足さない。",
+    "challenge": "共有交通の接続を広げる際、需要の強い場所だけに偏らず、移動の選択肢が少ない地域へどう届けるか。",
+    "needs": [
+      "道路と交通の公共調整",
+      "地域への説明と意見収集",
+      "公平性と実利用の評価"
+    ],
+    "participation": "初期実証は地域組織と連携し現場で意見を収集。現在の予算・配置の住民決定権は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "期間限定実証から市のネットワーク実装へ接続。",
+    "confirmed": "市内の拠点ネットワーク、初期の現場説明・評価、交通公平性を考慮した配置方針。",
+    "unknowns": "約60地点は2025年までの市の報告で、2026年の全サービス同時稼働数ではない。初期の事業者・車種を現行とみなさない。交通転換と公平性改善の因果効果は未確認。",
+    "sourceIds": [
+      "minneapolis-mobility-hubs-s1",
+      "minneapolis-mobility-hubs-s2",
+      "minneapolis-mobility-hubs-s3"
+    ]
+  },
+  {
+    "caseId": "netsugen",
+    "unit": "place",
+    "unitNote": "群馬県庁32階の官民共創スペースと、その相談・会員支援を対象とする。県全体の産業政策の成果とは分ける。",
+    "challenge": "地域の課題と事業者の技術を接続したいが、初期相談から継続支援へ移る条件が曖昧になりやすい。",
+    "needs": [
+      "課題整理",
+      "専門家との接続",
+      "継続伴走"
+    ],
+    "participation": "無料相談は可能だが、マッチング・伴走は月額会員の範囲。個人月1万円、法人月2万5千円と表示され、時間利用とは含まれる支援が異なる。",
+    "exits": [
+      "local-operation",
+      "purchase"
+    ],
+    "exitNote": "地域や事業の実施主体へ接続する支援。図鑑掲載は入口であり、購入・行政導入の成立実績は今回の資料では未確認。",
+    "confirmed": "運用主体の役割、料金に応じた支援範囲、会員の情報発信経路を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "netsugen-src1",
+      "netsugen-src2",
+      "netsugen-src3"
+    ]
+  },
+  {
+    "caseId": "gymlabo",
+    "unit": "place",
+    "unitNote": "九州工業大学戸畑キャンパス内の交流施設。大学全体の研究成果や起業支援制度の実績を施設へ合算しない。",
+    "challenge": "学生と企業が正式な契約や選考の前に、互いの関心を知り、将来の選択を考える入口をつくりたい。",
+    "needs": [
+      "学外参加の入口",
+      "学生と企業の対話",
+      "教育的な接点"
+    ],
+    "participation": "コワーキングには登録が必要。会議・イベントの利用は会員区分や日時で料金が変わり、個別の交流企画は募集条件を確認する必要がある。",
+    "exits": [
+      "education"
+    ],
+    "exitNote": "確認できる出口は企業理解とキャリアを考える教育的機会。採用・共同研究・購入の成立を示す追跡結果は未確認。",
+    "confirmed": "現行施設案内、料金と学外条件、2026年7月の交流実施を確認。",
+    "unknowns": "案件別の総費用・専任工数、参加しなかった人への影響、全案件の継続率と独立した効果評価は未確認。",
+    "sourceIds": [
+      "gymlabo-src1",
+      "gymlabo-src2",
+      "gymlabo-src3"
+    ]
+  },
+  {
+    "caseId": "paris-school-streets",
+    "unit": "program",
+    "unitNote": "学校敷地外の街路施策。Oasis校庭と政策主体・物理対象を分け、Paris全体の15分都市を代表させない。",
+    "challenge": "学校前の道路を、安全な通学と近隣の滞在に使える場へ変えたい。",
+    "needs": [
+      "必要車両と配送の調整",
+      "規制と物理設計の組合せ",
+      "街路ごとの維持責任",
+      "定義を揃えた件数と現地品質の評価"
+    ],
+    "participation": "学校利用者と沿道の条件を扱い、市民団体も観測する。すべての場所で子どもの共同決定が保証される制度とは未確認。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "公共の道路として日常利用する出口。学校だけの専用空間に移す施策ではない。",
+    "confirmed": "歩行者優先の運用、区別の段階的整備、予算継続、異なる集計を確認。",
+    "unknowns": "街路別維持費、健康効果、周辺負担と子どもの決定権の範囲は未確認。",
+    "sourceIds": [
+      "paris-school-streets-src01",
+      "paris-school-streets-src02",
+      "paris-school-streets-src03",
+      "paris-school-streets-src04"
+    ]
+  },
+  {
+    "caseId": "charlotte-innovation-barn",
+    "unit": "place",
+    "unitNote": "市有のInnovation Barnを対象とし、Envision Charlotteの過去の省エネ事業等を合算しない。",
+    "challenge": "循環型の技術実験を、顧客と運営者がいる地域サービスへ変えたい。",
+    "needs": [
+      "活動を続ける施設利用権",
+      "回収と再利用の相手",
+      "顧客・経路・設備の運用知",
+      "独立時の収支と権利の合意"
+    ],
+    "participation": "市民は学習・回収・ボランティア等に参加する。事業運営者の研修と、市有資産の利用判断への権限は別の関係である。当該運営者研修の申込受付は終了している。",
+    "exits": [
+      "local-operation",
+      "education"
+    ],
+    "exitNote": "地域の循環サービスと教育が出口。研修募集を独立事業の成功例として扱わない。",
+    "confirmed": "市有不動産の契約承認、教育・再利用活動、運営者育成条件を確認。",
+    "unknowns": "全財源構成、環境の純効果、事業移管と長期採算は未確認。",
+    "sourceIds": [
+      "charlotte-innovation-barn-src01",
+      "charlotte-innovation-barn-src02",
+      "charlotte-innovation-barn-src03",
+      "charlotte-innovation-barn-src04"
+    ]
+  },
+  {
+    "caseId": "seoul-innovation-park",
+    "unit": "place",
+    "unitNote": "旧Seoul Innovation Parkの施設・運営体制を歴史的に扱う。現在の再開発事業を同一の共創拠点としない。",
+    "challenge": "公共資産で育てた活動を、政策変更や施設終了時にも引き継ぎたい。",
+    "needs": [
+      "施設利用と委託の期限の把握",
+      "入居主体と所有者の権限の区別",
+      "移転・終了時の代替場所",
+      "設備・記録・支援関係の引継ぎ"
+    ],
+    "participation": "過去に市民・若者・支援組織が活動した。参加の機会を、施設利用の更新や開発方針への決定権と同一視しない。",
+    "exits": [
+      "local-operation",
+      "education"
+    ],
+    "exitNote": "歴史的な地域活動・学習の出口を比較する。現行の参加先や継続運営中の施設として案内しない。",
+    "confirmed": "2015年の開設と集積、2023年末の停止記録、2026年度予算案の後処理完了を確認。",
+    "unknowns": "団体の移転後の存続、資産や知識の継承、再開発の最終成果は未確認。",
+    "sourceIds": [
+      "seoul-innovation-park-src01",
+      "seoul-innovation-park-src02",
+      "seoul-innovation-park-src03",
+      "seoul-innovation-park-src04"
+    ]
   }
 ]
