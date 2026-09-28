@@ -11920,7 +11920,8 @@
           "kind": "fact",
           "refs": [
             "ogal-shiwa-src01",
-            "ogal-shiwa-src02"
+            "ogal-shiwa-src02",
+            "ogal-shiwa-src03"
           ]
         },
         "companies": {
@@ -11928,7 +11929,8 @@
           "kind": "fact",
           "refs": [
             "ogal-shiwa-src01",
-            "ogal-shiwa-src02"
+            "ogal-shiwa-src02",
+            "ogal-shiwa-src03"
           ]
         },
         "government": {
@@ -11936,7 +11938,8 @@
           "kind": "fact",
           "refs": [
             "ogal-shiwa-src01",
-            "ogal-shiwa-src02"
+            "ogal-shiwa-src02",
+            "ogal-shiwa-src03"
           ]
         },
         "startups": {
@@ -11946,8 +11949,10 @@
         },
         "academia": {
           "text": "東洋大学と紫波町は2007年に公民連携協定を結び、大学院がPPP可能性調査を作成した。",
-          "kind": "unknown",
-          "refs": []
+          "kind": "fact",
+          "refs": [
+            "ogal-shiwa-src02"
+          ]
         },
         "citizens": {
           "text": "町民は計画時の意見聴取の対象であり、図書館等の利用者でもある。意見聴取と個別事業の投資決定権は区別する。",
@@ -11979,7 +11984,8 @@
         "kind": "fact",
         "refs": [
           "ogal-shiwa-src01",
-          "ogal-shiwa-src02"
+          "ogal-shiwa-src02",
+          "ogal-shiwa-src03"
         ]
       },
       "intellectual": {
@@ -12017,8 +12023,7 @@
         "text": "プラザは民間整備後に公共部分を町が取得する。建物全体の民間化でも全費用の民間負担でもなく、公共が必要なサービスの責任を保持する仕組みである。",
         "kind": "analysis",
         "refs": [
-          "ogal-shiwa-src01",
-          "ogal-shiwa-src02"
+          "ogal-shiwa-src03"
         ],
         "steps": [
           7
@@ -12058,11 +12063,10 @@
     ],
     "outcomes": [
       {
-        "text": "国の事例集は2014年度に80万人超の来訪と約170人の雇用を報告する。",
+        "text": "国の事例資料は2014年度来訪者80万人以上、プラザとベース合わせて約170人の雇用創出を報告する。",
         "kind": "self-report",
         "refs": [
-          "ogal-shiwa-src01",
-          "ogal-shiwa-src02"
+          "ogal-shiwa-src03"
         ]
       },
       {
@@ -12070,7 +12074,8 @@
         "kind": "analysis",
         "refs": [
           "ogal-shiwa-src01",
-          "ogal-shiwa-src02"
+          "ogal-shiwa-src02",
+          "ogal-shiwa-src03"
         ]
       }
     ],
@@ -12084,7 +12089,8 @@
         "text": "観測された工夫：プラザは民間が整備し、町が公共部分を購入して区分所有とした。街区別に土地貸付や庁舎PFIを使い分けている。需要先行の一般論より、公共が取得する床と民間が営業する床を分けた契約の境界から、必要な施設構成へ戻って読む。",
         "kind": "analysis",
         "refs": [
-          "ogal-shiwa-src01"
+          "ogal-shiwa-src01",
+          "ogal-shiwa-src03"
         ]
       },
       {
@@ -12126,11 +12132,10 @@
         ]
       },
       "outcome": {
-        "text": "国の事例集は2014年度に80万人超の来訪と約170人の雇用を報告する。",
+        "text": "国の事例資料は2014年度来訪者80万人以上、プラザとベース合わせて約170人の雇用創出を報告する。",
         "kind": "self-report",
         "refs": [
-          "ogal-shiwa-src01",
-          "ogal-shiwa-src02"
+          "ogal-shiwa-src03"
         ]
       },
       "gap": "地区全体の総投資、現在の施設別収支、長期修繕積立、公費の純回収は未確認。"
