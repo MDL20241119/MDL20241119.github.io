@@ -22600,5 +22600,2398 @@
       "gap": "閉鎖と活動価値の評価を同一にしない。"
     },
     "sources": []
+  },
+  {
+    "id": "knowroute-shiojiri",
+    "updated": "2026-10-02",
+    "summary": "予約配車の導入を、生活交通の再編と継続予算の判断につなぐ。 予約需要に応じた配車と既存定時定路線を組み合わせる。片丘では一部の既存便も継続した。運行後も待ち時間や乗合の条件を見直し、2026年10月には予約確定後に号車を変更できる方式を試行。電話予約では号車変更を通知できないため、デジタル利用の有無による案内条件の違いも残る。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "市と公社が地域交通の確保・再編と実証を進める。現場運行と政策判断を別の役割として置く。",
+          "kind": "fact",
+          "refs": [
+            "knowroute-shiojiri-src03"
+          ]
+        },
+        "companies": {
+          "text": "片丘実証ではアルピコタクシーが運行。配車システムの提供と旅客運送の許可責任は分ける。",
+          "kind": "fact",
+          "refs": [
+            "knowroute-shiojiri-src03"
+          ]
+        },
+        "government": {
+          "text": "市の都市計画課が輸送対策事業を評価し、運賃、委託料、次期公共交通計画を検討する。",
+          "kind": "fact",
+          "refs": [
+            "knowroute-shiojiri-src02"
+          ]
+        },
+        "startups": {
+          "text": "本件を独立したスタートアップ育成制度として扱う根拠は未確認。技術供給者の成長と住民の交通確保は異なる成果である。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "待ち時間等の改善に有識者の意見を参照する方針がある。研究者の実験設計・独立評価の担当範囲は未確認。",
+          "kind": "fact",
+          "refs": [
+            "knowroute-shiojiri-src02"
+          ]
+        },
+        "citizens": {
+          "text": "住民・来訪者が利用する公共交通。予約手段の案内と利用支援があるが、利用することと運行方針の最終決定権は別である。",
+          "kind": "fact",
+          "refs": [
+            "knowroute-shiojiri-src01"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "既存の生活交通、運行車両、乗降地点を再構成する。2024年度片丘実証の区域・台数等は当時の設定であり、現行値として流用しない。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src03"
+        ]
+      },
+      "relational": {
+        "text": "市、公社、運送事業者が実施・運行を分担し、既存バスとの接続や役割を調整する。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src03"
+        ]
+      },
+      "financial": {
+        "text": "運賃と市予算が支える。令和8年度査定資料の運行業務委託額は116,721千円。車両・システム等の構成費と契約のリスク分担は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ]
+      },
+      "intellectual": {
+        "text": "配車・乗降データと利用実態を運行改善に戻す。2026年の号車変更試行は運行効率を見直す具体例である。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src01"
+        ]
+      },
+      "issues": {
+        "text": "需要の多様化と既存バス利用減の下で、生活移動への到達性を財政・乗務員制約と両立する。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src05"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "既存路線利用の低下と多様な移動需要を、地域交通の再編課題として扱う。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src05"
+        ],
+        "title": "生活交通の不足を捉える",
+        "steps": [
+          1
+        ]
+      },
+      {
+        "text": "市・公社・許可運送事業者の役割を接続する。契約細目は別途確認が必要。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src03"
+        ],
+        "title": "実施と運送の責任を結ぶ",
+        "steps": [
+          3,
+          7
+        ]
+      },
+      {
+        "text": "予約に応じた運行を既存バスと併存させる。システム導入だけで交通体系は完成しない。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src01"
+        ],
+        "title": "配車を現場に組み込む",
+        "steps": [
+          4,
+          5,
+          6
+        ]
+      },
+      {
+        "text": "市評価は片丘の利用増と長い待ち時間を併記。便益だけを抜き出さず運行条件へ戻す。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ],
+        "title": "利用増と支障を一緒に見る",
+        "steps": [
+          6
+        ]
+      },
+      {
+        "text": "委託費の増額要望、運賃見直し、効率化試行を通じて継続条件を見直す。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ],
+        "title": "予算と運用を更新する",
+        "steps": [
+          7,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "予約型交通を既存地域振興バスの一部路線の代替として供用。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src05"
+        ]
+      },
+      {
+        "text": "2026年10月の効率化試行と利用案内を公開。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src01"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "市は片丘地区について、既存便継続を含む地域振興バス全体の延べ利用が導入前の約2倍になったと報告。",
+        "kind": "self-report",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ]
+      },
+      {
+        "text": "独立採算、交通弱者全体の外出増、待ち時間の恒常的改善は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "のるーと単独の原価・公費と現行運送契約の分担",
+      "予約不成立を含む非利用者の不利益",
+      "季節・路線併存・人口変化を除いた因果効果"
+    ],
+    "backcast": [
+      {
+        "text": "AIの性能ではなく、必要な時間に病院・駅へ行けるかを起点にサービス条件を評価する。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src01"
+        ],
+        "title": "到達性から仕様を決める"
+      },
+      {
+        "text": "利用増には既存便の継続も含まれる。全面置換だけを唯一の出口としない。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ],
+        "title": "混合交通を残す"
+      },
+      {
+        "text": "運行費の上昇と需要の変化に応じ、自治体と運行者が設定・予算を見直せることが継続条件になる。",
+        "kind": "analysis",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ],
+        "title": "改善できる契約にする"
+      }
+    ],
+    "project": {
+      "name": "片丘地区の代替・併存運行と全体運用改善",
+      "stage": "導入",
+      "overview": {
+        "text": "片丘地区の導入評価を中心に、2026年の継続・改善を確認する。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src01",
+          "knowroute-shiojiri-src02",
+          "knowroute-shiojiri-src03"
+        ]
+      },
+      "output": {
+        "text": "路線の一部代替と予約型運行の供用。",
+        "kind": "fact",
+        "refs": [
+          "knowroute-shiojiri-src03",
+          "knowroute-shiojiri-src05"
+        ]
+      },
+      "outcome": {
+        "text": "片丘では併存便を含む利用増を市が報告。採算や全域への因果効果は未確認。",
+        "kind": "self-report",
+        "refs": [
+          "knowroute-shiojiri-src02"
+        ]
+      },
+      "gap": "のるーと単独の原価・公費と現行運送契約の分担"
+    },
+    "sources": []
+  },
+  {
+    "id": "shenzhen-bus-group-electrification",
+    "updated": "2026-10-02",
+    "summary": "車両、充電、金融、保証の責任を組み替え、全車電動化を運行へつなぐ。 高い初期購入費と電池性能のリスクを、運行会社だけが一括負担する構造から変える。初期の車体・電池分離は取引関係が複雑で、全車リースでは関係を簡素化した。設備所有と運行、充電と保証を接続することが実装の核心である。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Shenzhen Bus Groupが調達方法と日常運行を接続し、運行要件を金融・車両・充電側へ渡す。",
+          "kind": "fact",
+          "refs": [
+            "shenzhen-bus-group-electrification-src01"
+          ]
+        },
+        "companies": {
+          "text": "リース会社、車両メーカー、充電サービス会社が資産と技術リスクを分担する。",
+          "kind": "fact",
+          "refs": [
+            "shenzhen-bus-group-electrification-src01"
+          ]
+        },
+        "government": {
+          "text": "国・地方政府の補助と都市の公共交通政策が導入を支えた。現行補助の同一性は未確認。",
+          "kind": "fact",
+          "refs": [
+            "shenzhen-bus-group-electrification-src01"
+          ]
+        },
+        "startups": {
+          "text": "新興企業の育成・公募・起業支援を中心とする案件ではない。固有の制度は確認していない。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "世界銀行等が事業モデルと運用の事例研究を公開。研究主体を運行主体と区別する。",
+          "kind": "fact",
+          "refs": [
+            "shenzhen-bus-group-electrification-src01"
+          ]
+        },
+        "citizens": {
+          "text": "バス利用者がサービスを利用し運賃を払う。調達・電池選定に対する住民の正式な決定権は未確認。",
+          "kind": "analysis",
+          "refs": [
+            "shenzhen-bus-group-electrification-src01"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "電動バス、電池、充電施設とその用地・電力接続。車両だけでは運行サービスは成立しない。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      },
+      "relational": {
+        "text": "運行・金融・製造・充電を契約で接続する。車体と電池を分ける方式の複雑さを全車リースで軽減した。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      },
+      "financial": {
+        "text": "初期投資をリースへ振り替え、当時の補助と運賃収入を組み合わせる。金融の利用は費用やリスクの消滅ではない。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      },
+      "intellectual": {
+        "text": "初期電池の不具合と運行経験が、車両一体契約や保証を考える材料になった。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      },
+      "issues": {
+        "text": "脱炭素と輸送の継続を、高い初期投資、充電場所、電池寿命の制約の下で両立する。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "必要な輸送を維持できる車両と充電の組合せを組み立てる。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "運行要件を設備条件にする",
+        "steps": [
+          1,
+          2
+        ]
+      },
+      {
+        "text": "リース・保証・充電サービスを組み合わせ、複数事業者の負担を接続する。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "資産と責任を分ける",
+        "steps": [
+          3,
+          7
+        ]
+      },
+      {
+        "text": "バスと充電設備を日常運行に組み込む。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "車両と充電を配備する",
+        "steps": [
+          5,
+          6
+        ]
+      },
+      {
+        "text": "電池分離モデルの品質・取引負担を踏まえ、全車リースへ移る。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "初期不具合から契約を見直す",
+        "steps": [
+          6,
+          7
+        ]
+      },
+      {
+        "text": "一事業者の調達・運営と都市全体の電動化政策が接続する。ただし全市値を当社成果としない。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src02"
+        ],
+        "title": "都市規模へ展開する",
+        "steps": [
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "Shenzhen Bus Groupの電動化車両と充電を組み合わせた運行体制。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src03"
+        ]
+      },
+      {
+        "text": "車両の全車リース、主要部品保証、充電サービスの事業モデル。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "事業者の2017年全車電動化、市公式の2025年度バス100%純電動化記載を確認。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src02",
+          "shenzhen-bus-group-electrification-src03"
+        ]
+      },
+      {
+        "text": "補助がない場合の現在の採算や、更新後の長期総費用は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "補助終了・契約更新時の費用とリスク分担",
+      "現在の電池保証、代車、残存価値の条件",
+      "ライフサイクル排出と輸送便益の同一範囲評価"
+    ],
+    "backcast": [
+      {
+        "text": "電池性能だけでなく、充電停止時にも運行できる体制を調達条件に置く。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "運行を止めないことから逆算する"
+      },
+      {
+        "text": "購入資金制約は金融手法で緩められるが、料金としての将来支出と残存リスクが残る。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "所有と利用を分ける"
+      },
+      {
+        "text": "電池分離の損失や支障を残すことで、後期モデルが何を改善したかを比較できる。",
+        "kind": "analysis",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ],
+        "title": "初期の失敗を残す"
+      }
+    ],
+    "project": {
+      "name": "Shenzhen Bus Groupの全車リースと充電サービス",
+      "stage": "導入",
+      "overview": {
+        "text": "2011〜2017年の転換モデルと2025年度の都市政策継続を確認。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01",
+          "shenzhen-bus-group-electrification-src02",
+          "shenzhen-bus-group-electrification-src03"
+        ]
+      },
+      "output": {
+        "text": "車両・充電・金融・保証を組み合わせた日常バス運行。",
+        "kind": "fact",
+        "refs": [
+          "shenzhen-bus-group-electrification-src01"
+        ]
+      },
+      "outcome": {
+        "text": "全車電動化は確認。現在の無補助採算は未確認。",
+        "kind": "self-report",
+        "refs": [
+          "shenzhen-bus-group-electrification-src02",
+          "shenzhen-bus-group-electrification-src03"
+        ]
+      },
+      "gap": "補助終了・契約更新時の費用とリスク分担"
+    },
+    "sources": []
+  },
+  {
+    "id": "kashiwanoha-aems",
+    "updated": "2026-10-02",
+    "summary": "複数施設の設備・利用時間・運営責任を束ね、地区でエネルギーを使う。 商業、オフィス、住宅等の需要の違いと分散電源をつなぎ、監視・制御・融通を行う。新しい実証では空調、給湯、蓄電池、発電機、EV充電等を束ねた調整力の市場利用を検証する。従来運用の達成と新規事業の成立を別々に判定する。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "三井不動産が全体構想、エネルギー要件、AEMS導入・運用を持つ。建設と日々の制御をつなぐ主体である。",
+          "kind": "fact",
+          "refs": [
+            "kashiwanoha-aems-src01"
+          ]
+        },
+        "companies": {
+          "text": "日立、シャープ、日建設計等がシステム・設備・技術助言を分担。2025年実証では別の機器・制御パートナーが加わる。",
+          "kind": "fact",
+          "refs": [
+            "kashiwanoha-aems-src01"
+          ]
+        },
+        "government": {
+          "text": "公民学連携の地区を背景とするが、AEMSの各制御や全設備費を自治体が担うとする根拠はない。",
+          "kind": "analysis",
+          "refs": [
+            "kashiwanoha-aems-src04"
+          ]
+        },
+        "startups": {
+          "text": "2025年実証にYanekara等が参画し、EV充電制御などを担当。参画を受注利益や市場売却実績としない。",
+          "kind": "fact",
+          "refs": [
+            "kashiwanoha-aems-src03"
+          ]
+        },
+        "academia": {
+          "text": "地区の大学・研究機関集積は背景にある。AEMSの定常運用を大学が担うという根拠は未確認。",
+          "kind": "analysis",
+          "refs": [
+            "kashiwanoha-aems-src04"
+          ]
+        },
+        "citizens": {
+          "text": "HEMS等を通じ利用状況の可視化や省エネ情報に接する。参加・閲覧が設備投資や非常時配分の決定権を意味するものではない。",
+          "kind": "analysis",
+          "refs": [
+            "kashiwanoha-aems-src01"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "複数施設、太陽光発電、蓄電池、電力融通・受変電設備、監視・制御拠点。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ]
+      },
+      "relational": {
+        "text": "不動産保有・運用者とシステム構築・運用支援企業の役割を接続する。機器間連携と責任分界の両方が必要。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ]
+      },
+      "financial": {
+        "text": "投資、保守、料金削減、需要家への配分を同一範囲で示す資料は未確認。市場向け実証でも経済性は検証対象。",
+        "kind": "unknown",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ]
+      },
+      "intellectual": {
+        "text": "施設需要の見える化、需要予測、分散設備の統合制御。2025年実証は調整力量と市場応答を段階的に確かめる。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ]
+      },
+      "issues": {
+        "text": "建物ごとの最適化では扱えないピークと非常時の供給を、地区全体でどう調整するか。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "施設や住戸の情報を整理し、需要と供給の関係を管理する。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ],
+        "title": "地区の需要を可視化する",
+        "steps": [
+          1,
+          4
+        ]
+      },
+      {
+        "text": "不動産運営者の要件を、システム・蓄電池・融通設備の構築へ渡す。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ],
+        "title": "役割を設備仕様にする",
+        "steps": [
+          3,
+          5
+        ]
+      },
+      {
+        "text": "分散電源と複数用途施設を接続する段階運用を実施した。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src02"
+        ],
+        "title": "街区間で運用する",
+        "steps": [
+          5,
+          6,
+          7
+        ]
+      },
+      {
+        "text": "2025年実証では制御、市場投入、市場運用の段階で応答と経済性を評価する。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ],
+        "title": "新しい市場条件を試す",
+        "steps": [
+          4,
+          6,
+          7
+        ]
+      },
+      {
+        "text": "所有、制御責任、便益配分、更新費が異なる地区には、同じ設備を置くだけでは再現しない。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ],
+        "title": "他地区へ渡す条件を整理する",
+        "steps": [
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "AEMS、HEMSと街区横断のエネルギー管理の導入。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src02"
+        ]
+      },
+      {
+        "text": "2025年の機器統合と市場運用に向けた実証計画・役割分担。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "事業者は2014年5月から段階運用したと報告。実測の長期費用便益は未確認。",
+        "kind": "self-report",
+        "refs": [
+          "kashiwanoha-aems-src02"
+        ]
+      },
+      {
+        "text": "2025年の新規アグリゲーション事業は経済性検証の対象。継続利益・市場拡大の成果は未確認。",
+        "kind": "unknown",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ]
+      }
+    ],
+    "outcomeGaps": [
+      "設備投資・保守費・テナント便益の配分と更新責任",
+      "観測期間と比較基準を揃えた削減量",
+      "市場向け実証の結果と恒久事業化判断"
+    ],
+    "backcast": [
+      {
+        "text": "電力削減だけでなく居住・業務の維持が目的となる。制御に許される範囲を運営者と利用者の関係から決める。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ],
+        "title": "快適性と継続供給から逆算する"
+      },
+      {
+        "text": "一体保有に近い場所で成立する調整を、多数所有者の地区へ広げるには費用と便益の合意が要る。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src01"
+        ],
+        "title": "所有者の範囲を確かめる"
+      },
+      {
+        "text": "既存AEMSの導入は新規市場事業の黒字化を証明しない。用途ごとに成果判定を置く。",
+        "kind": "analysis",
+        "refs": [
+          "kashiwanoha-aems-src03"
+        ],
+        "title": "導入済みと実証中を分ける"
+      }
+    ],
+    "project": {
+      "name": "街区横断AEMS運用と新規調整力実証",
+      "stage": "複数段階",
+      "overview": {
+        "text": "2014年導入と2025年の新規実証を別段階で確認する。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src02",
+          "kashiwanoha-aems-src03"
+        ]
+      },
+      "output": {
+        "text": "複数施設と分散電源をつなぐ運用基盤。",
+        "kind": "fact",
+        "refs": [
+          "kashiwanoha-aems-src01",
+          "kashiwanoha-aems-src02"
+        ]
+      },
+      "outcome": {
+        "text": "導入・運用の事後報告あり。新規市場事業の採算は未確認。",
+        "kind": "self-report",
+        "refs": [
+          "kashiwanoha-aems-src02",
+          "kashiwanoha-aems-src03"
+        ]
+      },
+      "gap": "設備投資・保守費・テナント便益の配分と更新責任"
+    },
+    "sources": []
+  },
+  {
+    "id": "jakarta-mrt-tod",
+    "updated": "2026-10-02",
+    "summary": "鉄道の利用、公共補助、駅周辺の開発・運営を別の収支として接続する。 公共的な運賃負担可能性を補助で支えつつ、駅の広告・命名権・賃貸、沿線の開発調整を組み合わせる。鉄道の利用者増とTODの個別利益、住民への価値還元を別々に評価する。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "PT MRT Jakartaは鉄道運営と沿線地区調整の機能を持つ。事業者の統合機能と公共機関の承認を分ける。",
+          "kind": "fact",
+          "refs": [
+            "jakarta-mrt-tod-src03"
+          ]
+        },
+        "companies": {
+          "text": "広告、命名権、テナント、土地・接続建物のパートナーが関わる。個別契約条件とリスク配分は未確認。",
+          "kind": "fact",
+          "refs": [
+            "jakarta-mrt-tod-src01"
+          ]
+        },
+        "government": {
+          "text": "DKI Jakarta州政府がTOD主要運営者を指定し、2024年には運賃負担可能性・運営継続のため補助を拠出。",
+          "kind": "fact",
+          "refs": [
+            "jakarta-mrt-tod-src01"
+          ]
+        },
+        "startups": {
+          "text": "デジタル決済等との連携はあるが、TODカードの主要成果をスタートアップ育成とする根拠は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "本カードの主要根拠は運営者年報と政府資料。大学の独立したTOD因果評価は今回確認していない。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "citizens": {
+          "text": "利用者は交通サービスを使い、周辺住民・土地所有者・テナントは地区調整の影響を受ける。利用者数は同意や公平な便益配分の指標ではない。",
+          "kind": "analysis",
+          "refs": [
+            "jakarta-mrt-tod-src04"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "鉄道、駅、接続空間、沿線の土地・建物。運営者がすべての土地を所有するとする根拠はない。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ]
+      },
+      "relational": {
+        "text": "TOD主要運営者が土地建物所有者、テナント等と計画・維持・監督を調整する。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ]
+      },
+      "financial": {
+        "text": "運賃、州補助、非運賃収入を区別。補助は公共サービスを支える財源であり、存在だけで失敗とも自立採算とも判定しない。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ]
+      },
+      "intellectual": {
+        "text": "鉄道利用と財務の年次開示、TODの地域管理知を接続する。利用データと開発の会計範囲は異なる。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ]
+      },
+      "issues": {
+        "text": "安価で信頼できる交通と沿線の質を保ちながら、整備・維持に必要な財源を確保する。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "TOD主要運営者としての調整機能を、土地所有や包括的な開発許可と区別する。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ],
+        "title": "権限と対象を明確にする",
+        "steps": [
+          1,
+          3
+        ]
+      },
+      {
+        "text": "所有者・テナント等と計画、インフラ、維持管理の調整を行う。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ],
+        "title": "駅と地区の主体をつなぐ",
+        "steps": [
+          3,
+          5
+        ]
+      },
+      {
+        "text": "公共的な運賃水準を補助で支え、利用状況を年次で公開する。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ],
+        "title": "鉄道を日常運行する",
+        "steps": [
+          6,
+          7
+        ]
+      },
+      {
+        "text": "駅の広告・命名権・賃貸とTOD関連収入を確保する枠組み。個別利益は分解が必要。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ],
+        "title": "非運賃収入を組み合わせる",
+        "steps": [
+          7
+        ]
+      },
+      {
+        "text": "2025年実績と2026年の利用目標を区別して示す。利用増を開発の利益や公平性へ直結させない。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src02"
+        ],
+        "title": "実績と目標を分けて更新する",
+        "steps": [
+          6,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "鉄道運営とTOD地区調整の制度・活動。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src03"
+        ]
+      },
+      {
+        "text": "運賃、補助、非運賃収入を分けた年報と利用実績。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "運営者は2025年の年間利用46,449,629件、日平均127,259件を報告。2026年の50百万件は目標。",
+        "kind": "self-report",
+        "refs": [
+          "jakarta-mrt-tod-src02"
+        ]
+      },
+      {
+        "text": "TOD単独の収支、運営補助削減、公平な地価利益還元への寄与は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "TOD単独の費用・利益と鉄道会計の区分",
+      "立退き・賃料上昇等の住民負担",
+      "2025年会計の公表・確認"
+    ],
+    "backcast": [
+      {
+        "text": "駅利用者数だけでは日常のアクセスの質を示せない。接続・乗換と歩行環境を同時に確認する。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ],
+        "title": "接続便益から地区を設計する"
+      },
+      {
+        "text": "補助、運賃、非運賃を分けることで、公共サービスの負担と商業事業の成果を比較できる。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src01"
+        ],
+        "title": "財源を混ぜずに評価する"
+      },
+      {
+        "text": "地区価値の向上が鉄道会社・所有者・住民の誰に届くかは、個別契約と還元制度で決まる。",
+        "kind": "analysis",
+        "refs": [
+          "jakarta-mrt-tod-src04"
+        ],
+        "title": "利益の帰属を問う"
+      }
+    ],
+    "project": {
+      "name": "鉄道運営と南北線第1期TODの接続",
+      "stage": "導入",
+      "overview": {
+        "text": "制度指定、2024年財務と2025年利用を確認。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src01",
+          "jakarta-mrt-tod-src02",
+          "jakarta-mrt-tod-src03"
+        ]
+      },
+      "output": {
+        "text": "沿線所有者を調整するTOD主要運営者の機能と鉄道供用。",
+        "kind": "fact",
+        "refs": [
+          "jakarta-mrt-tod-src03",
+          "jakarta-mrt-tod-src04"
+        ]
+      },
+      "outcome": {
+        "text": "2025年の利用実績を運営者が報告。TODの独立採算は未確認。",
+        "kind": "self-report",
+        "refs": [
+          "jakarta-mrt-tod-src02"
+        ]
+      },
+      "gap": "TOD単独の費用・利益と鉄道会計の区分"
+    },
+    "sources": []
+  },
+  {
+    "id": "sidewalk-toronto",
+    "updated": "2026-10-02",
+    "summary": "都市ビジョンの合意と、土地・予算・データ・実装の権限を分ける。 公共主体と技術企業が都市開発の構想をつくり、技術・制度・事業性を検討した。2019年提案後も土地、権限、データ等の論点が残り、2020年に協働は終了。公的主体は後継の開発者選定を進め、地区整備を引き継いだ。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Waterfront TorontoとSidewalk Labsが計画開発契約を結んだ。共同で計画することと最終承認を持つことは異なる。",
+          "kind": "fact",
+          "refs": [
+            "sidewalk-toronto-src01"
+          ]
+        },
+        "companies": {
+          "text": "Sidewalk Labsが技術・都市開発構想を提案。終了後のDream・Great Gulfは後継事業の主体である。",
+          "kind": "fact",
+          "refs": [
+            "sidewalk-toronto-src04"
+          ]
+        },
+        "government": {
+          "text": "政府・土地所有者等の承認が必要。Waterfront Toronto自身にも所有地を超えて権利を与える包括的権限はなかったと監査が指摘。",
+          "kind": "fact",
+          "refs": [
+            "sidewalk-toronto-src05"
+          ]
+        },
+        "startups": {
+          "text": "新産業の機会は構想に含まれたが、本地区の恒久稼働から生まれた起業・雇用成果は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "専門家による検討は行われたが、完成都市の独立した生活改善評価は存在しない。専門家審査と実装成果は別である。",
+          "kind": "analysis",
+          "refs": [
+            "sidewalk-toronto-src02"
+          ]
+        },
+        "citizens": {
+          "text": "公共協議とデータ等の懸念の検討が進められた。意見聴取件数は住民全体の合意や拒否権付与を意味しない。",
+          "kind": "analysis",
+          "refs": [
+            "sidewalk-toronto-src02"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "Quaysideの土地と計画対象。計画開発協働そのものが土地の所有・開発権を一括付与したわけではない。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ]
+      },
+      "relational": {
+        "text": "公共開発主体、企業、各政府、土地所有者、市民の関係。協働契約と公共的な承認手続きを分けて扱う。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ]
+      },
+      "financial": {
+        "text": "計画資金と建設・長期運営資金は別段階。経済条件の変化で後段の成立性が失われ得る。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src02"
+        ]
+      },
+      "intellectual": {
+        "text": "都市・データ・公共空間等の提案と審査の記録が残る。構想の知的出力を生活上の成果と混同しない。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src02"
+        ]
+      },
+      "issues": {
+        "text": "都市の公共価値、事業成立性、権限、データ管理をどの主体が合意し、撤退後にも何を維持できるか。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "公共の課題と技術・都市開発の構想を結び付けるが、提案は実装承認ではない。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src02"
+        ],
+        "title": "都市の将来像を提案する",
+        "steps": [
+          1,
+          2
+        ]
+      },
+      {
+        "text": "計画開発契約を結び、政府等による別の承認が必要な範囲を残す。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ],
+        "title": "協働の範囲を契約にする",
+        "steps": [
+          3
+        ]
+      },
+      {
+        "text": "データ・権限・事業性などの条件を検討する。都市全体での実測成果とは異なる。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src02"
+        ],
+        "title": "技術と公共条件を審査する",
+        "steps": [
+          4,
+          6
+        ]
+      },
+      {
+        "text": "会社の撤退と計画開発契約の終了を公式通知で確認できる。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ],
+        "title": "成立しない場合に終了する",
+        "steps": [
+          7
+        ]
+      },
+      {
+        "text": "地区開発は別の選定・契約で継続。旧構想の実施成功ではなく公共側の再構成として読む。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src04"
+        ],
+        "title": "公共の計画を引き継ぐ",
+        "steps": [
+          3,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "計画開発契約、提案・検討・協議の記録。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ]
+      },
+      {
+        "text": "撤退通知と契約終了、公的主体による後継開発プロセス。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src04"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "2020年にSidewalkとの協働が終了。Sidewalkの完成都市・居住後の生活便益は実現した成果として確認できない。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ]
+      },
+      {
+        "text": "地区は後継事業として継続しているが、その完成予定と目標便益は実績ではない。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src04"
+        ]
+      }
+    ],
+    "outcomeGaps": [
+      "恒久運用に至らず、生活改善と事業採算は評価不能",
+      "撤退理由の全原因を特定する独立した因果証拠",
+      "計画資金と最終建設・運営費の区別"
+    ],
+    "backcast": [
+      {
+        "text": "技術が可能でも誰が土地・予算・データを承認するかが未接続なら実装には進めない。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src01"
+        ],
+        "title": "権限から実現可能性を問う"
+      },
+      {
+        "text": "大きな前段投資があっても経済条件は変わる。中止・縮小を選べる段階判断は必要である。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src02"
+        ],
+        "title": "退出可能性を設計する"
+      },
+      {
+        "text": "企業撤退は地区の未来の終了ではない。公共主体が次の担い手へ接続できることが重要となる。",
+        "kind": "analysis",
+        "refs": [
+          "sidewalk-toronto-src04"
+        ],
+        "title": "地区と企業計画を分ける"
+      }
+    ],
+    "project": {
+      "name": "Sidewalk Labsとの計画開発契約終了",
+      "stage": "終了",
+      "overview": {
+        "text": "2017〜2020年協働の終了と、別事業による地区開発の継続を確認。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01",
+          "sidewalk-toronto-src04"
+        ]
+      },
+      "output": {
+        "text": "構想・協議・契約終了の記録。恒久的なSidewalk都市運営には未到達。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01",
+          "sidewalk-toronto-src02"
+        ]
+      },
+      "outcome": {
+        "text": "2020年5月17日に契約終了。後継事業は旧計画の実績に含めない。",
+        "kind": "fact",
+        "refs": [
+          "sidewalk-toronto-src01",
+          "sidewalk-toronto-src04"
+        ]
+      },
+      "gap": "恒久運用に至らず、生活改善と事業採算は評価不能"
+    },
+    "sources": []
+  },
+  {
+    "id": "king-street-toronto",
+    "updated": "2026-10-02",
+    "summary": "道路配分を変えた後も、規制順守と運行品質を維持するには誰が何を担うか。 恒久化を終点にせず、効果が落ちた条件を特定して運用と経常費へ戻す。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "市交通部門の計画・信号・道路担当とTTCが運用課題を共有する。",
+          "kind": "fact",
+          "refs": [
+            "king-street-toronto-src01"
+          ]
+        },
+        "companies": {
+          "text": "沿道BIAと民間再開発案件を通じ、沿道空間改善も調整する。個別契約額は未確認。",
+          "kind": "fact",
+          "refs": [
+            "king-street-toronto-src01"
+          ]
+        },
+        "government": {
+          "text": "市議会が恒久化を決め、市交通部門・警察・TTCが役割を分担する。",
+          "kind": "fact",
+          "refs": [
+            "king-street-toronto-src01",
+            "king-street-toronto-src02"
+          ]
+        },
+        "startups": {
+          "text": "2025年報告には自動取締り技術公募の応募者が記載されるが、全社をスタートアップと分類できない。",
+          "kind": "unknown",
+          "refs": [
+            "king-street-toronto-src01"
+          ]
+        },
+        "academia": {
+          "text": "本資料群の中心は市の実務評価であり、学術機関の継続的な運営責任は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "citizens": {
+          "text": "2025年作業部会に住民・近隣団体、TTCriders、CycleToronto、StopGap等が参加。",
+          "kind": "fact",
+          "refs": [
+            "king-street-toronto-src01"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "既存道路・信号・乗降場所を変更。仮設ランプやモジュール式乗降台と恒久改修を段階的に組み合わせる。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      "relational": {
+        "text": "市交通部門、TTC、警察、沿道BIA、住民・利用者団体の関係を継続運用に使う。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      "financial": {
+        "text": "追加資本整備CA$310万と交通整理員の経常費を分けて措置する。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      "intellectual": {
+        "text": "実証評価と運行・違反の観測を蓄積し、信号や例外運用の修正に使う。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01",
+          "king-street-toronto-src02"
+        ]
+      },
+      "issues": {
+        "text": "道路の法的な優先指定だけでは実際の交通優先が保たれないという運用課題。",
+        "kind": "analysis",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "路面電車の信頼性・速度・輸送力を改善するため、都心道路の配分を再定義した。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src02"
+        ],
+        "title": "優先する利用を決める",
+        "steps": [
+          1,
+          2
+        ]
+      },
+      {
+        "text": "2017年実証を評価し2019年に恒久回廊へ移行。規制と空間の整備は一度で完了しない。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src02",
+          "king-street-toronto-src03"
+        ],
+        "title": "仮設から制度へ移す",
+        "steps": [
+          5,
+          7
+        ]
+      },
+      {
+        "text": "2023年の遅延と通過違反を把握し、実施後の運用品質を問題として再設定した。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "低下した効果を観測する",
+        "steps": [
+          6
+        ]
+      },
+      {
+        "text": "整理員、信号フェーズ、路面表示等を調整し、交通状況に応じて再評価する。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "信号と現場執行を組み直す",
+        "steps": [
+          5,
+          6
+        ]
+      },
+      {
+        "text": "追加整備と経常費、作業部会を組み合わせ、供用後の改善を継続する。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "維持予算と当事者をつなぐ",
+        "steps": [
+          3,
+          7
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "2019年の恒久指定と、信号・乗降場・路肩空間の段階整備。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01",
+          "king-street-toronto-src02",
+          "king-street-toronto-src03"
+        ]
+      },
+      {
+        "text": "2025年更新報告、予算措置、複数当事者による作業部会。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "市は交通整理員配置時の所要時間改善を報告。遅延が大きかった条件との比較である。",
+        "kind": "self-report",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      {
+        "text": "全期間の費用便益、沿道全業種への純経済効果、2026年全時点の運用品質は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "恒久指定後にも運用が悪化した",
+      "交通整理員の人件費と自動化の制度要件",
+      "同じ時間帯・工事条件で所要時間と違反率を測り、整理員配置と信号改善の費用を比較する"
+    ],
+    "backcast": [
+      {
+        "text": "初期改善の維持には、迂回交通・規制順守・工事調整を運営上の責任として設計する必要がある。",
+        "kind": "analysis",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "成功後の劣化を設計条件にする"
+      },
+      {
+        "text": "歩道や乗降台の完成だけでなく、毎日の交通整理・取締り費用を説明できる形にする。",
+        "kind": "analysis",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "資本費と経常費を分ける"
+      },
+      {
+        "text": "利用者と沿道の声を集めつつ、道路規制の責任者と例外許可の判断を明確に保つ。",
+        "kind": "analysis",
+        "refs": [
+          "king-street-toronto-src01"
+        ],
+        "title": "参加と決裁を混同しない"
+      }
+    ],
+    "project": {
+      "name": "恒久化後のKing Street運用品質の回復",
+      "stage": "継続運用",
+      "overview": {
+        "text": "2019年恒久化後の悪化と、2023–2025年の改善を読む。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01",
+          "king-street-toronto-src02"
+        ]
+      },
+      "output": {
+        "text": "交通整理員・信号変更・追加整備計画と予算。",
+        "kind": "fact",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      "outcome": {
+        "text": "特定条件で所要時間改善を市が報告。",
+        "kind": "self-report",
+        "refs": [
+          "king-street-toronto-src01"
+        ]
+      },
+      "gap": "配置条件と交通需要の違いを統制した因果評価ではない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "aspern-seestadt",
+    "updated": "2026-10-02",
+    "summary": "新しい街の駐車場・公共交通・生活空間を、継続的な交通サービスの財源まで一体設計する。 施設を建てる資本と、日常の移動サービスを続ける資金を接続し、地区から都市へ引き継ぐ。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Wien 3420の開発・モビリティ担当が地区計画とサービス転換を調整する。",
+          "kind": "fact",
+          "refs": [
+            "aspern-seestadt-src01",
+            "aspern-seestadt-src02"
+          ]
+        },
+        "companies": {
+          "text": "建物・共同駐車場の整備主体と交通提供者を接続する。各社の契約と現在の出資比率はここでは確定しない。",
+          "kind": "fact",
+          "refs": [
+            "aspern-seestadt-src01",
+            "aspern-seestadt-src02"
+          ]
+        },
+        "government": {
+          "text": "市議会によるマスタープラン採択と、市の公共交通事業者Wiener Linienによるサービス提供。",
+          "kind": "fact",
+          "refs": [
+            "aspern-seestadt-src01",
+            "aspern-seestadt-src02"
+          ]
+        },
+        "startups": {
+          "text": "起業支援を主対象とする事例ではなく、交通実装における特定スタートアップの責任は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "公式評価はaspern.mobil LABのモビリティパネルを参照。調査結果と開発主体の説明を区別する。",
+          "kind": "fact",
+          "refs": [
+            "aspern-seestadt-src04"
+          ]
+        },
+        "citizens": {
+          "text": "住民の移動を調べ、地区管理拠点は貨物自転車貸出等の接点にもなる。住民の最終決定権は未確認。",
+          "kind": "fact",
+          "refs": [
+            "aspern-seestadt-src01",
+            "aspern-seestadt-src04"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "旧飛行場240ha、湖と公共空間、交通接続、共同駐車場が地区の物的基盤。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src02"
+        ]
+      },
+      "relational": {
+        "text": "開発会社・公共交通事業者・地区管理と住民をつなぐ。サービス統合は地区内外の利用の接続でもある。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01"
+        ]
+      },
+      "financial": {
+        "text": "駐車場に関連したMobility Fundが地区独自の自転車貸出を支えた。現在の基金総額・配賦・利用料金との全関係は未確認。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01"
+        ]
+      },
+      "intellectual": {
+        "text": "柔軟に更新するマスタープランと、モビリティパネル・指標による評価を利用する。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src02",
+          "aspern-seestadt-src04"
+        ]
+      },
+      "issues": {
+        "text": "新市街地への入居後に車依存が固定される前に、公共交通と近隣生活の選択肢を用意する課題。",
+        "kind": "analysis",
+        "refs": [
+          "aspern-seestadt-src01",
+          "aspern-seestadt-src02"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "公共空間を先に捉えるマスタープランが、住宅・仕事・交通・生活施設の関係を規定する。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src02"
+        ],
+        "title": "街の骨格を先に決める",
+        "steps": [
+          1,
+          2
+        ]
+      },
+      {
+        "text": "共同駐車場に関係する拠出をMobility Fundへ接続し、地区の交通サービスに充てる。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01"
+        ],
+        "title": "移動の資金を地区に組み込む",
+        "steps": [
+          3,
+          7
+        ]
+      },
+      {
+        "text": "地区内貸出自転車と公共交通接続を運用し、生活者が使う選択肢を形成する。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01",
+          "aspern-seestadt-src03"
+        ],
+        "title": "日常サービスを提供する",
+        "steps": [
+          5,
+          7
+        ]
+      },
+      {
+        "text": "地区の移動分担を目標と照合する。達成率と因果的な施策効果を分ける。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src03",
+          "aspern-seestadt-src04"
+        ],
+        "title": "調査を目標と照合する",
+        "steps": [
+          6
+        ]
+      },
+      {
+        "text": "2025年に地区独自の貸出からWienMobil Radへ統合し、8拠点のネットワークへ移行した。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01",
+          "aspern-seestadt-src03"
+        ],
+        "title": "都市全体の運営へ引き継ぐ",
+        "steps": [
+          7,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "2007年マスタープランに沿う段階開発と公共空間・交通基盤。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src02"
+        ]
+      },
+      {
+        "text": "2025年に市全体のシェア自転車8拠点へ移行。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src03"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "公式は地区の徒歩・自転車46.6%、公共交通31.7%、私的動力交通21.7%を報告する。",
+        "kind": "self-report",
+        "refs": [
+          "aspern-seestadt-src03"
+        ]
+      },
+      {
+        "text": "サービス収支、家計負担、所得別アクセスと施策ごとの寄与の比較評価は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "開発完了目標と現在の供用状態を区別",
+      "交通分担率の調査対象・自己選択と財源収支",
+      "基金拠出・利用料金・代替サービスの利用を同時に追跡し、所得層ごとの負担と交通選択を点検する"
+    ],
+    "backcast": [
+      {
+        "text": "駐車場を建設基準だけで扱わず、他の移動手段を持続させる資金の入口として検討する。",
+        "kind": "analysis",
+        "refs": [
+          "aspern-seestadt-src01"
+        ],
+        "title": "建設と生活サービスを結ぶ"
+      },
+      {
+        "text": "地区実験の維持だけを目標にせず、都市全体の提供者へ移す条件と利用者移行を設計する。",
+        "kind": "analysis",
+        "refs": [
+          "aspern-seestadt-src01",
+          "aspern-seestadt-src03"
+        ],
+        "title": "専用サービスの出口をつくる"
+      },
+      {
+        "text": "理想の交通分担率、調査結果、特定施策の因果効果を別々に示して投資判断に使う。",
+        "kind": "analysis",
+        "refs": [
+          "aspern-seestadt-src03",
+          "aspern-seestadt-src04"
+        ],
+        "title": "目標を実測と分ける"
+      }
+    ],
+    "project": {
+      "name": "SeestadtFLOTTEからWienMobil Radへの統合",
+      "stage": "継続運用",
+      "overview": {
+        "text": "基金支援の地区サービスを都市の交通ネットワークへ接続する。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src01"
+        ]
+      },
+      "output": {
+        "text": "2025年に8拠点へ移行。",
+        "kind": "fact",
+        "refs": [
+          "aspern-seestadt-src03"
+        ]
+      },
+      "outcome": {
+        "text": "接続可能なサービスの提供は確認できるが、統合単独の交通転換効果は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "aspern-seestadt-src01",
+          "aspern-seestadt-src03"
+        ]
+      },
+      "gap": "地区交通分担率をシェア自転車統合だけの効果にしない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "atlanta-walk-atl-oakland-city",
+    "updated": "2026-10-02",
+    "summary": "住民の道路改善案を、許可・保険・資金・維持責任のある実装へつなぐ。 短期施工の前に必要な保険・許可・合意・調整労働を見える化する。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Propel ATLが住民の課題把握から計画・行動への支援を担う。",
+          "kind": "fact",
+          "refs": [
+            "atlanta-walk-atl-oakland-city-src01"
+          ]
+        },
+        "companies": {
+          "text": "2023年にUrbanTransを交通計画支援として起用。保険・資材調達も工程に含まれる。",
+          "kind": "fact",
+          "refs": [
+            "atlanta-walk-atl-oakland-city-src01"
+          ]
+        },
+        "government": {
+          "text": "ATLDOTが審査・許可制度を提供。地域承認と市許可は異なる。",
+          "kind": "fact",
+          "refs": [
+            "atlanta-walk-atl-oakland-city-src01",
+            "atlanta-walk-atl-oakland-city-src03"
+          ]
+        },
+        "startups": {
+          "text": "起業・投資を目的とした制度ではなく、スタートアップの固有役割は確認していない。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "当該施工の評価責任を持つ大学・研究機関は資料群から未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "citizens": {
+          "text": "地域計画委員会、ウォーク監査参加者、調査回答者、施工ボランティアが関与。参加の全住民代表性は未確認。",
+          "kind": "fact",
+          "refs": [
+            "atlanta-walk-atl-oakland-city-src01",
+            "atlanta-walk-atl-oakland-city-src02"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "Merrill Avenueの道路空間に塗装とボルト固定のフレックスポスト等を設置。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      "relational": {
+        "text": "住民・Propel ATL・市を、地域承認と正式許可の二段階で接続する。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      "financial": {
+        "text": "US$10,000助成が案件を支援。市の一般制度には重点地域の限定的技術支援・資材貸与等があるが、当該案件の総支援額ではない。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02",
+          "atlanta-walk-atl-oakland-city-src03"
+        ]
+      },
+      "intellectual": {
+        "text": "現況データ、ウォーク監査、住民調査、設計図、安全計画、市ガイドが実装知として残る。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src03"
+        ]
+      },
+      "issues": {
+        "text": "歩道が連続しない地域の日常移動を改善し、住民案を公道の正式な変更へ変換する課題。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "現況調査、ウォーク監査、住民調査で危険や使いにくさを把握する。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01"
+        ],
+        "title": "近隣の困りごとを観察する",
+        "steps": [
+          1,
+          6
+        ]
+      },
+      {
+        "text": "ワークショップと地域承認を経て安全計画・設計を作成する。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01"
+        ],
+        "title": "安全計画に合意をつくる",
+        "steps": [
+          2,
+          3
+        ]
+      },
+      {
+        "text": "2025年に保険・資材等の準備を続け、12月に市許可を得た。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01"
+        ],
+        "title": "保険と道路許可を整える",
+        "steps": [
+          3,
+          7
+        ]
+      },
+      {
+        "text": "2026年1月、塗装・ボルト固定等を含む施工を住民と支援者が実施。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ],
+        "title": "住民と歩行レーンをつくる",
+        "steps": [
+          5
+        ]
+      },
+      {
+        "text": "実装を次の道路改善の材料とする方針。長期評価・恒久化の達成は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ],
+        "title": "恒久改善の判断材料にする",
+        "steps": [
+          6,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "地域の歩行安全計画と市許可を伴う設計。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01"
+        ]
+      },
+      {
+        "text": "Merrill Avenueの歩行レーン施工完了。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "住民・運営者は協働経験や歩行環境改善への期待を報告。安全効果の定量測定は示されない。",
+        "kind": "self-report",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      {
+        "text": "事故率、走行速度、継続維持費、恒久化率は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "短期施工と総実装期間を混同しない",
+      "助成額とボランティア・保険を含む全費用を区別",
+      "施工前後の歩行量・速度・使いやすさと維持負担を同条件で測り、恒久化・修正・撤去の判断条件を設定する"
+    ],
+    "backcast": [
+      {
+        "text": "塗料・ポストだけでなく、設計、保険探索、許可申請、合意形成の時間も実装資源として扱う。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src03"
+        ],
+        "title": "見えない準備費を見積もる"
+      },
+      {
+        "text": "住民の希望と道路管理者の安全責任を混同せず、地域合意から市の許可へ渡す段取りを用意する。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src03"
+        ],
+        "title": "二つの承認を設計する"
+      },
+      {
+        "text": "歩行レーンの完成を最終成果にせず、利用者と道路管理者が共有する前後比較を次の投資判断に結び付ける。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ],
+        "title": "完成報告から検証へ進む"
+      }
+    ],
+    "project": {
+      "name": "Merrill Avenue walk lane",
+      "stage": "導入",
+      "overview": {
+        "text": "2023年開始の地域計画を2026年の公道施工へ進めた。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      "output": {
+        "text": "市許可と助成支援を伴う歩行レーン。",
+        "kind": "fact",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src01",
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      "outcome": {
+        "text": "施工完了を確認。定量的な交通安全効果は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "atlanta-walk-atl-oakland-city-src02"
+        ]
+      },
+      "gap": "許可取得・施工と長期安全成果を分ける。"
+    },
+    "sources": []
+  },
+  {
+    "id": "kigali-nyandungu",
+    "updated": "2026-10-02",
+    "summary": "湿地の再生を、洪水対策・生物多様性・日常利用と持続的な公園管理へどう接続するか。 自然資本の復元と公園サービスの運営をつなぎ、建設実績と環境・収支の成果を分けて読む。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "REMAが復元を主導し、開園後は専門管理へ接続した。",
+          "kind": "fact",
+          "refs": [
+            "kigali-nyandungu-src01"
+          ]
+        },
+        "companies": {
+          "text": "QA Venue Solutionsが政府との合意に基づく公園の日常管理・ガイドを担う。",
+          "kind": "fact",
+          "refs": [
+            "kigali-nyandungu-src01"
+          ]
+        },
+        "government": {
+          "text": "REMA・RDB・Rwanda Green Fundが環境、観光、資金の役割を分担。",
+          "kind": "fact",
+          "refs": [
+            "kigali-nyandungu-src01"
+          ]
+        },
+        "startups": {
+          "text": "スタートアップ育成・投資を主機能とする事業ではなく、固有の役割は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "公園は教育・研究利用を案内するが、特定大学の長期運営責任は未確認。",
+          "kind": "unknown",
+          "refs": [
+            "kigali-nyandungu-src03"
+          ]
+        },
+        "citizens": {
+          "text": "地域雇用と教育・レクリエーション利用が位置付けられる。約4,000 jobsの恒久性・所得効果は確認されていない。",
+          "kind": "fact",
+          "refs": [
+            "kigali-nyandungu-src01",
+            "kigali-nyandungu-src03"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "約121haの区域に湿地約70ha・森林約50haを含む。水路・池と園路・案内・飲食施設を整える。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      "relational": {
+        "text": "政府環境機関・観光機関・基金・支援者・専門運営者をつなぐ管理合意。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      "financial": {
+        "text": "開園時事業費RWF45億を環境・気候資金で支える。現行の維持費、料金収入、補助の比率は未確認。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      "intellectual": {
+        "text": "湿地復元、水の流れ・浄化機能、在来種と来訪者教育を組み合わせる知識。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src03",
+          "kigali-nyandungu-src04"
+        ]
+      },
+      "issues": {
+        "text": "都市化による湿地劣化・汚染・洪水リスクと公共緑地需要を同時に扱う。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "都市化や土地利用による生態系の劣化を、洪水・汚染・生物多様性の課題として捉える。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ],
+        "title": "湿地の劣化を課題化する",
+        "steps": [
+          1
+        ]
+      },
+      {
+        "text": "環境保全だけで閉じず、教育・レクリエーション利用と組み合わせる。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01",
+          "kigali-nyandungu-src03"
+        ],
+        "title": "復元と利用の将来像を結ぶ",
+        "steps": [
+          2,
+          3
+        ]
+      },
+      {
+        "text": "森林・湿地、水路・池、歩行・自転車空間を整備する。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ],
+        "title": "自然と利用基盤を再生する",
+        "steps": [
+          5
+        ]
+      },
+      {
+        "text": "政府機関が専門運営者と合意し、2022年7月に一般公開した。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ],
+        "title": "日常管理へ引き継ぐ",
+        "steps": [
+          7
+        ]
+      },
+      {
+        "text": "公園整備の実績から洪水・水質・維持費の測定へ進む必要がある。資料から長期因果効果は確定できない。",
+        "kind": "analysis",
+        "refs": [
+          "kigali-nyandungu-src01",
+          "kigali-nyandungu-src03"
+        ],
+        "title": "環境成果の検証を続ける",
+        "steps": [
+          6
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "湿地・森林の復元と園路・池・情報施設・飲食等の利用基盤。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      {
+        "text": "政府とQA Venue Solutionsの合意に基づく一般開放・日常管理。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "政府・基金は復元と事業期間中のgreen jobs創出を報告。現在の恒久雇用・純所得とは区別する。",
+        "kind": "self-report",
+        "refs": [
+          "kigali-nyandungu-src01",
+          "kigali-nyandungu-src03"
+        ]
+      },
+      {
+        "text": "洪水被害軽減、水質改善の因果評価、運営収支の自立性は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "整備面積と環境改善の実測を区別",
+      "建設期雇用と恒久雇用・地域所得を区別",
+      "降雨条件を揃えた流量・水質と維持費・利用者層を追跡し、環境機能と公平なアクセスが両立しているか評価する"
+    ],
+    "backcast": [
+      {
+        "text": "利用施設をつくるだけでなく、水路・植生・生息環境を継続管理する費用と責任を先に分ける。",
+        "kind": "analysis",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ],
+        "title": "自然資本の管理費を残す"
+      },
+      {
+        "text": "専門運営への引継ぎ時に、環境保全と教育・住民利用を契約・評価の対象として残すことが重要となる。",
+        "kind": "analysis",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ],
+        "title": "委託で公共目的を失わない"
+      },
+      {
+        "text": "植栽・面積・雇用の報告を、洪水被害削減や採算成立の証拠として置き換えない。",
+        "kind": "analysis",
+        "refs": [
+          "kigali-nyandungu-src01",
+          "kigali-nyandungu-src03"
+        ],
+        "title": "出力を成果へ短絡しない"
+      }
+    ],
+    "project": {
+      "name": "湿地復元からNyandungu Eco-Parkの供用へ",
+      "stage": "導入",
+      "overview": {
+        "text": "2016年開始の復元を2022年の公園運営に接続した。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      "output": {
+        "text": "復元区域と歩行・教育・観光施設、専門管理体制。",
+        "kind": "fact",
+        "refs": [
+          "kigali-nyandungu-src01"
+        ]
+      },
+      "outcome": {
+        "text": "環境再生・雇用を運営側が報告する一方、長期環境・財務効果は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "kigali-nyandungu-src01",
+          "kigali-nyandungu-src03"
+        ]
+      },
+      "gap": "政府報告の事業実績と独立した長期評価を分ける。"
+    },
+    "sources": []
+  },
+  {
+    "id": "milan-piazze-aperte",
+    "updated": "2026-10-02",
+    "summary": "暫定的な道路の広場化を、市民との管理協定と恒久改修の判断へつなぐ。 小さく試す設計を、維持する合意と恒久投資の判断につなぐ三段階を学ぶ。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "市の公共空間・参加担当が公募と協働を進める。",
+          "kind": "fact",
+          "refs": [
+            "milan-piazze-aperte-src01",
+            "milan-piazze-aperte-src04"
+          ]
+        },
+        "companies": {
+          "text": "AMAT等が協力し、2026年公募では民間スポンサー・寄付も対象。資金提供が決裁権移管を意味するわけではない。",
+          "kind": "fact",
+          "refs": [
+            "milan-piazze-aperte-src01",
+            "milan-piazze-aperte-src04"
+          ]
+        },
+        "government": {
+          "text": "Comuneと各Municipioが公共空間・地域の協働をつなぐ。恒久化の決定は市に残る。",
+          "kind": "fact",
+          "refs": [
+            "milan-piazze-aperte-src01",
+            "milan-piazze-aperte-src02"
+          ]
+        },
+        "startups": {
+          "text": "起業育成の制度ではなく、スタートアップ参加を中核に位置付ける根拠は未確認。",
+          "kind": "unknown",
+          "refs": []
+        },
+        "academia": {
+          "text": "Piazza Tiranaの共同設計にはPolitecnicoの学生・教員が参加。全広場共通の大学関与ではない。",
+          "kind": "fact",
+          "refs": [
+            "milan-piazze-aperte-src02"
+          ]
+        },
+        "citizens": {
+          "text": "住民、商店、団体等が提案・施工・活動・手入れに関わり、協定に役割を定める。",
+          "kind": "fact",
+          "refs": [
+            "milan-piazze-aperte-src01",
+            "milan-piazze-aperte-src02"
+          ]
+        }
+      },
+      "tangible": {
+        "text": "道路・交差点・学校周辺を塗装、家具、植栽等で歩行・滞在空間へ転用する。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ]
+      },
+      "relational": {
+        "text": "市と地域の協働協定を用いて、構想・活動・手入れを接続する。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src02"
+        ]
+      },
+      "financial": {
+        "text": "資金用途を分けて読む。フォーラムの€30,000は活動助成で、2026年スポンサー公募は整備・更新資金の募集段階。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src03",
+          "milan-piazze-aperte-src04"
+        ]
+      },
+      "intellectual": {
+        "text": "公募・共同設計・利用評価を反復し、恒久化の判断材料とする。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ]
+      },
+      "issues": {
+        "text": "小規模な暫定整備を一過性イベントで終わらせず、管理能力と恒久投資へつなぐ課題。",
+        "kind": "analysis",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ]
+      }
+    },
+    "functions": [
+      {
+        "text": "2019年地区公募、2022年学校周辺公募により、候補と協働相手を集める。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ],
+        "title": "場所と提案を募る",
+        "steps": [
+          1,
+          3
+        ]
+      },
+      {
+        "text": "市民・団体等と設計や利用を検討し、管理・活動を協働協定に結び付ける。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src02"
+        ],
+        "title": "共同設計と協定をつくる",
+        "steps": [
+          2,
+          3
+        ]
+      },
+      {
+        "text": "塗装・家具等で歩行・滞在空間を設ける。2025年集計では52広場。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ],
+        "title": "暫定的な空間を実装する",
+        "steps": [
+          5
+        ]
+      },
+      {
+        "text": "協定相手と課題を把握し、必要な改善を検討する。全地点の同一条件評価ではない。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ],
+        "title": "利用と課題を見直す",
+        "steps": [
+          6
+        ]
+      },
+      {
+        "text": "評価と予算に基づく恒久化を検討。2026年は寄付・スポンサーによる改修公募を追加。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src04"
+        ],
+        "title": "恒久化と更新資金へ渡す",
+        "steps": [
+          7,
+          8
+        ]
+      }
+    ],
+    "outputs": [
+      {
+        "text": "2025年12月集計の52広場と35協働協定。施工と管理協定の数は一致しない。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ]
+      },
+      {
+        "text": "Piazza Tiranaの協働協定更新、活動助成、2026年の改修資金公募。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src02",
+          "milan-piazze-aperte-src03",
+          "milan-piazze-aperte-src04"
+        ]
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "市は広場と市民活動の形成を報告し、一部広場の恒久整備を進める方針を示す。",
+        "kind": "self-report",
+        "refs": [
+          "milan-piazze-aperte-src01"
+        ]
+      },
+      {
+        "text": "全広場に共通する事故減・商業便益・健康効果、継続率、維持負担の定量評価は未確認。",
+        "kind": "unknown",
+        "refs": []
+      }
+    ],
+    "outcomeGaps": [
+      "施工数・協定数・恒久化数を別管理",
+      "行政予算と市民労働・協賛の負担配分",
+      "場所ごとの利用者層・維持作業・費用を定期点検し、恒久化の基準と予算順位を公開する"
+    ],
+    "backcast": [
+      {
+        "text": "暫定整備、日常管理の協定、恒久改修を別々の到達点として設計すれば、施工後に責任が消えることを防ぎやすい。",
+        "kind": "analysis",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src02"
+        ],
+        "title": "三つの出口を分ける"
+      },
+      {
+        "text": "参加団体の労働と公共財源を同じ費用表に置き、市民参加を行政維持費の無条件な節約と解釈しない。",
+        "kind": "analysis",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src03"
+        ],
+        "title": "協働を資金の代替にしない"
+      },
+      {
+        "text": "利用と維持の実態を集め、恒久化やスポンサー活用を公共性と優先順位の判断につなげる。",
+        "kind": "analysis",
+        "refs": [
+          "milan-piazze-aperte-src01",
+          "milan-piazze-aperte-src04"
+        ],
+        "title": "選定条件を更新する"
+      }
+    ],
+    "project": {
+      "name": "Piazza Tiranaの協働とPiazze Aperteの制度化",
+      "stage": "継続運用",
+      "overview": {
+        "text": "Tiranaでは市民・商店・大学等が共同設計し、2022年に協働合意を再設計・署名。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src02"
+        ]
+      },
+      "output": {
+        "text": "公共空間の再編と、スポーツ・遊び等の活動を担う協働合意。",
+        "kind": "fact",
+        "refs": [
+          "milan-piazze-aperte-src02"
+        ]
+      },
+      "outcome": {
+        "text": "市は地域の社会空間としての利用を説明。独立した長期成果評価ではない。",
+        "kind": "self-report",
+        "refs": [
+          "milan-piazze-aperte-src02"
+        ]
+      },
+      "gap": "個別の協定運用を市内全広場の成果へ一般化しない。"
+    },
+    "sources": []
   }
 ]

@@ -1,13 +1,38 @@
-# Atlas maintenance record — 2026-09-28
+# Atlas maintenance record — 2026-10-02
 
 ## Canonical release
 
 The public Atlas remains at https://mobilitydlab.com/co-creation-atlas/ in
 MDL20241119/MDL20241119.github.io, main branch. Only this directory is changed by
 this release. Read the latest remote revision before continuing; do not replace
-the 87-case dataset with an earlier 28-case draft.
+the 97-case dataset with an earlier 87- or 28-case draft.
 
-## Work consolidated
+## 2026-10-02 addition
+
+Added ten source-backed cases requested for the existing Atlas. Current totals:
+97 unique articles, 23 countries, 67 co-creation / 59 place entries (29 shared),
+113 photos (109 local and four provider embeds). The original 87 research records
+are preserved. New cases carry six human-capital roles, five further input
+categories, five concrete value-creation functions mapped to the existing eight
+steps, outputs/outcomes, three backcasting mechanisms, a concrete project, and
+lens-specific comparisons. Eight steps are not a claim that every case performs
+all eight functions.
+
+Independent review checked the material new status, financial, governance and
+outcome claims. Source-specific references were corrected for the concrete
+project blocks. Jakarta finance is rounded and explicitly 2024; TOD-specific
+profit is unverified. Sidewalk is a terminated planning collaboration, not a
+completed smart city. Shiojiri budget amounts are estimates, not actual costs.
+New image provenance/rights were checked and all local files decoded with
+matching dimensions. Four additions use explicitly labelled context photos.
+
+Static build and 126-page local link/anchor checks pass. Desktop public browser
+checks are recorded at deployment; local browser execution and localhost preview
+are restricted in the cloud environment, so no mobile-device execution is claimed.
+No QA-only pages are published. The catalog PDF/images remain the dated 2026-09-28
+edition; its web companion identifies this historical count scope.
+
+## 2026-09-28 work consolidated
 
 | Workstream | State in this release |
 | --- | --- |

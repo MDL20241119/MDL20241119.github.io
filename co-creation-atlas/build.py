@@ -28,7 +28,7 @@ for item in MEDIA:
         raise ValueError('写真ファイルが空です: '+item['local'])
 COUNTERS=json.loads((ROOT/'data/counterpoints.json').read_text())
 THEMES={'city':('まち・暮らしをよくする','市民の課題、地域での共創・実証を知りたい。'),'people':('仲間・チームをつくる','異なる専門性を持つ人の集め方を知りたい。'),'prototype':('試作・実証の場をつくる','設備・専門家・現場をどうつなぐか知りたい。'),'business':('事業化につなげる','実証の先の購入・契約・事業移管を知りたい。'),'digital':('データ・仮想空間で試す','都市モデルやデジタルツインを活かしたい。'),'future':('アートから未来を考える','科学や表現から、新しい問いを見つけたい。')}
-DATE='2026.09.28'
+DATE='2026.10.02'
 BASE='https://mobilitydlab.com/co-creation-atlas/'
 STAGES=['','課題を捉える','未来を問う','仲間をつくる','デジタルで試す','現物をつくる','現場で確かめる','事業にする','社会へ広げる']
 TYPES={'university':'大学・研究機関','company':'企業・事業化制度','city':'都市・地域の実証','network':'産業・研究ネットワーク'}
@@ -82,7 +82,7 @@ def head(title,description,url,prefix=''):
 def header(prefix=''):
     nav=f'<a href="{prefix}?lens=co#explore">共創を探す</a><a href="{prefix}?lens=place#explore">まちづくりを探す</a><a href="{prefix}learn/first-co-creation/">基礎を学ぶ</a><a href="{prefix}#start">8工程で学ぶ</a><a href="{prefix}#explore">事例を探す</a><a href="{prefix}learn/choose/">比較する</a><a href="{prefix}learn/workbook/">実践シート</a><a href="{prefix}learn/library/">原典</a>'
     return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'
-def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 3.1 · 調査確認日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'+'<script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
+def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 3.2 · 更新日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'+'<script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
 def video_dialog():return '<dialog class="video-dialog" id="video-dialog"><div class="dialog-top"><strong class="dialog-title">公式動画</strong><button type="button" data-close>閉じる ×</button></div><div class="dialog-body"></div><p>動画が再生できない場合は、各項目の「公式サイトで見る」をご利用ください。</p></dialog>'
 def cards():
     out=[]
@@ -178,7 +178,8 @@ def build_index():
 def build_case(c):
     prefix='../../';ms=media_for(c);m=ms[0] if ms else None
     name=c['name'];title=c.get('nameJa') or name
-    out=[head(f'{name}｜{c["tagline"]}',c['lead'],BASE+path(c),prefix),header(prefix),f'<main id="main"><div class="detail-crumb"><a href="../../">WORLD CO-CREATION ATLAS</a> / <a href="../../?stage={c["stage"]}#explore">{c["stage"]:02d} {STAGES[c["stage"]]}</a> / CASE {c["number"]}</div><section class="detail-hero"><div class="detail-title"><p class="eyebrow">CASE {c["number"]} / {e(c["country"])} / {e(c["city"])}</p><div class="display">{e(name)}</div><h1>{e(title)}</h1><p class="tagline">{e(c["tagline"])}</p><p>{e(c["lead"])}</p><div style="margin-top:24px">{external(c["sources"][0]["url"],"公式サイトを見る","btn yellow")}</div><p class="meta" style="margin-top:22px">{TYPES[c["type"]]} · 調査確認日 {DATE}</p></div>']
+    case_date=CHAINS[c["id"]]["updated"].replace("-", ".")
+    out=[head(f'{name}｜{c["tagline"]}',c['lead'],BASE+path(c),prefix),header(prefix),f'<main id="main"><div class="detail-crumb"><a href="../../">WORLD CO-CREATION ATLAS</a> / <a href="../../?stage={c["stage"]}#explore">{c["stage"]:02d} {STAGES[c["stage"]]}</a> / CASE {c["number"]}</div><section class="detail-hero"><div class="detail-title"><p class="eyebrow">CASE {c["number"]} / {e(c["country"])} / {e(c["city"])}</p><div class="display">{e(name)}</div><h1>{e(title)}</h1><p class="tagline">{e(c["tagline"])}</p><p>{e(c["lead"])}</p><div style="margin-top:24px">{external(c["sources"][0]["url"],"公式サイトを見る","btn yellow")}</div><p class="meta" style="margin-top:22px">{TYPES[c["type"]]} · 調査確認日 {case_date}</p></div>']
     if m:out.append(photo(m,cls='detail-photo',prefix=prefix,loading='eager'))
     else:out.append(f'<div class="atlas-photo-missing"><p class="eyebrow">{e(c["entry"]["unit"])}</p><h2>{e(c["tagline"])}</h2><p>写真の転載条件は確認中です。現場の写真は公式サイトでご覧ください。</p>{external(c["sources"][0]["url"],"公式サイトで見る")}</div>')
     out.append(f'</section><dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
@@ -220,7 +221,12 @@ def build_case(c):
     out.append('</section></article></div>')
     out.append(learning.case_bridge(c))
 
-    out.append(atlas_routes.related(c,DATA,CHAINS)+'</main>'+footer()+video_dialog()+'</body></html>')
+    # Retain the published edition on untouched research articles; adding cases
+    # does not reissue or re-verify their existing content.
+    article_footer=footer()
+    if CHAINS[c['id']]['updated'] < '2026-10-02':
+        article_footer=article_footer.replace('学習版 3.2 · 更新日 '+DATE,'学習版 3.1 · 調査確認日 2026.09.28')
+    out.append(atlas_routes.related(c,DATA,CHAINS)+'</main>'+article_footer+video_dialog()+'</body></html>')
     dest=ROOT/'cases'/c['id'];dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(''.join(out))
 
 learning.configure(DATA,STAGES,MEDIA,head,header,footer,photo)

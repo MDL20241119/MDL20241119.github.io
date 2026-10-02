@@ -2207,5 +2207,258 @@
       "seoul-innovation-park-src03",
       "seoul-innovation-park-src04"
     ]
+  },
+  {
+    "caseId": "knowroute-shiojiri",
+    "unit": "program",
+    "unitNote": "全国ブランド「のるーと」の代表値ではなく、塩尻市の路線バス再編と片丘地区の導入・評価を対象とする。アプリの機能、自治体の実施責任、許可を持つ運送事業者の役割を分けて読む。",
+    "challenge": "予約配車の導入を、生活交通の再編と継続予算の判断につなぐ。",
+    "needs": [
+      "生活交通の不足を捉える",
+      "実施と運送の責任を結ぶ",
+      "配車を現場に組み込む",
+      "利用増と支障を一緒に見る"
+    ],
+    "participation": "住民・来訪者が利用する公共交通。予約手段の案内と利用支援があるが、利用することと運行方針の最終決定権は別である。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "路線の一部代替と予約型運行の供用。",
+    "confirmed": "片丘では併存便を含む利用増を市が報告。採算や全域への因果効果は未確認。",
+    "unknowns": "片丘の延べ利用増は地域振興バス全体の比較で、AI単独の因果効果ではない。長い待ち時間と運行委託費増の課題があり、利用増を黒字化と同義にしない。現行の全地区別運送契約・データ管理分担は未確認。",
+    "sourceIds": [
+      "knowroute-shiojiri-src01",
+      "knowroute-shiojiri-src02",
+      "knowroute-shiojiri-src03",
+      "knowroute-shiojiri-src04",
+      "knowroute-shiojiri-src05"
+    ]
+  },
+  {
+    "caseId": "shenzhen-bus-group-electrification",
+    "unit": "program",
+    "unitNote": "深圳市全体の政策を背景に、Shenzhen Bus Groupの車両調達・リース・充電運営モデルを分析する。市全体の車両数と一事業者の台数、過去の補助制度と現在の制度を分ける。",
+    "challenge": "車両、充電、金融、保証の責任を組み替え、全車電動化を運行へつなぐ。",
+    "needs": [
+      "運行要件を設備条件にする",
+      "資産と責任を分ける",
+      "車両と充電を配備する",
+      "初期不具合から契約を見直す"
+    ],
+    "participation": "バス利用者がサービスを利用し運賃を払う。調達・電池選定に対する住民の正式な決定権は未確認。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "車両・充電・金融・保証を組み合わせた日常バス運行。",
+    "confirmed": "全車電動化は確認。現在の無補助採算は未確認。",
+    "unknowns": "初期モデルには電池品質の問題と充電側の損失、運行支障があった。全車電動化の達成は確認できるが、無補助での採算、現在の更新契約、電源構成を含む排出量の独立実測は本カードで確認していない。",
+    "sourceIds": [
+      "shenzhen-bus-group-electrification-src01",
+      "shenzhen-bus-group-electrification-src02",
+      "shenzhen-bus-group-electrification-src03"
+    ]
+  },
+  {
+    "caseId": "kashiwanoha-aems",
+    "unit": "district",
+    "unitNote": "対象は柏の葉のAEMSと街区横断の電力運用。既掲載のKOILやみんなのまちづくりスタジオの共創活動と区別する。2014年の導入と、2025年の新規市場向け実証は段階が異なる。",
+    "challenge": "複数施設の設備・利用時間・運営責任を束ね、地区でエネルギーを使う。",
+    "needs": [
+      "地区の需要を可視化する",
+      "役割を設備仕様にする",
+      "街区間で運用する",
+      "新しい市場条件を試す"
+    ],
+    "participation": "HEMS等を通じ利用状況の可視化や省エネ情報に接する。参加・閲覧が設備投資や非常時配分の決定権を意味するものではない。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "複数施設と分散電源をつなぐ運用基盤。",
+    "confirmed": "導入・運用の事後報告あり。新規市場事業の採算は未確認。",
+    "unknowns": "事後資料に導入は確認できるが、独立評価による長期削減量と投資回収は未確認。2014年公表の約26%ピークカットを現行の実測削減値に転用しない。2025年実証の市場売却・利益の成立も確認していない。",
+    "sourceIds": [
+      "kashiwanoha-aems-src01",
+      "kashiwanoha-aems-src02",
+      "kashiwanoha-aems-src03",
+      "kashiwanoha-aems-src04"
+    ]
+  },
+  {
+    "caseId": "jakarta-mrt-tod",
+    "unit": "program",
+    "unitNote": "PT MRT Jakartaの運営と南北線第1期沿線のTOD調整を対象とする。全都市の交通政策や、用地所有者のすべての開発利益を同社に帰属させない。会計は2024年、利用実績は2025年を確認した。",
+    "challenge": "鉄道の利用、公共補助、駅周辺の開発・運営を別の収支として接続する。",
+    "needs": [
+      "権限と対象を明確にする",
+      "駅と地区の主体をつなぐ",
+      "鉄道を日常運行する",
+      "非運賃収入を組み合わせる"
+    ],
+    "participation": "利用者は交通サービスを使い、周辺住民・土地所有者・テナントは地区調整の影響を受ける。利用者数は同意や公平な便益配分の指標ではない。",
+    "exits": [
+      "public-service",
+      "local-operation"
+    ],
+    "exitNote": "沿線所有者を調整するTOD主要運営者の機能と鉄道供用。",
+    "confirmed": "2025年の利用実績を運営者が報告。TODの独立採算は未確認。",
+    "unknowns": "2024年年報の運賃収入には表間の小差があるため概数で示す（差の理由は未解消）。2025年年報は公式一覧・検索で確認できなかったため、2024年数値を最新の2026年会計として扱わない。TOD単独の利益、補助依存低下、地価上昇の公平な還元は未確認。利用増をTODだけの因果効果としない。",
+    "sourceIds": [
+      "jakarta-mrt-tod-src01",
+      "jakarta-mrt-tod-src02",
+      "jakarta-mrt-tod-src03",
+      "jakarta-mrt-tod-src04",
+      "jakarta-mrt-tod-src05"
+    ]
+  },
+  {
+    "caseId": "sidewalk-toronto",
+    "unit": "program",
+    "unitNote": "2017〜2020年のSidewalk LabsとWaterfront Torontoの計画開発協働を対象とする反例。後継のQuayside地区開発は別事業として継続しており、Sidewalkの成果に含めない。",
+    "challenge": "都市ビジョンの合意と、土地・予算・データ・実装の権限を分ける。",
+    "needs": [
+      "都市の将来像を提案する",
+      "協働の範囲を契約にする",
+      "技術と公共条件を審査する",
+      "成立しない場合に終了する"
+    ],
+    "participation": "公共協議とデータ等の懸念の検討が進められた。意見聴取件数は住民全体の合意や拒否権付与を意味しない。",
+    "exits": [
+      "research"
+    ],
+    "exitNote": "構想・協議・契約終了の記録。恒久的なSidewalk都市運営には未到達。",
+    "confirmed": "2020年5月17日に契約終了。後継事業は旧計画の実績に含めない。",
+    "unknowns": "撤退をプライバシー批判のみの結果と断定しない。市報告が記録する会社の理由はコロナ下の経済・不動産市場の不確実性と財務成立性であり、全原因の因果分解ではない。後継Quaysideの住宅数・脱炭素計画をSidewalkの完成成果としない。",
+    "sourceIds": [
+      "sidewalk-toronto-src01",
+      "sidewalk-toronto-src02",
+      "sidewalk-toronto-src03",
+      "sidewalk-toronto-src04",
+      "sidewalk-toronto-src05"
+    ]
+  },
+  {
+    "caseId": "king-street-toronto",
+    "unit": "program",
+    "unitNote": "Bathurst–Jarvis間の代表位置。回廊全体と個別交差点の観測を区別する。",
+    "challenge": "道路配分を変えた後も、規制順守と運行品質を維持するには誰が何を担うか。",
+    "needs": [
+      "道路規制の決定権",
+      "交通・取締り・運行の連携",
+      "整備費と整理員の継続財源",
+      "工事迂回を含めた運行データ"
+    ],
+    "participation": "市議会が恒久化と規制例外等を決定。市・TTCが専門的な設計・運用を担う。住民・BIA・障害者支援・交通利用者団体の作業部会は意見収集の場で、道路決定権の移管ではない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "供用・運営を確認した範囲と、恒久化・横展開の予定を区別する。",
+    "confirmed": "恒久化と2025年の運用更新、追加整備予算を確認。2026年予定工事の全完了は未確認。",
+    "unknowns": "整理員配置時の45–65分から17–21分への所要時間改善は市報告の条件付き観測。一般平均や整理員単独の因果効果にはしない。2023年には迂回交通・規制違反で悪化。自動取締りは2025年報告では技術・制度検証段階。",
+    "sourceIds": [
+      "king-street-toronto-src01",
+      "king-street-toronto-src02",
+      "king-street-toronto-src03"
+    ]
+  },
+  {
+    "caseId": "aspern-seestadt",
+    "unit": "program",
+    "unitNote": "旧飛行場240haの段階開発地区の代表位置。交通分担率は地区の調査で、ウィーン市全域ではない。",
+    "challenge": "新しい街の駐車場・公共交通・生活空間を、継続的な交通サービスの財源まで一体設計する。",
+    "needs": [
+      "まとまった開発地区と計画権限",
+      "広域公共交通への接続",
+      "駐車場とサービス費用を結ぶ制度",
+      "開発段階に応じた運営引継ぎ"
+    ],
+    "participation": "2007年のマスタープランは市議会が採択。Wien 3420が開発の実務を調整し、Wiener Linienと交通サービスを連携する。利用者調査の存在は住民による開発最終決定権を意味しない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "供用・運営を確認した範囲と、恒久化・横展開の予定を区別する。",
+    "confirmed": "2025年のシェア自転車8拠点への統合と地区交通分担の報告を確認。街全体の完成は将来段階。",
+    "unknowns": "公式報告の徒歩・自転車46.6%、公共交通31.7%、私的動力交通21.7%は交通分担率であり、40/40/20の計画値とは区別。居住者の自己選択、公共交通先行投資等を含み、基金単独の効果を証明しない。調査母数・代表性や基金の詳細収支は追加確認が必要。",
+    "sourceIds": [
+      "aspern-seestadt-src01",
+      "aspern-seestadt-src02",
+      "aspern-seestadt-src03",
+      "aspern-seestadt-src04"
+    ]
+  },
+  {
+    "caseId": "atlanta-walk-atl-oakland-city",
+    "unit": "program",
+    "unitNote": "Merrill Avenueを含むOakland City近隣の代表位置。ピンは施工区間の正確な境界ではない。",
+    "challenge": "住民の道路改善案を、許可・保険・資金・維持責任のある実装へつなぐ。",
+    "needs": [
+      "住民の調査・合意形成能力",
+      "市の許可と設計基準",
+      "保険と維持責任",
+      "小規模助成と施工支援"
+    ],
+    "participation": "住民が安全計画・設計を承認し、市が道路使用の正式許可を出す二段階。ボランティア施工を行政の許可不要の活動とみなさない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "供用・運営を確認した範囲と、恒久化・横展開の予定を区別する。",
+    "confirmed": "2026年1月の歩行レーン施工完了、US$10,000助成、市許可までの経緯を確認。恒久化や事故減少は未確認。",
+    "unknowns": "2023年開始から2026年施工まで約3年を要し、年表には保険確保の継続作業が記録される。完成は事故・速度・交通弱者のアクセス改善の実測証拠ではない。維持契約の個別内容、全費用、恒久化条件は未確認。",
+    "sourceIds": [
+      "atlanta-walk-atl-oakland-city-src01",
+      "atlanta-walk-atl-oakland-city-src02",
+      "atlanta-walk-atl-oakland-city-src03"
+    ]
+  },
+  {
+    "caseId": "kigali-nyandungu",
+    "unit": "program",
+    "unitNote": "Nyandungu湿地公園の代表位置。約121haの事業区域であり、キガリ全湿地の効果を表さない。",
+    "challenge": "湿地の再生を、洪水対策・生物多様性・日常利用と持続的な公園管理へどう接続するか。",
+    "needs": [
+      "湿地と流域への管理権限",
+      "気候・環境投資資金",
+      "復元と来訪者管理の専門性",
+      "公共目的と運営契約の接続"
+    ],
+    "participation": "政府環境機関が復元を実施し、REMA・RDBと運営者の合意が管理の根拠。地域の雇用・利用参加は確認できるが、住民への土地・運営最終決定権の移管は未確認。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "供用・運営を確認した範囲と、恒久化・横展開の予定を区別する。",
+    "confirmed": "2022年の一般開放、政府と運営者の合意、湿地・森林・利用施設の整備を確認。現行サイトの利用案内も継続。",
+    "unknowns": "湿地の洪水・浄化機能は事業目的・運営側説明であり、今回の資料では被害額や水質の比較実測、反事実評価を確認していない。約4,000のgreen jobsは事業期間の報告で、現在の恒久雇用者数ではない。全運営収支・料金の包摂性も未確認。",
+    "sourceIds": [
+      "kigali-nyandungu-src01",
+      "kigali-nyandungu-src03",
+      "kigali-nyandungu-src04"
+    ]
+  },
+  {
+    "caseId": "milan-piazze-aperte",
+    "unit": "program",
+    "unitNote": "Piazza Derganoの代表位置。市内複数広場の制度を扱い、当該広場だけの数字とはしない。",
+    "challenge": "暫定的な道路の広場化を、市民との管理協定と恒久改修の判断へつなぐ。",
+    "needs": [
+      "道路・公共空間の権限",
+      "市民提案と共同設計の窓口",
+      "協定で整理する日常管理",
+      "評価と恒久化予算の接続"
+    ],
+    "participation": "市民は提案・共同設計・活動・管理に参加し、市と協働協定を結ぶ。恒久化は市の評価・優先順位・予算判断。協定を全住民の同意や道路所有権の移転とみなさない。",
+    "exits": [
+      "public-service"
+    ],
+    "exitNote": "供用・運営を確認した範囲と、恒久化・横展開の予定を区別する。",
+    "confirmed": "2025年12月市更新で52広場・35協働協定。2026年8月には改修向け寄付・スポンサー公募を公開。全広場の恒久化は意味しない。",
+    "unknowns": "広場数・歩行化面積・協定数は実装の出力で、全地域の健康・商業・安全の因果効果ではない。52広場と35協定は2025年12月の集計。恒久化は予算等に依存し、参加する団体の能力差や無償労働負担、総維持費の評価は未確認。",
+    "sourceIds": [
+      "milan-piazze-aperte-src01",
+      "milan-piazze-aperte-src02",
+      "milan-piazze-aperte-src03",
+      "milan-piazze-aperte-src04"
+    ]
   }
 ]
