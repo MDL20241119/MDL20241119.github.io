@@ -1,0 +1,68 @@
+{
+  "executed_at": "2026-09-26T07:33:02.196Z",
+  "environment": "local synthetic data; Node 24 / SQLite",
+  "suites": [
+    {
+      "suite": "integration",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/integration.test.ts"
+      ],
+      "exit_code": 0,
+      "tests": 30,
+      "log": "tests/results/integration.txt"
+    },
+    {
+      "suite": "domain",
+      "command": [
+        "node",
+        "--test",
+        "tests/domain.test.mjs"
+      ],
+      "exit_code": 0,
+      "tests": 22,
+      "log": "tests/results/domain.txt"
+    },
+    {
+      "suite": "sqlite",
+      "command": [
+        "python3",
+        "tests/concurrency_test.py"
+      ],
+      "exit_code": 0,
+      "tests": 4,
+      "log": "tests/results/sqlite.txt"
+    },
+    {
+      "suite": "guest-ui",
+      "command": [
+        "node",
+        "--import",
+        "tsx",
+        "--test",
+        "tests/guest-ui.test.ts"
+      ],
+      "exit_code": 0,
+      "tests": 12,
+      "log": "tests/results/guest-ui.txt"
+    }
+  ],
+  "total_local_tests": 68,
+  "external_connections_tested": 0,
+  "full_acceptance_complete": false,
+  "integration_test_sha256": "854a4cd651323f359636443f72639326b6d9d6ead37accd37849cd2e6160fe3a",
+  "browser_checks": [
+    "Anonymous root opens without login and shows only synthetic tab-local state",
+    "Charge request changes home action to recipient acknowledgment; no vehicle control",
+    "Guest ride selection, exact confirmation, reserved list, cancellation review and cancelled result",
+    "390/320 CSS px iframes: no horizontal overflow; 390 px at 125% text: four screens reviewed",
+    "Mobile charge and booking dialogs fit their viewport; charge request button remains visible while scrolling",
+    "Actual devices, senior usability study, complete WCAG audit and external interoperability not tested"
+  ],
+  "limitations": [
+    "Direct navigation to anonymous API response blocked by browser client; no runtime HTTP-status claim. Source boundary and business authorization tests pass."
+  ]
+}
