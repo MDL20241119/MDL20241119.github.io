@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import { mutationSchema,dependencyError } from '../lib/validate.ts';
+import { dateLabel,isDue } from '../lib/model.ts';
+const item={id:'TEST-1',kind:'task',title:'確認する',status:'unconfirmed',dueDate:null,dueCertainty:'unknown',priority:'normal'};
+assert.equal(mutationSchema.safeParse({record:item,revision:0}).success,true);
+assert.equal(mutationSchema.safeParse({record:{...item,dueDate:'2026-02-30'},revision:0}).success,false);
+assert.equal(mutationSchema.safeParse({record:{...item,privateNotes:'private'},revision:0}).success,false);
+assert.equal(mutationSchema.safeParse({record:{...item,status:'unknown'},revision:0}).success,false);
+assert.equal(dependencyError({id:'a',dependencies:['b']},[{id:'b',dependencies:['a']}]),'依存関係が循環しています。');
+assert.equal(dependencyError({id:'a',dependencies:['z']},[]),'依存先 z が見つかりません。');
+assert.equal(dependencyError({id:'a',dependencies:['b']},[{id:'b',dependencies:[]}]),null);
+assert.equal(dateLabel('2026-10'),'2026年10月');
+assert.equal(isDue({dueDate:null,status:'unconfirmed',archived:false},'2026-10-06'),false);
+assert.equal(isDue({dueDate:'2026-10-13',status:'unconfirmed',archived:false},'2026-10-06'),true);
+assert.equal(isDue({dueDate:'2026-10-14',status:'unconfirmed',archived:false},'2026-10-06'),false);
+assert.equal(isDue({dueDate:'2026-10-07',status:'done',archived:false},'2026-10-06'),false);
+console.log('PASS: validation, invalid dates, private-field rejection, dependency cycles, date granularity, due window');

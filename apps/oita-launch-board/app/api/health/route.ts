@@ -1,0 +1,2 @@
+import { env } from 'cloudflare:workers';
+export async function GET(){const started=Date.now();try{if(!env.DB)return Response.json({ok:false,stage:'database-unavailable'},{status:503,headers:{'Cache-Control':'no-store'}});await env.DB.prepare('SELECT 1 AS ok').first();return Response.json({ok:true,db:'ready',elapsedMs:Date.now()-started},{headers:{'Cache-Control':'no-store'}})}catch{console.error('health: database check failed');return Response.json({ok:false,stage:'database-check'},{status:503,headers:{'Cache-Control':'no-store'}})}}
