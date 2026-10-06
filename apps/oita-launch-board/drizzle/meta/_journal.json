@@ -15,6 +15,13 @@
       "when": 1791267945966,
       "tag": "0001_fast_namorita",
       "breakpoints": true
+    },
+    {
+      "idx": 2,
+      "version": "6",
+      "when": 1791325857684,
+      "tag": "0002_furry_red_shift",
+      "breakpoints": true
     }
   ]
 }

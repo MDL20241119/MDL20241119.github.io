@@ -1,0 +1,2 @@
+import {candidateRows} from '@/lib/candidates';
+export default function CandidateList({note}:{note:string}){const rows=candidateRows(note);if(!rows.length)return null;return <section className="candidate-list"><h3>説明・参画打診の候補 <span>{rows.length}</span></h3><p>参画・発起人への就任は未確約です。「要確認」の名称は確認してから連絡します。</p><div>{rows.map((r,i)=><div className="candidate-row" key={i}><span>{r.category}</span><b>{r.name}</b><p>{r.nextAction||'課題を聞き、参画の意向を確認する'}</p></div>)}</div><small>一覧はこのタスクの共有メモと同じ内容です。</small></section>}

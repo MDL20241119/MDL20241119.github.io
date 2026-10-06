@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {DatabaseSync} from 'node:sqlite';
+import {TASK_GROUPS,groupKey,taskSummary,dependencyIds} from '../lib/hierarchy.ts';
+import {rebaseDraft} from '../lib/edit-conflict.ts';
+import {graphSignature,GRAPH_SIGNATURE_SQL} from '../lib/graph-state.ts';
+import {mutationSchema} from '../lib/validate.ts';
+const fixture=(id,extra={})=>({id,kind:'task',title:'テスト',area:'',owner:'担当未定',status:'unconfirmed',dueDate:null,dueCertainty:'unknown',dependencies:[],priority:'normal',revision:1,archived:false,...extra});
+const tasks=Array.from({length:42},(_,i)=>fixture(`OMC-${String(i+1).padStart(3,'0')}`));
+assert.deepEqual(TASK_GROUPS.map(g=>tasks.filter(r=>g.children.some(s=>s.id===groupKey(r))).length),[21,8,7,6]);
+assert.equal(TASK_GROUPS.flatMap(g=>g.children).length,13);assert(tasks.every(r=>groupKey(r)!=='unclassified'));
+assert.equal(groupKey(fixture('NEW',{groupKey:'training',area:'設立準備'})),'training');assert.equal(groupKey(fixture('NEW',{area:'設立準備'})),'launch-plan');assert.equal(groupKey(fixture('NEW',{area:'未定の分類'})),'unclassified');
+const before=fixture('A',{owner:'元担当',dueDate:'2030-01-29'}),draft={...before,title:'自分の編集'},latest={...before,owner:'別の担当',revision:2};const rebased=rebaseDraft(before,draft,latest);assert.equal(rebased.record.title,'自分の編集');assert.equal(rebased.record.owner,'別の担当');assert.equal(rebased.record.revision,2);assert.deepEqual(rebased.overlaps,[]);assert.deepEqual(rebaseDraft(before,{...draft,owner:'自分の担当'},latest).overlaps,['owner']);
+const dep=fixture('A',{status:'done',archived:true}),successor=fixture('B',{dependencies:['A']});assert.deepEqual(dependencyIds(successor,[dep,successor]),[]);assert.equal(dependencyIds(successor,[{...dep,status:'todo'},successor]).length,1);assert.equal(dependencyIds(successor,[successor]).length,1);
+assert.equal(taskSummary([fixture('1'),fixture('2',{dueDate:'2030-02-01'}),fixture('3',{dueDate:'2030-01-15'}),fixture('4',{status:'done'})]).next.id,'3');
+assert.equal(mutationSchema.safeParse({record:{id:'A',kind:'task',title:'test',status:'todo',dueDate:'2030-01-01',startDate:'2030-02-01',dueCertainty:'confirmed'},revision:0}).success,false);
+assert.equal(mutationSchema.safeParse({record:{id:'A',kind:'milestone',title:'test',status:'todo',dueDate:null,dueCertainty:'unknown',startTime:'16:00',endTime:'09:00'},revision:0}).success,false);
+const db=new DatabaseSync(':memory:');db.exec('CREATE TABLE records (id TEXT PRIMARY KEY,payload TEXT,revision INTEGER)');const initial=[fixture('A'),fixture('B')];for(const r of initial)db.prepare('INSERT INTO records VALUES (?,?,1)').run(r.id,JSON.stringify(r));const signature=graphSignature(initial);assert.equal(db.prepare(`SELECT ${GRAPH_SIGNATURE_SQL} AS signature`).get().signature,signature);const update=db.prepare(`UPDATE records SET payload=?,revision=revision+1 WHERE id=? AND revision=? AND ${GRAPH_SIGNATURE_SQL}=?`);assert.equal(update.run(JSON.stringify({...initial[0],dependencies:['B']}),'A',1,signature).changes,1);assert.equal(update.run(JSON.stringify({...initial[1],dependencies:['A']}),'B',1,signature).changes,0);assert.equal(db.prepare('UPDATE records SET revision=revision+1 WHERE id=? AND revision=?').run('B',1).changes,1);
+console.log('PASS hierarchy, aggregates, archived dependencies, conflict rebase, inverted dates and concurrent graph guard');

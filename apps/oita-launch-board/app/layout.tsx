@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "大分未来モビリティ｜立上げボード",
+  title: "大分未来モビリティコンソーシアム｜タスク管理",
   description: "コンソーシアムの立上げに向けたタスク、工程、判断事項を共同管理。",
   robots: { index: false, follow: false },
   icons: {
