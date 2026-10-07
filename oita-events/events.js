@@ -1,4 +1,10 @@
 "use strict";
+// 事業側の調整目標。公開イベントの日程・主催・出展承認とは区別する。
+window.OITA_PROJECT_SCHEDULE = {
+  updatedAt: "2026-10-07",
+  reveal: {date: "2026-12-06", label: "空フェスでのお披露目目標", status: "未確定・調整中"},
+  launch: {date: "2027-01-26", label: "コンソーシアム正式発足目標", status: "仮・調整中"}
+};
 window.OITA_EVENTS = [
   {
     "id": "hello-kitty",
@@ -18,8 +24,8 @@ window.OITA_EVENTS = [
     "status": "日程公表",
     "contact": "県芸術文化振興課／各施設",
     "phone": "",
-    "attention": "9/11時点で開催中。11月以降の企画ではない",
-    "mobilityIdea": "サンリオ連携・周遊の既存事例。11月車両企画とは別",
+    "attention": "9/11時点で開催中。12/6のお披露目目標より前",
+    "mobilityIdea": "サンリオ連携・周遊の既存事例。12/6のお披露目目標とは別",
     "sources": [
       "https://www.pref.oita.jp/soshiki/10310/hellokittyexhibit26.html",
       "https://www.oita-airport.jp/news/detail/727"
@@ -349,14 +355,14 @@ window.OITA_EVENTS = [
     "tag": "モビリティ候補",
     "photo": "cycling",
     "mobility": true,
-    "note": "11/1のお披露目構想より前",
+    "note": "12/6のお披露目目標より前（目標日は調整中）",
     "noteType": "before",
     "month": "2026-10",
     "status": "日程公表",
     "contact": "大会実行委員会",
     "phone": "",
     "attention": "大会全体10/9–12。県内通過予想：清川10:40、竹田11:00、くじゅう花公園11:30。車速等で変動",
-    "mobilityIdea": "観光・スポーツPR。ただし11/1より前",
+    "mobilityIdea": "観光・スポーツPR。ただし12/6のお披露目目標より前",
     "sources": [
       "https://tourdekyushu.asia/stage/oita-kumamoto/",
       "https://tourdekyushu.asia/committee/"
@@ -385,13 +391,13 @@ window.OITA_EVENTS = [
     "tag": "モビリティ候補",
     "photo": "harvest",
     "mobility": true,
-    "note": "注意：11/1より前",
+    "note": "注意：12/6のお披露目目標より前",
     "noteType": "before",
     "month": "2026-10",
     "status": "日程公表",
     "contact": "県地域農業振興課 地域連携・世界農業遺産推進班",
     "phone": "097-506-3589",
-    "attention": "別府駅西口⇄別府公園の無料シャトル約20分間隔。臨時駐車場からのシャトルなし。11/1より前",
+    "attention": "別府駅西口⇄別府公園の無料シャトル約20分間隔。臨時駐車場からのシャトルなし。12/6のお披露目目標より前",
     "mobilityIdea": "県産品・移動販売。出展・搬入は別途承認が必要",
     "sources": [
       "https://www.pref.oita.jp/soshiki/15060/oitaminorifesta.html",
@@ -455,13 +461,13 @@ window.OITA_EVENTS = [
     "tag": "空モビリティ",
     "photo": "airport",
     "mobility": true,
-    "note": "注意：11/1より前",
+    "note": "注意：12/6のお披露目目標より前",
     "noteType": "before",
     "month": "2026-10",
     "status": "日程公表",
     "contact": "大分空港事務所「空の日」係",
     "phone": "0978-67-3771",
-    "attention": "一部体験の事前応募9/1–10/5。臨時駐車場・シャトル9:00–17:00予定。11/1より前",
+    "attention": "一部体験の事前応募9/1–10/5。臨時駐車場・シャトル9:00–17:00予定。12/6のお披露目目標より前",
     "mobilityIdea": "航空・教育。県の次世代空モビリティ事業とは別イベント",
     "sources": [
       "https://www.oita-airport.jp/news/detail/752"
@@ -556,18 +562,20 @@ window.OITA_EVENTS = [
     "place": "大分市／OPAM発着へコース変更予定",
     "description": "14日選手受付・開会式、15日レース・表彰式・交歓の夕べ",
     "category": "mobility",
-    "tag": "最重要候補",
+    "tag": "事前調査の参考",
     "photo": "wheelchair",
     "mobility": true,
-    "priority": 1,
-    "note": "連携テーマ：アクセシビリティ",
-    "priorityText": "移動のしやすさを体験・検証。受入場所や導線を確認。",
+    "priority": 2,
+    "priorityStage": "お披露目目標前の参考",
+    "note": "12/6のお披露目目標より前。アクセシビリティの事前調査・相談の参考。",
+    "noteType": "before",
+    "priorityText": "11/14–15はお披露目目標前。移動の困り事や会場導線を学ぶ事前調査・相談の参考。出展・運行は未決定。",
     "month": "2026-11",
     "status": "日程公表",
     "contact": "大会事務局（県障害者社会参加推進室内）",
     "phone": "097-533-6006",
     "attention": "11/13にもクラス分け。コース詳細は順次公表予定。OPAM駐車場11/15終日使用不可。展示車両の位置・搬入は事前協議必須",
-    "mobilityIdea": "優先：車いす利用者の乗降・待機・案内体験。単なるPRと分ける",
+    "mobilityIdea": "事前調査：車いす利用者の乗降・待機・案内の課題。12/6より前のため、お披露目後の連携候補とは分ける",
     "sources": [
       "https://kurumaisu-marathon.com/requirement/",
       "https://kurumaisu-marathon.com/wp-content/uploads/2026/06/45_01-1_general_provisions_jp.pdf"
@@ -730,18 +738,20 @@ window.OITA_EVENTS = [
     "place": "祝祭の広場（大分市府内町1-1-1）",
     "description": "若者等への環境啓発。ステージ・学生ブース・体験型展示",
     "category": "mobility",
-    "tag": "最重要候補",
+    "tag": "事前調査の参考",
     "photo": "park",
     "mobility": true,
-    "priority": 2,
-    "note": "連携テーマ：環境・給電・体験",
-    "priorityText": "環境とモビリティを体験に。給電の実施条件・必要機材を確認。",
+    "priority": 3,
+    "priorityStage": "お披露目目標前の参考",
+    "note": "12/6のお披露目目標の前日。環境・給電の事前確認の参考。",
+    "noteType": "before",
+    "priorityText": "12/5はお披露目目標の前日。環境・給電の条件確認の参考とし、準備日程の競合に注意。開催は仕様書上の予定。",
     "month": "2026-12",
     "status": "仕様書上の予定",
     "contact": "県環境政策課 企画・環境政策班",
     "phone": "097-506-3123",
     "attention": "設営12/3 9時～・12/4終日。撤去12/5 15:30–21:00。委託候補者は大宣。来場者向け最終告知未確認",
-    "mobilityIdea": "優先：環境・モビリティ体験。既存FCV外部給電計画との役割整理が必要",
+    "mobilityIdea": "事前確認：環境・モビリティ体験。既存FCV外部給電計画との役割整理が必要。12/6のお披露目準備との競合も確認",
     "sources": [
       "https://www.pref.oita.jp/site/nyusatu-koubo/kankyoevent2025.html",
       "https://www.pref.oita.jp/uploaded/life/2351466_4813219_misc.pdf"
@@ -940,9 +950,10 @@ window.OITA_EVENTS = [
     "tag": "モビリティ候補",
     "photo": "marathon",
     "mobility": true,
-    "priority": 3,
-    "note": "選手受付は2/6。本大会は2/7。",
-    "priorityText": "別府と大分の回遊へ。受付会場・交通規制・車両配置条件を確認。",
+    "priority": 1,
+    "priorityStage": "正式発足目標後の連携候補",
+    "note": "選手受付は2/6、本大会は2/7。1/26の正式発足目標後の連携候補。",
+    "priorityText": "1/26の正式発足目標後の候補として優先確認。受付会場・交通規制・車両配置条件を相談。出展・運行は未決定。",
     "month": "2027-02",
     "status": "日程公表",
     "contact": "別府大分毎日マラソン事務局",
@@ -981,7 +992,7 @@ window.OITA_MONTHS = [
     "year": "2026",
     "name": "OCTOBER",
     "color": "#FF8A00",
-    "note": "お披露目前の\n日程に注意。"
+    "note": "12/6目標より前。\n参考・事前調査へ。"
   },
   {
     "key": "2026-11",
@@ -989,7 +1000,7 @@ window.OITA_MONTHS = [
     "year": "2026",
     "name": "NOVEMBER",
     "color": "#FFF200",
-    "note": "11/1以降の\n連携を検討。"
+    "note": "12/6目標より前。\n継続会期は区別。"
   },
   {
     "key": "2026-12",
@@ -997,7 +1008,7 @@ window.OITA_MONTHS = [
     "year": "2026",
     "name": "DECEMBER",
     "color": "#58F21B",
-    "note": "環境・人材を\n次の機会へ。"
+    "note": "12/6お披露目目標。\n未確定・調整中。"
   },
   {
     "key": "2027-01",
@@ -1005,7 +1016,7 @@ window.OITA_MONTHS = [
     "year": "2027",
     "name": "JANUARY",
     "color": "#F23BC8",
-    "note": "コンソーシアム\n正式発足目標。"
+    "note": "1/26正式発足目標。\n仮・調整中。"
   },
   {
     "key": "2027-02",
