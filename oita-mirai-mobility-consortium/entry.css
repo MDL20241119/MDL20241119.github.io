@@ -5,3 +5,4 @@
 @media print{.draft-strip,.oita-entry-dialog{display:none!important}}
 
 .book-top h1{text-wrap:balance}
+@media(max-width:760px){.oita-entry-inner{padding:22px}.oita-entry-mark{font-size:40px;margin-bottom:14px}.oita-entry-dialog h1{font-size:26px;margin-bottom:16px}.oita-entry-copy{margin-bottom:12px}.oita-entry-fine{margin-bottom:16px}}
