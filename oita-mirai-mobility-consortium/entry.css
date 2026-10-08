@@ -6,3 +6,4 @@
 
 .book-top h1{text-wrap:balance}
 @media(max-width:760px){.oita-entry-inner{padding:22px}.oita-entry-mark{font-size:40px;margin-bottom:14px}.oita-entry-dialog h1{font-size:26px;margin-bottom:16px}.oita-entry-copy{margin-bottom:12px}.oita-entry-fine{margin-bottom:16px}}
+.oita-entry-password-label{display:block;font-size:14px;font-weight:800;margin:16px 0 6px}.oita-entry-password{box-sizing:border-box;display:block;width:100%;min-height:48px;border:1px solid #111;background:#fff;padding:10px 12px;font:20px/1.4 sans-serif;border-radius:0}.oita-entry-error{min-height:1.8em;font-size:13px;color:#942e2b;margin:8px 0 12px}
