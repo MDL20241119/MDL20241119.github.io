@@ -1,5 +1,8 @@
-# Consortium entry page
+# 大分未来モビリティ・コンソーシアム
 
-The public paths in this directory provide a draft notice and an entry point for relationship-specific materials. Document bodies, downloadable PDFs and content-bearing source data are not served here.
+元のMDL URL内に置く、関係者向け検討ドラフトの表示ページ。
+入口は取扱い確認の手続きであり、認証・アクセス制御ではありません。HTML、画像、PDF、GitHub上のファイルや履歴は直リンクで閲覧できます。検索除外の指定は非公開を保証しません。
 
-A verified destination may be linked after its access controls have been tested. Do not commit credentials, private documents or an unverified destination into this public repository. Restoring document content requires the owner’s approval.
+本文18ページ・別紙61ページのPDFと全文Web版を掲載。参画、役割、費用負担等はTCO・MDLの検討案で、相手先の合意・承諾を示しません。
+
+公開内容は静的な表示ファイルのみです。管理画面への自動転送は行いません。
