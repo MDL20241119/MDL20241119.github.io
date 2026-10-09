@@ -38,3 +38,6 @@ Edit only the seven files in this directory and the specific JMS news item on th
 
 ## Theme and mascot update (2026-10-09)
 41 programs have one guide-original main topic inferred from titles: digital 8, green 4, people 13, life 6, engineering 5, future 5. Program format stays separate. Custom plans use unspecified. Topic colors are independent of official venue-zone colors. Only the approved original sprout mobility v3 mascot is shipped.
+
+## Yaseuma scooter replacement (2026-10-09)
+User-requested existing character No.21 from the Oita character collection replaces the sprout vehicle in hero and empty states. Original source: ../oita-mirai-mobility-consortium/assets/mascots/sheet-3.png. The isolated transparent asset retains the original character, with background, sheet borders, number and text removed by image editing. Fine pixels are resampled; it is not byte-identical to the source sheet. Blue hero, layout, topic palette and 41 program records are unchanged. No photo frame, white rectangle, recoloring, or blend mode is used.
