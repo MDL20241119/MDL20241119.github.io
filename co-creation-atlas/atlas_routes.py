@@ -71,8 +71,8 @@ def metadata(c):
 
 def hero(data, media, photo):
     counts={k:sum(k in c['entry']['lenses'] for c in data) for k in LENSES}
-    countries=len({c['country'] for c in data})
-    out=[f'<section class="atlas-hero"><div><p class="eyebrow">MDL / WORLD CO-CREATION ATLAS</p><h1>世界の実践から、<br>共創とまちづくりを学ぶ。</h1><p>場を動かす仕組みから、暮らしを変える実践まで。<br>あなたの課題に合う事例を見つける。</p></div><div class="atlas-hero-index"><span class="display">ONE ATLAS.<br>TWO WAYS IN.</span><p>{len(data)}事例 · {countries}か国<br>共通の4つの切り口と、価値創造の8ステップ</p></div></section><section class="atlas-doors" id="entrances" aria-label="二つの入口">']
+    countries=len({country for c in data for country in c.get('countries',[c['country']])})
+    out=[f'<section class="atlas-hero"><div><p class="eyebrow">MDL / WORLD CO-CREATION ATLAS</p><h1>世界の実践から、<br>共創とまちづくりを学ぶ。</h1><p>場を動かす仕組みから、暮らしを変える実践まで。<br>あなたの課題に合う事例を見つける。</p></div><div class="atlas-hero-index"><span class="display">ONE ATLAS.<br>TWO WAYS IN.</span><p>{len(data)}事例 · {countries}か国 · 実写真{sum(m.get("kind")!="diagram" for m in media)}枚<br>共通の4つの切り口と、価値創造の8ステップ</p></div></section><section class="atlas-doors" id="entrances" aria-label="二つの入口">']
     specs=[('co','A','人が集まり、挑戦が進む場をつくる。','共創空間の運営、生活者との共創、試作・実証、企業や大学の事業化支援を学ぶ。','共創の事例を見る','aalto-class-2','人が試作し、学び合う場 / Aalto Design Factory'),('place','B','暮らしを変え、地域で続く仕組みをつくる。','公共空間、交通・生活拠点、地区再生、住民参加、地域の日常運営を学ぶ。','まちづくりの事例を見る','punggol-digital-district','人の暮らしと場所をつなぐ地区 / Punggol Digital District')]
     for key,num,title,desc,cta,asset,caption in specs:
         m=next(m for m in media if m['assetId']==asset)

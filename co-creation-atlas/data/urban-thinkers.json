@@ -1,0 +1,254 @@
+[
+  {
+    "id": "jacobs",
+    "name": "ジェイン・ジェイコブズ",
+    "en": "JANE JACOBS",
+    "key": "まちは、日常の営みから読む。",
+    "idea": "人が歩き、商い、住み、出会う。細かな活動のつながりから、都市の生命力を捉える。",
+    "caseIds": [
+      "washington-square-traffic-removal",
+      "lower-manhattan-expressway-opposition"
+    ],
+    "reading": [
+      {
+        "title": "Village Preservation｜本人インタビュー（1997、pp.2–12・47–54）",
+        "url": "https://media.villagepreservation.org/wp-content/uploads/2020/08/19144129/jacobs_transcript.pdf",
+        "accessNote": "本人インタビュー・英語・全文PDF・無料"
+      },
+      {
+        "title": "出版社｜本人の新版序文・主著（1992版）",
+        "url": "https://penguinrandomhousesecondaryeducation.com/book/?isbn=9780679741954",
+        "accessNote": "著書・本人序文・英語・抜粋公開／書籍購入案内あり"
+      },
+      {
+        "title": "NYC都市計画委員会｜高速道路計画の報告（1969-08-20、pp.646–650）",
+        "url": "https://www.nyc.gov/assets/planning/download/pdf/about/cpc/19690820.pdf",
+        "accessNote": "自治体議事録・英語・全文PDF・無料"
+      }
+    ]
+  },
+  {
+    "id": "gehl",
+    "name": "ヤン・ゲール",
+    "en": "JAN GEHL",
+    "key": "人が、立ち止まりたくなるまち。",
+    "idea": "歩く、座る、見る、話す。人間の身体と日常の活動を起点に、公共空間を考える。",
+    "caseIds": [
+      "nyc-public-realm-strategy",
+      "melbourne-places-for-people"
+    ],
+    "reading": [
+      {
+        "title": "Common Edge｜本人インタビュー（2016-05-05）",
+        "url": "https://commonedge.org/jan-gehl-on-why-tall-buildings-arent-necessarily-bad-for-street-life/",
+        "accessNote": "本人インタビュー・英語・全文公開・無料"
+      },
+      {
+        "title": "NYC DOT｜調査の政策利用を説明する公式発表（2008-11-14）",
+        "url": "https://www.nyc.gov/html/dot/html/pr2008/pr08_049.shtml",
+        "accessNote": "市公式発表・英語・公開本文／報告書の紹介"
+      },
+      {
+        "title": "ニューヨーク市｜実証の評価・恒久化（2010-02-11）",
+        "url": "https://www.nyc.gov/html/om/html/2010a/pr070-10.html",
+        "accessNote": "市公式評価発表・英語・発表本文公開・無料"
+      }
+    ]
+  },
+  {
+    "id": "lynch",
+    "name": "ケヴィン・リンチ",
+    "en": "KEVIN LYNCH",
+    "key": "まちの姿は、人の頭の中にある。",
+    "idea": "住民や来訪者がどう道を覚え、場所を見分けるか。都市を、使う人の知覚から読み解く。",
+    "caseIds": [
+      "perceptual-form-city",
+      "temporary-paradise"
+    ],
+    "reading": [
+      {
+        "title": "MIT Press｜The Image of the City・主著の紹介",
+        "url": "https://mitpress.mit.edu/9780262620017/the-image-of-the-city/",
+        "accessNote": "著書の書誌・購入情報・英語・紹介無料／書籍は有料"
+      },
+      {
+        "title": "MIT｜都市イメージの5要素",
+        "url": "https://betterworld.mit.edu/images-of-the-city/",
+        "accessNote": "大学の研究紹介・英語・紹介本文公開・無料"
+      },
+      {
+        "title": "MIT Libraries｜共同研究と調査の経緯（2011-04-16）",
+        "url": "https://libraries.mit.edu/150books/2011/04/16/1960/",
+        "accessNote": "大学図書館の研究紹介・英語・紹介本文公開・無料"
+      }
+    ]
+  },
+  {
+    "id": "alexander",
+    "name": "クリストファー・アレグザンダー",
+    "en": "CHRISTOPHER ALEXANDER",
+    "key": "良い場所の知恵を、みんなの言葉に。",
+    "idea": "繰り返し現れる空間の問題と解き方を共有し、利用者も参加しながら、場所を少しずつ育てる。",
+    "caseIds": [
+      "eishin-higashino-campus",
+      "oregon-experiment"
+    ],
+    "reading": [
+      {
+        "title": "CES｜東野高校の当事者によるプロジェクト記述",
+        "url": "https://www.livingneighborhoods.org/ht-0/eishincampus.htm",
+        "accessNote": "CESの当事者記録・英語・本文公開・無料"
+      },
+      {
+        "title": "CES｜A Pattern Language・公式書籍紹介",
+        "url": "https://www.patternlanguage.com/bookstore/pattern-language.html",
+        "accessNote": "公式の著書紹介・英語・紹介公開／本文は書籍"
+      },
+      {
+        "title": "CES｜The Oregon Experiment・6原則",
+        "url": "https://www.patternlanguage.com/bookstore/oregon-experiment.html",
+        "accessNote": "公式の著書紹介・英語・紹介公開／本文は書籍"
+      }
+    ]
+  },
+  {
+    "id": "cervero",
+    "name": "ロバート・セルベロ",
+    "en": "ROBERT CERVERO",
+    "key": "駅があるだけでは、まちは変わらない。",
+    "idea": "土地利用と交通を一緒に考え、速く遠くへ移動することから、生活の機会に届くことへ評価を移す。",
+    "caseIds": [
+      "bart20-landuse",
+      "tod-housing-trip-generation"
+    ],
+    "reading": [
+      {
+        "title": "Cervero・Kockelman｜3Ds原著（1997、pp.199–219）",
+        "url": "https://web.mit.edu/11.s946/www/readings/Cervero_1997.pdf",
+        "accessNote": "査読論文・大学公開版・英語・全文PDF・無料"
+      },
+      {
+        "title": "Cervero｜The Transit Metropolis Revisited（2020）",
+        "url": "https://iconarch.ktun.edu.tr/index.php/iconarch/article/view/229",
+        "accessNote": "本人の論文・再論・英語・要旨＋全文PDF・無料"
+      },
+      {
+        "title": "UC Berkeley｜Beyond Mobility紹介（2018-01-18）",
+        "url": "https://its.berkeley.edu/node/13108",
+        "accessNote": "大学の著書紹介・英語・紹介本文公開／著書全文ではない"
+      }
+    ]
+  },
+  {
+    "id": "moreno",
+    "name": "カルロス・モレノ",
+    "en": "CARLOS MORENO",
+    "key": "遠くへ速く、から、近くで豊かに。",
+    "idea": "日々の暮らしに必要な機能へ、徒歩や自転車で無理なくアクセスできる近接性を考える。",
+    "caseIds": [
+      "paris-fifteen-minute-city",
+      "bethune-bruay-half-hour"
+    ],
+    "reading": [
+      {
+        "title": "Morenoほか｜15分都市の原著（2021、§4・5）",
+        "url": "https://www.moreno-web.net/wordpress/wp-content/uploads/2021/01/mdpi-Introducing-the-15-Minute-City-Sustainability-Resilience-and-Place-Identity-in-Future-Post-Pandemic-Cities-8-January-2021.pdf",
+        "accessNote": "共著の原論文・英語・全文PDF・無料"
+      },
+      {
+        "title": "パリ市｜本人インタビュー（2020-12-09）",
+        "url": "https://www.paris.fr/pages/la-ville-du-quart-d-heure-est-une-reponse-a-l-urgence-climatique-et-sanitaire-15929",
+        "accessNote": "市による本人インタビュー・フランス語・全文公開・無料"
+      },
+      {
+        "title": "パリ市｜週末の校庭等開放（2021-05-14）",
+        "url": "https://presse.paris.fr/communiques/9225",
+        "accessNote": "市の公式実施発表・フランス語・全文公開・無料"
+      }
+    ]
+  },
+  {
+    "id": "shaheen",
+    "name": "スーザン・シャヒーン",
+    "en": "SUSAN SHAHEEN",
+    "key": "シェアで、何が本当に変わったか。",
+    "idea": "登録者や車両が増えた先で、車依存と移動の不平等が減ったかを、利用者の行動から確かめる。",
+    "caseIds": [
+      "car2go-five-city-study",
+      "carlink-ii"
+    ],
+    "reading": [
+      {
+        "title": "Martin・Shaheen｜car2go北米5都市評価（2016-07）",
+        "url": "https://tsrc.berkeley.edu/sites/default/files/publications/impactsofcar2go_fivecities_2016.pdf",
+        "accessNote": "研究報告・Working Paper・英語・全文PDF・無料"
+      },
+      {
+        "title": "Shaheen・Chan｜公共交通の前後を補う共有交通・著者原稿（2016）",
+        "url": "https://escholarship.org/content/qt8042k3d7/qt8042k3d7_noSplash_a89b79186f64355a497e1c90efe08d30.pdf",
+        "accessNote": "著者原稿・プレプリント・英語・全文PDF・無料"
+      },
+      {
+        "title": "Shaheenほか｜Shared Mobility Policy Playbook（2019、pp.148–154）",
+        "url": "https://escholarship.org/content/qt9678b4xs/qt9678b4xs.pdf",
+        "accessNote": "政策実務ガイド・英語・全文PDF・無料"
+      }
+    ]
+  },
+  {
+    "id": "jittrapirom",
+    "name": "ペラパン・ジットラピロム",
+    "en": "PERAPHAN JITTRAPIROM",
+    "key": "未来が変わる前提で、交通をつくる。",
+    "idea": "住民・事業者・自治体が何を成功とするかを共有し、不確実な将来に応じて変えられる移動政策を考える。",
+    "caseIds": [
+      "chiangmai-urban-mobility-lab",
+      "hague-adaptive-visioning"
+    ],
+    "reading": [
+      {
+        "title": "Jittrapiromほか｜MaaSの定義・9要素（2017、Table 1）",
+        "url": "https://www.cogitatiopress.com/urbanplanning/article/viewFile/931/571",
+        "accessNote": "査読論文・英語・全文PDF・無料"
+      },
+      {
+        "title": "Jittrapiromほか｜適応型MaaS政策・著者公開版（2018）",
+        "url": "https://www.researchgate.net/publication/326781872_Dynamic_Adaptive_Policymaking_for_Implementing_Mobility_As_a_Service_MaaS",
+        "accessNote": "著者公開Working Paper・英語・本文公開／PDF操作は未検証"
+      },
+      {
+        "title": "Radboud大学｜本人を含む成果インタビュー（2025-12-23）",
+        "url": "https://www.ru.nl/en/research/research-news/sustainable-mobility-begins-with-more-effective-collaboration",
+        "accessNote": "大学の研究記事・本人発言・英語・全文公開・無料"
+      }
+    ]
+  },
+  {
+    "id": "shoup",
+    "name": "ドナルド・シュープ",
+    "en": "DONALD SHOUP",
+    "key": "駐車の価格が、まちの使われ方を変える。",
+    "idea": "無料に見える駐車にも、土地・費用・渋滞の負担がある。料金と還元先から、空間の配分を問い直す。",
+    "caseIds": [
+      "sfpark-pilot",
+      "parking-cashout-eight-cases"
+    ],
+    "reading": [
+      {
+        "title": "Pierce・Shoup｜SFpark料金評価の原著（2013）",
+        "url": "https://www.shoupdogg.com/wp-content/uploads/sites/10/2017/06/Getting-the-Prices-Right-An-Evaluation-of-Pricing-Parking-by-Demand-in-San-Francisco.pdf",
+        "accessNote": "本人共著の査読論文・英語・全文PDF・無料"
+      },
+      {
+        "title": "UCLA ITS保存｜本人サイト・3つの駐車改革",
+        "url": "https://shoupdogg.com/",
+        "accessNote": "本人サイト・大学保存・英語・提言・著書紹介を公開"
+      },
+      {
+        "title": "SFMTA｜Pilot Overview（2014、p.15に思想的基盤）",
+        "url": "https://www.sfmta.com/sites/default/files/reports-and-documents/2018/08/sfpark_pilot_overview.pdf",
+        "accessNote": "実施主体の公式報告・英語・全文PDF・無料"
+      }
+    ]
+  }
+]

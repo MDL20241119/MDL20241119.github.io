@@ -5,6 +5,7 @@ import value_chain
 import atlas_routes
 import evidence
 import catalog
+import expert_context
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
@@ -28,10 +29,10 @@ for item in MEDIA:
         raise ValueError('写真ファイルが空です: '+item['local'])
 COUNTERS=json.loads((ROOT/'data/counterpoints.json').read_text())
 THEMES={'city':('まち・暮らしをよくする','市民の課題、地域での共創・実証を知りたい。'),'people':('仲間・チームをつくる','異なる専門性を持つ人の集め方を知りたい。'),'prototype':('試作・実証の場をつくる','設備・専門家・現場をどうつなぐか知りたい。'),'business':('事業化につなげる','実証の先の購入・契約・事業移管を知りたい。'),'digital':('データ・仮想空間で試す','都市モデルやデジタルツインを活かしたい。'),'future':('アートから未来を考える','科学や表現から、新しい問いを見つけたい。')}
-DATE='2026.10.02'
+DATE='2026.10.07'
 BASE='https://mobilitydlab.com/co-creation-atlas/'
 STAGES=['','課題を捉える','未来を問う','仲間をつくる','デジタルで試す','現物をつくる','現場で確かめる','事業にする','社会へ広げる']
-TYPES={'university':'大学・研究機関','company':'企業・事業化制度','city':'都市・地域の実証','network':'産業・研究ネットワーク'}
+TYPES={'university':'大学・研究機関','company':'企業・事業化制度','city':'都市・地域の実証','network':'産業・研究ネットワーク','expert-practice':'有識者が関わる調査・実践'}
 REGIONS={'north-america':'北米','europe':'ヨーロッパ','asia':'アジア','latin-america':'中南米','africa':'アフリカ','oceania':'オセアニア'}
 def e(v): return html.escape(str(v if v is not None else ''),quote=True)
 def para(v): return ''.join(f'<p>{e(x)}</p>' for x in str(v).split('\n') if x.strip())
@@ -47,6 +48,8 @@ def case_link(code,text=None):
     return f'<a href="{path(c)}">{e(text or c["name"])}</a>' if c else e(text or code)
 def credit(m):
     if not m:return ''
+    if m.get('kind') == 'diagram':
+        return f'<figcaption class="credit"><strong>{e(m["caption"])}</strong><br>DIAGRAM: {e(m["credit"])} · {external(m["sourceUrl"],"根拠資料")}<details class="photo-details"><summary>図の説明</summary><p>{e(m["alt"])}<br>{e(m["imageDate"])} · {e(m["license"])}</p></details></figcaption>'
     date=f' · {e(m.get("imageDate",""))}' if m.get('imageDate') else ''
     license_url=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl']
     license_link=external(license_url,e(m.get('license','利用条件')))
@@ -69,20 +72,23 @@ def photo(m,alt='',cls='',prefix='',loading='lazy'):
     if m.get('status')=='provider-embed':
         visual=f'<a data-flickr-embed="true" class="photo-source-link" href="{e(m["sourceUrl"])}" target="_blank" rel="noopener noreferrer" aria-label="{e(m["name"])}の写真を掲載元で見る">{visual}</a>'
     return f'<figure class="{cls} {"no-crop" if no_crop(m) else ""}">{visual}{credit(m)}</figure>'
-def media_for(c):return [m for m in MEDIA if m.get('caseId')==c['id']]
+def media_for(c):return sorted([m for m in MEDIA if m.get('caseId')==c['id']],key=lambda m:m.get('kind')=='diagram')
 for n,c in enumerate(DATA,1):
     c['number']=f'{n:02d}';ms=media_for(c)
     if ms:
         m=ms[0];c['image']=media_url(m);c['imageAlt']=m.get('alt',c['name']);c['imageNoCrop']=no_crop(m);c['imageEmbedSource']=m['sourceUrl'] if m.get('status')=='provider-embed' else '';c['imageCredit']=m['credit'];c['imageSource']=m['sourceUrl'];c['imageRights']=(m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl'];c['imageLicense']=m['license'];c['imageDate']=m.get('imageDate','');c['imageChanges']=m.get('changes','');c['imageCaption']=m.get('caption','')
+        if m.get('kind') == 'diagram':c['imageKind']='diagram'
+        else:c.pop('imageKind',None)
+        c['photoCount']=sum(x.get('kind')!='diagram' for x in ms)
     else:c.pop('image',None)
     if 'stages' not in c:c['stages']=[c['stage']]
 
 def head(title,description,url,prefix=''):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.12"><link rel="stylesheet" href="{prefix}map.css?v=20260928.12"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.12"><link rel="stylesheet" href="{prefix}value-chain.css?v=20260928.12"><link rel="stylesheet" href="{prefix}atlas-routes.css?v=20260928.12"><script defer src="{prefix}atlas-routes.js?v=20260928.12"></script><script defer src="{prefix}learning.js?v=20260928.12"></script><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.12"></script><script defer src="{prefix}app.js?v=20260928.12"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.12"><link rel="stylesheet" href="{prefix}map.css?v=20260928.12"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.12"><link rel="stylesheet" href="{prefix}value-chain.css?v=20260928.12"><link rel="stylesheet" href="{prefix}atlas-routes.css?v=20260928.12"><script defer src="{prefix}atlas-routes.js?v=20260928.12"></script><script defer src="{prefix}learning.js?v=20260928.12"></script><link rel="stylesheet" href="{prefix}photo-rich.css?v=20261007.2"><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.12"></script><script defer src="{prefix}app.js?v=20260928.12"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
 def header(prefix=''):
     nav=f'<a href="{prefix}?lens=co#explore">共創を探す</a><a href="{prefix}?lens=place#explore">まちづくりを探す</a><a href="{prefix}learn/first-co-creation/">基礎を学ぶ</a><a href="{prefix}#start">8工程で学ぶ</a><a href="{prefix}#explore">事例を探す</a><a href="{prefix}learn/choose/">比較する</a><a href="{prefix}learn/workbook/">実践シート</a><a href="{prefix}learn/library/">原典</a>'
     return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'
-def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 3.2 · 更新日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'+'<script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
+def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 3.3 · 更新日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'+'<script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
 def video_dialog():return '<dialog class="video-dialog" id="video-dialog"><div class="dialog-top"><strong class="dialog-title">公式動画</strong><button type="button" data-close>閉じる ×</button></div><div class="dialog-body"></div><p>動画が再生できない場合は、各項目の「公式サイトで見る」をご利用ください。</p></dialog>'
 def cards():
     out=[]
@@ -98,8 +104,12 @@ def cards():
         embed_attributes=' data-flickr-embed="true" class="card-photo no-crop"' if m and m.get('status')=='provider-embed' else ''
         if embed_attributes:
             visual=f'<img src="{e(media_url(m))}" alt="{e(m.get("alt",c["name"]))}" loading="lazy" width="{m.get("dimensions",[1024,683])[0]}" height="{m.get("dimensions",[1024,683])[1]}">'
-        photo_note=(f'<span class="card-photo-context">写真：{e(m.get("scopeLabel",m.get("scope","写真")))}</span>' if m.get('scope') else '') if m else ''
-        out.append(f'<article class="case-card" data-id="{e(c["id"])}"><a{embed_attributes} href="{e(image_href)}" aria-label="{e(image_label)}">{visual}</a>{photo_note}<div class="card-body">{atlas_routes.badges(c)}<div class="card-place">{e(c["country"])} / {e(c["city"])}</div><h3><a href="{path(c)}">{e(c["name"])}</a></h3><p class="card-learning-label">この事例から学べること</p><div class="tagline" data-card-learning>{e(c["tagline"])}</div>{atlas_routes.metadata(c)}<p class="card-summary">{e(c["lead"])}</p><div class="card-stage">{c["stage"]:02d} {STAGES[c["stage"]]} <span>／ {e(TYPES[c["type"]])}</span></div><div class="card-foot"><span>{external(c["sources"][0]["url"],"主な情報源")}</span><a href="{path(c)}"><strong>事例を読む →</strong></a></div></div>{f"<div class=\"card-credit\">PHOTO: {e(m['credit'])} · 利用条件は詳細ページに記載</div>" if m else ""}</article>')
+        real_photos=[x for x in ms if x.get('kind')!='diagram']
+        thumbs=''.join(f'<a class="{"no-crop" if no_crop(x) else ""}" href="{path(c)}#field-photos" aria-label="{e(c["name"])}の写真を見る"><img src="{e(media_url(x))}" alt="{e(x["alt"])}" loading="lazy" width="400" height="250"></a>' for x in real_photos[1:3])
+        thumb_strip=f'<div class="card-photo-strip">{thumbs}</div>' if thumbs else ''
+        photo_count=f'<a class="card-photo-count" href="{path(c)}#field-photos">写真 {len(real_photos)}枚 ↗</a>' if real_photos else ''
+        photo_note=(f'<span class="card-photo-context">{("模式図" if m.get("kind")=="diagram" else "写真")}：{e(m.get("scopeLabel",m.get("scope","写真")))}</span>' if m.get('scope') else '') if m else ''
+        out.append(f'<article class="case-card" data-id="{e(c["id"])}"><a{embed_attributes} href="{e(image_href)}" aria-label="{e(image_label)}">{visual}</a>{thumb_strip}{photo_count}{photo_note}<div class="card-body">{atlas_routes.badges(c)}<div class="card-place">{e(c["country"])} / {e(c["city"])}</div><h3><a href="{path(c)}">{e(c["name"])}</a></h3><p class="card-learning-label">この事例から学べること</p><div class="tagline" data-card-learning>{e(c["tagline"])}</div>{atlas_routes.metadata(c)}<p class="card-summary">{e(c["lead"])}</p><div class="card-stage">{c["stage"]:02d} {STAGES[c["stage"]]} <span>／ {e(TYPES[c["type"]])}</span></div><div class="card-foot"><span>{external(c["sources"][0]["url"],"主な情報源")}</span><a href="{path(c)}"><strong>事例を読む →</strong></a></div></div>{f"<div class=\"card-credit\">{("DIAGRAM" if m.get("kind")=="diagram" else "PHOTO")}: {e(m['credit'])} · 利用条件は詳細ページに記載</div>" if m else ""}</article>')
     return ''.join(out)
 STAGE_DESC=[
 ('誰の、どんな困りごとか。','当事者と現場を観察し、解く課題を選ぶ。技術や設備の導入を課題そのものにしない。','課題・当事者・現状値・課題オーナー'),
@@ -118,12 +128,13 @@ def map_ui():
     return (ROOT/'map-ui.html').read_text().replace('__GRID__',grid).replace('__COUNTRIES__',paths).replace('拠点','事例').replace('>28<','>'+str(len(DATA))+'<')
 
 def build_index():
-    countries=len(set(c['country'] for c in DATA));source_count=len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url')))
+    countries=len({country for c in DATA for country in c.get('countries',[c['country']])});source_count=len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url')))
     hero=next((m for m in MEDIA if m.get('hero')),MEDIA[0] if MEDIA else None)
-    out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}の共創拠点・リビングラボ・事業化制度を、インプット・価値創造機能・アウトプット・アウトカムで解説。社会実装から逆算した工夫を一次情報で読み解く。',BASE),header(),'<main id="main">']
-    out[0] = catalog.styles(out[0])
+    out=[head('世界の共創から、地域と事業のつくり方を学ぶ。',f'世界{countries}か国・{len(DATA)}件の共創・まちづくり・都市研究を、インプット・価値創造機能・アウトプット・アウトカムで解説。社会実装から逆算した工夫を一次情報で読み解く。',BASE),header(),'<main id="main">']
+    out[0] = expert_context.styles(catalog.styles(out[0])).replace("app.js?v=20260928.12", "app.js?v=20261006.1").replace("map.js?v=20260928.12", "map.js?v=20261007.1")
     out.append(catalog.entry())
     out.append(atlas_routes.hero(DATA,MEDIA,photo))
+    out.append(expert_context.teaser())
     out.append('<div class="section-index"><p class="eyebrow">CONTENTS / 読みたいところから</p><div class="links"><a href="learn/"><b>01</b>教材の全体像</a><a href="#explore"><b>02</b>世界の事例</a><a href="#insights"><b>03</b>横断分析</a><a href="learn/workbook/"><b>04</b>自分の計画へ</a></div></div>')
     learning_start = len(out)
     out.append(learning.entry())
@@ -179,17 +190,27 @@ def build_case(c):
     prefix='../../';ms=media_for(c);m=ms[0] if ms else None
     name=c['name'];title=c.get('nameJa') or name
     case_date=CHAINS[c["id"]]["updated"].replace("-", ".")
-    out=[head(f'{name}｜{c["tagline"]}',c['lead'],BASE+path(c),prefix),header(prefix),f'<main id="main"><div class="detail-crumb"><a href="../../">WORLD CO-CREATION ATLAS</a> / <a href="../../?stage={c["stage"]}#explore">{c["stage"]:02d} {STAGES[c["stage"]]}</a> / CASE {c["number"]}</div><section class="detail-hero"><div class="detail-title"><p class="eyebrow">CASE {c["number"]} / {e(c["country"])} / {e(c["city"])}</p><div class="display">{e(name)}</div><h1>{e(title)}</h1><p class="tagline">{e(c["tagline"])}</p><p>{e(c["lead"])}</p><div style="margin-top:24px">{external(c["sources"][0]["url"],"公式サイトを見る","btn yellow")}</div><p class="meta" style="margin-top:22px">{TYPES[c["type"]]} · 調査確認日 {case_date}</p></div>']
+    out=[head(f'{name}｜{c["tagline"]}',c['lead'],BASE+path(c),prefix),header(prefix),f'<main id="main"><div class="detail-crumb"><a href="../../">WORLD CO-CREATION ATLAS</a> / <a href="../../?stage={c["stage"]}#explore">{c["stage"]:02d} {STAGES[c["stage"]]}</a> / CASE {c["number"]}</div><section class="detail-hero"><div class="detail-title"><p class="eyebrow">CASE {c["number"]} / {e(c["country"])} / {e(c["city"])}</p><div class="display">{e(name)}</div><h1>{e(title)}</h1><p class="tagline">{e(c["tagline"])}</p><p>{e(c["lead"])}</p><div style="margin-top:24px">{external(c["sources"][0]["url"],"主要な原典を見る" if c.get("expertContext") else "公式サイトを見る","btn yellow")}</div><p class="meta" style="margin-top:22px">{TYPES[c["type"]]} · 調査確認日 {case_date}</p></div>']
+    if c.get('expertContext'):
+        out[0] = expert_context.styles(out[0],prefix)
     if m:out.append(photo(m,cls='detail-photo',prefix=prefix,loading='eager'))
     else:out.append(f'<div class="atlas-photo-missing"><p class="eyebrow">{e(c["entry"]["unit"])}</p><h2>{e(c["tagline"])}</h2><p>写真の転載条件は確認中です。現場の写真は公式サイトでご覧ください。</p>{external(c["sources"][0]["url"],"公式サイトで見る")}</div>')
-    out.append(f'</section><dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
+    real_photos=[x for x in ms if x.get('kind')!='diagram']
+    gallery=''
+    if len(real_photos)>1:
+        gallery='<section class="field-photos" id="field-photos"><div class="field-photo-heading"><p class="eyebrow">FIELD PHOTOS / '+str(len(real_photos))+' PHOTOS</p><h2>写真で、場所と活動を読む。</h2></div><div class="field-photo-grid">'+''.join(photo(x,prefix=prefix) for x in real_photos[1:])+'</div></section>'
+    elif real_photos:
+        out[2]=out[2].replace('<section class="detail-hero">','<section class="detail-hero" id="field-photos">')
+    out.append(f'</section>{gallery}<dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
     if c['id'] in CHAINS:
-        out[-1] = out[-1].replace('<section class="case-glance"', evidence.notice(c)+'<section class="case-glance"')
+        out[-1] = out[-1].replace('<section class="case-glance"', evidence.notice(c)+expert_context.case_context(c)+'<section class="case-glance"')
         row = CHAINS[c['id']]
         out[-1] = out[-1].replace('<div class="detail-layout">', atlas_routes.reading_context(c)+value_chain.glance(row)+'<div class="detail-layout">')
         out[-1] = out[-1].replace('<p class="toc-guide">知りたい項目から読む</p>', value_chain.toc()+'<details class="vc-extra-toc"><summary>運営・根拠・応用も読む ＋</summary>')
         out[-1] = out[-1].replace('08 元サイト・出典へ</a></nav>', '08 元サイト・出典へ</a></details></nav>')
         sections=value_chain.case_sections(row)
+        if c.get('expertContext'):
+            sections=sections.replace('各施設の公式な工程名','各取り組みの公式な工程名').replace('施設の活動に帰属できる効果','当該活動に帰属できる効果')
         if 'place' in c['entry']['lenses']:
             sections=sections.replace('07 事業にする</a>','07 事業にする（公共サービス・地域活動として続ける）</a>')
         out.append(sections)
@@ -200,12 +221,15 @@ def build_case(c):
     metric=c.get('metric')
     if metric:out.append(f'<div class="metric-block"><div class="display">{e(metric["value"])}</div><div><p><strong>{e(metric["label"])}</strong></p><p>{e(metric["asOf"])}</p>{source_link(source_by_id[metric["sourceId"]],"この数字の原典を読む","ref")}</div></div>')
     for z in c['evidence']:
-        kind='運営者の報告' if z['kind']=='self-report' else '確認した事実'
+        kind=('研究者・関係者の報告' if c.get('expertContext') else '運営者の報告') if z['kind']=='self-report' else '確認した事実'
         out.append(f'<div class="evidence-item"><span class="fact {e(z["kind"])}">{kind}</span><span class="meta"> {e(z.get("asOf",""))}</span><h3>{e(z["claim"])}</h3><p><strong>読み取れる範囲：</strong>{e(z.get("limit",""))}</p>{source_link(source_by_id[z["sourceId"]],"原典で確かめる","ref")} <a class="source-note-link" href="#{e(z["sourceId"])}">出典の説明 ↓</a></div>')
     out.append(f'</section><section class="detail-section analysis" id="transfer"><span class="label">MDL ANALYSIS</span><h2 style="margin-top:16px"><span class="display">04</span>日本で活かすなら。</h2>{para(c["transfer"])}</section><section class="detail-section limit" id="limits"><h2><span class="display">05</span>そのまま真似できないこと。</h2>{para(c["limits"])}</section><section class="detail-section test" id="next-test"><span class="label">PROPOSAL / 未実施の検証案</span><h2 style="margin-top:16px"><span class="display">06</span>次に、何を確かめるか。</h2>{para(c["nextTest"])}</section>')
-    out.append('<section class="detail-section" id="media"><h2><span class="display">07</span>現場を、写真と動画で。</h2>')
-    for x in ms[1:]:out.append(photo(x,prefix=prefix))
-    if m:out.append(f'<p class="note-inline">冒頭写真：{e(m.get("alt",m.get("name",c["name"])))}</p>')
+    media_title = "写真・図と原資料で確かめる。" if c.get("expertContext") else "写真・動画と原資料へ。"
+    out.append(f'<section class="detail-section" id="media"><h2><span class="display">07</span>{media_title}</h2>')
+    if real_photos:out.append('<a class="btn yellow" href="#field-photos">現場の写真を見る ↑</a>')
+    for x in ms:
+        if x.get('kind')=='diagram':out.append(photo(x,prefix=prefix))
+    if m:out.append(f'<p class="note-inline">{("冒頭模式図" if m.get("kind")=="diagram" else "冒頭写真")}：{e(m.get("alt",m.get("name",c["name"])))}</p>')
     vs=c.get('videos',[])
     if vs:
         out.append('<div class="video-grid" style="margin-top:24px">')
@@ -213,11 +237,12 @@ def build_case(c):
             embed=v.get('embedUrl');embed=embed if embed and any(embed.startswith(u) for u in ['https://www.youtube-nocookie.com/embed/','https://www.youtube.com/embed/','https://player.vimeo.com/video/']) else None;button=f'<button type="button" data-video="{e(embed)}" data-title="{e(v["title"])}">動画を再生 ▷</button>' if embed else ''
             out.append(f'<article class="video-card"><div class="play">PLAY / WATCH</div><h3>{e(v["title"])}</h3><p>{e(v.get("publisher","公式コンテンツ"))}</p>{button}{external(v["url"],"公式サイトで見る")}</article>')
         out.append('</div>')
-    if not ms or not vs:out.append(f'<a class="media-link" href="{e(c["sources"][0]["url"])}" target="_blank" rel="noopener noreferrer">公式サイトで、写真・最新の活動を見る ↗</a>')
+    if not ms or not vs:out.append(f'<a class="media-link" href="{e(c["sources"][0]["url"])}" target="_blank" rel="noopener noreferrer">{("原資料で、当時の調査・実践を読む" if c.get("expertContext") else "公式サイトで、写真・最新の活動を見る")} ↗</a>')
     if not ms:out.append('<p class="note-inline">掲載許諾を確認できない写真は転載せず、公式ページでご覧いただけるようにしています。</p>')
     out.append('</section><section class="detail-section" id="evidence-sources"><h2><span class="display">08</span>原典を読む。</h2><p class="meta">制度の説明と運営者による実績報告を区別しています。日付記載のない資料は、公表時点を確定できません。確認日は資料を確認した日であり、活動や成果が発生した日ではありません。</p>')
     for s in c['sources']:
-        out.append(f'<div class="source-item" id="{e(s["id"])}"><span class="label">{e(s["id"])}</span><p>{source_link(s)}</p><p>{e(s.get("claim",""))}</p><div class="meta">{e(s.get("publisher",""))} · 公表：{e(s.get("published","日付記載なし"))}<br>確認箇所：{e(s.get("locator","本文"))} · 確認日：{e(s.get("verified","2026-09-27"))}</div></div>')
+        access_note = f'<p class="expert-source-access">{e(s["accessNote"])}</p>' if s.get('accessNote') else ''
+        out.append(f'<div class="source-item" id="{e(s["id"])}"><span class="label">{e(s["id"])}</span><p>{source_link(s)}</p><p>{e(s.get("claim",""))}</p>{access_note}<div class="meta">{e(s.get("publisher",""))} · 公表：{e(s.get("published","日付記載なし"))}<br>確認箇所：{e(s.get("locator","本文"))} · 確認日：{e(s.get("verified","2026-09-27"))}</div></div>')
     out.append('</section></article></div>')
     out.append(learning.case_bridge(c))
 
@@ -225,9 +250,14 @@ def build_case(c):
     # does not reissue or re-verify their existing content.
     article_footer=footer()
     if CHAINS[c['id']]['updated'] < '2026-10-02':
-        article_footer=article_footer.replace('学習版 3.2 · 更新日 '+DATE,'学習版 3.1 · 調査確認日 2026.09.28')
+        article_footer=article_footer.replace('学習版 3.3 · 更新日 '+DATE,'学習版 3.1 · 調査確認日 2026.09.28')
+    elif CHAINS[c['id']]['updated'] < '2026-10-06':
+        article_footer=article_footer.replace('学習版 3.3 · 更新日 '+DATE,'学習版 3.2 · 更新日 2026.10.02')
     out.append(atlas_routes.related(c,DATA,CHAINS)+'</main>'+article_footer+video_dialog()+'</body></html>')
-    dest=ROOT/'cases'/c['id'];dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(''.join(out))
+    rendered=''.join(out)
+    if c.get('expertContext'):
+        rendered=rendered.replace('具体的な実装事例','具体的な調査・実践').replace('この拠点・仕組みから、実装された／検証中の事例を読む','この研究・実践の対象と、確認できた段階を読む').replace('07 写真・動画で見る','07 写真・図と原資料で見る')
+    dest=ROOT/'cases'/c['id'];dest.mkdir(parents=True,exist_ok=True);(dest/'index.html').write_text(rendered)
 
 learning.configure(DATA,STAGES,MEDIA,head,header,footer,photo)
 build_index()
@@ -235,5 +265,6 @@ for c in DATA:build_case(c)
 learning.build_all()
 atlas_routes.build_compare(DATA,head,header,footer)
 catalog.build(ROOT,head,header,footer,BASE)
+expert_context.build(DATA,head,header,footer)
 (ROOT/'data/cases.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2))
-print(f'Built {len(DATA)} cases and index. {len(MEDIA)} photographs. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')
+print(f'Built {len(DATA)} cases and index. {len([m for m in MEDIA if m.get('kind') != 'diagram'])} photographs; {len([m for m in MEDIA if m.get('kind') == 'diagram'])} diagrams. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')

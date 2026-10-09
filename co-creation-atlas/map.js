@@ -43,7 +43,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
     return result;
   }
   function clusterName(g) {
-    const cities = [...new Set(g.items.map(shortCity))], countries = [...new Set(g.items.map(d=>d.country))];
+    const cities = [...new Set(g.items.map(shortCity))], countries = [...new Set(g.items.flatMap(d=>d.countries||[d.country]))];
     return cities.length === 1 ? cities[0] : countries.length === 1 ? countries[0] : regionNames[g.items[0].region];
   }
   function draw() {
@@ -75,7 +75,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
       el.addEventListener('click',act);el.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();act();}});
     });
     if (focus) [...layer.children].find(el=>el.dataset.mapKey===focus)?.focus({preventScroll:true});
-    const countryPaths=[...map.querySelectorAll('.map-countries path')], present=new Set(items.map(d=>d.country));
+    const countryPaths=[...map.querySelectorAll('.map-countries path')], present=new Set(items.flatMap(d=>d.countries||[d.country]));
     countryPaths.forEach(p=>{p.classList.toggle('has-cases',present.has(p.dataset.country));p.classList.toggle('country-selected',p.dataset.country===country&&!!country);});
     const geographic=[];
     if(box[2]<430) for(const p of countryPaths) {
@@ -93,7 +93,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
     const d=items.find(x=>x.id===selected), group=groupIds.length?items.filter(x=>groupIds.includes(x.id)):items;
     let html;
     if(d) {
-      html=`<div class="map-preview"><button type="button" class="map-back" data-map-back>← ${groupIds.length?'この周辺の事例':'事例一覧'}に戻る</button><div class="map-preview-heading"><p class="eyebrow">CASE ${esc(d.number)} / ${esc(d.country)}</p><p class="map-city">${esc(d.city)}</p><h3>${esc(d.shortName||d.name)}</h3><span class="map-stage-tag">${esc(stages[d.stage])}</span></div>${d.image?`<figure class="map-preview-photo">${d.imageEmbedSource?`<a data-flickr-embed="true" href="${esc(d.imageEmbedSource)}" target="_blank" rel="noopener noreferrer" aria-label="写真を掲載元で見る">`:""}<img src="${esc(d.image)}" alt="${esc(d.imageAlt||d.name)}" class="${d.imageNoCrop?'uncropped':''}" loading="lazy">${d.imageEmbedSource?"</a>":""}<figcaption>${d.imageCaption?`${esc(d.imageCaption)}<br>`:""}${d.imageDate?`${esc(d.imageDate)} · `:""}PHOTO: ${esc(d.imageCredit)} · <a href="${esc(d.imageSource)}" target="_blank" rel="noopener noreferrer">掲載元</a> · <a href="${esc(d.imageRights)}" target="_blank" rel="noopener noreferrer">${esc(d.imageLicense)}</a>${d.imageChanges?`<br>${esc(d.imageChanges)}`:""}</figcaption></figure>`:''}<div class="map-preview-copy"><p class="eyebrow">この事例から学べること</p><p class="map-preview-learning">${esc(d.entry?.learning?.[new URLSearchParams(location.search).get("lens")]||d.tagline)}</p><p class="map-location-note">${esc(d.locationNote||'代表所在地です。正確な訪問先は公式サイトで確認してください。')}</p><a class="btn black" href="cases/${esc(d.id)}/${['co','place'].includes(new URLSearchParams(location.search).get('lens'))?'?lens='+new URLSearchParams(location.search).get('lens'):''}">仕組み・成果を詳しく読む →</a><a class="map-official" href="${esc(d.sources[0].url)}" target="_blank" rel="noopener noreferrer">主な情報源を見る ↗</a></div></div>`;
+      html=`<div class="map-preview"><button type="button" class="map-back" data-map-back>← ${groupIds.length?'この周辺の事例':'事例一覧'}に戻る</button><div class="map-preview-heading"><p class="eyebrow">CASE ${esc(d.number)} / ${esc(d.country)}</p><p class="map-city">${esc(d.city)}</p><h3>${esc(d.shortName||d.name)}</h3><span class="map-stage-tag">${esc(stages[d.stage])}</span></div>${d.image?`<figure class="map-preview-photo">${d.imageEmbedSource?`<a data-flickr-embed="true" href="${esc(d.imageEmbedSource)}" target="_blank" rel="noopener noreferrer" aria-label="写真を掲載元で見る">`:""}<img src="${esc(d.image)}" alt="${esc(d.imageAlt||d.name)}" class="${d.imageNoCrop?'uncropped':''}" loading="lazy">${d.imageEmbedSource?"</a>":""}<figcaption>${d.imageCaption?`${esc(d.imageCaption)}<br>`:""}${d.imageDate?`${esc(d.imageDate)} · `:""}${d.imageKind==='diagram'?'DIAGRAM':'PHOTO'}: ${esc(d.imageCredit)} · <a href="${esc(d.imageSource)}" target="_blank" rel="noopener noreferrer">掲載元</a> · <a href="${esc(d.imageRights)}" target="_blank" rel="noopener noreferrer">${esc(d.imageLicense)}</a>${d.imageChanges?`<br>${esc(d.imageChanges)}`:""}</figcaption></figure>`:''}${d.photoCount?`<a class="map-photo-count" href="cases/${esc(d.id)}/#field-photos">写真 ${d.photoCount}枚を大きく見る ↗</a>`:''}<div class="map-preview-copy"><p class="eyebrow">この事例から学べること</p><p class="map-preview-learning">${esc(d.entry?.learning?.[new URLSearchParams(location.search).get("lens")]||d.tagline)}</p><p class="map-location-note">${esc(d.locationNote||'代表所在地です。正確な訪問先は公式サイトで確認してください。')}</p><a class="btn black" href="cases/${esc(d.id)}/${['co','place'].includes(new URLSearchParams(location.search).get('lens'))?'?lens='+new URLSearchParams(location.search).get('lens'):''}">仕組み・成果を詳しく読む →</a><a class="map-official" href="${esc(d.sources[0].url)}" target="_blank" rel="noopener noreferrer">主な情報源を見る ↗</a></div></div>`;
     } else {
       html=`<div class="map-browser-heading"><p class="eyebrow">${groupIds.length?'SELECTED AREA / 選んだエリア':'PLACES / 事例名からも選べます'}</p><h3>${groupIds.length?'この周辺の事例':(country||regionNames[region||'world'])+'の事例'}<span>${group.length}</span></h3><p>${group.length?'気になる事例を選ぶと、概要を表示します。':'条件を減らして探し直してください。'}</p>${groupIds.length?'<button type="button" class="map-back" data-map-all>← 条件に合う全事例に戻る</button>':''}</div><div class="map-place-list">${listMarkup(group)}</div>${group.length?'':'<button type="button" class="map-clear" data-map-clear>絞り込みを解除</button>'}`;
     }
@@ -143,7 +143,7 @@ window.createAtlasMap = ({ data, stages, onFilter, onClear }) => {
       const key=items.map(d=>d.id).join('|')+';'+region+';'+country;
       if(key!==signature){signature=key;selected=null;groupIds=[];fit();}
       document.querySelectorAll('[data-map-region]').forEach(b=>{const r=b.dataset.mapRegion;b.setAttribute('aria-pressed',String(r===(region||'world')));b.querySelector('[data-region-count]').textContent=available.filter(d=>r==='world'||d.region===r).length;});
-      const countries=[...new Set(available.filter(d=>!region||d.region===region).map(d=>d.country))].sort((a,b)=>a.localeCompare(b,'ja'));
+      const countries=[...new Set(available.filter(d=>!region||d.region===region).flatMap(d=>d.countries||[d.country]))].sort((a,b)=>a.localeCompare(b,'ja'));
       if(country&&!countries.includes(country))countries.push(country);
       countrySelect.innerHTML='<option value="">すべての国</option>'+countries.map(c=>`<option value="${esc(c)}">${esc(c)}</option>`).join('');countrySelect.value=country;
       $('#map-scope').textContent=(country||regionNames[region||'world'])+'の事例';$('#map-empty').hidden=items.length>0;

@@ -10639,49 +10639,47 @@
   },
   {
     "id": "garraway-f",
-    "updated": "2026-09-28",
-    "summary": "会員25,000人・累計来場9万人の関係資本に、トヨタの技術・アセットとSerendipityの運営を重ねる。挑戦者、課題の当事者、技術の保有者が出会い、共感して小さく実践する。その発信が次の仲間を呼び、実証から商品化・現場導入へつながる。",
+    "updated": "2026-10-07",
+    "summary": "公開サイトは、挑戦する人・課題の当事者・技術やアセットを持つ人を、出会い・共感・挑戦・発信という4つの機能でつなぐと説明する。2026年9月時点の公表値は会員25,000人以上、累計来館90,000回以上、共創プロジェクト100件以上。個別案件の導入成果と社会的効果は未確認。",
     "inputs": {
       "human": {
         "self": {
-          "text": "トヨタ自動車株式会社が場をつくり、株式会社Serendipityが運営。ビジネスプロデューサー、女将、コンシェルジュが、案件づくり・関係づくり・日々の接続を担う。",
+          "text": "運営主体：トヨタ自動車株式会社。運営受託者：株式会社Serendipity。公開サイトはビジネスプロデューサー・女将・コンシェルジュの役割を紹介する。",
           "kind": "fact",
           "refs": [
             "garraway-f-src1"
           ]
         },
         "companies": {
-          "text": "企業の社内起案者、技術・データ・場所を持つ企業や施設運営者が参加する。実践の発信を通じて、別の事業部や企業の協力者へつながる。",
-          "kind": "self-report",
+          "text": "公開サイトは、社内起案者、AI・センサー企業、データ保有者、施設運営者などを参加者の例として挙げる。企業ごとの実参加・案件実績を示すものではない。",
+          "kind": "fact",
           "refs": [
-            "garraway-f-src1",
-            "garraway-f-src2"
+            "garraway-f-src1"
           ]
         },
         "government": {
-          "text": "自治体が地域の課題を持ち込み、人材育成や現場実証に関わる。資料には八代市の災害時電源、複数地域のAPM実証などが示される。",
-          "kind": "self-report",
+          "text": "自治体等の視察相談の窓口は公開されている。特定自治体の案件参加、費用負担、実証・導入の役割は今回確認した公開情報では未確認。",
+          "kind": "unknown",
           "refs": [
-            "garraway-f-src2"
+            "garraway-f-src1"
           ]
         },
         "startups": {
-          "text": "起業家・スタートアップがアイデアや技術を持ち込み、課題の当事者や実証の場を持つ企業と出会う。",
+          "text": "公開サイトは、挑戦する人の例として起業家を挙げ、共創・プロジェクトの相談窓口を案内している。企業別の参加・導入実績は未確認。",
           "kind": "fact",
           "refs": [
             "garraway-f-src1"
           ]
         },
         "academia": {
-          "text": "大学・研究機関、学生チームが参加。資料では高専ラボとのデバイス開発や、学生のデータ分析・サービス検証への参加を紹介する。",
-          "kind": "self-report",
+          "text": "公開サイトは、学生チームを挑戦する人の例、大学・研究機関を技術・アセット保有者の例として挙げる。個別の研究・開発成果は未確認。",
+          "kind": "fact",
           "refs": [
-            "garraway-f-src1",
-            "garraway-f-src2"
+            "garraway-f-src1"
           ]
         },
         "citizens": {
-          "text": "地域住民、商店主、医療・福祉の現場職員、地域事業者が、生活や業務の課題を持ち込む当事者として参加する。",
+          "text": "公開サイトは、課題の当事者の例として地域住民、商店主、医療・福祉の現場職員、地域事業者を挙げる。各属性の実参加人数は未確認。",
           "kind": "fact",
           "refs": [
             "garraway-f-src1"
@@ -10689,193 +10687,184 @@
         }
       },
       "tangible": {
-        "text": "福岡市中央区今泉の天神CLASS3階。最新HPは150席と、リビングラボ、キッチン・ダイニング、Serendipity Street、モノづくりラボ、スタジオ・集中空間を案内する。",
+        "text": "公開サイトは、福岡市中央区今泉1丁目19番22号・天神CLASS3階の150席を案内。対話・プロジェクト、食事・交流、偶然の出会い、試作・共創、発信・集中のための空間を紹介している。別の公式ページは段階的リニューアル中と注意を付しており、設備の現況は来館前の確認が必要。",
         "kind": "fact",
         "refs": [
-          "garraway-f-src1"
+          "garraway-f-src1",
+          "garraway-f-src3"
         ]
       },
       "relational": {
-        "text": "会員25,000人・累計来場者数9万人（2026年9月）の接点を基盤とする関係資本。スタッフによる紹介・対話と、23人のフューチャリストを含む社内外のネットワークを通じて、課題・技術・人を結びつけ、次の挑戦に協力できる関係を育てる。",
+        "text": "2026年9月時点で会員25,000人以上・累計来館90,000回以上を公表。23人のフューチャリストと、人をつなぐスタッフの役割を紹介する。会員数や来館数だけでは、関係の継続性・協力の密度は測れない。",
         "kind": "self-report",
         "refs": [
           "garraway-f-src1"
         ]
       },
       "financial": {
-        "text": "トヨタ自動車株式会社を事業主体とし、株式会社Serendipityが運営を受託。つながりを求める人は無料で参加できる。運営委託費と案件別の実証・導入費は未確認。",
-        "kind": "fact",
+        "text": "つながりを求める人は無料で参加できる。運営主体はトヨタ自動車株式会社、運営受託者は株式会社Serendipity。運営費の金額・財源構成と案件別の実証・導入費は公開情報では未確認。",
+        "kind": "unknown",
+        "refs": [
+          "garraway-f-src1",
+          "garraway-f-src3"
+        ]
+      },
+      "intellectual": {
+        "text": "分析：参加者例に技術・知見・データの保有者が含まれるため、異なる専門性を組み合わせる設計と読める。実際に共有されたデータ、知財の取扱い、研究成果は公開情報では未確認。",
+        "kind": "analysis",
         "refs": [
           "garraway-f-src1"
         ]
       },
-      "intellectual": {
-        "text": "参加者の技術、現場の経験、研究知見、実証データ、試して得た学びを持ち寄る。発信を通じ、別の課題や現場でも活用できる知識へつなぐ。",
-        "kind": "analysis",
-        "refs": [
-          "garraway-f-src1",
-          "garraway-f-src2"
-        ]
-      },
       "issues": {
-        "text": "挑戦したい人だけでは進められない課題、現場だけでは解けない困りごと、技術やアセットの使い道が定まらない状況を出発点にする。",
+        "text": "公開サイトは、まだ形になっていない挑戦の意志、現場の課題、技術・知見・場所等を持ち寄ることを共創の入口として説明する。個別課題の優先順位や選定基準は未確認。",
         "kind": "fact",
         "refs": [
-          "garraway-f-src1",
-          "garraway-f-src2"
+          "garraway-f-src1"
         ]
       }
     },
     "functions": [
       {
-        "text": "挑戦する人、課題の当事者、技術・アセットを持つ人を、コンシェルジュとの対話やイベント、日常の紹介でつなぐ。",
+        "text": "公開方針：異なる立場の人や課題を結びつける。参加方法では、コンシェルジュとの最初の対話を入口にしている。",
         "kind": "fact",
         "refs": [
           "garraway-f-src1"
         ],
-        "title": "出会い：立場を越えてつなぐ",
+        "title": "出会い：対話と紹介の入口",
         "steps": [
           1,
           3
         ]
       },
       {
-        "text": "当事者の声と互いの想いを聴き、共に取り組む課題と目的を見つける。ビジネスプロデューサーと女将が、関係を継続的な挑戦へ育てる。",
+        "text": "公開方針：課題の当事者の声を聴き、共通の目的を探る。参加者ごとの合意形成の結果や手順は未確認。",
         "kind": "fact",
         "refs": [
           "garraway-f-src1"
         ],
-        "title": "共感：一緒に取り組む理由をつくる",
+        "title": "共感：当事者の声に触れる",
         "steps": [
           1,
           3
         ]
       },
       {
-        "text": "できることから小さく始め、現場で試す。提供資料は、災害時のHV電源、APMの地域利用、車載電池リユースなど、課題と技術を組み合わせた実践を紹介する。",
-        "kind": "self-report",
+        "text": "公開方針：小さな実践を行い、現場から学ぶ。モノづくりラボと、実証実験・技術連携の相談窓口が案内されている。個別案件の実施・達成は未確認。",
+        "kind": "fact",
         "refs": [
-          "garraway-f-src1",
-          "garraway-f-src2"
+          "garraway-f-src1"
         ],
-        "title": "挑戦：小さく試し、現場で学ぶ",
+        "title": "挑戦：実践と学びを目指す",
         "steps": [
           5,
-          6,
-          7
+          6
         ]
       },
       {
-        "text": "実践と学びを発信し、次の課題・仲間・協力先との出会いへ戻す。資料では、実証内容の発信が病院、自治体、技術開発の協力者との接続を生んだと報告する。",
-        "kind": "self-report",
+        "text": "公開方針：取り組みの過程を伝え、次の仲間との出会いにつなげる。公式SNSとイベント情報への導線が公開されている。発信から新規案件への転換数は未確認。",
+        "kind": "fact",
         "refs": [
-          "garraway-f-src1",
-          "garraway-f-src2"
+          "garraway-f-src1"
         ],
-        "title": "発信：次の仲間と実践へつなぐ",
+        "title": "発信：取り組みを伝える",
         "steps": [
           1,
-          3,
-          6
+          3
         ]
       }
     ],
     "outputs": [
       {
-        "text": "最新HPは共創プロジェクト100件以上を公表。出会い・対話から実践へ進む活動の蓄積として示す。",
+        "text": "公開サイトは、2026年9月時点で共創プロジェクト100件以上を公表。件数の定義、内訳、完了・継続の区別は確認できない。",
         "kind": "self-report",
         "refs": [
           "garraway-f-src1"
         ]
       },
       {
-        "text": "提供資料には、HV電源ユニットの防災・医療向け実証、APMの地域実証とアプリ・デバイス開発、車載電池リユースの実証が記載される。",
-        "kind": "self-report",
+        "text": "今回確認した公開ページは、参加手順、スタッフの役割、共創・実証実験等の相談窓口を案内。案件別の試作品・実証データ・契約・導入実績は未確認。",
+        "kind": "unknown",
         "refs": [
-          "garraway-f-src2"
+          "garraway-f-src1"
         ]
       }
     ],
     "outcomes": [
       {
-        "text": "HV電源ユニットは、豊田通商による商品化と販売店での販売、防災協定へ広がったと報告されている（提供資料p.31）。",
-        "kind": "self-report",
-        "refs": [
-          "garraway-f-src2"
-        ]
+        "text": "個別の共創案件が、継続導入・事業化・行動変化へ進んだことを検証できる案件別情報は、今回確認した公開ページでは未確認。",
+        "kind": "unknown",
+        "refs": []
       },
       {
-        "text": "車載電池リユースの実証は、トヨタ自動車九州の工場で再生可能エネルギーを活用する蓄電池ステーションの導入へつながったと報告されている（提供資料p.41）。",
-        "kind": "self-report",
-        "refs": [
-          "garraway-f-src2"
-        ]
+        "text": "地域や利用者の改善量、費用対効果、Garraway Fの寄与を切り分けた評価は、今回確認した公開ページでは未確認。",
+        "kind": "unknown",
+        "refs": []
       }
     ],
     "outcomeGaps": [
-      "案件ごとの現在の継続状況、費用対効果、地域や利用者の改善量。",
-      "会員・来場・共創件数と、Garraway Fの活動に帰属する社会的効果の区別。"
+      "共創プロジェクトの定義・内訳、案件ごとの導入先と継続状況。",
+      "導入判断者、運用責任者、継続費用の負担者。",
+      "会員・来館・共創件数と、社会課題の改善効果・Garraway Fの寄与の区別。"
     ],
     "backcast": [
       {
-        "text": "技術の使い道を探す企業と、災害時電源や地域の移動などに困る当事者を、実証の前からつなぐ。現場の困りごとを試す内容へ変える。",
+        "text": "分析：公開された3属性を並べる構成は、挑戦する側だけでなく、課題の当事者と資源を持つ側を対話に加える設計と読める。実際の参加構成や意思決定への反映は未確認。",
         "kind": "analysis",
         "refs": [
-          "garraway-f-src2"
+          "garraway-f-src1"
         ],
-        "title": "使う現場の課題から始める"
+        "title": "分析：課題の当事者を入口に置く"
       },
       {
-        "text": "場に集まった関係を、現場・技術・人手を持ち寄る協力へ進める。資料のHV電源事例は自治体や病院で試し、商品化・販売店での展開へ接続したと報告する。",
-        "kind": "self-report",
-        "refs": [
-          "garraway-f-src2"
-        ],
-        "title": "実証の場と導入への接点をつなぐ"
-      },
-      {
-        "text": "実証で分かった課題を発信すると、次に必要な専門性を持つ人が加わる。APMでは地域での利用から電池残量・位置情報等の課題が見え、デバイスとアプリの開発へつながったと資料に示される。",
-        "kind": "self-report",
-        "refs": [
-          "garraway-f-src2"
-        ],
-        "title": "現場の学びを次の協力者へひらく"
-      },
-      {
-        "text": "他地域へ応用する際は、紹介件数に加えて、実証後に誰が導入を決め、費用を負担し、運用を続けるかを案件ごとに確かめる。",
+        "text": "分析：無料参加、LINE登録、最初の対話という手順は、新規参加者が関係づくりを始める入口になる。ただし、参加継続率や案件化への効果は検証されていない。",
         "kind": "analysis",
         "refs": [
-          "garraway-f-src1",
-          "garraway-f-src2"
+          "garraway-f-src1"
         ],
-        "title": "応用時の確認：続ける責任を決める"
+        "title": "分析：参加と対話の手順を示す"
+      },
+      {
+        "text": "分析：4つの機能には実践後の発信が含まれている。学びを他の参加者へ伝える経路を設ける考え方だが、発信による追加の協力・導入の実績は未確認。",
+        "kind": "analysis",
+        "refs": [
+          "garraway-f-src1"
+        ],
+        "title": "分析：実践を伝える経路を用意する"
+      },
+      {
+        "text": "提案・未実施：他地域へ応用する際は、案件ごとに導入判断者・費用負担者・運用責任者を定め、実施前後の変化と継続利用を追う。公開されている総件数だけで効果を判断しない。",
+        "kind": "analysis",
+        "refs": [
+          "garraway-f-src1"
+        ],
+        "title": "提案：導入後の責任と変化を確かめる"
       }
     ],
     "project": {
-      "name": "人材育成から、災害・医療向けHV電源の実証・商品化へ",
-      "stage": "実証・商品化への接続（提供資料で報告）",
+      "name": "天神CLASSへの移転と、交流拠点の運営",
+      "stage": "移転先でのオープン・参加案内を確認。案件別の社会実装成果は未確認。",
       "overview": {
-        "text": "シビックテック人材育成で、避難所の電源不足や発電機の運用負担を把握。トヨタとトヨタ自動車九州が開発するHV電源ユニットとの接点から、八代市での共創実証へ進んだ。",
-        "kind": "self-report",
+        "text": "公式サイトは、VIOROから天神CLASS3階へ移転し、2026年3月3日からオープンしたと案内。福岡・天神で、つながりを求める人が無料で参加できる交流拠点として利用方法を公開している。",
+        "kind": "fact",
         "refs": [
-          "garraway-f-src2"
+          "garraway-f-src3"
         ]
       },
       "output": {
-        "text": "実証内容の発信を通じて病院の災害医療チームともつながり、医療機器の電源確保に向けた実証へ展開した。",
-        "kind": "self-report",
+        "text": "天神CLASS3階・150席の拠点、LINE会員登録からコンシェルジュとの対話までの参加手順を公開。施設は段階的なリニューアル中との注意があり、設備の現況は別途確認が必要。",
+        "kind": "fact",
         "refs": [
-          "garraway-f-src2"
+          "garraway-f-src1",
+          "garraway-f-src3"
         ]
       },
       "outcome": {
-        "text": "資料は、豊田通商による商品化、販売店での販売、自治体・販売店・トヨタ自動車九州の防災協定への広がりを報告している。",
-        "kind": "self-report",
-        "refs": [
-          "garraway-f-src2"
-        ]
+        "text": "移転後に参加や共創の質がどの程度変化したか、利用者・地域にどのような改善が生じたかは未確認。会員・累計来館・共創件数は移転の効果を切り分けた指標ではない。",
+        "kind": "unknown",
+        "refs": []
       },
-      "gap": "提供資料p.31の関係者報告。販売数、現在の稼働数、防災上の効果を示す定量評価は未確認。"
+      "gap": "公開された拠点運営の事例として掲載。個別技術の導入・商品化を示す事例ではなく、移転前後の比較や社会的効果の測定は未確認。"
     },
     "sources": []
   },
@@ -24991,6 +24980,3486 @@
         ]
       },
       "gap": "個別の協定運用を市内全広場の成果へ一般化しない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "washington-square-traffic-removal",
+    "updated": "2026-10-06",
+    "summary": "一つの争点でつながり、試して判断を変える。 Jane Jacobsは地域運動への参加・組織づくりに関与。Ray Rubinow、Shirley Hayes、Edith Lyonsらの役割と区別する。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "ジェイコブズらの観察・発信・組織活動。",
+          "refs": [
+            "washington-square-traffic-removal-src01"
+          ],
+          "kind": "self-report"
+        },
+        "companies": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "公園・交通を管轄する市と、行政へ働きかける地域の政治関係者。",
+          "refs": [
+            "washington-square-traffic-removal-src01"
+          ],
+          "kind": "self-report"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "citizens": {
+          "text": "公園を使う近隣住民。Hayesの委員会活動は史料所蔵機関も記録する。",
+          "refs": [
+            "washington-square-traffic-removal-src02"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "公園の通過道路と、通行を制限する仮設の遮断設備。",
+        "refs": [
+          "washington-square-traffic-removal-src01"
+        ],
+        "kind": "self-report"
+      },
+      "relational": {
+        "text": "争点を一つに絞った連合と、住民同士の連絡・協力関係。",
+        "refs": [
+          "washington-square-traffic-removal-src01"
+        ],
+        "kind": "self-report"
+      },
+      "financial": {
+        "text": "運動費・行政工事費の内訳は未確認。",
+        "refs": [],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "本人の回顧証言、住民側の議事録・請願・調査の史料群。",
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "公園内の活動と自動車通過の競合。閉鎖で周辺道路が混雑する懸念も争点だった。",
+        "refs": [
+          "washington-square-traffic-removal-src01"
+        ],
+        "kind": "self-report"
+      }
+    },
+    "functions": [
+      {
+        "title": "共有できる争点を定める",
+        "text": "多様な住民を「緊急車両以外の交通をなくす」という目的で束ねる。参加者の全価値観を一致させる必要を減らした。",
+        "steps": [
+          1,
+          2,
+          3
+        ],
+        "refs": [
+          "washington-square-traffic-removal-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "行政への要求を具体化する",
+        "text": "抽象的な公園保全にとどまらず、実行できる交通閉鎖を求める。協力の動員と行政への働きかけを接続した。",
+        "steps": [
+          3
+        ],
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "暫定閉鎖から継続へ進む",
+        "text": "閉鎖を試し、懸念された影響を観察して恒久化につなぐ。交通減少の程度は本人証言だけで確定しない。",
+        "steps": [
+          6,
+          7
+        ],
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "交通を閉じる暫定措置と、市民連合の活動記録。",
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "公園の自動車交通排除が実現。Hayes史料の解説は1959年の達成を記す。",
+        "refs": [
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "周辺交通が悪化しなかったという本人の回顧がある。独立した前後データは本版で未確認。",
+        "refs": [
+          "washington-square-traffic-removal-src01"
+        ],
+        "kind": "self-report"
+      }
+    ],
+    "outcomeGaps": [
+      "市民連合の成功を一人の功績に還元しない。閉鎖後の現在の公園設計、周辺不動産価値、居住継続は別の成果であり、この運動による因果効果を示していない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "地域の課題を一つの判断可能な争点に絞り、誰が決めるかと試行条件を明確にする。対立の動員だけで終わらず、閉鎖しない代替案も同じ指標で比べる。",
+        "kind": "analysis",
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "ワシントン・スクエア公園の自動車交通排除",
+      "stage": "市民連合による交通計画への働きかけ・暫定閉鎖",
+      "overview": {
+        "text": "政党や団体の全方針を一致させるのではなく、公園の交通排除という争点に協力を集中。恒久案への賛否だけでなく、暫定閉鎖で周辺交通への懸念を確かめる経路をつくった。",
+        "kind": "analysis",
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ]
+      },
+      "output": {
+        "text": "交通を閉じる暫定措置と、市民連合の活動記録。",
+        "refs": [
+          "washington-square-traffic-removal-src01",
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "公園の自動車交通排除が実現。Hayes史料の解説は1959年の達成を記す。",
+        "refs": [
+          "washington-square-traffic-removal-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "市民連合の成功を一人の功績に還元しない。閉鎖後の現在の公園設計、周辺不動産価値、居住継続は別の成果であり、この運動による因果効果を示していない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "lower-manhattan-expressway-opposition",
+    "updated": "2026-10-06",
+    "summary": "道路の効率と、失われる暮らしを同じ判断へ。 Jane Jacobsは住民側の活動家・組織者として関与。道路設計者や行政の最終決定者ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "ジェイコブズによる住民活動・公聴会への対応。",
+          "refs": [
+            "lower-manhattan-expressway-opposition-src01"
+          ],
+          "kind": "self-report"
+        },
+        "companies": {
+          "text": "移転の影響を受ける仕事・事業所が審査上の論点。企業別の資金参加は未確認。",
+          "refs": [
+            "lower-manhattan-expressway-opposition-src02"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "市計画委員会、Board of Estimate、道路財源に関与する州・連邦。",
+          "refs": [
+            "lower-manhattan-expressway-opposition-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "citizens": {
+          "text": "住宅・生業の継続を求める地域の人々。",
+          "refs": [
+            "lower-manhattan-expressway-opposition-src01",
+            "lower-manhattan-expressway-opposition-src02"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "既成市街地、住宅・事業所、既存街路と横断交通。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "異なる近隣と活動家をつなぐ連合。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01"
+        ],
+        "kind": "self-report"
+      },
+      "financial": {
+        "text": "共同開発の財源制約は確認。運動費・最終損益は未確認。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "住民の証言と、市による交通・移転・代替案の検討。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01",
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "広域道路の便益と、市街地の分断・移転負担の対立。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "失われる地域資源を問う",
+        "text": "交通容量だけでなく、住宅と仕事の移転、既存の街路・地区の継続を問題として扱う。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01",
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "近隣をつなぎ異議を示す",
+        "text": "住民連合と公聴会を通じて、計画への反対理由を行政の審査へ持ち込む。",
+        "steps": [
+          3
+        ],
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "建設前提を代替案と照合する",
+        "text": "行政報告は財源制約を含め、既存道路活用や迂回案を検討。反対運動と行政評価を同じ行為には数えない。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "1969年8月20日の市計画委員会による再検討報告。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "高速道路を計画図から外す方向の報告が採択された。全会一致ではなかった。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomeGaps": [
+      "反対運動だけを中止の唯一の原因としない。公式報告にも資金・交通・代替案の論点があり、道路側の便益を重視する異論も残る。保存後の家賃・排除や、物流負担の長期評価は未確認。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "「つくらない」も選択肢に残し、生活の継続と交通の役割を同じ比較表へ入れる。運動の成果、行政の判断、長期の地域変化を別の証拠で追う。",
+        "kind": "analysis",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01",
+          "lower-manhattan-expressway-opposition-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "ロウアー・マンハッタン高速道路反対運動",
+      "stage": "市民運動と高速道路計画の再検討",
+      "overview": {
+        "text": "地域の日常と移転負担を、広域交通の目的と並べて議論する。地域連合の異議と、行政による交通・経済・開発条件の再検討が重なり、既存道路を使う代替案を含む判断へ進んだ。",
+        "kind": "analysis",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src01",
+          "lower-manhattan-expressway-opposition-src02"
+        ]
+      },
+      "output": {
+        "text": "1969年8月20日の市計画委員会による再検討報告。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "高速道路を計画図から外す方向の報告が採択された。全会一致ではなかった。",
+        "refs": [
+          "lower-manhattan-expressway-opposition-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "反対運動だけを中止の唯一の原因としない。公式報告にも資金・交通・代替案の論点があり、道路側の便益を重視する異論も残る。保存後の家賃・排除や、物流負担の長期評価は未確認。"
+    },
+    "sources": []
+  },
+  {
+    "id": "nyc-public-realm-strategy",
+    "updated": "2026-10-06",
+    "summary": "人の活動の観察を、市の街路政策へ渡す。 Jan Gehl・Gehl Architectsは公共空間分析・戦略に関与。NYC DOTがその分析を新政策・事業へ直接用いたと公式に説明。Midtown実証の実施・評価や全広場の設計を本人の担当としない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Gehlの公共空間分析と、NYC DOTの街路政策・事業担当。",
+          "refs": [
+            "nyc-public-realm-strategy-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "後続のMidtown実証では地域団体・周辺事業者が協働。2008年の調査費への企業拠出は未確認。",
+          "refs": [
+            "nyc-public-realm-strategy-src02"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "NYC DOTがGehlの分析を政策へ用い、関連事業を実施。",
+          "refs": [
+            "nyc-public-realm-strategy-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "学術的な公共生活観察の考え方をGehlが持ち込む。大学が実施主体だったとは確認していない。",
+          "refs": [
+            "nyc-public-realm-strategy-src01",
+            "nyc-public-realm-strategy-src03"
+          ],
+          "kind": "analysis"
+        },
+        "citizens": {
+          "text": "公共空間を歩き、過ごす人々。観察対象であることと、調査・政策の共同決定権は区別する。",
+          "refs": [
+            "nyc-public-realm-strategy-src01"
+          ],
+          "kind": "analysis"
+        }
+      },
+      "tangible": {
+        "text": "NYCの街路・歩道・建物間の空間。Midtownは後続の実証対象。",
+        "refs": [
+          "nyc-public-realm-strategy-src01",
+          "nyc-public-realm-strategy-src02"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "市と地域団体の協働。恒久設計には複数関係者が関わる。",
+        "refs": [
+          "nyc-public-realm-strategy-src02"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "費用総額、維持管理の収支は未確認。",
+        "refs": [],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "公共空間・公共生活の分析と、World Class Streetsの政策提案。",
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "歩行者の密集と車両の錯綜を、移動機能を保ちながら改善する。",
+        "refs": [
+          "nyc-public-realm-strategy-src02"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "歩く人の活動から課題を読む",
+        "text": "Gehlの公共空間分析を用い、交通量だけでは捉えきれない街路の使われ方を市の課題として示す。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "nyc-public-realm-strategy-src01",
+          "nyc-public-realm-strategy-src03"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "調査を街路の政策目標へ翻訳する",
+        "text": "歩行・滞在・公共空間の質を、街路設計の考え方へつなぐ。市は分析を新政策・事業の実施に直接用いたと説明する。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "実施主体へ渡し、後続施策を別に評価する",
+        "text": "調査・戦略と、市の個別事業を接続する。Midtownの実証評価は市施策の結果として読み、Gehl個人の効果やPlaza制度全体の効果へ読み替えない。",
+        "steps": [
+          8
+        ],
+        "refs": [
+          "nyc-public-realm-strategy-src01",
+          "nyc-public-realm-strategy-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "公共空間分析を含む、2008年のWorld Class Streets報告。",
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "NYC DOTはGehlの分析を新政策・事業の実施に直接用いたと公式に説明する。",
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "self-report"
+      },
+      {
+        "text": "後続の市施策Green Light for Midtownでは、市が対象地区の歩行者負傷35%減を報告。2009年6–11月と2006–2008年の同月平均の比較で、2010年2月に恒久化を決定した。",
+        "refs": [
+          "nyc-public-realm-strategy-src02"
+        ],
+        "kind": "self-report"
+      }
+    ],
+    "outcomeGaps": [
+      "観察・政策助言の採用と、後続市施策の成果を区別する。35%は交差点・信号等も含む実証の前後比較で、Gehl個人の因果効果ではない。市公表のWest Midtown南行タクシー速度は2%低下し、交通改善は一様でない。既存NYC Plaza Programの各広場への本人の直接関与は本版では未確認。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "人の活動を観察した結果を、誰が政策・予算・現場実施に引き取るかを明確にする。知識の生産、政策採用、地区実証、全市の運営制度を別々に評価し、比較するときだけ接続する。",
+        "kind": "analysis",
+        "refs": [
+          "nyc-public-realm-strategy-src01",
+          "nyc-public-realm-strategy-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "World Class Streets／NYC公共空間戦略",
+      "stage": "公共空間・公共生活の調査と政策助言",
+      "overview": {
+        "text": "歩行者の活動と街路空間の状況を観察し、公共空間の質を市の設計・政策目標へつなぐ。研究・助言を受け取る行政が実施判断を持ち、後続の実証は別の事業単位で効果を確認する。",
+        "kind": "analysis",
+        "refs": [
+          "nyc-public-realm-strategy-src01",
+          "nyc-public-realm-strategy-src02"
+        ]
+      },
+      "output": {
+        "text": "公共空間分析を含む、2008年のWorld Class Streets報告。",
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "NYC DOTはGehlの分析を新政策・事業の実施に直接用いたと公式に説明する。",
+        "refs": [
+          "nyc-public-realm-strategy-src01"
+        ],
+        "kind": "self-report"
+      },
+      "gap": "観察・政策助言の採用と、後続市施策の成果を区別する。35%は交差点・信号等も含む実証の前後比較で、Gehl個人の因果効果ではない。市公表のWest Midtown南行タクシー速度は2%低下し、交通改善は一様でない。既存NYC Plaza Programの各広場への本人の直接関与は本版では未確認。"
+    },
+    "sources": []
+  },
+  {
+    "id": "melbourne-places-for-people",
+    "updated": "2026-10-06",
+    "summary": "人の数を測り、測り方そのものも見直す。 Jan Gehlは市との公共生活調査・提言・2004年再調査に関与。2015年版すべての著者、全整備の設計者という意味ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "市の調査担当とGehlによる公共生活の観察・再評価。",
+          "refs": [
+            "melbourne-places-for-people-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "店舗や建物の用途は調査対象。企業の共同出資や設計決定権は未確認。",
+          "refs": [
+            "melbourne-places-for-people-src01"
+          ],
+          "kind": "analysis"
+        },
+        "government": {
+          "text": "City of Melbourneが調査と計画検討を担う。",
+          "refs": [
+            "melbourne-places-for-people-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Gehlの観察方法を都市政策の調査へ応用。研究上の思想は本人が説明している。",
+          "refs": [
+            "melbourne-places-for-people-src01",
+            "melbourne-places-for-people-src02"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "住民・勤務者・来訪者の利用が調査対象。観察されることと共同決定権は別。",
+          "refs": [
+            "melbourne-places-for-people-src01"
+          ],
+          "kind": "analysis"
+        }
+      },
+      "tangible": {
+        "text": "通り、路地、座席、広場、建物の街路側の構成。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "市と外部専門家が初回調査後にも学びをつなぐ関係。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "調査と整備の費用内訳は未確認。",
+        "refs": [],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "観察地点・時間帯を持つ縦断データと、変化する調査枠組み。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "中心部へ人を呼び戻す問いから、成長後の日常の質を問う課題へ移った。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "公共生活を観察する",
+        "text": "街路の形だけでなく通行・滞在の実態を記録する。施設があることと使えることの違いを問いにする。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "melbourne-places-for-people-src01",
+          "melbourne-places-for-people-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "同じ場所を測り直す",
+        "text": "初回提言後にも観察し、地点・時間帯による変化を読む。市全体の人口・就業の変化など別要因も検討する。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "限界から次の調査を組み立てる",
+        "text": "市の2015年版は、人数中心の方法では生活の質を捉えきれないとし、日常の利用条件へ調査を拡張した。",
+        "steps": [
+          2,
+          8
+        ],
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "初回・再調査の報告と、地区・時期を比較するデータ。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "観察と提言を繰り返す仕組みが、2015年の調査方法の更新につながった。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "個別整備・Gehlの助言が生活の質をどれだけ改善したかは、ここで示す資料だけでは切り分けられない。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "調査対象範囲と時期の違いを無視して成長率を比較しない。人数増には人口・就業・用途の変化も関わる。人の多さだけで居やすさや公平性を保証せず、2015年版を本人の単独成果としない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "十年ごとの調査間隔をそのまま移すのでなく、日常の判断に必要な間隔で測り直す。観察指標が何を取りこぼすかを毎回点検する。",
+        "kind": "analysis",
+        "refs": [
+          "melbourne-places-for-people-src01",
+          "melbourne-places-for-people-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "メルボルン Places for People",
+      "stage": "公共空間・公共生活の縦断調査と計画提言",
+      "overview": {
+        "text": "公共空間の形と通行・滞在を繰り返し観察し、提言と変化を照合。後の版では、人数だけで測れない生活の質を認め、土地利用や日常サービスへの到達性も調査に加えた。",
+        "kind": "analysis",
+        "refs": [
+          "melbourne-places-for-people-src01",
+          "melbourne-places-for-people-src02"
+        ]
+      },
+      "output": {
+        "text": "初回・再調査の報告と、地区・時期を比較するデータ。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "観察と提言を繰り返す仕組みが、2015年の調査方法の更新につながった。",
+        "refs": [
+          "melbourne-places-for-people-src01"
+        ],
+        "kind": "fact"
+      },
+      "gap": "調査対象範囲と時期の違いを無視して成長率を比較しない。人数増には人口・就業・用途の変化も関わる。人の多さだけで居やすさや公平性を保証せず、2015年版を本人の単独成果としない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "perceptual-form-city",
+    "updated": "2026-10-06",
+    "summary": "設計図と、使う人の頭の中の地図を照らす。 Kevin LynchはGyörgy Kepesと共同で都市形態の知覚を研究。住民調査と現地観察を用い、都市イメージの方法を整理した。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Lynch、KepesとMITの現地調査者。",
+          "refs": [
+            "perceptual-form-city-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "MITの都市・地域研究の研究体制。",
+          "refs": [
+            "perceptual-form-city-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "三都市の少数の住民への聞き取り。地域全員の代表とは限らない。",
+          "refs": [
+            "perceptual-form-city-src01"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "三都市の街路・地区と、Boston調査の写真記録。",
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "住民の説明と専門家の観察を比べる接点。共同統治の制度とは区別する。",
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "Rockefeller Foundationが1954年に研究助成。額は未確認。",
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "都市イメージを読む概念、聞き取り・観察記録、The Image of the City。",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "図面上の形と、人が認識して使う都市の姿との違い。",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "経験から都市を読む",
+        "text": "住民に道順や都市の特徴を尋ね、専門家が見落とす認識の違いを探る。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "語りと現地観察を照合する",
+        "text": "住民の回答を、調査者の系統的な観察と比べる。一方の印象だけで全体を判断しない。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "方法を記録し次の設計へ渡す",
+        "text": "研究を主著へまとめ、都市を読む方法として共有。これ自体を都市改善の効果測定としない。",
+        "steps": [
+          8
+        ],
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "1960年のThe Image of the Cityと調査資料。MITにはBoston調査の約2,000点の写真が残る。",
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "都市の知覚を検討する研究方法が文献と記録として共有された。",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "案内の改善、迷いの減少、生活の質向上という実装効果は、この研究紹介資料では未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "少数の住民の回答に基づく研究で、全住民の代表性や他文化への普遍性を保証しない。わかりやすさは都市の価値の一側面であり、居住費、差別、身体条件などの問題を置き換えない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "五要素をチェックリストで埋めるだけでなく、誰の見え方を採用し誰を取りこぼすかを調べる。都市全体の優劣ではなく、具体的な利用場面の診断に使う。",
+        "kind": "analysis",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "都市の知覚的形態の研究",
+      "stage": "住民の都市イメージと現地観察を比べる研究",
+      "overview": {
+        "text": "少数の住民が語る都市の姿や道順と、訓練を受けた調査者の現地観察を照合。個人の経験から、道・境界・地区・結節点・目印などの関係を読む方法を組み立てた。",
+        "kind": "analysis",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ]
+      },
+      "output": {
+        "text": "1960年のThe Image of the Cityと調査資料。MITにはBoston調査の約2,000点の写真が残る。",
+        "refs": [
+          "perceptual-form-city-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "都市の知覚を検討する研究方法が文献と記録として共有された。",
+        "refs": [
+          "perceptual-form-city-src01",
+          "perceptual-form-city-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "少数の住民の回答に基づく研究で、全住民の代表性や他文化への普遍性を保証しない。わかりやすさは都市の価値の一側面であり、居住費、差別、身体条件などの問題を置き換えない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "temporary-paradise",
+    "updated": "2026-10-06",
+    "summary": "行政境界を越え、成長と自然を一緒に考える。 Kevin LynchはDonald Appleyardとの共同地域調査・計画提言の著者。交通・環境事業を一括実施した運営者ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "LynchとAppleyardの共同調査・構想力。",
+          "refs": [
+            "temporary-paradise-src01",
+            "temporary-paradise-src02"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "報告はSan Diego市への助成を通じて作成され、後の市計画が参照した。",
+          "refs": [
+            "temporary-paradise-src01",
+            "temporary-paradise-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "二人の都市計画研究者の専門知。大学が報告を運営する常設施設ではない。",
+          "refs": [
+            "temporary-paradise-src01"
+          ],
+          "kind": "analysis"
+        },
+        "citizens": {
+          "text": "C-3は後年、報告を地域への提言・教育活動に用いたと説明。",
+          "refs": [
+            "temporary-paradise-src02"
+          ],
+          "kind": "self-report"
+        }
+      },
+      "tangible": {
+        "text": "海岸、湾、谷・峡谷、既成市街地と交通網。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "国境を越える都市・地域の関係を計画対象にした。越境組織の設置は提案である。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "Marston家の助成12,000米ドル。整備費とは区別する。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "1974年報告と、その後の政策への影響を記した市計画史。",
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "郊外開発と自然環境・交通・公共サービスの負荷。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "地域のつながりを把握する",
+        "text": "地形、開発、交通を越境地域として捉え、地区単位では見えにくい相互依存を読む。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "成長をどこへ導くか提言する",
+        "text": "既成地区の活用と自然資源の保全、公共交通を組み合わせて将来像を提示。個別施策は提案として区別する。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "後続の政策・市民活動へ渡す",
+        "text": "報告を長期の議論の材料にする。市の計画史による政策影響とC-3の活動利用を、現場の効果と混同しない。",
+        "steps": [
+          8
+        ],
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "1974年の共同報告Temporary Paradise?。",
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "市計画史は、既成地区への成長誘導の考え方が後の成長管理計画に組み込まれたと記す。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "C-3は報告を長年の提言・教育の指針として用いたと説明する。",
+        "refs": [
+          "temporary-paradise-src02"
+        ],
+        "kind": "self-report"
+      }
+    ],
+    "outcomeGaps": [
+      "正式採択された総合計画や、全提案の施工実績ではない。市計画史には空港移転案が地域側の反対で消えた記述もあり、実現しなかった提案を含む。環境改善・住宅費・越境アクセスへの純粋な因果効果は未確認。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "壮大な将来像をそのまま写すのでなく、自然・移動・土地利用の依存関係と行政間の責任を先に描く。提案、正式採択、実施、生活上の効果を別々に追う。",
+        "kind": "analysis",
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "Temporary Paradise?：サンディエゴ・ティフアナの地域提言",
+      "stage": "越境地域の環境・成長・交通に関する調査報告と提言",
+      "overview": {
+        "text": "都市を単一の建築や行政区域で切らず、海岸・谷・峡谷、住宅開発、サービス、交通の関係として捉える。既成地区への成長誘導と環境保全を同じ地域像に置き、行政・市民が後続の計画を議論する材料にした。",
+        "kind": "analysis",
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ]
+      },
+      "output": {
+        "text": "1974年の共同報告Temporary Paradise?。",
+        "refs": [
+          "temporary-paradise-src01",
+          "temporary-paradise-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "市計画史は、既成地区への成長誘導の考え方が後の成長管理計画に組み込まれたと記す。",
+        "refs": [
+          "temporary-paradise-src01"
+        ],
+        "kind": "fact"
+      },
+      "gap": "正式採択された総合計画や、全提案の施工実績ではない。市計画史には空港移転案が地域側の反対で消えた記述もあり、実現しなかった提案を含む。環境改善・住宅費・越境アクセスへの純粋な因果効果は未確認。"
+    },
+    "sources": []
+  },
+  {
+    "id": "eishin-higashino-campus",
+    "updated": "2026-10-06",
+    "summary": "利用者の言葉を、現地で確かめる空間へ。 Christopher AlexanderはChief Architect。Hans-Joachim NeisらCES共同チームと学校利用者が関与し、施工はFujita Corporation。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Alexanderを主任設計とするCESの建築・構造等の共同チーム。",
+          "refs": [
+            "eishin-higashino-campus-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "施工者Fujita Corporation。学校は設計の発注者。",
+          "refs": [
+            "eishin-higashino-campus-src01"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "設計過程に許認可準備を含む。行政の共同設計・資金拠出は未確認。",
+          "refs": [
+            "eishin-higashino-campus-src01"
+          ],
+          "kind": "analysis"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "教職員・学校運営者の教育現場の知識。",
+          "refs": [
+            "eishin-higashino-campus-src01",
+            "eishin-higashino-campus-src02"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "学校の生徒・教職員が利用者として参加したとCES側が記録する。",
+          "refs": [
+            "eishin-higashino-campus-src02",
+            "eishin-higashino-campus-src03"
+          ],
+          "kind": "self-report"
+        }
+      },
+      "tangible": {
+        "text": "敷地、杭、模型、施工の検討材料。",
+        "refs": [
+          "eishin-higashino-campus-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "学校利用者と設計チームの継続的な対話。",
+        "refs": [
+          "eishin-higashino-campus-src02",
+          "eishin-higashino-campus-src03"
+        ],
+        "kind": "self-report"
+      },
+      "financial": {
+        "text": "発注関係は確認できるが、財源構成と費用は未確認。",
+        "refs": [
+          "eishin-higashino-campus-src01"
+        ],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "学校固有の110パタン。報告の書誌説明は約5か月の共同検討を記す。",
+        "refs": [
+          "eishin-higashino-campus-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "抽象的な校舎計画を、学校で送りたい日常と具体的な敷地条件へ結びつける。",
+        "refs": [
+          "eishin-higashino-campus-src01",
+          "eishin-higashino-campus-src03"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "生活上の要求を共有言語へする",
+        "text": "利用者との検討を、学校固有のパタンとして整理。一般的な寸法集をそのまま当てはめる方法ではない。",
+        "steps": [
+          1,
+          2,
+          3
+        ],
+        "refs": [
+          "eishin-higashino-campus-src02",
+          "eishin-higashino-campus-src03"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "敷地と模型で配置を確かめる",
+        "text": "杭で位置を示し、模型と現地を往復。建物単体と屋外空間の関係を同時に検討する。",
+        "steps": [
+          5,
+          6
+        ],
+        "refs": [
+          "eishin-higashino-campus-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "実施部分を学校運営へ渡す",
+        "text": "学校公式史が1985年の開校を記す。実現した高校と、計画のみの大学部を分けて成果を記録する。",
+        "steps": [
+          5,
+          7
+        ],
+        "refs": [
+          "eishin-higashino-campus-src01",
+          "eishin-higashino-campus-src04"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "110の固有パタンとキャンパスの設計。パタン報告は144ページの書誌記録。",
+        "refs": [
+          "eishin-higashino-campus-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "高校部分の校舎・屋外空間。",
+        "refs": [
+          "eishin-higashino-campus-src01",
+          "eishin-higashino-campus-src04"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "東野高等学校は1985年に開校。教育の場としての実現は確認できる。",
+        "refs": [
+          "eishin-higashino-campus-src04"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "学習成績・幸福度・維持費への因果的改善は本版では未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "CESの記録は当事者資料で、利用者参加の独立評価ではない。設計された35棟すべて、あるいは大学部を含む全体が完成したとはしない。歴史的な設計の成功と現在の学習成果・アクセス性能も別である。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "パタンという名称を導入するより、利用者が決められる範囲、設計者が引き受ける責任、実寸で確かめる機会を明確にする。改修後にもパタンを更新する。",
+        "kind": "analysis",
+        "refs": [
+          "eishin-higashino-campus-src01",
+          "eishin-higashino-campus-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "盈進学園 東野高等学校のキャンパス設計",
+      "stage": "利用者参加による学校キャンパスの設計・建設",
+      "overview": {
+        "text": "利用者の望む生活をプロジェクト固有のパタンにまとめ、敷地上の配置と模型を往復して検討。その後に建物・構造・施工図へ進め、言葉による合意と実寸の体験を接続した。",
+        "kind": "analysis",
+        "refs": [
+          "eishin-higashino-campus-src01",
+          "eishin-higashino-campus-src02"
+        ]
+      },
+      "output": {
+        "text": "110の固有パタンとキャンパスの設計。パタン報告は144ページの書誌記録。",
+        "refs": [
+          "eishin-higashino-campus-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "東野高等学校は1985年に開校。教育の場としての実現は確認できる。",
+        "refs": [
+          "eishin-higashino-campus-src04"
+        ],
+        "kind": "fact"
+      },
+      "gap": "CESの記録は当事者資料で、利用者参加の独立評価ではない。設計された35棟すべて、あるいは大学部を含む全体が完成したとはしない。歴史的な設計の成功と現在の学習成果・アクセス性能も別である。"
+    },
+    "sources": []
+  },
+  {
+    "id": "oregon-experiment",
+    "updated": "2026-10-06",
+    "summary": "完成図を固定せず、判断の方法を続ける。 Christopher AlexanderはMurray Silverstein、Shlomo Angel、Sara Ishikawa、Denny Abramsとの共著・方法構築に関与。現行計画を単独で運営する人物ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "大学のCampus Planning担当と委員会、個別事業の責任者。",
+          "refs": [
+            "oregon-experiment-src01",
+            "oregon-experiment-src02"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "設計コンサルタント等が利用者グループと案を作成する。",
+          "refs": [
+            "oregon-experiment-src02"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "大学計画はEugene市の土地利用制度との整合を扱う。具体的な審査要否は案件別。",
+          "refs": [
+            "oregon-experiment-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "関与・投入資源は公開資料で未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "学生・教員・職員が計画に参加。Alexanderらの六原則が方法の基礎。",
+          "refs": [
+            "oregon-experiment-src01",
+            "oregon-experiment-src03"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "周辺の影響を受ける地域関係者にも参加・意見提出の手続を設ける。",
+          "refs": [
+            "oregon-experiment-src02"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "キャンパスの建物、連続するオープンスペース、歩行・自転車の動線。",
+        "refs": [
+          "oregon-experiment-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "利用者と設計者の作業を、委員会による全体調整へ接続する。",
+        "refs": [
+          "oregon-experiment-src02"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "Project Sponsorが事業の資金確保を担う。総財源構成・参加費用は未確認。",
+        "refs": [
+          "oregon-experiment-src02"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "原則・パタン・診断と、現行Campus Planの手続。",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02",
+          "oregon-experiment-src03"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "部分ごとの建設を、キャンパス全体の質と利用者の必要へどう整合させるか。",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src03"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "共通原則から将来を考える",
+        "text": "有機的秩序・参加・段階的成長・パタン・診断・調整を用いる。完成画像だけで案件を縛らない。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "oregon-experiment-src03"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "利用者を設計過程へ入れる",
+        "text": "現行制度では利用者グループが設計者と検討し、委員会が審査する。意見参加と最終承認の責任を分ける。",
+        "steps": [
+          3,
+          7
+        ],
+        "refs": [
+          "oregon-experiment-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "診断を継続判断へつなぐ",
+        "text": "現在の状態を定期的に読み、改善案件を全体の原則と照合。制度が残ることと個別案件の効果は別に評価する。",
+        "steps": [
+          1,
+          6,
+          7
+        ],
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "title": "方法を文献と制度に残す",
+        "text": "1975年共著と大学の現行計画が、他の共同体でも検討できる判断の枠組みを示す。",
+        "steps": [
+          8
+        ],
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src03"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "1975年の共著The Oregon Experiment。",
+        "refs": [
+          "oregon-experiment-src03"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "原則と参加手続を記載したCampus Plan 2025版。",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "2025年版でもThe Oregon Experimentを計画の基礎と明記。参加・診断・調整が制度に残る。",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "制度継続による満足度、費用、環境性能の因果改善は本版では未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "大学の制度的継続は確認できるが、全建物がAlexanderの設計であること、すべての利用者が対等な議決権を持つこと、常に小規模事業だけを行うことを意味しない。時間・参加コストと非参加者の扱いを別に検証する。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "参加イベントだけを移すのでなく、診断、案件の優先順位、承認者、予算、利用後の再評価を一つの流れにする。学校・病院・公共施設でも、各施設の規制と責任体系へ翻訳する必要がある。",
+        "kind": "analysis",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "オレゴン実験：参加と診断によるキャンパス計画",
+      "stage": "参加型キャンパス計画の方法と継続的な制度運用",
+      "overview": {
+        "text": "固定した完成図の再現ではなく、共通の原則・パタンを用いて個別案件を診断し、利用者の意見と全体調整を接続する。現行計画は利用者グループ、委員会の審査・勧告、大学の承認を別段階として扱う。",
+        "kind": "analysis",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ]
+      },
+      "output": {
+        "text": "1975年の共著The Oregon Experiment。",
+        "refs": [
+          "oregon-experiment-src03"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "2025年版でもThe Oregon Experimentを計画の基礎と明記。参加・診断・調整が制度に残る。",
+        "refs": [
+          "oregon-experiment-src01",
+          "oregon-experiment-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "大学の制度的継続は確認できるが、全建物がAlexanderの設計であること、すべての利用者が対等な議決権を持つこと、常に小規模事業だけを行うことを意味しない。時間・参加コストと非参加者の扱いを別に検証する。"
+    },
+    "sources": []
+  },
+  {
+    "id": "bart20-landuse",
+    "updated": "2026-10-06",
+    "summary": "駅の存在と、開発が起きる条件を分けて調べる。 Robert CerveroはJohn Landisと研究を主導。BARTの建設・運営や沿線施設の設計を担った事例ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "CerveroとLandisが土地利用への影響を共同研究した。",
+          "refs": [
+            "bart20-landuse-src01",
+            "bart20-landuse-src02"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "沿線の開発・不動産市場が評価対象。個別企業が共同研究の正式メンバーだった範囲は未確認。",
+          "refs": [
+            "bart20-landuse-src01"
+          ],
+          "kind": "analysis"
+        },
+        "government": {
+          "text": "BARTと沿線自治体の交通・土地利用政策が検証対象。駅周辺の規制や開発条件が結果を左右する。",
+          "refs": [
+            "bart20-landuse-src01",
+            "bart20-landuse-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定のスタートアップの関与は確認していない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Cervero・Landisの研究チームが、開業後の開発・土地利用を比較した。",
+          "refs": [
+            "bart20-landuse-src01",
+            "bart20-landuse-src02"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "開発への地域の賛否は重要条件として扱われる。住民を共同研究の意思決定者とした証拠は未確認。",
+          "refs": [
+            "bart20-landuse-src01"
+          ],
+          "kind": "analysis"
+        }
+      },
+      "tangible": {
+        "text": "鉄道駅、駅前用地、住宅・業務施設、駐車場という既存の物的条件。",
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "鉄道事業者だけでは、自治体の規制、用地所有、民間投資、地域合意を代替できない。",
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "不動産需要や資金調達条件は開発成立を考える要因。研究予算の内訳は未確認。",
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "analysis"
+      },
+      "intellectual": {
+        "text": "沿線の土地利用評価と、密度・用途多様性・設計を区別する3Dsの研究視点。3Ds原著は別研究である。",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src03"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "鉄道整備だけで、どこでも駅前開発や広域的な成長誘導が起きるという想定を検証する。",
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "拠点ごとの変化を比較する",
+        "text": "沿線を一括で成功と呼ばず、中心部や郊外拠点の土地利用・開発変化を比較する。",
+        "steps": [
+          1,
+          6
+        ],
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "市場と政策を照合する",
+        "text": "駅への近接と、開発規制・市場の強さ・用地条件を合わせて読む。鉄道の存在だけを説明変数にしない。",
+        "steps": [
+          1,
+          6
+        ],
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "伸びなかった条件を残す",
+        "text": "開発反対、土地集約、資金調達、駐車の扱いなどの障害も記述し、他地区へ移せる条件を限定する。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "BART開業約20年後の土地利用評価と、本人たちによる研究解説。",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "駅整備と土地利用政策・市場条件を一緒に考えるための判断材料。",
+        "refs": [
+          "bart20-landuse-src01"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "研究はSan Francisco中心部や一部の郊外拠点で開発を支えたと分析する一方、地域全体への成長誘導は限定的だったとする。",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "この研究の提言によって新たに生じた開発量や生活改善は、確認資料から分離できない。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "歴史的な観察研究であり、鉄道だけの因果効果を実験で分離したものではない。現在のBARTやすべての駅へ結果を延長しない。地価上昇は住民の生活改善と同義ではなく、居住継続・負担増を別に調べる必要がある。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本では駅前建物の床面積だけで評価せず、交通サービス、利用できる生活機能、家賃・駐車費を同じ地区単位で捉える。鉄道計画と土地利用計画を別々に最適化しないという学びとして使う。",
+        "kind": "analysis",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "BART@20：鉄道20年後の土地利用評価",
+      "stage": "鉄道沿線の研究評価",
+      "overview": {
+        "text": "沿線の開発・人口・雇用などを調べ、駅があることだけで成長を説明せず、都市計画と市場の違いを照合する。成功拠点と伸びなかった地区を同じ問いで比べ、交通投資の必要条件と十分条件を切り分ける。",
+        "kind": "analysis",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ]
+      },
+      "output": {
+        "text": "BART開業約20年後の土地利用評価と、本人たちによる研究解説。",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "研究はSan Francisco中心部や一部の郊外拠点で開発を支えたと分析する一方、地域全体への成長誘導は限定的だったとする。",
+        "refs": [
+          "bart20-landuse-src01",
+          "bart20-landuse-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "歴史的な観察研究であり、鉄道だけの因果効果を実験で分離したものではない。現在のBARTやすべての駅へ結果を延長しない。地価上昇は住民の生活改善と同義ではなく、居住継続・負担増を別に調べる必要がある。"
+    },
+    "sources": []
+  },
+  {
+    "id": "tod-housing-trip-generation",
+    "updated": "2026-10-06",
+    "summary": "標準の交通予測を、駅近くの住宅の実測で問い直す。 Robert CerveroはG. B. Arringtonとの共著研究者。対象住宅の開発者・設計者としての関与を示す事例ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "CerveroとArringtonが原論文を共同執筆。",
+          "refs": [
+            "tod-housing-trip-generation-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "Arringtonの論文記載所属はPB Placemaking。調査対象の住宅開発者・運営者の共同研究への関与範囲は未確認。",
+          "refs": [
+            "tod-housing-trip-generation-src01"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "地方行政による交通影響負担や駐車要件の見直しが研究の提言対象。政策採用の実績ではない。",
+          "refs": [
+            "tod-housing-trip-generation-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定のスタートアップ関与は確認していない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "UC BerkeleyのCerveroが、交通・土地利用の研究知見を用いて比較評価した。",
+          "refs": [
+            "tod-housing-trip-generation-src01",
+            "tod-housing-trip-generation-src03"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "TOD住宅居住者の移動が評価対象。居住者の自己選択は因果解釈で残る条件。",
+          "refs": [
+            "tod-housing-trip-generation-src01"
+          ],
+          "kind": "analysis"
+        }
+      },
+      "tangible": {
+        "text": "米国5都市圏の17のTOD住宅と周辺の公共交通・住宅環境。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "自治体の審査実務と交通需要研究をつなぎ、一般基準を現場の条件と照合する。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "駐車場や交通影響負担の設定に関わる研究だが、財源や節減額をこの結果から直接算出することはできない。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "analysis"
+      },
+      "intellectual": {
+        "text": "住戸当たり平日自動車トリップ、ITE予測、密度等を用いた比較。3Ds原著は説明の背景であり、この17住宅調査とは別。",
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src03"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "駅近くの住宅にも一般的な自動車依存型の交通原単位を当てると、必要量を過大推計する可能性がある。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "同じ単位で実測する",
+        "text": "対象住宅の平日自動車トリップを住戸当たりに換算し、住宅規模の違いを揃える。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "予測と実測を比べる",
+        "text": "ITEの予測値との差を算出する。比較の基準は整備前の同一住宅ではなく、標準モデルである。",
+        "steps": [
+          1,
+          6
+        ],
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "適用条件を限定する",
+        "text": "都市圏や密度で異なる結果を踏まえ、審査・駐車基準への反映を提言する。44%という比率の一律転用は避ける。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "17住宅の実測と標準予測を比較した原論文、およびTODの住宅・駐車・交通に関する研究報告。",
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "平均は実測3.754トリップ／住戸・平日、ITE予測6.715。実測は予測より44%少なかった。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "調査による駐車整備費削減、居住者の生活改善、実際の基準改定件数は本資料では未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "44%はITE標準予測との比較であり、整備前比の44%減や、TODの純因果効果ではない。自己選択、都市圏、交通サービス、駐車条件の違いがある。住宅17件の平均を、日本の単一計画の保証値にしない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本への移転対象は削減率ではなく、一般的な予測を現場の観測で検証する手順。住宅価格への駐車費の転嫁や車を必要とする世帯のアクセスも併せて確認する。",
+        "kind": "analysis",
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "17か所のTOD住宅の交通調査",
+      "stage": "複数住宅の研究評価",
+      "overview": {
+        "text": "17件の平日自動車トリップを住戸当たりに揃え、ITEの一般的な予測値と比較する。差をTODの一律効果にせず、都市圏や密度、交通・駐車条件を伴う観察値として扱う。",
+        "kind": "analysis",
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src02"
+        ]
+      },
+      "output": {
+        "text": "17住宅の実測と標準予測を比較した原論文、およびTODの住宅・駐車・交通に関する研究報告。",
+        "refs": [
+          "tod-housing-trip-generation-src01",
+          "tod-housing-trip-generation-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "平均は実測3.754トリップ／住戸・平日、ITE予測6.715。実測は予測より44%少なかった。",
+        "refs": [
+          "tod-housing-trip-generation-src01"
+        ],
+        "kind": "fact"
+      },
+      "gap": "44%はITE標準予測との比較であり、整備前比の44%減や、TODの純因果効果ではない。自己選択、都市圏、交通サービス、駐車条件の違いがある。住宅17件の平均を、日本の単一計画の保証値にしない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "paris-fifteen-minute-city",
+    "updated": "2026-10-06",
+    "summary": "生活機能を近づけ、既存施設を時間で使い分ける。 Carlos Morenoは15分都市の提唱者で、大学公式プロフィールが市長のSmart City特使としての役割を記載。本事例との関係は政策枠組みへの関与であり、個別施設開放の設計・実施責任は未確認。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Morenoが概念を提唱し、市の公式インタビューで六つの生活機能と多用途利用を説明。",
+          "refs": [
+            "paris-fifteen-minute-city-src01",
+            "paris-fifteen-minute-city-src04"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "この政策枠組みと2021年施設開放について、特定企業の設計・運営責任は未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "パリ市が政策を展開し、校庭・保育施設の週末開放を公式発表。",
+          "refs": [
+            "paris-fifteen-minute-city-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定のスタートアップをこの政策の実施主体として確認していない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Morenoと共著者が近接性、多様性等の考え方を原論文で整理。大学公式が本人の役割を確認できる。",
+          "refs": [
+            "paris-fifteen-minute-city-src03",
+            "paris-fifteen-minute-city-src04"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "家族や地域団体が開放施設の利用側に位置づけられる。全住民が同じ条件で使えたかの評価は未確認。",
+          "refs": [
+            "paris-fifteen-minute-city-src02"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "既存の学校・中学校校庭、保育施設、近隣の公共施設と街路。新築のみを資源としない。",
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "施設を地域に開くには、教育・施設管理と地域利用の調整が必要になる。責任分担の詳細は施設別に確認すべき条件。",
+        "refs": [
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "新設と既存施設開放は費用構造が異なるが、この発表から費用対効果は比較できない。",
+        "refs": [],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "六つの生活機能、近接性、多様性、多用途利用という原典の枠組み。",
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src04"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "近い場所に施設があっても、時間・費用・利用規則のため日常には使えないという空白を問う。",
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src04"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "生活機能を地区で捉える",
+        "text": "交通速度だけでなく、暮らしの用事を近隣で満たせるかを政策の問いにする。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src04"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "施設の空く時間を開く",
+        "text": "学校等を教育時間以外にも地域へ開くことで、既存資産の利用可能時間を増やす。",
+        "steps": [
+          7
+        ],
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "概念を実施単位へ分ける",
+        "text": "都市政策、施設の週末開放、校庭改修、学校前道路の整備を区別して、担当と評価指標を置く。",
+        "steps": [
+          7
+        ],
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "analysis"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "2021年5月14日の市発表では、先行12校庭に36校庭を加え計48校庭を週末利用へ開き、20保育施設も対象とした。これは当時の発表規模。",
+        "refs": [
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "既存施設を地域の利用機会に転換する政策実装を確認できる。全市民の生活改善や幸福度を測定した数値ではない。",
+        "refs": [
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "text": "全住民の15分アクセス達成、概念単独による排出削減・安全改善、開放施設の現在の継続数は未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "2021年の発表数を現在の開放数にしない。Morenoの関与は政策枠組みへの概念提唱・助言で、個々の開放設計は未確認。School Streetsは学校前道路、Oasisは校庭改修、本カードは時間外開放を単位とし、都市政策全体の成果を独立した実装として再計上しない。同じ校庭が複数施策の対象になる可能性もある。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本では15分の円を描く前に、実際の経路、営業時間、費用、段差を調べる。学校開放の可否は地域ごとの管理責任を確認し、利用者の利便と教育活動・近隣への負担を同時に扱う。",
+        "kind": "analysis",
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "パリ15分都市：学校・保育施設の週末開放",
+      "stage": "既存公共施設の時間帯別開放",
+      "overview": {
+        "text": "教育・保育等で使う既存の場所を、通常の利用時間以外に地域へ開く。近隣の利用可能な空間と時間を増やす施策として、六つの生活機能や多用途利用を重視する15分都市の考え方と接続する。",
+        "kind": "analysis",
+        "refs": [
+          "paris-fifteen-minute-city-src01",
+          "paris-fifteen-minute-city-src02"
+        ]
+      },
+      "output": {
+        "text": "2021年5月14日の市発表では、先行12校庭に36校庭を加え計48校庭を週末利用へ開き、20保育施設も対象とした。これは当時の発表規模。",
+        "refs": [
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "既存施設を地域の利用機会に転換する政策実装を確認できる。全市民の生活改善や幸福度を測定した数値ではない。",
+        "refs": [
+          "paris-fifteen-minute-city-src02"
+        ],
+        "kind": "analysis"
+      },
+      "gap": "2021年の発表数を現在の開放数にしない。Morenoの関与は政策枠組みへの概念提唱・助言で、個々の開放設計は未確認。School Streetsは学校前道路、Oasisは校庭改修、本カードは時間外開放を単位とし、都市政策全体の成果を独立した実装として再計上しない。同じ校庭が複数施策の対象になる可能性もある。"
+    },
+    "sources": []
+  },
+  {
+    "id": "bethune-bruay-half-hour",
+    "updated": "2026-10-06",
+    "summary": "15分という数値を移す前に、生活圏の構造に合わせる。 Carlos Moreno本人とETI研究者が、自治体の選出議員・実務チームと約1年間共同検討。地域計画p.15に関係が記載される。個々の建物・道路の設計実績ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Moreno本人とETI研究者が選出議員・自治体実務チームと共同検討したと計画本文に記載。",
+          "refs": [
+            "bethune-bruay-half-hour-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "本カードの共同策定過程について、特定企業の正式な責任・拠出は未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "広域自治体の議員・実務チームが研究側と協働し、地域計画を採択。",
+          "refs": [
+            "bethune-bruay-half-hour-src01",
+            "bethune-bruay-half-hour-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定のスタートアップ関与は未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "ETI研究者が診断・将来検討・現地ワークショップ・提案に関わった。",
+          "refs": [
+            "bethune-bruay-half-hour-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "現地ワークショップを確認。ただし参加住民の人数、選定法、決定権の範囲は今回の資料では未確認。",
+          "refs": [
+            "bethune-bruay-half-hour-src01"
+          ],
+          "kind": "unknown"
+        }
+      },
+      "tangible": {
+        "text": "都市部と農村部を含む広域の生活拠点・サービス網。七つの生活機能を計画の入口にする。",
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "選出議員、自治体実務、研究者、AULAの地域知識をつなぐ約1年の協働。",
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "策定費、運営費、個別事業の投資配分をこの資料から確定できない。",
+        "refs": [],
+        "kind": "unknown"
+      },
+      "intellectual": {
+        "text": "地域の七つの機能と、Morenoらの近接性の考え方。15分都市原論文は理念の入口で、現地成果の証拠とは分ける。",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src03"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "単一中心へ機能を集中させるだけでは、異なる生活圏の日常の用事に応えにくいという計画上の問い。",
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "地域の生活機能を診断する",
+        "text": "七つの機能を使い、身近な機会と不足を地域単位で捉える。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "現地で将来像を検討する",
+        "text": "診断、将来検討、現地ワークショップ、提案を重ね、近接性の考え方を地域に合わせる。",
+        "steps": [
+          2,
+          3
+        ],
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "共同検討を計画へ渡す",
+        "text": "研究側と自治体の検討を地域計画へ反映し、議会による採択に接続する。",
+        "steps": [
+          2,
+          3
+        ],
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "近接性と七つの生活機能を反映したProjet de territoire 2022–2032。",
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "2022年12月の地域計画採択。",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "概念が広域自治体の正式な計画へ反映されたことを確認できる。",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "住民全体の30分アクセス実現、移動時間・排出量削減、計画後のサービス継続については未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "計画採択を生活改善の実測としない。「30分」がすべての住民・機能・移動手段に一律達成されたことは確認していない。参加構成と負担配分が見えないため、共同策定だけで公平性が確保されたとは判断できない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本の地方圏では徒歩15分を前提にせず、複数拠点、公共交通、巡回・出張サービスを組み合わせる。時間目標は目的ではなく、誰がどの機能を使えるかを検証する補助線として使う。",
+        "kind": "analysis",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "ベテューヌ＝ブリュエ「30分生活圏」",
+      "stage": "広域地域計画の共同策定",
+      "overview": {
+        "text": "複数の生活圏に対し、移動・居住・仕事・買物・健康・学習・余暇の七つの機能から現状を診断する。将来検討と現地の議論を地域計画に接続し、高密度のパリと同じ時間尺度を機械的に当てはめない。",
+        "kind": "analysis",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ]
+      },
+      "output": {
+        "text": "近接性と七つの生活機能を反映したProjet de territoire 2022–2032。",
+        "refs": [
+          "bethune-bruay-half-hour-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "概念が広域自治体の正式な計画へ反映されたことを確認できる。",
+        "refs": [
+          "bethune-bruay-half-hour-src01",
+          "bethune-bruay-half-hour-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "計画採択を生活改善の実測としない。「30分」がすべての住民・機能・移動手段に一律達成されたことは確認していない。参加構成と負担配分が見えないため、共同策定だけで公平性が確保されたとは判断できない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "car2go-five-city-study",
+    "updated": "2026-10-06",
+    "summary": "共有車の台数ではなく、所有と移動の変化を調べる。 Susan ShaheenはElliot Martinとの共同評価研究者。car2goの経営・運行・自治体許認可を担った事例ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "ShaheenとMartinが方法、分析、研究報告を共同で担う。",
+          "refs": [
+            "car2go-five-city-study-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "car2goがサービスを運営し、研究用に会員の利用頻度等を含む匿名運行データを提供。",
+          "refs": [
+            "car2go-five-city-study-src01"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "5都市を対象にした評価である。各自治体が研究の共同決定主体や資金提供者だったかは本資料の確認範囲では未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "startups": {
+          "text": "対象は当時のcar2go。会社の存在を一般的なスタートアップ育成プログラムとみなす根拠はない。",
+          "refs": [
+            "car2go-five-city-study-src01"
+          ],
+          "kind": "analysis"
+        },
+        "academia": {
+          "text": "UC Berkeley TSRCの研究者が、質問票と実運行を統合して分析。",
+          "refs": [
+            "car2go-five-city-study-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "car2go会員の自己申告。車・走行距離・排出推計の最終分析対象は6,167人で、全調査回答者数とは異なる。",
+          "refs": [
+            "car2go-five-city-study-src01"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "5都市で運用された共有車と、その走行・利用記録。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "運営会社のデータと会員の車保有・行動情報を、大学の評価方法で照合する関係。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "研究予算の不足により一般人口の対照群を設けられなかったと報告。費用総額は未確認。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "売却と購入回避を分けた推計、利用頻度による重み付け、共有車の走行を含む差分評価。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "共有交通が私有車や走行を減らすのか、それとも既存の公共交通等から移動を置き換えるのかを確かめる。",
+        "refs": [
+          "car2go-five-city-study-src01",
+          "car2go-five-city-study-src02"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "保有と行動を聞く",
+        "text": "車を売ったか、購入を見送ったか、交通手段の利用頻度がどう変わったかを会員へ尋ねる。",
+        "steps": [
+          1,
+          6
+        ],
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "自己申告を運行データと照合する",
+        "text": "不適切回答等を除き、利用頻度で重み付けする。車・走行・排出の分析と交通手段の分析は標本を区別する。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "追加走行も含めて推計する",
+        "text": "回避された私有車走行だけでなく共有車の走行も計上し、未購入車の走行仮定による幅を残す。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "5都市別の私有車売却・購入回避、移動手段変化、走行・排出の推計報告。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "分析では共有車1台あたり私有車7–11台相当の売却・購入回避を推計。購入回避を含む推計であり、路上の車を直接数えた減少実績ではない。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "analysis"
+      },
+      {
+        "text": "研究は多くの会員で保有行動の変化がなかったことも記載。少数の大きな変化と全体平均を区別する。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "全市人口を対象にした車両・走行削減の因果効果は確認していない。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "自己申告、利用者の自己選択、一般人口の対照群不在、購入回避した車の走行仮定がある。推計は当時の会員・運営地域に関するもので、市全体の実測削減、現在のサービス状態、日本の保証値ではない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "移すべきは1台で何台減るという係数ではなく、何が置き換わったかを確認する評価設計。行政支援の前に、データ利用条件、独立評価、撤退時の利用者対応を決める。",
+        "kind": "analysis",
+        "refs": [
+          "car2go-five-city-study-src01",
+          "car2go-five-city-study-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "car2go北米5都市の影響評価",
+      "stage": "カーシェアの複数都市研究評価",
+      "overview": {
+        "text": "会員の車売却・購入回避・行動変化を聞き取り、利用頻度等を運行データで重み付けする。シェア車自身の走行も含めて推計し、購入しなかった車の走行という観測できない部分には仮定を置く。",
+        "kind": "analysis",
+        "refs": [
+          "car2go-five-city-study-src01",
+          "car2go-five-city-study-src02"
+        ]
+      },
+      "output": {
+        "text": "5都市別の私有車売却・購入回避、移動手段変化、走行・排出の推計報告。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "分析では共有車1台あたり私有車7–11台相当の売却・購入回避を推計。購入回避を含む推計であり、路上の車を直接数えた減少実績ではない。",
+        "refs": [
+          "car2go-five-city-study-src01"
+        ],
+        "kind": "analysis"
+      },
+      "gap": "自己申告、利用者の自己選択、一般人口の対照群不在、購入回避した車の走行仮定がある。推計は当時の会員・運営地域に関するもので、市全体の実測削減、現在のサービス状態、日本の保証値ではない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "carlink-ii",
+    "updated": "2026-10-06",
+    "summary": "鉄道の前後を補う実証と、続けられる事業を分けて評価する。 Susan Shaheenは最終報告の筆頭著者・共同評価研究者。研究者個人を商業運営の単独責任者としない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Shaheenを筆頭著者とする共同評価チーム。評価はPATH研究者が担当。",
+          "refs": [
+            "carlink-ii-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "American Hondaが共同実施に参加。Stanford Research Park周辺等の企業が職場側利用を支えた。",
+          "refs": [
+            "carlink-ii-src01"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "CaltransとCaltrainが共同実施に参加。UC Davis ITSが実証管理を担った。",
+          "refs": [
+            "carlink-ii-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定スタートアップの育成を目的とした実証とは確認していない。商業移管とスタートアップ支援を同一視しない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "UC Davis ITSの実証管理と、UC Berkeley PATH等の評価研究を分担。",
+          "refs": [
+            "carlink-ii-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "住宅側利用者、職場通勤者、職場の日中利用者が時間を分けて共有。調査標本は前後で異なる。",
+          "refs": [
+            "carlink-ii-src01"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "19台の車両、California Avenue駅との接続、予約・車両アクセス用システム。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "住宅と職場、鉄道と車、実証管理と評価をつなぎ、同じ車両の時間帯別利用を成立させる。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "当時の実証料金例は住宅側月300米ドル、企業側月350米ドル／車両。料金収入が費用全体を賄うことを意味せず、現行価格でもない。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "通勤手段の前後調査、利用満足、技術・費用評価。駅への前後の移動を補うという共有交通研究の視点。",
+        "refs": [
+          "carlink-ii-src01",
+          "carlink-ii-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "駅から家・職場までの移動が鉄道利用を妨げることと、補完サービスの費用を誰が継続負担するかという二つの課題。",
+        "refs": [
+          "carlink-ii-src01",
+          "carlink-ii-src02"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "異なる利用時間を組み合わせる",
+        "text": "住宅側・職場通勤・職場日中という利用を重ね、駅接続の共有車を運用する。",
+        "steps": [
+          3,
+          6
+        ],
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "利用変化を複数方法で確かめる",
+        "text": "質問票、移動日誌、面接、運行データを使い、通勤手段や利用上の問題を調べる。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "行動と採算を分けて扱う",
+        "text": "研究は通勤行動に加え技術・費用を検証。商業移管後の終了も含め、継続条件を学ぶ。",
+        "steps": [
+          6,
+          7
+        ],
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "1年間の駅接続型カーシェア実証と、利用・技術・費用をまとめた最終研究報告。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "報告の前後調査ではCaltrain利用39.6%→62.7%、単独運転60.2%→37.3%。回答標本は前107人・後59人で異なり、同一集団の純効果ではない。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "実証後に商業運営へ移管したが、当地の運営は2003年7月に終了した。行動上の便益と事業継続は一致しなかった。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomeGaps": [
+      "前後標本が異なり、参加者は高学歴・高所得層寄り。複数手段を使う回答があるため、割合の合計は100%を超える。無作為実験ではない。終了の存在を一般的な駅接続カーシェアの不成立と断定せず、地域条件と費用構造を検討する。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本では鉄道利用者の増加だけで採択せず、住宅側と職場側の需要時間、予約競合、保守・再配置、撤退時の代替まで設計する。補助付き公共サービスと独立採算事業の判断基準を先に分ける。",
+        "kind": "analysis",
+        "refs": [
+          "carlink-ii-src01",
+          "carlink-ii-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "CarLink II：駅接続型カーシェア",
+      "stage": "駅接続サービスの実証と研究評価",
+      "overview": {
+        "text": "朝夕の駅アクセスと日中の職場利用を同じ車両で組み合わせる。質問票、移動日誌、面接、運行記録で利用変化を確認し、技術・運営費・利用料も別に検討する。",
+        "kind": "analysis",
+        "refs": [
+          "carlink-ii-src01",
+          "carlink-ii-src02"
+        ]
+      },
+      "output": {
+        "text": "1年間の駅接続型カーシェア実証と、利用・技術・費用をまとめた最終研究報告。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "報告の前後調査ではCaltrain利用39.6%→62.7%、単独運転60.2%→37.3%。回答標本は前107人・後59人で異なり、同一集団の純効果ではない。",
+        "refs": [
+          "carlink-ii-src01"
+        ],
+        "kind": "fact"
+      },
+      "gap": "前後標本が異なり、参加者は高学歴・高所得層寄り。複数手段を使う回答があるため、割合の合計は100%を超える。無作為実験ではない。終了の存在を一般的な駅接続カーシェアの不成立と断定せず、地域条件と費用構造を検討する。"
+    },
+    "sources": []
+  },
+  {
+    "id": "chiangmai-urban-mobility-lab",
+    "updated": "2026-10-06",
+    "summary": "歩く・こぐ・直すという具体的な活動から交通を試す。 Peraphan Jittrapiromは本人ポートフォリオでliving lab活動を組織したと記載。市の交通行政全体や恒久道路整備の責任者とは区別する。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "本人は生活の現場の実験を組織し、若手実務者へ知識を伝える活動だったと説明。",
+          "refs": [
+            "chiangmai-urban-mobility-lab-src01"
+          ],
+          "kind": "self-report"
+        },
+        "companies": {
+          "text": "特定企業の資金・設計・施工上の責任は確認していない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "本人記録はTCDCのDesign Weekとの関係を記載。市役所の許可内容・運営責任までは確認できない。",
+          "refs": [
+            "chiangmai-urban-mobility-lab-src01"
+          ],
+          "kind": "self-report"
+        },
+        "startups": {
+          "text": "特定のスタートアップや事業化支援の関与は未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Jittrapiromの専門知識が関わるが、大学が活動の契約・運営主体だったかは未確認。",
+          "refs": [
+            "chiangmai-urban-mobility-lab-src01"
+          ],
+          "kind": "unknown"
+        },
+        "citizens": {
+          "text": "分野の異なるボランティアと、ルート・案内・修理を利用する参加者。人数や代表性は未確認。",
+          "refs": [
+            "chiangmai-urban-mobility-lab-src01"
+          ],
+          "kind": "self-report"
+        }
+      },
+      "tangible": {
+        "text": "旧市街の自転車ルート、徒歩・自転車の案内表示、自転車修理の道具と部品。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      "relational": {
+        "text": "異分野のボランティアが実践を通じて知識を交換する場を構成。継続組織の制度は未確認。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      "financial": {
+        "text": "修理は工賃無料、部品代を参加者が負担すると本人が記載。活動総費用と支援者別負担は未確認。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      "intellectual": {
+        "text": "交通に関する実務知識と現地の使い方を組み合わせる活動。別のMaaS原著は統合を考える学習入口として読む。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01",
+          "chiangmai-urban-mobility-lab-src02"
+        ],
+        "kind": "analysis"
+      },
+      "issues": {
+        "text": "徒歩・自転車を使うための道案内や整備を、現地で試せる具体的課題にする。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "異分野の担い手を集める",
+        "text": "交通への関心を持つボランティアが参加し、Design Weekの場で活動を行う。",
+        "steps": [
+          3
+        ],
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      {
+        "title": "案内とルートを形にする",
+        "text": "旧市街の自転車ルートと徒歩・自転車案内を制作・設置したと本人が報告。",
+        "steps": [
+          5
+        ],
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      {
+        "title": "修理と現地活動を行う",
+        "text": "自転車修理や実物の案内を通じて使う場をつくる。現場での活動確認と、効果測定の成立は別である。",
+        "steps": [
+          5,
+          6
+        ],
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "ルート地図、徒歩・自転車の案内表示、修理活動と発表の記録・写真。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "活動の組織と現地制作物は本人の記録から確認できる。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      {
+        "text": "事故、渋滞、排出、利用者数の変化、案内や修理活動の長期継続は独立資料で未確認。",
+        "refs": [],
+        "kind": "unknown"
+      }
+    ],
+    "outcomeGaps": [
+      "主根拠は本人ポートフォリオで、活動実績の自己報告。参照するMaaS原著は別研究であり、この活動の効果を裏づけるものではない。参加者の代表性、正式な道路許可、財源、保守責任は確認できていない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本ではイベント時の制作を完成とせず、撤去・保守・許可を先に決める。参加人数より、迷わず使えるか、障害のある人を排除しないか、誰が直し続けるかを測る。",
+        "kind": "analysis",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01",
+          "chiangmai-urban-mobility-lab-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "チェンマイ Urban Mobility Lab 2016",
+      "stage": "市民ボランティアの現地実験",
+      "overview": {
+        "text": "専門分野を越えて集まった人が、使えるルートと現地案内、修理という小さな介入を形にする。若手実務者への知識共有と、都市交通を実際に経験する場を組み合わせる。",
+        "kind": "analysis",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01",
+          "chiangmai-urban-mobility-lab-src02"
+        ]
+      },
+      "output": {
+        "text": "ルート地図、徒歩・自転車の案内表示、修理活動と発表の記録・写真。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      "outcome": {
+        "text": "活動の組織と現地制作物は本人の記録から確認できる。",
+        "refs": [
+          "chiangmai-urban-mobility-lab-src01"
+        ],
+        "kind": "self-report"
+      },
+      "gap": "主根拠は本人ポートフォリオで、活動実績の自己報告。参照するMaaS原著は別研究であり、この活動の効果を裏づけるものではない。参加者の代表性、正式な道路許可、財源、保守責任は確認できていない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "hague-adaptive-visioning",
+    "updated": "2026-10-06",
+    "summary": "望ましい未来と、前提が変わったときの対応を一緒に考える。 2023年原著のContributionsはJittrapiromが研究・方法の構想、プロジェクト管理、執筆主導を担当したと明記。On the Move全体の所有者や市の計画決定者とはしない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Jittrapiromは構想、方法、プロジェクト管理、執筆を主導。Bekius・Führerらと共同研究。",
+          "refs": [
+            "hague-adaptive-visioning-src01"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "ワークショップ参加者には公共交通提供側等を含む。On the Move全体の企業パートナーを、この個別WSの参加者とみなさない。",
+          "refs": [
+            "hague-adaptive-visioning-src01",
+            "hague-adaptive-visioning-src02"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "ハーグ市交通計画担当と研究者が目的・プロセスを共同で検討し、市担当者も参加した。",
+          "refs": [
+            "hague-adaptive-visioning-src01"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "この個別研究への特定スタートアップ参加は未確認。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Radboud大学とDelft工科大学所属の著者が、参加型ビジョンの方法を構成・分析した。",
+          "refs": [
+            "hague-adaptive-visioning-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "街頭調査41人と、住民・特別な移動ニーズ等の視点を含む2回のワークショップ。各回8人で一部参加者は異なる。",
+          "refs": [
+            "hague-adaptive-visioning-src01"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "南西地区の交通網と生活環境、現地会場、調査・ワークショップの記録。新しい交通施設は建設していない。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "市と研究者の事前調整、分野の違う参加者の対話、報告案へのコメントと庁内共有。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "NWO助成403.19.215で研究を支援。提案の実装予算が確保された証拠ではない。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "Appreciative InquiryとDynamic Adaptive Planningを組み合わせ、地域の強み、将来像、経路、変化への対応を結ぶ。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "現在の交通に満足があっても、住宅増加など不確実な将来に向けて何を守り変えるか、関係者の見方が一致しない。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "暮らしの経験を集める",
+        "text": "市場等での調査41人と事前面接を通じ、既存交通への評価と将来への期待を議論の入力にする。",
+        "steps": [
+          1,
+          3
+        ],
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "地域の良さから未来を描く",
+        "text": "第1回WSで現状の価値と2041年の望ましい生活を検討し、移動の将来像を整理する。",
+        "steps": [
+          2,
+          3
+        ],
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "前提変化と対応を検討する",
+        "text": "第2回WSで実現経路に影響しうる将来変化を想定し、対応する行動案を考える。実装そのものは対象外。",
+        "steps": [
+          2
+        ],
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "結果を市と参加者へ返す",
+        "text": "報告案へのコメント機会を設け、2022年に最終報告と庁内共有を行う。",
+        "steps": [
+          3
+        ],
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "移動の将来像、実現経路、将来変化への対応案を整理した報告。2022年5月に確定し、6月9日に市の内部共有会を開催。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "研究結果が参加者と市の計画担当へ届いたことを確認。正式な政策採択や交通改善の実績とは区別する。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "実装段階は研究対象外。参加者によるプロセス評価は回答不足で分析に採用されず、満足度向上・交通転換・排出削減の効果は未確認。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomeGaps": [
+      "対象はThe Hague南西地区の2023年原著が扱う個別研究。On the Move全体の成果や関係機関の実装を本人へ帰属させない。小標本・参加制約があり、全住民の合意ではない。施策間の定量的トレードオフや実装判断は未実施。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本でも未来像の合意で終わらせず、誰が何を引き受け、どの観測で見直すかまで検討する。ただし本研究で実装の成功は未確認なので、方法の参考と成果の保証を区別する。",
+        "kind": "analysis",
+        "refs": [
+          "hague-adaptive-visioning-src01",
+          "hague-adaptive-visioning-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "ハーグ南西地区の参加型ビジョンづくり",
+      "stage": "参加型交通計画の方法研究",
+      "overview": {
+        "text": "41人への街頭調査を議論の入口とし、住民・交通・住宅・市側等の参加者が地域の良さ、将来像、実現経路を整理する。将来の出来事が経路へ与える影響と対応案を検討し、報告書を市と参加者へ返す。",
+        "kind": "analysis",
+        "refs": [
+          "hague-adaptive-visioning-src01",
+          "hague-adaptive-visioning-src02"
+        ]
+      },
+      "output": {
+        "text": "移動の将来像、実現経路、将来変化への対応案を整理した報告。2022年5月に確定し、6月9日に市の内部共有会を開催。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "研究結果が参加者と市の計画担当へ届いたことを確認。正式な政策採択や交通改善の実績とは区別する。",
+        "refs": [
+          "hague-adaptive-visioning-src01"
+        ],
+        "kind": "fact"
+      },
+      "gap": "対象はThe Hague南西地区の2023年原著が扱う個別研究。On the Move全体の成果や関係機関の実装を本人へ帰属させない。小標本・参加制約があり、全住民の合意ではない。施策間の定量的トレードオフや実装判断は未実施。"
+    },
+    "sources": []
+  },
+  {
+    "id": "sfpark-pilot",
+    "updated": "2026-10-06",
+    "summary": "空きと探索時間を測り、料金・情報・支払いを組み合わせる。 Donald Shoupの研究をSFMTAが思想的基盤として明記。ShoupはPierceとの料金・占有率評価の共著者。実施責任者、単独設計者、正式な助言契約者だったとは確認していない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Shoupの研究が思想的基盤となり、Pierceとの原論文では初年度の料金・占有率反応を分析。",
+          "refs": [
+            "sfpark-pilot-src01",
+            "sfpark-pilot-src02"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "決済、メーター、駐車情報等の技術が使われた。個別ベンダーの責任・契約額は本カードでは未確認。",
+          "refs": [
+            "sfpark-pilot-src03"
+          ],
+          "kind": "unknown"
+        },
+        "government": {
+          "text": "SFMTAが駐車管理の複数施策を実証・評価し、連邦Urban Partnership Programが支援。",
+          "refs": [
+            "sfpark-pilot-src03"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定スタートアップの実装支援事業としては確認していない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Pierce・Shoupが初年度の5,000件超の料金・占有率変化から需要反応を研究。市評価とは別の研究単位。",
+          "refs": [
+            "sfpark-pilot-src02"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "駐車利用者や来街者がサービスの対象。全市民の便益・負担を代表する住民調査とは限らない。",
+          "refs": [
+            "sfpark-pilot-src03"
+          ],
+          "kind": "analysis"
+        }
+      },
+      "tangible": {
+        "text": "実証7地区の6,000超のメーターと、市営駐車施設の約12,250台分。市全域の駐車台数ではない。",
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "道路・駐車の管理権限、料金・情報・支払いの運用をSFMTAが束ねる。研究者は実施から分けて価格反応を評価。",
+        "refs": [
+          "sfpark-pilot-src02",
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      "financial": {
+        "text": "連邦支援と利用料金を組み合わせる。平均料金が下がったことは、実証の総費用や収支が改善した証明ではない。",
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "analysis"
+      },
+      "intellectual": {
+        "text": "占有率を見て料金を調整するShoupの考え方と、実証データによる評価。収入地域還元など本人の全提案を一括検証した事例ではない。",
+        "refs": [
+          "sfpark-pilot-src01",
+          "sfpark-pilot-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "限られた場所・時間の満車と探索走行を、単純な駐車台数増だけに頼らず改善する。",
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      }
+    },
+    "functions": [
+      {
+        "title": "空きを基準に需要を読む",
+        "text": "目標占有率60–80%を置き、時間・場所の駐車需要を料金判断につなげる。",
+        "steps": [
+          1,
+          6
+        ],
+        "refs": [
+          "sfpark-pilot-src02",
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "料金と利用体験を同時に変える",
+        "text": "需要連動料金だけでなく、情報、決済、案内、時間制限を組み合わせる。個別施策の純効果とは区別する。",
+        "steps": [
+          6,
+          7
+        ],
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "比較地区を置いて評価する",
+        "text": "施策・技術を変えない比較地区を設け、実証地区の探索時間や空き、料金の変化を評価する。無作為実験ではない。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "観測から継続を判断する",
+        "text": "2014年の評価後に既存地区での需要連動料金継続と拡張検討を発表した。",
+        "steps": [
+          7
+        ],
+        "refs": [
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "需要連動料金・情報・支払方法等の組合せを7地区で実証し、市評価と研究論文を公表。",
+        "refs": [
+          "sfpark-pilot-src02",
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "実証地区の自己申告探索時間は前後で11分36秒→6分36秒（43%減）、比較地区は6分24秒→5分36秒（13%減）。43%は対照調整済み効果ではない。平均路上料金は実証地区で4%低下した。",
+        "refs": [
+          "sfpark-pilot-src03",
+          "sfpark-pilot-src04"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "目標占有率60–80%を満たす頻度の前後差は実証地区31%増、比較地区6%増と市が報告。料金単独の因果効果でも、Shoup個人の運営成果でもない。",
+        "refs": [
+          "sfpark-pilot-src03",
+          "sfpark-pilot-src04"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomeGaps": [
+      "市評価には比較地区があるが、複数施策を同時に導入した非無作為の評価である。探索時間43%減は実証地区内の前後差で、比較地区の変化を差し引いた因果効果ではない。市全体の交通改善や、料金だけの効果に読み替えない。探索走行由来の排出削減は全交通の排出削減ではなく、収入地域還元など本人の全提案を一括検証した事例でもない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本では値上げから始めず、満車の場所・時間と空きの偏りを測る。管理権限、荷さばき・送迎、車を使わざるを得ない人への配慮、料金変更の承認を先に確認する。",
+        "kind": "analysis",
+        "refs": [
+          "sfpark-pilot-src01",
+          "sfpark-pilot-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "SFpark：需要に応じた駐車管理の実証",
+      "stage": "駐車管理の政策実証・評価",
+      "overview": {
+        "text": "満車と空き過ぎを避ける目標占有率を置き、場所・時間の需要に応じて料金を調整する。リアルタイム情報、案内、カード・電話決済、利用時間制限の変更も組み合わせ、実証地区と比較地区を評価した。",
+        "kind": "analysis",
+        "refs": [
+          "sfpark-pilot-src01",
+          "sfpark-pilot-src02"
+        ]
+      },
+      "output": {
+        "text": "需要連動料金・情報・支払方法等の組合せを7地区で実証し、市評価と研究論文を公表。",
+        "refs": [
+          "sfpark-pilot-src02",
+          "sfpark-pilot-src03"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "実証地区の自己申告探索時間は前後で11分36秒→6分36秒（43%減）、比較地区は6分24秒→5分36秒（13%減）。43%は対照調整済み効果ではない。平均路上料金は実証地区で4%低下した。",
+        "refs": [
+          "sfpark-pilot-src03",
+          "sfpark-pilot-src04"
+        ],
+        "kind": "fact"
+      },
+      "gap": "市評価には比較地区があるが、複数施策を同時に導入した非無作為の評価である。探索時間43%減は実証地区内の前後差で、比較地区の変化を差し引いた因果効果ではない。市全体の交通改善や、料金だけの効果に読み替えない。探索走行由来の排出削減は全交通の排出削減ではなく、収入地域還元など本人の全提案を一括検証した事例でもない。"
+    },
+    "sources": []
+  },
+  {
+    "id": "parking-cashout-eight-cases",
+    "updated": "2026-10-06",
+    "summary": "駐車する人だけに届く補助を、通勤の選択肢として捉え直す。 Donald Shoupによる制度導入後の研究評価。実施者は各雇用主で、研究者が全8事業所の通勤制度を直接運営した事例ではない。",
+    "inputs": {
+      "human": {
+        "self": {
+          "text": "Shoupが8事業所の制度導入後の通勤を研究評価した。",
+          "refs": [
+            "parking-cashout-eight-cases-src01",
+            "parking-cashout-eight-cases-src02"
+          ],
+          "kind": "fact"
+        },
+        "companies": {
+          "text": "民間7事業所と行政機関1つが制度を実施。すべて同じ方式ではなかった。",
+          "refs": [
+            "parking-cashout-eight-cases-src02"
+          ],
+          "kind": "fact"
+        },
+        "government": {
+          "text": "California LAOの2002年報告が、州大気資源局向け1997年調査の設計・対象を確認している。現在の制度説明とは分ける。",
+          "refs": [
+            "parking-cashout-eight-cases-src02"
+          ],
+          "kind": "fact"
+        },
+        "startups": {
+          "text": "特定スタートアップへの支援事例ではない。",
+          "refs": [],
+          "kind": "unknown"
+        },
+        "academia": {
+          "text": "Shoupによる査読原論文として、通勤行動と雇用主の費用を分析。",
+          "refs": [
+            "parking-cashout-eight-cases-src01"
+          ],
+          "kind": "fact"
+        },
+        "citizens": {
+          "text": "対象8事業所の計1,694人の従業員。職場・勤務・交通条件の異なる一般人口全体の代表標本ではない。",
+          "refs": [
+            "parking-cashout-eight-cases-src01",
+            "parking-cashout-eight-cases-src02"
+          ],
+          "kind": "fact"
+        }
+      },
+      "tangible": {
+        "text": "雇用主が補助する駐車場と、公共交通・相乗り等の代替通勤手段。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      "relational": {
+        "text": "人事・財務と従業員の選択をつなぐ制度設計。駐車契約と代替手段の条件が実施可能性を左右する。",
+        "refs": [
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "analysis"
+      },
+      "financial": {
+        "text": "駐車補助を含む通勤補助を雇用主が負担。研究では補助支出が従業員1人当たり月2米ドル増えた。",
+        "refs": [
+          "parking-cashout-eight-cases-src01"
+        ],
+        "kind": "fact"
+      },
+      "intellectual": {
+        "text": "補助が通勤手段に与える誘因を捉え、事業所別の導入前後と従業員数で評価する。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      "issues": {
+        "text": "駐車する場合だけ補助を受け取れると、車を使わない選択の価値が見えにくくなる。",
+        "refs": [
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "analysis"
+      }
+    },
+    "functions": [
+      {
+        "title": "駐車補助の価値を見える化する",
+        "text": "無料に見える駐車を、雇用主が費用を負担する通勤補助として捉える。",
+        "steps": [
+          1
+        ],
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "通勤の選択を広げる",
+        "text": "各雇用主が、駐車以外の通勤に現金等を受け取る選択を用意する。具体的な方式は事業所ごとに異なる。",
+        "steps": [
+          7
+        ],
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "title": "行動と補助支出を前後比較する",
+        "text": "単独運転、相乗り、走行と費用を導入前後で評価。事業所差と非無作為の標本を明示する。",
+        "steps": [
+          6
+        ],
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outputs": [
+      {
+        "text": "8事業所の通勤行動・費用を比較した1997年原論文。後年の州議会分析報告も対象と方法を確認。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomes": [
+      {
+        "text": "単独運転通勤は17%減、通勤の自動車走行距離は12%減と原論文が報告。LAOの整理では単独運転率は76%から63%で、13ポイント減に相当する。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      {
+        "text": "雇用主の通勤補助支出は、従業員1人当たり月2米ドル増と報告。負担ゼロの施策とみなさない。",
+        "refs": [
+          "parking-cashout-eight-cases-src01"
+        ],
+        "kind": "fact"
+      }
+    ],
+    "outcomeGaps": [
+      "8事業所の小規模・非無作為の前後比較であり、他要因を完全に除いた因果推計ではない。前後の期間も企業ごとに異なる。数値は1997年研究の対象条件に限る。現在のカリフォルニア法、日本の税制、雇用契約、節税効果の説明に流用しない。"
+    ],
+    "backcast": [
+      {
+        "title": "地域へ移す前に、条件を確かめる",
+        "text": "日本への学びは法制度の輸入ではなく、駐車補助と他の通勤支援を同じ財布・同じ単位で比較すること。公共交通の乏しい職場や夜間勤務では選べる代替があるかを先に調べる。",
+        "kind": "analysis",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ]
+      }
+    ],
+    "project": {
+      "name": "Parking cash-out：8事業所の駐車補助評価",
+      "stage": "雇用主の通勤補助制度の研究評価",
+      "overview": {
+        "text": "駐車の補助を受け取る以外の選択を従業員へ示し、単独運転を選ぶ金銭条件を変える。事業所別の前後変化をまとめる一方、代替交通や契約条件により反応が異なることを残す。",
+        "kind": "analysis",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ]
+      },
+      "output": {
+        "text": "8事業所の通勤行動・費用を比較した1997年原論文。後年の州議会分析報告も対象と方法を確認。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      "outcome": {
+        "text": "単独運転通勤は17%減、通勤の自動車走行距離は12%減と原論文が報告。LAOの整理では単独運転率は76%から63%で、13ポイント減に相当する。",
+        "refs": [
+          "parking-cashout-eight-cases-src01",
+          "parking-cashout-eight-cases-src02"
+        ],
+        "kind": "fact"
+      },
+      "gap": "8事業所の小規模・非無作為の前後比較であり、他要因を完全に除いた因果推計ではない。前後の期間も企業ごとに異なる。数値は1997年研究の対象条件に限る。現在のカリフォルニア法、日本の税制、雇用契約、節税効果の説明に流用しない。"
     },
     "sources": []
   }

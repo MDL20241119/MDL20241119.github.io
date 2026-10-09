@@ -13,7 +13,7 @@ if(root){
  let lens=Object.hasOwn(LENSES,query.get('lens'))?query.get('lens'):'';
  intent.value=query.get('intent')||'';
  let stage=/^[1-8]$/.test(query.get('stage')||'')?query.get('stage'):'',view=query.get('view')==='map'?'map':'list',limit=9,filtered=DATA,country=query.get('country')||'';
- if(!DATA.some(d=>d.country===country))country='';
+ if(!DATA.some(d=>(d.countries||[d.country]).includes(country)))country='';
  search.value=query.get('q')||'';region.value=query.get('region')||'';type.value=query.get('type')||'';theme.value=query.get('theme')||'';
  if(stage||type.value)document.querySelector('.advanced-filters').open=true;
  const fulltext=new Map(DATA.map(d=>[d.id,norm([d.name,d.nameJa,d.country,d.city,d.tagline,d.lead,d.operator,d.operatingModel,d.payer,d.transfer,d.valueChainSearch,JSON.stringify(d.entry),...(d.themes||[]).map(t=>THEMES[t]),...(d.tags||[]),...(d.stages||[]).map(s=>STAGES[s])].join(' '))]));
@@ -41,7 +41,7 @@ if(root){
  function render(){
   const terms=norm(search.value).trim().split(/\s+/).filter(Boolean);
   const available=DATA.filter(d=>(!lens||d.entry.lenses.includes(lens))&&(!intent.value||d.entry.intents.includes(intent.value))&&(!theme.value||(d.themes||[]).includes(theme.value))&&(!type.value||d.type===type.value)&&(!stage||(d.stages||[d.stage]).includes(Number(stage)))&&terms.every(t=>fulltext.get(d.id).includes(t)));
-  filtered=available.filter(d=>(!region.value||d.region===region.value)&&(!country||d.country===country));
+  filtered=available.filter(d=>(!region.value||d.region===region.value)&&(!country||(d.countries||[d.country]).includes(country)));
   filtered.sort((a,b)=>cardOrder.get(a.id)-cardOrder.get(b.id));const ids=new Set(filtered.slice(0,limit).map(d=>d.id));cards.forEach(c=>c.hidden=!ids.has(c.dataset.id));
   document.querySelector('#result-count').textContent=filtered.length;document.querySelector('#shown-count').textContent=`${Math.min(limit,filtered.length)} / ${filtered.length}件を表示`;
   document.querySelector('#empty-result').hidden=filtered.length>0;
