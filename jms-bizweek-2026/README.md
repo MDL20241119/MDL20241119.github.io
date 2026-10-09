@@ -28,4 +28,10 @@ Public, static MDL microsite. Production path: `/jms-bizweek-2026/`.
 - https://www.m-messe.co.jp/access/
 
 ## Maintenance
-Edit only the six files in this directory and the specific JMS news item on the MDL homepage. Do not overwrite unrelated repository content. Recheck current official information before changing dates or venue assignments. No build step or network dependencies are required.
+Edit only the seven files in this directory and the specific JMS news item on the MDL homepage. Do not overwrite unrelated repository content. Recheck current official information before changing dates or venue assignments. No build step or network dependencies are required.
+
+## Garraway location clarification (2026-10-09)
+- Official exhibitor listing and JMS2026_MAP_JP.pdf confirm Garraway 0 / F jointly at C-05, Toyota Corolla Oita and Toyota Motor.
+- Original schematic highlights C-03/C-04 proximity and J-01 as a landmark. Hall 3 is labeled entrance and Hall 2 exit in the official map.
+- Booth hall number is not explicitly stated by the exhibitor list and the map has no hall boundary. Use the event venue Halls 2–3 and booth C-05 rather than assigning a single hall.
+- No shortest-path, distance or duration claim. On-site signs take precedence. No official map artwork is copied.
