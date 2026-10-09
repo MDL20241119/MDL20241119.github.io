@@ -35,3 +35,6 @@ Edit only the seven files in this directory and the specific JMS news item on th
 - Original schematic highlights C-03/C-04 proximity and J-01 as a landmark. Hall 3 is labeled entrance and Hall 2 exit in the official map.
 - Booth hall number is not explicitly stated by the exhibitor list and the map has no hall boundary. Use the event venue Halls 2–3 and booth C-05 rather than assigning a single hall.
 - No shortest-path, distance or duration claim. On-site signs take precedence. No official map artwork is copied.
+
+## Theme and mascot update (2026-10-09)
+41 programs have one guide-original main topic inferred from titles: digital 8, green 4, people 13, life 6, engineering 5, future 5. Program format stays separate. Custom plans use unspecified. Topic colors are independent of official venue-zone colors. Only the approved original sprout mobility v3 mascot is shipped.
