@@ -20,6 +20,22 @@ def main():
     assert {cid for p in people for cid in p['caseIds']} == {c['id'] for c in cases}
     hub = (ROOT/'learn/urban-thinkers/index.html').read_text()
     assert 'NEW / 9 THINKERS' in (ROOT/'index.html').read_text()
+    # The thumbnail-style entrance remains live HTML with a working index CTA.
+    assert '<h1 id="thinker-title">いい街は、<br><span>何が違う？</span></h1>' in hub
+    assert hub.count('<h1') == 1
+    assert 'href="#thinker-index"' in hub and 'id="thinker-index"' in hub
+    assert 'urban-thinkers-hero.css?v=' in hub
+    assert len([p for person in people for p in person['reading']]) == 27
+    hero = hub.split('<section class="expert-hero thinker-hero"', 1)[1].split('</section>', 1)[0]
+    for cid in ['nyc-public-realm-strategy', 'melbourne-places-for-people']:
+        image = next(m for m in media if m['caseId'] == cid and m.get('kind') != 'diagram')
+        assert image['local'] in hero and image['sourceUrl'] in hero and image['licenseUrl'] in hero
+        assert image['credit'] in hero and image['imageDate'] in hero
+        assert (ROOT/image['local']).is_file()
+    hero_css = (ROOT/'urban-thinkers-hero.css').read_text()
+    assert 'object-fit:contain' in hero_css  # Preserve existing no-crop image metadata.
+    assert '@media(max-width:600px)' in hero_css and ':focus-visible' in hero_css
+
     for p in people:
         assert len(p['caseIds']) == 2 and p['reading']
         assert f'id="{p["id"]}"' in hub

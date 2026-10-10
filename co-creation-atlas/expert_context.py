@@ -38,8 +38,32 @@ def build(data, head, header, footer):
     people = read()
     known = {c['id']: c for c in data}
     out = [styles(head('9人の思想と18の実践', '都市・地域・モビリティの9人を、具体的な関与事例と原典から学ぶ。市民運動・設計・助言・研究評価を区別して読む。', BASE+'learn/urban-thinkers/', '../../'), '../../'), header('../../')]
-    out.append('<main id="main" class="expert-main"><div class="detail-crumb"><a href="../../">ATLAS</a> / 9人の思想と実践</div><section class="expert-hero"><p class="eyebrow">URBAN THINKERS / FROM IDEAS TO PRACTICE</p><div class="display">READ THE CITY.<br>CHECK THE WORK.</div><h1>9人の思想と、18の実践。</h1><p>まちをどう捉え、誰と何を変え、どこまで確かめたのか。<br>本人の仕事を、4つの切り口と8工程につないで読みます。</p><p class="note-inline">2026年10月6日確認。思想の要約はMDLの編集です。件数は記事・調査単位で、独立した事業数ではありません。研究や提言を施設運営の実績とは扱いません。本人の原文、自治体の報告、書誌・紹介を区別しています。</p></section>')
-    out.append('<nav class="expert-nav" aria-label="9人の索引">'+''.join(f'<a href="#{e(p["id"])}">{e(p["name"])}</a>' for p in people)+'</nav>')
+    # This learning-page-only stylesheet leaves all other Atlas entrances unchanged.
+    out[0] = out[0].replace('</head>', '<link rel="stylesheet" href="../../urban-thinkers-hero.css?v=20261010.1"></head>')
+    media = json.loads((ROOT/'data/media.json').read_text())
+    hero_photos = []
+    for cid, city in [('nyc-public-realm-strategy', 'NEW YORK'), ('melbourne-places-for-people', 'MELBOURNE')]:
+        image = next(m for m in media if m['caseId'] == cid and m.get('kind') != 'diagram')
+        width, height = image['dimensions']
+        hero_photos.append(
+            f'<figure class="thinker-hero-photo"><a href="../../cases/{e(cid)}/" aria-label="{e(image["title"])}の事例を読む">'
+            f'<img src="../../{e(image["local"])}" alt="{e(image["alt"])}" width="{width}" height="{height}" loading="eager">'
+            f'<span class="thinker-city">{city}<span aria-hidden="true">↗</span></span></a>'
+            f'<figcaption><span class="thinker-photo-credit">PHOTO: {e(image["credit"])}</span>'
+            f'<details><summary>写真の出典・撮影時点・利用条件</summary><p>{e(image["caption"])}<br>'
+            f'<a href="{e(image["sourceUrl"])}" target="_blank" rel="noopener noreferrer">掲載元 ↗</a> · '
+            f'<a href="{e(image["licenseUrl"])}" target="_blank" rel="noopener noreferrer">{e(image["license"])} ↗</a><br>'
+            f'{e(image["imageDate"])} · {e(image["changes"])}</p></details></figcaption></figure>')
+    out.append('<main id="main" class="expert-main"><div class="detail-crumb"><a href="../../">ATLAS</a> / 9人の思想と実践</div>'
+               '<section class="expert-hero thinker-hero" aria-labelledby="thinker-title"><div class="thinker-hero-top">'
+               '<div><p class="eyebrow">URBAN THINKERS / FROM IDEAS TO PRACTICE</p><h1 id="thinker-title">いい街は、<br><span>何が違う？</span></h1></div>'
+               '<div class="thinker-hero-invite"><p>思想を知る。<br>実践を読み解く。</p><a class="thinker-start" href="#thinker-index">9人の視点を見に行く <span aria-hidden="true">→</span></a>'
+               '<p class="thinker-english">READ THE CITY. CHECK THE WORK.</p></div></div>'
+               '<p class="thinker-hero-strap">まちづくりの大家 <strong>9人 × 18の実践</strong></p>'
+               '<div class="thinker-hero-photos">'+''.join(hero_photos)+'</div></section>'
+               '<div class="thinker-intro"><p class="thinker-intro-title">9人の思想と、18の実践。</p><p>まちをどう捉え、誰と何を変え、どこまで確かめたのか。<br>本人の仕事を、4つの切り口と8工程につないで読みます。</p>'
+               '<p class="note-inline">2026年10月6日確認。思想の要約はMDLの編集です。件数は記事・調査単位で、独立した事業数ではありません。研究や提言を施設運営の実績とは扱いません。本人の原文、自治体の報告、書誌・紹介を区別しています。</p></div>')
+    out.append('<nav id="thinker-index" class="expert-nav" aria-label="9人の索引">'+''.join(f'<a href="#{e(p["id"])}">{e(p["name"])}</a>' for p in people)+'</nav>')
     for num, p in enumerate(people, 1):
         out.append(f'<section class="expert-person" id="{e(p["id"])}"><div class="expert-person-heading"><p class="eyebrow">{num:02d} / {e(p["en"])}</p><h2>{e(p["name"])}</h2><p class="expert-key">{e(p["key"])}</p><p>{e(p["idea"])}</p></div><div class="expert-work-grid">')
         for cid in p['caseIds']:
