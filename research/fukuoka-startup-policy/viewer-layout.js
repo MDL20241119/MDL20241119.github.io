@@ -1,0 +1,2 @@
+/* Scale the unchanged 1440 x 810 desktop artwork as a single canvas. */
+(()=>{'use strict';const app=document.querySelector('.app');if(!app)return;function fit(){const desktop=window.innerWidth>750;app.classList.toggle('desktop-fitted',desktop);if(desktop)app.style.setProperty('--desktop-scale',Math.min(window.innerWidth/1440,window.innerHeight/810));else app.style.removeProperty('--desktop-scale')}window.addEventListener('resize',fit,{passive:true});fit()})();
