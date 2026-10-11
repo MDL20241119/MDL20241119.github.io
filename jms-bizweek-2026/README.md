@@ -28,7 +28,7 @@ Public, static MDL microsite. Production path: `/jms-bizweek-2026/`.
 - https://www.m-messe.co.jp/access/
 
 ## Maintenance
-Edit only the seven files in this directory and the specific JMS news item on the MDL homepage. Do not overwrite unrelated repository content. Recheck current official information before changing dates or venue assignments. No build step or network dependencies are required.
+Edit only the files in this directory and the specific JMS news item on the MDL homepage. Do not overwrite unrelated repository content. Recheck current official information before changing dates or venue assignments. No build step or network dependencies are required.
 
 ## Garraway location clarification (2026-10-09)
 - Official exhibitor listing and JMS2026_MAP_JP.pdf confirm Garraway 0 / F jointly at C-05, Toyota Corolla Oita and Toyota Motor.
@@ -41,3 +41,12 @@ Edit only the seven files in this directory and the specific JMS news item on th
 
 ## Yaseuma scooter replacement (2026-10-09)
 User-requested existing character No.21 from the Oita character collection replaces the sprout vehicle in hero and empty states. Original source: ../oita-mirai-mobility-consortium/assets/mascots/sheet-3.png. The isolated transparent asset retains the original character, with background, sheet borders, number and text removed by image editing. Fine pixels are resampled; it is not byte-identical to the source sheet. Blue hero, layout, topic palette and 41 program records are unchanged. No photo frame, white rectangle, recoloring, or blend mode is used.
+
+## Compact Bauhaus Cartoon visitor journey (2026-10-11)
+- Compact lemon/sky/pink UI, thick black outlines, flat rounded controls; no shadows or gradients. The existing Yaseuma character remains a small guide.
+- Explore opens directly on dates, keyword search and four one-tap interests. Detailed theme/format/venue and non-overlap filters are collapsed. Clearing filters preserves the selected day.
+- Cards prioritize time, title, venue and public speakers (two visible people plus an all-speakers link; matching people lead the preview when searching). One-tap plan actions, empty-plan starters, conflicts, venue changes and manual travel calculations are linked into one journey.
+- The 41 dated program records and local storage key/schema are unchanged. No personal plans are seeded, uploaded or transmitted. Public speaker/organization data is searchable through `speakers.js`.
+- Speaker supplement verified against official JMS and CEATEC pages on 2026-10-11: 13 named program slots; 28 co-creation slots have no names on the reviewed official public timetable. No inferred people or invented portraits.
+- Portraits reference official external image URLs with no-referrer and lazy loading; some verified faces use a CSS viewport into official banners. Original images are not copied into this repository. Source and image association are recorded per person; no copyright ownership, license or endorsement is claimed. Failed images disappear while names remain. Speaking at a public session does not promise a private meeting.
+- The repository's other pages are outside this update. Preserve all other files.
