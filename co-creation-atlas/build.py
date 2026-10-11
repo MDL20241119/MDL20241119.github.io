@@ -6,6 +6,8 @@ import atlas_routes
 import evidence
 import catalog
 import expert_context
+import city_research
+import navigation
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
@@ -84,10 +86,9 @@ for n,c in enumerate(DATA,1):
     if 'stages' not in c:c['stages']=[c['stage']]
 
 def head(title,description,url,prefix=''):
-    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.12"><link rel="stylesheet" href="{prefix}map.css?v=20260928.12"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.12"><link rel="stylesheet" href="{prefix}value-chain.css?v=20260928.12"><link rel="stylesheet" href="{prefix}atlas-routes.css?v=20260928.12"><script defer src="{prefix}atlas-routes.js?v=20260928.12"></script><script defer src="{prefix}learning.js?v=20260928.12"></script><link rel="stylesheet" href="{prefix}photo-rich.css?v=20261007.2"><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.12"></script><script defer src="{prefix}app.js?v=20260928.12"></script></head><body><a class="skip" href="#main">本文へスキップ</a>'''
+    return f'''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>{e(title)} | MDL WORLD CO-CREATION ATLAS</title><meta name="description" content="{e(description)}"><meta name="theme-color" content="#f23bc8"><link rel="canonical" href="{e(url)}"><meta property="og:type" content="article"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/assets/aalto-class-2.jpg"><meta property="og:image:alt" content="Aalto Design Factoryの試作授業。Photo: Aalto Design Factory"><meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}"><meta property="og:url" content="{e(url)}"><link rel="stylesheet" href="{prefix}style.css?v=20260928.12"><link rel="stylesheet" href="{prefix}map.css?v=20260928.12"><link rel="stylesheet" href="{prefix}learning.css?v=20260928.12"><link rel="stylesheet" href="{prefix}value-chain.css?v=20260928.12"><link rel="stylesheet" href="{prefix}atlas-routes.css?v=20260928.12"><script defer src="{prefix}atlas-routes.js?v=20260928.12"></script><script defer src="{prefix}learning.js?v=20260928.12"></script><link rel="stylesheet" href="{prefix}photo-rich.css?v=20261007.2"><link rel="preload" href="{prefix}assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="preload" href="{prefix}assets/jp-black.woff" as="font" type="font/woff" crossorigin><script defer src="{prefix}map.js?v=20260928.12"></script><script defer src="{prefix}app.js?v=20260928.12"></script>{navigation.assets()}</head><body><a class="skip" href="#main">本文へスキップ</a>'''
 def header(prefix=''):
-    nav=f'<a href="{prefix}?lens=co#explore">共創を探す</a><a href="{prefix}?lens=place#explore">まちづくりを探す</a><a href="{prefix}learn/first-co-creation/">基礎を学ぶ</a><a href="{prefix}#start">8工程で学ぶ</a><a href="{prefix}#explore">事例を探す</a><a href="{prefix}learn/choose/">比較する</a><a href="{prefix}learn/workbook/">実践シート</a><a href="{prefix}learn/library/">原典</a>'
-    return f'<header class="topbar"><a class="brand" href="/" aria-label="モビリティデザインラボのトップ"><span class="brand-mark">MDL.</span><span>MOBILITY<br>DESIGN LAB</span><span class="edition">RESEARCH / 01<br>WORLD CO-CREATION ATLAS</span></a><nav class="topnav" aria-label="メインメニュー">{nav}</nav><details class="menu"><summary>目次 ＋</summary><nav aria-label="モバイル目次">{nav}</nav></details></header>'
+    return navigation.header()
 def footer():return f'<footer class="footer"><div><div class="display">MAKE IDEAS<br>WORK IN THE WORLD.</div><p style="margin-top:18px">モビリティデザインラボ｜WORLD CO-CREATION ATLAS<br>学習版 3.3 · 更新日 {DATE}</p></div><div><p>編集・分析：モビリティデザインラボ<br>写真・動画の権利は各権利者に帰属します。<br>本レポートは各施設との提携・推薦を示すものではありません。</p><p><a href="/">MDL公式サイト</a> ／ <a href="/co-creation-atlas/#sources">出典・編集方針</a></p></div></footer>'+'<script async src="https://embedr.flickr.com/assets/client-code.js" charset="utf-8"></script>'
 def video_dialog():return '<dialog class="video-dialog" id="video-dialog"><div class="dialog-top"><strong class="dialog-title">公式動画</strong><button type="button" data-close>閉じる ×</button></div><div class="dialog-body"></div><p>動画が再生できない場合は、各項目の「公式サイトで見る」をご利用ください。</p></dialog>'
 def cards():
@@ -185,6 +186,9 @@ def build_index():
     for m in MEDIA:out.append(f'<div class="source-item"><p>{external(m["sourceUrl"],e(m.get("name",m.get("alt","写真"))))}</p><p>{e(m["credit"])}</p><p>{e(m["license"])}</p><div class="meta">{e(m.get("changes","表示枠に合わせたトリミング・縮小"))}</div></div>')
     out.append('<div class="source-item"><p>'+external('https://www.naturalearthdata.com/about/terms-of-use/','Natural Earth｜地図データ')+'</p><p>Public domain。110m landデータを緯度・経度から描画。地図の位置は施設または運営本部の代表地点であり、ネットワーク全域を示すものではありません。</p></div></div></details></section></main>'+footer()+f'<script>window.ATLAS_DATA={json.dumps(DATA,ensure_ascii=False).replace("</","<\\/")};</script></body></html>')
     (ROOT/'index.html').write_text(''.join(out).replace('28事例',str(len(DATA))+'事例').replace('世界の共創から、地域と事業のつくり方を学ぶ。','世界の実践から、共創とまちづくりを学ぶ。').replace('13か国',str(countries)+'か国').replace('28対象',str(len(DATA))+'対象'))
+    city_research.update(ROOT/'index.html')
+    p=ROOT/'index.html'
+    p.write_text(navigation.integrate_index(p.read_text()))
 
 def build_case(c):
     prefix='../../';ms=media_for(c);m=ms[0] if ms else None
