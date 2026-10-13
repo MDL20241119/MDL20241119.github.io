@@ -1,3 +1,5 @@
+> 履歴資料（9月版）。現MVPは車両APIなし・手入力を優先します。現在の実装と確認範囲は [2026-10-13更新](IMPLEMENTATION-20261013.md)、手動受入は [ACCEPTANCE-MANUAL.md](ACCEPTANCE-MANUAL.md) を参照。旧ATの自動取得条件を現MVPの合否条件として使用しません。
+
 # e-Palette ONE — 管理者Webアプリ実装メモ
 
 更新: 2026-09-26 / 車両連携前提のMVP・機能検証版

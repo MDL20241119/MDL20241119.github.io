@@ -42,12 +42,13 @@ export function readAction(s:State,p:Principal,name:string,args:Record<string,un
  permit(p,name);
  if(name==='get_service_catalog')return serviceCatalogue(s);
  if(name==='search_trips'){
+  if(s.mode!=='demo')fail(503,'実運行の停留所・運賃・受付条件は未設定です。管理者の設定が必要です。');
   if(args.wheelchairs!==0)fail(422,'車いす設備は未設定です。対応可能として予約を受け付けられません。');
   return {mode:'demo',asOf:s.clock,serviceId,stops,notice:'合成データです。実際の送迎は予約されません。',trips:tripRecords(s).filter(t=>inputDate(t.start).slice(0,10)===args.date&&t.fromStop===args.fromStop&&t.toStop===args.toStop&&t.available>=Number(args.count)&&t.status==='confirmed'&&t.start>=s.clock&&!['blocked','unknown'].includes(t.preparation.type))};
  }
- if(name==='get_my_reservations')return {mode:'demo',reservations:ownReservations(s,p)};
+ if(name==='get_my_reservations')return {mode:s.mode,reservations:ownReservations(s,p)};
  if(name==='get_vehicle_status')return {mode:s.mode,asOf:s.clock,vehicles:s.vehicles.filter(v=>!args.vehicleId||v.id===args.vehicleId).map(v=>({id:v.id,soc:v.soc,charging:v.charging,location:v.location,readiness:readiness(s,v,nextBooking(s,v.id))}))};
- if(name==='get_charge_plan'){const v=s.vehicles.find(v=>v.id===args.vehicleId);if(!v)fail(404,'車両が見つかりません。');const b=nextBooking(s,v.id);if(!b)return {mode:s.mode,calculable:false,reason:'次の利用予定が登録されていません。'};return {mode:s.mode,asOf:s.clock,vehicleId:v.id,bookingId:b.id,nextUse:b.start,soc:v.soc,usableKwh:v.usableKwh,model:v.profileVersion,quality:'estimated_from_synthetic_inputs',plans:s.stations.map(st=>({mode:st.type,...estimate(s,v,b,st.id)}))};}
+ if(name==='get_charge_plan'){const v=s.vehicles.find(v=>v.id===args.vehicleId);if(!v)fail(404,'車両が見つかりません。');const b=nextBooking(s,v.id);if(!b)return {mode:s.mode,calculable:false,reason:'次の利用予定が登録されていません。'};return {mode:s.mode,asOf:s.clock,vehicleId:v.id,bookingId:b.id,nextUse:b.start,soc:v.soc,usableKwh:v.usableKwh,model:v.profileVersion,quality:s.mode==='demo'?'estimated_from_synthetic_inputs':'estimated_from_manual_observations',plans:s.stations.map(st=>({mode:st.type,...estimate(s,v,b,st.id)}))};}
  if(name==='get_today_actions')return {mode:s.mode,asOf:s.clock,vehicles:s.vehicles.map(v=>({id:v.id,...readiness(s,v,nextBooking(s,v.id))})),tasks:s.tasks.filter(t=>t.status!=='completed')};
  if(name==='get_proposal')return {...publicProposal(getProposal(s,p,String(args.proposalId))),expired:getProposal(s,p,String(args.proposalId)).expiresAt<=now};
  fail(404,'読み取り機能が見つかりません。');
@@ -55,6 +56,7 @@ export function readAction(s:State,p:Principal,name:string,args:Record<string,un
 export function prepare(s:State,p:Principal,name:string,args:Record<string,unknown>,proposalId:string,now:string):State{
  permit(p,name);let command:Command;let summary:Record<string,unknown>;
  if(name==='prepare_ride_booking'){
+  if(s.mode!=='demo')fail(503,'実運行の交通サービス設定が必要です。');
   const trip=tripRecords(s).find(t=>t.id===args.tripId);if(!trip||trip.status!=='confirmed'||trip.start<s.clock)fail(422,'受付可能な便が見つかりません。');if(args.count as number>trip.available)fail(409,'空席が不足しています。');if(['blocked','unknown'].includes(trip.preparation.type))fail(422,'車両の準備状態を確認できません。');
   command={type:'create_ticket',bookingId:trip.id,count:args.count,from:0,to:1};summary={title:'乗車予約',tripId:trip.id,from:'大分駅前',to:'地域拠点',start:trip.start,end:trip.end,count:args.count,amount:trip.fare,currency:'JPY',payment:'検証用の無料運行。課金されません。',preparation:trip.preparation.label};
  } else if(name==='prepare_ride_cancellation'){
@@ -80,7 +82,7 @@ export function commitApproved(s:State,p:Principal,proposalId:string,now:string)
  if(a.status!=='approved'||!a.approvedBy||a.expiresAt<=now)fail(403,'有効な本人承認が必要です。');
  if(a.approvedVersion!==s.version)fail(409,'承認後に内容が更新されました。再確認してください。');
  if(p.role!==a.role&&!(p.channel==='web'&&p.role==='manager'))fail(403,'承認時の役割と一致しません。');
- let next=applyCommand(s,a.command,`${a.approvedBy}（${p.channel}・承認済み）`) as State;next.integration=data(next);const target=getProposal(next,p,proposalId);target.status='executed';target.executedAt=now;
+ let next=applyCommand(s,a.command,a.approvedBy) as State;next.integration=data(next);const target=getProposal(next,p,proposalId);target.status='executed';target.executedAt=now;
  if(a.action==='prepare_ride_booking'){const t=next.tickets[next.tickets.length-1];const record:PassengerRecord={ticketId:t.id,subject:p.subject,tripId:t.bookingId,fromStop:String(a.args.fromStop),toStop:String(a.args.toStop),count:t.count,fare:Number(a.summary.amount),createdAt:now};next.integration.reservations.push(record);target.result={reservationId:t.id,status:t.status};}
  else if(a.action==='prepare_ride_cancellation')target.result={reservationId:a.args.reservationId,status:'cancelled'};
  else if(a.action==='prepare_on_demand_request')target.result={requestId:next.rides.at(-1)!.id,status:'waiting'};

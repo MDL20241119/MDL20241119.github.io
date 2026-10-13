@@ -5,6 +5,7 @@ import {State,Principal,parseInput,readAction,prepare,publicProposal,getProposal
 // A separate, explicitly synthetic tab-local sandbox. Never send this state or
 // its local approvals to D1, credentials, external services or production APIs.
 export const DEMO_KEY='epalette-one:guest:v1';
+export function demoScope(){try{let id=sessionStorage.getItem('epalette-demo-tab');if(!id){id=newId();sessionStorage.setItem('epalette-demo-tab',id)}return 'demo:'+id;}catch{return 'demo:memory';}}
 export const DEMO_EVENT='epalette-demo-change';
 export const demoPrincipal:Principal={workspace:'tab-local-demo',subject:'demo-visitor',role:'manager',channel:'web',scopes:['read','proposals:write','approved:execute']};
 let cached:State|null=null;
