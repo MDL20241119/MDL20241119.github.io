@@ -1,0 +1,270 @@
+openapi: 3.0.4
+info:
+  title: QRチケット相互運用API標準仕様書（認証システム）
+  description: |-
+    本ドキュメントは、QRチケット相互運用における認証システム（改札機・運賃箱等の管理システム）向けAPI仕様を定義した OpenAPI 定義です。<br>各 API は、仲介HUBからのチケット発行指示の受け入れや、認証デバイスで読み取ったQRコード情報の受付・検証結果の連携など、相互運用に必要な機能を意図して設計されています。<br>HTTP ステータスコードが `200 OK` 以外の場合のレスポンス構造は RFC 9457 に準拠しています。<br>本仕様書に記載されている HTTP ステータスコードは、各 API において一般的に想定されるステータスコードの推奨例です。<br>実装にあたっては、これらを基準としつつ、サービスの要件や運用状況に応じて必要に応じたステータスコードを柔軟に追加してください。
+  contact:
+    url: https://www.mlit.go.jp/commmmons/
+  version: 1.0.0
+paths:
+  /issue-ticket:
+    post:
+      tags:
+        - issue-ticket
+      summary: (M13-IF-050)認証QRチケット発行API
+      description: |-
+        チケット仲介HUBが認証サービサーへチケット発行を依頼する。
+      operationId: putIssue-ticket
+      requestBody:
+        $ref: "#/components/requestBodies/IssueTicketRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/Result"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+  /accept-qrcode:
+    post:
+      tags:
+        - accept-qrcode
+      summary: (M13-IF-060)仲介QRチケット受付API
+      description: |-
+        認証サービサーが共通QRを受け付ける。
+      operationId: putAccept-qrcode
+      requestBody:
+        $ref: "#/components/requestBodies/AcceptQrCodeRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/Result"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+  /notify-authenticated-ticket:
+    post:
+      tags:
+        - notify-authenticated-ticket
+      summary: (M13-IF-040)QRチケット状態受付API
+      description: |-
+        他の認証システムからチケットの認証情報を受け付ける。
+      operationId: putNotify-authenticated-ticket
+      requestBody:
+        $ref: "#/components/requestBodies/NotifyAuthenticatedTicketRequest"
+      responses:
+        "200":
+          $ref: "#/components/responses/Result"
+        "400": # Bad Request
+          $ref: "#/components/responses/BadRequest"
+        "404": # Not Found
+          $ref: "#/components/responses/NotFound"
+        "500": # Internal Server Error
+          $ref: "#/components/responses/InternalServerError"
+
+components:
+  requestBodies:
+    IssueTicketRequest:
+      description: "チケット発行リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              common_ticket_id:
+                $ref: "#/components/schemas/common_ticket_id"
+              purchase_datetime_at:
+                $ref: "#/components/schemas/purchase_datetime_at"
+              auth_sales_ticket_id:
+                $ref: "#/components/schemas/auth_sales_ticket_id"
+              usable_period:
+                $ref: "#/components/schemas/usable_period"
+              quantity:
+                $ref: "#/components/schemas/quantity"
+    AcceptQrCodeRequest:
+      description: "共通QR受付リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              qr_code:
+                $ref: "#/components/schemas/qr_code"
+              common_ticket_id:
+                type: string
+                description: |-
+                  qr_codeと紐づくチケットのID<br/>- m_valid_ticket.common_ticket_id
+              validity_period_at:
+                $ref: "#/components/schemas/validity_period_at"
+    NotifyAuthenticatedTicketRequest:
+      description: "チケット認証通知リクエストボディ"
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              request_id:
+                $ref: "#/components/schemas/request_id"
+              exec_datetime_at:
+                $ref: "#/components/schemas/exec_datetime_at"
+              datetime_at:
+                $ref: "#/components/schemas/datetime_at"
+              location:
+                $ref: "#/components/schemas/location"
+              terminal_type:
+                $ref: "#/components/schemas/terminal_type"
+              common_ticket_id:
+                type: string
+                description: |-
+                  認証されたチケットを特定するためのID<br/>- t_auth_log.common_ticket_id
+              use_type:
+                $ref: "#/components/schemas/use_type"
+  responses:
+    Result:
+      description: 処理結果
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              result:
+                type: boolean
+                description: |-
+                  処理結果
+    BadRequest:
+      description: |-
+        データ異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    NotFound:
+      description: |-
+        データ項目異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+    InternalServerError:
+      description: |-
+        サーバー処理異常
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              error_code:
+                type: string
+                description: |-
+                  エラーコード
+  schemas:
+    request_id:
+      type: string
+      description: |-
+        APIの実行を特定するためのID。UUIDをセットする
+    exec_datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        API実行日時
+    common_ticket_id:
+      type: object
+      properties:
+        adult:
+          type: array
+          items:
+            type: string
+        child:
+          type: array
+          items:
+            type: string
+      description: |-
+        チケットを特定するためのID<br/>- m_valid_ticket.common_ticket_id
+    purchase_datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        チケットの購入日時
+    auth_sales_ticket_id:
+      type: integer
+      format: int32
+      description: |-
+        発行するチケットの商品を特定するためのID<br/>- m_valid_ticket.auth_ticket_id
+    usable_period:
+      type: object
+      properties:
+        start_at:
+          type: string
+          format: date-time
+          description: |-
+            チケットの利用可能期間における開始日時<br/>- m_valid_ticket.usable_start_at
+        end_at:
+          type: string
+          format: date-time
+          description: |-
+            チケットの利用可能期間における終了日時<br/>- m_valid_ticket.usable_end_at
+    quantity:
+      type: object
+      properties:
+        adult:
+          type: integer
+          format: int32
+          description: |-
+            おとなが利用するチケットの数量
+        child:
+          type: integer
+          format: int32
+          description: |-
+            こどもが利用するチケットの数量
+    datetime_at:
+      type: string
+      format: date-time
+      description: |-
+        認証が実行された日時<br/>- t_auth_log.auth_at
+    location:
+      type: string
+      description: |-
+        認証が実行された場所<br/>- t_auth_log.location
+    terminal_type:
+      type: string
+      description: |-
+        認証時に使用された機器<br/>- t_auth_log.terminal_type
+    use_type:
+      type: string
+      enum: ["start", "entry", "exit", "use", "refund", "cancel"]
+      description: |-
+        認証のタイプ
+          start: 発券 entry: 入場 exit: 出場 use: 利用開始宣言 refund: 払戻 cancel: 取消<br/>- t_auth_log.use_type
+    qr_code:
+      type: string
+      format: byte
+      description: |-
+        チケット仲介HUBシステムが生成したQRコード<br/>- m_valid_ticket.qr_code_data
+    validity_period_at:
+      type: string
+      format: date-time
+      description: QRコードの有効期限<br/>- m_valid_ticket.qr_valid_until
