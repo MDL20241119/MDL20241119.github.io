@@ -13,15 +13,15 @@ document.querySelectorAll('.mobile-menu a').forEach((link) => {
   });
 });
 
-// Include the budget scope in printouts without changing the reading state.
-let wasBudgetOpen = false;
-const budgetNote = document.querySelector('.budget-note');
+// Include the scope details in printouts without changing the reading state.
+let wasScopeOpen = false;
+const scopeNote = document.querySelector('.scope-note');
 window.addEventListener('beforeprint', () => {
-  wasBudgetOpen = budgetNote.open;
-  budgetNote.open = true;
+  wasScopeOpen = scopeNote.open;
+  scopeNote.open = true;
 });
 window.addEventListener('afterprint', () => {
-  budgetNote.open = wasBudgetOpen;
+  scopeNote.open = wasScopeOpen;
 });
 }
 
