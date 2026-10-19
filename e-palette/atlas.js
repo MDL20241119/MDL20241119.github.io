@@ -31,9 +31,8 @@
   const photos = window.CASE_PHOTOS || {};
   function photoHTML(id,preview=false){
     const p=photos[id]; if(!p) return '';
-    return `<figure class="case-photo ${preview?'photo-preview':''}"><a class="photo-original-link" href="${esc(safeURL(p.source))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(p.alt)}：写真の原典を開く"><img src="${esc(p.src)}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async"></a><figcaption><span class="photo-kind">${esc(p.kind)}</span>${preview?`<button class="photo-case-link" data-case="${id}">${esc(p.title)} →</button>`:''}<p>${esc(p.caption)}</p><small>写真：${esc(p.credit)}<br>${sourceLink(p.source,'写真の原典')} · ${sourceLink(p.licenseUrl,p.license)}</small></figcaption></figure>`;
+    return `<figure class="case-photo ${preview?'photo-preview':''}"><a class="photo-original-link" href="${esc(safeURL(p.source))}" target="_blank" rel="noopener noreferrer" aria-label="${esc(p.alt)}：${p.kind==='用途図解'?'図解の根拠':'写真の原典'}を開く"><img src="${esc(p.src)}" width="${p.width}" height="${p.height}" alt="${esc(p.alt)}" loading="lazy" decoding="async"></a><figcaption><span class="photo-kind">${esc(p.kind)}</span>${preview?`<button class="photo-case-link" data-case="${id}">${esc(p.title)} →</button>`:''}<p>${esc(p.caption)}</p><small>${p.kind==='用途図解'?'作成':'写真'}：${esc(p.credit)}<br>${sourceLink(p.source,p.kind==='用途図解'?'図解の根拠':p.kind==='場所の参考写真'?'場所写真の原典':'写真の原典')} · ${sourceLink(p.licenseUrl,p.license)}</small>${p.originalPhoto?`<p class="actual-photo-link">${sourceLink(p.originalPhoto.url,p.originalPhoto.label)}<small>原典サイトで表示します。</small></p>`:''}</figcaption></figure>`;
   }
-  $('photo-gallery').innerHTML=['EP-015','EP-022','EP-001'].map(id=>photoHTML(id,true)).join('');
   function originalHTML(c){return `<div class="case-original"><div class="original-links">${sourceLink(c.Source,'公式発表・原典を開く','original-primary')}${c.Source2?sourceLink(c.Source2,'関連する公式資料','original-secondary'):''}</div><p>${esc(publisher(c.Source))}<br>情報確認：${esc(c['確認日']||'前回整理 2026-09-13（今回の個別再確認対象外）')}${c['発表日']?` ／ 発表・更新：${esc(c['発表日'])}`:''}</p></div>`;}
   function numberHTML(c){
     const m=c.metric;
