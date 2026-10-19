@@ -17,10 +17,12 @@ document.querySelectorAll('.mobile-menu a').forEach((link) => {
 let wasScopeOpen = false;
 const scopeNote = document.querySelector('.scope-note');
 window.addEventListener('beforeprint', () => {
+  if (!scopeNote) return;
   wasScopeOpen = scopeNote.open;
   scopeNote.open = true;
 });
 window.addEventListener('afterprint', () => {
+  if (!scopeNote) return;
   scopeNote.open = wasScopeOpen;
 });
 }
