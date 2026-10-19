@@ -55,5 +55,13 @@
       "talk_candidate": "共創でつくる、まちとモビリティの未来",
       "photo_asset": "assets/miyadai-haruyuki.webp"
     }
-  ]
+  ],
+  "selection_policy": "候補の中からテーマに合わせて数名を選定します。",
+  "program_designer": {
+    "name": "植野 直亮",
+    "role": "プログラム設計・モビリティ専門家",
+    "photo_asset": "assets/ueno-naoaki.jpg",
+    "photo_source": "https://rev-m.com/event_schedule/mo2025/speakers/",
+    "photo_original_url": "https://rev-m.com/wp-content/uploads/2025/01/Naoaki-Ueno.jpeg"
+  }
 }
