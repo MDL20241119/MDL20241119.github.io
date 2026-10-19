@@ -1,0 +1,55 @@
+{
+  "verified_at": "2026-10-19",
+  "status": "講師候補・登壇承諾未確認",
+  "photo_publication": "外部掲載許諾を未確認のため、写真は公式プロフィールへの参照リンクのみ",
+  "profiles": [
+    {
+      "id": "hidaka-yosuke",
+      "name": "日高 洋祐",
+      "company": "株式会社MaaS Tech Japan",
+      "title": "代表取締役 CEO",
+      "bio": "2005年にJR東日本へ入社し、ICTを活用したアプリ開発、公共交通連携、モビリティ戦略策定に従事。2018年11月にMaaS Tech Japanを創業し、MaaSの社会実装や地域交通DXに取り組む。",
+      "sources": [
+        "https://www.maas.co.jp/company/",
+        "https://www.maas.co.jp/news/82102/"
+      ],
+      "photo_source": "https://www.maas.co.jp/company/"
+    },
+    {
+      "id": "narita-tomoya",
+      "name": "成田 智哉",
+      "company": "マドラー株式会社",
+      "title": "代表取締役 CEO",
+      "bio": "東京大学文学部卒業後、トヨタ自動車で人事やブラジル赴任を経験し独立。マドラー株式会社を設立し、北海道厚真町を拠点に、共助型困りごと解決プラットフォーム「ミーツ」や交流拠点づくりを進める。",
+      "sources": [
+        "https://muddler.mystrikingly.com/",
+        "https://ezozaidan.com/"
+      ],
+      "photo_source": "https://muddler.mystrikingly.com/"
+    },
+    {
+      "id": "morita-so",
+      "name": "森田 創",
+      "company": "合同会社うさぎ企画",
+      "title": "代表",
+      "bio": "大手鉄道会社で23年間勤務し、2019年に伊豆半島で観光型MaaSの立ち上げを担当。2021年に合同会社うさぎ企画を設立。「人づくり・場づくり・足づくり」を柱に、モビリティと人材交流を組み合わせた地域活性化に取り組む。",
+      "sources": [
+        "https://usagi-kikaku.com/about/"
+      ],
+      "photo_source": "https://usagi-kikaku.com/about/"
+    },
+    {
+      "id": "miyadai-haruyuki",
+      "name": "宮代 陽之",
+      "company": "株式会社国際経済研究所",
+      "title": "非常勤フェロー",
+      "bio": "1983年にトヨタ自動車へ入社し、ベルギー・トルコ駐在、コロンビア大学ビジネススクール修了を経て、2008年から国際経済研究所に所属。モビリティ・MaaS、社会システム・都市設計を研究し、2020年3月から非常勤フェロー。",
+      "sources": [
+        "https://www.iies.co.jp/researcher/",
+        "https://www.iies.co.jp/researcher/researcher.html?id=HaruyukiMiyadai"
+      ],
+      "photo_source": "https://www.iies.co.jp/researcher/researcher.html?id=HaruyukiMiyadai",
+      "talk_candidate": "共創でつくる、まちとモビリティの未来"
+    }
+  ]
+}
