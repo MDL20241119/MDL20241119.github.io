@@ -1,8 +1,8 @@
 /* Editorial summaries of linked public sources. Counts are calculated by atlas.js.
    Category tags are non-exclusive. Values labelled as goals or interpretation
-   must never be rendered as measured results. Verified highlights: 2026-09-13. */
+   must never be rendered as measured results. Original highlights: 2026-09-13. Selected case updates: 2026-10-19. */
 window.ATLAS = {
-  updated: '2026-09-13',
+  updated: '2026-10-19',
   categories: [
     {id:'people', label:'人を運ぶ', en:'PEOPLE', description:'通勤・拠点アクセス・日常の足', example:'EP-003', metric:{value:'6,566',unit:'人',kind:'累計利用者数',note:'2023年9–12月の出退勤シャトル。延べ利用として掲載。',source:'https://toyotatimes.jp/spotlights/1058.html',publisher:'トヨタイムズ / 2024.08.01'}},
     {id:'tourism', label:'観光・回遊', en:'TOURISM', description:'目的地をつなぎ、街を巡るきっかけに',example:'EP-010',metric:{value:'86',unit:'%',kind:'アンケート / 来訪意向',note:'京都旅行の際に出展店舗を訪れたいと回答。実際の来訪率ではありません。',source:'https://toyotatimes.jp/spotlights/1058_2.html',publisher:'トヨタイムズ / 2024.08.01'}},
@@ -55,7 +55,7 @@ window.ATLAS = {
     'EP-029': {tags:['people','tourism','accessibility'],what:'障がいのある人を含む観光ツアーを企画。',value:'乗車と目的地内の体験を通して使いやすさを検証。',valueKind:'検証目的',learn:'乗り降りだけでなく、旅の全行程を評価する。'},
     'EP-030': {tags:['autonomy','innovation'],what:'武蔵野市で自動運転の公道実証を開始。',value:'走行技術と運行支援の品質を高める。',valueKind:'検証目的',learn:'走行・監視・通信・安全評価の担当をつなぐ。'},
     'EP-031': {tags:['people','tourism'],what:'通潤橋とまちなかを呼出型サービスで結ぶ。',value:'徒歩で巡りきれない場所への回遊を補う。',valueKind:'実証の狙い',learn:'アプリ以外の呼出方法が使いやすいかを確かめる。'},
-    'EP-032': {tags:['people','tourism'],what:'美祢駅などと観光地を結ぶ周遊ツアーを計画。',value:'鉄道代行バスと観光地への移動をつなぐ。',valueKind:'計画の狙い',learn:'旅行商品としての購入実績と継続条件を確かめる。'},
+    'EP-032': {tags:['people','tourism'],what:'美祢駅などと観光地を結ぶ周遊ツアー。公表日程は10–12月。',value:'鉄道代行バスと観光地への移動をつなぐ。',valueKind:'計画の狙い',learn:'旅行商品としての購入実績と継続条件を確かめる。'},
     'EP-033': {with:'豊田市、MONET、NTTモビリティ、May Mobility、交通・保険・研究機関',tags:['people','autonomy'],what:'郊外ルートでe-Paletteの自動運転実証を計画。',value:'地域の需要に合う車種と運用モデルを検証する。',valueKind:'計画の狙い',learn:'予定する試験と、すでに得られた結果を区別する。'}
   },
   metrics: {
@@ -77,3 +77,49 @@ window.ATLAS = {
     {title:'続けられる条件があるか。',body:'参加人数と事業性は別の指標。運行費、負担者、利用収入、継続判断を確認する。',caseId:'EP-032'}
   ]
 };
+
+
+// October 2026 public-source additions.
+Object.assign(window.ATLAS.summaries, {
+  "EP-034": {
+    "tags": [
+      "people",
+      "retail",
+      "work"
+    ],
+    "what": "買い物バスのルートでe-Paletteを試験運行する計画。",
+    "value": "坂の多いニュータウンで移動と生活支援を検証。",
+    "valueKind": "検証目的",
+    "learn": "移動・販売・交流を組み合わせ、既存交通との役割を決める。"
+  },
+  "EP-035": {
+    "tags": [
+      "people",
+      "tourism"
+    ],
+    "what": "和倉温泉の駅・観光拠点を結ぶ実証を計画。",
+    "value": "観光客と住民の双方が巡りやすい交通を探る。",
+    "valueKind": "計画の狙い",
+    "learn": "復興支援と持続的な運行条件を一緒に考える。"
+  },
+  "EP-036": {
+    "tags": [
+      "retail",
+      "work"
+    ],
+    "what": "車内・車両周辺での飲食販売実証を発表。",
+    "value": "飲食提供に必要な配置・電源・安全管理を確認。",
+    "valueKind": "検証目的",
+    "learn": "販売体験と、運営・安全の条件を併せて評価する。"
+  },
+  "EP-037": {
+    "tags": [
+      "people",
+      "innovation"
+    ],
+    "what": "ポートアイランドで2日間の体験試乗会を計画。",
+    "value": "地域の移動課題を考える体験機会をつくる。",
+    "valueKind": "計画の狙い",
+    "learn": "試乗体験から日常利用への需要を別途確かめる。"
+  }
+});

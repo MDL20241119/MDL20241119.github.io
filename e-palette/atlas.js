@@ -9,8 +9,8 @@
   const byId = new Map(cases.map(c => [c.ID,c]));
   const sourceLink = (url,label,cls='') => `<a class="${cls}" href="${esc(safeURL(url))}" target="_blank" rel="noopener noreferrer">${esc(label)} ↗</a>`;
   const publisher = url => {try {const h=new URL(url).hostname; return ({'toyotatimes.jp':'トヨタイムズ','www.city.toyota.aichi.jp':'豊田市','www.pref.aichi.jp':'愛知県','global.toyota':'トヨタ ニュースルーム','www.docomo.ne.jp':'NTTドコモ','group.ntt':'NTT','www.h-products.co.jp':'博報堂プロダクツ','www.westjr.co.jp':'JR西日本','www.town.kumamoto-yamato.lg.jp':'山都町','prtimes.jp':'発表主体のプレスリリース / PR TIMES','www.pref.kyoto.jp':'京都府','toyota.jp':'トヨタ e-Palette','maymobility.com':'May Mobility','www.woven-city.global':'Woven City','woven-city.global':'Woven City','kitayama.or.jp':'北山街協同組合','www.monet-technologies.com':'MONET','www.toyota-kyushu.com':'トヨタ自動車九州'})[h] || h;} catch{return '公開出典';}};
-  const stage = c => ['EP-032','EP-033'].includes(c.ID) ? '予定' : c['段階'].includes('③') ? '実装' : '実証';
-  const stageLabel = c => stage(c)==='予定' ? '実施予定' : stage(c)==='実装' ? '実装 / 公開時点' : '実証';
+  const stage = c => c.stageKey || (c['段階'].includes('予定') ? '予定' : c['段階'].includes('③') ? '実装' : '実証');
+  const stageLabel = c => c.stageLabel || (stage(c)==='予定' ? '実施予定' : stage(c)==='実装' ? '実装 / 公開時点' : stage(c)==='未確認' ? '実施状況未確認' : '実証');
   const yearOf = c => c.ID==='EP-033' ? '2027' : (c['年'].match(/20\d\d/) || ['時期未確認'])[0];
   const regionOf = c => c['地域'].match(/^.{2,3}?[都道府県]/)?.[0] || c['地域'].split('・')[0];
   const state = {q:'',cat:'',year:'',stage:'',region:'',sort:'oldest'};
@@ -35,7 +35,7 @@
   }
   function field(name,label,content,extra=''){return `<div class="field-row ${extra}"><dt>${name}<span>${label}</span></dt><dd>${content}</dd></div>`;}
   function card(c){
-    const details=[['実施時期・期間',c['期間']],['運行・活用方法',c['サービス内容']],['対象者',c['ターゲット']],['車両・台数（計画・公表仕様を含む）',c['台数']],['料金・利用条件（公開当時）',c['料金']],['自動運転の位置づけ',c['自動運転']],['共創先（公開情報）',c['共創先']],[c.valueKind+'（出典に沿った整理）',c.value],['成果を読むときの留意点',c['弱点/課題']]];
+    const details=[['情報確認日',c['確認日']||'前回整理：2026-09-13（今回の個別再確認対象外）'],['発表日・出典更新日',c['発表日']||'各公開出典を参照'],['実施・運行状況',c['運行状況']||c['段階']],['実施時期・期間',c['期間']],['運行・活用方法',c['サービス内容']],['対象者',c['ターゲット']],['車両・台数（計画・公表仕様を含む）',c['台数']],['料金・利用条件（公開当時）',c['料金']],['自動運転の位置づけ',c['自動運転']],['共創先（公開情報）',c['共創先']],[c.valueKind+'（出典に沿った整理）',c.value],['成果を読むときの留意点',c['弱点/課題']]];
     return `<article class="case-card" id="case-${c.ID}" aria-labelledby="title-${c.ID}"><div class="case-heading"><div class="case-top"><span class="case-ref">${c.ID} / ${esc(yearOf(c))}</span><span class="badge ${stage(c)==='予定'?'planned':stage(c)==='実証'?'trial':''}">${stageLabel(c)}</span></div><h3 id="title-${c.ID}">${esc(c['案件名'])}</h3><p class="case-location">${esc(c['地域'])}</p></div><dl class="six-fields">${field('WHAT','何をした？',esc(c.what))}${field('WHO','誰向け？',esc(c['ターゲット']))}${field('VALUE','何が良くなった？',`<span class="field-tag">${esc(c.valueKind)}</span>${esc(c.value)}`)}${field('RESULT','数字は？',numberHTML(c),'result-row')}${field('WITH','誰と共創？',esc(c.with||c['共創先']))}${field('LEARN','何を学べる？',`<span class="field-tag">MDLの考察</span>${esc(c.learn)}`)}</dl><details class="case-details" data-id="${c.ID}" ${opened.has(c.ID)?'open':''}><summary>期間・運行条件・公開出典を見る</summary><div class="detail-body"><dl>${details.map(([key,val])=>`<div><dt>${esc(key)}</dt><dd>${esc(val||'公開値未確認')}</dd></div>`).join('')}<div><dt>用途・テーマ（複数分類）</dt><dd>${c.tags.map(id=>esc(categories.find(x=>x.id===id).label)).join(' / ')}</dd></div></dl><ul class="source-list">${[c.Source,c.Source2].filter(Boolean).map((u,i)=>`<li>${sourceLink(u,`${i+1}. ${publisher(u)}`)}</li>`).join('')}</ul><p class="editorial-note">実証の目的・期待と、測定済みの成果は異なります。VALUEには情報の性質を表示し、LEARNは公開情報に基づくMDLの考察として掲載しています。</p></div></details></article>`;
   }
   function render(){
@@ -57,3 +57,4 @@
   function followHash(){const match=location.hash.match(/^#(?:case-)?(EP-\d{3})$/);if(match&&byId.has(match[1]))showCase(match[1]);}
   render();followHash();window.addEventListener('hashchange',followHash);
 })();
+
