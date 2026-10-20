@@ -434,17 +434,17 @@ window.CASE_PHOTOS = {
     }
   },
   "EP-013": {
-    "src": "photos/context-EP-013.webp",
-    "caption": "宮田工場の屋根と太陽光発電設備（トヨタ公式、2021年7月公開）。同じ工場の場所参考写真で、e-Palette実証やその給電設備を撮影したものではありません。 縮小・WebP変換、トリミングなし。",
-    "alt": "宮田工場の屋根と太陽光発電設備（トヨタ公式、2021年7月公開）。同じ工場の場所参考写真で、e-Palette実証やその給電設備を撮影したものではありません。",
-    "credit": "トヨタ自動車株式会社",
-    "source": "https://global.toyota/jp/album/images/35789466/",
-    "license": "公式ダウンロード素材・報道目的利用",
-    "licenseUrl": "https://global.toyota/jp/downloadable-assets/",
-    "width": 1333,
+    "src": "photos/context-EP-030.webp",
+    "caption": "May Mobilityの自動運転システムを搭載したe-Paletteの車両参考写真（NTTモビリティ、2026年9月公表）。トヨタ自動車九州・宮田工場の実証を撮影した写真ではありません。 縮小・WebP変換、トリミングなし。",
+    "alt": "May Mobilityの自動運転システムを搭載したe-Palette。宮田工場の実証風景ではない車両参考写真。",
+    "credit": "出典：NTTモビリティ株式会社 / PR TIMES",
+    "source": "https://prtimes.jp/main/html/rd/p/000000008.000183366.html",
+    "license": "PR TIMES報道規約に基づく掲載",
+    "licenseUrl": "https://prtimes.jp/main/html/kiyaku",
+    "width": 1307,
     "height": 1000,
     "checked": "2026-10-20",
-    "kind": "場所の参考写真"
+    "kind": "車両の参考写真"
   },
   "EP-018": {
     "src": "photos/context-EP-018.webp",
