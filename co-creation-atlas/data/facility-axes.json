@@ -1,0 +1,2798 @@
+{
+  "mit-d-lab": {
+    "hard": {
+      "text": "大学の試作環境に加え、冷却庫案件では中古コンテナ、送風機、太陽光電源と現地農場を使う。",
+      "refs": [
+        "mit-backcast-01",
+        "mit-backcast-02"
+      ]
+    },
+    "soft": {
+      "text": "地域ホストと課題・参加条件を整え、共同設計の研修、現場での試作、修了者ネットワークを運営。",
+      "refs": [
+        "s01-f01-src01",
+        "s01-f01-src02",
+        "mit-backcast-05",
+        "mit-backcast-02",
+        "mit-backcast-04",
+        "s01-f01-src03"
+      ]
+    },
+    "partners": {
+      "text": "MITが設計・研究を担い、冷却庫ではSolar Freezeなど現地組織が施工と実機づくりに参加。",
+      "refs": [
+        "mit-backcast-05",
+        "mit-backcast-01",
+        "s01-f01-src02",
+        "mit-backcast-02",
+        "mit-backcast-04",
+        "s01-f01-src01"
+      ]
+    }
+  },
+  "openlab-stockholm": {
+    "hard": {
+      "text": "活動拠点に加え、公園、病院、アリーナなど案件ごとの現場を使い、既存建物や設備の条件を扱う。",
+      "refs": [
+        "s01-f02-src01",
+        "openlab-backcast-01"
+      ]
+    },
+    "soft": {
+      "text": "公共組織から課題を募り、学生の学際チームが利用者調査と試作を実施。調達前の市場対話も支援。",
+      "refs": [
+        "s01-f02-src02",
+        "openlab-backcast-01",
+        "openlab-backcast-07",
+        "openlab-backcast-02",
+        "openlab-backcast-04",
+        "openlab-backcast-03",
+        "s01-f02-src01",
+        "s01-f02-src03"
+      ]
+    },
+    "partners": {
+      "text": "ストックホルム市・地域が課題を提供し、KTHなどの大学が教育・研究、施設運営者が現場知を担う。",
+      "refs": [
+        "s01-f02-src01",
+        "openlab-backcast-02",
+        "openlab-backcast-01",
+        "openlab-backcast-06",
+        "s01-f02-src02",
+        "openlab-backcast-03",
+        "openlab-backcast-05",
+        "openlab-backcast-04"
+      ]
+    }
+  },
+  "forum-virium-helsinki": {
+    "hard": {
+      "text": "単一の実験棟ではなく、市内の高齢者施設や病院を活用。自己測定機器は保健センターのロビーで試す。",
+      "refs": [
+        "city-fvh-05"
+      ]
+    },
+    "soft": {
+      "text": "地域のニーズ把握、公募、現場との調整、短期実証の伴走・評価を行い、運営手順を公開する。",
+      "refs": [
+        "city-fvh-04",
+        "city-fvh-02",
+        "city-fvh-05",
+        "city-fvh-07",
+        "fvh-enrichment-kalasatama",
+        "fvh-enrichment-mobility",
+        "s01-f03-src01",
+        "s01-f03-src02",
+        "s01-f03-src03"
+      ]
+    },
+    "partners": {
+      "text": "市の福祉・医療現場と住民が課題や改善点を返し、MedicubeXなどの企業が技術を提供する。",
+      "refs": [
+        "city-fvh-01",
+        "city-fvh-03",
+        "city-fvh-05",
+        "city-fvh-04"
+      ]
+    }
+  },
+  "ars-electronica-futurelab": {
+    "hard": {
+      "text": "公開展示の立体投影技術を活用。共同開発したJKU medSPACEには高精細の大型立体表示を備える。",
+      "refs": [
+        "ars-backcast-01",
+        "ars-backcast-02"
+      ]
+    },
+    "soft": {
+      "text": "芸術を起点に未来の問いを探索し、作品・技術試作と公開展示を通して得た洞察を研究開発へ戻す。",
+      "refs": [
+        "s02-f01-src02",
+        "s02-f01-src03",
+        "ars-backcast-01",
+        "ars-backcast-03",
+        "ars-backcast-04",
+        "ars-backcast-02",
+        "s02-f01-src01"
+      ]
+    },
+    "partners": {
+      "text": "medSPACEではJKUが医学教育、Siemensが医療画像技術、Futurelabが体験設計を担う。",
+      "refs": [
+        "s02-f01-src01",
+        "ars-backcast-03",
+        "ars-backcast-01",
+        "s02-f01-src02",
+        "ars-backcast-02",
+        "ars-backcast-04",
+        "s02-f01-src03"
+      ]
+    }
+  },
+  "cern-ideasquare": {
+    "hard": {
+      "text": "3Dプリンターやレーザーカッターを備える試作工房。The Forgeには大型の共同作業台を置く。",
+      "refs": [
+        "s02-f02-src04"
+      ]
+    },
+    "soft": {
+      "text": "初期段階の学際教育と試作を支援。仮想社会から現実の課題を問い直す教育や機器の安全訓練を行う。",
+      "refs": [
+        "cern-backcast-01",
+        "s02-f02-src02",
+        "s02-f02-src04",
+        "s02-f02-src03",
+        "cern-backcast-02",
+        "s02-f02-src01"
+      ]
+    },
+    "partners": {
+      "text": "Esade、IED Barcelona、UPCの学生・教員が工学・経営・デザインを持ち寄り、科学者や企業と協働。",
+      "refs": [
+        "s02-f02-src04",
+        "s02-f02-src02"
+      ]
+    }
+  },
+  "geidai-future-art": {
+    "hard": {
+      "text": "大学の作品・楽器・資料と制作環境を、都市の公開会場につなぐ。美術館でSPレコードと蓄音機も活用。",
+      "refs": [
+        "s02-f03-src04"
+      ]
+    },
+    "soft": {
+      "text": "芸術・医療・工学を結ぶ研究者マッチングと共同研究支援を行い、街での展示や表現活動へつなぐ。",
+      "refs": [
+        "s02-f03-src01",
+        "s02-f03-src03",
+        "s02-f03-src04",
+        "geidai-backcast-01",
+        "s02-f03-src02"
+      ]
+    },
+    "partners": {
+      "text": "三菱地所が都市の場所・運営を、藝大が芸術研究を提供。東京科学大学とは医歯学・理工学で連携。",
+      "refs": [
+        "s02-f03-src01",
+        "geidai-backcast-01",
+        "s02-f03-src02",
+        "s02-f03-src03",
+        "s02-f03-src04"
+      ]
+    }
+  },
+  "aalto-design-factory": {
+    "hard": {
+      "text": "機械加工、電子工作、3D印刷の工房を備える。材料開発では学内の化学工学設備やFabLabも利用。",
+      "refs": [
+        "AD-03",
+        "aalto-backcast-01"
+      ]
+    },
+    "soft": {
+      "text": "企業課題を教員と調整し、学生PMのいる学際チームが調査から機能試作へ進む。安全管理も運営する。",
+      "refs": [
+        "AD-01",
+        "AD-02",
+        "AD-04",
+        "aalto-backcast-01",
+        "AD-03"
+      ]
+    },
+    "partners": {
+      "text": "スポンサー企業が課題・資金・担当者を用意し、学生が開発、教員と試作専門家が指導・制作を支える。",
+      "refs": [
+        "AD-01",
+        "AD-03",
+        "AD-02",
+        "AD-04",
+        "aalto-backcast-01"
+      ]
+    }
+  },
+  "microsoft-garage": {
+    "hard": {
+      "text": "世界各地に協働・制作スペースを展開。ソフトウェアの試作には既存の製品・クラウド環境を使う。",
+      "refs": [
+        "garage-backcast-01",
+        "garage-backcast-04"
+      ]
+    },
+    "soft": {
+      "text": "部門横断のハッカソンと学習機会を設け、技能に応じた仲間探しから制作・共有・審査まで支援する。",
+      "refs": [
+        "garage-backcast-03",
+        "garage-backcast-04",
+        "garage-backcast-06",
+        "garage-backcast-05",
+        "garage-backcast-02",
+        "MG-01",
+        "MG-02",
+        "MG-03"
+      ]
+    },
+    "partners": {
+      "text": "読字支援では社内の製品部門と研究者が技術を持ち寄り、学校の教員・児童生徒が改善の知見を返す。",
+      "refs": [
+        "garage-backcast-01",
+        "garage-backcast-04",
+        "garage-backcast-05",
+        "garage-backcast-06",
+        "garage-backcast-07"
+      ]
+    }
+  },
+  "station-f": {
+    "hard": {
+      "text": "旧貨物駅を転用したキャンパスに仕事場、交流・イベント空間を設け、共同住居への接続も用意する。",
+      "refs": [
+        "stationf-backcast-03",
+        "stationf-backcast-07"
+      ]
+    },
+    "soft": {
+      "text": "起業段階別にプログラムと選考を設け、専門家相談、投資家紹介、技術支援や生活基盤へつなぐ。",
+      "refs": [
+        "stationf-backcast-01",
+        "stationf-backcast-03",
+        "stationf-backcast-04",
+        "stationf-backcast-05",
+        "stationf-backcast-08",
+        "SF-01",
+        "SF-02",
+        "SF-03"
+      ]
+    },
+    "partners": {
+      "text": "Microsoft、Metaなどが技術基盤を提供し、投資家が資金面の接点、専門家が事業相談を担う。",
+      "refs": [
+        "stationf-backcast-01",
+        "stationf-backcast-04",
+        "stationf-backcast-08",
+        "stationf-backcast-02"
+      ]
+    }
+  },
+  "digital-catapult": {
+    "hard": {
+      "text": "ベルファストに360度没入空間と技術ラボを備える。港の案件では現場センサーと3D表示を接続。",
+      "refs": [
+        "dcx-01",
+        "dcx-05"
+      ]
+    },
+    "soft": {
+      "text": "産業側の課題と中小企業を組み合わせ、技術助言、施設利用、メンタリングと現場実証を支援する。",
+      "refs": [
+        "dcx-03",
+        "dcx-02",
+        "dcx-05",
+        "dcx-04",
+        "DC-01",
+        "DC-02",
+        "DC-03"
+      ]
+    },
+    "partners": {
+      "text": "Larne港が利用現場、Helix8がIoT・地理空間技術を提供し、センターが技術と市場導入を支える。",
+      "refs": [
+        "dcx-01",
+        "dcx-02",
+        "dcx-03",
+        "dcx-04"
+      ]
+    }
+  },
+  "punggol-digital-district": {
+    "hard": {
+      "text": "大学、ビジネスパーク、公共空間を一体化した地区。地下の冷房設備・配管網で複数建物を結ぶ。",
+      "refs": [
+        "city-pdd-02",
+        "city-pdd-04"
+      ]
+    },
+    "soft": {
+      "text": "共通デジタル基盤で建物設備のデータと制御を接続し、地区運営と企業・大学の実験をつなぐ。",
+      "refs": [
+        "city-pdd-04",
+        "city-pdd-05",
+        "city-pdd-01",
+        "city-pdd-02",
+        "PD-01",
+        "PD-02",
+        "PD-03"
+      ]
+    },
+    "partners": {
+      "text": "JTCとGovTechが共通基盤を開発。ENGIEが冷房の設計・運営、SITが応用研究・教育を担う。",
+      "refs": [
+        "city-pdd-04",
+        "city-pdd-02",
+        "city-pdd-03",
+        "city-pdd-05"
+      ]
+    }
+  },
+  "project-plateau": {
+    "hard": {
+      "text": "専用施設ではなく各都市と行政現場を対象とし、測量資料や庁内PCを活用。3D都市モデルは情報基盤。",
+      "refs": [
+        "city-plt-02",
+        "city-plt-06"
+      ]
+    },
+    "soft": {
+      "text": "国が標準・整備支援を設け、自治体と開発者が3D都市モデルを整備・活用し、業務改善を検証する。",
+      "refs": [
+        "city-plt-06",
+        "city-plt-04",
+        "city-plt-05",
+        "city-plt-02",
+        "city-plt-03",
+        "PL-01",
+        "PL-02",
+        "PL-03"
+      ]
+    },
+    "partners": {
+      "text": "開発許可DXではアジア航測が開発を担い、自治体が業務情報、たくみ設計工房が申請者としての検証を提供。",
+      "refs": [
+        "city-plt-01",
+        "city-plt-02",
+        "city-plt-05",
+        "city-plt-03"
+      ]
+    }
+  },
+  "arena2036": {
+    "hard": {
+      "text": "無柱の研究ホールを案件ごとの実験区画へ分け、設備を組み替える。会員の執務・会議場所も併設する。",
+      "refs": [
+        "ar-backcast-02"
+      ]
+    },
+    "soft": {
+      "text": "技術関心の調整から会員受入れへ進み、研究調整チームが実験区画、設備接続、企業間の検証を支える。",
+      "refs": [
+        "ar-backcast-01",
+        "ar-backcast-02",
+        "ar-backcast-03",
+        "ar-backcast-06",
+        "ar-backcast-05",
+        "ar-backcast-07",
+        "AR-01",
+        "AR-02",
+        "AR-03"
+      ]
+    },
+    "partners": {
+      "text": "大学が研究工場整備と共同研究を担い、Boschなどがデータ連携、KOSTALなどが部品情報を提供。",
+      "refs": [
+        "ar-backcast-01",
+        "ar-backcast-02",
+        "ar-backcast-05",
+        "ar-backcast-03",
+        "ar-backcast-04"
+      ]
+    }
+  },
+  "science-tokyo-robotics-innovation-center": {
+    "hard": {
+      "text": "湯島のM&Dタワーに「まほろ」、自動分注機、培養・解析機器を整備。安定実験と次世代開発の部屋を分ける。",
+      "refs": [
+        "ric-backcast-01",
+        "ric-backcast-02"
+      ]
+    },
+    "soft": {
+      "text": "実験手順の最適化と新装置の開発を分け、安定化した技術を運用へ移す。共同利用は試験利用に向け準備中。",
+      "refs": [
+        "ric-backcast-02",
+        "ric-backcast-04",
+        "ric-backcast-01",
+        "s05-f01-01",
+        "s05-f01-02",
+        "s05-f01-03"
+      ]
+    },
+    "partners": {
+      "text": "生命科学・工学の研究者と技術者・オペレーターが協働。「生きている研究室」課題には理研・筑波大も参加。",
+      "refs": [
+        "ric-backcast-01",
+        "ric-backcast-03",
+        "ric-backcast-05",
+        "ric-backcast-06",
+        "ric-backcast-02"
+      ]
+    }
+  },
+  "newlab-brooklyn": {
+    "hard": {
+      "text": "金属・樹脂・電子などの試作設備を持つ拠点。Navy Yardの道路、水辺、建物での実験へも接続する。",
+      "refs": [
+        "nb-01"
+      ]
+    },
+    "soft": {
+      "text": "常駐の製品開発チームが設計・加工を支援。行政との実証では範囲、評価指標、データ条件を調整する。",
+      "refs": [
+        "nb-02",
+        "nb-05",
+        "nb-01",
+        "nb-04",
+        "nb-07",
+        "s05-f02-01",
+        "s05-f02-02",
+        "s05-f02-03"
+      ]
+    },
+    "partners": {
+      "text": "NYC DOTが行政の現場をつなぎ、企業が技術を提供。創業支援では銀行と法律事務所が財務・法務を支える。",
+      "refs": [
+        "nb-01",
+        "nb-06",
+        "nb-02",
+        "nb-03"
+      ]
+    }
+  },
+  "massrobotics": {
+    "hard": {
+      "text": "機械加工・電子工作設備、産業用・協働・移動ロボット、センサーやコンベヤ、人との相互作用ラボを共用。",
+      "refs": [
+        "mass-backcast-03"
+      ]
+    },
+    "soft": {
+      "text": "共有席から実験台・個室へ拡張できる入居制度と設備利用、業務相談、顧客・製造業者・投資家紹介を提供。",
+      "refs": [
+        "mass-backcast-01",
+        "mass-backcast-03",
+        "mass-backcast-02",
+        "mass-backcast-05",
+        "mass-backcast-06",
+        "mass-backcast-04",
+        "s05-f03-01",
+        "s05-f03-02",
+        "s05-f03-03"
+      ]
+    },
+    "partners": {
+      "text": "AWS・NVIDIAがAIの技術者支援と計算環境を提供。ロボット企業は機器や相互運用標準の開発で協働。",
+      "refs": [
+        "mass-backcast-01",
+        "mass-backcast-02",
+        "mass-backcast-04",
+        "mass-backcast-05",
+        "mass-backcast-07",
+        "mass-backcast-03"
+      ]
+    }
+  },
+  "robohouse": {
+    "hard": {
+      "text": "Test Centreでパートナー貸与の機材を使用。企業の実工程に似せた試験装置をつくり、制約を確かめる。",
+      "refs": [
+        "robo-backcast-03",
+        "robo-backcast-04"
+      ]
+    },
+    "soft": {
+      "text": "課題の成熟度に応じた開発支援と学生の試作プログラムを用意。従業員を交え、動く概念実証をつくる。",
+      "refs": [
+        "robo-backcast-04",
+        "robo-backcast-02",
+        "robo-backcast-06",
+        "robo-backcast-07",
+        "robo-backcast-01",
+        "s05-f04-01",
+        "s05-f04-02",
+        "s05-f04-03"
+      ]
+    },
+    "partners": {
+      "text": "Lammeなどが実際の作業工程を提供し、TU DelftやROC Mondriaanの学生・研究者が試作に参加。",
+      "refs": [
+        "robo-backcast-01",
+        "robo-backcast-03",
+        "robo-backcast-04",
+        "robo-backcast-05",
+        "robo-backcast-06",
+        "robo-backcast-07",
+        "robo-backcast-02"
+      ]
+    }
+  },
+  "arm-robotics-manufacturing-hub": {
+    "hard": {
+      "text": "Mill 19の共用試験設備でモデルやロボットの試作セルをつくり、企業の生産を止めずに事前検証する。",
+      "refs": [
+        "arm-backcast-01"
+      ]
+    },
+    "soft": {
+      "text": "現場診断からシミュレーション・試作へ進み、採用時は見積依頼と業者選定、外部への引継ぎを支援する。",
+      "refs": [
+        "arm-backcast-04",
+        "arm-backcast-01",
+        "arm-backcast-05",
+        "s05-f05-01",
+        "s05-f05-02",
+        "s05-f05-03"
+      ]
+    },
+    "partners": {
+      "text": "Kensonが工程課題を持ち込み、FANUCの協働ロボットで検証。Premier Automationが工場統合を担う。",
+      "refs": [
+        "arm-backcast-04",
+        "arm-backcast-05",
+        "arm-backcast-02",
+        "arm-backcast-01"
+      ]
+    }
+  },
+  "michigan-central-newlab-detroit": {
+    "hard": {
+      "text": "Newlab Detroitの加工設備と屋上離着陸場に、別範囲の道路実証ゾーン・空の実証区域を組み合わせる。",
+      "refs": [
+        "dt-01",
+        "dt-06"
+      ]
+    },
+    "soft": {
+      "text": "常駐専門家が加工・設計を支援し、技術・戦略担当が実証を組成。行政手続き、空域調整、訓練も支える。",
+      "refs": [
+        "dt-01",
+        "dt-05",
+        "dt-07",
+        "dt-06",
+        "dt-04",
+        "dt-03",
+        "s05-f06-01",
+        "s05-f06-02",
+        "s05-f06-03"
+      ]
+    },
+    "partners": {
+      "text": "Fordが創設・投資に関与。無線充電案件ではXosが車両、UPSが配送現場を提供する。",
+      "refs": [
+        "dt-01",
+        "dt-02",
+        "dt-03",
+        "dt-05",
+        "dt-04",
+        "dt-06",
+        "dt-07"
+      ]
+    }
+  },
+  "marineterrein-amsterdam": {
+    "hard": {
+      "text": "地区内の水面、護岸、道路、建物、試験用屋根、データ処理設備と、浮体を下ろすクレーンを利用できる。",
+      "refs": [
+        "city-mar-02"
+      ]
+    },
+    "soft": {
+      "text": "応募時に目的・実行計画・予算を確認し、場所と研究連携を調整。公開区画の日常管理と実験を両立する。",
+      "refs": [
+        "city-mar-04",
+        "city-mar-05",
+        "city-mar-06",
+        "city-mar-07",
+        "MTA-01",
+        "MTA-02",
+        "MTA-03"
+      ]
+    },
+    "partners": {
+      "text": "Voets+TEPPが日常管理、AMS Instituteが研究連携を支援。Shuttercamでは企業とTU Delftが試作・検証。",
+      "refs": [
+        "city-mar-01",
+        "city-mar-05",
+        "city-mar-06",
+        "city-mar-03"
+      ]
+    }
+  },
+  "test-in-tallinn": {
+    "hard": {
+      "text": "専用の新築ラボではなく、市有施設の屋根、街路、公共交通車両、既存建物を案件に応じて利用する。",
+      "refs": [
+        "city-tal-01",
+        "city-tal-02"
+      ]
+    },
+    "soft": {
+      "text": "提案の課題適合と実行力を評価し、市の担当部局・場所を調整。公開データと住民への説明も支援する。",
+      "refs": [
+        "city-tal-01",
+        "city-tal-02",
+        "city-tal-04",
+        "city-tal-05",
+        "TAL-01",
+        "TAL-02",
+        "TAL-03"
+      ]
+    },
+    "partners": {
+      "text": "市が施設・部局への接続を担い、企業が製品と人員を提供。GScan案件ではタルトゥ大学などが協力する。",
+      "refs": [
+        "city-tal-02",
+        "city-tal-01"
+      ]
+    }
+  },
+  "doll-living-lab": {
+    "hard": {
+      "text": "Herstedの実証地区に道路相当の実寸環境、照明、通信・デジタル基盤と訪問拠点を備える。",
+      "refs": [
+        "city-dol-03",
+        "city-dol-05"
+      ]
+    },
+    "soft": {
+      "text": "相談後に役割・期間・成果物を契約し、共同で技術計画を作成。現地で接続性・データ品質を検証する。",
+      "refs": [
+        "city-dol-02",
+        "city-dol-04",
+        "city-dol-05",
+        "DOL-01",
+        "DOL-02",
+        "DOL-03"
+      ]
+    },
+    "partners": {
+      "text": "自治体が基盤を所有し、運営組織が実証を支援。照明・IoT・AI企業が機器と専門知識を提供する。",
+      "refs": [
+        "city-dol-01",
+        "city-dol-04",
+        "city-dol-02",
+        "city-dol-03"
+      ]
+    }
+  },
+  "bmw-startup-garage": {
+    "hard": {
+      "text": "専用棟だけでなくBMWの車両・工場・実験室を活用。自動搬送案件では工場のLiDARも利用する。",
+      "refs": [
+        "bmw-backcast-03",
+        "bmw-backcast-04"
+      ]
+    },
+    "soft": {
+      "text": "採択企業へ発注書を出して技術を初回購入し、実部門で検証。成功後の追加開発・供給契約へつなぐ。",
+      "refs": [
+        "bmw-backcast-02",
+        "bmw-backcast-03",
+        "bmw-backcast-01",
+        "bmw-backcast-04",
+        "bmw-01",
+        "bmw-02",
+        "bmw-03"
+      ]
+    },
+    "partners": {
+      "text": "新興企業が技術を提供し、BMWの実務部門が検証、研究開発・購買部門が継続取引を交渉する。",
+      "refs": [
+        "bmw-backcast-01",
+        "bmw-backcast-02"
+      ]
+    }
+  },
+  "volvo-campx": {
+    "hard": {
+      "text": "用途に応じトラックや施設を使用。SENT GEOは既存の車内ディスプレイとVolvo Connectを使う。",
+      "refs": [
+        "campx-backcast-01",
+        "campx-backcast-04"
+      ]
+    },
+    "soft": {
+      "text": "顧客仮説の確認、共同検証、新事業づくりを分け、技術・法務審査と契約後に実務部門で価値を検証する。",
+      "refs": [
+        "campx-backcast-01",
+        "campx-backcast-03",
+        "campx-backcast-04",
+        "campx-backcast-05",
+        "campx-01",
+        "campx-02",
+        "campx-03"
+      ]
+    },
+    "partners": {
+      "text": "Volvoの技術・購買部門とAiDENが開発し、運送事業者Gorizont-SMの運転手・管理者が試験に参加。",
+      "refs": [
+        "campx-backcast-01",
+        "campx-backcast-03",
+        "campx-backcast-04",
+        "campx-backcast-02"
+      ]
+    }
+  },
+  "firstbuild": {
+    "hard": {
+      "text": "公開メーカースペースと工作設備、少量生産用のマイクロファクトリーを備え、工具利用に講習を設ける。",
+      "refs": [
+        "firstbuild-backcast-01",
+        "firstbuild-backcast-02"
+      ]
+    },
+    "soft": {
+      "text": "投稿と工房で利用者の反応を集め、試作・改良、初回購入者のテスト、少量販売を経て需要を確かめる。",
+      "refs": [
+        "firstbuild-backcast-01",
+        "firstbuild-backcast-02",
+        "firstbuild-backcast-03",
+        "firstbuild-01",
+        "firstbuild-02",
+        "firstbuild-03"
+      ]
+    },
+    "partners": {
+      "text": "GE Appliancesが量産・販売・サポートを担い、King Arthur Bakingが製パン知識と販路を提供。",
+      "refs": [
+        "firstbuild-backcast-01",
+        "firstbuild-backcast-02",
+        "firstbuild-backcast-03"
+      ]
+    }
+  },
+  "hvm-catapult": {
+    "hard": {
+      "text": "各専門センターの研究・製造設備と企業の生産設備を使用。LISI案件では複数機械を工場のラインへ組む。",
+      "refs": [
+        "hv-03",
+        "hv-05"
+      ]
+    },
+    "soft": {
+      "text": "無料の入口相談で課題と予算を整理し、専門センター・設備・資金制度へ接続。工程と技能の導入を支援。",
+      "refs": [
+        "hv-01",
+        "hv-03",
+        "hv-05",
+        "hv-02",
+        "hv-06",
+        "hvm-01",
+        "hvm-02",
+        "hvm-03"
+      ]
+    },
+    "partners": {
+      "text": "LISIが導入・運用、機械企業が設備供給を担い、Sheffield大学AMRCがデータ取得・解析を支える。",
+      "refs": [
+        "hv-01",
+        "hv-03",
+        "hv-04"
+      ]
+    }
+  },
+  "fraunhofer-ahead": {
+    "hard": {
+      "text": "一つの拠点ではなく、研究所の実験室・装置・コワーキングへ接続し、起業チームの開発環境を支える。",
+      "refs": [
+        "ahead-backcast-01",
+        "ahead-backcast-04"
+      ]
+    },
+    "soft": {
+      "text": "Bootcampで準備度を確認し、顧客課題・知財・チームを整理。市場投入計画を審査して追加支援へ進む。",
+      "refs": [
+        "ahead-backcast-01",
+        "ahead-backcast-04",
+        "ahead-backcast-03",
+        "ahead-backcast-07",
+        "fraunhofer-01",
+        "fraunhofer-02",
+        "fraunhofer-03"
+      ]
+    },
+    "partners": {
+      "text": "Fusion BionicではIWSとドレスデン工科大学が研究基盤を提供し、Heraeusとの協業で顧客課題を検証。",
+      "refs": [
+        "ahead-backcast-01",
+        "ahead-backcast-03",
+        "ahead-backcast-02",
+        "ahead-backcast-04"
+      ]
+    }
+  },
+  "manufacturing-usa": {
+    "hard": {
+      "text": "分野別研究所の共用設備・試験環境を使うネットワーク。ARMのMill 19では購入前にロボット工程を試す。",
+      "refs": [
+        "mu-02",
+        "mu-05"
+      ]
+    },
+    "soft": {
+      "text": "会員制の官民連携で共同研究と設備利用を進め、技術の商用化と人材育成を企業の製造現場へつなぐ。",
+      "refs": [
+        "mu-01",
+        "mu-02",
+        "mu-05",
+        "mu-06",
+        "mu-04",
+        "mfgusa-01",
+        "mfgusa-02",
+        "mfgusa-03"
+      ]
+    },
+    "partners": {
+      "text": "企業・大学・政府が研究資源を共同投入。Keystone Ridge案件ではACT Robotsが現場への実装を担う。",
+      "refs": [
+        "mu-01",
+        "mu-05",
+        "mu-02",
+        "mu-04",
+        "mu-03"
+      ]
+    }
+  },
+  "kamakura-living-lab": {
+    "hard": {
+      "text": "今泉台の住宅地と住民の自宅が検証の場。家具案件ではCGから原寸模型・家具試作品へ進めた。",
+      "refs": [
+        "kamakura-living-lab-03"
+      ]
+    },
+    "soft": {
+      "text": "地域団体が住民を募り、生活場面の聞き取りから設計条件を整理。模型・試作品を実生活で確かめる。",
+      "refs": [
+        "kamakura-living-lab-02",
+        "kamakura-living-lab-03",
+        "kamakura-living-lab-01"
+      ]
+    },
+    "partners": {
+      "text": "町内会・地域NPOが参加調整、東大が分析・調整を支援。イトーキが家具の設計・商品化を担う。",
+      "refs": [
+        "kamakura-living-lab-02",
+        "kamakura-living-lab-03",
+        "kamakura-living-lab-01"
+      ]
+    }
+  },
+  "yokohama-livinglab-support": {
+    "hard": {
+      "text": "単一の市営実験棟ではなく、地区の空き家や交流スペースを活用。磯子杉田では空き家を改修した。",
+      "refs": [
+        "yokohama-livinglab-support-03"
+      ]
+    },
+    "soft": {
+      "text": "地区の課題と外部の知見を結び、情報発信や団体間連絡、市民活動の事業化を中間支援する。",
+      "refs": [
+        "yokohama-livinglab-support-01",
+        "yokohama-livinglab-support-02",
+        "yokohama-livinglab-support-03",
+        "yokohama-livinglab-support-04"
+      ]
+    },
+    "partners": {
+      "text": "横浜市、支援法人、横浜コミュニティデザイン・ラボ、ハーチが連携し、地域主体の活動・情報発信を支える。",
+      "refs": [
+        "yokohama-livinglab-support-02",
+        "yokohama-livinglab-support-03",
+        "yokohama-livinglab-support-04",
+        "yokohama-livinglab-support-01"
+      ]
+    }
+  },
+  "wise-living-lab": {
+    "hard": {
+      "text": "ギャラリー、コンサル、まちづくりの3棟を持つ拠点。住民が集まり企画する共創スペースを設けた。",
+      "refs": [
+        "wise-living-lab-01",
+        "wise-living-lab-04"
+      ]
+    },
+    "soft": {
+      "text": "住民の企画を募り、地域インタビューやまち歩きを支援した。共創スペースの一般貸出は2025年3月末終了。",
+      "refs": [
+        "wise-living-lab-02",
+        "wise-living-lab-03",
+        "wise-living-lab-01"
+      ]
+    },
+    "partners": {
+      "text": "東急が施設を整備し横浜市と郊外まちづくりを連携。住民が企画し、慶應SFCの学生もまち歩きに参加した。",
+      "refs": [
+        "wise-living-lab-01",
+        "wise-living-lab-02"
+      ]
+    }
+  },
+  "minamaki-lab": {
+    "hard": {
+      "text": "相鉄ライフ南まきが原内の拠点と、駅・街をつなぐ階段状の広場を活用。住宅群全体とは別の範囲。",
+      "refs": [
+        "minamaki-lab-01",
+        "minamaki-lab-03"
+      ]
+    },
+    "soft": {
+      "text": "地域の魅力発見と交流を、室内・駅前広場・街へ展開。イベントに応じて開室する活動拠点として運営。",
+      "refs": [
+        "minamaki-lab-01",
+        "minamaki-lab-02",
+        "minamaki-lab-03"
+      ]
+    },
+    "partners": {
+      "text": "相鉄グループが駅前整備と拠点設置を進め、横浜市が沿線連携を支援。大学・企業・住民が活動に参加。",
+      "refs": [
+        "minamaki-lab-03",
+        "minamaki-lab-01",
+        "minamaki-lab-02"
+      ]
+    }
+  },
+  "omuta-living-lab": {
+    "hard": {
+      "text": "専用機器の施設だけでなく介護施設などの生活現場を活用。VR企画では地域の景色を収録し視聴機器で共有。",
+      "refs": [
+        "omuta-living-lab-02"
+      ]
+    },
+    "soft": {
+      "text": "生活者と福祉専門職の経験を企業の仮説と対話させ、地域に合う研究を設計。企業担当者の研修も行う。",
+      "refs": [
+        "omuta-living-lab-01",
+        "omuta-living-lab-02",
+        "omuta-living-lab-03"
+      ]
+    },
+    "partners": {
+      "text": "ポニポニが調整・運営し、NTTや市が初期実験に参加。福祉職と住民が生活の知見、研究者が専門知を提供。",
+      "refs": [
+        "omuta-living-lab-01",
+        "omuta-living-lab-03",
+        "omuta-living-lab-02"
+      ]
+    }
+  },
+  "nec-shirahama-living-lab": {
+    "hard": {
+      "text": "単一の常設試験室に限らず白浜の生活・観光の場を活用。観光ページの利用評価を地域の来訪者に行う。",
+      "refs": [
+        "nec-shirahama-living-lab-02",
+        "nec-shirahama-living-lab-03"
+      ]
+    },
+    "soft": {
+      "text": "初期の問いを具体化し、誤りの影響が大きい仮説から小さく検証。観光AIでは説明条件の違いを比較する。",
+      "refs": [
+        "nec-shirahama-living-lab-02",
+        "nec-shirahama-living-lab-03",
+        "nec-shirahama-living-lab-01"
+      ]
+    },
+    "partners": {
+      "text": "NECソリューションイノベータが研究を担い、町役場への出向・地域人材採用を通じ、地域事業者と接点を持つ。",
+      "refs": [
+        "nec-shirahama-living-lab-02",
+        "nec-shirahama-living-lab-01",
+        "nec-shirahama-living-lab-03"
+      ]
+    }
+  },
+  "quintbridge": {
+    "hard": {
+      "text": "大阪市都島区の施設に交流・相談・イベントの場を設け、会員が価値や機能を試す館内実証にも使う。",
+      "refs": [
+        "quintbridge-src1"
+      ]
+    },
+    "soft": {
+      "text": "常駐相談、メンターのゼミ、専門家支援と事業共創プログラムを設け、課題と技術・事業案を結ぶ。",
+      "refs": [
+        "quintbridge-src1",
+        "quintbridge-src2",
+        "quintbridge-src3"
+      ]
+    },
+    "partners": {
+      "text": "NTT西日本が運営し、企業会員・自治体が課題や技術を提供。館内の専門家・コミュニケーターが接続を支援。",
+      "refs": [
+        "quintbridge-src1"
+      ]
+    }
+  },
+  "garraway-f": {
+    "hard": {
+      "text": "天神CLASS3階に対話、交流、試作、発信・集中の空間を案内。施設案内には段階的改装中との記載がある。",
+      "refs": [
+        "garraway-f-src1",
+        "garraway-f-src3"
+      ]
+    },
+    "soft": {
+      "text": "来館時の対話を入口に、コンシェルジュが人・課題・機会を結び、プロデューサーがプロジェクトづくりを支える。",
+      "refs": [
+        "garraway-f-src1",
+        "garraway-f-src3"
+      ]
+    },
+    "partners": {
+      "text": "トヨタ自動車が運営主体、Serendipityが運営受託。専門スタッフが企画支援、交流の場づくり、人の紹介を担う。",
+      "refs": [
+        "garraway-f-src1"
+      ]
+    }
+  },
+  "shibuya-qws": {
+    "hard": {
+      "text": "渋谷駅に接続する施設内にプロジェクトスペースを設け、試作品の展示や成果発表の場を用意する。",
+      "refs": [
+        "shibuya-qws-src1"
+      ]
+    },
+    "soft": {
+      "text": "未完成の問いを持つチームを公募し、相談、大学連携、企業・自治体とのワークショップと成果発表を支援。",
+      "refs": [
+        "shibuya-qws-src1",
+        "shibuya-qws-src2",
+        "shibuya-qws-src3"
+      ]
+    },
+    "partners": {
+      "text": "渋谷スクランブルスクエアが運営。大学がQWSアカデミアに参加し、企業・自治体がワークショップの接点を提供。",
+      "refs": [
+        "shibuya-qws-src1"
+      ]
+    }
+  },
+  "100banch": {
+    "hard": {
+      "text": "渋谷のプロジェクトスペースを活動拠点とし、採択チームが製作、展示、実験報告に使う場所を提供する。",
+      "refs": [
+        "100banch-src1"
+      ]
+    },
+    "soft": {
+      "text": "毎月審査するGARAGE Programで入居交流、メンターとの対話、中間報告、実験報告を組み合わせる。",
+      "refs": [
+        "100banch-src2",
+        "100banch-src3",
+        "100banch-src1"
+      ]
+    },
+    "partners": {
+      "text": "パナソニックグループが主催、一般社団法人百番地が運営。メンターと他の活動者がチームの実験を支える。",
+      "refs": [
+        "100banch-src1"
+      ]
+    }
+  },
+  "josephs": {
+    "hard": {
+      "text": "中心市街地にTest Spaceと会議・イベント空間を持ち、企業の試作品を来場者が体験できる場所にする。",
+      "refs": [
+        "josephs-src03"
+      ]
+    },
+    "soft": {
+      "text": "構想を試せる展示に変え、案内役との対話や非言語反応を記録。定性分析と開発への提言を依頼者へ返す。",
+      "refs": [
+        "josephs-src02",
+        "josephs-src01",
+        "josephs-src03"
+      ]
+    },
+    "partners": {
+      "text": "企業・研究機関が構想や試作品を持ち込み、JOSEPHSの案内役と専門スタッフが体験・調査を運営する。",
+      "refs": [
+        "josephs-src02",
+        "josephs-src01",
+        "josephs-src03"
+      ]
+    }
+  },
+  "de-ceuvel": {
+    "hard": {
+      "text": "旧造船所に廃用ハウスボート、遊歩道、植生のある公園、カフェを配置し、仕事場と交流の場をつくる。",
+      "refs": [
+        "de-ceuvel-src01"
+      ]
+    },
+    "soft": {
+      "text": "期限付き土地利用のもと、入居者が船の改修に参加。拠点・文化活動と、別主体のカフェ事業を運営する。",
+      "refs": [
+        "de-ceuvel-src01",
+        "de-ceuvel-src03",
+        "de-ceuvel-src02"
+      ]
+    },
+    "partners": {
+      "text": "建築家と入居者が空間を改修し、造園側が公園を設計・維持。Metabolicが持続可能性計画の実装を担う。",
+      "refs": [
+        "de-ceuvel-src01"
+      ]
+    }
+  },
+  "barcelona-superblocks": {
+    "hard": {
+      "text": "既存の道路・交差点・街区と街路家具を再編し、歩行・滞在・遊びのための公共空間をつくる。",
+      "refs": [
+        "barcelona-superblocks-src01"
+      ]
+    },
+    "soft": {
+      "text": "通過交通を抑えて生活空間へ転換し、環境測定・利用観察・住民の声で地区ごとの変化を評価する。",
+      "refs": [
+        "barcelona-superblocks-src01",
+        "barcelona-superblocks-src02"
+      ]
+    },
+    "partners": {
+      "text": "バルセロナ市が道路再編を実施し、ASPB等の研究者が環境・健康を評価。住民は利用経験を伝える。",
+      "refs": [
+        "barcelona-superblocks-src01",
+        "barcelona-superblocks-src02"
+      ]
+    }
+  },
+  "ogal-shiwa": {
+    "hard": {
+      "text": "紫波中央駅前の町有地に、図書館・情報交流館、役場、店舗、スポーツ・宿泊施設を段階的に整備。",
+      "refs": [
+        "ogal-shiwa-src01",
+        "ogal-shiwa-src02"
+      ]
+    },
+    "soft": {
+      "text": "街区ごとに土地貸付・公共床の区分所有・庁舎PFIを使い分け、公共サービスと民間営業の責任を分ける。",
+      "refs": [
+        "ogal-shiwa-src01",
+        "ogal-shiwa-src03"
+      ]
+    },
+    "partners": {
+      "text": "紫波町が土地・公共床を担い、オガール関係会社が整備・営業を担当。東洋大学がPPP可能性調査を支援。",
+      "refs": [
+        "ogal-shiwa-src01",
+        "ogal-shiwa-src02"
+      ]
+    }
+  },
+  "takamatsu-marugamemachi": {
+    "hard": {
+      "text": "A街区の約3,200㎡の敷地に、商業床・住宅・コミュニティ用途を組み合わせた複合建物を整備。",
+      "refs": [
+        "takamatsu-marugamemachi-src01"
+      ]
+    },
+    "soft": {
+      "text": "土地所有を維持した62年の定期借地と売上歩合賃料を組み合わせ、権利と商業運営を分離する。",
+      "refs": [
+        "takamatsu-marugamemachi-src01"
+      ]
+    },
+    "partners": {
+      "text": "民間地権者が土地を保有し、権利者出資法人等が借地・運営を担う。高松市は再開発・中心市街地政策を担当。",
+      "refs": [
+        "takamatsu-marugamemachi-src01",
+        "takamatsu-marugamemachi-src02"
+      ]
+    }
+  },
+  "aburatsu-shopping-street": {
+    "hard": {
+      "text": "油津商店街の既存空き店舗を活用し、商業だけでなく多世代交流や生活サービスの場を組み込む。",
+      "refs": [
+        "aburatsu-shopping-street-src01",
+        "aburatsu-shopping-street-src02"
+      ]
+    },
+    "soft": {
+      "text": "テナントミックス支援人材を起用して出店を誘致し、店舗・IT・保育など複数の用途を商店街に導入する。",
+      "refs": [
+        "aburatsu-shopping-street-src01",
+        "aburatsu-shopping-street-src02"
+      ]
+    },
+    "partners": {
+      "text": "日南市が支援人材と政策を担い、油津応援団・商店街・物件所有者・出店者が施設活用と営業を進める。",
+      "refs": [
+        "aburatsu-shopping-street-src01",
+        "aburatsu-shopping-street-src02"
+      ]
+    }
+  },
+  "onagawa-reconstruction-rengamichi": {
+    "hard": {
+      "text": "女川駅・レンガみち・交流館・シーパルピア・ハマテラスなど、駅前の複数施設と高台住宅を整備。",
+      "refs": [
+        "onagawa-reconstruction-rengamichi-src02",
+        "onagawa-reconstruction-rengamichi-src03"
+      ]
+    },
+    "soft": {
+      "text": "公共施設とテナント型商店街を段階開業し、交通・買物・交流を組み合わせる。施設ごとに運営主体を分ける。",
+      "refs": [
+        "onagawa-reconstruction-rengamichi-src02",
+        "onagawa-reconstruction-rengamichi-src03"
+      ]
+    },
+    "partners": {
+      "text": "女川町が駅・交流館等を整備し、女川みらい創造が商業施設を担う。店舗と温泉の運営者はそれぞれ営業する。",
+      "refs": [
+        "onagawa-reconstruction-rengamichi-src02",
+        "onagawa-reconstruction-rengamichi-src03"
+      ]
+    }
+  },
+  "kitakyushu-renovation": {
+    "hard": {
+      "text": "小倉魚町などの空きビル・空き店舗を活用し、所有者が提供する実物件を店舗やオフィスへ転用する。",
+      "refs": [
+        "kitakyushu-renovation-src01",
+        "kitakyushu-renovation-src02"
+      ]
+    },
+    "soft": {
+      "text": "短期スクールで実物件の調査・事業提案を行い、所有者への提案と金融機関との接続で事業化を検討する。",
+      "refs": [
+        "kitakyushu-renovation-src02"
+      ]
+    },
+    "partners": {
+      "text": "北九州市が構想・支援を担い、所有者と家守型事業者が実装。HEAD研究会等と専門家・金融機関が支える。",
+      "refs": [
+        "kitakyushu-renovation-src01",
+        "kitakyushu-renovation-src02"
+      ]
+    }
+  },
+  "kampung-admiralty": {
+    "hard": {
+      "text": "高齢者住宅、医療、ケア・保育施設を広場や公園などの共用空間と重ねた、生活サービスの複合拠点。",
+      "refs": [
+        "kampung-admiralty-s2",
+        "kampung-admiralty-s3"
+      ]
+    },
+    "soft": {
+      "text": "入居機関の管理委員会が調整し、広場の活動と高齢者ケア・保育の共同プログラムを組み合わせる。",
+      "refs": [
+        "kampung-admiralty-s2"
+      ]
+    },
+    "partners": {
+      "text": "HDBと入居機関が管理を調整し、People’s Associationが広場活動を支援。NTUC関連組織も企画に関与。",
+      "refs": [
+        "kampung-admiralty-s2"
+      ]
+    }
+  },
+  "stockport-interchange": {
+    "hard": {
+      "text": "旧バスステーション敷地に交通施設、屋上Viaduct Park、住宅・商業床、鉄道駅への歩行・自転車接続を整備。",
+      "refs": [
+        "stockport-interchange-s1"
+      ]
+    },
+    "soft": {
+      "text": "バスターミナルと鉄道駅への移動を接続し、屋上公園では地域イベントを実施。交通と公園の業務は分ける。",
+      "refs": [
+        "stockport-interchange-s2",
+        "stockport-interchange-s3"
+      ]
+    },
+    "partners": {
+      "text": "Stockport Council、GMCA、TfGMが共同開発し、TfGMの体系で交通施設を案内・運営する。",
+      "refs": [
+        "stockport-interchange-s1",
+        "stockport-interchange-s3"
+      ]
+    }
+  },
+  "wester-hailes-westside-shed": {
+    "hard": {
+      "text": "Westside Plazaのコンテナ拠点と広場を基盤に、自転車や工具へアクセスできる地域活動の場を設ける。",
+      "refs": [
+        "wester-hailes-westside-shed-s1",
+        "wester-hailes-westside-shed-s2"
+      ]
+    },
+    "soft": {
+      "text": "地域計画を具体化する活動拠点として、無料の自転車貸出と会員登録が必要な工具受取を組み合わせる。",
+      "refs": [
+        "wester-hailes-westside-shed-s1",
+        "wester-hailes-westside-shed-s2"
+      ]
+    },
+    "partners": {
+      "text": "Wester Hailes Community Trustが拠点・自転車貸出を運営し、Edinburgh Tool Libraryが工具を提供。",
+      "refs": [
+        "wester-hailes-westside-shed-s1",
+        "wester-hailes-westside-shed-s2"
+      ]
+    }
+  },
+  "bremen-mobilpunkt": {
+    "hard": {
+      "text": "住宅地の公道上に共有車両の定位置と拠点表示を配置し、徒歩・自転車・公共交通と組み合わせる。",
+      "refs": [
+        "bremen-mobilpunkt-s1"
+      ]
+    },
+    "soft": {
+      "text": "住宅に近い公道区画をカーシェアに割り当て、予約・貸出を提供。市は利用世帯と非利用世帯を調査する。",
+      "refs": [
+        "bremen-mobilpunkt-s1",
+        "bremen-mobilpunkt-s2"
+      ]
+    },
+    "partners": {
+      "text": "Bremen市が公道上の拠点を計画・整備し、cambio等が車両・予約・貸出を担当。市が外部評価も委託する。",
+      "refs": [
+        "bremen-mobilpunkt-s2",
+        "bremen-mobilpunkt-s3"
+      ]
+    }
+  },
+  "cic-tokyo": {
+    "hard": {
+      "text": "CIC Tokyoの仕事場と実装先の業務環境を利用。梱包サービスの実装場所は館内ではなく生活の木のEC。",
+      "refs": [
+        "cic-tokyo-src1",
+        "cic-tokyo-src3"
+      ]
+    },
+    "soft": {
+      "text": "月額の仕事場提供と選考型実装支援を分け、企業と実装先の要件・日程・定例会を調整して業務導入を支える。",
+      "refs": [
+        "cic-tokyo-src1",
+        "cic-tokyo-src3"
+      ]
+    },
+    "partners": {
+      "text": "CIC Instituteが東京都事業で協業を支援し、comveyがリユース梱包を提供。生活の木がECで受け入れる。",
+      "refs": [
+        "cic-tokyo-src1",
+        "cic-tokyo-src2"
+      ]
+    }
+  },
+  "station-ai": {
+    "hard": {
+      "text": "オフィス、試作・検証のためのテックラボ、会議室や交流空間を備え、日常の執務と協業活動を支える。",
+      "refs": [
+        "station-ai-src1"
+      ]
+    },
+    "soft": {
+      "text": "会員制の仕事場に相談・交流を重ね、選考型の育成支援や投資機会へ接続。一般利用と審査付き支援を分ける。",
+      "refs": [
+        "station-ai-src1"
+      ]
+    },
+    "partners": {
+      "text": "STATION Ai株式会社が整備・運営し、愛知県が政策・支援を担当。事業会社・投資家・大学等が会員連携する。",
+      "refs": [
+        "station-ai-src1"
+      ]
+    }
+  },
+  "koil": {
+    "hard": {
+      "text": "コワーキングと会議・イベント空間を提供。工房の3Dプリンター等は終了し、レーザー利用も当面休止。",
+      "refs": [
+        "koil-src1",
+        "koil-src2",
+        "koil-src3"
+      ]
+    },
+    "soft": {
+      "text": "入会面談とオリエンテーションを経て利用し、コミュニティマネージャーが相談や街の活動への接点をつくる。",
+      "refs": [
+        "koil-src1"
+      ]
+    },
+    "partners": {
+      "text": "三井不動産のKOIL事務局とパークアテンダントが運営し、コミュニティマネージャーが事業者・起業家をつなぐ。",
+      "refs": [
+        "koil-src1",
+        "koil-src4"
+      ]
+    }
+  },
+  "kashiwanoha-minsta": {
+    "hard": {
+      "text": "会合の場、公園図面、付箋、オンライン記録を使う共創活動。対象公園は2027年3月開園予定の計画段階。",
+      "refs": [
+        "kashiwanoha-minsta-02"
+      ]
+    },
+    "soft": {
+      "text": "住民・行政・設計者が公園での過ごし方を話し合い、図面への質問・提案と回答をオンラインでも公開する。",
+      "refs": [
+        "kashiwanoha-minsta-02"
+      ]
+    },
+    "partners": {
+      "text": "UDCKとUDCKタウンマネジメントが対話を運営し、柏市公園緑地課・設計者・近隣住民が計画を検討する。",
+      "refs": [
+        "kashiwanoha-minsta-02",
+        "kashiwanoha-minsta-03"
+      ]
+    }
+  },
+  "matsumoto-health-lab": {
+    "hard": {
+      "text": "会員用オフィスと身体測定等のサービスを備え、健康関連の試作品を使い、調査に参加できる場を提供する。",
+      "refs": [
+        "matsumoto-health-lab-01",
+        "matsumoto-health-lab-03"
+      ]
+    },
+    "soft": {
+      "text": "会員ワークショップでニーズを探り、試用・データ収集を支援。科学的評価には医療・研究機関との連携を調整。",
+      "refs": [
+        "matsumoto-health-lab-01"
+      ]
+    },
+    "partners": {
+      "text": "松本ヘルス・ラボが会員と企業を調整。森永乳業、松本市立病院、東京大学等との調査実績を持つ。",
+      "refs": [
+        "matsumoto-health-lab-01"
+      ]
+    }
+  },
+  "ncgg-living-lab": {
+    "hard": {
+      "text": "生活支援実証室、ロボット実証空間、動作解析・筋電図設備、近隣住宅地の長寿チャレンジハウスを備える。",
+      "refs": [
+        "ncgg-living-lab-01",
+        "ncgg-living-lab-02",
+        "ncgg-living-lab-03"
+      ]
+    },
+    "soft": {
+      "text": "企業の開発相談から検証課題を整理し、研究者と医療職が適した評価・実証へつなぐ。住宅環境での検証も行う。",
+      "refs": [
+        "ncgg-living-lab-02",
+        "ncgg-living-lab-03"
+      ]
+    },
+    "partners": {
+      "text": "国立長寿医療研究センターの研究者・医療職が評価を担当し、開発企業と連携。サンヨーホームズが住宅実証に参加。",
+      "refs": [
+        "ncgg-living-lab-02",
+        "ncgg-living-lab-03"
+      ]
+    }
+  },
+  "paris-oasis-courtyards": {
+    "hard": {
+      "text": "既存の学校校庭を改修し、緑・日陰・水・透水性のある地面・家具を組み合わせて日常の屋外環境を変える。",
+      "refs": [
+        "paris-oasis-courtyards-src01"
+      ]
+    },
+    "soft": {
+      "text": "子どもと学校関係者の提案を設計へつなぎ、改修後の利用ルールや活動を支援。気候と社会的利用を評価する。",
+      "refs": [
+        "paris-oasis-courtyards-src01",
+        "paris-oasis-courtyards-src02"
+      ]
+    },
+    "partners": {
+      "text": "パリ市・学校が整備と運用を担い、CAUE 75が共同設計を支援。LIED、Météo-France、Sciences Poが評価。",
+      "refs": [
+        "paris-oasis-courtyards-src01",
+        "paris-oasis-courtyards-src02"
+      ]
+    }
+  },
+  "bologna-commons-pacts": {
+    "hard": {
+      "text": "広場・道路・緑地・学校・建物などを協働対象とする制度。単独施設ではなく、非物的・デジタル資源も含む。",
+      "refs": [
+        "bologna-commons-pacts-src02"
+      ]
+    },
+    "soft": {
+      "text": "市民と行政が活動内容・方法を協定に定め、共同企画・実施・モニタリングを行う。非公式グループも対象。",
+      "refs": [
+        "bologna-commons-pacts-src01",
+        "bologna-commons-pacts-src03"
+      ]
+    },
+    "partners": {
+      "text": "Bologna市の地区・担当部署が支援と調整を担い、市民団体や非公式グループが協定に基づく活動を実施する。",
+      "refs": [
+        "bologna-commons-pacts-src01",
+        "bologna-commons-pacts-src03"
+      ]
+    }
+  },
+  "nyc-plaza-program": {
+    "hard": {
+      "text": "車道などを転換した広場に仮設材料・家具・植栽を配置し、段階的に恒久整備へ進める公共空間事業。",
+      "refs": [
+        "nyc-plaza-program-src01"
+      ]
+    },
+    "soft": {
+      "text": "地域パートナーが広場を運営し、市が清掃・園芸・人件費や許認可等を支援。団体の能力と地区条件も考慮する。",
+      "refs": [
+        "nyc-plaza-program-src02",
+        "nyc-plaza-program-src03"
+      ]
+    },
+    "partners": {
+      "text": "NYC DOTが制度を運用し、地域団体が広場を管理。DDCが恒久整備を担う場合が多く、The Hort等が保守を支援。",
+      "refs": [
+        "nyc-plaza-program-src01",
+        "nyc-plaza-program-src02",
+        "nyc-plaza-program-src03"
+      ]
+    }
+  },
+  "atami-ginza-renovation": {
+    "hard": {
+      "text": "熱海銀座の既存店舗・空き床とまちなかの転用可能な建物を活用し、民間事業の場所へつなぐ。",
+      "refs": [
+        "atami-ginza-renovation-src01",
+        "atami-ginza-renovation-src03"
+      ]
+    },
+    "soft": {
+      "text": "リノベーションと創業支援を接続し、ATAMI2030会議で課題共有・地域資源発掘・人材マッチングを進める。",
+      "refs": [
+        "atami-ginza-renovation-src02"
+      ]
+    },
+    "partners": {
+      "text": "machimori等の民間事業者が家主・商店・出店者と事業を進め、熱海市が創業支援と人材交流を政策で支える。",
+      "refs": [
+        "atami-ginza-renovation-src02",
+        "atami-ginza-renovation-src03"
+      ]
+    }
+  },
+  "toyama-port-lrt": {
+    "hard": {
+      "text": "既存の富山港線に低床車両・新停留場を導入し、富山駅高架下の接続軌道で南北の路面電車を結ぶ。",
+      "refs": [
+        "toyama-port-lrt-src01",
+        "toyama-port-lrt-src02",
+        "toyama-port-lrt-src04"
+      ]
+    },
+    "soft": {
+      "text": "低床化と増便で利用条件を変え、2020年の南北接続で直通運転・運賃統合へ移行。施設整備と運送を分担する。",
+      "refs": [
+        "toyama-port-lrt-src02",
+        "toyama-port-lrt-src04"
+      ]
+    },
+    "partners": {
+      "text": "富山市が軌道整備・車両購入など公共側を担い、富山ライトレールを経て富山地方鉄道が運行を担当する。",
+      "refs": [
+        "toyama-port-lrt-src02",
+        "toyama-port-lrt-src03"
+      ]
+    }
+  },
+  "minamimachida-grandberry-park": {
+    "hard": {
+      "text": "約22haの地区で駅・鶴間公園・商業施設・パークライフ施設を一体再整備し、連続して歩ける空間をつくる。",
+      "refs": [
+        "minamimachida-grandberry-park-src01",
+        "minamimachida-grandberry-park-src03"
+      ]
+    },
+    "soft": {
+      "text": "商業施設の運営業務と公園の指定管理を分け、住民ワークショップを通じて公園や地区の使い方を検討する。",
+      "refs": [
+        "minamimachida-grandberry-park-src02",
+        "minamimachida-grandberry-park-src04"
+      ]
+    },
+    "partners": {
+      "text": "町田市と東急が再整備を推進。東急モールズデベロップメントが商業運営、TSURUMAパークライフパートナーズが公園管理。",
+      "refs": [
+        "minamimachida-grandberry-park-src01",
+        "minamimachida-grandberry-park-src02",
+        "minamimachida-grandberry-park-src03"
+      ]
+    }
+  },
+  "berlin-jelbi": {
+    "hard": {
+      "text": "公共交通駅の周辺に、共有車を含むStationと二輪中心のPointを設け、返却や一部充電の機能を配置する。",
+      "refs": [
+        "berlin-jelbi-s1"
+      ]
+    },
+    "soft": {
+      "text": "アプリで交通手段の選択・予約につなぎ、誤駐車の通報、レンジャー巡回、事業者による車両の戻し作業を行う。",
+      "refs": [
+        "berlin-jelbi-s1",
+        "berlin-jelbi-s2"
+      ]
+    },
+    "partners": {
+      "text": "BVGのJelbiが拠点・サービスを統合し、各モビリティ事業者が車両を供給。現場の巡回員が駐車秩序を支える。",
+      "refs": [
+        "berlin-jelbi-s2",
+        "berlin-jelbi-s3"
+      ]
+    }
+  },
+  "curitiba-ruas-cidadania": {
+    "hard": {
+      "text": "地域の公共サービス施設に行政窓口や活動の場を配置し、一部はバスターミナルに隣接して利用を支える。",
+      "refs": [
+        "curitiba-ruas-cidadania-s1",
+        "curitiba-ruas-cidadania-s2"
+      ]
+    },
+    "soft": {
+      "text": "中心部へ行かずに行政手続き・相談を受けられる地域拠点。予約や利用条件は各窓口・サービスに応じて異なる。",
+      "refs": [
+        "curitiba-ruas-cidadania-s1"
+      ]
+    },
+    "partners": {
+      "text": "Curitiba市の地域行政と担当部局が窓口・公共サービスを提供し、拠点によって州等の機関も参加する。",
+      "refs": [
+        "curitiba-ruas-cidadania-s1"
+      ]
+    }
+  },
+  "bogota-transmicable-manitas": {
+    "hard": {
+      "text": "ケーブル駅、SuperCADE行政施設、Manitasのケア拠点など、丘陵地の異なる公共資産を近接させる。",
+      "refs": [
+        "bogota-transmicable-manitas-s1",
+        "bogota-transmicable-manitas-s2"
+      ]
+    },
+    "soft": {
+      "text": "交通接続に行政相談・ケア・学習機会を重ね、ケアする人と受ける人の双方を支援して自分の時間をつくる。",
+      "refs": [
+        "bogota-transmicable-manitas-s2",
+        "bogota-transmicable-manitas-s3"
+      ]
+    },
+    "partners": {
+      "text": "TransMilenio体系が交通、SuperCADEが行政窓口、市女性局等がケアサービスを担当し、住民との改善対話を行う。",
+      "refs": [
+        "bogota-transmicable-manitas-s1",
+        "bogota-transmicable-manitas-s2",
+        "bogota-transmicable-manitas-s3"
+      ]
+    }
+  },
+  "fukuoka-growth-next": {
+    "hard": {
+      "text": "旧大名小学校の校舎を再利用した支援施設で、スタートアップの執務と創業・成長支援の場を提供する。",
+      "refs": [
+        "fukuoka-growth-next-src4"
+      ]
+    },
+    "soft": {
+      "text": "創業相談・育成・オフィス・選考型の集中支援を段階別に提供し、専門家が経営分析や事業計画改善を伴走する。",
+      "refs": [
+        "fukuoka-growth-next-src1"
+      ]
+    },
+    "partners": {
+      "text": "福岡市と福岡地所・さくらインターネット・GMOペパボ・フォースタートアップスが運営し、人員やネットワークを提供。",
+      "refs": [
+        "fukuoka-growth-next-src2",
+        "fukuoka-growth-next-src3"
+      ]
+    }
+  },
+  "pynt": {
+    "hard": {
+      "text": "飯田橋のPYNT東京と竹橋の活動拠点を使い、交流の場と実装を支える場を分担する二拠点の構成。",
+      "refs": [
+        "pynt-src1",
+        "pynt-src2",
+        "pynt-src3"
+      ]
+    },
+    "soft": {
+      "text": "テーマ別コミュニティで関係を育て、選考型プログラムでは専門家が社会起業家の事業を伴走支援する。",
+      "refs": [
+        "pynt-src1",
+        "pynt-src2"
+      ]
+    },
+    "partners": {
+      "text": "日建設計の専門家が設計・都市計画の知見を提供し、FUTURE LENSではZebras and Companyと協働する。",
+      "refs": [
+        "pynt-src1",
+        "pynt-src2"
+      ]
+    }
+  },
+  "impact-hub-tokyo": {
+    "hard": {
+      "text": "かつての印刷工場を改修し、会員が働く仕事場と交流の空間を一体にしたコミュニティ拠点を提供する。",
+      "refs": [
+        "impact-hub-tokyo-src1"
+      ]
+    },
+    "soft": {
+      "text": "月額会員の仕事場に対話・紹介・交流を組み合わせる。イベント参加と最低契約期間のある継続利用を分ける。",
+      "refs": [
+        "impact-hub-tokyo-src1",
+        "impact-hub-tokyo-src2"
+      ]
+    },
+    "partners": {
+      "text": "Hub Tokyoが施設を運営し、コミュニティビルダーが紹介・対話を支援。入居企業や起業家が仕事と経験を持ち寄る。",
+      "refs": [
+        "impact-hub-tokyo-src1"
+      ]
+    }
+  },
+  "hitachi-kyosonomori": {
+    "hard": {
+      "text": "日立馬場記念ホール、NEXPERIENCEスペース、プロジェクトスペースと中央研究所の緑地を備える。",
+      "refs": [
+        "hitachi-kyosonomori-01",
+        "hitachi-kyosonomori-03"
+      ]
+    },
+    "soft": {
+      "text": "研究者と顧客がビジョン共有・課題特定・仮説検証を進め、議論、共同検討、試作・実証の空間を使い分ける。",
+      "refs": [
+        "hitachi-kyosonomori-01",
+        "hitachi-kyosonomori-02"
+      ]
+    },
+    "partners": {
+      "text": "日立製作所の研究者・デザイナーが顧客企業との協創を運営し、鈴木造園等の専門パートナーが緑地を維持する。",
+      "refs": [
+        "hitachi-kyosonomori-01",
+        "hitachi-kyosonomori-02",
+        "hitachi-kyosonomori-03"
+      ]
+    }
+  },
+  "ihi-yokohama-ibase": {
+    "hard": {
+      "text": "横浜ラボの共創エリア、試作用ガレージ、プロジェクトブースと、集約した実験室・共用分析機器を備える。",
+      "refs": [
+        "ihi-yokohama-ibase-01"
+      ]
+    },
+    "soft": {
+      "text": "顧客課題の議論からガレージでの設計・試作へ進み、共同執務の場で事業化を検証。実験室・機器を共通管理する。",
+      "refs": [
+        "ihi-yokohama-ibase-01"
+      ]
+    },
+    "partners": {
+      "text": "IHIの技術者と事業部門が顧客を支援。ヤマキと品質検査を共同開発し、横浜国立大学とはAI研究で連携する。",
+      "refs": [
+        "ihi-yokohama-ibase-02",
+        "ihi-yokohama-ibase-03"
+      ]
+    }
+  },
+  "citylab-berlin": {
+    "hard": {
+      "text": "旧空港内のラボ・展示空間に、地区へ出向く移動型Kiezlaborを組み合わせ、生活圏でも参加の接点をつくる。",
+      "refs": [
+        "citylab-berlin-src01"
+      ]
+    },
+    "soft": {
+      "text": "行政と利用者ニーズを調べ、サービスの設計・試作・検証を行い、コードや知見を公開。選ばれた案件を支援する。",
+      "refs": [
+        "citylab-berlin-src01",
+        "citylab-berlin-src02"
+      ]
+    },
+    "partners": {
+      "text": "Technologiestiftung Berlinの設計・技術チームが共同開発し、ベルリン州首相府が支援。行政部局と市民が参加。",
+      "refs": [
+        "citylab-berlin-src01",
+        "citylab-berlin-src03"
+      ]
+    }
+  },
+  "hiedanranta": {
+    "hard": {
+      "text": "旧工場・土地・既存公共空間を使う再開発地区。住宅・道路・緑地は計画中の工区と既存部分を区別する。",
+      "refs": [
+        "hiedanranta-src01",
+        "hiedanranta-src02"
+      ]
+    },
+    "soft": {
+      "text": "市の法定計画と開発会社の実施設計・土地供給を分担し、意見公募を実施。循環型技術の実験も別主体が進める。",
+      "refs": [
+        "hiedanranta-src01",
+        "hiedanranta-src02",
+        "hiedanranta-src03"
+      ]
+    },
+    "partners": {
+      "text": "タンペレ市が計画し、市所有のHiedanrannan Kehitys Oyが土地・建物開発を担当。研究者が循環型実験を検証。",
+      "refs": [
+        "hiedanranta-src01",
+        "hiedanranta-src02",
+        "hiedanranta-src03"
+      ]
+    }
+  },
+  "ghent-circulation-plan": {
+    "hard": {
+      "text": "既存道路、R40環状道路、標識と通行制限箇所を使い、中心部六地区の自動車経路を組み替える交通施策。",
+      "refs": [
+        "ghent-circulation-plan-src01"
+      ]
+    },
+    "soft": {
+      "text": "地区間の自動車移動を環状道路へ誘導し、公共交通等の必要通行は区別。交通量・経路・住民意見を照合して評価。",
+      "refs": [
+        "ghent-circulation-plan-src01",
+        "ghent-circulation-plan-src02",
+        "ghent-circulation-plan-src03"
+      ]
+    },
+    "partners": {
+      "text": "ヘント市の交通部門が計画・運用し、Transport & Mobility Leuvenが委託評価を担当。住民等の行動と意見を調査。",
+      "refs": [
+        "ghent-circulation-plan-src02",
+        "ghent-circulation-plan-src03"
+      ]
+    }
+  },
+  "matsuyama-hanazono-street": {
+    "hard": {
+      "text": "幅40m・長さ250mの道路で車線を減らし、歩道・自転車道・ベンチとイベント用電源・給水設備を整備。",
+      "refs": [
+        "matsuyama-hanazono-street-src01"
+      ]
+    },
+    "soft": {
+      "text": "戸別訪問・ワークショップ・交通シミュレーション・社会実験で設計を検討し、整備後も植栽などの管理を分担する。",
+      "refs": [
+        "matsuyama-hanazono-street-src01",
+        "matsuyama-hanazono-street-src02"
+      ]
+    },
+    "partners": {
+      "text": "松山市が道路整備・管理を担い、商店街が沿道整備や水やり等に関与。地権者・交通事業者・住民らが検討に参加。",
+      "refs": [
+        "matsuyama-hanazono-street-src01",
+        "matsuyama-hanazono-street-src02"
+      ]
+    }
+  },
+  "marunouchi-nakadori": {
+    "hard": {
+      "text": "丸の内仲通りの道路に仮設テーブル・椅子を配置し、沿道店舗と接続。期間実験では芝生や植栽も設ける。",
+      "refs": [
+        "marunouchi-nakadori-src01",
+        "marunouchi-nakadori-src02",
+        "marunouchi-nakadori-src03"
+      ]
+    },
+    "soft": {
+      "text": "時間帯の車両規制で滞在空間を開き、催事は占用・道路使用の協議を経て実施。占用料相当額と協力金を徴収する。",
+      "refs": [
+        "marunouchi-nakadori-src01",
+        "marunouchi-nakadori-src02"
+      ]
+    },
+    "partners": {
+      "text": "リガーレがアーバンテラスを主催・調整し、沿道事業者や催事主催者が活動。道路・交通管理者が許認可を担う。",
+      "refs": [
+        "marunouchi-nakadori-src01",
+        "marunouchi-nakadori-src02"
+      ]
+    }
+  },
+  "sapporo-kita3-plaza": {
+    "hard": {
+      "text": "北3条通の西5丁目線から札幌駅前通までを広場として整備し、催事を行うためのイベント設備を備える。",
+      "refs": [
+        "sapporo-kita3-plaza-src01",
+        "sapporo-kita3-plaza-src02"
+      ]
+    },
+    "soft": {
+      "text": "指定管理で催事利用を受け付け、市承認の料金を管理者収入とする。管理業務と自主事業の会計・修繕負担を分ける。",
+      "refs": [
+        "sapporo-kita3-plaza-src02",
+        "sapporo-kita3-plaza-src04"
+      ]
+    },
+    "partners": {
+      "text": "三井不動産・日本郵便が整備し、札幌市が所管。札幌駅前通まちづくりが指定管理を担い、主催者が催事を行う。",
+      "refs": [
+        "sapporo-kita3-plaza-src01"
+      ]
+    }
+  },
+  "fukuoka-yatai-program": {
+    "hard": {
+      "text": "道路・公園の許可区画に可搬式屋台と調理器材を配置。営業外には運搬手段、保管・仕込み場所も必要となる。",
+      "refs": [
+        "fukuoka-yatai-program-src01",
+        "fukuoka-yatai-program-src02",
+        "fukuoka-yatai-program-src04"
+      ]
+    },
+    "soft": {
+      "text": "公募・審査と複数の許可で営業条件を定め、搬入出を含む17時から翌4時の占用と清掃・周辺配慮を求める。",
+      "refs": [
+        "fukuoka-yatai-program-src01",
+        "fukuoka-yatai-program-src02",
+        "fukuoka-yatai-program-src03"
+      ]
+    },
+    "partners": {
+      "text": "福岡市が公募と制度運用を担い、個々の営業者が食材・器材を調達して営業。警察や衛生等の担当も許可に関わる。",
+      "refs": [
+        "fukuoka-yatai-program-src01",
+        "fukuoka-yatai-program-src02"
+      ]
+    }
+  },
+  "boston-gohubs": {
+    "hard": {
+      "text": "既存の共有交通設備にベンチ・植栽・案内等を場所ごとに組み合わせる拠点群で、全地点が同じ設備ではない。",
+      "refs": [
+        "boston-gohubs-s1"
+      ]
+    },
+    "soft": {
+      "text": "実証の共有交通データと住民調査を分析し、拡大候補の選定へ接続。後続調達では設備別の維持管理と費用を求める。",
+      "refs": [
+        "boston-gohubs-s2",
+        "boston-gohubs-s3"
+      ]
+    },
+    "partners": {
+      "text": "Boston市New Mobility Teamが実証と調達を主導し、共有交通事業者や設計・施工支援者がサービスと設備を支える。",
+      "refs": [
+        "boston-gohubs-s2",
+        "boston-gohubs-s3"
+      ]
+    }
+  },
+  "nordstan-mobility-hotel": {
+    "hard": {
+      "text": "商業施設・駐車建物内に修理設備、小型倉庫、会議・厨房・更衣等の共用空間を集め、都心の仕事を支える。",
+      "refs": [
+        "nordstan-mobility-hotel-s1"
+      ]
+    },
+    "soft": {
+      "text": "配送・修理・電池交換・資材受取を近接させ、市の業務用自転車貸出にも接続。車両以外の業務条件を補完する。",
+      "refs": [
+        "nordstan-mobility-hotel-s1",
+        "nordstan-mobility-hotel-s3"
+      ]
+    },
+    "partners": {
+      "text": "Nordstan、Göteborg市、Business Region Göteborgが共同開発し、入居企業が修理・配送・資材等を提供する。",
+      "refs": [
+        "nordstan-mobility-hotel-s1",
+        "nordstan-mobility-hotel-s2"
+      ]
+    }
+  },
+  "flanders-hoppin": {
+    "hard": {
+      "text": "交通結節点に駐輪・案内・情報交換に必要な設備等を整備するネットワークで、車種・サービスは拠点ごとに異なる。",
+      "refs": [
+        "flanders-hoppin-s1"
+      ]
+    },
+    "soft": {
+      "text": "共通ブランドに品質・アクセシビリティ・情報共有の要件を設け、整備補助を地域計画と維持管理責任に結びつける。",
+      "refs": [
+        "flanders-hoppin-s1",
+        "flanders-hoppin-s2"
+      ]
+    },
+    "partners": {
+      "text": "フランデレン政府が共通要件と補助制度を整え、自治体が対象道路の拠点を整備・管理。各交通主体がサービスを担う。",
+      "refs": [
+        "flanders-hoppin-s1",
+        "flanders-hoppin-s2"
+      ]
+    }
+  },
+  "groningen-drenthe-reis-via-hub": {
+    "hard": {
+      "text": "既存公共交通の結節点に待合・案内・接続交通を配置。飲食や医療などの設備は拠点ごとに異なる。",
+      "refs": [
+        "groningen-drenthe-reis-via-hub-s2",
+        "groningen-drenthe-reis-via-hub-s3"
+      ]
+    },
+    "soft": {
+      "text": "既存の運行網を基礎に地域機能を組み合わせ、共通案内を提供。提案受付と交通・緑地の苦情窓口を分ける。",
+      "refs": [
+        "groningen-drenthe-reis-via-hub-s1"
+      ]
+    },
+    "partners": {
+      "text": "Groningen・Drenthe両州と交通組織が枠組みを支え、自治体・運行事業者が設備や交通を分担。",
+      "refs": [
+        "groningen-drenthe-reis-via-hub-s1",
+        "groningen-drenthe-reis-via-hub-s3"
+      ]
+    }
+  },
+  "minneapolis-mobility-hubs": {
+    "hard": {
+      "text": "公共交通への接続場所に、共有交通の駐車・案内と滞在要素を配置。規模や構成は地域条件に合わせる。",
+      "refs": [
+        "minneapolis-mobility-hubs-s1",
+        "minneapolis-mobility-hubs-s2"
+      ]
+    },
+    "soft": {
+      "text": "交通の公平性を重視する地域から拠点を配置し、初期実証では現場案内と住民の意見収集を組み合わせた。",
+      "refs": [
+        "minneapolis-mobility-hubs-s2",
+        "minneapolis-mobility-hubs-s3"
+      ]
+    },
+    "partners": {
+      "text": "Minneapolis市がMetro Transit、Hennepin Countyや地域組織と交通接続を調整。",
+      "refs": [
+        "minneapolis-mobility-hubs-s1",
+        "minneapolis-mobility-hubs-s2"
+      ]
+    }
+  },
+  "netsugen": {
+    "hard": {
+      "text": "群馬県庁32階にコワーキング、相談、イベント・配信の空間を配置し、仕事と交流の場所を提供する。",
+      "refs": [
+        "netsugen-src1"
+      ]
+    },
+    "soft": {
+      "text": "無料の初期相談から月額会員のマッチング・伴走支援へ接続。地域課題に取り組む会員を図鑑で紹介する。",
+      "refs": [
+        "netsugen-src2",
+        "netsugen-src3"
+      ]
+    },
+    "partners": {
+      "text": "群馬県に加え、トーマツが相談、ATOMicaが交流、COOTSがイベント・配信を分担する。",
+      "refs": [
+        "netsugen-src1"
+      ]
+    }
+  },
+  "gymlabo": {
+    "hard": {
+      "text": "九州工業大学戸畑キャンパスにコワーキング、会議室、セミナー・イベント空間と企業向けオフィスを置く。",
+      "refs": [
+        "gymlabo-src1"
+      ]
+    },
+    "soft": {
+      "text": "登録制の共用空間と会場・オフィス利用を組み合わせ、企業と学生の座談会で仕事やキャリアの接点をつくる。",
+      "refs": [
+        "gymlabo-src2",
+        "gymlabo-src3"
+      ]
+    },
+    "partners": {
+      "text": "九州工業大学が施設を設け、会員企業が交流企画に協力。学生と企業が対話や仕事の接点を持つ。",
+      "refs": [
+        "gymlabo-src1",
+        "gymlabo-src3"
+      ]
+    }
+  },
+  "paris-school-streets": {
+    "hard": {
+      "text": "学校前の既存道路を対象に可動柵、舗装、植栽や家具を配置。通行規制のみの街路と恒久改修を区別する。",
+      "refs": [
+        "paris-school-streets-src01"
+      ]
+    },
+    "soft": {
+      "text": "歩行者優先と必要車両のアクセスを両立し、道路条件に応じて柵・徐行規制・恒久改修を使い分ける。",
+      "refs": [
+        "paris-school-streets-src01"
+      ]
+    },
+    "partners": {
+      "text": "パリ市と区が道路規制・整備を担い、沿道利用者のアクセスを調整。Respireは現地観測と改善提言を行う。",
+      "refs": [
+        "paris-school-streets-src01",
+        "paris-school-streets-src02",
+        "paris-school-streets-src03"
+      ]
+    }
+  },
+  "charlotte-innovation-barn": {
+    "hard": {
+      "text": "市有の建物・駐車場を資源循環の拠点に活用。Crush Truckは電動車、ガラス粉砕機、回収経路を備える。",
+      "refs": [
+        "charlotte-innovation-barn-src01",
+        "charlotte-innovation-barn-src03"
+      ]
+    },
+    "soft": {
+      "text": "企業・学校向け教育と素材回収・再利用を接続。受付終了の運営者研修では独立運営への移行条件を提示した。",
+      "refs": [
+        "charlotte-innovation-barn-src02",
+        "charlotte-innovation-barn-src03",
+        "charlotte-innovation-barn-src04"
+      ]
+    },
+    "partners": {
+      "text": "Envision Charlotteが運営し、市が不動産を保有。飲食店等が回収顧客となり再利用する側とつながる。",
+      "refs": [
+        "charlotte-innovation-barn-src01",
+        "charlotte-innovation-barn-src03"
+      ]
+    }
+  },
+  "seoul-innovation-park": {
+    "hard": {
+      "text": "旧公共機関の建物を転用し、Maker Space、展示、若者の活動空間を設けた旧拠点。現在は運営停止。",
+      "refs": [
+        "seoul-innovation-park-src01",
+        "seoul-innovation-park-src03"
+      ]
+    },
+    "soft": {
+      "text": "中間支援、ものづくり、展示、若者の事業を集積した歴史的な運営モデル。閉鎖後の施設利用とは区別する。",
+      "refs": [
+        "seoul-innovation-park-src01",
+        "seoul-innovation-park-src03"
+      ]
+    },
+    "partners": {
+      "text": "ソウル市が公共資産と政策を担い、旧拠点にはSeoul Innovation CenterやYouth Hub等が集積した。",
+      "refs": [
+        "seoul-innovation-park-src01"
+      ]
+    }
+  },
+  "knowroute-shiojiri": {
+    "hard": {
+      "text": "生活交通の運行車両と乗降地点を再構成する交通サービス。片丘実証の区域・台数は当時の設定として扱う。",
+      "refs": [
+        "knowroute-shiojiri-src03"
+      ]
+    },
+    "soft": {
+      "text": "予約需要に応じた配車を既存路線と組み合わせ、待ち時間や乗合条件を改善。電話とデジタルの案内条件は異なる。",
+      "refs": [
+        "knowroute-shiojiri-src01",
+        "knowroute-shiojiri-src02",
+        "knowroute-shiojiri-src03"
+      ]
+    },
+    "partners": {
+      "text": "塩尻市が政策・予算、市振興公社が実施に関与。2024年度片丘実証ではアルピコタクシーが運行を担った。",
+      "refs": [
+        "knowroute-shiojiri-src03"
+      ]
+    }
+  },
+  "shenzhen-bus-group-electrification": {
+    "hard": {
+      "text": "電動バスと電池、充電施設、その用地・電力接続を組み合わせ、日常の公共交通運行を支える物的基盤とする。",
+      "refs": [
+        "shenzhen-bus-group-electrification-src01"
+      ]
+    },
+    "soft": {
+      "text": "車体・電池を分離する方式から全車リースへ移行し、資産所有、運行、充電、部品保証の役割を接続する。",
+      "refs": [
+        "shenzhen-bus-group-electrification-src01"
+      ]
+    },
+    "partners": {
+      "text": "Shenzhen Bus Groupが運行し、リース会社が車両資産、メーカーが保証、充電事業者が設備を担う。",
+      "refs": [
+        "shenzhen-bus-group-electrification-src01"
+      ]
+    }
+  },
+  "kashiwanoha-aems": {
+    "hard": {
+      "text": "商業・オフィス・住宅等を太陽光発電、蓄電池、電力融通・受変電設備と監視・制御拠点でつなぐ。",
+      "refs": [
+        "kashiwanoha-aems-src01",
+        "kashiwanoha-aems-src02"
+      ]
+    },
+    "soft": {
+      "text": "施設ごとの需要と分散電源を監視・制御し、電力を融通。新たな実証では既存設備の調整力の市場利用を検証する。",
+      "refs": [
+        "kashiwanoha-aems-src01",
+        "kashiwanoha-aems-src03"
+      ]
+    },
+    "partners": {
+      "text": "三井不動産が要件設定・導入運用、日立がAEMS構築・支援、シャープがHEMS、日建設計等が技術助言を担う。",
+      "refs": [
+        "kashiwanoha-aems-src01"
+      ]
+    }
+  },
+  "jakarta-mrt-tod": {
+    "hard": {
+      "text": "鉄道と駅、接続空間、沿線の土地・建物が対象。鉄道運営者の所有地に限らず、個別所有者との調整を要する。",
+      "refs": [
+        "jakarta-mrt-tod-src03",
+        "jakarta-mrt-tod-src04"
+      ]
+    },
+    "soft": {
+      "text": "運賃の補助に広告・命名権・賃貸収入と沿線開発調整を組み合わせ、鉄道運営とTODの価値形成を接続する。",
+      "refs": [
+        "jakarta-mrt-tod-src01",
+        "jakarta-mrt-tod-src04"
+      ]
+    },
+    "partners": {
+      "text": "PT MRT Jakartaが鉄道運営と開発調整を担い、州政府が制度・予算、土地建物所有者が権利を持つ。",
+      "refs": [
+        "jakarta-mrt-tod-src03",
+        "jakarta-mrt-tod-src04"
+      ]
+    }
+  },
+  "sidewalk-toronto": {
+    "hard": {
+      "text": "Quaysideの土地を対象とした都市開発構想。計画協働は土地所有や開発権の一括付与ではなく、実現施設ではない。",
+      "refs": [
+        "sidewalk-toronto-src01"
+      ]
+    },
+    "soft": {
+      "text": "公共主体と技術企業が構想・制度・事業性を検討したが、協働は2020年に終了。地区開発は後継主体へ引き継がれた。",
+      "refs": [
+        "sidewalk-toronto-src01",
+        "sidewalk-toronto-src02",
+        "sidewalk-toronto-src04"
+      ]
+    },
+    "partners": {
+      "text": "Waterfront TorontoとSidewalk Labsが計画協働。後継開発はDream・Great Gulfへ移行。",
+      "refs": [
+        "sidewalk-toronto-src01",
+        "sidewalk-toronto-src04"
+      ]
+    }
+  },
+  "king-street-toronto": {
+    "hard": {
+      "text": "既存道路・信号・路面電車の乗降場所を改修。仮設ランプやモジュール式乗降台を用い、恒久整備へ段階的に進む。",
+      "refs": [
+        "king-street-toronto-src01"
+      ]
+    },
+    "soft": {
+      "text": "通過交通を制限し路面電車を優先。交通整理員と信号変更で運用を修正し、住民や利用者団体との協議も行う。",
+      "refs": [
+        "king-street-toronto-src01",
+        "king-street-toronto-src03"
+      ]
+    },
+    "partners": {
+      "text": "Toronto市が道路・信号・交通整理、TTCが路面電車運行、Toronto Police Serviceが取締りを担う。",
+      "refs": [
+        "king-street-toronto-src01"
+      ]
+    }
+  },
+  "aspern-seestadt": {
+    "hard": {
+      "text": "旧飛行場240haを地区開発の基盤とし、湖・公共空間、交通接続、共同駐車場を街区と組み合わせる。",
+      "refs": [
+        "aspern-seestadt-src02"
+      ]
+    },
+    "soft": {
+      "text": "公共交通、徒歩・自転車、共同駐車場とシェア交通を接続。交通基金による支援と定期調査で運用を見直す。",
+      "refs": [
+        "aspern-seestadt-src01",
+        "aspern-seestadt-src04"
+      ]
+    },
+    "partners": {
+      "text": "Wien 3420が開発・交通計画を調整。自転車サービスは2025年にWiener Linienの広域網へ統合。",
+      "refs": [
+        "aspern-seestadt-src01",
+        "aspern-seestadt-src03"
+      ]
+    }
+  },
+  "atlanta-walk-atl-oakland-city": {
+    "hard": {
+      "text": "Merrill Avenueの既存道路に塗装とボルト固定のフレックスポスト等を設置し、歩行空間をつくる。",
+      "refs": [
+        "atlanta-walk-atl-oakland-city-src01",
+        "atlanta-walk-atl-oakland-city-src02"
+      ]
+    },
+    "soft": {
+      "text": "ウォーク監査・住民調査から安全計画を作り、地域承認、設計、保険、市の許可を経て仮設施工へ進める。",
+      "refs": [
+        "atlanta-walk-atl-oakland-city-src01",
+        "atlanta-walk-atl-oakland-city-src03"
+      ]
+    },
+    "partners": {
+      "text": "Oakland City住民が実装に参加し、Propel ATLが調査・計画支援、ATLDOTが審査・許可を担う。",
+      "refs": [
+        "atlanta-walk-atl-oakland-city-src01",
+        "atlanta-walk-atl-oakland-city-src02",
+        "atlanta-walk-atl-oakland-city-src03"
+      ]
+    }
+  },
+  "kigali-nyandungu": {
+    "hard": {
+      "text": "約121haの区域に湿地約70ha・森林約50haを含み、水路・池、園路、案内・飲食施設を整備する。",
+      "refs": [
+        "kigali-nyandungu-src01"
+      ]
+    },
+    "soft": {
+      "text": "湿地と森林の復元に歩行・自転車、教育、飲食の利用機能を重ね、環境保全と来園者サービスを接続する。",
+      "refs": [
+        "kigali-nyandungu-src01",
+        "kigali-nyandungu-src03",
+        "kigali-nyandungu-src04"
+      ]
+    },
+    "partners": {
+      "text": "REMAが復元事業を実施。政府側とQA Venue Solutionsの運営合意で日常管理・ガイド等を分担する。",
+      "refs": [
+        "kigali-nyandungu-src01"
+      ]
+    }
+  },
+  "milan-piazze-aperte": {
+    "hard": {
+      "text": "道路・交差点・学校周辺を対象に塗装、家具、植栽等を配置し、車中心の場所を歩行・滞在空間へ転用する。",
+      "refs": [
+        "milan-piazze-aperte-src01"
+      ]
+    },
+    "soft": {
+      "text": "市民の公募提案から設計・仮設施工へ進み、協働協定で利用と維持を調整。評価や予算を踏まえ恒久整備を検討する。",
+      "refs": [
+        "milan-piazze-aperte-src01",
+        "milan-piazze-aperte-src02"
+      ]
+    },
+    "partners": {
+      "text": "ミラノ市が整備を担い、AMAT等が協力。地域の市民・団体は協働協定に基づき活動と維持管理に参加する。",
+      "refs": [
+        "milan-piazze-aperte-src01",
+        "milan-piazze-aperte-src02"
+      ]
+    }
+  },
+  "washington-square-traffic-removal": {
+    "hard": {
+      "text": "Washington Square Parkの通過道路が対象。新施設の建設ではなく、仮設の遮断設備で交通を制限した。",
+      "refs": [
+        "washington-square-traffic-removal-src01",
+        "washington-square-traffic-removal-src02"
+      ]
+    },
+    "soft": {
+      "text": "公園の交通排除という争点に住民連合の協力を集中し、暫定閉鎖で周辺交通への懸念を確かめる過程を設けた。",
+      "refs": [
+        "washington-square-traffic-removal-src01"
+      ]
+    },
+    "partners": {
+      "text": "Joint Emergency Committee等の住民連合が運動を進め、市が道路・公園の行政判断を担った。",
+      "refs": [
+        "washington-square-traffic-removal-src01",
+        "washington-square-traffic-removal-src02"
+      ]
+    }
+  },
+  "lower-manhattan-expressway-opposition": {
+    "hard": {
+      "text": "計画対象の既成市街地、住宅・事業所、街路と横断交通が舞台。高速道路の完成施設ではなく反対運動の事例。",
+      "refs": [
+        "lower-manhattan-expressway-opposition-src01",
+        "lower-manhattan-expressway-opposition-src02"
+      ]
+    },
+    "soft": {
+      "text": "日常生活と移転負担を交通目的と並べて議論し、地域連合の異議と行政の再検討から既存道路利用の代替案へ進む。",
+      "refs": [
+        "lower-manhattan-expressway-opposition-src01",
+        "lower-manhattan-expressway-opposition-src02"
+      ]
+    },
+    "partners": {
+      "text": "Jane Jacobsら沿道の住民・商店が反対運動を担い、市計画委員会が交通・財源・移転条件を審査した。",
+      "refs": [
+        "lower-manhattan-expressway-opposition-src01",
+        "lower-manhattan-expressway-opposition-src02"
+      ]
+    }
+  },
+  "nyc-public-realm-strategy": {
+    "hard": {
+      "text": "ニューヨークの街路・歩道・建物間の空間を分析対象とする公共空間戦略。Midtownは後続実証の対象地区。",
+      "refs": [
+        "nyc-public-realm-strategy-src01",
+        "nyc-public-realm-strategy-src02"
+      ]
+    },
+    "soft": {
+      "text": "歩行者の活動と街路の状態を観察し、市の設計・政策目標へつなぐ。行政が実施を判断し後続実証で変化を検証する。",
+      "refs": [
+        "nyc-public-realm-strategy-src01",
+        "nyc-public-realm-strategy-src02"
+      ]
+    },
+    "partners": {
+      "text": "NYC DOTが政策主体と報告書発行を担い、Gehlが公共空間を分析。後続の市実証には地域団体も協働した。",
+      "refs": [
+        "nyc-public-realm-strategy-src01",
+        "nyc-public-realm-strategy-src02"
+      ]
+    }
+  },
+  "melbourne-places-for-people": {
+    "hard": {
+      "text": "メルボルンの通り・路地・座席・広場と建物の街路側を継続観察する都市調査。単独の新設施設ではない。",
+      "refs": [
+        "melbourne-places-for-people-src01"
+      ]
+    },
+    "soft": {
+      "text": "通行・滞在と空間形態を反復調査し提言と変化を照合。後の調査では土地利用や日常サービスへの到達性も扱う。",
+      "refs": [
+        "melbourne-places-for-people-src01"
+      ]
+    },
+    "partners": {
+      "text": "City of Melbourneが調査・計画を継続し、Gehlが1993年と2004年の公共空間調査を支援した。",
+      "refs": [
+        "melbourne-places-for-people-src01"
+      ]
+    }
+  },
+  "perceptual-form-city": {
+    "hard": {
+      "text": "三都市の街路・地区を対象とし、Bostonの写真記録等を用いた都市知覚の研究。専用施設の設備情報は未確認。",
+      "refs": [
+        "perceptual-form-city-src01"
+      ]
+    },
+    "soft": {
+      "text": "住民が語る都市の姿や道順と現地観察を照合し、道・境界・地区・結節点・目印の関係を読む方法を整理した。",
+      "refs": [
+        "perceptual-form-city-src01",
+        "perceptual-form-city-src02"
+      ]
+    },
+    "partners": {
+      "text": "MITのLynch・Kepesらが研究を担い、少数の住民の経験と訓練を受けた調査者の現地観察を持ち寄った。",
+      "refs": [
+        "perceptual-form-city-src01"
+      ]
+    }
+  },
+  "temporary-paradise": {
+    "hard": {
+      "text": "San Diego地域の海岸・湾・谷・峡谷、既成市街地と交通網が対象。単体施設ではなく広域の調査・提言。",
+      "refs": [
+        "temporary-paradise-src01"
+      ]
+    },
+    "soft": {
+      "text": "自然環境、住宅開発、交通とサービスを一体で捉え、既成地区への成長誘導と保全を地域計画の議論に接続した。",
+      "refs": [
+        "temporary-paradise-src01"
+      ]
+    },
+    "partners": {
+      "text": "Lynch・Appleyardが調査と提言、Marston家が支援を担い、C-3 San Diegoが後年の教育活動等で参照。",
+      "refs": [
+        "temporary-paradise-src01",
+        "temporary-paradise-src02"
+      ]
+    }
+  },
+  "eishin-higashino-campus": {
+    "hard": {
+      "text": "盈進学園の校地で杭と模型を用いて配置を検討し、高校キャンパスを実現。大学部の計画とは区別する。",
+      "refs": [
+        "eishin-higashino-campus-src01",
+        "eishin-higashino-campus-src04"
+      ]
+    },
+    "soft": {
+      "text": "利用者の望む生活を固有のパタンにまとめ、敷地上の配置と模型を往復検討して建物・構造・施工図へ進む。",
+      "refs": [
+        "eishin-higashino-campus-src01",
+        "eishin-higashino-campus-src02"
+      ]
+    },
+    "partners": {
+      "text": "CESが設計、盈進学園・東野高等学校が発注と学校運営を担い、学校側の利用者が生活像と配置の検討に参加した。",
+      "refs": [
+        "eishin-higashino-campus-src01",
+        "eishin-higashino-campus-src03",
+        "eishin-higashino-campus-src04"
+      ]
+    }
+  },
+  "oregon-experiment": {
+    "hard": {
+      "text": "大学キャンパスの建物、連続するオープンスペース、徒歩・自転車動線を対象とする継続的な空間整備の仕組み。",
+      "refs": [
+        "oregon-experiment-src01"
+      ]
+    },
+    "soft": {
+      "text": "共通原則とパタンで個別案件を診断し、利用者参加、委員会の審査・勧告、大学の承認を段階的に接続する。",
+      "refs": [
+        "oregon-experiment-src01",
+        "oregon-experiment-src02"
+      ]
+    },
+    "partners": {
+      "text": "University of Oregonで計画担当、委員会、事業責任者、利用者グループが全体調整・資金・参加を分担。",
+      "refs": [
+        "oregon-experiment-src02"
+      ]
+    }
+  },
+  "bart20-landuse": {
+    "hard": {
+      "text": "BART沿線の鉄道駅、駅前用地、住宅・業務施設、駐車場を対象に、開業後の土地利用変化を調べた研究。",
+      "refs": [
+        "bart20-landuse-src01"
+      ]
+    },
+    "soft": {
+      "text": "沿線の開発・人口・雇用を比較し、駅の存在だけで成長を説明せず、都市計画・市場・用地の条件を照合する。",
+      "refs": [
+        "bart20-landuse-src01"
+      ]
+    },
+    "partners": {
+      "text": "Cervero・Landisらが共同研究、BARTが鉄道事業を担う。沿線開発の判断は自治体と個別事業者に分かれる。",
+      "refs": [
+        "bart20-landuse-src01",
+        "bart20-landuse-src02"
+      ]
+    }
+  },
+  "tod-housing-trip-generation": {
+    "hard": {
+      "text": "米国5都市圏の17件のTOD住宅と周辺の公共交通・住宅環境を対象とする調査。新設の共創施設ではない。",
+      "refs": [
+        "tod-housing-trip-generation-src01"
+      ]
+    },
+    "soft": {
+      "text": "平日の自動車トリップを住戸当たりに揃えてITE予測値と比較し、密度・交通・駐車条件を伴う観察値として評価する。",
+      "refs": [
+        "tod-housing-trip-generation-src01"
+      ]
+    },
+    "partners": {
+      "text": "Cervero・Arringtonが住宅の交通発生を共同研究。住宅の運営・開発主体は対象ごとに異なり、本資料では未特定。",
+      "refs": [
+        "tod-housing-trip-generation-src01",
+        "tod-housing-trip-generation-src02"
+      ]
+    }
+  },
+  "paris-fifteen-minute-city": {
+    "hard": {
+      "text": "既存の学校・中学校校庭、保育施設、近隣公共施設と街路を活用し、新築ではなく身近な利用空間を増やす。",
+      "refs": [
+        "paris-fifteen-minute-city-src01",
+        "paris-fifteen-minute-city-src02"
+      ]
+    },
+    "soft": {
+      "text": "教育・保育で使う場所を通常時間外の週末に地域へ開き、生活機能の近接性と公共施設の多用途利用を進める。",
+      "refs": [
+        "paris-fifteen-minute-city-src01",
+        "paris-fifteen-minute-city-src02"
+      ]
+    },
+    "partners": {
+      "text": "パリ市と施設側が開放を実施。Carlos Morenoは15分都市の概念・助言に関与し、個別施設運営とは区別する。",
+      "refs": [
+        "paris-fifteen-minute-city-src01",
+        "paris-fifteen-minute-city-src02",
+        "paris-fifteen-minute-city-src03"
+      ]
+    }
+  },
+  "bethune-bruay-half-hour": {
+    "hard": {
+      "text": "都市部と農村部を含む広域の生活拠点・サービス網を計画対象とする。個別の新設施設や設備を示す事例ではない。",
+      "refs": [
+        "bethune-bruay-half-hour-src01"
+      ]
+    },
+    "soft": {
+      "text": "移動・居住・仕事・買物・健康・学習・余暇の七機能で診断し、将来検討と現地議論を30分生活圏の計画へつなぐ。",
+      "refs": [
+        "bethune-bruay-half-hour-src01",
+        "bethune-bruay-half-hour-src02"
+      ]
+    },
+    "partners": {
+      "text": "Béthune-Bruay広域自治体とMoreno・ETI研究者が共同検討し、AULAの都市計画知見・ツールを活用。",
+      "refs": [
+        "bethune-bruay-half-hour-src01"
+      ]
+    }
+  },
+  "car2go-five-city-study": {
+    "hard": {
+      "text": "5都市で運用されたcar2goの共有車を対象とし、走行・利用記録を分析する研究。新設の実験施設ではない。",
+      "refs": [
+        "car2go-five-city-study-src01"
+      ]
+    },
+    "soft": {
+      "text": "会員調査と匿名運行データを組み合わせ、車の売却・購入回避や走行変化を推計。シェア車自身の走行も含める。",
+      "refs": [
+        "car2go-five-city-study-src01"
+      ]
+    },
+    "partners": {
+      "text": "UC BerkeleyのMartin・Shaheenが評価研究を担い、当時のcar2goが運行と匿名データ提供を担った。",
+      "refs": [
+        "car2go-five-city-study-src01"
+      ]
+    }
+  },
+  "carlink-ii": {
+    "hard": {
+      "text": "実証時の19台の共有車とCalifornia Avenue駅への接続、予約・車両アクセス用システムを組み合わせる。",
+      "refs": [
+        "carlink-ii-src01"
+      ]
+    },
+    "soft": {
+      "text": "朝夕の駅アクセスと日中の職場利用で車両を共有し、日誌・面接・運行記録で変化を評価。実証後は商業運営へ移管。",
+      "refs": [
+        "carlink-ii-src01"
+      ]
+    },
+    "partners": {
+      "text": "UC Davis ITSが実証管理、Caltrans・Honda・Caltrainが共同実施、PATH研究者が評価を担う。",
+      "refs": [
+        "carlink-ii-src01"
+      ]
+    }
+  },
+  "chiangmai-urban-mobility-lab": {
+    "hard": {
+      "text": "チェンマイ旧市街の自転車ルート、徒歩・自転車の案内表示、修理道具・部品を使った2016年の現地実験。",
+      "refs": [
+        "chiangmai-urban-mobility-lab-src01"
+      ]
+    },
+    "soft": {
+      "text": "分野横断の参加者がルート・案内・修理の小さな介入を形にし、若手への知識共有と都市交通を体験する機会を結ぶ。",
+      "refs": [
+        "chiangmai-urban-mobility-lab-src01"
+      ]
+    },
+    "partners": {
+      "text": "Jittrapiromが活動を組織し、ボランティアが実装。本人記録ではTCDCのDesign Weekの一部として実施。",
+      "refs": [
+        "chiangmai-urban-mobility-lab-src01"
+      ]
+    }
+  },
+  "hague-adaptive-visioning": {
+    "hard": {
+      "text": "ハーグ南西地区の既存交通網・生活環境と現地会場を対象とする参加型研究。新しい交通施設を建設した事例ではない。",
+      "refs": [
+        "hague-adaptive-visioning-src01"
+      ]
+    },
+    "soft": {
+      "text": "街頭調査と2回のワークショップで将来像・経路・変化への対応案を整理し、市と参加者へ報告。実装決定は対象外。",
+      "refs": [
+        "hague-adaptive-visioning-src01"
+      ]
+    },
+    "partners": {
+      "text": "Jittrapiromらの研究チームとハーグ市交通計画担当が協働し、住民や公共交通提供側が地域の視点を持ち寄る。",
+      "refs": [
+        "hague-adaptive-visioning-src01"
+      ]
+    }
+  },
+  "sfpark-pilot": {
+    "hard": {
+      "text": "実証7地区の6,000超の駐車メーターと市営駐車施設約12,250台分を対象とし、情報・決済機能も組み合わせる。",
+      "refs": [
+        "sfpark-pilot-src03"
+      ]
+    },
+    "soft": {
+      "text": "目標占有率を置き場所・時間の需要に応じて料金を調整。案内・決済・時間制限の変更も含め、比較地区と評価する。",
+      "refs": [
+        "sfpark-pilot-src03"
+      ]
+    },
+    "partners": {
+      "text": "SFMTAが実証・評価、連邦の支援事業が資金を提供。Pierce・Shoupは料金と占有率の反応を共同研究した。",
+      "refs": [
+        "sfpark-pilot-src02",
+        "sfpark-pilot-src03"
+      ]
+    }
+  },
+  "parking-cashout-eight-cases": {
+    "hard": {
+      "text": "南カリフォルニア8事業所の雇用主補助の駐車場と代替通勤手段を対象とする制度研究。新設施設の事例ではない。",
+      "refs": [
+        "parking-cashout-eight-cases-src01",
+        "parking-cashout-eight-cases-src02"
+      ]
+    },
+    "soft": {
+      "text": "駐車以外の通勤にも現金等を受け取る選択肢を設け、単独運転・走行距離・補助支出の導入前後を事業所別に比較する。",
+      "refs": [
+        "parking-cashout-eight-cases-src01",
+        "parking-cashout-eight-cases-src02"
+      ]
+    },
+    "partners": {
+      "text": "民間7事業所と行政機関1つが通勤制度を実施し、Donald Shoupが評価。従業員の行動と雇用主の費用を分析した。",
+      "refs": [
+        "parking-cashout-eight-cases-src01",
+        "parking-cashout-eight-cases-src02"
+      ]
+    }
+  }
+}
