@@ -1,0 +1,37 @@
+/* Shared heading treatment for the regional proposals, based on MDL Atlas. */
+@font-face {
+  font-family: RegionalAtlasBlack;
+  src: url('/co-creation-atlas/assets/jp-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: RegionalProposalBlack;
+  src: url('proposal-jp-black.woff') format('woff');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+:root {
+  --regional-heading: RegionalAtlasBlack, RegionalProposalBlack, 'Noto Sans JP', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+}
+h1, h2, h3,
+.hero h1, .prototype h1,
+.region strong, .concept, .top-facts p, .chapter p,
+.engine .result, .invitation,
+.training-track strong, .program-tracks strong,
+.stage-tag strong, .engine-label small,
+.wordmark, .card-arrow {
+  font-family: var(--regional-heading);
+  font-weight: 900;
+  -webkit-text-stroke: 0.012em currentColor;
+  paint-order: stroke fill;
+}
+h1, .hero h1, .prototype h1 {
+  -webkit-text-stroke: 0.024em currentColor;
+}
+/* Keep the original condensed display face for the orange chapter numbers. */
+.proposal-number, .chapter > span {
+  font-weight: 900;
+}
