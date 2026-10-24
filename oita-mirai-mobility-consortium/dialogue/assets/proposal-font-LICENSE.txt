@@ -1,6 +1,6 @@
 Noto Sans CJK, Copyright 2010-2012 Google Corporation
 Source: https://github.com/notofonts/noto-cjk
-Subset for these proposal pages; WOFF2 conversion.
+Subset for these proposal pages; WOFF conversion.
 
  -----------------------------------------------------------
  SIL OPEN FONT LICENSE Version 1.1 - 26 February 2007
