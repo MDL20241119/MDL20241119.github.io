@@ -1,71 +1,200 @@
-/* Clear reading order for the 2026 program; existing shared navigation stays intact. */
+/* Compact, comparable overviews for the 2026 program. Details expand in normal flow. */
 .training-concise{--paper:#fff;--paper-light:#fff8f1;--red:#e68149;--muted:#555;background:#fff}
-.training-concise .hero h1 strong{color:#111}
+.training-concise .section-pad{padding-top:32px;padding-bottom:36px}
+.training-concise .split-heading{margin:0 0 28px;align-items:start;gap:28px}
+.training-concise .split-heading h2{font-size:clamp(32px,3.4vw,46px);line-height:1.35}
+.training-concise .section-intro{font-size:16px;line-height:1.8}
+.training-concise .hero-copy{padding:24px var(--pad)}
+.training-concise .hero h1>span{font-size:clamp(32px,3.4vw,48px)}
+.training-concise .hero h1 strong{color:#111;font-size:clamp(38px,4.6vw,66px);line-height:1.3}
+.training-concise .hero-description{margin-top:16px}
+.training-concise .hero-description p{font-size:16px;line-height:1.8}
 .training-concise .hero-bottom{grid-template-columns:1.3fr 1fr}
-.training-concise .hero-photo{height:360px;min-height:0}
+.training-concise .hero-photo{height:310px;min-height:0}
 .training-concise .hero-photo figcaption{font-size:11px}
-.training-concise .hero-invite{justify-content:center;gap:24px}
-.training-concise .hero-statement{margin:0;font-size:clamp(32px,3.8vw,54px)}
+.training-concise .hero-invite{padding:20px 28px;gap:16px;justify-content:center}
+.training-concise .hero-facts{display:grid;grid-template-columns:1fr;gap:14px;margin:0;padding:0;border:0}
+.training-concise .hero-facts>div{display:grid;grid-template-columns:66px minmax(0,1fr);align-items:baseline;gap:12px;min-width:0}
+.training-concise .hero-facts>div+div{padding:12px 0 0;border-left:0;border-top:1px solid #bbb}
+.training-concise .hero-facts dt{font-size:13px;font-weight:900}
+.training-concise .hero-facts dd{display:flex;align-items:baseline;gap:9px;min-width:0;font:900 clamp(25px,2.45vw,36px)/1.3 Arial,Helvetica,sans-serif;letter-spacing:-.045em}
+.training-concise .hero-facts dd>span{display:inline;font:inherit;margin:0;color:#93441e}
+.training-concise .hero-facts .program-step-count{font-size:46px}
+.training-concise .hero-facts .program-step-count>span{font-size:19px;color:#111;letter-spacing:0}
 .training-concise .application-actions{margin-top:0}
-.training-concise .hero-facts{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:0;margin:0;padding:30px var(--pad);border-top:0;border-bottom:1px solid #111;background:#fff8f1}
-.training-concise .hero-facts>div{min-width:0}
-.training-concise .hero-facts>div+div{padding-left:36px;border-left:1px solid #111}
-.training-concise .hero-facts dt{font-size:15px;font-weight:900;margin:0 0 12px}
-.training-concise .hero-facts dd{display:flex;align-items:baseline;gap:14px;min-width:0;font-family:Arial,Helvetica,sans-serif;font-weight:900;letter-spacing:-.045em;line-height:1.2}
-.training-concise .hero-facts .program-period{font-size:clamp(29px,4.6vw,66px);flex-wrap:wrap}
-.training-concise .hero-facts .program-period>span{display:inline;font:inherit;color:#ad4a1c;margin:0}
-.training-concise .hero-facts .program-step-count{font-size:clamp(42px,5.5vw,78px);gap:8px}
-.training-concise .hero-facts .program-step-count>span{display:inline;font:900 24px/1 Arial;margin:0;letter-spacing:0}
+.training-concise .application-actions .button{min-height:54px;padding:14px 18px;font-size:15px}
+.training-concise .application-actions .text-link{margin-top:8px;font-size:13px}
+.training-concise .program-venue{font-size:12px;line-height:1.7;margin-top:10px}
+
 .training-concise .purpose{background:#111;color:#fff;--diagram-accent:#e68149}
-.training-concise .purpose .split-heading{margin:0 0 32px}
-.training-concise .purpose .split-heading h2{font-size:clamp(32px,4vw,54px)}
+.training-concise .purpose .split-heading h2{font-size:38px}
 .training-concise .process-map{padding:0}
 .training-concise .process-map:before,.training-concise .process-map:after{display:none}
-.training-concise .process-flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;align-items:stretch}
-.training-concise .process-step,.training-concise .process-step:nth-child(n){grid-column:auto;grid-row:auto;display:grid;grid-template-columns:1fr 72px;padding:24px;border:1px solid #777;align-content:start}
-.training-concise .step-meta b{color:#e68149;font-size:52px}
-.training-concise .step-visual{width:72px;--paper:#111;--ink:#fff;--red:#e68149}
-.training-concise .process-step h3{font-size:clamp(25px,2.5vw,38px);margin:20px 0 14px;line-height:1.5;overflow-wrap:anywhere}
-.training-concise .process-step p{font-size:16px;line-height:1.8}
+.training-concise .process-flow{grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.training-concise .process-step,.training-concise .process-step:nth-child(n){grid-column:auto;grid-row:auto;display:grid;grid-template-columns:1fr 64px;padding:20px;border:1px solid #777;align-content:start}
+.training-concise .step-meta{flex-direction:row;align-items:baseline;gap:10px}
+.training-concise .step-meta b{color:#e68149;font-size:44px}
+.training-concise .step-visual{width:64px;height:48px;--paper:#111;--ink:#fff;--red:#e68149}
+.training-concise .process-step h3{font-size:28px;line-height:1.5;margin:16px 0 8px;overflow-wrap:anywhere}
+.training-concise .process-step p{font-size:15px;line-height:1.8}
 .training-concise .step-arrow{display:none}
-.training-concise .compact-program{border-color:#777;margin-top:40px}
-.training-concise .compact-heading{align-items:center;flex-wrap:wrap}
-.training-concise .compact-heading h3{white-space:normal}
-.training-concise .compact-heading p{color:#fff;font-size:14px}
-.training-concise .session>small{color:#efab82}
-#program-proposals .training-value-flow{gap:20px;margin:32px 0}
-#program-proposals .training-value-flow>li{position:relative;display:block;min-width:0;padding:24px 18px;border-top:4px solid #e68149;background:#fff}
+
+#program-proposals{padding-top:32px;padding-bottom:36px}
+.program-overview-heading{display:flex;align-items:center;justify-content:space-between;gap:28px;margin-bottom:26px}
+#program-proposals h2{font-size:clamp(30px,3vw,42px);line-height:1.4;margin:0}
+.regional-entry{display:flex;align-items:center;justify-content:space-between;gap:32px;flex-shrink:0;min-height:58px;min-width:170px;padding:15px 22px;background:#e68149;color:#111;font-size:21px;font-weight:900;text-decoration:none}
+.regional-entry:hover{background:#f3a16f}
+.regional-entry:focus-visible{outline:3px solid #111;outline-offset:4px}
+#program-proposals .training-value-flow{gap:20px;margin:0}
+#program-proposals .training-value-flow>li{display:block;position:relative;min-width:0;padding:20px 18px;border-top:4px solid #e68149;background:#fff;border-bottom:1px solid #ddd}
 #program-proposals .training-value-flow>li:not(:last-child)::after{content:"→";position:absolute;right:-20px;top:28px;width:20px;text-align:center;font-size:18px;font-weight:900;color:#93441e}
-#program-proposals .training-value-flow>li>h3{font-size:clamp(21px,1.8vw,27px);font-weight:900;line-height:1.5;letter-spacing:-.035em;margin:12px 0 20px;min-height:3em;overflow-wrap:anywhere}
-#program-proposals .training-value-flow>li>p{font-size:16px;line-height:1.85;margin:0}
-#program-proposals .training-value-flow>li>p+p{margin-top:18px}
+#program-proposals .training-value-flow>li>span{margin-bottom:12px}
+#program-proposals .training-value-flow>li>h3{font-size:22px;font-weight:900;line-height:1.5;letter-spacing:-.04em;min-height:1.5em;margin:0 0 16px;overflow-wrap:anywhere}
+#program-proposals .training-value-flow>li>p{font-size:16px;line-height:1.8;margin:0}
+#program-proposals .training-value-flow>li>.input-provider{font-size:12px;font-weight:900;line-height:1.7;margin-bottom:8px}
 #program-proposals .training-value-flow>li:nth-child(2){background:#fff2e8}
 #program-proposals .training-value-flow>li:last-child{background:#fff8f1}
-#program-proposals .training-value-flow>li>.training-flow-smile{font-size:23px;font-weight:900;line-height:1.8;letter-spacing:-.035em;margin-top:24px}
-#program-proposals .input-vehicle{margin:22px 0}
+#program-proposals .training-value-flow>li>.training-flow-smile{font-size:24px;font-weight:900;line-height:1.8;letter-spacing:-.04em;margin-top:30px}
+#program-proposals .input-vehicle{max-width:212px;margin:18px 0 12px}
 #program-proposals .input-vehicle>img{display:block;width:100%;height:auto;aspect-ratio:1280/967;object-fit:contain}
-#program-proposals .input-vehicle figcaption{font-size:11px;line-height:1.8;margin-top:8px}
-#program-proposals .program-region-only{display:block;margin-top:36px}
-#program-proposals .program-region-only article{display:flex;flex-direction:row;align-items:center;justify-content:space-between;gap:24px;padding:28px}
-#program-proposals .program-region-only h3{min-height:0;font-size:36px;line-height:1.4;margin:0 0 12px}
-#program-proposals .program-region-only p{margin:0}
-#program-proposals .program-region-only a{min-width:240px;margin:0}
-.training-concise .concise-planning{background:#e68149;color:#111}
-.training-concise .concise-planning .section-label,.training-concise .concise-planning-grid,.training-concise .concise-planning-grid p+p{border-color:#ad4a1c}
-.training-concise .training-prior-year-reference{margin-bottom:0;border-bottom:1px solid #111}
-.training-concise .training-prior-year-reference h2{font-size:clamp(23px,2.4vw,34px);line-height:1.5}
-@media(max-width:1100px){#program-proposals .training-value-flow>li:nth-child(2)::after{display:none}}
-@media(max-width:900px){.training-concise .hero-bottom{grid-template-columns:1fr 1fr}.training-concise .hero-photo{height:340px}.training-concise .process-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.training-concise .process-step h3{font-size:28px}}
+#program-proposals .input-vehicle figcaption{font-size:10px;line-height:1.8;margin-top:6px}
+.input-resources{font-size:14px;line-height:1.8;border-top:1px solid #ccc}
+.input-resources summary,.profile-detail summary{display:list-item;min-height:44px;padding:10px 0;cursor:pointer;font-size:14px;font-weight:900}
+.input-resources p{font-size:14px;line-height:1.8;margin:4px 0 14px}
+#program-proposals .creation-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
+#program-proposals .creation-actions>li{padding:15px 6px;border:1px solid #e3b698;background:#fff;font-size:20px;font-weight:900;text-align:center;line-height:1.5}
+#program-proposals .output-items{margin:24px 0 0}
+#program-proposals .output-items>li{padding:18px 0;border:0;border-bottom:1px solid #ccc;background:transparent;font-size:20px;font-weight:900;line-height:1.6}
+
+.training-concise #benefits .benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.training-concise #benefits .benefit-grid article{display:block;padding:22px 20px}
+.training-concise #benefits .benefit-number{font-size:60px}
+.training-concise #benefits .benefit-keyword{font-size:28px;line-height:1.5;min-height:3em;margin:24px 0 16px;letter-spacing:-.04em}
+.training-concise #benefits .benefit-grid p{font-size:16px;line-height:1.8;margin:0}
+
+.training-concise #faculty .split-heading{grid-template-columns:minmax(0,1fr) auto;align-items:center}
+.training-concise .program-designer{display:grid;grid-template-columns:64px minmax(0,1fr);gap:16px;margin:0;padding:0;border:0;max-width:340px}
+.training-concise .designer-photo{width:64px}
+.training-concise .program-designer h3{font-size:24px;margin:5px 0}
+.training-concise .program-designer p{font-size:12px;line-height:1.6}
+.training-concise .program-designer .eyebrow{font-size:10px}
+.training-concise .designer-credit{font-size:9px}
+.training-concise .verified-speaker-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
+.training-concise .speaker-profile{display:block;padding:0}
+.training-concise .photo-window{aspect-ratio:1/1;max-height:230px}
+.training-concise .profile-copy{padding-top:15px}
+.training-concise .profile-company{font-size:12px;min-height:1.8em;line-height:1.8}
+.training-concise .profile-copy h3{font-size:30px;margin:12px 0}
+.training-concise .profile-title{font-size:12px}
+.profile-detail{margin-top:14px;border-top:1px solid #bbb}
+.profile-detail .profile-bio{font-size:14px;line-height:1.8;margin-top:8px}
+.profile-detail .profile-sources{font-size:12px;margin:14px 0}
+.training-concise .profile-talk{margin-top:14px;padding-top:12px}
+.training-concise .profile-talk b{font-size:14px;line-height:1.7}
+
+.training-concise .calendar-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 24px}
+.training-concise .calendar-legend li{display:flex;align-items:center;gap:8px;font-size:13px}
+.training-concise .calendar-legend .calendar-tag{font-size:12px;min-width:74px;margin:0;padding:6px 10px}
+.month-theme{font-size:20px;line-height:1.6;margin:0 0 18px}
+.training-concise .calendar-grid{gap:18px;align-items:stretch}
+.training-concise .month-card table{table-layout:fixed}
+.training-concise .month-card{min-width:0}
+
+.training-concise .field-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.training-concise .field-card,.training-concise .field-card:nth-child(n){padding:22px 20px;border:0;border-left:1px solid #bbb;border-bottom:1px solid #bbb;min-width:0}
+.training-concise .field-card:first-child{border-left:0}
+.training-concise .field-top{min-height:0;margin:0}
+.training-concise .field-top>b{font-size:48px;line-height:1;color:#ad4a1d}
+.training-concise .field-card h3{font-size:23px;line-height:1.5;min-height:3em;margin:24px 0 16px}
+.training-concise .field-card>p{font-size:15px;line-height:1.8}
+.training-concise .field-card .field-aim{font-size:16px;font-weight:900;margin-bottom:12px}
+.training-concise .training-prior-year-reference{margin-top:0;margin-bottom:0;border-left-color:#e68149;border-bottom:1px solid #111;background:#faf8f5}
+.training-concise .training-prior-year-reference h2{font-size:clamp(23px,2.3vw,32px);line-height:1.5}
+
+@media(min-width:1200px){
+ .training-concise .calendar-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+ .training-concise .month-card{padding:16px 10px}
+ .training-concise .month-theme{font-size:18px;min-height:3.2em;margin-bottom:12px}
+ .training-concise .month-card caption{font-size:42px;padding-bottom:14px}
+ .training-concise .month-card caption>span{font-size:12px;margin-right:10px}
+ .training-concise .month-card caption small{font-size:12px}
+ .training-concise .month-card th{padding:8px 0;font-size:11px}
+ .training-concise .month-card td{height:52px;padding:6px 1px;vertical-align:top}
+ .training-concise .day-number{font-size:16px}
+ .training-concise .month-card .calendar-tag{font-size:8.5px;line-height:1.6;padding:3px 0;margin-top:4px;letter-spacing:0;overflow-wrap:anywhere}
+}
+@media(max-width:1100px){
+ #program-proposals .training-value-flow>li:nth-child(2)::after{display:none}
+ .training-concise .hero-bottom{grid-template-columns:1fr 1fr}
+ .training-concise .hero-invite{padding:20px}
+ .training-concise .hero-facts>div{grid-template-columns:1fr;gap:7px}
+ .training-concise .hero-facts dd{font-size:29px}
+ .training-concise #benefits .benefit-grid,.training-concise .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-concise .field-card:nth-child(odd){border-left:0}
+ .training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-concise .photo-window{max-height:280px}
+}
+@media(max-width:900px){.training-concise .process-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.program-overview-heading{align-items:start}.regional-entry{min-width:140px}}
 @media(max-width:760px){
- .training-concise .hero-bottom{grid-template-columns:1fr}.training-concise .hero-photo{height:auto;min-height:0;aspect-ratio:1600/844;border-right:0}.training-concise .hero-photo>img{height:auto;object-fit:contain}
- .training-concise .hero-invite{padding:28px var(--pad)}.training-concise .hero-statement{font-size:38px}
- .training-concise .hero-facts{grid-template-columns:1fr;gap:24px;padding:28px var(--pad)}.training-concise .hero-facts>div+div{border-left:0;border-top:1px solid #111;padding:24px 0 0}.training-concise .hero-facts .program-period{font-size:clamp(27px,7.4vw,50px);gap:10px}.training-concise .hero-facts .program-step-count{font-size:64px}
- #program-proposals .training-value-flow{gap:28px}#program-proposals .training-value-flow>li{padding:24px}#program-proposals .training-value-flow>li>span{display:block;margin:0 0 14px;font-size:11px}#program-proposals .training-value-flow>li>h3{font-size:27px;min-height:0;margin:0 0 18px}#program-proposals .training-value-flow>li>.training-flow-smile{font-size:27px}
+ .training-concise .section-pad,#program-proposals{padding-top:30px;padding-bottom:34px}
+ .training-concise .hero-copy{padding-block:28px}
+ .training-concise .hero h1>span{font-size:7vw}.training-concise .hero h1 strong{font-size:9vw}
+ .training-concise .hero-description p{font-size:16px}.training-concise .hero-arrow{display:none}
+ .training-concise .hero-bottom{grid-template-columns:1fr}
+ .training-concise .hero-photo{height:auto;min-height:0;aspect-ratio:1600/844;border-right:0}
+ .training-concise .hero-photo>img{height:auto;object-fit:contain}
+ .training-concise .hero-invite{padding:24px var(--pad);gap:24px}
+ .training-concise .hero-facts>div{grid-template-columns:1fr;gap:8px}
+ .training-concise .hero-facts dd{font-size:clamp(27px,7.5vw,42px);gap:9px}
+ .training-concise .hero-facts .program-step-count{font-size:56px}
+ .training-concise .hero-facts dt{font-size:15px}
+ .training-concise .program-venue{font-size:13px}
+ .program-overview-heading{display:block;margin-bottom:28px}
+ #program-proposals h2{font-size:clamp(29px,7.7vw,39px)}
+ .regional-entry{width:100%;margin-top:22px}
+ #program-proposals .training-value-flow{gap:28px}
+ #program-proposals .training-value-flow>li{padding:24px}
+ #program-proposals .training-value-flow>li>span{display:block;margin:0 0 14px;font-size:11px}
+ #program-proposals .training-value-flow>li>h3{font-size:27px;min-height:0;margin-bottom:18px}
+ #program-proposals .training-value-flow>li>.training-flow-smile{font-size:27px}
  #program-proposals .training-value-flow>li:not(:last-child)::after,#program-proposals .training-value-flow>li:nth-child(2)::after{display:block;content:"↓";right:auto;left:calc(50% - 10px);top:auto;bottom:-28px;font-size:22px}
- #program-proposals .program-region-only article{flex-direction:column;align-items:stretch;padding:24px}#program-proposals .program-region-only a{min-width:0;width:100%}
+ #program-proposals .input-vehicle{max-width:280px}
+ .input-resources p{font-size:16px}
+ .training-concise #faculty .split-heading{grid-template-columns:1fr}
+ .training-concise .program-designer{margin-top:8px}
+ .training-concise .calendar-legend{gap:10px 18px}
+ .training-concise .calendar-grid{grid-template-columns:1fr}
+ .training-concise .month-card{padding:22px 10px}
+ .training-concise .month-theme{font-size:22px}
+ .training-concise .month-card .calendar-tag{display:flex;align-items:center;justify-content:center;min-height:36px;font-size:10px;line-height:1.5;padding:6px 1px}
 }
 @media(max-width:560px){
- .training-concise .hero h1 strong{font-size:9vw}.training-concise .hero-description p{font-size:16px}.training-concise .hero-arrow{display:none}
- .training-concise .process-flow{grid-template-columns:1fr;gap:20px}.training-concise .process-step,.training-concise .process-step:nth-child(n){grid-template-columns:1fr 72px;padding:24px}.training-concise .step-meta{grid-column:1;grid-row:1;flex-direction:row;align-items:baseline;gap:10px}.training-concise .step-visual{grid-column:2;grid-row:1;height:auto;margin:0}.training-concise .process-step h3{grid-column:1/-1;grid-row:2;font-size:32px;margin:18px 0 12px}.training-concise .process-step p{grid-column:1/-1;grid-row:3;font-size:16px;margin:0}
+ .training-concise .process-flow{grid-template-columns:1fr;gap:18px}
+ .training-concise .process-step,.training-concise .process-step:nth-child(n){grid-template-columns:1fr 64px;padding:22px}
+ .training-concise .step-meta{grid-column:1;grid-row:1;flex-direction:row;align-items:baseline;gap:10px}
+ .training-concise .step-visual{grid-column:2;grid-row:1;height:48px;width:64px;margin:0}
+ .training-concise .process-step h3{grid-column:1/-1;grid-row:2;font-size:31px;margin:18px 0 12px}
+ .training-concise .process-step p{grid-column:1/-1;grid-row:3;font-size:16px;margin:0}
+ .training-concise #benefits .benefit-grid,.training-concise .field-grid,.training-concise .verified-speaker-grid{grid-template-columns:1fr}
+ .training-concise #benefits .benefit-grid article{border-left:0;border-top:1px solid #111;padding:24px 0}
+ .training-concise #benefits .benefit-keyword{font-size:30px;min-height:0;margin:18px 0}
+ .training-concise .speaker-profile{display:grid;grid-template-columns:100px minmax(0,1fr);gap:18px;padding-top:18px}
+ .training-concise .profile-copy{padding-top:0}.training-concise .photo-window{aspect-ratio:1/1.25;max-height:none}
+ .training-concise .profile-copy h3{font-size:27px}.training-concise .profile-company{min-height:0}
+ .training-concise .field-card,.training-concise .field-card:nth-child(n){border-left:0;padding:24px 0}
+ .training-concise .field-card h3{min-height:0;font-size:27px}
+ .training-concise .field-card>p{font-size:16px}
 }
-@media print{.training-concise .hero-facts{padding:20px 0}.training-concise .hero-facts .program-period{font-size:30pt}.training-concise .hero-facts .program-step-count{font-size:36pt}.training-concise .process-flow{grid-template-columns:repeat(3,minmax(0,1fr))}.training-concise .process-step h3{font-size:18pt}#program-proposals .training-value-flow>li::after{display:none!important}#program-proposals .training-value-flow>li{break-inside:avoid}#program-proposals .program-region-only article{break-inside:avoid}}
+@media print{
+ .training-concise .hero h1>span,.training-concise .hero h1 strong{font-size:28pt}
+ .training-concise .hero-facts dd{font-size:20pt}
+ .training-concise .hero-facts .program-step-count{font-size:30pt}
+ .training-concise .hero-photo{height:260px}
+ .training-concise .process-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .training-concise .process-step,.training-concise .process-step:nth-child(n){grid-column:auto;grid-row:auto;padding:14px}
+ .training-concise .process-step h3{font-size:17pt}
+ #program-proposals .training-value-flow>li::after{display:none!important}
+ #program-proposals .training-value-flow>li,.training-concise .speaker-profile{break-inside:avoid}
+ .training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-concise .calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
