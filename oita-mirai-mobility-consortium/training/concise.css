@@ -299,3 +299,5 @@
 .training-concise .hero h1>span,.training-concise .hero h1 strong{display:inline-block;max-width:100%;vertical-align:top}
 .training-concise .program-copy-phrase,.training-concise #benefits .support-phrase{display:inline-block;max-width:100%;vertical-align:top}
 @media(max-width:760px){.training-concise .program-promise{font-size:clamp(30px,7.2vw,52px)}}
+
+@media(max-width:360px){#program-proposals .output-items>li{font-size:19px}}
