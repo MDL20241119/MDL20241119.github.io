@@ -301,3 +301,8 @@
 @media(max-width:760px){.training-concise .program-promise{font-size:clamp(30px,7.2vw,52px)}}
 
 @media(max-width:360px){#program-proposals .output-items>li{font-size:19px}}
+
+/* Match the title line box to its visible type, including the narrow layout. */
+.training-concise .hero h1{font-size:clamp(21px,2.3vw,31px);line-height:1.5;letter-spacing:-.04em}
+.training-concise .hero h1 strong{margin-top:0}
+@media print{.training-concise .hero h1{font-size:18pt}}
