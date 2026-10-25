@@ -66,7 +66,7 @@
 #program-proposals .output-items>li{display:block;grid-template-columns:none;grid-column:auto;grid-row:auto;min-width:0;width:100%;margin:0;padding:14px 0;border:0;border-bottom:1px solid #ddd;background:transparent;font-size:20px;font-weight:900;line-height:1.6;white-space:normal;word-break:normal;overflow-wrap:normal}
 #program-proposals .output-items>li:last-child{border-bottom:0}
 
-.training-concise #benefits .benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.training-concise #benefits .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .training-concise #benefits .benefit-grid article{display:block;padding:22px 20px}
 .training-concise #benefits .benefit-number{font-size:60px}
 .training-concise #benefits .benefit-keyword{font-size:28px;line-height:1.5;min-height:3em;margin:24px 0 16px;letter-spacing:-.04em}
@@ -220,4 +220,77 @@
  #program-proposals .output-items>li{font-size:20px;line-height:1.5;padding:14px 0}
  .training-concise .month-card .calendar-tag.hidaka-candidate{padding:5px 0}
  .hidaka-candidate .candidate-hours{font-size:10px}
+}
+
+/* One explanation: solve a local problem, with joined-up support, and learn by doing. */
+.site-head.navigation-bar.nav-training>.desktop-nav{grid-template-columns:repeat(6,minmax(0,1fr)) 120px}
+.training-concise .hero-copy{padding-block:26px}
+.training-concise .hero h1>span,.training-concise .hero h1 strong{display:inline;font-size:clamp(21px,2.3vw,31px);line-height:1.5;letter-spacing:-.04em}
+.training-concise .hero h1 strong{margin-left:.3em}
+.training-concise .program-promise{margin:16px 0;font-size:clamp(36px,4.5vw,64px);line-height:1.35;letter-spacing:-.055em;font-weight:900;overflow-wrap:normal;word-break:normal}
+.training-concise .program-support-line{font-size:clamp(20px,2vw,27px);font-weight:900;line-height:1.6}
+.training-concise .program-support-line strong{color:#a7451d}
+.training-concise .hero-description{margin-top:16px}
+.training-concise .hero-description p{max-width:66em;font-size:16px;line-height:1.8}
+.training-concise .hero-description strong{font-weight:900}
+.training-concise .program-participation{font-size:13px;line-height:1.8;margin-top:14px}
+.program-challenges{border-bottom:1px solid #111;background:#fff8f1}
+.training-concise .program-challenges .split-heading{grid-template-columns:1.35fr 1fr}
+.challenge-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0 28px;margin:0;padding:0;list-style:none}
+.challenge-list>li{display:block;min-width:0;padding:18px 0;border-top:1px solid #d8b9a6}
+.challenge-list h3{font-size:22px;font-weight:900;line-height:1.5;letter-spacing:-.035em;margin:0 0 8px}
+.challenge-list p{font-size:16px;line-height:1.75}
+.training-concise #benefits .benefit-grid article,.training-concise #benefits .benefit-grid article:first-child,.training-concise #benefits .benefit-grid article:last-child{padding:22px;min-width:0;border:0;border-left:1px solid #bbb}
+.training-concise #benefits .benefit-grid article:nth-child(3n+1){border-left:0}
+.training-concise #benefits .benefit-grid article:nth-child(n+4){border-top:1px solid #bbb}
+.training-concise #benefits .benefit-number{font-size:42px;line-height:1}
+.training-concise #benefits .benefit-keyword{font-size:clamp(23px,2vw,28px);line-height:1.45;min-height:2.9em;margin:14px 0 12px;letter-spacing:-.04em;overflow-wrap:normal;word-break:normal}
+.support-connection{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:20px}
+.support-connection p{font-size:16px;line-height:1.8}
+#program-proposals .program-overview-heading h2>span{color:#a7451d}
+.program-practice-intro{font-size:16px;line-height:1.8;max-width:68em;margin:0 0 24px}
+#program-proposals .training-value-flow>li>.input-provider{font-size:15px;line-height:1.75;margin-bottom:12px}
+#program-proposals .training-value-flow>li>h3{overflow-wrap:normal;word-break:normal}
+#program-proposals .output-items>li{font-size:19px;letter-spacing:-.03em}
+.program-continuity{display:grid;grid-template-columns:1fr 1.7fr;gap:28px;padding:22px 0 0;margin-top:22px;border-top:1px solid #111}
+.program-continuity h3{font-size:24px;font-weight:900;line-height:1.5;letter-spacing:-.035em}
+.program-continuity p{font-size:16px;line-height:1.8}
+@media(max-width:1100px){
+ .training-concise #benefits .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-concise #benefits .benefit-grid article:nth-child(n){border-left:1px solid #bbb;border-top:0}
+ .training-concise #benefits .benefit-grid article:nth-child(2n+1){border-left:0}
+ .training-concise #benefits .benefit-grid article:nth-child(n+3){border-top:1px solid #bbb}
+}
+@media(max-width:760px){
+ .training-concise .hero h1 strong{margin-left:0}
+ .training-concise .program-promise{font-size:clamp(34px,8.8vw,52px);margin:18px 0}
+ .training-concise .program-support-line{font-size:21px}
+ .training-concise .program-challenges .split-heading{grid-template-columns:1fr;gap:16px}
+ .challenge-list{grid-template-columns:repeat(2,minmax(0,1fr));gap:0 20px}
+ .challenge-list h3{font-size:20px}
+ .challenge-list p{font-size:15px}
+ .support-connection,.program-continuity{grid-template-columns:1fr;gap:14px}
+ .program-practice-intro{font-size:16px;margin-bottom:24px}
+ #program-proposals .output-items>li{font-size:20px}
+ .program-continuity h3{font-size:26px}
+}
+@media(max-width:600px){
+ .training-concise #benefits .benefit-grid{grid-template-columns:1fr}
+ .training-concise #benefits .benefit-grid article:nth-child(n){padding:22px 0;border-left:0;border-top:1px solid #bbb}
+ .training-concise #benefits .benefit-grid article:first-child{border-top:0}
+ .training-concise #benefits .benefit-keyword{font-size:27px;min-height:0;margin:12px 0}
+}
+@media(max-width:360px){.challenge-list{grid-template-columns:1fr}.challenge-list>li{padding:15px 0}.challenge-list h3{margin-bottom:6px}.challenge-list p{font-size:16px}}
+@media print{
+ .training-concise .hero h1>span,.training-concise .hero h1 strong{font-size:18pt}
+ .training-concise .program-promise{font-size:30pt}
+ .training-concise .program-support-line{font-size:15pt}
+ .training-concise .hero-description p{font-size:10pt}
+ .challenge-list,.training-concise #benefits .benefit-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+ .challenge-list>li,.training-concise #benefits .benefit-grid article{break-inside:avoid}
+ .training-concise #benefits .benefit-grid article:nth-child(n){padding:14px;border-left:1px solid #bbb;border-top:0}
+ .training-concise #benefits .benefit-grid article:nth-child(3n+1){border-left:0}
+ .training-concise #benefits .benefit-grid article:nth-child(n+4){border-top:1px solid #bbb}
+ .training-concise #benefits .benefit-keyword{font-size:17pt;min-height:2.9em}
+ .training-concise #benefits .benefit-grid p{font-size:10pt}
 }
