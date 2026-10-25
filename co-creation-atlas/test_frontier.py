@@ -1,6 +1,7 @@
 """Offline editorial integrity checks; run after build.py."""
 import json
 import re
+from collections import Counter
 from html.parser import HTMLParser
 from pathlib import Path
 import frontier
@@ -21,48 +22,68 @@ class Parser(HTMLParser):
 
 def main():
     rows, stages=frontier.read(ROOT)
-    assert len(rows)==16
-    assert {c['id'] for c in rows}==ORIGINAL_IDS|{'newlab-brooklyn','arm-robotics-manufacturing-hub','robohouse'}
+    assert len(rows)>=37
+    physical=[c for c in rows if c.get('physicalAI')]
+    assert len(physical)>=7
+    for c in physical:
+        assert all(isinstance(c['physicalAI'].get(k),str) and c['physicalAI'][k] for k in ['robots','data','simulation','validation','safety','access','status']),c['id']
+    assert {c['id'] for c in rows}>=(ORIGINAL_IDS|{'newlab-brooklyn','arm-robotics-manufacturing-hub','robohouse'})
     assert {c['lens'] for c in rows}=={'hard','soft','partners'}
+    counts=Counter(c['lens'] for c in rows)
+    assert all(counts[axis]>=10 for axis in ['hard','soft','partners']), counts
+    assert all(next(c for c in rows if c['id']==cid)['lens']=='hard' for cid in ['arena2036','ars-electronica-futurelab'])
     assert {c['id'] for c in rows if c.get('sharedLab')}==SHARED_IDS
     assert {c[k]['number'] for c in rows for k in ['primaryStep','secondaryStep']}==set(range(1,9))
     assert all(c.get('statusLabel') and c.get('statusNote') for c in rows)
     page=(ROOT/'frontier/index.html').read_text();parsed=Parser(page)
     assert len(parsed.cards)==len(rows)
-    assert len(parsed.photos)==len(rows)+1+sum(len(c.get('extraPhotoIds',[])) for c in rows)
-    assert {c['data-case-id'] for c in parsed.cards if c.get('data-focus')=='shared-labs'}==SHARED_IDS
+    photo_leads=sum(bool(c.get('photoId') or not (c.get('photoLink') or c.get('visualEmbed'))) for c in rows)
+    assert len(parsed.photos)==photo_leads+1+sum(len(c.get('extraPhotoIds',[])) for c in rows)
+    assert {c['data-case-id'] for c in parsed.cards if 'shared-labs' in c.get('data-focus','').split()}==SHARED_IDS
     assert len(parsed.steps)==2*len(rows)
+    assert {c['data-case-id'] for c in parsed.cards if 'physical-ai' in c.get('data-focus','').split()}=={c['id'] for c in physical}
+    assert page.count('class="frontier-lab-detail frontier-physical-ai-detail"')==len(physical)
+    assert '?focus=physical-ai#frontier-explore' in parsed.links
     assert page.count('class="frontier-evidence"')==len(rows)
     assert not re.search(r'世界一(?:の|位)|世界[１1]位|世界最高|ランキング|順位[：:]|scores|rankReason',page)
     assert all(i.get('alt') and i.get('width') and i.get('height') for i in parsed.photos)
     for c in rows:
-        assert '../cases/'+c['id']+'/' in parsed.links
+        if c.get('externalCase'):
+            assert c['caseUrl'] in parsed.links and c['caseUrl'].startswith('https://')
+            assert '../cases/'+c['id']+'/' not in parsed.links
+            assert len(c['sources'])>=3, c['id']
+        else:
+            assert '../cases/'+c['id']+'/' in parsed.links
         for k in ['primaryStep','secondaryStep']:
             assert f'../learn/step-{c[k]["number"]:02d}/' in parsed.links
             assert frontier.e(c[k]['why']) in page
         for s in c['sources']:assert s['url'] in parsed.links
-        if c.get('sharedLab'):
-            lab=c['sharedLab']
-            for key in ['type','facilities','access','collaboration','comparison','photoReading']:
+        if c.get('sharedLab') or c.get('facilityStudy'):
+            lab=c.get('sharedLab') or c['facilityStudy']
+            for key in ['type','facilities','access','collaboration','photoReading']:
                 assert frontier.e(lab[key]) in page
+            if lab.get('comparison'): assert frontier.e(lab['comparison']) in page
             for question in lab['questions']:assert frontier.e(question) in page
             for visual in lab['visualSources']:
                 assert visual['url'] in parsed.links and frontier.e(visual['note']) in page
+        if c.get('sharedLab'):
             assert f'?focus=shared-labs#case-{c["id"]}' in parsed.links
             detail=(ROOT/'cases'/c['id']/'index.html').read_text()
             assert detail.count('class="frontier-case-return"')==1
             assert f'../../frontier/?focus=shared-labs#case-{c["id"]}' in detail
         if c.get('photoId'):
-            media=json.loads((ROOT/'data/media.json').read_text())
+            media=json.loads((ROOT/'data/media.json').read_text())+json.loads((ROOT/'data/frontier-media.json').read_text())
             selected=next(m for m in media if m['assetId']==c['photoId'])
             assert selected['caseId']==c['id']
             selected_src=selected.get('remote') or '../'+selected['local']
             if selected.get('revision') and not selected.get('remote'):selected_src+='?v='+selected['revision']
             assert selected_src in {image.get('src') for image in parsed.photos}
     assert '?focus=shared-labs#frontier-explore' in parsed.links
-    assert page.count('id="frontier-shared-filter"')==1
-    assert page.count('class="frontier-lab-visuals"')==len(SHARED_IDS)
-    assert page.count('class="frontier-lab-detail"')==len(SHARED_IDS)
+    assert all(page.count('data-focus-filter="'+focus+'"')==1 for focus in ['all','shared-labs','physical-ai'])
+    facility_count=sum(bool(c.get('sharedLab') or c.get('facilityStudy')) for c in rows)
+    assert page.count('class="frontier-lab-visuals"')==facility_count
+    assert page.count('class="frontier-lab-detail"')==facility_count
+    assert page.count('class="frontier-visual-details"')==sum(bool(c.get('sharedLab') or c.get('facilityStudy') or c.get('extraPhotoIds')) for c in rows)
     home=(ROOT/'index.html').read_text()
     assert home.count('class="frontier-entry"')==1
     assert home.index('class="frontier-entry"')<home.index('class="step-home-grid"')
@@ -72,6 +93,11 @@ def main():
     assert '共通仕様を公開・国際規格へ' in page and '実証終了（2023）' in page and '展開中' in page
     assert '<noscript>' in page
     assert len(json.loads((ROOT/'data/cases.json').read_text()))==115
-    print('PASS: 16 source-backed selections (original 13 retained), 7 shared research factories, 3 axes, all 8 steps, attributed photos, visual/source/detail links, home entry and sitemap; 115 existing cases retained.')
+    extension=json.loads((ROOT/'data/frontier-media.json').read_text())
+    for m in extension:
+        assert all(m.get(key) for key in ['assetId','caseId','sourceUrl','credit','alt','license','licenseUrl','imageDate','dimensions'])
+        assert m.get('status') in {'cleared-cc','cleared-editorial-only','provider-embed'}
+        assert m.get('remote') or ((ROOT/m['local']).is_file() and (ROOT/m['local']).stat().st_size>0)
+    print(f'PASS: {len(rows)} source-backed selections, axis counts {dict(counts)}, original 16 retained, 7 shared research factories, all 8 steps, attributed space photos and valid external cases; 115 existing cases retained.')
 
 if __name__=='__main__':main()

@@ -1,5 +1,678 @@
 [
   {
+    "id": "arena2036",
+    "name": "ARENA2036｜組み替えられる研究工場",
+    "country": "ドイツ",
+    "city": "シュトゥットガルト",
+    "lens": "hard",
+    "headline": "工場の工程を、実験に合わせて組み替える。",
+    "mechanism": "柱のない研究ホールに、案件ごとの実験区画を配置。人と機械の工程を組み替え、研究調整チームが新しい案件を既存設備へ接続する。ガラス越しにホールを見渡す共用執務・会議空間が隣接し、議論から実機試験へ移れる。",
+    "interesting": "「工場を完成させる」のではなく、「生産の仕組みを何度も作り直せる器」をつくる。Physical AI・人型ロボットの物流や機械への投入も、現実に近い実験機で検証する。",
+    "partners": [
+      {
+        "name": "ARENA2036／SILS",
+        "contribution": "産業・研究の共創拠点と、配線製造の標準化に向けた協働の場を形成。"
+      },
+      {
+        "name": "Komax／Schleuniger",
+        "contribution": "配線加工の知見から、構造、部品、ロボットの把持空間などの設計指針を検討。"
+      },
+      {
+        "name": "KOSTAL／KOMAX／COROFLEX",
+        "contribution": "別プロジェクトVWS4LSで、メーカー横断カタログ実演用の参照データモデルを提供。"
+      },
+      {
+        "name": "DINの規格委員会",
+        "contribution": "正式な規格策定を担う。現行DIN 72036:2026-04は製品設計とデジタル記述の要件を含む。"
+      }
+    ],
+    "outcome": {
+      "text": "SILSの協働はDIN 72036の2024年版につながった。2026年4月版が旧版を置換したことをDIN Mediaで確認。VWS4LSではKOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログを実演した。",
+      "date": "DIN初版：2024-06／現行版：2026-04／カタログ実演：公表日記載なし",
+      "caveat": "規格の発行と実演は確認できるが、採用企業数・自動化率向上・投資回収を示す成果ではない。SILS、VWS4LS、ARENA2036-Xは異なる関連活動であり、同一案件として混同しない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "柱のないホールと可変の実験区画で、機器や人の工程を組み替えた実物の試験系をつくる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "実機に加え、部品・設備を共通のデジタル表現で接続し、企業間でデータを扱えるか確かめる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Automation in wire-harness production: approval of DIN 72036",
+        "url": "https://www.komaxgroup.com/de/stories/automation-in-wire-harness-production-approval-of-the-din-72036",
+        "publishedDate": "2024-07-03",
+        "claim": "競争前協働、Komax・Schleunigerの貢献、2024年規格化。"
+      },
+      {
+        "title": "DIN 72036:2026-04",
+        "url": "https://www.dinmedia.de/en/standard/din-72036/398287446?indexName=prod_dinmedia_products",
+        "publishedDate": "2026-04",
+        "claim": "現行版・2024版置換、設計指針とデジタル記述要件。"
+      },
+      {
+        "title": "Inclusion of the Asset Administration Shell in the product catalog",
+        "url": "https://arena2036.de/en/vws4ls/ergebnisse/integration-der-verwaltungsschale-in-den-produktkatalog-2/",
+        "publishedDate": "公表日記載なし",
+        "claim": "KOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログの実演。"
+      },
+      {
+        "title": "Digital product description (TP7)",
+        "url": "https://arena2036.de/en/wire-harness-standardization/ueberblick-kopie/digitale-produktbeschreibung-tp7/",
+        "publishedDate": "公表日記載なし",
+        "claim": "共通データプロファイルと規格への反映。"
+      },
+      {
+        "title": "The Research Factory",
+        "url": "https://arena2036.de/en/ueber-uns/die-forschungsfabrik/",
+        "publishedDate": "公表日なし・2025年末の改装に言及",
+        "claim": "無柱ホール、案件別実験区画、研究調整、ガラス越しの隣接執務空間、2025年末の改装。",
+        "locator": "The ARENA2036 Research Factory本文"
+      },
+      {
+        "title": "Membership Information",
+        "url": "https://arena2036.de/en/mitglieder/infos-zur-mitgliedschaft/",
+        "publishedDate": "公表日なし",
+        "claim": "登録協会、参加資格、承認とオンボーディング",
+        "locator": "Membership Basics / admission process"
+      },
+      {
+        "title": "ARENA2036-X – About the Project",
+        "url": "https://arena2036.de/en/arena2036-x-projekt/",
+        "publishedDate": "公表日なし",
+        "claim": "会員向け試験環境、企業資金、AAS・データスペース、技術受入れと事務局",
+        "locator": "About the Project / Project structure and technologies used"
+      },
+      {
+        "title": "Physical AI & Humanoid Robotics",
+        "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
+        "publishedDate": "公表日なし",
+        "claim": "物流・機械投入・検査、安全、現実的条件での試験。研究目標・実施方式として扱う",
+        "locator": "Flexible Automation / The Next Generation / From logistics to human-robot interaction"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "大きな空室だけを用意せず、実験区画の変更、設備接続、隣接する議論の場、研究調整担当を一つの設計にする。実機で確かめた内容を、データ仕様・設計条件へ残す役割も決める。",
+    "caution": "会員制の産業共同研究で、市民参加型ラボとは異なる。情報共有・知財・競争法上の条件は個別に確認が必要。規格は無料公開ではない。",
+    "photo": {
+      "url": "https://mobilitydlab.com/co-creation-atlas/assets/arena-shopfloor.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ARENA2036_Shopfloor.jpg",
+      "credit": "Kalligraphia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageDate": "2024-07-10",
+      "caption": "柱のない共用研究ホール。実験区画と動線の配置を読む施設写真。",
+      "verified": true
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/arena2036/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "研究ホールが稼働中",
+    "statusNote": "共用執務空間は2025年末に改装。Physical AI等の研究内容を現行公式で確認。",
+    "sharedLab": {
+      "type": "実験区画を組み替える会員制の研究工場",
+      "facilities": "柱のない研究ホールを案件ごとに区切り、人と機械の工程を組み替える。床から天井までのガラスで隔てた隣接執務空間から、実験の様子が見える。会員共用の仕事場、電話ブース、会議室、ワークショップ設備を備え、2025年末に改装した。",
+      "access": "登録協会ARENA2036 e.V.、大学、企業、スタートアップ。入会は初回相談→内容調整→正式申請→理事会承認→オンボーディング。ARENA2036-Xは参加企業が資金を負担するネットワーク。",
+      "collaboration": "ARENA2036-XはAAS（機器・部品の共通デジタル記述）と権限を保ったデータ交換の試験環境。技術オンボーディングと共同案件調整を接続する。 Physical AI・人型ロボットの研究では物流、機械への投入、検査などを扱い、現実に近い条件の実験機で検証する方式を公開。研究計画・試験環境の説明であり、量産現場での継続稼働や安全認証の実績とは区別する。",
+      "comparison": "比較の基準：生産工程を組み替えられる実空間に、共用執務・研究調整・データ接続を組み合わせる。SILS・VWS4LSはそこで生まれる関連活動であり、施設そのものの名称ではない。",
+      "photoReading": "2024年7月の実験フロア写真から、柱のない大空間、実験区画、動線の配置を見る。2025年末改装後の執務空間や現在の全設備を写した写真ではないため、公式360°ツアーも参照する。",
+      "questions": [
+        "会費額、設備予約条件、平均受入れ期間",
+        "共通研究と個別研究のIP帰属契約全文",
+        "規格の採用企業数、接続工数削減、投資回収",
+        "Physical AIの継続稼働・安全認証・労働負担軽減の実測値"
+      ],
+      "visualSources": [
+        {
+          "title": "研究ホールと隣接ワークスペースの構成",
+          "url": "https://arena2036.de/en/ueber-uns/die-forschungsfabrik/",
+          "note": "無柱のホール、ガラス越しの共用執務空間、2025年末の改装を公式が説明。"
+        },
+        {
+          "title": "研究工場の公式360°ツアー",
+          "url": "https://arena2036.de/en/metaverse/digitale-fabriken/360-rundgang/",
+          "note": "研究ホールと実験区画を歩くように見られる公式ツアー。撮影・更新時点は未記載。"
+        },
+        {
+          "title": "現行のPhysical AI研究と実験機",
+          "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
+          "note": "公式ページで実験機の写真と、物流・機械投入・検査などの研究テーマを見る。"
+        }
+      ]
+    },
+    "photoId": "arena-shopfloor",
+    "extraPhotoIds": [
+      "arena-exterior"
+    ]
+  },
+  {
+    "id": "ars-electronica-futurelab",
+    "name": "Ars Electronica Center｜Deep Space 8K・Hello Worlds!",
+    "country": "オーストリア",
+    "city": "リンツ",
+    "lens": "hard",
+    "headline": "壁と床を、みんなで入れる実験空間に。",
+    "mechanism": "壁と床を各16×9mの立体映像に変え、人の位置・動きに反応するDeep Space 8K。素材や生命科学のラボ、2026年9月開設のHello Worlds!を同じCenter内に備え、鑑賞・身体体験・問い直しを往復できる。",
+    "interesting": "「映像を見る席」を並べるだけでなく、来場者が映像の中で動き、互いの反応も見られる。設備をつくるFuturelabが公開プログラムと研究にも関わり、実験装置を更新しながら使い続ける。",
+    "partners": [
+      {
+        "name": "Ars Electronica Center",
+        "contribution": "一般公開する施設。展示、教育、日中プログラム、来場者との対話を運営する。"
+      },
+      {
+        "name": "Ars Electronica Futurelab",
+        "contribution": "研究開発部門。Deep Spaceの開発・更新と、企業等との研究・公開試作を担う。Center・Festivalとは異なる単位。"
+      },
+      {
+        "name": "Toyota Motor Corporation Advanced R&D and Engineering Company",
+        "contribution": "Future Humanity ProjectとHello Worlds!の共同研究者。Center全施設の運営主体ではない。"
+      },
+      {
+        "name": "Ars Electronica Solutions",
+        "contribution": "Deep Spaceを他拠点へ導入する際の空間設計、実装、コンテンツ、研修、継続支援を提供する。"
+      }
+    ],
+    "outcome": {
+      "text": "Deep Spaceは2009年から公開され、2022年に投影・計算・追跡設備を更新。2026年10月も日中プログラムを運営している。Hello Worlds!は2026年9月8日に開設し、Festival終了後もCenterのMain Galleryで継続展示する。",
+      "date": "Deep Space：2009年公開／2022年設備更新／現行確認2026-10-25。Hello Worlds!：2026-09-08開設。",
+      "caveat": "新設年と更新年を区別する。展示の存在や来場者の驚きは、研究要件の改善・生活上の需要・費用対効果の実証ではない。RoboLab／RoboArenaの新設は2026-11-30予定で、現時点の稼働施設に含めない。"
+    },
+    "primaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "壁・床の立体投影と身体の追跡で、複数人が同じ仮想環境を体験し、人と技術の関わりを実験できる。",
+      "basis": "公開された設備と運用の仕組みからATLASが対応づけた分析。工程別の効果を測定した結果ではない。"
+    },
+    "secondaryStep": {
+      "number": 2,
+      "title": "未来を問う",
+      "why": "Hello Worlds!の連結した空間で、AIと暮らす感覚や拒否したい条件を、装置に触れた体験から言葉にできる。",
+      "basis": "公開された設備と運用の仕組みからATLASが対応づけた分析。工程別の効果を測定した結果ではない。"
+    },
+    "sources": [
+      {
+        "title": "Deep Space 8K",
+        "url": "https://ars.electronica.art/center/en/deepspace/",
+        "publishedDate": "日付記載なし・2026年10月の現行プログラム掲載",
+        "claim": "壁・床各16×9m、立体視と追跡、日中プログラムは通常入館券で追加料金なし。",
+        "locator": "Deep Space 8K / Dailies / Visit, book, buy the Deep Space"
+      },
+      {
+        "title": "Deep Space 8K EVOLUTION",
+        "url": "https://ars.electronica.art/futurelab/en/projects-deep-space-evolution/",
+        "publishedDate": "2022年の技術更新を説明",
+        "claim": "2009年公開、2022年に投影・計算・2D/3D追跡・操作系を更新。Futurelabがハードとソフトを保守。",
+        "locator": "New technology / New Programs"
+      },
+      {
+        "title": "Virtual Reality & Immersive Environments",
+        "url": "https://ars.electronica.art/center/en/virtual-reality-immersive-environments/",
+        "publishedDate": "日付記載なし・2026-10-25確認",
+        "claim": "一般公開に加え、アバター、人とロボットの協働、ハイブリッド空間の研究に使用。",
+        "locator": "Researching in and on Hybrid Spaces / CoBot Studio / This is how we conduct research"
+      },
+      {
+        "title": "Hello Worlds! – new exhibition at Ars Electronica Center",
+        "url": "https://ars.electronica.art/mediaservice/en/2026/09/07/hello-worlds/",
+        "publishedDate": "2026-09-07",
+        "claim": "2026-09-08開設、翌9日から一般公開し、その後もMain Galleryで継続。3つの連結空間、任意参加・データ削除、Toyotaとの共同研究。",
+        "locator": "Three Interconnected Exhibition Spaces / Personalized Exhibition Experience / Deep Mirror"
+      },
+      {
+        "title": "Hello Worlds! – Platform for Negotiating Humanity",
+        "url": "https://ars.electronica.art/futurelab/en/hello-worlds/",
+        "publishedDate": "2026年9月開設、写真は2026年10月追加を含む",
+        "claim": "作品と試作を結ぶ公開研究空間。Deep Mirror、身体・音声・対話による体験、展示装置の公式写真。",
+        "locator": "Hello Me / Hello You / Hello Us / Interactive system for a unique experience"
+      },
+      {
+        "title": "MaterialLab",
+        "url": "https://ars.electronica.art/center/en/materiallab/",
+        "publishedDate": "公表日記載なし・2026-10-25現行掲載",
+        "claim": "素材・加工法を実験する空間。材料見本、菌糸と粘土の3D印刷、紙折りとロボティクス等を紹介。",
+        "locator": "MaterialLab / Material Showcase / MyCera / ORI*lab"
+      },
+      {
+        "title": "BioLab",
+        "url": "https://ars.electronica.art/center/en/biolab/",
+        "publishedDate": "公表日記載なし・2026-10-25現行掲載",
+        "claim": "生命科学の方法を市民に開くラボ。DNA、細胞培養、バイオリアクター等を紹介。一般来館者の自由な機器利用を示す資料ではない。",
+        "locator": "BioLab / InKure – Bioreactor / Organoids"
+      },
+      {
+        "title": "Opening: RoboLab & RoboArena",
+        "url": "https://ars.electronica.art/center/en/events/opening-robolab-roboarena/",
+        "publishedDate": "2026年10月告知、開設予定2026-11-30",
+        "claim": "新RoboLabとRoboArenaは11月30日18:30開設予定。10月25日時点で開設済みとは扱わない。",
+        "locator": "Opening: RoboLab & RoboArena / Mon 30. Nov 2026"
+      },
+      {
+        "title": "DEEP SPACE by ARS ELECTRONICA",
+        "url": "https://ars.electronica.art/solutions/en/deepspace/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "Solutionsが空間・技術・コンテンツ・研修・継続支援を組み合わせ他拠点への導入を支援。個別費用は未公表。",
+        "locator": "Special Features / Customized Solutions / Technical Details / Deep Space Community"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "公開稼働・2026年9月に展示拡張",
+    "statusNote": "Deep Spaceは更新を重ねる既存設備。Hello Worlds!は開設済み。新RoboLab／RoboArenaは11月30日予定。",
+    "transfer": "大きなスクリーンを購入する前に、「誰が一緒に入り、何を動かし、どの仮説を確かめるか」を決める。設備担当、体験をつくる人、対話を促す人を継続運営に組み込み、参加しない権利とデータを消す操作も空間内に用意する。",
+    "caution": "産業用の共用工場ではなく、市民に公開する展示・体験研究施設。一般入場、研究設備の利用、共同研究契約、他施設への導入は別の入口である。設備更新費・スタッフ工数・共同研究の契約額は未確認。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/ars-electronica-futurelab/",
+    "mappingBasis": "公開された設備と運用の仕組みからATLASが対応づけた分析。工程別の効果を測定した結果ではない。",
+    "facilityStudy": {
+      "type": "大人数で入れる没入型実験室と、市民に開いた研究展示",
+      "facilities": "Deep Space 8Kは16×9mの壁と同寸の床に立体映像を投影する。2022年更新では8台の投影機、2D・3D追跡、計算機と操作系を刷新。Hello Worlds!はMain Gallery内の連結3空間で、鏡型の入口、音声・身体・対話を扱う装置を巡る。別のMaterialLabでは素材見本や加工法を、BioLabでは細胞培養やバイオリアクター等を扱う。",
+      "access": "Centerの公開展示として入館でき、Deep Spaceの日中Dailiesは通常入館券で追加料金なし。学校向け利用・イベント貸出・研究協働はそれぞれ別の相談経路。一般来館が産業機器の自由利用や研究参加を保証するわけではない。Hello Worlds!の個人化体験は任意参加で、参加せずに全展示を利用できる。",
+      "collaboration": "FuturelabはDeep Spaceのハードとソフトを開発・保守し、一般公開と研究に使用。Hello Worlds!はToyotaとの共同研究から生まれ、来場者との対話を研究へ戻す設計を持つ。Solutionsは他拠点への実装・研修・継続支援を扱う。研究展示から具体的な企業の設計判断が何件変わったかは未確認。",
+      "comparison": "ARENA2036が企業の実機・工程を組む共用工場なのに対し、Arsは人が中へ入って体験し、技術との関係を問い直す公開研究環境。共通点は、空間・装置・専門家・反復する運営を一体にしていること。",
+      "photoReading": "Deep Spaceでは壁だけでなく床にも像が映り、来場者がその中に立つ配置を見る。Hello Worlds!では鏡や体験装置と人の動線を読む。写真の撮影年と施設の更新年を分け、Festivalの一時展示を常設の工房と混同しない。",
+      "questions": [
+        "設備更新費、技術スタッフと対話スタッフの必要工数",
+        "市民の反応を研究要件に採用・不採用とする判断手順",
+        "視覚・聴覚・移動上の配慮と、参加せずに通れる動線",
+        "Hello Worlds!の継続評価と、RoboLab／RoboArenaの開設後の稼働状況"
+      ],
+      "visualSources": [
+        {
+          "title": "Deep Spaceの壁・床と設備更新を写真で見る",
+          "url": "https://ars.electronica.art/futurelab/en/projects-deep-space-evolution/",
+          "note": "2022年更新の技術説明と複数の空間写真。写真を2026年新設と扱わない。"
+        },
+        {
+          "title": "Hello Worlds!の3空間・展示装置を見る",
+          "url": "https://ars.electronica.art/futurelab/en/hello-worlds/",
+          "note": "2026年9月開設。Deep Mirror、身体・音声・対話を扱う装置と来場者の写真。"
+        },
+        {
+          "title": "MaterialLabの素材・作業空間を見る",
+          "url": "https://ars.electronica.art/center/en/materiallab/",
+          "note": "素材見本と実験、加工方法を学ぶ空間。自由利用できる産業工房とは区別する。"
+        }
+      ]
+    },
+    "photoId": "ars-deepspace-planet",
+    "extraPhotoIds": [
+      "ars-hello-worlds-space-2026"
+    ]
+  },
+  {
+    "id": "empa-eawag-nest",
+    "name": "Empa / Eawag NEST",
+    "country": "スイス",
+    "city": "デューベンドルフ",
+    "lens": "hard",
+    "headline": "建物を丸ごと、差し替えて住める実験装置に。",
+    "mechanism": "共通の構造・設備を持つ中核と3層の床に、実験用の住居やオフィスを挿入する。DFAB HOUSEではデジタル加工した構造を建て、HiLoでは薄い屋根や設備一体の床を使い、人が暮らし働く条件で確かめる。",
+    "interesting": "新素材を小さな試験片で評価する段階から、建築・設備・使い手を含む実寸の検証へ進める。個々のユニットを更新できるため、施設全体の建替えを待たずに次の技術を試せる。",
+    "partners": [
+      {
+        "name": "Empa / Eawag",
+        "contribution": "実験建物NESTと共通インフラを持ち、研究・産業・公共部門の協働を支える。"
+      },
+      {
+        "name": "ETH Zurich / NCCR Digital Fabrication",
+        "contribution": "DFAB HOUSEやHiLoの設計・デジタル製造技術と研究者を提供。"
+      },
+      {
+        "name": "建設・設備・材料企業",
+        "contribution": "ユニットの設計・施工・機器を共同開発し、製品化に向けて検証する。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年9月の10周年発表は、10の実験ユニットと約150のパートナーを報告。2024年開設のSTEP2では、実験に加え、開設時点で部材を注文できる市場性を重視したと説明する。",
+      "date": "2026-09-30の運営者発表／STEP2は2024年",
+      "caveat": "施設全体の経済効果や、すべての部材の長期性能を示す数字ではない。Beyond.Zeroは次のユニットとして紹介されており、完成・稼働実績に含めない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "構造、温熱、設備、使い手の行動を、実際に暮らし働く建物で一緒に検証できる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "研究段階のデジタル加工や材料を、実寸の住居・オフィスとして組み立てる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "NEST – DFAB HOUSE",
+        "url": "https://dfabhouse.ch/empa-nest/",
+        "publishedDate": "公表日記載なし",
+        "claim": "Empa・Eawagの所有、共通中核・3床・交換可能ユニット、人が住み働く実験環境。",
+        "locator": "NEST本文",
+        "publisher": "NCCR Digital Fabrication"
+      },
+      {
+        "title": "DFAB HOUSE",
+        "url": "https://dfabhouse.ch/dfab-house/",
+        "publishedDate": "公表日記載なし",
+        "claim": "8研究室と産業側が協働し、ロボット施工・3Dプリント型枠・木構造等を実建築へ統合。",
+        "locator": "DFAB HOUSE／Construction／Project credits",
+        "publisher": "NCCR Digital Fabrication"
+      },
+      {
+        "title": "HiLo Opens on NEST",
+        "url": "https://dfab.ch/news/hilo-opens-on-nest",
+        "publishedDate": "2021-10-09",
+        "claim": "2層の執務・研究空間、薄肉屋根、床と空調の統合、実環境での研究。",
+        "locator": "HiLo Opens on NEST本文",
+        "publisher": "NCCR Digital Fabrication"
+      },
+      {
+        "title": "NEST to celebrate its 10th anniversary: A crystal ball for the building sector",
+        "url": "https://www.sif.admin.ch/en/newnsb/yV9dKm7boPlS",
+        "publishedDate": "2026-09-30",
+        "claim": "10ユニット・約150パートナー、2024年のSTEP2、Beyond.Zeroは今後の計画。",
+        "locator": "An incubator／From ideas to innovations／Always one step ahead",
+        "publisher": "Empa（スイス連邦官庁の公式配信）"
+      },
+      {
+        "title": "Empa — Self-learning heating control system saves energy",
+        "url": "https://nachrichten.idw-online.de/2020/01/30/self-learning-heating-control-system-saves-energy",
+        "publishedDate": "2020-01-30",
+        "claim": "UMAR内の実居住用の学生室で暖冷房制御を比較する実証と、その空間写真。最新施設数の根拠とは区別。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "施設を完成させてから実験を入れるのではなく、交換できる実験区画と共通の計測・設備接続を先に設計する。建築確認、利用者への説明、故障時の退避先も実験条件に含める。",
+    "caution": "自由に設備を借りる工作室ではない。建設・共同研究・居住を組み合わせるため、費用負担、許認可、住み手の安全と研究データの扱いを案件ごとに確認する。",
+    "statusLabel": "稼働中・ユニットを継続更新",
+    "statusNote": "2016年開設。2026年9月の公式報告で継続的な研究・産業連携を確認。",
+    "facilityStudy": {
+      "type": "住居・オフィスの実物を入れ替える建築実証プラットフォーム",
+      "facilities": "固定の中核から構造・設備を供給し、3つの床に異なるユニットを搭載。DFAB HOUSEはロボットで組む木構造や3Dプリント型枠、HiLoは曲面の薄い屋根・空調を統合した床を試す。",
+      "access": "大学、建築設計者、建設・材料企業などによる共同プロジェクト。一般の自由利用型工房とは異なり、研究参加、見学、居住・執務の条件は別に確認が必要。",
+      "collaboration": "研究者だけで建てず、設計・施工・設備の実務者が実建築に仕上げる。2024年のSTEP2では試作品の検証から、購入可能な部材としての成立へ進める方針を示す。",
+      "comparison": "ARENA2036が生産工程を組み替える研究工場なら、NESTは住居・オフィス自体を交換して建築技術を試す場。共通インフラと可変部分を分ける設計は共通する。",
+      "photoReading": "NESTのUMARユニットにある実居住用の学生室。机、ベッド、隣接する共有空間、天井の暖冷房パネルが見える。研究者は同規模の2室を使って予測制御と通常制御を比較した。工場・ロボット実験室の写真ではない。",
+      "questions": [
+        "ユニットの企画・建設・更新・撤去費の負担と期間",
+        "居住者・執務者の同意、計測データへのアクセス、故障時の責任",
+        "実験で得た性能が一般建築へ移った後の費用と維持管理実績"
+      ],
+      "visualSources": [
+        {
+          "title": "NESTの全体像と初期の骨格を見る",
+          "url": "https://www.sif.admin.ch/en/newnsb/yV9dKm7boPlS",
+          "note": "公式10周年発表。全体写真は2024年8月、骨格写真は2016年。"
+        },
+        {
+          "title": "HiLoの屋根・床・内観を見る",
+          "url": "https://dfab.ch/news/hilo-opens-on-nest",
+          "note": "2021年開設時の公式写真。NEST内の一つの実験ユニット。"
+        }
+      ]
+    },
+    "externalCase": true,
+    "caseUrl": "https://dfabhouse.ch/empa-nest/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の分析です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "photoId": "empa-nest-umar"
+  },
+  {
+    "id": "mit-nano",
+    "name": "MIT.nano",
+    "country": "米国",
+    "city": "ケンブリッジ",
+    "lens": "hard",
+    "headline": "つくる・測る・体感する設備を、分野を越えて共用する。",
+    "mechanism": "半導体・微細加工のクリーンルーム、低振動・低電磁ノイズの計測室、現実とデジタルをつなぐImmersion Labを一施設に集約。個々の研究室で高額設備を揃えず、試作・観察・体験評価を専門スタッフと進める。",
+    "interesting": "共有するのは機械だけではない。清浄度、振動、電磁環境という実験の前提を建物で整え、訓練・予約・課金を共通化することで、研究室や企業が同じ設備へ入る経路をつくる。",
+    "partners": [
+      {
+        "name": "MIT.nano",
+        "contribution": "共用設備、専門スタッフ、訓練・予約・運用管理を提供。"
+      },
+      {
+        "name": "MIT内外の研究者・企業・スタートアップ",
+        "contribution": "研究課題を持ち込み、利用者区分に応じた条件・料金で実験する。"
+      },
+      {
+        "name": "MIT.nano Consortium",
+        "contribution": "産業側の参加経路を持ち、研究者と企業の接点をつくる。"
+      }
+    ],
+    "outcome": {
+      "text": "MITは2026年5月、年間1,500人超の研究者が200超の装置を使い、約16万時間・8万8千回の利用があると報告。共用施設の予約・訓練・アクセス管理をNEMOへ移行した。",
+      "date": "2026-05-04",
+      "caveat": "運営者が報告した利用規模であり、利用企業の事業化率や研究費削減額ではない。共用設備があっても、材料の適合性・訓練・空き時間の条件は残る。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "微細加工・成膜・加工設備を使い、研究アイデアを実験可能なデバイスや試作品にする。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "Immersion Labで複雑なデータを可視化し、AR/VRやデジタルツインの表現・操作を試せる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "MIT.nano facilities overview",
+        "url": "https://mitnano.mit.edu/",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "45,000平方フィート超のクリーンルーム、11,000平方フィートの計測エリア、12の低振動・低電磁ノイズの計測室。",
+        "locator": "冒頭3施設の説明",
+        "publisher": "MIT.nano"
+      },
+      {
+        "title": "Who can use MIT.nano?",
+        "url": "https://nanousers.mit.edu/access/who-can-use-mitnano",
+        "publishedDate": "現行利用案内・公表日記載なし",
+        "claim": "MIT内外・他大学・企業・スタートアップに開く共用利用と、区分に応じた料金・承認。",
+        "locator": "Categories of facility users／Approval accounts",
+        "publisher": "MIT.nano"
+      },
+      {
+        "title": "About the Immersion Lab",
+        "url": "https://nanousers.mit.edu/immersion-lab",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "3階の共用空間、AR/VR・多次元データ、科学・工学・芸術の協働。",
+        "locator": "About the Immersion Lab／Our mission",
+        "publisher": "MIT.nano"
+      },
+      {
+        "title": "Immersion Lab Capabilities",
+        "url": "https://nanousers.mit.edu/immersion-lab/immersion-lab-application-areas",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "デジタルツイン、モーションキャプチャ、没入型教育などの用途。",
+        "locator": "Capabilities一覧",
+        "publisher": "MIT.nano"
+      },
+      {
+        "title": "Powering 160,000 hours of discovery at MIT.nano",
+        "url": "https://news.mit.edu/2026/powering-160000-hours-discovery-at-mitnano-0504",
+        "publishedDate": "2026-05-04",
+        "claim": "年間研究者数・機器数・利用時間、NEMOによる予約・訓練・利用管理。",
+        "locator": "冒頭／A system for the modern era",
+        "publisher": "MIT News"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "設備リストを揃えるだけでなく、材料の受入れ、訓練、予約、測定、請求を一つの利用経路にする。施設投資は利用率だけでなく、待ち時間・再実験・故障停止も測って判断する。",
+    "caution": "一般来場者が即日自由に装置を使える施設ではない。利用者登録、訓練、装置ごとの適合・安全条件、費用を確認する。公開性と無条件の入室を混同しない。",
+    "statusLabel": "共用設備が稼働中",
+    "statusNote": "2026年5月の利用実績・運用更新を確認。施設は新築直後の計画段階ではない。",
+    "facilityStudy": {
+      "type": "微細加工・計測・没入型可視化を結ぶ共用研究施設",
+      "facilities": "Fab.nanoは45,000平方フィート超のISO 5・6・7のクリーンルーム。Characterization.nanoは11,000平方フィートの計測エリアで、低振動・低電磁ノイズの12室を備える。3階にはImmersion Labを配置。",
+      "access": "MIT内の研究者に加え、他大学・政府機関・企業・スタートアップも受入れ対象。利用区分ごとに基本料金等が異なる。承認者の設定、必要な訓練・安全条件を経て利用する。",
+      "collaboration": "加工・分析の専門家と利用者をつなぎ、装置・研究環境を学部や企業の境界を越えて共有。NEMOで訓練・予約・アクセス・連絡を統合し、多数の利用者を支える。",
+      "comparison": "ARENA2036が実寸の生産工程を組むのに対し、MIT.nanoは微細加工と計測の成立条件を共用する。空間の広さより、清浄・振動・電磁環境と支援人材が核心になる。",
+      "photoReading": "クリーンルームの連続した作業区画、ガラス越しの視認性、機器周囲の動線を見る。Immersion Labの写真は別の用途の空間であり、微細加工室と混同しない。",
+      "questions": [
+        "自社材料・加工方法の受入れ可否と安全審査",
+        "訓練待ち・予約待ち・停止時間、実験1回あたりの総費用",
+        "成果物・データ・知財の帰属と企業機密の区分"
+      ],
+      "visualSources": [
+        {
+          "title": "施設を構成する3つの空間を見る",
+          "url": "https://mitnano.mit.edu/",
+          "note": "Fab.nano、Characterization.nano、Immersion Labの公式案内。"
+        },
+        {
+          "title": "Immersion Labの設備と用途を見る",
+          "url": "https://nanousers.mit.edu/immersion-lab",
+          "note": "可視化・AR/VR・学際的な制作を扱う3階の研究空間。"
+        }
+      ]
+    },
+    "externalCase": true,
+    "caseUrl": "https://mitnano.mit.edu/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の分析です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "visualEmbed": {
+      "url": "https://www.youtube.com/embed/Gdlz6trQvFA",
+      "sourceUrl": "https://mitnano.mit.edu/request-tour-mitnano",
+      "title": "Happy Nano Day 2021: Step inside MIT.nano",
+      "note": "MIT公式のクリーンルーム見学動画（2021年）。現行設備総数の証拠には用いない。"
+    }
+  },
+  {
+    "id": "amrf-bradfield",
+    "name": "AMRF｜Bradfield First Building",
+    "country": "オーストラリア",
+    "city": "シドニー西部・ブラッドフィールド",
+    "lens": "hard",
+    "headline": "ガラスの工場で、量産設備を買う前に工程を試す。",
+    "mechanism": "2025年開業のFirst Buildingは、約1,000㎡の製造ホール、執務、展示・イベント空間を一つの屋根でつなぐ。ガラス越しに製造試験が見え、金属3Dプリント、精密加工、複合材、計測を組み合わせて生産工程を検証する。",
+    "interesting": "完成品の見本を並べる場所ではなく、産業用機械で「つくれる条件」を確かめる。見学動線と製造ホールを分けながら見せることで、実験・企業の設備投資判断・人材育成を同じ拠点につなぐ。",
+    "partners": [
+      {
+        "name": "AMRF Co. / Bradfield Development Authority",
+        "contribution": "政府系の運営主体として設備・技術支援を提供。"
+      },
+      {
+        "name": "製造企業・研究機関",
+        "contribution": "工程課題を持ち込み、技術案件・工程検証を共同実施する。"
+      },
+      {
+        "name": "AMRF Connect",
+        "contribution": "企業・研究機関への接続、施設ツアー、技術セミナー・研修の窓口。"
+      }
+    ],
+    "outcome": {
+      "text": "公式案件報告ではVXB Aerospaceが、金属積層造形と精密加工を組み合わせて宇宙推進器の部品を製造可能な形へ具体化。別案件のOzAmmoniaでは4種類の格子形状を一つの試作サイクルで比較した。",
+      "date": "現行公式案件報告・公表日記載なし／First Buildingは2025-03-05開業",
+      "caveat": "報告は試作・工程開発の実績。宇宙での運用成功、量産・売上、低炭素効果の達成を示すものではない。Second Buildingと工業用CTは現時点の稼働設備に含めない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "金属3Dプリント・切削・複合材・計測をつなぎ、製造条件を確かめられる部品や治具をつくる。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "設備投資を決める前に、工程の再現性や製造可能性を確かめ、導入判断の材料を得る。",
+      "basis": "施設・運用の一次資料に基づくATLASの分析。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "First Building",
+        "url": "https://bradfield.city/places/amrf-precinct/first-building",
+        "publishedDate": "現行案内・2025-03-05開業を記載",
+        "claim": "ガラス張り製造ホール、約1,000㎡、3機能の一体化、屋根・低炭素材料・空間写真。",
+        "locator": "About the First Building／Key design features／Image gallery",
+        "publisher": "Bradfield City"
+      },
+      {
+        "title": "About the AMRF",
+        "url": "https://www.amrf.sydney/about-the-amrf",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "政府系の運営主体、First Building稼働中。量産受託施設ではない。第2棟の旧ステータスは2026年7月の州発表で更新。",
+        "locator": "What is the AMRF?／What AMRF is not／Our facilities",
+        "publisher": "AMRF"
+      },
+      {
+        "title": "Explore our capabilities",
+        "url": "https://www.amrf.sydney/explore-our-capabilities",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "積層造形・複合材・精密加工・計測等。工業用CTは2027予定、追加能力は将来計画。",
+        "locator": "Our capabilities",
+        "publisher": "AMRF"
+      },
+      {
+        "title": "Partner with us",
+        "url": "https://www.amrf.sydney/partner-us",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "案件別有償サービス、工程検証、技術開発、研修と参加モデル。",
+        "locator": "Service Offerings／Engagement Models",
+        "publisher": "AMRF"
+      },
+      {
+        "title": "Customer success stories",
+        "url": "https://www.amrf.sydney/customer-success-stories",
+        "publishedDate": "公表日記載なし",
+        "claim": "VXBの金属積層造形と精密加工、OzAmmoniaの格子形状比較。",
+        "locator": "VXB Aerospace／OzAmmonia",
+        "publisher": "AMRF"
+      },
+      {
+        "title": "Major projects cementing Western Sydney Aerotropolis as a centre for industry and innovation",
+        "url": "https://www.nsw.gov.au/ministerial-releases/new-bradfield-city-building-begins",
+        "publishedDate": "2026-07-16",
+        "claim": "Second Buildingは2026年7月16日着工。既に稼働する第1棟と、建設中の半導体先端パッケージ施設・第2製造ホールを区別。",
+        "locator": "冒頭、Second Buildingの機能と第1棟との関係",
+        "publisher": "NSW Government"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "製造ホールを技術者だけの閉じた場所にせず、安全に分離した見学・対話の動線を設ける。装置導入より前に、案件の終了条件を部品・工程データ・次の投資判断として定める。",
+    "caution": "量産工場や製造請負の代替ではなく、導入前の工程開発・検証の施設。料金・契約は案件ごとに確認。Second Buildingの半導体関連機能や2027年予定の工業用CTを、現在利用できる設備として扱わない。",
+    "statusLabel": "2025年開業・製造ホール稼働中",
+    "statusNote": "First Buildingの実空間と実施案件を確認。第2棟は2026年7月16日着工、未稼働。",
+    "facilityStudy": {
+      "type": "産業設備で量産前の工程を検証する製造ホール",
+      "facilities": "約1,000㎡のManufacturing Hallを、執務・展示・イベント空間と一つの屋根で接続。ガラス越しに作業が見える。金属・樹脂の積層造形、複合材成形、多軸切削、計測等を扱う。",
+      "access": "基本は案件ごとの有償技術サービス。時間単位の支援、明確な技術案件、多段階の開発計画等で参加。見学・イベント利用と、機械を使った技術支援の契約は区別される。",
+      "collaboration": "製造企業とAMRFの技術者が設計・製造・計測を接続。VXB案件では銅合金の金属3Dプリントと仕上げ加工を組み合わせ、複雑形状を製造へ移す方法を具体化した。",
+      "comparison": "ARENA2036の共用研究ホールに近いが、AMRFは企業が生産投資する前の工程検証を強く打ち出す。外から見える製造ホールが学習と産業支援の接点にもなる。",
+      "photoReading": "First Buildingの実写で、ガラス越しの製造ホール、広い屋根、木構造・中庭と機械の関係を見る。第2棟の完成予想図とは区別する。",
+      "questions": [
+        "対象部品の材料・寸法・公差と設備適合性",
+        "技術者工数・機械利用・材料・検査を含む総費用と納期",
+        "試作後に量産を受け持つ企業、設計変更・知財・品質の責任"
+      ],
+      "visualSources": [
+        {
+          "title": "製造ホールと建物内外の公式写真",
+          "url": "https://bradfield.city/places/amrf-precinct/first-building",
+          "note": "First Buildingの実写ギャラリー。中庭・屋根・製造設備の位置関係を見る。"
+        },
+        {
+          "title": "製造ホールの公式3Dツアー",
+          "url": "https://www.amrf.sydney/manufacturing-hall-virtual-tour",
+          "note": "稼働中のManufacturing Hall内を探索できる。撮影・更新時点は未記載。"
+        }
+      ]
+    },
+    "externalCase": true,
+    "caseUrl": "https://www.amrf.sydney/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の分析です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "photoLink": {
+      "url": "https://bradfield.city/places/amrf-precinct/first-building",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
     "id": "doll-living-lab",
     "name": "DOLL Living Lab",
     "country": "デンマーク",
@@ -923,150 +1596,6 @@
     "photoId": "massrobotics-event-space-2022"
   },
   {
-    "id": "arena2036",
-    "name": "ARENA2036｜SILS・VWS4LS",
-    "country": "ドイツ",
-    "city": "シュトゥットガルト",
-    "lens": "partners",
-    "headline": "企業ごとの試作を、業界で使えるルールへ。",
-    "mechanism": "自動車の配線製造を題材に、メーカー・部品・製造装置・ソフトウェア企業が競争前の共通課題を共同研究。自動化しやすい設計条件をSILSで整理し、データの共通表現をVWS4LSで実演する。",
-    "interesting": "交流や共同展示で終わらず、設計ルールを正式な規格へ、部品データをメーカー横断カタログへつなぐ。「組み合わせて動くための条件」そのものが共同成果になる。",
-    "partners": [
-      {
-        "name": "ARENA2036／SILS",
-        "contribution": "産業・研究の共創拠点と、配線製造の標準化に向けた協働の場を形成。"
-      },
-      {
-        "name": "Komax／Schleuniger",
-        "contribution": "配線加工の知見から、構造、部品、ロボットの把持空間などの設計指針を検討。"
-      },
-      {
-        "name": "KOSTAL／KOMAX／COROFLEX",
-        "contribution": "別プロジェクトVWS4LSで、メーカー横断カタログ実演用の参照データモデルを提供。"
-      },
-      {
-        "name": "DINの規格委員会",
-        "contribution": "正式な規格策定を担う。現行DIN 72036:2026-04は製品設計とデジタル記述の要件を含む。"
-      }
-    ],
-    "outcome": {
-      "text": "SILSの協働はDIN 72036の2024年版につながった。2026年4月版が旧版を置換したことをDIN Mediaで確認。VWS4LSではKOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログを実演した。",
-      "date": "DIN初版：2024-06／現行版：2026-04／カタログ実演：公表日記載なし",
-      "caveat": "規格の発行と実演は確認できるが、採用企業数・自動化率向上・投資回収を示す成果ではない。SILS、VWS4LS、ARENA2036-Xは異なる関連活動であり、同一案件として混同しない。"
-    },
-    "primaryStep": {
-      "number": 8,
-      "title": "社会へ広げる",
-      "why": "一社の解決策を、次のメーカーも参照できる設計規格とデータ形式へ変える。",
-      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
-    },
-    "secondaryStep": {
-      "number": 4,
-      "title": "デジタルで試す",
-      "why": "部品の情報を共通のデータモデルで表し、メーカーをまたいでカタログ上で扱えるか実演する。",
-      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
-    },
-    "sources": [
-      {
-        "title": "Automation in wire-harness production: approval of DIN 72036",
-        "url": "https://www.komaxgroup.com/de/stories/automation-in-wire-harness-production-approval-of-the-din-72036",
-        "publishedDate": "2024-07-03",
-        "claim": "競争前協働、Komax・Schleunigerの貢献、2024年規格化。"
-      },
-      {
-        "title": "DIN 72036:2026-04",
-        "url": "https://www.dinmedia.de/en/standard/din-72036/398287446?indexName=prod_dinmedia_products",
-        "publishedDate": "2026-04",
-        "claim": "現行版・2024版置換、設計指針とデジタル記述要件。"
-      },
-      {
-        "title": "Inclusion of the Asset Administration Shell in the product catalog",
-        "url": "https://arena2036.de/en/vws4ls/ergebnisse/integration-der-verwaltungsschale-in-den-produktkatalog-2/",
-        "publishedDate": "公表日記載なし",
-        "claim": "KOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログの実演。"
-      },
-      {
-        "title": "Digital product description (TP7)",
-        "url": "https://arena2036.de/en/wire-harness-standardization/ueberblick-kopie/digitale-produktbeschreibung-tp7/",
-        "publishedDate": "公表日記載なし",
-        "claim": "共通データプロファイルと規格への反映。"
-      },
-      {
-        "title": "The Research Factory",
-        "url": "https://arena2036.de/en/ueber-uns/die-forschungsfabrik/",
-        "publishedDate": "公表日なし・2025年末の改装に言及",
-        "claim": "無柱、実験区画、調整担当、建設費ERDFと大学が半分ずつ、隣接執務スペース",
-        "locator": "The ARENA2036 Research Factory / Research Hall / Virtual Tour"
-      },
-      {
-        "title": "Membership Information",
-        "url": "https://arena2036.de/en/mitglieder/infos-zur-mitgliedschaft/",
-        "publishedDate": "公表日なし",
-        "claim": "登録協会、参加資格、承認とオンボーディング",
-        "locator": "Membership Basics / admission process"
-      },
-      {
-        "title": "ARENA2036-X – About the Project",
-        "url": "https://arena2036.de/en/arena2036-x-projekt/",
-        "publishedDate": "公表日なし",
-        "claim": "会員向け試験環境、企業資金、AAS・データスペース、技術受入れと事務局",
-        "locator": "About the Project / Project structure and technologies used"
-      },
-      {
-        "title": "Physical AI & Humanoid Robotics",
-        "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
-        "publishedDate": "公表日なし",
-        "claim": "物流・機械投入・検査、安全、現実的条件での試験。研究目標・実施方式として扱う",
-        "locator": "Flexible Automation / The Next Generation / From logistics to human-robot interaction"
-      }
-    ],
-    "checked": "2026-10-25",
-    "transfer": "企業が競う部分ではなく、接続・安全・品質の共通課題を切り出し、試験結果を仕様へ戻す役割を置く。",
-    "caution": "会員制の産業共同研究で、市民参加型ラボとは異なる。情報共有・知財・競争法上の条件は個別に確認が必要。規格は無料公開ではない。",
-    "photo": {
-      "url": "https://mobilitydlab.com/co-creation-atlas/assets/arena-shopfloor.jpg",
-      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ARENA2036_Shopfloor.jpg",
-      "credit": "Kalligraphia",
-      "license": "CC BY-SA 4.0",
-      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
-      "imageDate": "2024-07-10",
-      "caption": "ARENA2036の共用実験フロア。規格づくりの活動を支える拠点の背景写真。",
-      "verified": true
-    },
-    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/arena2036/",
-    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
-    "checkedTimezone": "Asia/Tokyo",
-    "statusLabel": "規格化と企業横断実証",
-    "statusNote": "DIN 72036は2026年4月版が現行。規格発行と各社での導入効果は別。",
-    "sharedLab": {
-      "type": "会員企業が共通仕様を育てる研究工場",
-      "facilities": "無柱の研究ホールを案件ごとに区切り、人と機械の工程を組み替える。会員共用の執務・会議・ワークショップ空間はホールに隣接し、研究調整チームが新規案件を既存設備へ統合する。",
-      "access": "登録協会ARENA2036 e.V.、大学、企業、スタートアップ。入会は初回相談→内容調整→正式申請→理事会承認→オンボーディング。ARENA2036-Xは参加企業が資金を負担するネットワーク。",
-      "collaboration": "ARENA2036-XはAAS（機器・部品の共通デジタル記述）と権限を保ったデータ交換の試験環境。技術オンボーディングと共同案件調整を接続する。 Physical AI・人型ロボットの研究では物流、機械への投入、検査などを扱い、現実に近い条件の実験機で検証する方式を公開。研究計画・試験環境の説明であり、量産現場での継続稼働や安全認証の実績とは区別する。",
-      "comparison": "比較の基準：実験区画、研究調整、企業間のデータ交換を結び付け、共同成果を業界の共通仕様へつなぐ。",
-      "photoReading": "2024年7月の写真から、同じ大空間に実験区画を設ける構成を読む。公式360°ツアーでは空間と設備の配置を探索できる。ツアーの撮影・更新時点は明示されておらず、現行の全設備を示すものとは限らない。",
-      "questions": [
-        "会費額、設備予約条件、平均受入れ期間",
-        "共通研究と個別研究のIP帰属契約全文",
-        "規格の採用企業数、接続工数削減、投資回収",
-        "Physical AIの継続稼働・安全認証・労働負担軽減の実測値"
-      ],
-      "visualSources": [
-        {
-          "title": "研究工場の公式360°ツアー",
-          "url": "https://arena2036.de/en/metaverse/digitale-fabriken/360-rundgang/",
-          "note": "研究ホールと実験区画を歩くように見られる公式ツアー。撮影・更新時点は未記載。"
-        },
-        {
-          "title": "現行のPhysical AI研究と実験機",
-          "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
-          "note": "公式ページで実験機の写真と、物流・機械投入・検査などの研究テーマを見る。"
-        }
-      ]
-    },
-    "photoId": "arena-shopfloor"
-  },
-  {
     "id": "hvm-catapult",
     "name": "HVM Catapult／AMRC × LISI AEROSPACE",
     "country": "英国",
@@ -1521,5 +2050,2068 @@
       ]
     },
     "photoId": "arm-mill19-interior"
+  },
+  {
+    "id": "mhub-chicago",
+    "name": "mHUB｜試作から事業化へ進むアクセラレーター",
+    "country": "米国",
+    "city": "シカゴ",
+    "lens": "soft",
+    "externalCase": true,
+    "caseUrl": "https://mhub.org/accelerator",
+    "headline": "工房でつくりながら、顧客・量産・採算も確かめる。",
+    "mechanism": "6か月の現地アクセラレーターで、顧客の課題確認、試作、製造しやすい設計、供給網、採算、初期顧客を同時に詰める。終了後も18か月の支援とラボ利用をつなぎ、デモ発表を支援の終点にしない。",
+    "interesting": "同じ建物の試作ラボに、製品開発の専門家、分野別メンター、企業との実証機会、出資を重ねる。機械の貸し出しだけでは埋まらない「動く試作から、売って供給できる製品へ」の移行をプログラムとして扱う。",
+    "partners": [
+      {
+        "name": "mHUB",
+        "contribution": "試作ラボ、現地の技術支援、カリキュラム、メンターと企業への接続を提供。"
+      },
+      {
+        "name": "mHUB Ventures",
+        "contribution": "選抜企業へ出資。追加投資は一部の企業を対象とし、全社に保証されない。"
+      },
+      {
+        "name": "Current／産業・技術パートナー",
+        "contribution": "水技術コースでは産業利用の課題を持ち寄り、技術者・投資家との接点をつくる。コースごとに関係企業が異なる。"
+      },
+      {
+        "name": "参加する起業チーム",
+        "contribution": "現地で製品と顧客仮説を検証し、製造・事業の条件を具体化する。"
+      }
+    ],
+    "outcome": {
+      "text": "Sustainable Water Techコースは2026年4月に終了したと運営者が報告。産業用水の利用・再利用・監視・インフラを扱う企業が参加した。現行の案内では次のCompute–Energyコースを2026年10月開始予定として掲載している。",
+      "date": "水技術コース：2026-04終了／Energy Tech現行案内：2026-10開始予定",
+      "caveat": "コース実施と支援内容の確認であり、参加による売上増加、製品化率、環境改善の因果効果は未確認。10月コースは開始予定表記が残るため、全参加企業の稼働開始を断定しない。"
+    },
+    "primaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "試作品の性能だけでなく、初期顧客、製造方法、供給網、単位当たりの採算を一緒に検証する。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "金属・電子・樹脂などの試作設備と技術者の支援を使い、設計を物理的に試せる。"
+    },
+    "sources": [
+      {
+        "title": "Hands-on Startup Accelerator for HardTech",
+        "url": "https://mhub.org/accelerator",
+        "publishedDate": "公表日記載なし・現行案内",
+        "claim": "6か月の現地支援、18か月の継続支援、分野別のメンターと出資。",
+        "locator": "6-month startup accelerator / Prototyping resources / Robust Curriculum"
+      },
+      {
+        "title": "mHUB Energy Tech Accelerator",
+        "url": "https://mhub.org/energy-tech-accelerator",
+        "publishedDate": "公表日記載なし・2026年10月コース案内",
+        "claim": "顧客探索、PoC、製造性、供給網、単位採算、パイロット顧客を含むカリキュラム。",
+        "locator": "Key Program Curriculum / Program Structure / Up Next"
+      },
+      {
+        "title": "Smart and Sustainable Manufacturing Accelerator",
+        "url": "https://mhub.org/sustainable-manufacturing-iiot-accelerator",
+        "publishedDate": "公表日記載なし・2026年4月終了を記載",
+        "claim": "Currentとの水技術コース終了と支援対象。",
+        "locator": "Most Recent Cohort: Sustainable Water Tech"
+      },
+      {
+        "title": "Rapid Prototyping Lab & Equipment",
+        "url": "https://mhub.org/prototyping-lab",
+        "publishedDate": "公表日記載なし",
+        "claim": "会員・アクセラレーターからの設備利用、現地スタッフ訓練、金属・電子・木工等の設備。",
+        "locator": "Prototyping Lab / Lab at a Glance"
+      },
+      {
+        "title": "About mHUB",
+        "url": "https://mhub.org/about",
+        "publishedDate": "公表日記載なし・2023年10月の移転整備を記載",
+        "claim": "現在の施設を2023年に整備し、試作・マイクロファクトリー・企業実証をつなぐ。",
+        "locator": "mHUB removes barriers / Located in the heart of U.S. manufacturing"
+      },
+      {
+        "title": "mHUB Virtual Tour",
+        "url": "https://mhub.org/virtual-tour",
+        "publishedDate": "撮影・更新時点は未記載",
+        "claim": "現在案内される工房・共用空間の360°ツアー。",
+        "locator": "mHUB Virtual Tour / Interested in visiting in person?"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "transfer": "設備の利用時間に加えて、顧客仮説、試作の変更、製造性、採算を同じ定例でレビューする。発表後にも工房と担当者へ戻れる支援期間を確保する。",
+    "caution": "選抜・出資を伴う起業支援であり、誰でも無料で使える施設ではない。出資内訳に公式ページ間の差があるため、応募コースの最新契約で確認する。成果を参加企業の総調達額だけで評価しない。",
+    "statusLabel": "試作・事業化支援を継続",
+    "statusNote": "2023年整備の現拠点。2026年4月に水技術コース終了を報告。",
+    "facilityStudy": {
+      "type": "試作ラボと事業化の反復を一体運営する起業拠点",
+      "facilities": "電子、金属、レーザー加工、樹脂、木工、繊維、試験などのラボと共用ワークスペース。現地スタッフによる個別訓練や技術支援を受け、必要に応じて加工・設計の専門家を起用する。",
+      "access": "設備は会員またはアクセラレーター参加によって利用する。選抜型コースは出資を伴い、通常の施設会員とは条件が異なる。",
+      "collaboration": "製品開発と市場・事業検証を並行させる6か月のコースに、18か月の継続支援を接続。企業・技術者・投資家との接点を、製造性と顧客の検証へ使う。",
+      "comparison": "ATLASの分析：機械の共有より、試作・顧客探索・量産準備を同じ期間で回す運営方法をソフトの主軸として読む。",
+      "photoReading": "現在案内される施設の工房と共用スペースを見る。試作設備の有無は写真で確認できるが、予約可能時間、混雑、支援の質や事業成果は写真だけでは分からない。",
+      "questions": [
+        "コースごとの最新の出資契約と費用内訳",
+        "参加後の製品化率・継続受注・生存率を含む比較評価",
+        "設備の予約枠、訓練条件、消耗品・追加作業費",
+        "発表終了後の支援頻度と担当者の継続性"
+      ],
+      "visualSources": [
+        {
+          "title": "工房・試験設備の公式案内",
+          "url": "https://mhub.org/prototyping-lab",
+          "note": "各加工・試験エリアと利用方法を確認できる。"
+        },
+        {
+          "title": "公式360°施設ツアー",
+          "url": "https://mhub.org/virtual-tour",
+          "note": "工房や共用空間の位置関係を探索する。撮影時点は未記載。"
+        }
+      ]
+    },
+    "visualEmbed": {
+      "url": "https://www.youtube.com/embed/j69z_hgfli0?feature=oembed",
+      "sourceUrl": "https://mhub.org/virtual-tour",
+      "title": "mHUB Virtual Tour",
+      "note": "mHUB公式の施設見学。試作工房と共同作業の空間を動画で見る。"
+    }
+  },
+  {
+    "id": "atelier-luma",
+    "name": "Atelier LUMA｜Le Magasin Électrique",
+    "country": "フランス",
+    "city": "アルル",
+    "lens": "soft",
+    "externalCase": true,
+    "caseUrl": "https://luma.org/en/arles/about/atelier-luma",
+    "headline": "地域の未利用素材を、研究所の壁や床で使って確かめる。",
+    "mechanism": "農業の副産物や土地の素材、地域の加工技術を調べ、デザイナー・科学者・農家・職人・製造者が材料を試作する。自らの拠点改修を実寸大の適用現場にし、試験片から施工・日常使用へ進める。",
+    "interesting": "材料を展示棚に置くだけでなく、壁、間仕切り、吸音材、床、照明などへ実装する。試作室、材料試験、施工者の研修、公開展示をつなぎ、「地域で作れるか・現場で使えるか」を学ぶ運営である。",
+    "partners": [
+      {
+        "name": "Atelier LUMA／LUMA Arles",
+        "contribution": "地域素材の調査、材料・製品試作、実装と知識共有を進める。LUMA Foundationが改修の発注主体。"
+      },
+      {
+        "name": "BC architects & studies & materials／Assemble",
+        "contribution": "Lot 8改修の建築・材料開発を共同で担い、研究成果を建物へ統合する。"
+      },
+      {
+        "name": "農家・職人・製造者・施工者",
+        "contribution": "地域の原料と加工知、施工の実務を持ち込み、ワークショップや技術研修に参加する。"
+      }
+    ],
+    "outcome": {
+      "text": "2023年春に旧鉄道関連建物Le Magasin Électriqueを改修し、研究・試作拠点として開設。地域の土、ヒマワリ繊維、稲わら等を建物に適用したことを運営者と設計者が説明している。",
+      "date": "拠点開設：2023年春／2026-10-25現行公式案内を確認",
+      "caveat": "材料の実装は確認できるが、全材料の耐用年数、他工法より低い総費用、ライフサイクル環境負荷の比較を一括して証明するものではない。設計段階の認証と、運用後の認証確定も区別する。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "材料を実際の建物へ施工し、利用する空間で扱えるかを試す。試験片の製作だけで止めない。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "地域資源と職人の知識から、建築に使える板・塗材・部材を試作する。"
+    },
+    "sources": [
+      {
+        "title": "Atelier LUMA",
+        "url": "https://luma.org/en/arles/about/atelier-luma",
+        "publishedDate": "公表日記載なし・2023年拠点開設を記載",
+        "claim": "地域資源、農家・職人・製造者との協働、材料の建築への適用。",
+        "locator": "Atelier LUMA over the years / 2023 renovation"
+      },
+      {
+        "title": "Le Magasin Électrique",
+        "url": "https://luma.org/en/arles/the-parc-des-ateliers/le-magasin-electrique",
+        "publishedDate": "公表日記載なし",
+        "claim": "Lot 8の施工・研修、材料実装、ラボ・工房・材料試験・Agoraの構成。",
+        "locator": "The renovation / research and prototyping space / building label"
+      },
+      {
+        "title": "LOT 8",
+        "url": "https://bcarchitects.org/en/projects/lot-8",
+        "publishedDate": "竣工事例・掲載日記載なし",
+        "claim": "設計者による旧施設の改修説明、工房構成、LUMA Foundation発注、設計・材料開発と施工者の役割。",
+        "locator": "冒頭 / Client / Architecture / Material development / Contractors"
+      },
+      {
+        "title": "Renovation of Le Magasin Électrique",
+        "url": "https://luma.org/en/arles/video/r%C3%A9novation-du-magasin-%C3%A9lectrique",
+        "publishedDate": "公表日記載なし",
+        "claim": "3年間の実験的な改修を記録した公式26分映像。",
+        "locator": "Renovation of Le Magasin Électrique / Duration"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "transfer": "地域の残材・副産物を調べるところから始め、加工者と施工者を試作段階に参加させる。小面積への実装と使用後の点検を組み合わせ、費用・性能・補修の記録を次の採用判断へ戻す。",
+    "caution": "地域資源を使うことだけで環境負荷や費用が下がるとは限らない。供給の季節変動、品質、耐久・防火等の要求、修理方法を個別に検証する。見学できるAgoraと、自由利用できる工房は同じではない。",
+    "statusLabel": "建物への実装・研究拠点として稼働",
+    "statusNote": "2023年開設。地域素材を自らの建物で使う実寸大の研究・試作拠点。",
+    "facilityStudy": {
+      "type": "地域資源の調査・素材試作・施工をつなぐ研究拠点",
+      "facilities": "バイオラボ、木工・陶芸・繊維・DTPの工房、染色室、材料試験ラボ、植物を育てる庭、執務空間を備える。中央のAgoraは展示・公開イベントに使う。",
+      "access": "Atelier LUMAの研究・制作の職場で、一般向けの常時無料メイカースペースではない。Agoraの展示や見学は公開プログラムを確認し、共同研究・工房利用条件は個別相談となる。",
+      "collaboration": "地域資源の探索から、材料試作、実寸施工、研修と知識共有へ進む。建物の改修自体を研究案件にし、研究者だけでなく施工者の知見を材料と納まりへ戻す。",
+      "comparison": "ATLASの分析：主軸は建築の形より、地域資源を研究・施工・継続使用へ運ぶ方法。材料研究と地域産業をつなぐソフトの事例として扱う。",
+      "photoReading": "Le Magasin Électriqueの内観では、中央のAgora、試作部材、仕上げや間仕切りを確認する。隣接する銀色のLUMAタワー全体を、この材料研究所そのものと取り違えない。",
+      "questions": [
+        "材料別の耐久性・維持費・修繕実績",
+        "材料ごとのライフサイクル評価と比較対象",
+        "外部の共同研究・設備利用の料金と受入れ条件",
+        "施工者への技術移転後の受注・地域所得への効果"
+      ],
+      "visualSources": [
+        {
+          "title": "研究所の内観・仕上げ・空間構成（公式）",
+          "url": "https://luma.org/en/arles/the-parc-des-ateliers/le-magasin-electrique",
+          "note": "Le Magasin Électriqueの空間と材料の使い方。"
+        },
+        {
+          "title": "Agoraと研究活動の公式写真",
+          "url": "https://luma.org/en/arles/about/atelier-luma",
+          "note": "中央のAgora、外観、材料実装例を見る。"
+        },
+        {
+          "title": "改修プロセスを追う公式映像",
+          "url": "https://luma.org/en/arles/video/r%C3%A9novation-du-magasin-%C3%A9lectrique",
+          "note": "施工・素材試作を含む26分のドキュメンタリー。"
+        }
+      ]
+    },
+    "photoLink": {
+      "url": "https://luma.org/en/arles/the-parc-des-ateliers/le-magasin-electrique",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "waag-fablab-amsterdam",
+    "name": "Waag Futurelab｜FabLab Amsterdam",
+    "country": "オランダ",
+    "city": "アムステルダム",
+    "lens": "soft",
+    "externalCase": true,
+    "caseUrl": "https://www.waag.org/en/project/fablab-amsterdam/",
+    "headline": "つくる過程を記録し、世界の仲間とのレビューで育てる。",
+    "mechanism": "歴史的建物のFabLabで実物を作り、Fab Academyの世界共通授業・週ごとの課題・レビューに接続する。受講者は最終作品だけでなく、試作や失敗を記録し、身につけた技能と制作過程によって評価される。",
+    "interesting": "工房を単発の体験会で終わらせず、毎週つくる、見せる、記録するという学習周期を組み込む。離れた拠点でも同じ課題を試す仕組みが、地域のラボにない専門知識や別の解き方を持ち込む。",
+    "partners": [
+      {
+        "name": "Waag Futurelab／現地インストラクター",
+        "contribution": "FabLabの設備、対面の制作支援と技能確認を担う。"
+      },
+      {
+        "name": "Fab Academy／MIT Center for Bits and Atomsに由来する教育ネットワーク",
+        "contribution": "世界共通の授業と課題、複数拠点のレビューをつなぐ。"
+      },
+      {
+        "name": "受講者と各地のFabLab",
+        "contribution": "制作・記録・最終プロジェクトを公開し、他の学習者の試作から学ぶ。"
+      }
+    ],
+    "outcome": {
+      "text": "Waagは2026年のFab Academy受講者の修了発表を9月17日に案内し、2027年1月開始の次期募集も公表。2026年度の現地教材・装置の使い方・過年度の制作記録へたどれる。",
+      "date": "次期募集公表：2026-09-03／2026年度の修了発表案内：2026-09-17",
+      "caveat": "講座・制作・記録の継続は確認できるが、全員の修了や就職、起業、地域課題解決の効果を示すものではない。2027年講座は予定として扱う。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "対面の技術支援と毎週の課題により、加工・電子・設計を組み合わせた試作品を自分で作る。"
+    },
+    "secondaryStep": {
+      "number": 8,
+      "title": "社会へ広げる",
+      "why": "作り方と試行錯誤を記録し、他のラボや学習者が参照・再現・改良できる形にする。"
+    },
+    "sources": [
+      {
+        "title": "Register now for Fab Academy 2027",
+        "url": "https://waag.org/en/article/register-now-fab-academy-2027/",
+        "publishedDate": "2026-09-03",
+        "claim": "20週間の分散学習、週ごとの課題とレビュー、現地参加要件、2026修了発表案内。",
+        "locator": "冒頭 / How to participate? / Practical information"
+      },
+      {
+        "title": "Fab Academy",
+        "url": "https://waag.org/en/project/fab-academy/",
+        "publishedDate": "公表日記載なし・過年度のプログラム説明",
+        "claim": "技能・プロジェクトと記録による評価、各ラボの指導者と世界授業の接続。",
+        "locator": "本文第1〜5段落"
+      },
+      {
+        "title": "Fab Academy 2026 at Waag Futurelab",
+        "url": "https://fablab.waag.org/Fabacademy/fabacademy2026/",
+        "publishedDate": "2026年度コース案内",
+        "claim": "現地ラボと世界共通授業を組み合わせる方式、現地教材・機器文書への導線。",
+        "locator": "The Global Classroom / Your Local Digital Fabrication Playground / 左側の設備文書"
+      },
+      {
+        "title": "FabLab Amsterdam",
+        "url": "https://www.waag.org/en/project/fablab-amsterdam/",
+        "publishedDate": "公表日記載なし・2010年移転を記載",
+        "claim": "Waag内の試作工房、教育・研究での使い方、施設内観写真。",
+        "locator": "本文 / History / Fablab 2020写真"
+      },
+      {
+        "title": "How to set up a Fab Lab?",
+        "url": "https://waag.org/en/article/how-set-fab-lab/",
+        "publishedDate": "2016-10-31",
+        "claim": "運営者がまとめた空間設計、途中の試作品の展示、再現できる制作記録、利用規範。現行の利用契約とは区別。",
+        "locator": "Space / Showroom / Fab Charter / Documentation and booking platform"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "transfer": "機械を買う前に、毎週の制作課題、現地指導者、公開記録の型、相互レビューを用意する。完成作品の展示だけでなく、失敗と変更の記録を次の人が使える成果物にする。",
+    "caution": "有料の教育プログラムで、現地参加と英語での受講が必要。技能によってはほぼ全時間の投入を求められる。機械の自由利用や事業化支援、地域住民全体の代表性まで保証する仕組みではない。",
+    "statusLabel": "現地制作と分散学習を継続",
+    "statusNote": "2026年度の修了発表案内と2027年度募集を確認。歴史的施設を使う継続型の実践。",
+    "facilityStudy": {
+      "type": "実物の工房と世界共通の学習周期を結ぶラボ",
+      "facilities": "Waagの歴史的建物内にデジタル加工工房を置く。2026年度の公式文書には3Dプリンター、レーザー加工、CNC、回路基板加工、ビニールカッターの教材がある。",
+      "access": "Fab Academyには申込み・授業料があり、Waagへ実際に通うことが要件。募集や公開イベントと、機械の自由利用条件は区別する。",
+      "collaboration": "世界共通の授業を受け、現地の仲間と毎週試作し、レビューへ提出。技能と制作記録を積み重ね、最終プロジェクトに統合する。",
+      "comparison": "ATLASの分析：場所の新築性ではなく、施設を使い続けて技能と共有知識を育てる学習の運営が特徴。",
+      "photoReading": "歴史的なWaagの外観と、その内部のFabLabを区別して読む。古い内観写真は空間構成の参考で、現在の全機器や利用者数を示すものではない。",
+      "questions": [
+        "現行の受講料、減免・奨学金、利用可能時間",
+        "学習負担と仕事・育児を両立できる参加方法",
+        "修了後に技能が利用された割合と具体的な成果",
+        "教材公開の範囲と、商用・秘密案件を扱う際の条件"
+      ],
+      "visualSources": [
+        {
+          "title": "FabLabの内観・歴史を見る（公式）",
+          "url": "https://www.waag.org/en/project/fablab-amsterdam/",
+          "note": "2020年の工房写真など。年代を区別して読む。"
+        },
+        {
+          "title": "2026年度のラボ・設備教材を見る",
+          "url": "https://fablab.waag.org/Fabacademy/fabacademy2026/",
+          "note": "機器の写真と使い方の文書へたどれる。"
+        }
+      ]
+    },
+    "visualEmbed": {
+      "url": "https://player.vimeo.com/video/688065969?h=c50fb2b440",
+      "sourceUrl": "https://vimeo.com/688065969",
+      "title": "Overview of the FabLab",
+      "note": "Waag Futurelab公式のFabLab案内動画（2022年3月14日公開、18分44秒）。Vimeo公開ページJSON-LDに著作者・埋め込みURL・日時を確認。"
+    }
+  },
+  {
+    "id": "volvo-campx",
+    "name": "CampX by Volvo Group",
+    "country": "スウェーデン／世界4拠点",
+    "city": "ヨーテボリほか",
+    "lens": "partners",
+    "headline": "企業の実務部門と、使う顧客までを開発チームに。",
+    "mechanism": "Venture Accessで産業の知見に触れ、Venture ClientでVolvoの実務部門とProof of Valueを設計する。必要に応じて車両・施設・データへ接続し、技術評価、社内承認、契約を経て顧客の現場で確かめる。",
+    "interesting": "入居や面談だけを目的にせず、「誰の業務で使い、誰が導入を判断するか」を案件の入口に置く。AiDENとの案件ではVolvo Trucks、スタートアップ、運送顧客が共同で車載サービスを開発した。",
+    "partners": [
+      {
+        "name": "CampX",
+        "contribution": "技術と社内課題の組合せ、短期検証の契約・社内調整を支援。"
+      },
+      {
+        "name": "Volvoの実務部門・技術者",
+        "contribution": "現場課題と製品・車両・データを持ち寄り、PoV範囲と技術適合を評価。"
+      },
+      {
+        "name": "AiDEN",
+        "contribution": "車載アプリとサービス連携の技術を提供。"
+      },
+      {
+        "name": "運送顧客Gorizont-SM",
+        "contribution": "実際の業務で試験し、運転者・管理者の使用条件を開発へ返す。"
+      }
+    ],
+    "outcome": {
+      "text": "Volvoは2026年2月、AiDENとのサービスについて顧客試験を完了し、対象市場で試験販売できる状態と報告。車内ディスプレーとVolvo Connectに統合した。",
+      "date": "案件公表：2026-02-26",
+      "caveat": "運営企業による案件報告。全市場への展開や全案件の収益性・継続契約率を示さない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "開発企業・Volvoの技術者・運送顧客が、実車と業務の条件で一緒に検証する。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "PoVの後に対象市場での試験販売へ進む経路があり、共同開発を顧客への提供へつなぐ。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "CampX Venture Client",
+        "url": "https://www.volvogroup.com/en/sustainable-transportation/collaborative-approach/campx-startup-accelerator/venture-client.html",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "実務部門とのPoV設計、車両・施設・データへの接続、評価・契約・社内承認の流れ。資金提供プログラムではないとのFAQ。",
+        "locator": "How Volvo Group’s startup Venture Client works / FAQ"
+      },
+      {
+        "title": "CampX Incubator has been renamed to Venture Access",
+        "url": "https://www.volvogroup.com/en/news-and-media/news/2025/jun/campx-incubator-has-been-renamed-to-venture-access.html",
+        "publishedDate": "2025-06-17",
+        "claim": "Venture Accessへの改称、現場専門家との協働、拠点常駐を必須にしない考え方、3種の関与方式。",
+        "locator": "Why Venture Access? / The CampX concept"
+      },
+      {
+        "title": "How corporate and startup collaboration made compliance a smooth ride for truckers",
+        "url": "https://www.volvogroup.com/en/news-and-media/news/2026/feb/how-corporate-and-startup-collaboration-made-compliance-a-smooth-ride-for-truckers.html",
+        "publishedDate": "2026-02-26",
+        "claim": "AiDEN・Volvo Trucks・顧客Gorizont-SMの役割、顧客試験完了と試験販売。",
+        "locator": "Turning regulatory challenges / What happens next"
+      },
+      {
+        "title": "Volvo Group Expands CampX Innovation Hub in North America",
+        "url": "https://www.volvogroup.com/en/news-and-media/news/2024/apr/volvo-group-expands-campx-innovation-hub-in-north-america-to-accelerate-sustainable-transport.html",
+        "publishedDate": "2024-04-24",
+        "claim": "Greensboroの協働スペースと、研究開発施設に置く世界4拠点。",
+        "locator": "冒頭 / CampX locations"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "施設に入る企業数より、業務上の課題責任者、検証に協力する利用者、本導入を判断する人を先にそろえる。",
+    "caution": "Venture Clientの公式FAQは資金提供なしと説明する。出資や補助金と同一視しない。個々の開発費負担・知財・継続取引条件は契約で確認する。",
+    "statusLabel": "顧客試験から試験販売へ",
+    "statusNote": "旧Incubatorは2025年にVenture Accessへ改称。AiDENの2026年公式案件報告を反映。",
+    "facilityStudy": {
+      "type": "産業の現場・技術者・顧客をつなぐ企業内共創拠点",
+      "facilities": "Volvoの研究開発拠点に協働スペースを置き、必要な車両・施設・データへ案件ごとに接続する。一般向けの貸工房とは利用条件が異なる。",
+      "access": "技術・事業の適合、実務部門の課題、社内承認と契約が入口。Venture Accessはヨーテボリで専門家と働けるが常時入居だけを前提にしない。",
+      "collaboration": "実務部門とPoVを定義し、技術評価・契約を経て検証。必要に応じて実際の顧客も参加し、後続開発・販売の判断へ渡す。",
+      "comparison": "BMWの初回調達モデルと比べ、産業アクセス、顧客と行うPoV、社内発の事業創出という複数の関与方式を区別して設計する点が参考になる。",
+      "photoReading": "拠点写真は協働スペースの構成を読むためのもの。個別の車両試験やAiDENの開発現場を示すとは限らない。",
+      "questions": [
+        "案件ごとの開発費・施設使用料の負担",
+        "PoV終了後の購買判断と担当部門",
+        "参加者のデータアクセス権限と知財条件"
+      ],
+      "visualSources": [
+        {
+          "title": "CampXの協働スペースを見る",
+          "url": "https://www.volvogroup.com/en/news-and-media/news/2024/apr/volvo-group-expands-campx-innovation-hub-in-north-america-to-accelerate-sustainable-transport.html",
+          "note": "2024年のGreensboro拠点の公式案内。写真と拠点の役割を確認できる。"
+        }
+      ]
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/volvo-campx/",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "photoLink": {
+      "url": "https://www.volvogroup.com/en/news-and-media/news/2024/apr/volvo-group-expands-campx-innovation-hub-in-north-america-to-accelerate-sustainable-transport.html",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    },
+    "visualEmbed": {
+      "url": "https://www.youtube.com/embed/gWfGbzixXLg",
+      "sourceUrl": "https://www.volvogroup.com/en/news-and-media/news/2019/mar/news-3249994.html",
+      "title": "This is CampX",
+      "note": "Volvo Group公式のCampX開設時紹介（2019年）。公式発表からリンク。"
+    }
+  },
+  {
+    "id": "station-f",
+    "name": "STATION F｜Care Forward",
+    "country": "フランス",
+    "city": "パリ",
+    "lens": "partners",
+    "headline": "起業の拠点に、病院と製品開発と規制の専門家をそろえる。",
+    "mechanism": "2026年に始まったCare ForwardはSTATION Fを拠点に、Doctolibの製品・AI・業務設計、AP-HP Hôtel-Dieuの病院実証環境、Rocheの医療・規制・医療経済の専門性を組み合わせる。起業支援から医療現場での検証へ役割を分けてつなぐ。",
+    "interesting": "一つの運営組織に全機能を抱え込ませず、開発、実証、導入要件の専門家を共同支援者にする。STATION Fは場所と起業コミュニティ、病院側は現場の必要性と検証条件を持ち寄る。",
+    "partners": [
+      {
+        "name": "STATION F",
+        "contribution": "起業チームが集まるキャンパスとプログラムの拠点を提供。"
+      },
+      {
+        "name": "Doctolib",
+        "contribution": "技術統合、医療AI、医療従事者の業務、事業展開を支援。"
+      },
+      {
+        "name": "@Hôtel-Dieu／AP-HP",
+        "contribution": "実証の場と医療者の知見を提供し、病院の課題に適合させる。"
+      },
+      {
+        "name": "Roche",
+        "contribution": "規制上の要求、医療経済価値、科学・医療専門家との接続を支援。"
+      }
+    ],
+    "outcome": {
+      "text": "Rocheの2026年10月報告では、第1期は250件の応募から欧州7か国の15社を選定。第2期は11月26日開始予定と案内されている。",
+      "date": "2026-10-13",
+      "caveat": "採択数と支援提供の運営者報告。承認取得、患者への効果、病院による正式調達を実証した数字ではない。10月25日時点で第2期は未開始。"
+    },
+    "primaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "製品開発、臨床現場、規制・医療経済の専門家を、異なる責任を持つ共同支援者としてそろえる。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "病院の実証環境と医療者の知見を使い、日常業務に適合するかを確かめる。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Care Forward: Doctolib, @Hôtel-Dieu (AP-HP), and Roche join forces at STATION F",
+        "url": "https://stationf.co/news/care-forward",
+        "publishedDate": "2026-04-17",
+        "claim": "3者の支援分担、STATION Fを拠点にした現場検証への接続。",
+        "locator": "Direct access to technology, clinicians, and patients"
+      },
+      {
+        "title": "Care Forward Batch 2",
+        "url": "https://www.roche.fr/articles/partenariat-doctolib-hoteldieu-aphp-stationf-seconde-promotion",
+        "publishedDate": "2026-10-13",
+        "claim": "第1期15社・7か国、第2期の予定、3者の役割と対象条件。",
+        "locator": "Une première promotion / les dates clés / Trois partenaires"
+      },
+      {
+        "title": "All Programs",
+        "url": "https://stationf.co/programs",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "企業・大学等のプログラムと、自主運営プログラムを同一キャンパスで案内。",
+        "locator": "Care Forward / HEC / Microsoft / In-house Programs"
+      },
+      {
+        "title": "In-house Programs",
+        "url": "https://stationf.co/programs/in-house",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "自主プログラムと支援対象・期間・料金。Care Forwardと自主プログラムは別制度。",
+        "locator": "Founders Program / Fighters / Landing Zone"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "自分の拠点に不足するのが設備なのか、実証先なのか、規制・調達の判断なのかを分け、担当できる組織と具体的な役割を結ぶ。",
+    "caution": "キャンパスに集まることと医療導入が成立することは別。患者データ、倫理、契約、医療機器の承認、正式調達には個別の手続きが必要。",
+    "statusLabel": "第1期を実施・第2期は開始前",
+    "statusNote": "2026年10月25日時点。施設は稼働中、第2期は11月26日開始予定。",
+    "facilityStudy": {
+      "type": "複数の専門支援者が入る起業キャンパス",
+      "facilities": "旧鉄道貨物施設の大空間に執務・交流スペースを置く。Care Forwardの病院実証はキャンパス内の机だけで完結せず、AP-HPの実証環境へ接続する。",
+      "access": "Care Forwardは選考制。自主運営のFounders、Fighters、Landing Zoneとは対象や料金・条件が異なるため、プログラム別に確認する。",
+      "collaboration": "Doctolib、AP-HP、Rocheが技術・臨床・規制の専門性を分担し、投資家や産業関係者との接点も設ける。",
+      "comparison": "施設の面白さは巨大な共同オフィスだけでなく、異なる機関が運営する支援プログラムを同じ入口から選べる構成にある。",
+      "photoReading": "掲載写真は2022年の中央ホール。2026年開始のCare Forward専用区画や、病院の試験場所を示す写真ではない。",
+      "questions": [
+        "実証の採択と病院側の責任・工数",
+        "個人データ・知財・評価結果の扱い",
+        "検証後の正式調達・費用負担"
+      ],
+      "visualSources": [
+        {
+          "title": "キャンパスと各支援プログラムを見る",
+          "url": "https://stationf.co/programs",
+          "note": "公式プログラム一覧。建物の写真と、共同支援者の構成を確認できる。"
+        }
+      ]
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/station-f/",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "photoId": "station-f-hall"
+  },
+  {
+    "id": "greentown-labs",
+    "name": "Greentown Labs Boston",
+    "country": "米国",
+    "city": "サマービル／ボストン圏",
+    "lens": "partners",
+    "headline": "試作ラボの隣に、実証する企業と買う企業への入口を。",
+    "mechanism": "共用の機械加工・電子・ウェットラボで開発する気候技術企業に、産業パートナーとの実証、共同研究、調達、投資の接点を組み合わせる。Greentown Goは課題領域ごとに企業と運営し、試作品を産業の利用条件へ近づける。",
+    "interesting": "装置を借りる会員と、導入現場を持つ企業を、紹介だけで終わらない複数の関係で結ぶ。同じ企業でも「投資する」「試す」「買う」「共同研究する」を分けて扱う。",
+    "partners": [
+      {
+        "name": "Greentown Labs",
+        "contribution": "ラボ・設備・会員コミュニティと、企業との組合せ・プログラム運営を担当。"
+      },
+      {
+        "name": "スタートアップ",
+        "contribution": "機器・材料・エネルギー等の技術と試作品を開発。"
+      },
+      {
+        "name": "産業パートナー",
+        "contribution": "事業の課題、実証環境、調達経路、専門性を案件に応じて提供。"
+      },
+      {
+        "name": "NYU Urban Future Lab／Fraunhofer USA",
+        "contribution": "Carbon to Value InitiativeをGreentownと共同運営し、炭素関連技術の企業連携を支援。"
+      }
+    ],
+    "outcome": {
+      "text": "現行の施設案内で、試作・加工・ウェット・電子の各ラボを確認。企業連携では投資、実証、顧客・調達、共同研究の経路を公開し、Carbon to Value InitiativeをNYU・Fraunhoferと共同運営している。",
+      "date": "現行公式案内：2026-10-25確認",
+      "caveat": "設備と支援経路の提供を確認したもの。正式調達率、実証の継続率、CO2削減への寄与を独立に測定した成果ではない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "共用ラボでつくった技術を、産業パートナーの実際の利用環境で試す経路を設ける。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "技術紹介に加えて、企業調達・共同研究・資金への接続を支援する。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Partner Benefits",
+        "url": "https://greentown.org/partners",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "投資、実証、顧客・調達、共同研究、事業展開を分けた企業連携。",
+        "locator": "How partnerships become outcomes"
+      },
+      {
+        "title": "Programs",
+        "url": "https://greentown.org/programs",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "Greentown Goの企業共同運営と、NYU・FraunhoferとのCarbon to Value共同運営。",
+        "locator": "Open innovation / Carbon to Value Initiative"
+      },
+      {
+        "title": "Greentown Boston",
+        "url": "https://greentown.org/boston",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "機械加工・試作・ウェット・電子・屋上のラボ。Battery LabはComing Soon。",
+        "locator": "Campus / Labs + Shops"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "共用ラボの会員サービスと、導入企業が参加する実証プログラムを組み合わせる。企業側の担当者、使える現場、試験後の購買判断を募集前に決める。",
+    "caution": "全会員が同じ企業・設備・契約にアクセスできるわけではない。現行案内でBattery Labは予定扱い。気候効果の計測方法や支援の追加効果は案件ごとに確認する。",
+    "statusLabel": "共用ラボと企業連携が稼働中",
+    "statusNote": "BostonのBattery LabはComing Soon表示。稼働設備と予定設備を区別。",
+    "facilityStudy": {
+      "type": "気候技術の共用ラボと産業連携拠点",
+      "facilities": "開放型の試作区画、機械加工、電子組立・測定、26ベンチのBSL-2ウェットラボ、屋上試験環境を案内。建物ごとに用途を分け、成長企業向けの専用スペースも持つ。",
+      "access": "会員申請・選考を経る。企業連携プログラムもテーマ・採択条件があり、一般の設備利用や投資保証と同じではない。",
+      "collaboration": "企業の課題に対しGreentownがスタートアップと接続し、実証・共同研究・調達などの形を選ぶ。Carbon to Valueでは研究・都市型支援機関も運営に入る。",
+      "comparison": "ハードの共用を土台に、次に試す現場と買う相手へ渡す仕組みを持つため、ここではパートナー軸で選定する。",
+      "photoReading": "共用ラボの区画と設備の配置を読む。写真の機器が全会員に常時使用可能である、という意味ではない。",
+      "questions": [
+        "設備ごとの研修・予約・料金と専用区画の条件",
+        "実証後の継続調達と実際の費用負担",
+        "CO2削減量の測定範囲と第三者確認"
+      ],
+      "visualSources": [
+        {
+          "title": "Bostonのラボ・工房の公式写真",
+          "url": "https://greentown.org/boston",
+          "note": "試作、機械加工、ウェット、電子、屋上の各空間を写真で確認できる。"
+        }
+      ]
+    },
+    "caseUrl": "https://greentown.org/boston",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "externalCase": true,
+    "photoLink": {
+      "url": "https://greentown.org/boston",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "brainport-industries-campus",
+    "name": "Brainport Industries Campus",
+    "country": "オランダ",
+    "city": "アイントホーフェン",
+    "lens": "partners",
+    "headline": "工場・学校・供給企業が、同じ屋根の下で次の製造を試す。",
+    "mechanism": "製造企業と教育機関を同じキャンパスに集め、業界組織Brainport Industriesが共同研究を組み立てる。TNOの再製造ラボでは、技術供給者がAI・ロボットを試し、製造企業・システム統合企業が専門家と自社工程への導入前検証を行う。",
+    "interesting": "企業ごとに機械をそろえるだけでなく、受発注・物流データのつながりや、新しい技能を学ぶ人も共同開発の対象にする。工場と学校が近いことを、設備・研究・人材の共有へつなぐ。",
+    "partners": [
+      {
+        "name": "Brainport Industries",
+        "contribution": "企業・知識機関と共同研究プログラムを組成する産業組織。"
+      },
+      {
+        "name": "キャンパスの製造・ソフトウェア企業",
+        "contribution": "実際の製造課題、装置、データ、加工・実装の知識を持ち寄る。"
+      },
+      {
+        "name": "教育機関・FutureTec",
+        "contribution": "学生の学習と企業での実務を接続し、次の製造技能を育てる。"
+      },
+      {
+        "name": "北ブラバント州／BOM",
+        "contribution": "産業・教育機関とともに共同研究プログラムの形成を支える。"
+      },
+      {
+        "name": "TNO／アイントホーフェン工科大学",
+        "contribution": "Brainport IndustriesとAI-MATTERSのオランダ拠点を形成。TNOは再製造ラボでAI・ロボットの導入前試験を支援。"
+      }
+    ],
+    "outcome": {
+      "text": "TNOの現行案内でBIC内の再製造ラボを確認。Brainport Industries・アイントホーフェン工科大学・TNOがAI-MATTERSのオランダ拠点を形成し、EUと国の資金で試験基盤を整える。",
+      "date": "現行公式案内：2026-10-25確認",
+      "caveat": "入居や共同研究の存在は、生産費低下や納期短縮を全社で測定した結果ではない。参画数はページ間で定義・時点が異なるため単純集計しない。"
+    },
+    "primaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "供給企業、ソフトウェア企業、学校、地域の産業支援者を、同じ製造課題を持つチームとして組む。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "Field Labの機械・製造環境で、自動化・造形・物流等の仕組みを実物で検証する。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Innovation programme",
+        "url": "https://www.brainportindustriescampus.com/en/innovation-programme/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "競争前共同研究、柔軟生産、SCSN、金属造形、教育、物流のField Lab。",
+        "locator": "Field labs for innovation / 各Field Lab"
+      },
+      {
+        "title": "Open innovation under a single roof",
+        "url": "https://www.brainportindustriescampus.com/en/open-innovation-under-a-single-roof/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "Brainport Industries、州、BOM、企業・教育機関がプログラムを組成。",
+        "locator": "Factory of the Future"
+      },
+      {
+        "title": "Brainport Industries Campus",
+        "url": "https://www.brainportindustries.com/en/brainport-industries/brainport-industries-campus",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "企業と教育機関の同居、設備共有、産業組織による共同研究。",
+        "locator": "Brainport Industries Campus"
+      },
+      {
+        "title": "Remanufacturing lab: test and experimentation facility for the manufacturing industry",
+        "url": "https://www.tno.nl/en/technology-science/facilities/remanufacturing-lab-test-experimentation/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "BIC内の再製造ラボ。技術供給者と製造企業・システム統合企業の利用形態、TNOの支援、AI-MATTERSのオランダ3主体とEU・国による資金。",
+        "locator": "冒頭 / Offer Remanufacturing lab / AI-MATTERS in the Netherlands / Funding"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "施設の入居契約とは別に、競合でも共有できる物流・データ・教育の課題を選び、供給網の関係者を継続的な共同研究へ組み込む。",
+    "caution": "共用区域と各社専用区域を区別する。機密情報・製造データの公開範囲、設備予約、費用分担、研究成果の利用条件は個別契約が必要。",
+    "statusLabel": "製造・教育・共同研究が同居",
+    "statusNote": "Field Labに加え、TNOの再製造ラボとAI-MATTERSの役割分担を確認。試験基盤の提供と企業の導入効果を区別する。",
+    "facilityStudy": {
+      "type": "製造供給網の企業と学校をつなぐ産業キャンパス",
+      "facilities": "製造・教育・交流の空間と共用アトリウムを持つ。柔軟生産、金属3D造形、ソフトウェア、生産物流のField Labに加え、TNOの再製造ラボではAI・ロボットを実際の再製造ラインで検証する。",
+      "access": "入居・研究参画・設備利用は別の入口。公開ページだけで機器の予約条件や料金表全体は確認できない。",
+      "collaboration": "業界組織が企業・学校・知識機関・地域支援者を組む。AI-MATTERSではTNOが専門家と試験設備、技術供給者がAI・ロボット、製造企業が導入課題を持ち寄り、投資判断の前に試す。",
+      "comparison": "ARENA2036に近い研究設備の共有に加え、製造供給網と職業教育が同じ場に入る点に注目する。",
+      "photoReading": "キャンパスの建物・アトリウムと、Field Labの設備は異なる写真として読む。外観だけから個別企業の生産設備を推定しない。",
+      "questions": [
+        "Field Labごとの運営主体・費用・予約条件",
+        "入居企業と域外企業の利用条件の差",
+        "技能育成や受発注データ連携の導入効果"
+      ],
+      "visualSources": [
+        {
+          "title": "共用空間と共同研究の公式写真",
+          "url": "https://www.brainportindustriescampus.com/en/open-innovation-under-a-single-roof/",
+          "note": "アトリウムと共同研究の構成を紹介。"
+        },
+        {
+          "title": "各Field Labの設備を見る",
+          "url": "https://www.brainportindustriescampus.com/en/innovation-programme/",
+          "note": "柔軟生産・金属造形・物流などの実験領域を確認できる。"
+        },
+        {
+          "title": "再製造ラボの公式映像",
+          "url": "https://www.tno.nl/en/technology-science/facilities/remanufacturing-lab-test-experimentation/",
+          "note": "TNOの紹介映像。実際の再製造ラインとAI・ロボットの試験環境を確認できる。"
+        }
+      ]
+    },
+    "caseUrl": "https://www.brainportindustriescampus.com/en/",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "externalCase": true,
+    "photoLink": {
+      "url": "https://www.brainportindustriescampus.com/en/open-innovation-under-a-single-roof/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "mars-discovery-district",
+    "name": "MaRS Discovery District｜MaRS Centre",
+    "country": "カナダ",
+    "city": "トロント",
+    "lens": "partners",
+    "headline": "大学の研究と企業の導入を、ラボと事業化支援でつなぐ。",
+    "mechanism": "大学・研究機関に近いMaRS Centreに研究ラボと企業を集め、MaRSが資金・顧客・人材への接続を支える。初期の生命科学企業には共用設備を備えたIncubatorを提供し、公的支援と寄付を組み合わせて事業化プログラムを運営する。",
+    "interesting": "建物の賃貸、実験環境の管理、企業の事業化支援を別の機能として結び付ける。ウェットラボの廃棄物処理まで専門事業者と分担し、初期企業が研究と事業の両方を進められる条件を用意する。",
+    "partners": [
+      {
+        "name": "MaRS",
+        "contribution": "施設運営・入居調整と、企業への事業化支援、顧客・投資家との接続を担う。"
+      },
+      {
+        "name": "大学・研究機関と起業チーム",
+        "contribution": "科学技術と研究者を、実験・事業化の具体的な案件へ持ち込む。"
+      },
+      {
+        "name": "オンタリオ州・カナダ政府・寄付者",
+        "contribution": "MaRSのプログラム目的を支える財源を提供する。"
+      },
+      {
+        "name": "専門施設サービス事業者",
+        "contribution": "化学・生物・放射性廃棄物など、実験環境の運営に必要な専門業務を分担。"
+      }
+    ],
+    "outcome": {
+      "text": "現行案内で30,000平方フィートのMaRS Incubatorと、個別ラボ、低温室・恒温室、共用設備、入居する生命科学企業を確認。企業への事業化支援と公的財源・寄付も公式に説明されている。",
+      "date": "現行公式案内：2026-10-25確認",
+      "caveat": "床面積や入居企業は支援の供給能力を示す。個々の研究成果の臨床的有効性、投資回収、施設単独の経済効果とは別。"
+    },
+    "primaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "研究を続けられるラボ環境と、資金・顧客・事業化の支援をつなぎ、企業として継続する条件を整える。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "研究者、企業、行政の資金、寄付、施設運営者の役割を分担して支援基盤をつくる。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "MaRS Incubator",
+        "url": "https://hubs.marsdd.com/workspaces/incubator/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "30,000平方フィートのウェットラボ、専用ラボ・共用設備、廃棄物処理の分担、入居企業。",
+        "locator": "Amenities / MaRS Incubator ecosystem"
+      },
+      {
+        "title": "About MaRS",
+        "url": "https://www.marsdd.com/about/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "MaRS Centreと研究・企業の集積、州・連邦の支援と寄付、施設と事業化支援の役割。",
+        "locator": "Our Story / Funding"
+      },
+      {
+        "title": "Corporate Innovation",
+        "url": "https://www.marsdd.com/service/corporate-innovation/",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "企業とスタートアップの接続、導入に向けた支援。掲載の2020年指標は現行実績に転用しない。",
+        "locator": "About / Corporate programming"
+      },
+      {
+        "title": "Welcome to MaRS Discovery District",
+        "url": "https://www.marsdd.com/video/welcome-to-mars-discovery-district/",
+        "publishedDate": "2026-02-05",
+        "claim": "現行施設を案内する公式映像。",
+        "locator": "紹介映像"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "研究設備の賃料補助だけで終えず、施設の安全運営、事業化支援、導入企業への接続に誰が責任と費用を持つかを分けて設計する。",
+    "caution": "MaRS全体、MaRS Centre、Waterfront、個別Incubatorを混同しない。過去のテナントやプログラムが現在も稼働しているとは限らず、入居・使用料・許認可は直接確認する。",
+    "statusLabel": "ラボ運営と事業化支援を継続",
+    "statusNote": "現在のMaRS Incubator案内に基づく。過去のJLABSプログラムと同一視しない。",
+    "facilityStudy": {
+      "type": "大学・企業・資金・研究施設をつなぐ都市型事業化拠点",
+      "facilities": "MaRS CentreのIncubatorは初期の生命科学企業向けウェットラボ。個別ラボ、実験台、共用の水・氷・温度管理設備、会議室・ラウンジを案内。",
+      "access": "入居・空き区画は照会が必要。基本の実験台・家具は空き状況に依存し、事業化プログラムと賃貸契約は同一ではない。",
+      "collaboration": "公的財源・寄付が支援事業を支え、MaRSが研究者・スタートアップ・企業・投資家を接続。実験運営の専門業務も外部事業者と分担する。",
+      "comparison": "大学研究を企業へ移す際、設備と商業化支援の間にある継続費用・施設運営の不足を埋める仕組みとして参考になる。",
+      "photoReading": "建物・共用空間の写真と、Incubator内部の実験設備を区別して読む。個別テナントの最新の稼働状況を外観から推定しない。",
+      "questions": [
+        "ラボ賃料と支援プログラムの料金・選考",
+        "安全管理責任と実験の許容範囲",
+        "支援企業の正式導入率・事業継続と公的負担"
+      ],
+      "visualSources": [
+        {
+          "title": "MaRS Incubatorの実験室写真",
+          "url": "https://hubs.marsdd.com/workspaces/incubator/",
+          "note": "複数の内観写真と具体的な共用設備を確認できる。"
+        },
+        {
+          "title": "施設全体の公式映像",
+          "url": "https://www.marsdd.com/video/welcome-to-mars-discovery-district/",
+          "note": "2026年の公式紹介。MaRS Centreと支援機能の背景を確認。"
+        }
+      ]
+    },
+    "caseUrl": "https://hubs.marsdd.com/workspaces/incubator/",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "externalCase": true,
+    "photoLink": {
+      "url": "https://www.marsdd.com/media-centre/press-kit/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "biopolis-singapore",
+    "name": "Biopolis",
+    "country": "シンガポール",
+    "city": "one-north",
+    "lens": "partners",
+    "headline": "公的研究と企業の研究開発を、歩いてつながる街区に。",
+    "mechanism": "JTCが研究開発用の街区・建物を整え、公的研究機関と企業の研究所が集積する。共用の会議室・ラボサービスを土台に、企業が研究機関の専門性へ接続する。敷地を貸す役割と共同研究を進める役割を分けて組み合わせる。",
+    "interesting": "共同研究者だけでなく、試薬・分析・施設運営や近隣の専門企業まで含む研究開発環境を近接させる。P&Gの公式事例では、A*STARとの科学研究と、近隣の香料企業との連携を別々に説明している。",
+    "partners": [
+      {
+        "name": "JTC",
+        "contribution": "研究開発用不動産、共用施設、街区の生活・交通環境を整備・提供。"
+      },
+      {
+        "name": "A*STAR等の公的研究機関",
+        "contribution": "企業との研究テーマに専門性・人材・研究基盤を提供。"
+      },
+      {
+        "name": "P&G等の企業研究所",
+        "contribution": "製品・工程・消費者の課題と自社研究を持ち込み、共同研究を製品開発に接続。"
+      },
+      {
+        "name": "近隣の専門企業",
+        "contribution": "香料等の専門知識を企業研究所との協働に提供。"
+      }
+    ],
+    "outcome": {
+      "text": "JTCは現在も生物医療・研究開発用途の施設としてBiopolisを案内し、共用サービスと入居審査条件を公開。P&Gと公的研究機関・周辺企業の具体的協働は2017年のJTC記事で確認できる。",
+      "date": "現行施設：2026-10-25確認／協働事例：2017-06-29",
+      "caveat": "2017年の研究人員・投資額を現在値へ置き換えない。集積だけで共同成果や事業性が保証されるわけではなく、現行の案件別実績は別途確認が必要。"
+    },
+    "primaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "施設を整える公的主体、科学研究を担う機関、製品化を進める企業を、役割の違うパートナーとして組む。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "共用サービスと企業・研究機関のラボを使い、製品・工程の研究と試作を進める条件を整える。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Biopolis",
+        "url": "https://www.jtc.gov.sg/find-space/biopolis",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "公私の研究開発集積、会議室・ラボサービス、対象用途、入居の初期審査。",
+        "locator": "Overview / Amenities / Who is eligible"
+      },
+      {
+        "title": "Global innovation powerhouse benefits from network in Biopolis @ one-north",
+        "url": "https://www.jtc.gov.sg/about-jtc/news-and-stories/feature-stories/global-innovation-powerhouse-benefits-from-network-in-biopolis-at-one-north",
+        "publishedDate": "2017-06-29",
+        "claim": "P&Gの研究機能、A*STARとの科学研究、近隣香料企業との連携。2017年の事例として使用。",
+        "locator": "R&D activities / proximity to partners"
+      },
+      {
+        "title": "Biopolis 10th Anniversary – joint media release",
+        "url": "https://www.nas.gov.sg/archivesonline/data/pdfdoc/20131023003.htm",
+        "publishedDate": "2013-10",
+        "claim": "2003年開設と、JTC・A*STAR・EDBの役割を記した当時の公的資料。",
+        "locator": "冒頭 / About A*STAR / About EDB / About JTC"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "研究棟をつくる主体と、共同研究を組成する主体を分け、近隣の企業・分析サービス・研究者との協働まで運営範囲に入れる。",
+    "caution": "建物の賃借は全研究設備への自由なアクセスを意味しない。共同研究の費用、知財、試料・データ、安全条件は個別合意が必要。古い集積成果を最新の成果とみなさない。",
+    "statusLabel": "研究開発街区として稼働中",
+    "statusNote": "現在の貸室・共用サービス案内を確認。具体的なP&G協働は2017年資料の事例。",
+    "facilityStudy": {
+      "type": "公的研究機関と民間研究所が近接する研究開発街区",
+      "facilities": "研究開発用途の複数棟、共用会議室・ラボサービス、飲食・保育等の補完機能を一つの街区で案内。Buona Vista駅から徒歩圏にある。",
+      "access": "JTCは生物医療・研究開発用途を対象に案内し、申請にはCorppassと初期審査が必要としている。機器使用・共同研究は別条件。",
+      "collaboration": "JTCが場を整え、公的研究機関と企業が科学研究を組む。P&Gの過去事例では研究機関と近隣の専門企業へ異なる連携経路を持つ。",
+      "comparison": "同じ建物内の企業連携より一段広く、研究施設と周辺の供給者を街区としてつなぐモデル。近接性の価値を契約・研究テーマに変える運営が必要。",
+      "photoReading": "街区・建物・共用空間の写真として読む。外観は企業の非公開ラボ内や現行の実験装置を示すものではない。",
+      "questions": [
+        "2026年時点の共用ラボの装置・利用者条件",
+        "共同研究の費用・知財・成果公開の合意",
+        "近接立地が短縮した研究期間や導入実績"
+      ],
+      "visualSources": [
+        {
+          "title": "Biopolisの施設・街区写真",
+          "url": "https://www.jtc.gov.sg/find-space/biopolis",
+          "note": "JTCの現行施設案内。建物と共用環境を確認できる。"
+        },
+        {
+          "title": "企業研究所と周辺連携の事例写真",
+          "url": "https://www.jtc.gov.sg/about-jtc/news-and-stories/feature-stories/global-innovation-powerhouse-benefits-from-network-in-biopolis-at-one-north",
+          "note": "2017年のP&G研究所紹介。歴史的な事例写真として読む。"
+        }
+      ]
+    },
+    "caseUrl": "https://www.jtc.gov.sg/find-space/biopolis",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "externalCase": true,
+    "photoLink": {
+      "url": "https://www.jtc.gov.sg/find-space/biopolis",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "munich-urban-colab",
+    "name": "Munich Urban Colab",
+    "country": "ドイツ",
+    "city": "ミュンヘン",
+    "lens": "partners",
+    "headline": "市役所の課題担当と、つくる人・起業家を同じ場所へ。",
+    "mechanism": "ミュンヘン市とUnternehmerTUMが共同運営する拠点に、市のMunich City Lab、起業支援、企業、MakerSpaceを同居させる。市の担当部局が課題を持ち込み、技術者・起業家が試作や検証に参加する入口をつくる。",
+    "interesting": "自治体を外部の相談先のままにせず、行政側の窓口も拠点内に置く。2026年9月にはNUSXの拠点を通じたシンガポールとの起業・投資・人材連携も発表され、国内の実証と海外市場への接続を分けて拡張している。",
+    "partners": [
+      {
+        "name": "ミュンヘン市",
+        "contribution": "運営会社へ17%出資。Munich City Labを通じ、市の部局が課題・プロジェクトを持ち込む入口を担当。"
+      },
+      {
+        "name": "UnternehmerTUM",
+        "contribution": "運営会社へ83%出資。起業・試作・事業化のプログラムと専門家を接続。"
+      },
+      {
+        "name": "企業・起業家・研究者・市民",
+        "contribution": "都市課題の解決案、技術、利用経験を持ち寄り、共同で開発・検証。"
+      },
+      {
+        "name": "NUSX／シンガポール国立大学",
+        "contribution": "2026年発表の連携で、起業チーム・投資関係・人材プログラムをミュンヘン側と接続。"
+      }
+    ],
+    "outcome": {
+      "text": "2021年開設。市は運営会社の出資比率と行政窓口の機能を公開。2026年9月、UnternehmerTUMとNUSXはColabの新拠点を含む相互連携を発表した。",
+      "date": "現行運営案内／国際連携：2026-09-28",
+      "caveat": "拠点・制度の存在と連携開始の発表を確認。行政による正式調達、参加企業の海外売上、住民便益を測定した成果とは区別する。"
+    },
+    "primaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "市の部局、起業支援者、企業、研究者を同じ場所でつなぎ、課題と役割を持つチームを組む。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "MakerSpaceや試作支援を、行政・企業の課題を形にして確かめる作業へ接続できる。",
+      "basis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Munich Urban Colab – City of Munich",
+        "url": "https://stadt.muenchen.de/lhm-ms-wirtschaftsfoerderung-en/en/business-location/innovation-ecosystem/munich-urban-colab.html",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "共同運営会社の17/83%出資、市の窓口、11,000㎡の機能とMakerSpace。",
+        "locator": "Platform for the city of the future / Infrastructure"
+      },
+      {
+        "title": "Munich Urban Colab FAQ",
+        "url": "https://www.munich-urban-colab.de/en/faq",
+        "publishedDate": "公表日記載なし・2026-10-25確認",
+        "claim": "都市課題を対象にした選考制会員、最低3か月、会議・共用空間、公開区域と会員区域。",
+        "locator": "Membership / General"
+      },
+      {
+        "title": "A bridge for start-ups between Munich and Singapore",
+        "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/a-bridge-for-start-ups-between-munich-and-singapore",
+        "publishedDate": "2026-09-28",
+        "claim": "NUSXとの相互拠点・投資関係・人材プログラムの3本柱。シンガポール側のUnternehmerTUM拠点は計画として区別。",
+        "locator": "Three pillars / reciprocal outposts"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "自治体の窓口と試作・事業化のチームを近接させる。交流担当だけでなく、課題を持ち込める部局と、検証後の予算・調達判断につなぐ担当を置く。",
+    "caution": "建物内の交流や試作は、公的調達の承認を代替しない。会員選考、料金、MakerSpaceの研修、データ・知財、住民参加の代表性はそれぞれ確認する。",
+    "statusLabel": "行政と起業支援が共同運営",
+    "statusNote": "2026年9月のNUSX連携を反映。提携の発表と海外展開の成果は区別。",
+    "facilityStudy": {
+      "type": "市の課題担当と起業・試作機能が同居する都市共創拠点",
+      "facilities": "11,000㎡にオフィス、コワーキング、会議・イベント、Living Lab、MakerSpace、カフェ、2つのサンルーム等を配置。行政の窓口も拠点内にある。",
+      "access": "オフィス・専用デスクは未来の都市に取り組む組織等を選考する会員制。最低3か月で個別合意。公開区域と会員区域を区別し、MakerSpace利用は別条件を確認する。",
+      "collaboration": "市の部局がMunich City Labを通じて課題を持ち込み、UnternehmerTUMの試作・事業化機能と企業・研究者がつながる。国際連携はNUSXと人材・資金・拠点の複数経路を設計する。",
+      "comparison": "自治体の課題と承認・導入の制度に近い場所で、起業家や製作者が試せることに特徴がある。単なる民間コワーキングとは役割が異なる。",
+      "photoReading": "共用執務空間・交流空間とMakerSpaceを区別して読む。建物の写真から個別の都市実証や調達成立を推定しない。",
+      "questions": [
+        "市の部局ごとの実証・調達への引継ぎ責任",
+        "会費・MakerSpace料金と設備利用研修",
+        "実証結果を住民に返す方法と継続判断"
+      ],
+      "visualSources": [
+        {
+          "title": "共用空間と工房の公式案内",
+          "url": "https://stadt.muenchen.de/lhm-ms-wirtschaftsfoerderung-en/en/business-location/innovation-ecosystem/munich-urban-colab.html",
+          "note": "市が公開する建物・内部写真と機能一覧。"
+        },
+        {
+          "title": "公式写真資料",
+          "url": "https://www.munich-urban-colab.de/en/press",
+          "note": "拠点の写真資料への案内。各画像の利用条件を確認する。"
+        }
+      ]
+    },
+    "caseUrl": "https://www.munich-urban-colab.de/en",
+    "mappingBasis": "公開資料の仕組みに基づくATLASの編集上の対応づけ。工程別の効果を直接測定したものではない。",
+    "checkedTimezone": "Asia/Tokyo",
+    "externalCase": true,
+    "photoLink": {
+      "url": "https://www.munich-urban-colab.de/en/press",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "tum-robogym",
+    "name": "TUM RoboGym powered by NEURA｜実世界の経験を学習データへ",
+    "country": "ドイツ",
+    "city": "ミュンヘン空港／LabCampus",
+    "lens": "hard",
+    "externalCase": true,
+    "caseUrl": "https://www.mirmi.tum.de/en/mirmi/news/article/qa-on-the-tum-robogym-powered-by-neura/",
+    "headline": "箱を折る、部品を組む。その経験を48の訓練セルから共有する。",
+    "mechanism": "企業が実際の作業と工程知識を持ち込み、人の実演・遠隔操作とロボット自身の試行からデータを採る。シミュレーションで条件を広げ、実機へ戻して確かめる。訓練セル、動作計測、計算資源、整備区画を同じ研究・訓練拠点につなぐ。",
+    "interesting": "Physical AIに足りない「物をつかんだときの接触や力、動作の結果」を集めるための施設。見栄えのよい動作展示を終点とせず、箱折り、工具使用、組み立てなどの技能を反復して学ばせる空間になっている。",
+    "partners": [
+      {
+        "name": "TUM MIRMI",
+        "contribution": "場所、研究者、科学的方法、教育と運営資源を提供。研究機関からの利用相談を受ける。"
+      },
+      {
+        "name": "NEURA Robotics",
+        "contribution": "ロボット、センサー、計算・データ基盤、運営スタッフを提供。企業の訓練利用の窓口を担う。"
+      },
+      {
+        "name": "参加企業・スタートアップ",
+        "contribution": "現場の作業、材料、工程知識を持ち込み、必要な技能と利用条件を一緒に定める。"
+      },
+      {
+        "name": "LabCampus",
+        "contribution": "ミュンヘン空港の拠点に大学と企業が協働する場を提供する。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年10月22日にTUMとNEURAが開設を発表。TUMは48の訓練セルの設置と約100台のロボットを案内し、NEURAは同年9月から企業と具体的な工程を訓練していると報告した。",
+      "date": "2026-10-22開設発表／2026-09先行訓練開始（運営者報告）",
+      "caveat": "開設と訓練の実施を確認した段階。汎用作業への成功率、実工場での継続稼働、安全性の独立評価は公表資料で未確認。台数は能力や社会的効果を示す順位指標にしない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "実機と実物の部材を使って技能をつくり、接触・力・動作結果を含む訓練データを採る。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "実機と人の実演で得た経験をシミュレーションで拡張し、変えた条件で学習した技能を実機へ戻して検証する。"
+    },
+    "sources": [
+      {
+        "title": "TUM：New TUM RoboGym robotics center opens in collaboration with NEURA",
+        "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/making-robots-smarter",
+        "publishedDate": "2026-10-22",
+        "claim": "開設、48セル・約100台、箱折り等の作業、クラウドのデータレイク、計算・動作計測・整備設備。",
+        "locator": "In brief / Generating large volumes of data / Further information and links"
+      },
+      {
+        "title": "TUM MIRMI：Q&A on the TUM RoboGym",
+        "url": "https://www.mirmi.tum.de/en/mirmi/news/article/qa-on-the-tum-robogym-powered-by-neura/",
+        "publishedDate": "2026-10-22",
+        "claim": "設置済み48セル、研究・企業の申請利用、アクセス窓口、ロボット種、研究目的。隣接KI-Fabrikは別施設。",
+        "locator": "What is the TUM RoboGym? / How many / How can companies and research institutions collaborate?"
+      },
+      {
+        "title": "NEURA：A Powerhouse for Physical AI — TUM RoboGym opens",
+        "url": "https://neura-robotics.com/tum-robogym-munich-4ne1-gen4-launch/",
+        "publishedDate": "2026-10-22",
+        "claim": "9月からの企業訓練、実機データ・人の実演・シミュレーションの3系統、実機での再検証、両者の役割。",
+        "locator": "A place where companies teach robots their work / Three paths to physical experience / Research and industry develop together"
+      },
+      {
+        "title": "TUM：Partners plan training center for AI-powered robotics",
+        "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/partners-plan-worlds-largest-training-center-for-ai-powered-robotics",
+        "publishedDate": "2026-03-10",
+        "claim": "春時点の建設・連携計画。開設状況の判断は10月22日の開設資料を優先する。",
+        "locator": "TUM expands Industry on Campus strategy with NEURA Robotics"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "transfer": "施設を導入する前に、学ばせる実作業、反復回数、成功・失敗の記録、変更する条件、実機へ戻す評価手順を決める。データ担当とロボット整備担当を設備計画に含める。",
+    "caution": "一般来場者が自由に操作できる展示施設ではない。外部利用は申請・相談が必要。データや学習済み技能の権利、公開範囲、費用、設備の空き、安全管理は案件別の確認事項。メーカーの将来構想を実装済み機能と混同しない。",
+    "statusLabel": "2026年10月開設・訓練を開始",
+    "statusNote": "TUM Convergence Center内のLabCampus拠点。2026年3月の計画資料を、10月22日の開設発表で更新。",
+    "facilityStudy": {
+      "type": "実機データと人の実演を蓄積するPhysical AIの研究・訓練施設",
+      "facilities": "48の訓練セル、ヒューマノイド・サービスロボット・アーム、動作・物体追跡のモーションキャプチャ、GPU計算・ネットワーク・保存基盤、整備区画。部品組み立て、工具操作、棚の出し入れ、箱折りなどを扱う。",
+      "access": "TUM研究者に加え、外部大学・研究機関・企業も申請により利用可能。企業はNEURA、研究機関はTUMへ相談する。公開されている情報は共用利用の入口であり、無償・無条件利用の保証ではない。",
+      "collaboration": "企業の工程知識を、研究チームの学習方法とNEURAのロボット・ソフトウェア基盤につなぐ。実機、実演、仮想環境を往復して技能を開発する。",
+      "comparison": "ATLASの分析：共用工房が主に試作品をつくるのに対し、ここでは同じ物理動作を反復し、ロボットへ教えるデータと技能をつくる。建物の新しさより、試行・計測・整備・計算を一体化した点に着目する。",
+      "photoReading": "訓練セルでロボットが箱や部品を扱う実写を優先する。人の実演、作業台、部材、センサーとの位置関係を見る。集合写真やロボット単体写真だけで施設全体を代表させない。",
+      "questions": [
+        "同じ作業を未知の部材・照明・配置で行う際の成功率と回復方法",
+        "参加企業のデータ・技能の知的財産と公開範囲",
+        "人と同室で動かす際の保護方策、介入条件、記録方法",
+        "外部利用料金、審査、利用枠と訓練を担当する人員"
+      ],
+      "visualSources": [
+        {
+          "title": "TUM開設プレス：訓練セルの写真",
+          "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/making-robots-smarter",
+          "note": "部品の選別、箱折り、研究者による操作など、訓練セルの実写ギャラリー。"
+        },
+        {
+          "title": "NEURA開設発表・メディアハブへの入口",
+          "url": "https://neura-robotics.com/tum-robogym-munich-4ne1-gen4-launch/",
+          "note": "開設報告と実機訓練の説明。製品単体・発表会写真と訓練空間の写真を区別する。"
+        }
+      ]
+    },
+    "physicalAI": {
+      "robots": "ヒューマノイド、サービスロボット、ロボットアーム。TUMの案内は約100台・48セル。新4NE1の世代別利用開始表現は発表元間に差があり、本文では世代を断定しない。",
+      "data": "実機の動作・接触・実行結果と、人のデータスーツ、動作計測、遠隔操作による実演を採取。整理されたクラウドデータレイクで研究・訓練に使う。一般への全データ公開とは記されていない。",
+      "simulation": "実環境から得た経験に仮想環境の条件変化を加え、学習データを広げる。GPU基盤はシミュレーション、強化学習、大規模モデル訓練を支える。",
+      "validation": "仮想環境で学んだ技能を実機に戻して検証。企業の持ち込む箱・瓶・部品などの工程で適合性を調べる。統一した公開性能値は未確認。",
+      "safety": "安全な人とロボットの相互作用は研究目的。整備・計測設備を備えるが、施設全体やロボットの一般作業への安全認証を確認したという意味ではない。",
+      "access": "外部研究機関・企業からの申請を受ける。企業はNEURA、研究はTUMへ相談。",
+      "status": "2026年10月22日開設、NEURAによると同年9月から企業工程の先行訓練。将来の国際拠点構想とは区別。"
+    },
+    "photoLink": {
+      "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/making-robots-smarter",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "fraunhofer-ipai-robotics",
+    "name": "Fraunhofer IPA｜IPAI SpacesのAIロボティクス研究拠点",
+    "country": "ドイツ",
+    "city": "ハイルブロン",
+    "lens": "hard",
+    "externalCase": true,
+    "caseUrl": "https://www.hnfiz.fraunhofer.de/de/leistungen/fiz-ki-basierte-robotik.html",
+    "headline": "手でつかむ、動いて運ぶ。作業を教え直せるロボットへ。",
+    "mechanism": "IPAI Spacesの実機デモンストレーターで、ロボットハンドと移動マニピュレーターを開発する。人の実演、模倣学習、遠隔操作、言語入力を使い、部品や工程が変わるたびに必要になるプログラミングを減らす研究を進める。",
+    "interesting": "AIのオフィス拠点に、部品をつかみ、向きを変え、指定場所へ置く実機の研究を持ち込んだ。産業利用者が現物に触れる開発拠点と、用途に必要な能力を分解して確かめる評価方法をつなげている。",
+    "partners": [
+      {
+        "name": "Fraunhofer IPA",
+        "contribution": "ロボットハンド、知能化した移動マニピュレーション、ヒューマノイドの研究・実機デモを担う。"
+      },
+      {
+        "name": "Fraunhofer IAO",
+        "contribution": "共同運営するFIZでモデルに基づく開発とIT支援を担い、ロボットシステムの設計を支援する。"
+      },
+      {
+        "name": "Fraunhofer HNFIZ",
+        "contribution": "ハイルブロンの複数の研究・イノベーションセンターを接続し、AIロボティクスの研究体制を構成する。"
+      },
+      {
+        "name": "IPAI／参加企業",
+        "contribution": "IPAI Spacesの場と企業ネットワークを接続。企業の製造・組立・物流の課題を研究テーマにする。"
+      }
+    ],
+    "outcome": {
+      "text": "2025年10月1日にIPAI Spacesの新拠点が開設。2026年3月にはハイルブロンの研究チームが、用途に必要な移動・操作・認知・安全の能力を整理するHumanoid Capabilities Navigatorを公表した。",
+      "date": "2025-10-01拠点開設／2026-03-23評価方法公表",
+      "caveat": "新拠点の実機研究と評価方法の公表を確認。人並みの汎用作業能力や、工場での全面導入を達成したという意味ではない。個別モデルの能力はバージョンと作業条件に依存する。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "ロボットハンドと移動機構を実物の部品・工程に合わせ、実演や遠隔操作を通じて作業技能を試作する。"
+    },
+    "secondaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "用途が必要とする能力を分解して、実機の能力や不足と照合する。現場へ導入する前の適合性評価に有効と読めるが、拠点内の試験を実工場の実績と同一視しない。"
+    },
+    "sources": [
+      {
+        "title": "Fraunhofer IPA発表：IPAI Spacesにロボティクス新拠点を開設",
+        "url": "https://nachrichten.idw-online.de/2025/11/06/fraunhofer-ipa-eroeffnet-robotik-aussenstelle-in-den-ipai-spaces-in-heilbronn",
+        "publishedDate": "2025-11-06",
+        "claim": "10月1日の開設、実機デモ、ロボットハンドと移動マニピュレーション、模倣学習・遠隔操作、企業との協働。研究所自身が配信した一次プレス。",
+        "locator": "KI-basierte Robotik für Produktion, Montage und Logistik / Lösungen für einfachere Inbetriebnahme und Umrüstung"
+      },
+      {
+        "title": "Fraunhofer HNFIZ：FIZ für KI-basierte Robotik",
+        "url": "https://www.hnfiz.fraunhofer.de/de/leistungen/fiz-ki-basierte-robotik.html",
+        "publishedDate": "公表日記載なし・現行案内",
+        "claim": "把持・回転・配置、模倣・言語入力、IPAとIAOの研究分担、ハイルブロン拠点の窓口。",
+        "locator": "Forschungs- und Anwendungsschwerpunkte / Sprecher und beteiligte Institute / Kontakt"
+      },
+      {
+        "title": "Fraunhofer HNFIZ：Humanoid Capabilities Navigator",
+        "url": "https://www.hnfiz.fraunhofer.de/de/aktuelles/humanoid-capabilities-navigator.html",
+        "publishedDate": "2026-03-23",
+        "claim": "ハイルブロンのチームによる能力評価モデル、用途に必要な能力との照合、G1で確認された産業利用上の課題。",
+        "locator": "Transparenz und Vergleichbarkeit / Praxisnahe Einordnung / Unser Forschungs- und Innovationszentrum"
+      },
+      {
+        "title": "Fraunhofer IPA：用途に関連するヒューマノイドの標準評価",
+        "url": "https://www.ipa.fraunhofer.de/de/presse/presseinformationen/benchmark-fuer-humanoide-roboter.html",
+        "publishedDate": "2026-05-27",
+        "claim": "IPA全体の関連する有償評価サービス。実機の能力、衝突時の力、サイバーセキュリティ、エネルギー等を分析。全試験設備がIPAI Spaces内にあるとは記されていない。",
+        "locator": "Was ist der Benchmark? / sechs zentrale Bereiche / Relevanz des Benchmarks für Unternehmen"
+      },
+      {
+        "title": "Fraunhofer IPA：Meldungen Q4/2025",
+        "url": "https://interaktiv.ipa.fraunhofer.de/news/meldungen-q4-2025-drei-neue-forschungszentren-und-ein-aufruf/",
+        "publishedDate": "2026-01-27",
+        "claim": "2025年10月開設のハイルブロン新拠点とデモンストレーターを、2026年の研究所記事で再確認。",
+        "locator": "Fraunhofer IPA eröffnet Robotik-Außenstelle in Heilbronn"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "transfer": "「人型ロボットを置く」ことを目的にせず、対象の部品・移動経路・作業条件から必要な把持、認識、移動、安全の能力を決める。人が教える方法と、条件変更後に再評価する方法を設備運営に含める。",
+    "caution": "利用は研究相談・共同開発の窓口から調整する。自由に機器を借りられる一般向け工房ではない。IPAI Spacesの稼働拠点と、建設計画のIPAI Campusを区別する。IPAの別拠点の試験設備や既存成果を、この新施設内の実績として扱わない。",
+    "statusLabel": "2025年開設・2026年に評価研究を公表",
+    "statusNote": "IPAI Spacesに実機研究拠点を置く。大規模なIPAI Campusの将来計画とは別。",
+    "facilityStudy": {
+      "type": "AIの産業ネットワークに実機デモとロボット開発を組み込む研究拠点",
+      "facilities": "IPAI Spaces内のロボットハンドと移動マニピュレーションのデモンストレーター。物体をつかみ、向きを変え、置く操作と、移動可能なロボットの組み合わせを扱う。専有面積、台数、全装置の機種・配置図は公開一次資料では未確認。",
+      "access": "企業や関心を持つ人がデモを見て研究開発を相談できる。FIZの担当者への相談が入口。一般公開時間、機器のセルフ利用、予約料金は明示されていない。",
+      "collaboration": "IPAのロボット技能、IAOのモデルベース開発・IT、IPAIの企業ネットワークを結ぶ。企業の多品種・変動する作業を、ハンド・移動・教示の研究へつなぐ。",
+      "comparison": "ATLASの分析：TUM RoboGymは反復訓練データの蓄積に焦点がある。この拠点は手と移動を組み合わせた産業作業の開発、利用者の課題との照合、能力の見極めに読みどころがある。",
+      "photoReading": "IPAI Spacesの開設発表にある移動マニピュレーションとロボットハンドの実写を優先。機器と作業空間が分かる写真を使い、チーム集合写真や将来キャンパスのCGと区別する。",
+      "questions": [
+        "IPAI Spaces内で現在利用できるロボット・センサーの機種と構成",
+        "共同研究の費用・成果物・知的財産と外部利用条件",
+        "教示データ量、未知の部品での成功率、失敗からの復帰方法",
+        "シミュレーション環境の有無、実機への移行手順、施設内の安全運用"
+      ],
+      "visualSources": [
+        {
+          "title": "IPAI Spaces開設プレス：実機デモ写真",
+          "url": "https://nachrichten.idw-online.de/2025/11/06/fraunhofer-ipa-eroeffnet-robotik-aussenstelle-in-den-ipai-spaces-in-heilbronn",
+          "note": "IPAI Spacesでの実機デモ。ロボットハンドと移動マニピュレーションの研究設備。"
+        },
+        {
+          "title": "関連するIPA実機評価の写真",
+          "url": "https://www.ipa.fraunhofer.de/de/presse/presseinformationen/benchmark-fuer-humanoide-roboter.html",
+          "note": "力センサー、斜面、クリーンルーム評価の実写。IPAI Spaces内の設備であるとは確認できないため、この拠点の主写真として転用しない。"
+        }
+      ]
+    },
+    "physicalAI": {
+      "robots": "実機デモの重点はロボットハンドと移動・人型ロボットによるマニピュレーション。FIZはヒューマノイドも研究する。機種別の常設台数は未確認。",
+      "data": "人の実演、模倣学習、遠隔操作による教示を、自律的な作業実行へつなげる。学習データの規模・公開条件は未公表。",
+      "simulation": "モデルベースの開発・IT支援は案内されるが、IPAI Spaces内のシミュレーター構成やsim-to-real手順の詳細は一次資料で未確認。",
+      "validation": "用途が要求する移動・操作・認知・安全の能力を、ロボットの能力と照合する研究を2026年公表。IPAは別途、実機の能力・安全・消費電力等の評価サービスを提供するが、全試験をこの拠点内で実施するとは断定しない。",
+      "safety": "2026年の能力モデルはSafetyとSecurityを独立した評価項目に含む。関連するIPA実機試験では性能の限界も報告されている。拠点や全機種が安全認証済みという主張ではない。",
+      "access": "FIZへの研究・実証相談と共同開発。一般向けの無条件機器貸出ではない。",
+      "status": "2025年10月1日IPAI Spaces拠点開設。2026年3月にハイルブロンの能力評価研究を公表し、現行公式サイトも研究分野と窓口を案内。"
+    },
+    "photoLink": {
+      "url": "https://nachrichten.idw-online.de/2025/11/06/fraunhofer-ipa-eroeffnet-robotik-aussenstelle-in-den-ipai-spaces-in-heilbronn",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    },
+    "photoId": "fraunhofer-ipai-robotics-2025"
+  },
+  {
+    "id": "nvidia-seattle-robotics-lab",
+    "name": "NVIDIA Seattle Robotics Lab｜実機組立セル",
+    "country": "米国",
+    "city": "シアトル",
+    "lens": "hard",
+    "externalCase": true,
+    "headline": "3本の腕と仮想工場を、失敗からつなぎ直す。",
+    "mechanism": "GB300試験トレーを囲む3本のロボットアーム、カメラ、治具を組み、部品認識・把持・挿入・ねじ締めを検証する。コネクター挿入は仮想環境で学習し、実機の力・トルクから補正を学び直す。",
+    "interesting": "AIモデルだけを競わず、治具と指先の形、視点、制御、動作時間を一緒に変える。壊れたり変形したりするケーブルは無限に学習データを取れないため、機械設計と少量の実データも重要になる。",
+    "partners": [
+      {
+        "name": "NVIDIA Seattle Robotics Lab / Isaac engineering",
+        "contribution": "実機セル、認識・計画・制御、シミュレーションと学習を統合する。"
+      },
+      {
+        "name": "NVIDIA Operations / Foxconn",
+        "contribution": "製造側として対象工程と成功率・時間・損傷回避の要求を定義する。共同研究の成果であり、一般利用施設ではない。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年10月の研究報告は、バスバー組立で成功率95%超・160秒、4個のコネクターを扱う工程で90–95%・1個平均40秒を報告。製造側の要求にはまだ届いていない。",
+      "date": "2026-10-07の開発チーム報告",
+      "caveat": "対象部品と実験条件に限定した研究値。バスバー目標は99.5%・124秒以内、コネクターは4個で72秒以内。工場への量産導入・無人稼働・投資回収の実績とは区別する。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "実機、視覚、治具、柔らかいケーブルと学習済み制御を一つのセルに組み、接触時の失敗を再現できる。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "CADからの画像生成とIsaac Labでの学習を実機へ移し、ずれた部分を実データで補正する。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "sources": [
+      {
+        "title": "The Machines that Make the Machines",
+        "url": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
+        "publishedDate": "2026-10-07",
+        "claim": "実験セルの構成、部品と工程、CAD・実物画像による認識、シミュレーション学習と実機の力覚による補正、性能と残課題。",
+        "locator": "Figures 1–2 / Infrastructure / Final stage / Conclusion",
+        "publisher": "NVIDIA"
+      },
+      {
+        "title": "Seattle Robotics Lab",
+        "url": "https://research.nvidia.com/labs/srl/",
+        "publishedDate": "現行研究室案内・2026年の研究一覧",
+        "claim": "視覚・触覚・力覚、制御、強化学習・模倣学習・シミュレーションを扱う研究室。",
+        "locator": "Research / Perception / Control / Learning / Publications",
+        "publisher": "NVIDIA Research"
+      },
+      {
+        "title": "How to Evaluate General-Purpose Robot Policies for Real-World Deployment",
+        "url": "https://developer.nvidia.com/blog/how-to-evaluate-general-purpose-robot-policies-for-real-world-deployment/",
+        "publishedDate": "2026-07-11",
+        "claim": "RoboLabは多様な操作タスクを評価するシミュレーション基盤。成功率に加え部分達成・動作効率・失敗類型を扱う。",
+        "locator": "RoboLab / Evaluation / Failure analysis",
+        "publisher": "NVIDIA"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Etc/UTC",
+    "statusLabel": "稼働中の企業研究ラボ・2026年10月に実機結果を公表",
+    "statusNote": "実験セルの運用を確認。2026年の新設施設とは扱わず、工場導入前の研究段階とする。",
+    "transfer": "一つの製造工程を、成功率だけでなく時間・損傷・人の介入で測る。仮想環境と実機のどこで差が出たかを記録し、データ追加、治具変更、制御改善のどれで直すかを選ぶ。",
+    "caution": "企業の研究施設。外部企業が予約してセルを借りる制度は確認できない。汎用モデルを入れるだけで現場稼働する例ではなく、部品固有の機械設計・認識・制御も含む。",
+    "facilityStudy": {
+      "type": "複数アームの組立実験セルとシミュレーションを往復する企業R&D施設",
+      "facilities": "同じ試験トレーを2本のFlexiv Rizon 4Sと、OnRobot製ねじ締め装置を付けたUR10eが囲む。机上の治具、複数視点のカメラ、部品専用の指先を組み替え、工程を分けて検証する。面積・セル総数は未公表。",
+      "access": "社内研究・エンジニアリングと製造側の共同検討。一般開放や有償貸出の入口は確認できない。公開された論文・ソフトと、物理セルを使う権利は別である。",
+      "collaboration": "製造側が許容時間と損傷の条件を提示し、研究側が認識・計画・制御・学習・機械設計を組み合わせる。高性能な研究デモと、工程に採用できる性能の差を明記している。",
+      "comparison": "ARENA2036の共同研究工場と比べ、特定の企業工程を深く解く実験セル。共用面積ではなく、実機の失敗をデータと設計へ戻すループが参考になる。",
+      "photoReading": "Figure 1の実写真で、トレーを囲む3本の腕、カメラの視点、治具の位置を見る。Figure 2は上面の図であり内観写真ではない。Foxconn工場の作業員映像も研究セルとは場所が異なる。",
+      "questions": [
+        "製造側の性能閾値を満たした時点と試行数",
+        "部品交換・損傷・失敗復旧を含む運転コスト",
+        "接近検知・非常停止・介入時の安全設計と外部利用条件"
+      ],
+      "visualSources": [
+        {
+          "title": "GB300組立セルの実写真・実機動画",
+          "url": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
+          "note": "Figure 1は3本の腕と治具が見える実写真。掲載2026-10、撮影日未公表。"
+        }
+      ],
+      "robots": "Flexiv Rizon 4S ×2、UR10e ×1＋OnRobot Screwdriver。研究基盤TALOSは他の腕にも対応するが、このセルの台数と混同しない。",
+      "sensors": "手首のRealSense D405等の画像、複数視点の位置推定、挿入時の力・トルク入力。本文にある触覚研究一般を、このセルの触覚センサー搭載と読み替えない。",
+      "trainingData": "部品CADの合成画像で認識を事前学習し、実物の3D再構成から得たラベルで補正。繰返し操作でケーブルが変形するため、実データ収集自体が制約となる。",
+      "simulation": "Isaac Labでコネクター挿入方策を学習。基礎方策を実機へ移すだけでは信頼性不足が残った。",
+      "realWorld": "実機では力・トルクを使う残差方策を追加学習。認識や挿入だけでなく、腕同士の連携やねじ締め時間が全工程の性能を左右する。",
+      "safety": "トレーへの意図しない衝突を許さないという製造要求と、穏やかな接触制御を説明。安全認証、ガード・非常停止の詳細、無人連続運転は確認できない。"
+    },
+    "caseUrl": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
+    "mappingBasis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。",
+    "tags": [
+      "フィジカルAI",
+      "実機検証",
+      "シミュレーション"
+    ],
+    "physicalAI": {
+      "robots": "Flexiv Rizon 4S ×2、UR10e ×1＋OnRobot Screwdriver。研究基盤TALOSは他の腕にも対応するが、このセルの台数と混同しない。 センサー：手首のRealSense D405等の画像、複数視点の位置推定、挿入時の力・トルク入力。本文にある触覚研究一般を、このセルの触覚センサー搭載と読み替えない。",
+      "data": "部品CADの合成画像で認識を事前学習し、実物の3D再構成から得たラベルで補正。繰返し操作でケーブルが変形するため、実データ収集自体が制約となる。",
+      "simulation": "Isaac Labでコネクター挿入方策を学習。基礎方策を実機へ移すだけでは信頼性不足が残った。",
+      "validation": "実機では力・トルクを使う残差方策を追加学習。認識や挿入だけでなく、腕同士の連携やねじ締め時間が全工程の性能を左右する。",
+      "safety": "トレーへの意図しない衝突を許さないという製造要求と、穏やかな接触制御を説明。安全認証、ガード・非常停止の詳細、無人連続運転は確認できない。",
+      "access": "社内研究・エンジニアリングと製造側の共同検討。一般開放や有償貸出の入口は確認できない。公開された論文・ソフトと、物理セルを使う権利は別である。",
+      "status": "実験セルの運用を確認。2026年の新設施設とは扱わず、工場導入前の研究段階とする。"
+    },
+    "photoLink": {
+      "url": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "toyota-research-institute-robotics",
+    "name": "Toyota Research Institute｜双腕ロボット評価ラボ",
+    "country": "米国",
+    "city": "研究拠点：ロスアルトス／ケンブリッジ",
+    "lens": "hard",
+    "externalCase": true,
+    "headline": "同じ机で条件をそろえ、AIの差を確かめる。",
+    "mechanism": "双腕ロボットと手首・固定カメラを備えた実験台を、対応する仮想環境と組み合わせる。物の位置や指示を変え、同じ初期条件でモデルを比べ、家事や組立の長い動作を段階ごとに採点する。",
+    "interesting": "見栄えのよい一回の成功だけでなく、失敗と部分達成を残せる実験基盤。実験台の校正、評価順、採点者の偏りまで管理して、モデルやデータの変更が効いたかを判断する。",
+    "partners": [
+      {
+        "name": "Toyota Research Institute（TRI）",
+        "contribution": "双腕の実機・仮想環境、データ収集、学習と評価を統合する。"
+      },
+      {
+        "name": "LBM共同研究者・データ提供研究コミュニティ",
+        "contribution": "他のロボットのデータや人の映像を含む学習手法を検討。公開データの利用は施設への入室権を意味しない。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年2月公開の研究は89の方策を、58,000回のシミュレーションと2,835回の実機試行で比較。画像・言語や別機体のデータを組み合わせる方法の効果と、効果が確認できない方法の両方を示した。",
+      "date": "2026-02-01論文公開。別のLBM評価研究は2025年先行公開・Science Robotics 2026掲載。",
+      "caveat": "4,000時間はロボットと人の映像等を合わせた学習データ量で、同施設の実機稼働時間ではない。研究室での条件付き評価であり、家庭や工場での商用自律運用、安全性の認証を示さない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "実物の食器、袋、調理道具などを使う双腕台で、把持から片付けまでの動作を組み、失敗を再試験できる。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "同じ学習方策を仮想・実機で評価し、照明・背景・指示・未知の物体に対する変化を比較する。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "sources": [
+      {
+        "title": "A Systematic Study of Data Modalities and Strategies for Co-training Large Behavior Models for Robot Manipulation",
+        "url": "https://arxiv.org/html/2602.01067v1",
+        "publishedDate": "2026-02-01",
+        "claim": "データ構成、89方策・58,000仮想・2,835実機試行、双腕Franka、条件をそろえた比較と採点の再確認。",
+        "locator": "Abstract / II-B1 / III-A / Appendix 4 and 7C–7D",
+        "publisher": "TRI研究チーム（著者公開論文）"
+      },
+      {
+        "title": "Co-training LBM project",
+        "url": "https://co-training-lbm.github.io/",
+        "publishedDate": "2026年研究・ページ公表日記載なし",
+        "claim": "袋詰め、スープの具材投入、食器収納の等速実機動画と、効果のある・ないデータ方式を示す。",
+        "locator": "Autonomous evaluation / Data Modalities / Impact / Results",
+        "publisher": "TRI・清華大学の著者"
+      },
+      {
+        "title": "A Careful Examination of Large Behavior Models for Multitask Dexterous Manipulation",
+        "url": "https://arxiv.org/html/2507.05331v1",
+        "publishedDate": "2025-07-07先行公開",
+        "claim": "格子付き机、双腕、カメラ、週次校正、実機・仮想台の構成と旧設備の退役。",
+        "locator": "7 Platform Details / Table S1 / Figure S1",
+        "publisher": "TRI LBM Team"
+      },
+      {
+        "title": "LBM1 research project",
+        "url": "https://toyotaresearchinstitute.github.io/lbm1/",
+        "publishedDate": "Science Robotics, 2026の掲載を案内／先行研究は2025",
+        "claim": "実機とDrakeの双腕台、最大6カメラ、段階別の評価。約1,700時間・1,800実機・47,000超仮想はこの別研究の値。",
+        "locator": "Evaluation / Architecture and Data / More Resources",
+        "publisher": "Toyota Research Institute"
+      },
+      {
+        "title": "TRI About Us",
+        "url": "https://www.tri.global/about-us",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "ロスアルトス本部とケンブリッジの拠点。実験台ごとの撮影場所を特定する資料ではない。",
+        "locator": "Locations",
+        "publisher": "Toyota Research Institute"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Etc/UTC",
+    "statusLabel": "実機評価基盤を継続運用・2026年研究を公開",
+    "statusNote": "最新は2026年2月公開の共同学習研究。施設の2026年新設・増床を示す資料は確認していない。",
+    "transfer": "モデルを選ぶ前に、同じ物・配置・指示で繰り返せる評価台をつくる。成功率、途中までできた割合、復旧、採点の揺れを分け、仮想で選んだ方法を実機で確かめる。",
+    "caution": "企業の研究施設で、外部向け設備貸出は未確認。論文内の実験台がどちらの拠点にあるかは明記されていないため、写真と所在地を一対一に断定しない。",
+    "facilityStudy": {
+      "type": "双腕の操作実験台と仮想環境をそろえた企業研究・評価施設",
+      "facilities": "格子を引いた机を2本のFrankaアームが挟み、手首と固定カメラで記録する。2025年の設備資料では7つの新型実機台を評価に使い、2つの旧型台は退役済み。これは当時の論文用台数で、2026年の施設全体の台数ではない。",
+      "access": "TRIの研究者・共同研究者が扱う実験基盤。一般の見学・共用予約・料金制度は確認できない。公式動画と論文は公開されている。",
+      "collaboration": "研究者、実験台とソフトの開発者、データ収集者、評価担当を組み合わせる。別の人が動画と採点を確認する手順も、モデルの改善を判断する基盤に含める。",
+      "comparison": "ARENA2036の工程構築よりも、同じ条件の反復とデータ品質に重点を置く。建物の大きさより、台同士の校正と、仮想・実機・採点の整合が学びになる。",
+      "photoReading": "双腕が囲む机、上方と手首のカメラ、対象物の配置を見る。厨房風の実験セットは実家庭での運用とは異なる。シミュレーション画面と実機画像が並ぶ資料では各ラベルを確認する。",
+      "questions": [
+        "実験台ごとの所在地、現行の台数・予約稼働・保守工数",
+        "長時間運転の失敗復旧と、接触・刃物・壊れやすい物の安全管理",
+        "モデル・データ・評価手順の公開範囲と共同研究の条件"
+      ],
+      "visualSources": [
+        {
+          "title": "2026年研究の実機台を等速動画で見る",
+          "url": "https://co-training-lbm.github.io/",
+          "note": "袋詰め、具材投入、食器収納。撮影日・個別実験台の所在地は未公表。"
+        },
+        {
+          "title": "双腕台の実機・仮想画像と評価資料",
+          "url": "https://toyotaresearchinstitute.github.io/lbm1/",
+          "note": "Evaluationの図と実機動画。2025先行研究・2026誌面掲載を区別する。"
+        }
+      ],
+      "robots": "2本のFrankaアームと平行グリッパーを持つ机上実験台。2025設備資料はResearch 3、2026本文はPandaと表記するため、全台を単一機種と断定しない。",
+      "sensors": "手首と固定のRGBカメラ、機体の状態、言語指示を扱う。最新研究の方策入力と施設にある全センサーは区別する。",
+      "trainingData": "2026研究の約4,000時間は対象ロボット、他機体、人の映像等の混合。対象台のTRI-Ramenは実機478時間・仮想45時間と別計上し、全量を実収集としない。",
+      "simulation": "Drake上のタスクで照明・背景・カメラ等を変え、方法を比較してから実機で評価。仮想台と実機台は完全一致ではない。",
+      "realWorld": "同一の初期配置で各方策を順に試し、別担当者が記録映像の一部を再採点する。未知の指示・物体と長い操作を評価するが、あらゆる家庭への汎化を保証しない。",
+      "safety": "研究操作の条件は記述されているが、施設の安全認証・非常停止・人との共存条件は公開資料から十分確認できない。モデル性能と運用上の安全性を別に評価する。"
+    },
+    "caseUrl": "https://co-training-lbm.github.io/",
+    "mappingBasis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。",
+    "tags": [
+      "フィジカルAI",
+      "実機検証",
+      "シミュレーション"
+    ],
+    "physicalAI": {
+      "robots": "2本のFrankaアームと平行グリッパーを持つ机上実験台。2025設備資料はResearch 3、2026本文はPandaと表記するため、全台を単一機種と断定しない。 センサー：手首と固定のRGBカメラ、機体の状態、言語指示を扱う。最新研究の方策入力と施設にある全センサーは区別する。",
+      "data": "2026研究の約4,000時間は対象ロボット、他機体、人の映像等の混合。対象台のTRI-Ramenは実機478時間・仮想45時間と別計上し、全量を実収集としない。",
+      "simulation": "Drake上のタスクで照明・背景・カメラ等を変え、方法を比較してから実機で評価。仮想台と実機台は完全一致ではない。",
+      "validation": "同一の初期配置で各方策を順に試し、別担当者が記録映像の一部を再採点する。未知の指示・物体と長い操作を評価するが、あらゆる家庭への汎化を保証しない。",
+      "safety": "研究操作の条件は記述されているが、施設の安全認証・非常停止・人との共存条件は公開資料から十分確認できない。モデル性能と運用上の安全性を別に評価する。",
+      "access": "TRIの研究者・共同研究者が扱う実験基盤。一般の見学・共用予約・料金制度は確認できない。公式動画と論文は公開されている。",
+      "status": "最新は2026年2月公開の共同学習研究。施設の2026年新設・増床を示す資料は確認していない。"
+    },
+    "photoLink": {
+      "url": "https://co-training-lbm.github.io/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "robotics-ai-institute-cambridge",
+    "name": "Robotics and AI Institute｜実機学習・運動ラボ",
+    "country": "米国",
+    "city": "ケンブリッジ（本拠）",
+    "lens": "hard",
+    "externalCase": true,
+    "headline": "動ける空間と、制御を移し替える道具をそろえる。",
+    "mechanism": "歩行・走行・跳躍・物体操作を試す実機環境とシミュレーションを組み合わせる。機体やセンサーが変わっても制御の入出力をそろえ、学習した方策を実機で繰り返し確かめる。",
+    "interesting": "人型だけを並べるラボではなく、四足、車輪付き二足、独自機体で運動と操作を比べる。2026年10月公表のExployは、重みだけでなくセンサー処理と動作指令までまとめて移す仕組みを公開した。",
+    "partners": [
+      {
+        "name": "Robotics and AI Institute（RAI）",
+        "contribution": "研究者、実機、計算・機械・制御基盤を持ち、長期的な汎用ロボット研究を行う。"
+      },
+      {
+        "name": "Boston Dynamicsほか機体提供・共同研究先",
+        "contribution": "SpotやAtlas等の実機を利用する研究。RAIとBoston Dynamicsは別組織で、各社の製品性能を研究デモと混同しない。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年10月の公式報告は、Exployを用いたRoadrunnerの実機移行、Spotの障害物走破、独自機体等への展開を示す。制御の数値一致を実機に載せる前に検査できる道具も公開している。",
+      "date": "2026-10-07 Exploy報告／2026-02-03の記事は2025年の研究振返り",
+      "caveat": "限定した実験と研究用ソフトの実績。一般の作業現場での常時稼働や安全認証ではない。2025年のSpotによるタイヤ操作はモーションキャプチャによる状態推定と外部計算を使用。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "転倒、接触、バランス、物体操作を実機で試し、ソフトと機体を一緒に直す。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "仮想で学習した動作とセンサー処理をまとめて実機へ移し、計算の差や制御の不整合を確認する。",
+      "basis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。"
+    },
+    "sources": [
+      {
+        "title": "About the RAI Institute",
+        "url": "https://rai-inst.com/about/",
+        "publishedDate": "現行案内・公表日記載なし",
+        "claim": "Cambridgeの145 Broadwayに本拠、Zurichにも拠点。設備・計算・研究人材を持つ組織。",
+        "locator": "Locations / Cambridge / Zurich",
+        "publisher": "Robotics and AI Institute"
+      },
+      {
+        "title": "Pushing the Pace of Progress",
+        "url": "https://rai-inst.com/resources/blog/pushing-the-pace-of-progress/",
+        "publishedDate": "2025-01-07",
+        "claim": "実験室の写真、2022年設立、長期研究、認知と運動、独自機体と人の実演から学ぶ方針。",
+        "locator": "Hero photo / Defining the Challenge / Charting the Path",
+        "publisher": "Robotics and AI Institute"
+      },
+      {
+        "title": "Introducing Exploy: Simplifying RL Policy Deployment in Autonomous Robotics",
+        "url": "https://rai-inst.com/resources/blog/introducing-exploy-simplifying-rl-policy-deployment-in-autonomous-robotics/",
+        "publishedDate": "2026-10-07",
+        "claim": "センサー処理・方策・指令を一体にした制御移植、Isaac Lab等への対応、Roadrunner・Spotほかの実機研究。",
+        "locator": "What is Exploy / Real-World Examples / Future of Sim-to-Real",
+        "publisher": "Robotics and AI Institute"
+      },
+      {
+        "title": "RAI Institute 2025: A Year of Innovation for Robotics and AI",
+        "url": "https://rai-inst.com/resources/blog/rai-institute-2025-a-year-of-innovation-for-robotics-and-ai/",
+        "publishedDate": "2026-02-03（2025年を振返る記事）",
+        "claim": "実機への移行例と、Spotのタイヤ操作にモーションキャプチャ・外部計算を用いる制約。",
+        "locator": "Ultra Athletic Intelligence / Dynamic manipulation / Robotics and Society",
+        "publisher": "Robotics and AI Institute"
+      },
+      {
+        "title": "Robot Lab pop-up",
+        "url": "https://rai-inst.com/robot-lab/",
+        "publishedDate": "現行案内・2026-10-25確認",
+        "claim": "CambridgeSideの一般向けポップアップRobot Labは終了済み。研究本拠とは別。",
+        "locator": "Our Robot Lab pop-up at CambridgeSide is now closed",
+        "publisher": "Robotics and AI Institute"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Etc/UTC",
+    "statusLabel": "企業研究拠点で実機研究を継続・2026年10月に制御基盤を公開",
+    "statusNote": "本拠の所在地と研究継続を確認。個々の研究の撮影場所やCambridge内の全設備配置は非公開。一般向けRobot Labポップアップは終了済み。",
+    "transfer": "機体を購入する前に、計測、失敗を試せる空間、復旧担当、仮想と実機で共通にする制御仕様を決める。成功した動画だけでなく、外部計測や補助計算への依存も設計条件として残す。",
+    "caution": "一般の共用工作室ではない。研究参加や機器貸出の条件は別途確認が必要。広報動画の撮影場所をすべてCambridgeと断定せず、研究室全体の施設仕様と個別実験を分ける。",
+    "facilityStudy": {
+      "type": "複数の身体と運動課題を扱う民間ロボティクス研究拠点",
+      "facilities": "公式内観には実機の作業エリアと研究設備が見える。運動・操作の実験、独自機体、シミュレーションと実機制御を横断する。床面積、モーションキャプチャ範囲、共用セル数等は未公表。",
+      "access": "本拠はCambridgeのKendall Square、Zurichにも拠点。研究者・共同研究の組織であり、一般向けの日常的な機器予約は確認できない。終了したCambridgeSideの公開イベントは入室窓口に含めない。",
+      "collaboration": "運動・認知・機体・制御を横断し、複数機体で使える開発基盤を共有する。公開ソフトExployは外部研究者が参考にできるが、物理施設を開放したという意味ではない。",
+      "comparison": "ARENA2036の企業間の工程実験より、ロボットの運動能力と汎用性を長期に研究する拠点。空間・計測・制御・研究者を一体で用意する点を読む。",
+      "photoReading": "公式のrobot-lab内観で機体の周囲の空間、作業台や設備の配置を見る。障害物やタイヤを用いた個別デモは、その設定での研究場面として読む。2025掲載写真を2026新設と表示しない。",
+      "questions": [
+        "個別実験の所在地、床・安全区画・計測設備の仕様",
+        "外部計測なしで成立する範囲と、補助設備の費用",
+        "共同研究・訪問・知財・試験データの公開条件"
+      ],
+      "visualSources": [
+        {
+          "title": "公式研究室内観を見る",
+          "url": "https://rai-inst.com/resources/blog/pushing-the-pace-of-progress/",
+          "note": "2025-01公開の実験室写真。撮影日時と個別室の所在地は未公表。"
+        },
+        {
+          "title": "制御を移した実機の動作を見る",
+          "url": "https://rai-inst.com/resources/blog/introducing-exploy-simplifying-rl-policy-deployment-in-autonomous-robotics/",
+          "note": "Roadrunner、Spot等の2026年実機例。建物全景とは異なる個別実験。"
+        }
+      ],
+      "robots": "Spot、Atlas、車輪付き二足Roadrunner、独自のUltra Mobility Vehicle、AthenaZero等。全機体がCambridgeの一室に常設されるとは確認できない。",
+      "sensors": "機体に応じた状態・深度等の入力を使用。タイヤ操作研究ではモーションキャプチャ、2026年Spot走破では深度を用いるため、自律という語だけで外部計測不要とはしない。",
+      "trainingData": "研究ごとに人の動作、機体の操作、シミュレーション経験を組み合わせる。施設全体で統一された収集時間やデータ量は未公表。",
+      "simulation": "Exployで観測生成、ニューラル方策、動作後処理を一体に書き出す。Isaac Lab・MjLab等に対応し、ソフト実装差による実機への移行失敗を減らす狙い。",
+      "realWorld": "Roadrunnerでは複数の移動モードと起き上がり、Spotでは障害物走破などの実機研究で利用。ゼロショットの実機移行は対象方策の条件に限定する。",
+      "safety": "移植前にPyTorchと書き出したモデルの数値一致を検査する機能を公開。これは施設の安全認証や、人との混在作業の安全を証明するものではない。"
+    },
+    "caseUrl": "https://rai-inst.com/about/",
+    "mappingBasis": "ステップへの対応は、一次資料の設備・運用からATLASが対応づけた分析です。施設がこの8ステップを採用している、または工程別の効果を実証したという意味ではありません。",
+    "tags": [
+      "フィジカルAI",
+      "実機検証",
+      "シミュレーション"
+    ],
+    "physicalAI": {
+      "robots": "Spot、Atlas、車輪付き二足Roadrunner、独自のUltra Mobility Vehicle、AthenaZero等。全機体がCambridgeの一室に常設されるとは確認できない。 センサー：機体に応じた状態・深度等の入力を使用。タイヤ操作研究ではモーションキャプチャ、2026年Spot走破では深度を用いるため、自律という語だけで外部計測不要とはしない。",
+      "data": "研究ごとに人の動作、機体の操作、シミュレーション経験を組み合わせる。施設全体で統一された収集時間やデータ量は未公表。",
+      "simulation": "Exployで観測生成、ニューラル方策、動作後処理を一体に書き出す。Isaac Lab・MjLab等に対応し、ソフト実装差による実機への移行失敗を減らす狙い。",
+      "validation": "Roadrunnerでは複数の移動モードと起き上がり、Spotでは障害物走破などの実機研究で利用。ゼロショットの実機移行は対象方策の条件に限定する。",
+      "safety": "移植前にPyTorchと書き出したモデルの数値一致を検査する機能を公開。これは施設の安全認証や、人との混在作業の安全を証明するものではない。",
+      "access": "本拠はCambridgeのKendall Square、Zurichにも拠点。研究者・共同研究の組織であり、一般向けの日常的な機器予約は確認できない。終了したCambridgeSideの公開イベントは入室窓口に含めない。",
+      "status": "本拠の所在地と研究継続を確認。個々の研究の撮影場所やCambridge内の全設備配置は非公開。一般向けRobot Labポップアップは終了済み。"
+    },
+    "photoLink": {
+      "url": "https://rai-inst.com/resources/blog/pushing-the-pace-of-progress/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    }
+  },
+  {
+    "id": "aist-eart-waterfront",
+    "name": "産総研 臨海副都心センター × EART",
+    "country": "日本",
+    "city": "東京・青海",
+    "lens": "hard",
+    "externalCase": true,
+    "caseUrl": "https://eart.airc.aist.go.jp/",
+    "headline": "模擬店舗と工場で、ロボットが学ぶ作業を集める。",
+    "mechanism": "工場・コンビニを模した実験空間で、双腕ロボットや産業用ロボットの作業データを収集。計算資源と公開ソフトを接続し、企業の難しい作業を持ち込んで、教示・学習・実機評価を繰り返す。2025年の体制再編後もEARTが学習・データ・評価技術を研究している。",
+    "interesting": "機体の展示に加えて、何をつかみ、どう失敗し、どの条件なら再現できるかを研究対象にする。企業ごとの困難作業を共通の検証手順へ移す点が、共創施設として参考になる。",
+    "statusLabel": "実験環境稼働・研究検証",
+    "statusNote": "2025年に模擬工場・店舗でのデータ収集を公表。2026年は実機・仮想環境共通の模倣学習研究と商品3Dスキャン研究を更新。汎用ロボットの商用運転実績とは分けて読む。",
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "対象物、ロボット、教示デバイス、センサを組み合わせ、特定の作業を実行できる試作システムへ進める。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "実物の3Dモデルやシミュレータを使い、収集データ・学習方策・評価手順を比較する。仮想での成功が実機の成功を保証するわけではない。"
+    },
+    "partners": [
+      {
+        "name": "産総研・人工知能研究センター EART",
+        "contribution": "実体知能、作業学習、データ収集、モデル評価を研究し、企業の研究相談を受ける。"
+      },
+      {
+        "name": "産総研内の関連研究チーム・ABCI",
+        "contribution": "ロボット基盤モデルの研究、実験環境と計算資源を支える。ABCIは別途利用規定が適用される。"
+      },
+      {
+        "name": "ロボット利用企業・メーカー・システムインテグレーター",
+        "contribution": "課題となる作業、物品、データ、技術者を持ち寄る連携対象。共同研究や技術研修等の契約・制度を使う。"
+      }
+    ],
+    "outcome": {
+      "text": "RoboManipBaselinesの2026年5月版論文は、模倣学習のデータ収集・訓練・実行を共通化し、実機とシミュレーションの評価を報告。2026年10月には、小売商品の写実的3Dモデルを作る研究の論文採択を公表した。",
+      "date": "2026-05-25（論文改訂）／2026-10-09（採択発表）",
+      "caveat": "RoboManipBaselines論文は実機試行数や対応機種の限界、結果のばらつきを明記。実データと仮想データの混合学習やsim-to-real転移は同論文の検証対象外。新施設の開業、全タスクの自動化、商用での安全認証を示す成果ではない。"
+    },
+    "transfer": "実験室の広さより先に、持ち込む作業・記録する失敗・共通の評価条件・データを再利用できる範囲を決める。作業者の知識を教示データにする時間も確保する。",
+    "caution": "模擬空間での再現性と顧客現場での長期運転は別の評価。撮影データの権利、秘匿化、作業者の扱い、停止条件、共同知財の範囲は案件ごとに定める。",
+    "facilityStudy": {
+      "type": "国立研究機関のロボット学習・実データ収集環境",
+      "facilities": "臨海副都心センターの模擬工場・コンビニ、ALOHA双腕プラットフォーム、産業用ロボット。EARTは視覚・触覚等のセンシング、教示デバイス、実機・シミュレーションを組み合わせる研究を案内している。",
+      "access": "企業は共同研究・施設利用・技術コンサルティングを相談。2025年の連携案には技術者派遣による研修、タスク物品・情報の提供もある。一般の自由利用施設ではなく、研究テーマ・契約・計算資源の条件を調整する。",
+      "collaboration": "企業の作業課題を研究者と定義し、必要なデータと評価方法を整える。2025年4月に従来のオートメーション研究チームをEARTとHEARTへ再編したもので、研究所の新築を意味しない。",
+      "comparison": "施設を読む視点は、棚・作業台・対象物・カメラをどの程度組み替えられ、同じ課題を実機と仮想環境でどう記録・比較するか。共同研究の入口と、成果データの公開範囲も空間と一緒に見る。",
+      "photoReading": "公式発表の図2と研究紹介では、実物を操作する実験と仮想環境の画像を区別して見る。実機周辺の対象物、作業台、撮影位置がデータ収集の条件になる。掲載画像は研究例であり、実験フロア全体の配置図ではない。",
+      "questions": [
+        "持ち込む作業は、対象物や照明、開始位置が変わっても同じ評価条件で再試験できるか？",
+        "作業データを企業間で共通利用する際、どの情報を秘匿し、誰が利用範囲を決めるか？",
+        "実機への投入前に誰が安全条件を審査し、失敗時に停止・復旧するか？"
+      ],
+      "visualSources": [
+        {
+          "title": "産総研：実験環境と検証例",
+          "url": "https://www.aist.go.jp/aist_j/news/pr20250123_2.html",
+          "note": "2025年公式発表。図2の実機・シミュレーション例と、臨海副都心センターの模擬空間に関する本文を併せて読む。"
+        },
+        {
+          "title": "EART：研究参加・企業連携と実験写真",
+          "url": "https://eart.airc.aist.go.jp/opportunities/",
+          "note": "ロボット実験の写真と研究参加・企業連携の入口。施設利用は個別相談。"
+        },
+        {
+          "title": "RoboManipBaselines：実機と仮想環境の実演",
+          "url": "https://isri-aist.github.io/RoboManipBaselines-ProjectPage/",
+          "note": "UR5e・xArm7の実機と、MuJoCo等の仮想環境を明示した研究実演。"
+        }
+      ]
+    },
+    "physicalAI": {
+      "robots": "模擬工場・店舗ではALOHA双腕と産業用ロボットを利用。RoboManipBaselinesは実機UR5e・xArm7等を掲載するが、施設全体の保有台数ではない。",
+      "data": "作業実演やロボットの観測を記録し、模倣学習と比較評価に使う。企業のタスク提供には必要に応じて秘匿化する構想が示され、公開ソフトにはデータ形式と教示手順がある。",
+      "simulation": "EARTは実物からの3D環境構築を研究。RoboManipBaselinesは複数シミュレータと実機で共通手順を使うが、2026年論文はsim-to-real転移を検証していない。",
+      "validation": "共通データ・手順で方策を比較し、実機で実行する。研究ベンチマークの成功率は、商用現場全体の稼働率や安全性を表さない。",
+      "safety": "人の動きや協働の予測を研究対象に含む。施設別の立入区分・停止装置・試験許可の公開仕様は今回確認できず、共同研究時の確認事項とする。",
+      "access": "産総研の相談窓口から研究テーマ・契約・設備利用を調整。ABCIは独自の利用条件がある。",
+      "status": "実験設備を使う研究・企業連携段階。EARTは2025年4月再編、2026年10月も研究更新。施設新設年と組織再編年を区別する。"
+    },
+    "photoLink": {
+      "url": "https://eart.airc.aist.go.jp/opportunities/",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    },
+    "sources": [
+      {
+        "title": "産総研：ロボット基盤モデルの研究開発を本格始動",
+        "url": "https://www.aist.go.jp/aist_j/news/pr20250123_2.html",
+        "publishedDate": "2025-01-23",
+        "claim": "臨海の模擬工場・店舗、ALOHA・産ロボ・ABCI、企業連携方式とデータ秘匿化。",
+        "locator": "研究開発の経緯／研究の内容／注意事項"
+      },
+      {
+        "title": "EART：研究内容",
+        "url": "https://eart.airc.aist.go.jp/research/",
+        "publishedDate": "公表日記載なし",
+        "claim": "模倣・強化学習、人協働、実データからの環境構築、データ収集と評価の研究。",
+        "locator": "物理AIのための学習技術／データ収集技術／モデル評価技術"
+      },
+      {
+        "title": "EART：研究参加・企業連携",
+        "url": "https://eart.airc.aist.go.jp/opportunities/",
+        "publishedDate": "公表日記載なし",
+        "claim": "学習・実機実証の研究環境、企業との実証試験・共同知財・コンサルティング相談。",
+        "locator": "身に付く力／連携を検討されている企業や法人の方へ"
+      },
+      {
+        "title": "EART：チーム再編",
+        "url": "https://eart.airc.aist.go.jp/news/team-reorganization/",
+        "publishedDate": "2025-04-01",
+        "claim": "オートメーション研究チームからEART・HEARTへ再編。施設新設と区別。"
+      },
+      {
+        "title": "RoboManipBaselines：研究論文 v3",
+        "url": "https://arxiv.org/html/2509.17057v3",
+        "publishedDate": "2026-05-25改訂",
+        "claim": "実機・仮想環境での模倣学習工程と比較評価。試行数、機種、sim-to-real未検証等の限界。",
+        "locator": "VI Benchmark Evaluation／VIII Limitations"
+      },
+      {
+        "title": "RoboManipBaselines：公式実装",
+        "url": "https://github.com/isri-aist/RoboManipBaselines",
+        "publishedDate": "継続更新・確認2026-10-25",
+        "claim": "データ収集、学習、実行、データ形式、対応環境と公開コード。"
+      },
+      {
+        "title": "EART：商品3Dモデル生成研究の採択",
+        "url": "https://eart.airc.aist.go.jp/news/2270/",
+        "publishedDate": "2026-10-09",
+        "claim": "小売商品の3Dスキャン、位置姿勢推定・写実的ロボットシミュレーションへの応用。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応と施設を読む視点は、公開資料に基づくATLASの編集上の解釈です。研究機関自身がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。"
+  },
+  {
+    "id": "hmgics-corporate-lab",
+    "name": "HMGICS × NTU × A*STAR Corporate Lab",
+    "country": "シンガポール",
+    "city": "Jurong Innovation District",
+    "lens": "partners",
+    "externalCase": true,
+    "caseUrl": "https://www.hyundai.com/sg/hmgics/innovation/open-innovation",
+    "headline": "研究室を、生産が続く工場の中に置く。",
+    "mechanism": "セル型の生産フロア、物流ロボット、検査、データ基盤とデジタルツインを持つHMGICSに、2025年、Hyundai・NTU・A*STARの共同研究ラボを開設。研究者と製造担当が実工程を見ながら試作・検証を進め、現場の問題を次の開発へ戻す。",
+    "interesting": "AIの研究設備だけでなく、改善案を受け入れる生産工程と運営者が同じ場所にいる。ロボット、データ、研究契約、工程変更の判断を一つにつなぐ点が参考になる。",
+    "statusLabel": "生産稼働・共同研究ラボ",
+    "statusNote": "工場は2023年から稼働、三者ラボは2025年10月開設。2026年も運用・連携を確認。将来の人型ロボット導入計画を、この場所の導入実績とはしない。",
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "稼働する生産・物流・検査工程の中で、研究成果が作業者や設備とどう機能するかを評価できる。"
+    },
+    "secondaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "工場を持つHyundai、大学の研究者、公的研究機関を、実装先のある共同研究体制として結ぶ。"
+    },
+    "partners": [
+      {
+        "name": "Hyundai Motor Group / HMGICS",
+        "contribution": "実稼働工場と製造課題、スマート工場プロジェクト、研究成果の現場検証を担う。"
+      },
+      {
+        "name": "Nanyang Technological University（NTU）",
+        "contribution": "電気電子、機械・航空、計算・データ科学等の研究と人材を結集する。"
+      },
+      {
+        "name": "A*STAR",
+        "contribution": "複数研究機関の技術を持ち寄り、製造技術の研究開発を担う。"
+      },
+      {
+        "name": "現地のシステムインテグレーター・中小企業",
+        "contribution": "技術導入と能力形成の連携先として位置付けられる。全社が自由に設備利用できる制度とは記されていない。"
+      }
+    ],
+    "outcome": {
+      "text": "2023年の開業資料は約200台のロボット、作業の約50%をロボットが担う構成を報告。2025年10月に三者Corporate Labを開設し、2026年9月の施設発表でもR&Dと生産の拠点として運用を紹介している。",
+      "date": "2023-11-21／2025-10-13／2026-09-04",
+      "caveat": "台数・作業割合は2023年の事業者公表値。全ロボットが基盤モデルを使う意味ではなく、新ラボによる改善率や商用採算も未確認。2026年発表の米国RMACや2028年以降のAtlas導入は別施設・将来計画。"
+    },
+    "transfer": "研究費だけでなく、実験を受け入れる工程、操業への影響を判断する現場責任者、データの受け渡し方法、採用・差戻しの基準を共同研究の開始時に決める。",
+    "caution": "工場運営を一社が統括できる条件が背景にある。複数事業者の共用施設へ移す場合は、停止権限、事故責任、データアクセスと知財、作業者の参加方法を別途設計する。",
+    "facilityStudy": {
+      "type": "実稼働工場に置かれた産学官の製造研究ラボ",
+      "facilities": "セル型生産フロア、AMRによる部品物流、Spotを使う画像検査、AI研究環境、Digital Command Center。公式解説は、制御室から実フロアと仮想工場を照合する配置を示している。",
+      "access": "研究参加はHyundai・NTU・A*STARの共同研究や企業連携の枠組みで調整する。一般向け・法人向けの見学予約はあるが、研究設備や生産フロアを利用する権利とは別。",
+      "collaboration": "Hyundaiが工場側プロジェクトを受け持ち、NTUとA*STARが研究開発を担う。三者ラボは2025年10月に工場内で開設。試作から現場検証までの距離を縮める運営設計。",
+      "comparison": "施設を読む視点は、車体が置かれる生産セル、部品を届ける物流動線、検査装置、上階の指令室の関係。研究の成果を実工程へ入れる際の判断権限まで追う。",
+      "photoReading": "公式メディアキットの生産セル・AMR・自動物流写真で、機器単体より床の動線と人の作業域を見る。Digital Command Centerの実写と、画面内のデジタルツインは別。2023年の工場写真を、2025年開設ラボの内観と表示しない。",
+      "questions": [
+        "新しい制御や検査モデルを試す前に、操業・安全・品質への影響を誰が承認するか？",
+        "シミュレーションの予測と実工程の差を、同じデータ定義で測り直せるか？",
+        "研究者、現場作業者、外部企業が使えるデータと、改善成果の帰属はどこで分かれるか？"
+      ],
+      "visualSources": [
+        {
+          "title": "HMGICS：生産フロア・物流の公式写真",
+          "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000000363",
+          "note": "2023年の開業メディアキット。生産セル、Spot検査、AMR物流、自動物流と外観を確認できる。"
+        },
+        {
+          "title": "Digital Command Centerと仮想工場",
+          "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000126053",
+          "note": "実フロアを望む制御室の写真と、H-Meta Studioの画面を区別して読む。"
+        },
+        {
+          "title": "HMGICS：実機検査・AI研究の現場",
+          "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000126109",
+          "note": "生産セル、物流、AI Keeper、研究開発環境の写真を伴う公式技術解説。"
+        }
+      ]
+    },
+    "physicalAI": {
+      "robots": "生産・組立ロボット、部品物流のAMR、画像検査を行う四足Spot。2023年の約200台という数は当時の構成で、人型Atlasの配備数ではない。",
+      "data": "画像・音声・センサ等から必要なデータを選び、形式や意味をそろえて生産管理と改善に使う。公開データセットとして誰でも取得できるという説明ではない。",
+      "simulation": "H-Meta Studioで設備・物流と実フロアの状態を照合し、配置や運用変更を仮想検証する。2026年のグループ戦略は実生産データをロボット学習へつなぐSDFを位置付ける。",
+      "validation": "AI Research Centerの研究者が工程の課題からアルゴリズムを開発し、現場へ適用して改良する。三者Corporate Labはこの実稼働環境で試作・概念検証を進める。",
+      "safety": "事業者の技術解説では、重量物を組み立てる自動セルへの立入を制限し、人を検知したAIカメラが警告とロボット停止を行う。記述だけで安全認証や事故ゼロを保証しない。",
+      "access": "研究は共同研究・企業連携の窓口で個別調整。予約型の見学と、研究データ・設備利用の許可を分ける。",
+      "status": "2023年から生産稼働、2025年10月に三者ラボ開設、2026年も施設の運用を確認。Atlas学習拠点RMACは米国の別計画で、HMGICS実績に含めない。"
+    },
+    "photoLink": {
+      "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000000363",
+      "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
+    },
+    "sources": [
+      {
+        "title": "Hyundai・NTU・A*STAR：Corporate Lab開設",
+        "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001025",
+        "publishedDate": "2025-10-13",
+        "claim": "実稼働工場内の三者ラボ、各者の役割、AI・ロボット・3D印刷研究、現地企業との連携。",
+        "locator": "本文／Corporate Lab will focus／strategic location"
+      },
+      {
+        "title": "HMGICS：開業と製造設備",
+        "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000000363",
+        "publishedDate": "2023-11-21",
+        "claim": "2023年初めから稼働、同年11月正式開業。セル型生産、当時約200台・作業約50%、実施設写真。",
+        "locator": "Highly automated, flexible cell-based production"
+      },
+      {
+        "title": "HMGICS：AI検査・物流・研究・安全",
+        "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000126109",
+        "publishedDate": "2023-12-11",
+        "claim": "Spot画像検査、AMR物流、AI Research Centerと現場改善、人検知時の警告・停止。",
+        "locator": "AI Keeper／AI safety camera／The ever-evolving AI technology at HMGICS"
+      },
+      {
+        "title": "HMGICS：デジタルツインと指令室",
+        "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000126053",
+        "publishedDate": "2023-12-11",
+        "claim": "実フロアを見渡すDCC、H-Meta Studio、設備配置や運用の仮想検証。",
+        "locator": "Monitoring and simulation technology for efficient factory operations"
+      },
+      {
+        "title": "HMGICS：データの収集と標準化",
+        "url": "https://www.hyundaimotorgroup.com/en/story/CONT0000000000126160",
+        "publishedDate": "2023-12-11",
+        "claim": "データ選択・ラベル付け・標準化、MESとH-Data Studio。",
+        "locator": "How to make sharable data／Data-based operations"
+      },
+      {
+        "title": "Hyundai：CES 2026 AI Robotics Strategy",
+        "url": "https://www.hyundai.com/worldwide/en/newsroom/detail/0000001100",
+        "publishedDate": "2026-01-06",
+        "claim": "HMGICSから展開するSDFと実データの位置付け。米国RMAC・2028年以降のAtlas計画は別。",
+        "locator": "Accelerating Robot Capabilities: Utilizing Data-Driven Manufacturing Facilities"
+      },
+      {
+        "title": "HMGICS：現行の共同研究・連携案内",
+        "url": "https://www.hyundai.com/sg/hmgics/innovation/open-innovation",
+        "publishedDate": "公表日記載なし・確認2026-10-25",
+        "claim": "企業連携とCorporate Labを現行サイトに掲載。"
+      },
+      {
+        "title": "HMGICS：法人見学の案内",
+        "url": "https://www.hyundai.com/sg/experience/reservations/corporatetour",
+        "publishedDate": "公表日記載なし・確認2026-10-25",
+        "claim": "予約型の施設体験。研究設備・生産フロアの自由利用制度とは異なる。"
+      },
+      {
+        "title": "HMGICS：Robot-Run Farmの運用報告",
+        "url": "https://www.hyundai.com/sg/newsroom?dtlYn=Y&schBbSeq=1154",
+        "publishedDate": "2026-09-04",
+        "claim": "2026年時点でR&D・生産・ロボット農場の運用を紹介。Corporate Labの効果測定とは区別。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応と施設を読む視点は、公開資料に基づくATLASの編集上の解釈です。各機関がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "photoId": "hmgics-production-7-2023",
+    "extraPhotoIds": [
+      "hmgics-production-13-2023"
+    ]
   }
 ]
