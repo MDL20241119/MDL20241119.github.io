@@ -1,7 +1,7 @@
 /* Non-modal disclosure: native Enter/Space, normal Tab order, no body scroll lock. */
 (() => {
-  const header = document.querySelector('.consortium-head');
-  const menu = header?.querySelector('.consortium-menu');
+  const header = document.querySelector('.site-head.navigation-bar, .consortium-head');
+  const menu = header?.querySelector('.consortium-menu, .mobile-menu');
   if (!menu) return;
   const toggle = menu.querySelector('summary');
   const measure = () => document.documentElement.style.setProperty('--consortium-header-height', `${Math.ceil(header.getBoundingClientRect().height)}px`);
@@ -41,3 +41,4 @@
     // Native anchor navigation retains history, reduced-motion, and scroll-margin behavior.
   });
 })();
+
