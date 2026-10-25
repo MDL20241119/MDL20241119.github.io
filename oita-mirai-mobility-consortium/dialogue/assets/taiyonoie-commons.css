@@ -1,0 +1,24 @@
+/* Supplemental Noto Sans JP glyphs; license: layout-font-LICENSE.txt. */
+@font-face{font-family:PolicyProposalRegular;src:url(taiyonoie-commons-regular.woff) format("woff");font-weight:400;font-display:swap;unicode-range:U+3000,U+4E80,U+535A,U+58EB,U+5DDD,U+88D5}
+@font-face{font-family:ProposalRegular;src:url(taiyonoie-commons-regular.woff) format("woff");font-weight:400;font-display:swap;unicode-range:U+3000,U+4E80,U+535A,U+58EB,U+5DDD,U+88D5}
+@font-face{font-family:RegionalProposalBlack;src:url(taiyonoie-commons-black.woff) format("woff");font-weight:900;font-display:swap;unicode-range:U+3000,U+4E80,U+535A,U+58EB,U+5DDD,U+88D5}
+@font-face{font-family:ProposalBlack;src:url(taiyonoie-commons-black.woff) format("woff");font-weight:900;font-display:swap;unicode-range:U+3000,U+4E80,U+535A,U+58EB,U+5DDD,U+88D5}
+/* Taiyonoie concept overview; no changes to shared photos or other regions. */
+.taiyonoie-commons-page .commons-overview{margin:24px 40px 44px;padding:34px 0;border-top:1px solid #dddde1;border-bottom:1px solid #dddde1}
+.commons-kicker{font-family:var(--layout-body);font-size:11px;font-weight:400;line-height:1.7;letter-spacing:.04em;margin:0 0 22px}
+.commons-heading{display:grid;grid-template-columns:1fr 1.25fr;gap:40px;align-items:end;margin-bottom:32px}
+.commons-heading h2{font-family:var(--regional-heading);font-size:clamp(36px,4vw,58px);line-height:1.35;letter-spacing:-.04em}
+.commons-heading>p{max-width:38em;font-size:16px;line-height:1.9;margin:0}
+.commons-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:24px}
+.commons-grid article{min-width:0;border-top:3px solid #e68149;padding-top:20px}
+.commons-letter{display:block;font-family:var(--display);font-weight:900;font-size:54px;line-height:1;color:#e68149;margin-bottom:16px}
+.commons-grid h3{font-family:var(--regional-heading);font-size:27px;line-height:1.5;margin-bottom:12px;letter-spacing:-.04em}
+.commons-grid p{font-size:14px;line-height:1.9;margin:0}
+.commons-principle{padding-top:26px;border-top:1px solid #dddde1;font-size:14px;line-height:1.9;margin-top:30px}
+.commons-principle strong{display:inline-block;font-family:var(--regional-heading);font-size:clamp(21px,2.3vw,29px);line-height:1.6;margin-bottom:10px}
+.commons-note{font-size:12px;line-height:1.9;color:#656875;margin-top:18px}
+.taiyonoie-commons-page .scene-concept{font-size:24px;line-height:1.3;overflow-wrap:anywhere}
+.taiyonoie-commons-page .scene-concept small{font-family:var(--layout-body);font-size:12px;font-weight:400}
+@media(max-width:1000px){.commons-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px}.commons-heading{grid-template-columns:1fr;gap:22px}}
+@media(max-width:760px){.taiyonoie-commons-page .commons-overview{margin:18px 24px 34px;padding:28px 0}.commons-heading h2{font-size:38px}.commons-heading>p{font-size:15px}.commons-grid h3{font-size:26px}}
+@media(max-width:560px){.commons-grid{grid-template-columns:1fr;gap:26px}.commons-grid article{display:grid;grid-template-columns:44px minmax(0,1fr);gap:0 18px}.commons-letter{grid-row:1/3;font-size:46px}.commons-grid h3{font-size:28px}.commons-grid p{grid-column:2}.commons-principle strong{font-size:22px}}
