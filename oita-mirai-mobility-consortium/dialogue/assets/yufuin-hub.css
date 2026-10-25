@@ -1,0 +1,25 @@
+/* Supplemental Noto Sans JP glyphs; license: layout-font-LICENSE.txt. */
+@font-face{font-family:PolicyProposalRegular;src:url(yufuin-hub-jp-regular.woff) format("woff");font-weight:400;font-display:swap;unicode-range:U+3000,U+5F92,U+90CA}
+@font-face{font-family:ProposalRegular;src:url(yufuin-hub-jp-regular.woff) format("woff");font-weight:400;font-display:swap;unicode-range:U+3000,U+5F92,U+90CA}
+@font-face{font-family:RegionalProposalBlack;src:url(yufuin-hub-jp-black.woff) format("woff");font-weight:900;font-display:swap;unicode-range:U+3000,U+5F92,U+90CA}
+@font-face{font-family:ProposalBlack;src:url(yufuin-hub-jp-black.woff) format("woff");font-weight:900;font-display:swap;unicode-range:U+3000,U+5F92,U+90CA}
+/* Yufuin-only concept image and accessible journey; existing gallery remains intact. */
+.yufuin-hub-page .hub-concept{margin:0 40px 42px;border-top:1px solid #dddde1;padding-top:32px}
+.hub-heading{display:grid;grid-template-columns:1fr 1fr;gap:16px 50px;align-items:end;margin-bottom:28px}
+.hub-heading .eyebrow{grid-column:1/-1;font:900 13px/1.5 var(--display);letter-spacing:.06em}
+.hub-heading h2{font-family:var(--regional-heading);font-size:clamp(32px,4vw,54px);line-height:1.35;letter-spacing:-.04em;margin:0}
+.hub-heading>p:last-child{font-size:16px;line-height:1.9;margin:0}
+.hub-visual{margin:0;background:transparent}
+.hub-visual img{position:static;display:block;width:100%;height:auto;aspect-ratio:1672/941;object-fit:contain}
+.hub-visual figcaption{font-size:11px;line-height:1.75;color:#656875;padding:12px 0 0}
+.hub-journey{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:26px;list-style:none;margin:32px 0 0;padding:0}
+.hub-journey li{min-width:0;border-top:3px solid #fe975a;padding-top:20px}
+.hub-journey b{display:block;font:900 56px/1 var(--display);color:#e68149;margin-bottom:15px}
+.hub-journey h3{font-family:var(--regional-heading);font-size:24px;line-height:1.5;margin:0 0 12px}
+.hub-journey p{font-size:14px;line-height:1.85;margin:0}
+.hub-principle{font-size:13px;line-height:1.9;padding:24px 0;border-top:1px solid #dddde1;border-bottom:1px solid #dddde1;margin-top:28px}
+.hub-principle strong{font-family:var(--regional-heading);font-size:21px;line-height:1.6;display:inline-block;margin-bottom:9px}
+.hub-policy-history{border-left:3px solid #fe975a;padding-left:16px}.hub-policy-history a{display:inline-block;margin-top:8px}
+@media(max-width:900px){.hub-heading{grid-template-columns:1fr;gap:16px}.hub-journey{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:760px){.yufuin-hub-page .hub-concept{margin:0 24px 34px;padding-top:26px}.hub-heading h2{font-size:34px}.hub-heading>p:last-child{font-size:15px}.hub-journey{gap:24px 18px}.hub-journey h3{font-size:21px}.hub-journey p{font-size:13px}.hub-principle strong{font-size:20px}}
+@media(max-width:380px){.hub-journey{grid-template-columns:1fr}.hub-journey li{display:grid;grid-template-columns:48px 1fr;gap:0 16px}.hub-journey b{grid-row:1/3;font-size:44px}.hub-journey h3{font-size:23px}.hub-journey p{grid-column:2}}
