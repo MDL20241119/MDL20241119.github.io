@@ -1,0 +1,92 @@
+/* Opportunity-led program: existing black type, white surfaces and orange numbers. */
+.opportunity-program #benefits .split-heading{grid-template-columns:1.7fr 1fr;align-items:center;gap:28px;margin-bottom:28px}
+.opportunity-program #benefits .opportunity-heading,.opportunity-summary .opportunity-heading{display:flex;align-items:center;gap:24px;margin:0;min-width:0;line-height:1.1;letter-spacing:-.055em}
+.opportunity-program #benefits .opportunity-total,.opportunity-summary .opportunity-total{display:block;flex:none;font:900 clamp(112px,12vw,166px)/.9 Arial,Helvetica,sans-serif;letter-spacing:-.09em;color:#e68149}
+.opportunity-program #benefits .opportunity-heading-word,.opportunity-summary .opportunity-heading-word{display:block;min-width:0;font-size:clamp(38px,4.4vw,64px);font-weight:900;line-height:1.15;letter-spacing:-.055em;color:#111}
+.opportunity-program #benefits .opportunity-heading-word>small,.opportunity-summary .opportunity-heading-word>small{display:block;margin-bottom:8px;font-size:18px;font-weight:900;line-height:1.4;letter-spacing:0}
+.opportunity-program #benefits .benefit-grid{--op-number:clamp(96px,8.4vw,124px);grid-template-columns:repeat(3,minmax(0,1fr))}
+.opportunity-program #benefits .benefit-grid article:nth-child(n){display:grid;grid-template-columns:calc(var(--op-number)*1.02) minmax(0,1fr);column-gap:14px;row-gap:16px;align-content:start;align-items:start;padding:22px 20px;border-left:1px solid #bbb;border-top:0}
+.opportunity-program #benefits .benefit-grid article:nth-child(3n+1){border-left:0}
+.opportunity-program #benefits .benefit-grid article:nth-child(n+4){border-top:1px solid #bbb}
+.opportunity-program #benefits .benefit-top{grid-column:1;grid-row:1;display:block;margin:0}
+.opportunity-program #benefits .benefit-number{display:block;font-family:Arial,Helvetica,sans-serif;font-size:var(--op-number);font-weight:900;line-height:.92;letter-spacing:-.09em;color:#e68149}
+.opportunity-program #benefits .benefit-keyword{grid-column:2;grid-row:1;margin:0;min-height:0;line-height:1.15;letter-spacing:-.055em;word-break:normal;overflow-wrap:normal}
+.opportunity-program #benefits .opportunity-keyword,.opportunity-summary .opportunity-keyword{display:block;max-width:100%;font-family:inherit;font-size:clamp(36px,3.25vw,48px);font-weight:900;line-height:1.15;letter-spacing:-.055em;word-break:normal;overflow-wrap:normal}
+.opportunity-program #benefits .opportunity-action,.opportunity-summary .opportunity-action{display:block;max-width:100%;margin-top:10px;font-family:inherit;font-size:18px;font-weight:900;line-height:1.5;letter-spacing:-.025em;word-break:normal;overflow-wrap:normal}
+.opportunity-program #benefits .benefit-grid article>p{grid-column:1/-1;grid-row:2;margin:0;font-size:16px;line-height:1.8}
+.opportunity-program .opportunity-connection{gap:24px;margin-top:20px}
+.opportunity-program .opportunity-connection strong{font-size:23px;font-weight:900;line-height:1.6;letter-spacing:-.04em}
+.opportunity-program .program-promise{font-size:clamp(46px,5.25vw,76px);line-height:1.3}
+.opportunity-program .program-support-line{font-size:clamp(23px,2.25vw,32px);line-height:1.6}
+.opportunity-program .hero-facts dd{font-size:clamp(32px,3vw,44px)}
+.opportunity-program .program-challenges .split-heading h2,.opportunity-program .purpose .split-heading h2,.opportunity-program #program-proposals h2{font-size:clamp(38px,4.4vw,62px);line-height:1.3}
+.opportunity-program .challenge-list h3{font-size:clamp(25px,2.1vw,30px);line-height:1.4}
+.opportunity-program .step-meta b{font-size:88px;line-height:.95}
+.opportunity-program .process-step h3{grid-column:1/-1;font-size:clamp(30px,2.9vw,42px);line-height:1.4;word-break:normal;overflow-wrap:normal}
+.opportunity-program #program-proposals .flow-stage-label{display:flex;align-items:baseline;gap:12px;margin-bottom:16px}
+.opportunity-program #program-proposals .flow-stage-number{font:900 68px/.95 Arial,Helvetica,sans-serif;letter-spacing:-.08em;color:#e68149}
+.opportunity-program #program-proposals .flow-stage-label>span{font:900 11px/1.5 Arial,Helvetica,sans-serif;letter-spacing:0}
+.opportunity-program #program-proposals .training-value-flow>li>h3{font-size:30px;line-height:1.4;margin-bottom:18px}
+.opportunity-program #program-proposals .flow-title-phrase{display:inline-block;max-width:100%;font:inherit;letter-spacing:inherit;vertical-align:top}
+
+/* The same six opportunities on the consortium home and concept pages. */
+.opportunity-summary{padding-block:32px}
+.opportunity-summary .opportunity-heading{margin-bottom:28px}
+.opportunity-summary ol{--op-number:clamp(86px,7.3vw,112px);display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 24px}
+.opportunity-summary ol>li{display:grid;grid-template-columns:calc(var(--op-number)*1.02) minmax(0,1fr);gap:14px;align-items:start;min-width:0;padding:18px 0;border-top:1px solid #bbb}
+.opportunity-summary ol>li>b{display:block;margin:0;font:900 var(--op-number)/.95 Arial,Helvetica,sans-serif;letter-spacing:-.09em;color:#e68149}
+.opportunity-summary ol>li>strong{display:block;min-width:0;font-weight:900;line-height:1.2}
+.opportunity-summary>p{font-size:16px;line-height:1.8}
+.opportunity-summary .opportunity-keyword{font-size:clamp(34px,3vw,44px)}
+
+@media(max-width:1100px){
+ .opportunity-program #benefits .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .opportunity-program #benefits .benefit-grid article:nth-child(n){border-left:1px solid #bbb;border-top:0}
+ .opportunity-program #benefits .benefit-grid article:nth-child(2n+1){border-left:0}
+ .opportunity-program #benefits .benefit-grid article:nth-child(n+3){border-top:1px solid #bbb}
+ .opportunity-summary ol{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .opportunity-program #benefits .split-heading{grid-template-columns:1fr;gap:20px}
+ .opportunity-program #benefits .section-intro{justify-self:start;max-width:none}
+}
+@media(max-width:760px){
+ .opportunity-program .program-promise{font-size:clamp(34px,9.2vw,46px)}
+ .opportunity-program .program-support-line{font-size:23px}
+ .opportunity-program .hero-facts dd{font-size:clamp(27px,8.2vw,36px)}
+ .opportunity-program #benefits .opportunity-heading,.opportunity-summary .opportunity-heading{gap:16px}
+ .opportunity-program #benefits .opportunity-total,.opportunity-summary .opportunity-total{font-size:112px}
+ .opportunity-program #benefits .opportunity-heading-word,.opportunity-summary .opportunity-heading-word{font-size:32px;line-height:1.2}
+ .opportunity-program #benefits .opportunity-heading-word>small,.opportunity-summary .opportunity-heading-word>small{font-size:16px}
+ .opportunity-program .program-challenges .split-heading h2,.opportunity-program .purpose .split-heading h2,.opportunity-program #program-proposals h2{font-size:clamp(34px,8.8vw,46px)}
+ .opportunity-program .challenge-list h3{font-size:24px}
+ .opportunity-program .step-meta b{font-size:76px}
+ .opportunity-program #program-proposals .flow-stage-number{font-size:76px}
+ .opportunity-program #program-proposals .training-value-flow>li>h3{font-size:32px}
+ .opportunity-program .opportunity-connection{grid-template-columns:1fr;gap:12px}
+}
+@media(max-width:600px){
+ .opportunity-program #benefits .benefit-grid{--op-number:clamp(76px,23vw,104px);grid-template-columns:1fr}
+ .opportunity-program #benefits .benefit-grid article:nth-child(n){grid-template-columns:calc(var(--op-number)*1.02) minmax(0,1fr);gap:16px 14px;padding:24px 0;border-left:0;border-top:1px solid #bbb}
+ .opportunity-program #benefits .benefit-grid article:first-child{border-top:0}
+ .opportunity-program #benefits .opportunity-keyword{font-size:clamp(34px,10vw,44px)}
+ .opportunity-program #benefits .opportunity-action{font-size:18px}
+ .opportunity-summary ol{--op-number:clamp(76px,23vw,104px);grid-template-columns:1fr;gap:0}
+ .opportunity-summary ol>li{grid-template-columns:calc(var(--op-number)*1.02) minmax(0,1fr);gap:14px;padding:24px 0}
+ .opportunity-summary .opportunity-keyword{font-size:clamp(34px,10vw,44px)}
+}
+@media(max-width:360px){
+ .opportunity-program #benefits .opportunity-total,.opportunity-summary .opportunity-total{font-size:94px}
+ .opportunity-program #benefits .opportunity-heading-word,.opportunity-summary .opportunity-heading-word{font-size:26px}
+ .opportunity-program #benefits .opportunity-heading,.opportunity-summary .opportunity-heading{gap:12px}
+ .opportunity-program #benefits .opportunity-keyword,.opportunity-summary .opportunity-keyword{font-size:33px}
+ .opportunity-program #benefits .opportunity-action,.opportunity-summary .opportunity-action{font-size:16px}
+}
+@media print{
+ .opportunity-program #benefits .benefit-grid,.opportunity-summary ol{--op-number:70px;grid-template-columns:repeat(3,minmax(0,1fr))}
+ .opportunity-program #benefits .benefit-grid article:nth-child(n){padding:14px;border-left:1px solid #bbb;border-top:0;break-inside:avoid}
+ .opportunity-program #benefits .benefit-grid article:nth-child(3n+1){border-left:0}
+ .opportunity-program #benefits .benefit-grid article:nth-child(n+4){border-top:1px solid #bbb}
+ .opportunity-program #benefits .opportunity-keyword,.opportunity-summary .opportunity-keyword{font-size:24px}
+ .opportunity-program #benefits .opportunity-action,.opportunity-summary .opportunity-action{font-size:13px}
+ .opportunity-program #benefits .opportunity-total,.opportunity-summary .opportunity-total{font-size:100px}
+ .opportunity-program #benefits .opportunity-heading-word,.opportunity-summary .opportunity-heading-word{font-size:35px}
+}
