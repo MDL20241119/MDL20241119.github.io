@@ -1,0 +1,1021 @@
+[
+  {
+    "id": "doll-living-lab",
+    "name": "DOLL Living Lab",
+    "country": "デンマーク",
+    "city": "アルバーツルン／Hersted",
+    "lens": "hard",
+    "headline": "街路そのものを、差し替え可能な実験装置に。",
+    "mechanism": "1.5 km²の屋外地区に、照明・通信などの共通基盤を用意。企業の機器を実寸で設置し、つながるか、データが使えるかを試す。実験前に役割・成果物・期間を契約し、現地実演を調達担当者の判断につなぐ。",
+    "interesting": "設備を見せる展示場ではなく、街路の共通基盤に異なる企業の技術をつなぎ、実験から購入判断まで同じ場所で確かめる。",
+    "partners": [
+      {
+        "name": "Albertslund Municipality",
+        "contribution": "基盤を所有し、賃料・運営・照明基盤の保守を負担"
+      },
+      {
+        "name": "WE BUILD DENMARK",
+        "contribution": "日常運営、実証支援、企業と自治体の接続"
+      },
+      {
+        "name": "CitCom.ai TEF",
+        "contribution": "実環境のAI・相互運用性検証と支援サービスの接続"
+      }
+    ],
+    "outcome": {
+      "text": "2024年1月の運営者発表は、50超のパートナーと75件の実環境ユースケースを報告。現行案内でも75超の事例を掲げる。",
+      "date": "2024-01-08／現行ページは公表日なし",
+      "caveat": "事例数は導入率・市民便益・調達成約の証明ではない。デジタルツインのページに旧予定表記が残るため、全面稼働とは記さない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "道路・照明・通信の実環境で、機器同士の接続性とデータ品質を検証できる。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "実物の実演と検証結果を、自治体など買い手の投資・調達判断につなぐ。"
+    },
+    "sources": [
+      {
+        "title": "DOLL — Digital Outdoor Living Lab / CitCom.ai",
+        "url": "https://citcomtef.eu/doll-digital-outdoor-living-lab/",
+        "publishedDate": "公表日記載なし",
+        "claim": "協働契約→現地検証→調達判断支援→振り返りの6段階、WE BUILD DENMARKとの関係"
+      },
+      {
+        "title": "DOLL: Better innovation",
+        "url": "https://doll-livinglab.com/better-innovation/",
+        "publishedDate": "公表日記載なし",
+        "claim": "1.5 km²、実寸設置、共通基盤、相互運用性・データ品質検証。デジタルツインにはComing in 2025表記"
+      },
+      {
+        "title": "DOLL: Who powers DOLL Living Lab?",
+        "url": "https://doll-livinglab.com/contact/",
+        "publishedDate": "公表日記載なし",
+        "claim": "自治体の所有・費用負担とWE BUILD DENMARKの受託運営"
+      },
+      {
+        "title": "DOLL opens its doors to AI-testing",
+        "url": "https://doll-livinglab.com/doll-living-lab-opens-its-doors-to-ai-testing/",
+        "publishedDate": "2024-01-08",
+        "claim": "50超のパートナー、75件の実環境ユースケース、CitCom.ai接続"
+      },
+      {
+        "title": "DOLL Living Lab — current overview",
+        "url": "https://doll-livinglab.com/",
+        "publishedDate": "公表日記載なし",
+        "claim": "現行公式案内の75超の実環境ユースケース。導入効果や調達成約数とは区別。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "設備を買う前に、設置場所の所有者、保守費の負担者、何を確かめたら次へ進むかをセットで決める。",
+    "caution": "産業地区での技術検証を、住宅地での生活受容や住民合意の検証と同じにしない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/doll-living-lab/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "実環境テストベッド",
+    "statusNote": "設備・支援手順は現行公式で確認。事例数の公表と導入効果は分けて読む。"
+  },
+  {
+    "id": "michigan-central-newlab-detroit",
+    "name": "Michigan Central × Newlab Detroit",
+    "country": "米国",
+    "city": "デトロイト",
+    "lens": "hard",
+    "headline": "試作室の先に、道路と空の実証フィールド。",
+    "mechanism": "加工・電子・ロボットの工房と専門スタッフに、屋上のドローン離着陸場、実市街地での実証区域、飛行監視設備、許認可の調整支援を接続。『作れる』だけでなく、『街で試せる』ところまでを支える。",
+    "interesting": "工房、屋上、道路、空域を別々の資産で終わらせず、物理設備と行政手続きを一つの試作・実証経路に編む。",
+    "partners": [
+      {
+        "name": "Newlab",
+        "contribution": "加工設備、Product Realization専門家、実証プロジェクトの組成"
+      },
+      {
+        "name": "Michigan Central",
+        "contribution": "都市実証基盤、飛行運用・許認可調整"
+      },
+      {
+        "name": "City of Detroit / State of Michigan",
+        "contribution": "市街地の実証・許認可・州の支援制度との接続"
+      },
+      {
+        "name": "Airspace Link",
+        "contribution": "飛行リスク評価・空域管理などのデジタル支援"
+      }
+    ],
+    "outcome": {
+      "text": "2026年5月のMichigan Central発表では、2023年開始以来、データ収集・配送目的のドローン飛行1,200回超、飛行時間160時間超、目視外飛行などの免除承認7件以上を報告。",
+      "date": "2026-05-14（本文発表日2026-05-11）",
+      "caveat": "運営者の累計報告。飛行回数は商用採算や安全性の独立評価ではなく、区域内で自由に飛ばせる意味でもない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "加工・電子・ロボット設備と常駐専門家が、動く試作品づくりを支える。"
+    },
+    "secondaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "試作品を屋上・道路・空の実環境へ持ち出し、監視・許認可支援の下で検証する。"
+    },
+    "sources": [
+      {
+        "title": "Newlab Detroit",
+        "url": "https://www.newlab.com/locations/detroit",
+        "publishedDate": "公表日記載なし",
+        "claim": "加工・電子・ロボット設備、Product Realization専門家、企業・政府との実証組成"
+      },
+      {
+        "title": "The Next Frontier of Transportation ... Detroit",
+        "url": "https://michigancentral.com/the-next-frontier-of-transportation-wont-be-built-on-the-coasts-it-will-be-built-in-detroit/",
+        "publishedDate": "2026-05-14（本文05-11）",
+        "claim": "工房・離着陸場・運用センター・4平方マイルの道路実証区域と28平方マイルの空の実証区域、1,200回超の飛行"
+      },
+      {
+        "title": "MDOT: Wireless-charging roadway at Michigan Central",
+        "url": "https://content.govdelivery.com/accounts/MIDOT/bulletins/37d7360",
+        "publishedDate": "2023-11-29",
+        "claim": "市所有・保守の14th Streetに4分の1マイルの無線給電道路を設置、実地検証用"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "設備一覧に加え、試作の次に使える実証場所と、その管理者・申請窓口まで一覧化する。",
+    "caution": "大規模資本と製造業の供給網が背景にある。工房面積・建物全体・実証区域を混同せず、許認可は案件ごとに確認する。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/michigan-central-newlab-detroit/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "実証稼働",
+    "statusNote": "2026年5月に飛行実績を公表。案件ごとの許認可・安全確認は必要。"
+  },
+  {
+    "id": "punggol-digital-district",
+    "name": "Punggol Digital District / Open Digital Platform",
+    "country": "シンガポール",
+    "city": "プンゴル",
+    "lens": "hard",
+    "headline": "仮想の街で試して、現実のドアやエレベーターへ。",
+    "mechanism": "Open Digital Platform（ODP）で地区設備のデータと制御をつなぐ。デジタルツインで検証したロボットなどを、エレベーター・ゲート・ドアへ接続する経路を用意し、大学と地区の日常空間を実証基盤にする。",
+    "interesting": "デジタルツインを『見る画面』で終わらせず、現実の建物設備に接続する入口として設計する。",
+    "partners": [
+      {
+        "name": "JTC / GovTech",
+        "contribution": "地区の開発・管理と共通デジタル基盤ODPの共同開発"
+      },
+      {
+        "name": "Singapore Institute of Technology（SIT）",
+        "contribution": "大学の研究設備・実稼働キャンパス・人材"
+      },
+      {
+        "name": "IMDA",
+        "contribution": "ロボットの通信・安全・信頼性を含む実証連携"
+      }
+    ],
+    "outcome": {
+      "text": "SITのプンゴル・キャンパスは2025年9月に正式開業。ODPは先行拠点のJTC Summitに2022年、Woodlands North Coastに2023年から導入されている。 JTCの現行記事では、SITで1〜10階を移動する清掃ロボットの検証も紹介されている。",
+      "date": "2025-09-16／GovTech説明更新2026-05-15",
+      "caveat": "先行拠点の導入をPDD全域の成果と混同しない。SIT内の検証と、地区全体で複数事業者・機種をつなぐ展開も別。LaunchPad @ PDDと広域展開の全面稼働・効果は未確認。"
+    },
+    "primaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "実地区のデータを使う仮想環境で、設備とロボットの連携を現地投入前に検討できる。"
+    },
+    "secondaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "仮想検証から地区のドア・ゲート・エレベーターへつなぐ経路を設計している。展開中の機能は利用前に確認が必要。"
+    },
+    "sources": [
+      {
+        "title": "JTC: Refreshed LaunchPad masterplan",
+        "url": "https://www.jtc.gov.sg/about-jtc/news-and-stories/press-releases/jtc-unveils-refreshed-masterplan-for-launchpad",
+        "publishedDate": "2026-03-02",
+        "claim": "LaunchPad @ PDDは2026年後半から段階展開、ODPのデジタルツインから扉・ゲート・昇降機へ接続する計画"
+      },
+      {
+        "title": "GovTech: Smart City Tech for businesses",
+        "url": "https://www.tech.gov.sg/products-and-services/for-businesses/smart-city-tech/",
+        "publishedDate": "2026-05-15更新",
+        "claim": "JTCとODP共同開発、JTC SummitとWoodlands North Coastの先行導入、省人化50%・省エネ30%は目標"
+      },
+      {
+        "title": "SIT Officially Opens Punggol Campus",
+        "url": "https://www.jtc.gov.sg/about-jtc/news-and-stories/industry-news/pdd-sit-officially-opens-punggol-campus",
+        "publishedDate": "2025-09-16",
+        "claim": "大学の正式開業とJTC・IMDA・SITの実証連携"
+      },
+      {
+        "title": "Singapore Government and Eight Industry Leaders to Research, Test and Deploy Physical AI in PDD",
+        "url": "https://www.jtc.gov.sg/about-jtc/news-and-stories/press-releases/singapore-government-and-8-industry-leaders-to-research-test-and-deploy-physical-ai-in-pdd",
+        "publishedDate": "2026-05-20",
+        "claim": "複数事業者のロボット実証は2026年後半に開始予定、設計段階と実稼働を区別"
+      },
+      {
+        "title": "JTC: Robots take on the real world at Punggol Digital District",
+        "url": "https://www.jtc.gov.sg/punggoldigitaldistrict/story-articles/robo-industry-1-lab-to-life",
+        "publishedDate": "記事日付記載なし（サイト更新表示2026-10-12）",
+        "claim": "SITで1〜10階の清掃ロボットを検証。ODPとSITのネットワークをつなぐ複数機種の広域展開は検討中。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "データ取得だけでなく、実設備を誰が制御し、誰が接続を許可し、異常時に止めるかまで設計する。",
+    "caution": "地区全体をまとめて管理できるJTCの権限が前提。既成市街地では設備所有者ごとの合意と安全設計が必要。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/punggol-digital-district/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "展開中",
+    "statusNote": "ODPは先行拠点に導入済み、SITキャンパスも開業し清掃ロボットを検証中。複数機種の広域連携は検討中で、地区全域の稼働とは区別する。"
+  },
+  {
+    "id": "aalto-design-factory",
+    "name": "Aalto Design Factory",
+    "country": "フィンランド",
+    "city": "エスポー",
+    "lens": "hard",
+    "headline": "工房を、専門家付きの『学びながらつくる場』に。",
+    "mechanism": "機械加工・電子工作・3D印刷の工房を、企業課題に取り組む学生チームが使う。学生プロジェクトを優先し、高度な機械は主にスタッフが操作。設備の開放と安全・制作支援を組み合わせ、専門の違う人も機能する試作品へ進める。",
+    "interesting": "高価な機械をそろえるだけでなく、誰を優先し、誰が難しい加工を支えるかまでを工房の設計に含める。",
+    "partners": [
+      {
+        "name": "Aalto University / Design Factory",
+        "contribution": "工房、専門スタッフ、学際的な教育・開発の運営"
+      },
+      {
+        "name": "スポンサー企業（例：Torggler）",
+        "contribution": "実際の開発課題、資金、担当者のフィードバック"
+      },
+      {
+        "name": "分野の異なる学生チーム",
+        "contribution": "利用者調査、設計、試作・検証"
+      }
+    ],
+    "outcome": {
+      "text": "Torgglerとの9か月の包装開発で、学生チームが2つの解決案をつくり、双方が特許出願中と2025年9月に大学が報告。",
+      "date": "2025-09-16（2025-12-04更新）",
+      "caveat": "特許の成立、量産、市場での採用はこの報告では確認できない。1案件の成果を全プログラムの成功率としない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "加工・電子・3D印刷とスタッフの支援を、触って動作を確かめられる試作品へつなぐ。"
+    },
+    "secondaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "企業の課題担当者と分野の異なる学生・教員を、共同制作するチームにまとめる。"
+    },
+    "sources": [
+      {
+        "title": "Aalto Design Factory: Prototyping labs",
+        "url": "https://designfactory.aalto.fi/facilities/",
+        "publishedDate": "公表日記載なし",
+        "claim": "学生優先、時間外利用の訓練、高度機械の主なスタッフ利用、設備種類"
+      },
+      {
+        "title": "Aalto: Student innovators seal a new future for silicone",
+        "url": "https://www.aalto.fi/en/news/student-innovators-seal-a-new-future-for-silicone",
+        "publishedDate": "2025-09-16（2025-12-04更新）",
+        "claim": "Torgglerの課題・スポンサー連携、利用者調査、9か月、2案の特許出願中"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "設備費と同時に、技術スタッフの時間、安全訓練、プロジェクトの利用優先順位を予算化する。",
+    "caution": "大学教育の時間軸と企業の納期は異なる。機械だけを複製しても、学際チームと継続指導の条件は再現されない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/aalto-design-factory/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "教育と企業開発",
+    "statusNote": "工房の利用条件は現行公式を確認。紹介する成果は2025年報告の特許出願段階。"
+  },
+  {
+    "id": "firstbuild",
+    "name": "FirstBuild",
+    "country": "米国",
+    "city": "ルイビル",
+    "lens": "soft",
+    "headline": "完成品を隠すより、初期の試作を公開する。",
+    "mechanism": "Ideate → Co-create → Make の段階を公開。アイデアへの関心を確かめ、試作品を見せて改良し、初回購入者のテストや少量販売へ進む。需要が見える前に大型の量産投資を置かない。",
+    "interesting": "利用者を完成後の評価者ではなく、開発の途中と最初の購入に参加させる。公開コミュニティ、社内の設計・加工チーム、少量生産、親会社の量産・サポートを一続きにする。",
+    "partners": [
+      {
+        "name": "FirstBuild／GE Appliances",
+        "contribution": "FirstBuildが試作・小ロット生産を担い、成果の一部をGE Appliancesのブランド群・量産・サポートへ移す。"
+      },
+      {
+        "name": "利用者・メイカーのコミュニティ",
+        "contribution": "アイデア、使用経験、改良への反応、初期の購入で需要を示す。"
+      },
+      {
+        "name": "King Arthur Baking Company",
+        "contribution": "Sourdough Sidekickで製パンの専門知識と販売窓口を組み合わせる。"
+      }
+    ],
+    "outcome": {
+      "text": "Sourdough Sidekickは2025年3月にクラウドファンディングを開始し、2026年5月1日の公式発表では支援者数千人へ発送済み、米国全国向けの販売開始を報告。",
+      "date": "2026-05-01（GE Appliances公表）",
+      "caveat": "販売開始・発送の報告であり、利益、一般市場での支持、長期継続使用の効果は未確認。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "未完成の試作品を早く公開し、利用者の反応を次の試作へ戻せる。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "賛成意見だけでなく初期の購入を確かめ、少量販売から量産・販路へつなぐ。"
+    },
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "sources": [
+      {
+        "title": "How FirstBuild Works",
+        "url": "https://firstbuild.com/how-we-work/",
+        "publishedDate": "日付記載なし",
+        "claim": "Ideate/Co-create/Make、公開試作、初回購入者テスト、無料の会員参加と工具訓練",
+        "locator": "How a product comes to life / Beta Test / Come Make With Us"
+      },
+      {
+        "title": "Sourdough Sidekick Is Now Available Nationwide",
+        "url": "https://pressroom.geappliances.com/news/firstbuilds-sourdough-sidekick-co-created-with-king-arthur-baking-company-makes-sourdough-baking-easier-than-ever-and-is-now-available-nationwide",
+        "publishedDate": "2026-05-01",
+        "claim": "2025年3月CF、支援者数千人へ発送済み、全国販売開始、King Arthurとの共同開発と販路",
+        "locator": "本文冒頭第1〜3段落"
+      },
+      {
+        "title": "FirstBuild Celebrates a Decade of Cocreation",
+        "url": "https://pressroom.geappliances.com/news/ge-appliances-innovation-hub-firstbuild-celebrates-a-decade-of-cocreation",
+        "publishedDate": "日付記載なし（2014年設立の10周年を説明）",
+        "claim": "少量生産を経て親会社のブランド・量産・サポートへ移す仕組み",
+        "locator": "本文第4〜6段落"
+      },
+      {
+        "title": "Terms and Conditions",
+        "url": "https://firstbuild.com/terms-and-conditions/",
+        "publishedDate": "日付記載なし",
+        "claim": "公開投稿の非秘密性、利用許諾、所有権、報酬を保証しない条件",
+        "locator": "Intellectual Property / User Submissions"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "試作の回数より『反応をどう変更へ戻すか』『誰が最初に買うか』を運営ルールにする。",
+    "caution": "熱心なファンは市場全体を代表しない。投稿の知財・秘密保持・報酬は個別規約の確認が必要で、アイデア提供に対価が必ず付く仕組みではない。",
+    "verificationStatus": "公式4ページを再確認。写真は既存Atlas資産から同一条件で再利用する候補。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/firstbuild/",
+    "statusLabel": "商品化の実績あり",
+    "statusNote": "Sourdough Sidekickは2026年5月に発送・販売開始を報告。採算や長期使用効果は未確認。"
+  },
+  {
+    "id": "marineterrein-amsterdam",
+    "name": "Marineterrein Amsterdam／Shuttercam",
+    "country": "オランダ",
+    "city": "アムステルダム",
+    "lens": "soft",
+    "headline": "街のセンサーに、市民が止められる仕組みを。",
+    "mechanism": "Shuttercamではカメラの作動を物理シャッターで見える化し、時間指定、来訪者が15分間停止できるボタン、毎週の手巻き操作という3つの運用を実験。『計測できるか』だけでなく『誰が止められるか』を試す。",
+    "interesting": "プライバシーを同意文だけにせず、操作と保守のルールに埋め込む。地区内の実験から既存の混雑管理システムへ進み、認知・耐久性・運用の不都合も公開している。",
+    "partners": [
+      {
+        "name": "City of Amsterdam／AMS Institute",
+        "contribution": "Responsible Sensing Labとして、公共価値をセンサー設計に組み込む研究・実験を運営。"
+      },
+      {
+        "name": "Tapp／Life Electronic／TU Delft",
+        "contribution": "Shuttercamの実施・技術と研究を担う。TU DelftのGerd Kortuemが研究責任者として記載。"
+      },
+      {
+        "name": "Marineterrein Amsterdam",
+        "contribution": "実験場所と現地運用を提供。地区の日常管理は2025年9月15日からVoets+TEPP。"
+      },
+      {
+        "name": "VCS／Johan Cruijff ArenA周辺の混雑管理",
+        "contribution": "地区外試験ではVCS管理の既存2台のカメラとPublic Eyeの運用へ接続。"
+      }
+    ],
+    "outcome": {
+      "text": "地区内試作の後、2022年7月〜2023年1月にArenA周辺の実運用カメラ2台で試験。2023年4月報告は、見えにくさ、説明の必要性、錆による機械故障などを記録した。",
+      "date": "2023-04-13（地区外試験の最終報告）",
+      "caveat": "試験後にシャッターは撤去された。恒久導入・住民の安心改善を達成した事例とは言えない。20人の通行人への聞き取りなど限定的な検証。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "実際の街で、技術の動作だけでなく人の理解と日常の保守に合うかを確かめる。"
+    },
+    "secondaryStep": {
+      "number": 1,
+      "title": "課題を捉える",
+      "why": "『撮影されているか分からない』という市民側の不安を、透明性と停止操作の検証課題に変える。"
+    },
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "sources": [
+      {
+        "title": "Shuttercam: would cameras equipped with shutters contribute to a responsible Smart City?",
+        "url": "https://www.ams-institute.org/urban-challenges/urban-data-intelligence/shuttercam-would-cameras-equipped-with-shutters-contribute-to-a-responsible-smart-city/",
+        "publishedDate": "公表日記載なし／対象期間2021-04〜2022-03",
+        "claim": "3つの試作、15分のopt-out、毎週手巻き、共同実施主体、検証仮説",
+        "locator": "Experimenting with 3 prototypes / Testing hypotheses / Partners"
+      },
+      {
+        "title": "Eindverslag shuttercam — Pilot fase 4 ArenA",
+        "url": "https://responsiblesensinglab.org/storage/files/54d848cc-b666-486c-ba88-c7a7da8e918e/Eindrapport-Shuttercam.pdf",
+        "publishedDate": "2023-04-13",
+        "claim": "地区外実運用で2台を試験、2022年7月〜2023年1月、試験後の撤去、認知・錆・保守の課題",
+        "locator": "pp.5, 8–10"
+      },
+      {
+        "title": "Experimenten aanmelden",
+        "url": "https://marineterrein.nl/contact/experimenten/",
+        "publishedDate": "日付記載なし",
+        "claim": "実験申請に当地で試す理由、目的、実行計画と費用見積もりが必要",
+        "locator": "Aanvraag formulier Experimenten & Innovatie"
+      },
+      {
+        "title": "Nu — Beheer van het Marineterrein",
+        "url": "https://marineterrein.nl/over-het-terrein/nu/",
+        "publishedDate": "日付記載なし／2025-09-15移管を明示",
+        "claim": "現在の現地管理者はVoets+TEPP",
+        "locator": "Beheer van het Marineterrein"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "社会受容をアンケートで終えず、停止権、説明方法、保守責任まで試作に含める。",
+    "caution": "センサーが見えるだけで、収集目的・データの行き先・決定権まで透明になるわけではない。特殊な管理区域での実験を一般市街地へ無条件に移せない。",
+    "verificationStatus": "AMS公式・原報告PDF・現行運営者公式を再確認。結果紹介ページは取得タイムアウトのため使わず、取得できた原報告PDFで結果を検証。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/marineterrein-amsterdam/",
+    "statusLabel": "実証終了（2023）",
+    "statusNote": "Shuttercamの地区外試験は終了し、シャッターは撤去。地区自体の実証拠点運営とは区別する。"
+  },
+  {
+    "id": "test-in-tallinn",
+    "name": "Test in Tallinn",
+    "country": "エストニア",
+    "city": "タリン",
+    "lens": "soft",
+    "headline": "実験の窓口を、建物でなく市役所に置く。",
+    "mechanism": "市がワンストップ窓口となり、企業ごとに必要な部局、屋上や街路の使用、現地での調整をまとめる。複数の建物管理者や部署への説明を企業が一から繰り返す負担を減らし、最長1年の実証へ進める。",
+    "interesting": "新しい専用施設を建てるより、既存の都市資源へ接続する行政の調整力を共創インフラにする。ドローン検出器の屋上利用から小型宅配設備の街路利用まで、案件に合わせて現場を編成する。",
+    "partners": [
+      {
+        "name": "Tallinn Strategic Management Office／市の各部局",
+        "contribution": "プロジェクト管理、場所探し、建物・街路の利用調整をまとめる。"
+      },
+      {
+        "name": "参加スタートアップ・スケールアップ",
+        "contribution": "試験する製品、専門人材、実証に必要な資源を持ち込む。エストニア法人である必要はない。"
+      },
+      {
+        "name": "New Standard Oil／Fraunhofer Gesellschaft／Estonian University of Life Sciences",
+        "contribution": "2026年採択の緑地廃棄物活用案件で、企業と研究機関が共同実証を行う計画。実証完了とは扱わない。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年2月16日の市発表では14件の応募から6件を選定。Helsinki、Tampere、Espoo、Heidelbergの担当者も企業のピッチに参加した。",
+      "date": "2026-02-16（City of Tallinn公表）",
+      "caveat": "採択と他都市への紹介の実績で、実証成功、正式調達、他都市への導入完了数ではない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "屋上・街路・担当部局への調整をまとめ、技術を現実の都市条件で試せるようにする。"
+    },
+    "secondaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "必要な権限・場所・専門知識を持つ市の担当者と企業を、案件単位でつなぐ。"
+    },
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "sources": [
+      {
+        "title": "Test in Tallinn: how innovations meet real-world testing in Estonia",
+        "url": "https://investinestonia.com/test-in-tallinn-how-innovations-meet-real-world-testing-in-estonia/",
+        "publishedDate": "2025-06",
+        "claim": "市担当者が説明するワンストップ支援、屋上・街路の調整、最長1年、参加企業の資源条件",
+        "locator": "Mark-Emil Talivereインタビュー／one-stop shop／full testing cycle"
+      },
+      {
+        "title": "Six new innovation projects selected for the Test in Tallinn programme",
+        "url": "https://www.tallinn.ee/en/news/six-new-innovation-projects-selected-test-tallinn-programme",
+        "publishedDate": "2026-02-16",
+        "claim": "14件から6件採択、他都市のピッチ参加、共同実証計画の主体",
+        "locator": "冒頭〜採択案件一覧",
+        "accessNote": "公式ページの直接openは403。公式ドメインを指す検索収録本文を再確認。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "場所の貸出制度だけでなく、部局横断の調整責任者と期限を先に決める。",
+    "caution": "市の調整支援は、企業の資金や人員を代替しない。参加企業の成長を制度の因果効果とせず、正式調達への転換は別に確認する。",
+    "verificationStatus": "国の投資機関掲載の市担当者インタビュー全文を確認。2026年市発表は公式検索収録本文を確認。旧greentallinnページはタイムアウトのため根拠として採用しない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/test-in-tallinn/",
+    "statusLabel": "実証支援・採択を確認",
+    "statusNote": "2026年2月に6件の採択を公表。実証完了・正式調達の成果とは区別する。"
+  },
+  {
+    "id": "josephs",
+    "name": "JOSEPHS — Test Spaces",
+    "country": "ドイツ",
+    "city": "ニュルンベルク",
+    "lens": "soft",
+    "headline": "通りがかりの体験を、開発要件へ翻訳する。",
+    "mechanism": "抽象的な構想や試作品をTest Spaceに変え、Innovation Guidesが来場者の対話と非言語反応を収集。定性分析から、何を改めるべきかという開発への提言を依頼者へ戻す。",
+    "interesting": "ショールームを完成品の宣伝で終わらせず、まだ答えのない製品・サービスへの問いを、無料で訪れる人々が体験できる場にする。専用のTesting Guidelineで展示から調査・解釈へつなぐ。",
+    "partners": [
+      {
+        "name": "JOSEPHS GmbH",
+        "contribution": "体験環境、Innovation Guides、研究設計、反応の記録・定性分析と開発提言を担う。"
+      },
+      {
+        "name": "企業・研究機関／Bundesagentur für Arbeitなど",
+        "contribution": "構想や試作品、検証したい問いを持ち込む。公式資料はBundesagentur für Arbeitとの顧客サービス開発連携を紹介。"
+      },
+      {
+        "name": "市民・来場者・選抜した利用者",
+        "contribution": "実物や体験に触れ、必要・期待・使いにくさを示す。一般来場と選抜した利用者の調査を組み合わせる例がある。"
+      }
+    ],
+    "outcome": {
+      "text": "公式事例資料は、Smart Homeの2アプリを3か月間、250人の自発参加者と20人の選抜利用者ワークショップで比較し、UX評価と改良の優先順位を作成した例を紹介。",
+      "date": "公式資料ファイル名062022／個別実施年の記載なし",
+      "caveat": "顧客名、実施年、市販後の売上・利用改善は非公開。自発参加者は市場全体を代表しない。"
+    },
+    "primaryStep": {
+      "number": 1,
+      "title": "課題を捉える",
+      "why": "人が体験したときの言葉と反応から、企業の想定と実際の必要・使いにくさの違いを探る。"
+    },
+    "secondaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "抽象的な案を体験できる試作品・テスト環境に変え、改良すべき点を具体化する。"
+    },
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "sources": [
+      {
+        "title": "Für Unternehmen & Forschungseinrichtungen",
+        "url": "https://josephs-innovation.de/wp/beratung/",
+        "publishedDate": "日付記載なし",
+        "claim": "Test Spaceでの体験、発話・非言語反応の定性分析、開発提言、Testing Guideline",
+        "locator": "WARUM sollten Sie auf User Co-Kreation mit einem JOSEPHS Test-Space setzen?"
+      },
+      {
+        "title": "JOSEPHS — Das Offene Innovationslabor — Test Spaces",
+        "url": "https://josephs-innovation.de/wp/wp-content/uploads/2022/05/JOSEPHS-Das-Offene-Innovationslabor-Test-Spaces-deutsch-062022.pdf",
+        "publishedDate": "日付本文非表示／ファイル名062022",
+        "claim": "Smart Home比較テストの250人＋20人、3か月、UX評価・改良順位の出力。Bundesagentur für Arbeit連携紹介",
+        "locator": "p.20、p.25"
+      },
+      {
+        "title": "Entdecke das JOSEPHS",
+        "url": "https://josephs-innovation.de/wp/",
+        "publishedDate": "日付記載なし",
+        "claim": "入場無料、Innovation Guides、ニュルンベルク中心市街地の体験施設",
+        "locator": "Erlebniswelt / Nachbarschaft"
+      },
+      {
+        "title": "10 Jahre JOSEPHS",
+        "url": "https://www.iis.fraunhofer.de/de/pr/2024/20240617-10-jahre-josephs.html",
+        "publishedDate": "2024-06-17",
+        "claim": "FAUとFraunhofer IISの研究から2019年独立GmbHへ移行",
+        "locator": "Ein einzigartiges Konzept für Unternehmen und Organisationen"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "transfer": "展示する前に『来場者のどんな反応を、どの設計判断に使うか』を決める。",
+    "caution": "施設内の体験は生活の中での継続利用とは違う。来場者の選択偏り、同意、結果の還元、企業側の採否判断を別に設計する。",
+    "verificationStatus": "現行公式説明、公式PDFの事例、Fraunhofer沿革を再確認。PDF p.20の個別結果は自己報告で、第三者評価ではない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/josephs/",
+    "statusLabel": "体験型の開発支援",
+    "statusNote": "現在のサービス案内を確認。紹介するアプリ比較の個別実施年は非公開。"
+  },
+  {
+    "id": "cern-ideasquare",
+    "name": "CERN IdeaSquare Planet",
+    "country": "スイス",
+    "city": "ジュネーブ近郊・CERN",
+    "lens": "soft",
+    "headline": "いったん別の惑星へ。地球の課題を問い直す。",
+    "mechanism": "分野の違う学生が『新しい惑星で社会をつくる』条件を考え、資源・生活・制度のつながりを設計する。その後、地球へ戻る段階で、水不足や医療など現実の課題に考え方を適用する。",
+    "interesting": "いきなり現状の改善案を出すのではなく、今ある常識をいったん外し、別の社会の可能性から現実に戻る。想像だけで終わらせず、制約や規模の計算も組み合わせる。",
+    "partners": [
+      {
+        "name": "CERN IdeaSquare",
+        "contribution": "未来思考の方法、進行役、異分野協働と試作の環境"
+      },
+      {
+        "name": "IED Barcelona／UPC／ESADE Barcelona",
+        "contribution": "2026年の共同コースでデザイン・工学・経営の学生と教員が連携"
+      },
+      {
+        "name": "大学院段階の学際チーム",
+        "contribution": "仮想社会の構想、現実課題の見直し、試作と議論"
+      }
+    ],
+    "outcome": {
+      "text": "CERNは2025年5月、過去2年間に13回の試行・255人の参加を報告。同年11月の研究紹介では、別の可能性への開放性などとともに、技術万能論が残ることや、仮想社会から地球の課題への接続の弱さも示した。",
+      "date": "2025-05-14／2025-11-21",
+      "caveat": "教育プログラムの実施と探索的研究の報告。社会課題の解決や事業成果が実現したという証拠ではなく、教育効果が確立したとの意味でもない。"
+    },
+    "primaryStep": {
+      "number": 2,
+      "title": "未来を問う",
+      "why": "現在の制度や常識をいったん外し、どんな社会を望むかを複数の専門から考える。"
+    },
+    "secondaryStep": {
+      "number": 1,
+      "title": "課題を捉える",
+      "why": "描いた別の未来から現実へ戻り、水や医療などの課題を新しい前提で捉え直す。"
+    },
+    "sources": [
+      {
+        "title": "CERN: How imagining life on exoplanets sparks real-world solutions",
+        "url": "https://home.cern/how-imagining-life-exoplanets-sparks-real-world-solutions/",
+        "publishedDate": "2025-05-14",
+        "claim": "惑星の社会を設計し地球の課題へ戻る2段階、教育目的、13試行・255人"
+      },
+      {
+        "title": "Innovation education for the future: a case study of CERN IdeaSquare Planet",
+        "url": "https://ideasquare.cern/node/475",
+        "publishedDate": "2025-11-21",
+        "claim": "探索的研究の概要と反証：技術万能論の残存、2段階の接続不足。科学的効果の確立と扱わない",
+        "accessNote": "公式ページの直接取得は403。公式サイトの検索収録本文を確認"
+      },
+      {
+        "title": "CBI4AI 2026 — IdeaSquare Planet Edition",
+        "url": "https://indico.cern.ch/event/1673381/overview",
+        "publishedDate": "2026-05-04〜07開催案内",
+        "claim": "IED Barcelona・UPC・ESADE Barcelonaとの共同コース、規模の概算とシステム影響評価、現実への適用",
+        "accessNote": "公式開催案内の本文を直接閲覧できないため、公式サイトの検索収録本文で開催日・連携大学・学習内容を確認。開催案内であり実施結果とは区別する。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "未来像を描く回と、今の現場へ戻して前提・必要条件を見直す回を、必ずセットにする。",
+    "caution": "自由な想像は、技術なら何でも解決できるという思い込みも強め得る。現場の当事者や不利益を受ける人の視点で問い直す進行が必要。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/cern-ideasquare/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "教育プログラム",
+    "statusNote": "未来思考を学ぶ方法の事例。事業化や社会課題解決の実績を示すものではない。"
+  },
+  {
+    "id": "bmw-startup-garage",
+    "name": "BMW Startup Garage",
+    "country": "ドイツ",
+    "city": "ミュンヘン／世界の拠点",
+    "lens": "partners",
+    "headline": "出資より先に、最初の顧客になる。",
+    "mechanism": "「Venture Client」として採択企業にサプライヤー番号と発注書を出し、試作品と統合・検証に必要な費用を支払う。BMWの実務部門で使い、検証後の追加開発や供給契約は研究開発・購買部門が交渉する。",
+    "interesting": "技術を持つスタートアップと、使う部門・買う部門を「有償の初回取引」で結ぶ。プログラムの説明では知財はスタートアップに残り、独占義務もない。",
+    "partners": [
+      {
+        "name": "スタートアップ（具体例：Embotech）",
+        "contribution": "動く試作品・技術と開発チームを提供。Embotechは工場内の車両自動移動AVMを開発。"
+      },
+      {
+        "name": "BMW Group Startup Garage／実務部門",
+        "contribution": "初回購入、統合・検証費用、車両・工場・システムへの接続と利用者のフィードバックを提供。"
+      },
+      {
+        "name": "BMWの研究開発・購買部門",
+        "contribution": "追加開発とサプライヤー契約の交渉を担う。"
+      },
+      {
+        "name": "BMW i Ventures",
+        "contribution": "別の投資組織。Embotechには2024年12月から出資。初回購入モデルと出資は別段階。"
+      }
+    ],
+    "outcome": {
+      "text": "BMWは2025年2月、220社超との共同案件と30社の既存サプライヤー化を報告。2018年から支援したEmbotechのAVMは生産物流に組み込まれ、同社は継続的な物流パートナーになったと説明する。",
+      "date": "2025-02-20",
+      "caveat": "運営企業の累計報告。30÷220を採択コホートの成功率とは読めず、全案件の売上・利益や制度単独の因果効果は不明。"
+    },
+    "primaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "試作品への発注と支払いを入口にし、使う部門から購買部門へ継続契約の判断をつなげる。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "BMWの実際の車両・工場・システムに組み込み、利用者と技術担当者から検証結果を得る。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Benefits & Program",
+        "url": "https://www.bmwstartupgarage.com/en/benefits-and-program.html",
+        "publishedDate": "公表日記載なし",
+        "claim": "初回購入、知財保持、非独占、工場・車両等へのアクセス。"
+      },
+      {
+        "title": "FAQ | BMW Group Startup Garage",
+        "url": "https://www.bmwstartupgarage.com/en/faq.html",
+        "publishedDate": "公表日記載なし",
+        "claim": "発注書、検証費用、約4か月、後続契約はR&D・購買が交渉。"
+      },
+      {
+        "title": "BMW Startup Garage marks 10 years",
+        "url": "https://www.press.bmwgroup.com/canada/article/detail/T0448210EN/from-pioneer-to-innovation-powerhouse-bmw-startup-garage-marks-10-years?forceSitePreference=DESKTOP",
+        "publishedDate": "2025-02-20",
+        "claim": "220社超共同案件、30社供給者化、Embotechの実運用と後続出資。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "実証費を払う主体、現場評価する主体、本導入を買う主体を、募集前に分けて決める。",
+    "caution": "BMWが買える成熟度・用途を選ぶ制度であり、誰でも使える創業支援ではない。個別契約と継続調達は別判断。",
+    "photo": {
+      "url": "https://mobilitydlab.com/co-creation-atlas/assets/bmw-startup-garage-office.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:BMW_Startup_Garage_Office_2.jpg",
+      "credit": "Marvel44",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageDate": "2017-08-18",
+      "caption": "BMW Startup Garageの2017年の打合せ空間。Embotech実証の写真ではない。",
+      "verified": true
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/bmw-startup-garage/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "有償検証から取引へ",
+    "statusNote": "2025年の公式報告でサプライヤー化を確認。採択後の継続契約は別の判断。"
+  },
+  {
+    "id": "massrobotics",
+    "name": "MassRobotics｜AMR Interoperability Standard",
+    "country": "米国",
+    "city": "ボストン（初公開実証はメンフィス）",
+    "lens": "partners",
+    "headline": "競合ロボットの「共通語」だけを、一緒につくる。",
+    "mechanism": "複数メーカーの移動ロボットが、位置・速度・稼働状態などの基本情報を共通形式で伝える仕様を共同開発。独自の地図まで開示せずに、同じ倉庫や工場での共存を試せるようにする。",
+    "interesting": "一社への統一ではなく、競争するメーカーの違いを残した接続を目指す。仕様書だけでなくJSONスキーマ、送信・受信のサンプル実装、例示メッセージも公開する。",
+    "partners": [
+      {
+        "name": "MassRobotics",
+        "contribution": "非営利拠点としてAMR相互運用ワーキンググループを組成。現在はISOへ標準を移管し、同WGの会合は停止と公式に説明。"
+      },
+      {
+        "name": "InOrbit／Vecna Robotics／Locus Roboticsなど",
+        "contribution": "ロボット・ソフトウェア企業として共通仕様づくりに参加。"
+      },
+      {
+        "name": "FedEx",
+        "contribution": "DARTラボを2021年の初公開デモの実証場所として提供。"
+      },
+      {
+        "name": "採用するメーカー・導入企業",
+        "contribution": "公開仕様とサンプルコードを使い、自社機器から基本情報を送受信できる。"
+      }
+    ],
+    "outcome": {
+      "text": "Version 1.0を2021年5月18日に公開し、公式GitHubで情報共有のスキーマと送受信サンプルを提供。MassRoboticsは標準のISO移管とWG会合停止を案内している。MassRobotics標準とVDA 5050を基礎にしたISO 21423:2026は、2026年10月14日に刊行された。",
+      "date": "仕様公開：2021-05-18／ISO 21423刊行：2026-10-14／現況確認：2026-10-25",
+      "caveat": "MassRobotics Version 1.0とISO 21423は同一の仕様ではない。規格の刊行は商用普及や安全性の証明ではなく、ISO 21423も安全・ナビゲーション要件を対象外としている。"
+    },
+    "primaryStep": {
+      "number": 8,
+      "title": "社会へ広げる",
+      "why": "個別実証で使った連携方法を、他社が実装できる共通仕様とコードにして渡す。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "異なるメーカー間で、ロボットの位置・状態などのデータが同じ形式で読み取れるか検証できる。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Working Groups — AMR Interoperability Working Group",
+        "url": "https://www.massrobotics.org/working-groups/",
+        "publishedDate": "公表日記載なし",
+        "claim": "2021-05-18仕様公開、ISOへの移管、WG会合停止。承認手続中という旧説明が残るが、現在の刊行状態はISO原典で確認。"
+      },
+      {
+        "title": "What Is the MassRobotics AMR Interoperability Standard?",
+        "url": "https://www.massrobotics.org/what-is-the-massrobotics-amr-interoperability-standard/",
+        "publishedDate": "2023-06-19",
+        "claim": "公式サイト掲載のBlueBotics寄稿。地図を共有しない基本情報連携、参加企業、2021年FedEx実証、タスク管理・安全制御との区別。"
+      },
+      {
+        "title": "MassRobotics-AMR / AMR_Interop_Standard",
+        "url": "https://github.com/MassRobotics-AMR/AMR_Interop_Standard",
+        "publishedDate": "継続公開・最終更新日未特定",
+        "claim": "JSONスキーマ、仕様PDF、送受信サンプル実装、例示メッセージの公開。"
+      },
+      {
+        "title": "ISO 21423:2026 — Communications and interoperability",
+        "url": "https://www.iso.org/standard/86749.html",
+        "publishedDate": "2026-10-14刊行",
+        "claim": "刊行済みの国際規格。産業用移動ロボット等の通信を対象とし、安全・ナビゲーション要件は対象外。",
+        "locator": "General information／Life cycle（60.60、2026-10-14）／Abstract"
+      },
+      {
+        "title": "A3: ISO 21423 — Building Global Consensus for Mobile Robot Interoperability",
+        "url": "https://www.automate.org/robotics/editorials/iso-21423-building-global-consensus-for-mobile-robot-interoperability",
+        "publishedDate": "2025-09-19",
+        "claim": "ISO 21423がMassRobotics Interoperability StandardとVDA 5050を基礎に発展した経緯。刊行状態の根拠はISO原典。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "共有すべき最小データと、各社が持ち続ける機密を分け、導入企業の現場で複数社を同時に試す。",
+    "caution": "現在の参加型プログラムではなく、共創成果を国際標準化へつないだ事例。AMR WGの会合は停止中。Version 1.0とISO 21423の仕様は区別し、安全制御まで統合済みとは扱わない。",
+    "photo": {
+      "url": "https://mobilitydlab.com/co-creation-atlas/assets/massrobotics-event-space-2022.jpg",
+      "sourceUrl": "https://www.flickr.com/photos/usdol/51945080772/",
+      "credit": "Department of Labor / Scott Eisen",
+      "license": "CC BY 2.0（既存Atlas掲載記録）",
+      "licenseUrl": "https://creativecommons.org/licenses/by/2.0/",
+      "imageDate": "2022-03-18",
+      "caption": "MassRoboticsのイベント空間。AMR規格の実証そのものではない。",
+      "verified": false,
+      "verificationNote": "既存Atlasの出典・許諾表記を抽出。今回webではFlickr原典が取得不可。元掲載条件を維持し、再検証済みとは表示しない。"
+    },
+    "currentRelatedObservation": {
+      "text": "別プログラムでは2026年3月、AWS・NVIDIAとのPhysical AI Fellowship第2期9社を発表。技術者、クラウドクレジット、開発ツール、拠点を組み合わせる。ただし採択は商用導入成果ではない。",
+      "url": "https://www.massrobotics.org/massrobotics-aws-and-nvidia-announce-second-cohort-of-physical-ai-fellowship/",
+      "date": "2026-03-12"
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/massrobotics/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "共通仕様を公開・国際規格へ",
+    "statusNote": "AMRワーキンググループは会合停止を案内。関連するISO 21423:2026は2026年10月14日に刊行済み。"
+  },
+  {
+    "id": "arena2036",
+    "name": "ARENA2036｜SILS・VWS4LS",
+    "country": "ドイツ",
+    "city": "シュトゥットガルト",
+    "lens": "partners",
+    "headline": "企業ごとの試作を、業界で使えるルールへ。",
+    "mechanism": "自動車の配線製造を題材に、メーカー・部品・製造装置・ソフトウェア企業が競争前の共通課題を共同研究。自動化しやすい設計条件をSILSで整理し、データの共通表現をVWS4LSで実演する。",
+    "interesting": "交流や共同展示で終わらず、設計ルールを正式な規格へ、部品データをメーカー横断カタログへつなぐ。「組み合わせて動くための条件」そのものが共同成果になる。",
+    "partners": [
+      {
+        "name": "ARENA2036／SILS",
+        "contribution": "産業・研究の共創拠点と、配線製造の標準化に向けた協働の場を形成。"
+      },
+      {
+        "name": "Komax／Schleuniger",
+        "contribution": "配線加工の知見から、構造、部品、ロボットの把持空間などの設計指針を検討。"
+      },
+      {
+        "name": "KOSTAL／KOMAX／COROFLEX",
+        "contribution": "別プロジェクトVWS4LSで、メーカー横断カタログ実演用の参照データモデルを提供。"
+      },
+      {
+        "name": "DINの規格委員会",
+        "contribution": "正式な規格策定を担う。現行DIN 72036:2026-04は製品設計とデジタル記述の要件を含む。"
+      }
+    ],
+    "outcome": {
+      "text": "SILSの協働はDIN 72036の2024年版につながった。2026年4月版が旧版を置換したことをDIN Mediaで確認。VWS4LSではKOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログを実演した。",
+      "date": "DIN初版：2024-06／現行版：2026-04／カタログ実演：公表日記載なし",
+      "caveat": "規格の発行と実演は確認できるが、採用企業数・自動化率向上・投資回収を示す成果ではない。SILS、VWS4LS、ARENA2036-Xは異なる関連活動であり、同一案件として混同しない。"
+    },
+    "primaryStep": {
+      "number": 8,
+      "title": "社会へ広げる",
+      "why": "一社の解決策を、次のメーカーも参照できる設計規格とデータ形式へ変える。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 4,
+      "title": "デジタルで試す",
+      "why": "部品の情報を共通のデータモデルで表し、メーカーをまたいでカタログ上で扱えるか実演する。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "Automation in wire-harness production: approval of DIN 72036",
+        "url": "https://www.komaxgroup.com/de/stories/automation-in-wire-harness-production-approval-of-the-din-72036",
+        "publishedDate": "2024-07-03",
+        "claim": "競争前協働、Komax・Schleunigerの貢献、2024年規格化。"
+      },
+      {
+        "title": "DIN 72036:2026-04",
+        "url": "https://www.dinmedia.de/en/standard/din-72036/398287446?indexName=prod_dinmedia_products",
+        "publishedDate": "2026-04",
+        "claim": "現行版・2024版置換、設計指針とデジタル記述要件。"
+      },
+      {
+        "title": "Inclusion of the Asset Administration Shell in the product catalog",
+        "url": "https://arena2036.de/en/vws4ls/ergebnisse/integration-der-verwaltungsschale-in-den-produktkatalog-2/",
+        "publishedDate": "公表日記載なし",
+        "claim": "KOSTAL・KOMAX・COROFLEXの参照モデルによるメーカー横断カタログの実演。"
+      },
+      {
+        "title": "Digital product description (TP7)",
+        "url": "https://arena2036.de/en/wire-harness-standardization/ueberblick-kopie/digitale-produktbeschreibung-tp7/",
+        "publishedDate": "公表日記載なし",
+        "claim": "共通データプロファイルと規格への反映。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "企業が競う部分ではなく、接続・安全・品質の共通課題を切り出し、試験結果を仕様へ戻す役割を置く。",
+    "caution": "会員制の産業共同研究で、市民参加型ラボとは異なる。情報共有・知財・競争法上の条件は個別に確認が必要。規格は無料公開ではない。",
+    "photo": {
+      "url": "https://mobilitydlab.com/co-creation-atlas/assets/arena-shopfloor.jpg",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:ARENA2036_Shopfloor.jpg",
+      "credit": "Kalligraphia",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageDate": "2024-07-10",
+      "caption": "ARENA2036の共用実験フロア。規格づくりの活動を支える拠点の背景写真。",
+      "verified": true
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/arena2036/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "規格化と企業横断実証",
+    "statusNote": "DIN 72036は2026年4月版が現行。規格発行と各社での導入効果は別。"
+  },
+  {
+    "id": "hvm-catapult",
+    "name": "HVM Catapult／AMRC × LISI AEROSPACE",
+    "country": "英国",
+    "city": "ラグビー（導入工場）／シェフィールド（AMRC）",
+    "lens": "partners",
+    "headline": "研究者と設備会社を、導入工場の一つのチームに。",
+    "mechanism": "航空部品メーカーLISI AEROSPACEが導入現場を持ち、シェフィールド大学AMRCがIndustry 4.0技術の導入を支援。ATIの研究資金と、機械・工具企業の協力を組み合わせ、既存工場にスマート生産ラインをつくる。",
+    "interesting": "研究設備を見学するのではなく、企業の生産ラインに技術を入れ、運用・人材・次の設備投資まで扱う。導入先と研究機関だけでなく、実際に機械を供給する企業も初期から参加する。",
+    "partners": [
+      {
+        "name": "LISI AEROSPACE（BAI UK）",
+        "contribution": "ラグビー工場の生産現場・導入投資・運用を担う。"
+      },
+      {
+        "name": "University of Sheffield AMRC／HVM Catapult",
+        "contribution": "製造研究とIndustry 4.0の専門性を提供し、共同開発を支援。"
+      },
+      {
+        "name": "Aerospace Technology Institute（ATI）",
+        "contribution": "2021年発表時に共同案件へ97.5万ポンドの資金を提供。"
+      },
+      {
+        "name": "Earlsdon Technology（ETech）／SMART machinery／Danobat",
+        "contribution": "専用機械の供給と共同開発を担当。現場の要求に合わせた機械設計・導入を支える。"
+      }
+    ],
+    "outcome": {
+      "text": "HVM Catapultの2025年報連動事例は、ラグビーの新ラインで生産性100%超改善、12人の新規雇用、200万ポンド超の追加契約を報告。社内の次案件に使うひな型になったと説明する。",
+      "date": "AMRC公表2024-10-24／HVM Catapult 2025年報掲載",
+      "caveat": "運営者の単一工場報告。測定期間・費用・他投資の寄与は未公開。2027年までの追加2ラインは資金を仮確保した計画であり、完成実績ではない。"
+    },
+    "primaryStep": {
+      "number": 6,
+      "title": "現場で確かめる",
+      "why": "導入企業の実ラインで、研究技術と機械・工具を組み合わせ、生産性や運用上の変化を確認する。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 8,
+      "title": "社会へ広げる",
+      "why": "一度の設備導入を、次の生産ラインへ渡せる方法と運用・人材の知識にする。ただし追加ラインは計画段階。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "ATI funding for industry-defining smart factory production line",
+        "url": "https://www.amrc.co.uk/news/ati-funding-for-industry-defining-smart-factory-production-line",
+        "publishedDate": "2021-02-10",
+        "claim": "AMRCとLISI、ATI 97.5万ポンド、27か月計画、機械・工具企業との連携。"
+      },
+      {
+        "title": "Smart production line unlocks more jobs and new contracts",
+        "url": "https://hvm.catapult.org.uk/case-study/smart-production-line-unlocks-more-jobs-and-new-contracts/",
+        "publishedDate": "2025年報連動・個別日付なし",
+        "claim": "生産性100%超改善、12雇用、£2m超受注、次案件へのひな型化と追加ライン計画。"
+      },
+      {
+        "title": "AMRC: Industry 4.0 smart factory adoption transforms aerospace company’s production line",
+        "url": "https://www.amrc.co.uk/case-studies/industry-4-0-smart-factory-adoption-transforms-aerospace-company-s-production-line",
+        "publishedDate": "2024-10-24",
+        "claim": "機械供給3社、現場への導入・教育、性能100%超改善、12雇用、£2m超受注。追加2ラインは2027年までの計画。"
+      }
+    ],
+    "checked": "2026-10-25",
+    "transfer": "実証先だけでなく、納入・保守を担う会社と技能を引き継ぐ現場担当を、初期のチームに入れる。",
+    "caution": "個別の成功事例をネットワーク全体の平均効果とは見なさない。単なる研究助成や設備の共同所有とも異なる。",
+    "photo": {
+      "url": "https://mobilitydlab.com/co-creation-atlas/assets/hvm-factory2050.jpg?v=dfb20e49",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:AMRC_2050_22_10_2018_1.jpg",
+      "credit": "Chemical Engineer",
+      "license": "CC BY-SA 4.0",
+      "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "imageDate": "2018-10-22",
+      "caption": "AMRCの研究拠点Factory 2050。ラグビーのLISI生産ラインそのものではない。",
+      "verified": true
+    },
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/hvm-catapult/",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "導入実績・追加展開は計画",
+    "statusNote": "新ラインの実績は2024年にAMRCが報告し、2025年報でも紹介。2027年までの追加2ラインは計画段階。"
+  }
+]
