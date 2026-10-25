@@ -15,12 +15,9 @@
 .training-concise .hero-invite{padding:20px 28px;gap:16px;justify-content:center}
 .training-concise .hero-facts{display:grid;grid-template-columns:1fr;gap:14px;margin:0;padding:0;border:0}
 .training-concise .hero-facts>div{display:grid;grid-template-columns:66px minmax(0,1fr);align-items:baseline;gap:12px;min-width:0}
-.training-concise .hero-facts>div+div{padding:12px 0 0;border-left:0;border-top:1px solid #bbb}
 .training-concise .hero-facts dt{font-size:13px;font-weight:900}
 .training-concise .hero-facts dd{display:flex;align-items:baseline;gap:9px;min-width:0;font:900 clamp(25px,2.45vw,36px)/1.3 Arial,Helvetica,sans-serif;letter-spacing:-.045em}
 .training-concise .hero-facts dd>span{display:inline;font:inherit;margin:0;color:#93441e}
-.training-concise .hero-facts .program-step-count{font-size:46px}
-.training-concise .hero-facts .program-step-count>span{font-size:19px;color:#111;letter-spacing:0}
 .training-concise .application-actions{margin-top:0}
 .training-concise .application-actions .button{min-height:54px;padding:14px 18px;font-size:15px}
 .training-concise .application-actions .text-link{margin-top:8px;font-size:13px}
@@ -65,8 +62,9 @@
 .input-resources p{font-size:14px;line-height:1.8;margin:4px 0 14px}
 #program-proposals .creation-actions{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:24px 0}
 #program-proposals .creation-actions>li{padding:15px 6px;border:1px solid #e3b698;background:#fff;font-size:20px;font-weight:900;text-align:center;line-height:1.5}
-#program-proposals .output-items{margin:24px 0 0}
-#program-proposals .output-items>li{padding:18px 0;border:0;border-bottom:1px solid #ccc;background:transparent;font-size:20px;font-weight:900;line-height:1.6}
+#program-proposals .output-items{display:flex;flex-direction:column;gap:0;min-width:0;width:100%;margin:18px 0 0;padding:0;list-style:none;border-top:1px solid #ddd}
+#program-proposals .output-items>li{display:block;grid-template-columns:none;grid-column:auto;grid-row:auto;min-width:0;width:100%;margin:0;padding:14px 0;border:0;border-bottom:1px solid #ddd;background:transparent;font-size:20px;font-weight:900;line-height:1.6;white-space:normal;word-break:normal;overflow-wrap:normal}
+#program-proposals .output-items>li:last-child{border-bottom:0}
 
 .training-concise #benefits .benefit-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
 .training-concise #benefits .benefit-grid article{display:block;padding:22px 20px}
@@ -154,7 +152,6 @@
  .training-concise .hero-invite{padding:24px var(--pad);gap:24px}
  .training-concise .hero-facts>div{grid-template-columns:1fr;gap:8px}
  .training-concise .hero-facts dd{font-size:clamp(27px,7.5vw,42px);gap:9px}
- .training-concise .hero-facts .program-step-count{font-size:56px}
  .training-concise .hero-facts dt{font-size:15px}
  .training-concise .program-venue{font-size:13px}
  .program-overview-heading{display:block;margin-bottom:28px}
@@ -196,7 +193,6 @@
 @media print{
  .training-concise .hero h1>span,.training-concise .hero h1 strong{font-size:28pt}
  .training-concise .hero-facts dd{font-size:20pt}
- .training-concise .hero-facts .program-step-count{font-size:30pt}
  .training-concise .hero-photo{height:260px}
  .training-concise .process-flow{grid-template-columns:repeat(3,minmax(0,1fr))}
  .training-concise .process-step,.training-concise .process-step:nth-child(n){grid-column:auto;grid-row:auto;padding:14px}
@@ -209,14 +205,19 @@
 
 
 /* Speaker availability is separate from the general workshop candidates. */
-.speaker-dates-link{display:flex;align-items:center;min-height:44px;font-size:14px;font-weight:900;text-underline-offset:4px}
 .training-concise .calendar-tag.hidaka-candidate{background:#fff;color:#111;border:1px solid #ad4a1d;box-shadow:inset 3px 0 #e68149}
 .training-concise .month-card .has-hidaka{background:#fff8f1}
-.speaker-dates-panel{padding:28px var(--pad) 34px;border-top:1px solid #111;background:#fff}
-.speaker-dates-panel h3{font-size:26px;line-height:1.5;margin:0 0 20px}
-.speaker-dates-panel ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
-.speaker-dates-panel li{padding:18px;border-top:4px solid #e68149;background:#fff8f1}
-.speaker-dates-panel time{display:block;font-size:17px;line-height:1.6}
-.speaker-dates-panel strong{display:block;font:900 23px/1.6 Arial,sans-serif;margin-top:8px;white-space:nowrap}
-@media(max-width:1000px){.speaker-dates-panel ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.speaker-dates-panel ul{grid-template-columns:1fr}.speaker-dates-panel h3{font-size:24px}}
+
+
+
+
+/* Keep speaker availability inside its calendar date cell. */
+.training-concise .month-card .calendar-tag.hidaka-candidate{display:block;min-height:0;padding:3px 0;text-align:center;line-height:1.45}
+.hidaka-candidate .candidate-name{display:block;font-size:inherit;white-space:nowrap}
+.hidaka-candidate .candidate-hours{display:block;font-family:Arial,sans-serif;font-size:9px;font-weight:700;line-height:1.5;letter-spacing:0}
+.hidaka-candidate .candidate-hours>time,.hidaka-candidate .candidate-hours>span{display:block;white-space:nowrap}
+@media(max-width:760px){
+ #program-proposals .output-items>li{font-size:20px;line-height:1.5;padding:14px 0}
+ .training-concise .month-card .calendar-tag.hidaka-candidate{padding:5px 0}
+ .hidaka-candidate .candidate-hours{font-size:10px}
+}
