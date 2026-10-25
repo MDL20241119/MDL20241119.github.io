@@ -6,22 +6,24 @@
   const cards = Array.from(document.querySelectorAll('.frontier-card'));
   const buttons = Array.from(controls.querySelectorAll('[data-axis-filter]'));
   const stepSelect = document.getElementById('frontier-step-filter');
-  const sharedFilter = document.getElementById('frontier-shared-filter');
+  const focusButtons = Array.from(controls.querySelectorAll('[data-focus-filter]'));
   const resetButton = document.getElementById('frontier-reset');
   const status = document.getElementById('frontier-result-status');
   const empty = document.getElementById('frontier-empty');
   const axes = {all: 'すべての切り口', hard: 'ハード', soft: 'ソフト', partners: 'パートナー'};
+  const focuses = {all: 'すべてのテーマ', 'shared-labs': '共用研究工場／試作拠点', 'physical-ai': 'フィジカルAIのラボ'};
   const stepNames = new Map(Array.from(stepSelect.options, option => [option.value, option.textContent.replace(/（\d+）$/, '')]));
-  const records = cards.map(element => ({element, axis: element.dataset.axis, steps: element.dataset.steps.split(' '), focus: element.dataset.focus}));
+  const records = cards.map(element => ({element, axis: element.dataset.axis, steps: element.dataset.steps.split(' '), focus: (element.dataset.focus || '').split(' ').filter(Boolean)}));
   let state = {axis: 'all', step: 'all', focus: 'all'};
   function readLocation() {
     const params = new URL(location.href).searchParams;
     const axis = params.get('lens');
     const step = params.get('step');
-    state = {axis: Object.hasOwn(axes, axis) ? axis : 'all', step: stepNames.has(step) ? step : 'all', focus: params.get('focus') === 'shared-labs' ? 'shared-labs' : 'all'};
+    const focus = params.get('focus');
+    state = {axis: Object.hasOwn(axes, axis) ? axis : 'all', step: stepNames.has(step) ? step : 'all', focus: Object.hasOwn(focuses, focus) ? focus : 'all'};
   }
   function matches(record, axis = state.axis, step = state.step, focus = state.focus) {
-    return (axis === 'all' || record.axis === axis) && (step === 'all' || record.steps.includes(step)) && (focus === 'all' || record.focus === focus);
+    return (axis === 'all' || record.axis === axis) && (step === 'all' || record.steps.includes(step)) && (focus === 'all' || record.focus.includes(focus));
   }
   function render() {
     let visible = 0;
@@ -41,12 +43,15 @@
       option.textContent = `${stepNames.get(option.value)}（${count}）`;
     });
     stepSelect.value = state.step;
-    sharedFilter.checked = state.focus === 'shared-labs';
-    controls.querySelector('[data-focus-count]').textContent = records.filter(record => matches(record, state.axis, state.step, 'shared-labs')).length;
+    focusButtons.forEach(button => {
+      const focus = button.dataset.focusFilter;
+      button.setAttribute('aria-pressed', String(focus === state.focus));
+      button.querySelector('[data-focus-count]').textContent = records.filter(record => matches(record, state.axis, state.step, focus)).length;
+    });
     status.replaceChildren();
     const number = document.createElement('strong');
     number.textContent = visible;
-    status.append(number, document.createTextNode(` 件 ／ ${axes[state.axis]}・${stepNames.get(state.step)}${state.focus === 'shared-labs' ? '・共用研究工場／試作拠点' : ''}`));
+    status.append(number, document.createTextNode(` 件 ／ ${axes[state.axis]}・${stepNames.get(state.step)}${state.focus === 'all' ? '' : `・${focuses[state.focus]}`}`));
     empty.hidden = visible !== 0;
     resetButton.disabled = state.axis === 'all' && state.step === 'all' && state.focus === 'all';
   }
@@ -62,7 +67,7 @@
   }
   buttons.forEach(button => button.addEventListener('click', () => update({...state, axis: button.dataset.axisFilter})));
   stepSelect.addEventListener('change', () => update({...state, step: stepSelect.value}));
-  sharedFilter.addEventListener('change', () => update({...state, focus: sharedFilter.checked ? 'shared-labs' : 'all'}));
+  focusButtons.forEach(button => button.addEventListener('click', () => update({...state, focus: button.dataset.focusFilter})));
   document.querySelectorAll('#frontier-reset, [data-frontier-reset]').forEach(button => button.addEventListener('click', () => {
     const fromEmpty = button.hasAttribute('data-frontier-reset');
     update({axis: 'all', step: 'all', focus: 'all'});
