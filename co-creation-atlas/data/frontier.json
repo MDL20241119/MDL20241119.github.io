@@ -138,6 +138,13 @@
         "url": "https://content.govdelivery.com/accounts/MIDOT/bulletins/37d7360",
         "publishedDate": "2023-11-29",
         "claim": "市所有・保守の14th Streetに4分の1マイルの無線給電道路を設置、実地検証用"
+      },
+      {
+        "title": "Building the Future of Manufacturing in Detroit: Newlab Launches The 23rd",
+        "url": "https://www.newlab.com/post/the-23rd-detroit-manufacturing-campus-launch",
+        "publishedDate": "2025-07-15",
+        "claim": "The 23rdの一部活用、500平方フィートからの区画、クレーン・電力・物流設備。初期生産支援の発表。",
+        "locator": "From Prototype to Production, Without Leaving the City"
       }
     ],
     "checked": "2026-10-25",
@@ -147,7 +154,36 @@
     "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "checkedTimezone": "Asia/Tokyo",
     "statusLabel": "実証稼働",
-    "statusNote": "2026年5月に飛行実績を公表。案件ごとの許認可・安全確認は必要。"
+    "statusNote": "2026年5月に飛行実績を公表。案件ごとの許認可・安全確認は必要。",
+    "sharedLab": {
+      "type": "試作工房から都市実証・初期生産",
+      "facilities": "会員向けに鋳造、CNC、FDM方式の3Dプリント、電子、金属、塗装、繊維、木工、ロボティクスの設備を用意。常駐のProduct Realization専門家が設計と加工を支える。機器の予約枠・専有条件は公開一覧では未確認。",
+      "access": "Newlab会員申請制。会員料金・機器利用費・IP契約は今回の公開一次資料で未確認。The 23rdは500平方フィートから区画を借りられると公表するが、空室・賃料・最新の稼働率は未確認。",
+      "collaboration": "常駐Product Realization専門家が設計と加工を支援。個別実証に技術・戦略チームが付き、道路や空のフィールド、許認可・飛行安全の調整へつなぐ。 Newlab、Michigan Central、市・州、企業の協働。The 23rdでは23rd Street HoldingsとBeacon Manufacturingが参加し、Newlabが38万平方フィートの工業キャンパスの一部を活用する。建物全体をNewlabの新工場としない。 2025年7月には別の工業キャンパスThe 23rdの一部を初期生産の受け皿として使う取り組みを発表。23rd Street Holdings、Beacon Manufacturingと製造・物流支援を組み合わせる計画で、各社の量産実績は別途確認が必要。",
+      "comparison": "企業の試作設備と技術支援を集め、単独では確保しにくい実験条件を共用する。 ARENA2036の共同生産研究より、スタートアップの製品化と都市・物流での実証に重心。Ford投資の地区・市/州・Newlabが別の責任を持つ。",
+      "photoReading": "Newlab Detroitが入居するBook Depositoryの吹き抜けと共用動線。上下階の交流・執務空間を見る写真で、駅舎でも加工工房でもない。公式メディアキット2024年1月公開、撮影日は未記載。工房の機器は下の公式施設案内で確認できる。",
+      "questions": [
+        "誰が機器の利用資格・安全教育・予約を管理するか。",
+        "加工費・技術支援費・保険・知財の条件を契約前に確認できるか。",
+        "試作後の導入判断、機器調達、維持管理を誰へ引き渡すか。"
+      ],
+      "visualSources": [
+        {
+          "title": "加工工房・ロボティクス設備の公式写真",
+          "url": "https://www.newlab.com/locations/detroit",
+          "note": "CNC、電子、金属、塗装、ロボティクスなどの工房と技術支援を紹介。"
+        },
+        {
+          "title": "Newlab Detroitの公式内観ギャラリー",
+          "url": "https://michigancentral.com/media-toolkit/?_asset_radio=newlab-at-michigan-central",
+          "note": "Brian Ferry撮影の共用空間など。写真の配布元と利用条件を確認できる。"
+        }
+      ]
+    },
+    "photoId": "michigan-newlab-atrium",
+    "extraPhotoIds": [
+      "michigan-newlab-commons"
+    ]
   },
   {
     "id": "punggol-digital-district",
@@ -819,11 +855,25 @@
         "url": "https://www.automate.org/robotics/editorials/iso-21423-building-global-consensus-for-mobile-robot-interoperability",
         "publishedDate": "2025-09-19",
         "claim": "ISO 21423がMassRobotics Interoperability StandardとVDA 5050を基礎に発展した経緯。刊行状態の根拠はISO原典。"
+      },
+      {
+        "title": "MassRobotics resident startups",
+        "url": "https://www.massrobotics.org/startups/",
+        "publishedDate": "日付記載なし",
+        "claim": "月次契約・最低3か月、設備追加料金なし、入居規模の変更、専門家や顧客の紹介。",
+        "locator": "Space & Cost; Resident benefits; FAQs"
+      },
+      {
+        "title": "MassRobotics Facility and Equipment",
+        "url": "https://www.massrobotics.org/robotics-facility/",
+        "publishedDate": "日付記載なし",
+        "claim": "機械・電子・産業自動化・HRIラボ、共用ロボット・センサー。",
+        "locator": "Look Inside the Space; Robots"
       }
     ],
     "checked": "2026-10-25",
     "transfer": "共有すべき最小データと、各社が持ち続ける機密を分け、導入企業の現場で複数社を同時に試す。",
-    "caution": "現在の参加型プログラムではなく、共創成果を国際標準化へつないだ事例。AMR WGの会合は停止中。Version 1.0とISO 21423の仕様は区別し、安全制御まで統合済みとは扱わない。",
+    "caution": "AMR標準化については、現在の参加型プログラムではなく、共創成果を国際標準化へつないだ事例。AMR WGの会合は停止中。Version 1.0とISO 21423の仕様は区別し、安全制御まで統合済みとは扱わない。",
     "photo": {
       "url": "https://mobilitydlab.com/co-creation-atlas/assets/massrobotics-event-space-2022.jpg",
       "sourceUrl": "https://www.flickr.com/photos/usdol/51945080772/",
@@ -844,7 +894,33 @@
     "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "checkedTimezone": "Asia/Tokyo",
     "statusLabel": "共通仕様を公開・国際規格へ",
-    "statusNote": "AMRワーキンググループは会合停止を案内。関連するISO 21423:2026は2026年10月14日に刊行済み。"
+    "statusNote": "AMRワーキンググループは会合停止を案内。関連するISO 21423:2026は2026年10月14日に刊行済み。",
+    "sharedLab": {
+      "type": "月額入居とロボット設備共用",
+      "facilities": "機械/電子ラボ、産業自動化ラボ、HRI(人とロボットの相互作用)空間。CNC、レーザー、ウォータージェット、樹脂3Dプリンタ、オシロスコープ、SMDリワーク設備、協働/産業ロボットアーム、AMR、センサー等を共有する。",
+      "access": "一般入居は月額契約で、最低3か月の滞在を求める。月額は席・面積・現地人数次第で具体額非公開。公式FAQは年会費/会員加入費なし、設備の追加利用料なしと明記。無料入居を意味しない。 設備の追加利用料がないことは、材料費無料や機器の専有を保証する意味ではない。",
+      "collaboration": "共有席→専用ラボ台→個室と拡張できる。CAD・クラウド資源に加え、投資家、顧客、メーカー紹介、技術/事業相談を伴う。 非営利運営体が空間・プログラム・紹介を担い、企業スポンサーが機材・専門家・市場の接点、入居企業が自社製品を持ち寄る。標準WGでは複数メーカーが最低限の状態データを共有する方式を整備。",
+      "comparison": "企業横断で設備と知識を共有し、共通課題をワーキンググループで扱う。 大学の研究工場ではなく独立非営利のスタートアップ支援拠点。各社の成長に合わせた月次の入居条件と共用資源が特徴。AMR標準化は入居制度とは別の活動。",
+      "photoReading": "掲載写真は2022年の労働とロボティクスを扱う討議の場。実験室の設備写真とは区別し、加工・電子・ロボットの設備は公式ギャラリーで確認する。",
+      "questions": [
+        "設備の共用範囲、予約、安全講習、材料費、専有できる条件を確認できるか。",
+        "入居企業の知財・競合企業との機密分離をどう定めるか。一般契約の全文は未確認。",
+        "スポンサー、顧客紹介、標準づくりの活動と、個別企業への採用・発注の判断を誰が分けて管理するか。"
+      ],
+      "visualSources": [
+        {
+          "title": "機械・電子・HRI・産業自動化ラボの公式写真",
+          "url": "https://www.massrobotics.org/robotics-facility/",
+          "note": "機械、電子、産業自動化、人とロボットの相互作用を扱うラボの写真と機器一覧。"
+        },
+        {
+          "title": "AMR相互運用の実演動画（公式ページ掲載）",
+          "url": "https://www.massrobotics.org/what-is-the-massrobotics-amr-interoperability-standard/",
+          "note": "複数メーカーの移動ロボットが状態情報を共有する実演。安全機能や自動制御全体の検証とは区別する。"
+        }
+      ]
+    },
+    "photoId": "massrobotics-event-space-2022"
   },
   {
     "id": "arena2036",
@@ -914,6 +990,34 @@
         "url": "https://arena2036.de/en/wire-harness-standardization/ueberblick-kopie/digitale-produktbeschreibung-tp7/",
         "publishedDate": "公表日記載なし",
         "claim": "共通データプロファイルと規格への反映。"
+      },
+      {
+        "title": "The Research Factory",
+        "url": "https://arena2036.de/en/ueber-uns/die-forschungsfabrik/",
+        "publishedDate": "公表日なし・2025年末の改装に言及",
+        "claim": "無柱、実験区画、調整担当、建設費ERDFと大学が半分ずつ、隣接執務スペース",
+        "locator": "The ARENA2036 Research Factory / Research Hall / Virtual Tour"
+      },
+      {
+        "title": "Membership Information",
+        "url": "https://arena2036.de/en/mitglieder/infos-zur-mitgliedschaft/",
+        "publishedDate": "公表日なし",
+        "claim": "登録協会、参加資格、承認とオンボーディング",
+        "locator": "Membership Basics / admission process"
+      },
+      {
+        "title": "ARENA2036-X – About the Project",
+        "url": "https://arena2036.de/en/arena2036-x-projekt/",
+        "publishedDate": "公表日なし",
+        "claim": "会員向け試験環境、企業資金、AAS・データスペース、技術受入れと事務局",
+        "locator": "About the Project / Project structure and technologies used"
+      },
+      {
+        "title": "Physical AI & Humanoid Robotics",
+        "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
+        "publishedDate": "公表日なし",
+        "claim": "物流・機械投入・検査、安全、現実的条件での試験。研究目標・実施方式として扱う",
+        "locator": "Flexible Automation / The Next Generation / From logistics to human-robot interaction"
       }
     ],
     "checked": "2026-10-25",
@@ -933,7 +1037,34 @@
     "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "checkedTimezone": "Asia/Tokyo",
     "statusLabel": "規格化と企業横断実証",
-    "statusNote": "DIN 72036は2026年4月版が現行。規格発行と各社での導入効果は別。"
+    "statusNote": "DIN 72036は2026年4月版が現行。規格発行と各社での導入効果は別。",
+    "sharedLab": {
+      "type": "会員企業が共通仕様を育てる研究工場",
+      "facilities": "無柱の研究ホールを案件ごとに区切り、人と機械の工程を組み替える。会員共用の執務・会議・ワークショップ空間はホールに隣接し、研究調整チームが新規案件を既存設備へ統合する。",
+      "access": "登録協会ARENA2036 e.V.、大学、企業、スタートアップ。入会は初回相談→内容調整→正式申請→理事会承認→オンボーディング。ARENA2036-Xは参加企業が資金を負担するネットワーク。",
+      "collaboration": "ARENA2036-XはAAS（機器・部品の共通デジタル記述）と権限を保ったデータ交換の試験環境。技術オンボーディングと共同案件調整を接続する。 Physical AI・人型ロボットの研究では物流、機械への投入、検査などを扱い、現実に近い条件の実験機で検証する方式を公開。研究計画・試験環境の説明であり、量産現場での継続稼働や安全認証の実績とは区別する。",
+      "comparison": "比較の基準：実験区画、研究調整、企業間のデータ交換を結び付け、共同成果を業界の共通仕様へつなぐ。",
+      "photoReading": "2024年7月の写真から、同じ大空間に実験区画を設ける構成を読む。公式360°ツアーでは空間と設備の配置を探索できる。ツアーの撮影・更新時点は明示されておらず、現行の全設備を示すものとは限らない。",
+      "questions": [
+        "会費額、設備予約条件、平均受入れ期間",
+        "共通研究と個別研究のIP帰属契約全文",
+        "規格の採用企業数、接続工数削減、投資回収",
+        "Physical AIの継続稼働・安全認証・労働負担軽減の実測値"
+      ],
+      "visualSources": [
+        {
+          "title": "研究工場の公式360°ツアー",
+          "url": "https://arena2036.de/en/metaverse/digitale-fabriken/360-rundgang/",
+          "note": "研究ホールと実験区画を歩くように見られる公式ツアー。撮影・更新時点は未記載。"
+        },
+        {
+          "title": "現行のPhysical AI研究と実験機",
+          "url": "https://arena2036.de/en/alle-projekte/physicalai_humanoiderobotik/",
+          "note": "公式ページで実験機の写真と、物流・機械投入・検査などの研究テーマを見る。"
+        }
+      ]
+    },
+    "photoId": "arena-shopfloor"
   },
   {
     "id": "hvm-catapult",
@@ -997,6 +1128,27 @@
         "url": "https://www.amrc.co.uk/case-studies/industry-4-0-smart-factory-adoption-transforms-aerospace-company-s-production-line",
         "publishedDate": "2024-10-24",
         "claim": "機械供給3社、現場への導入・教育、性能100%超改善、12雇用、£2m超受注。追加2ラインは2027年までの計画。"
+      },
+      {
+        "title": "Collaborative Research Enterprise",
+        "url": "https://www.amrc.co.uk/pages/collaborative-research-enterprise",
+        "publishedDate": "公表日なし・2026-10-25確認",
+        "claim": "2種の会員費、現金/現物拠出、半分が共通研究で半分が指定案件",
+        "locator": "Partnership and membership / How does it work?"
+      },
+      {
+        "title": "Access to world-class facilities at AMRC Factory 2050 made easier for SMEs",
+        "url": "https://www.amrc.co.uk/news/access-to-world-class-facilities-at-amrc-factory-2050-made-easier-for-smes-with-opening-of-new-reconfigurable-factory-resea",
+        "publishedDate": "2017-08-30",
+        "claim": "SMEを含む企業の実証支援。古い施設情報として限定",
+        "locator": "reconfigurable factory research area / SMEs"
+      },
+      {
+        "title": "Visual Components open house",
+        "url": "https://www.amrc.co.uk/events/visual-components-open-house",
+        "publishedDate": "2026-10-07開催告知",
+        "claim": "2026年のFactory 2050におけるsimulation/robotics/production開発の公開交流告知。開催成果としない",
+        "locator": "本文"
       }
     ],
     "checked": "2026-10-25",
@@ -1016,6 +1168,358 @@
     "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "checkedTimezone": "Asia/Tokyo",
     "statusLabel": "導入実績・追加展開は計画",
-    "statusNote": "新ラインの実績は2024年にAMRCが報告し、2025年報でも紹介。2027年までの追加2ラインは計画段階。"
+    "statusNote": "新ラインの実績は2024年にAMRCが報告し、2025年報でも紹介。2027年までの追加2ラインは計画段階。",
+    "sharedLab": {
+      "type": "共同研究を導入工場へ移す製造拠点",
+      "facilities": "Factory 2050は再構成できる組立・部品加工の共同研究施設。ロボット・自動化、デジタル製造・シミュレーションの実験を、導入企業の実ラインと接続する。",
+      "access": "AMRC現行公式はmembership £50,000/年、partnership £200,000/年を提示し、金銭または同額の物品・役務で拠出可とする。半分を共通研究、半分を会員が選ぶ案件に充てる方式。HVMネットワーク全体の一律価格ではない。 非会員企業も個別案件の相談ができる。金額は2026年10月25日確認、契約・税・設備ごとの費用は要確認。",
+      "collaboration": "機械のセンサー情報を取得・解析し、部品品質や工具寿命を検討する。LISI案件では各機械のデータモデルをTRL6（関連環境での実証）まで進め、工程担当・運転者の教育も行った。",
+      "comparison": "ARENAが共通の規格・企業間接続を育てる例に対し、AMRC事例は導入企業・機械供給者・技能教育をまとめ、企業の生産現場へ研究を渡す。",
+      "photoReading": "外観はAMRCのFactory 2050。LISIの導入工場はラグビーにあり、写真の建物で生産性改善が測定されたわけではない。",
+      "questions": [
+        "成果値の測定期間、比較条件、費用、他投資の寄与",
+        "公開資料でLISI案件のIP配分・守秘条項全文は未確認",
+        "現行会員制度の税・個別設備料金・契約条件の詳細"
+      ],
+      "visualSources": [
+        {
+          "title": "LISIのライン開発と関係者（公式写真）",
+          "url": "https://www.amrc.co.uk/case-studies/industry-4-0-smart-factory-adoption-transforms-aerospace-company-s-production-line",
+          "note": "LISIの導入現場を扱う公式案件報告。上のFactory 2050外観写真とは別の場所。"
+        },
+        {
+          "title": "Factory 2050内の実験設備・SME研究区画",
+          "url": "https://www.amrc.co.uk/news/access-to-world-class-facilities-at-amrc-factory-2050-made-easier-for-smes-with-opening-of-new-reconfigurable-factory-resea",
+          "note": "2017-08-30の公式記事。施設内部の歴史的な参考。現行設備一覧としない。"
+        }
+      ]
+    },
+    "photoId": "hvm-factory2050"
+  },
+  {
+    "id": "robohouse",
+    "name": "RoboHouse｜現場から組み立てるロボット試作",
+    "country": "オランダ",
+    "city": "デルフト",
+    "lens": "soft",
+    "headline": "現場の困り事を、調達前に試せる試作品へ。",
+    "mechanism": "TU Delft Campusのfieldlabで、企業の現場従業員と専門家が課題を整理し、ロボットや自動化の試作品をつくる。完成品の製造までを引き受けず、実験結果を次の供給者・導入判断へ渡す。",
+    "interesting": "機械を先に選ばず、現場の観察から試す条件を決める。Action trackは3〜4か月、Innovation trackは6〜8か月。後者は従業員等を含めて複数案と二回の実験を行う。",
+    "partners": [
+      {
+        "name": "RoboHouse",
+        "contribution": "現場診断、試作、実験、導入へ向けた助言を担当。"
+      },
+      {
+        "name": "依頼企業と現場従業員",
+        "contribution": "工程の実務知識を提供し、試験と意思決定に参加。"
+      },
+      {
+        "name": "TU Delft／学生・研究者／FRAIM",
+        "contribution": "ロボティクス研究と、働く人の実態を理解する知見を結び付ける。"
+      },
+      {
+        "name": "Digitalzh／MKBdoet",
+        "contribution": "中小企業等の技術探索と行動計画を支援。補助対象・費用は個別確認。"
+      }
+    ],
+    "outcome": {
+      "text": "Newasco案件では、現場訪問でRFIDタグの位置と周辺の洗濯物の誤読を特定。12週間で一括読み取りの試作品を実演し、必要部品と概算費用を整理した。",
+      "date": "公式案件記事：公表日記載なし／確認2026-10-25",
+      "caveat": "供給者を探す次段階までの報告。正式導入、長期稼働、時間削減の測定値は同記事で未確認。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "企業の工程を模した物理試作品で、想定が成り立つかを確かめ、部品と概算費用を具体化する。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "secondaryStep": {
+      "number": 1,
+      "title": "課題を捉える",
+      "why": "現場訪問と従業員の参加で、ロボットを導入する前にRFIDの位置や周辺への誤読という本当の障害を見つける。",
+      "basis": "仕組みの一次資料に基づく編集上の対応づけ。工程別の効果を直接測定したものではない。"
+    },
+    "sources": [
+      {
+        "title": "About RoboHouse",
+        "url": "https://robohouse.tudelftcampus.nl/about-robohouse",
+        "publishedDate": "公表日なし",
+        "claim": "従業員を試験と意思決定へ含める、試作役割、完成品を作らない、研究者向けlabs",
+        "locator": "Collaborating with businesses / Community building / FRAIM"
+      },
+      {
+        "title": "Work with us",
+        "url": "https://robohouse.tudelftcampus.nl/work-with-us",
+        "publishedDate": "公表日なし",
+        "claim": "期間、試験回数、従業員参加、個別見積り",
+        "locator": "Action track / Innovation track / Minor Robotics"
+      },
+      {
+        "title": "RoboHouse Success Series: Textile laundry Newasco",
+        "url": "https://robohouse.tudelftcampus.nl/projects/robohouse-success-series-textile-laundry-newasco/",
+        "publishedDate": "公表日なし",
+        "claim": "RFID誤読の現場診断、12週間の試作、部品と費用見通し、供給者探索は次段階",
+        "locator": "site visit / 12-week journey / supplier"
+      },
+      {
+        "title": "Robot Learning",
+        "url": "https://robohouse.tudelftcampus.nl/projects/robot-learning",
+        "publishedDate": "公表日なし・Status Ongoing",
+        "claim": "TU DelftとRoboHouseの模倣学習研究。成果数値はなし",
+        "locator": "The question / Our answer"
+      },
+      {
+        "title": "Press",
+        "url": "https://robohouse.tudelftcampus.nl/press",
+        "publishedDate": "公表日なし",
+        "claim": "画像の一律再利用許諾を確認できず。問い合わせ先を掲示",
+        "locator": "Press / Contact our team"
+      }
+    ],
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "statusLabel": "試作実演・導入判断へ",
+    "statusNote": "Newascoの実演は確認済み。完成品の製造と正式調達は別の段階。",
+    "transfer": "現場担当者、試作担当、後続の供給者が何を判断するかを分け、試作品とともに必要部品・費用・未解決条件を渡す。",
+    "caution": "参加イベントと設備の自由利用は同じではない。費用と知財は個別契約を確認する。旧拠点写真を現在のラボとして扱わない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/robohouse/",
+    "mappingBasis": "ステップへの対応は公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "sharedLab": {
+      "type": "現場の働く人と試作するロボティクス拠点",
+      "facilities": "TU Delft Campusで、企業・研究者・スタートアップがロボットや、実世界で動くAIを開発・試験する拠点。現行所在地はMolengraaffsingel 29。掲載した旧拠点の建物写真は2002年の入居前で、現在の設備を写したものではない。",
+      "access": "企業からの課題相談を起点に、RoboHouseが期間と費用を見積もる。Action trackは3〜4か月、Innovation trackは6〜8か月。公開イベントへの参加と、研究設備の利用契約は別。機器予約、費用、成果の知財条件は案件ごとの確認が必要。",
+      "collaboration": "Innovation trackは複数案と二回の実験を、従業員などの関係者と進める。Minor Roboticsでは5〜6人の学生が5か月で概念実証を行う。Newasco案件では技術者の現場訪問と企業側の実務知識を合わせ、RFIDの誤読条件を絞って試作した。",
+      "comparison": "業界全体の規格化より、企業の現場課題を作業者と整理して試作する役割。公式に『完成品は製造しない』と説明しており、後続供給者の責任が残る。",
+      "photoReading": "旧拠点の写真と、現在の設備・試作品を区別する。公式のNewasco案件では、洗濯物のRFIDを一括読取する試作品の配置を確認できる。",
+      "questions": [
+        "個別設備リストと新拠点の機器予約条件",
+        "案件費用、補助対象資格、IPの契約条項",
+        "Newascoの正式供給者契約、量産導入・長期稼働実績"
+      ],
+      "visualSources": [
+        {
+          "title": "Newascoの現場・試作配置を見る",
+          "url": "https://robohouse.tudelftcampus.nl/projects/robohouse-success-series-textile-laundry-newasco/",
+          "note": "現場写真とRFIDの試作配置を見る。12週間の実演から必要部品・概算費用・供給者探索へ進む過程を紹介。"
+        },
+        {
+          "title": "現行の試作支援・作業写真を見る",
+          "url": "https://robohouse.tudelftcampus.nl/work-with-us",
+          "note": "公式の支援メニューと作業写真。各コースの期間・実験回数も確認できる。"
+        },
+        {
+          "title": "ロボット模倣学習の実験写真を見る",
+          "url": "https://robohouse.tudelftcampus.nl/projects/robot-learning",
+          "note": "公式実験紹介。進行中案件。"
+        }
+      ]
+    },
+    "photoId": "robohouse-former-building"
+  },
+  {
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "id": "newlab-brooklyn",
+    "name": "Newlab Brooklyn",
+    "country": "米国",
+    "city": "ニューヨーク・ブルックリン",
+    "lens": "hard",
+    "headline": "多素材の工房と専門家で、大学の研究を動く製品へ。",
+    "mechanism": "金属・樹脂・電子・繊維・バイオ等の工房と、設計・加工を支えるProduct Realization専門家を共用する。Navy Yardの道路、水辺、建物で試す段階へ接続し、2026年10月には4大学等から起業チームを推薦する経路も公表した。",
+    "interesting": "設備の貸し出しに、研究から製品化へ移る人の受入れと、実証を調整する専門チームを組み合わせる。卒業後も試作を継続できる仕組みに注目する。",
+    "partners": [
+      {
+        "name": "Newlab",
+        "contribution": "加工設備、Product Realization専門家、会員審査、実証案件の組成。"
+      },
+      {
+        "name": "NYU / Cornell Tech / Columbia / CUNY",
+        "contribution": "対象プログラムを通じて起業チームを推薦。Newlabが最終承認する。"
+      },
+      {
+        "name": "NYC DOT / NYCEDC",
+        "contribution": "街路等の課題・実証・支援制度との接続。会員入居とは別の案件で協働する。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年10月9日、大学等から推薦された創業者に1年無償会員の機会を提供する経路を公表。試作設備、技術者支援、24時間の共用執務空間、企業・投資家との接点を組み合わせる。",
+      "date": "2026-10-09",
+      "caveat": "制度開設を確認した段階。全学生への無料開放ではなく、選考人数・製品化率・事業成果は同資料では未確認。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "多素材の加工設備と常駐専門家で、研究アイデアを試作できる物へ変える。"
+    },
+    "secondaryStep": {
+      "number": 3,
+      "title": "仲間をつくる",
+      "why": "大学の推薦と拠点の審査をつなぎ、技術支援・企業・投資家に接続できる関係を整える。"
+    },
+    "sources": [
+      {
+        "title": "Newlab Brooklyn",
+        "url": "https://www.newlab.com/locations/brooklyn",
+        "publishedDate": "日付記載なし",
+        "claim": "多素材の試作工房、Product Realization専門家、Navy Yardの道路・水辺・建物等の実証資源。",
+        "locator": "PRODUCT REALIZATION; in the BROOKLYN NAVY YARD"
+      },
+      {
+        "title": "Newlab is partnering with NYC Universities to give founders a faster path to commercialization",
+        "url": "https://www.newlab.com/post/newlab-is-partnering-with-nyc-universities-to-give-founders-a-faster-path-to-commercialization",
+        "publishedDate": "2026-10-09",
+        "claim": "4大学等からの推薦、対象者への1年無償会員、Newlabの最終承認、技術者支援と24時間利用。",
+        "locator": "eligible founders; Newlab retains final approval authority"
+      },
+      {
+        "title": "E-Bike Programs",
+        "url": "https://www.nyc.gov/html/dot/html/bicyclists/ebikeprograms.shtml",
+        "publishedDate": "日付記載なし",
+        "claim": "2024年e-bike充電実証とNewlabの関係。公共充電網は有料・競争的RFPの別段階。",
+        "locator": "Public E-Bike Charging Program; E-Bike Battery Charging Pilot"
+      },
+      {
+        "title": "OPEN CALL: Building Safer, Smarter Streets with AI",
+        "url": "https://www.newlab.com/post/open-call-building-safer-smarter-streets",
+        "publishedDate": "表示2026-01-28（募集日程は2025）",
+        "claim": "実証の範囲・指標・許認可、安全審査、現場担当との調整、助成と現物負担。募集は終了。",
+        "locator": "WHO SHOULD APPLY; NEWLAB SUPPORT; KEY DATES"
+      }
+    ],
+    "transfer": "工房の設備に加え、受入れを決める人、加工を支える人、次の実証場所を明示し、研究後に開発が途切れる条件を減らす。",
+    "caution": "一般会費・機器別料金・知財契約の全文は未確認。大学連携は対象推薦と最終審査が必要。公道・空・水辺の実証は個別の安全確認・許可を伴う。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/newlab-brooklyn/",
+    "statusLabel": "稼働中・大学との受入れ経路を拡張",
+    "statusNote": "2026年10月に大学推薦の経路を公表。採択・製品化の成果は未確認。",
+    "sharedLab": {
+      "type": "多素材の工房と都市実証",
+      "facilities": "金属・樹脂、電子、繊維、鋳造、3Dプリント、木工、バイオ等の工房を備え、常駐の専門家が設計・製作を支える。Navy Yardの道路、水辺、乾ドック、建物設備は、個別案件で接続する実証資源。敷地全体がNewlabの専有設備という意味ではない。",
+      "access": "一般入居はNewlabへ申請。2026-10-09発表の大学連携は、対象プログラムから推薦された創業者に1年無償会員の可能性があり、最終承認はNewlab。全学生が無料、会員になると公道実証できる、という条件ではない。一般会費・加工別料金の金額は未確認。",
+      "collaboration": "Product Realizationチームが設計・加工を支援。実証案件は技術者・戦略担当が範囲、成果指標、安全審査、許認可、行政側の現場との接続を調整する。 Newlabが試作と案件運営、NYC DOTが街路業務と実証場所、NYCEDCが支援。2026年10月にはNYU、Cornell Tech、Columbia、CUNYから起業チームを推薦する経路を公表。",
+      "comparison": "常駐専門家、加工・電子設備、異なる組織の技術者が出会う場を備える。設計→試作→試験を近接させる。 大学構内の会員共同研究キャンパスではなく、造船所再生地区のスタートアップ商用化拠点。都市・港湾での実証と顧客への接続が強い。",
+      "photoReading": "2017年撮影の共用空間。最新の加工設備配置を示す写真ではない。工房の詳細は公式の設備写真へ。",
+      "questions": [
+        "誰が機器の利用資格・安全教育・予約を管理するか。",
+        "加工費・技術支援費・保険・知財の条件を契約前に確認できるか。",
+        "試作後の導入判断、機器調達、維持管理を誰へ引き渡すか。"
+      ],
+      "visualSources": [
+        {
+          "title": "工房・実証環境の公式写真",
+          "url": "https://www.newlab.com/locations/brooklyn",
+          "note": "工房、製作支援、周辺の実証環境を写真と設備説明で見る。掲載した2017年の内観と現行の施設案内を分けて読む。"
+        }
+      ]
+    },
+    "photoId": "newlab-interior"
+  },
+  {
+    "checked": "2026-10-25",
+    "checkedTimezone": "Asia/Tokyo",
+    "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "id": "arm-robotics-manufacturing-hub",
+    "name": "ARM Institute｜Robotics Manufacturing Hub",
+    "country": "米国",
+    "city": "ピッツバーグ",
+    "lens": "soft",
+    "headline": "購入する前に試し、部品表とコードを導入業者へ渡す。",
+    "mechanism": "製造現場の診断から要件を定め、Mill 19で試作セルを検証する。購入を前提にせず、既製品の照合、PoC、RFP、インテグレーター選定まで伴走。研究施設での検証結果を工場実装へ引き渡す。",
+    "interesting": "「動くデモ」で支援を終えず、部品表・ソフトウェア・発注条件・導入する相手まで揃える。機器の販売とは切り離して、自動化できない部分も含めて診断する。",
+    "partners": [
+      {
+        "name": "ARM Institute",
+        "contribution": "現場診断、要件定義、試作・検証、RFPと導入業者の選定支援。"
+      },
+      {
+        "name": "Kenson Plastics",
+        "contribution": "多品種少量の組立準備の課題、現場条件、導入判断。"
+      },
+      {
+        "name": "Premier Automation / FANUC",
+        "contribution": "事例ではPremier Automationが工場へ統合。KensonはFANUCの協働ロボットを選択。"
+      },
+      {
+        "name": "CMU MFI / Catalyst Connection",
+        "contribution": "Mill 19に同居する大学研究組織と地域製造業支援組織。別組織・別制度として接続する。"
+      }
+    ],
+    "outcome": {
+      "text": "2026年4月公開のKenson事例では、1台のロボットが3つの作業台を扱うセルを設計。バーコードと待ち行列制御を用い、部品表とコードを引き渡した後、Premier Automationが工場へ統合したと報告。",
+      "date": "2026-04-01",
+      "caveat": "運営者による事例報告。生産性・利益の定量改善や、全案件が同様に導入されることは確認できない。"
+    },
+    "primaryStep": {
+      "number": 5,
+      "title": "現物をつくる",
+      "why": "自社の生産設備を止めずに、現場の工程要件に合わせた動くロボットセルを組み立て、試作する。"
+    },
+    "secondaryStep": {
+      "number": 7,
+      "title": "事業にする",
+      "why": "PoCを部品表・コード・発注条件へ変え、導入企業とインテグレーターへ渡す。"
+    },
+    "sources": [
+      {
+        "title": "Automation Services",
+        "url": "https://arminstitute.org/manufacturing-hub/",
+        "publishedDate": "日付記載なし",
+        "claim": "現場診断からPoC・RFP・業者選定までの支援。対象11郡・従業員500人以下・売上1億ドル未満、無償支援期限2027-04-16。",
+        "locator": "How our Automation Services Work; Free for Qualifying Manufacturers in Southwestern Pennsylvania"
+      },
+      {
+        "title": "A Customized Robotics Solution for Kenson Plastics",
+        "url": "https://arminstitute.org/news/kenson-plastics/",
+        "publishedDate": "2026-04-01",
+        "claim": "Kensonの3作業台・バーコード/待ち行列制御、部品表とコードの引渡し、Premier Automationによる工場統合。",
+        "locator": "Kenson’s Solution"
+      },
+      {
+        "title": "Locations & Facilities",
+        "url": "https://arminstitute.org/about/location/",
+        "publishedDate": "日付記載なし",
+        "claim": "Mill 19でCMU Manufacturing Futures Institute、Catalyst Connectionと同居。",
+        "locator": "Pittsburgh Location – Mill 19; Mill 19 & Hazelwood"
+      },
+      {
+        "title": "ARM Institute Issues 2025 Impact Report",
+        "url": "https://arminstitute.org/news/2025-impact-report/",
+        "publishedDate": "2026-05-27",
+        "claim": "48訪問・27解決策・50%実装の公表値。脚注で2025年以前を含む。",
+        "locator": "Technology Development & Resources; アスタリスク脚注"
+      }
+    ],
+    "transfer": "試作の完了条件に、部品表・ソフト・安全条件・教育計画・導入業者への引渡しを含める。",
+    "caution": "無償支援は地域・企業規模・助成期間に条件がある。2026年10月確認では対象11郡、従業員500人以下・年商1億ドル未満、期限2027年4月16日。機器購入や本設置が無料とは書かれていない。",
+    "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/arm-robotics-manufacturing-hub/",
+    "statusLabel": "工場への導入移管事例を公表",
+    "statusNote": "地域の対象企業への無償支援は2027年4月16日までと現行公式案内に記載。",
+    "sharedLab": {
+      "type": "製造現場の診断・試作・導入移管",
+      "facilities": "Mill 19の実機試作・デモ環境で、稼働中の自社生産ラインを止めずに試験できる。Kenson事例では1台の協働ロボットを3つの組立作業台の中央に置き、バーコード識別と待ち行列制御を組み合わせた。",
+      "access": "一般のAutomation Servicesとは別に、地域助成による無償支援には条件がある。2026年10月確認ではペンシルベニア南西部11郡に事業所を持つ、従業員500人以下・年商1億ドル未満の製造業者が対象で、助成期限は2027年4月16日。機器購入や本設置が無料とは書かれていない。",
+      "collaboration": "現地訪問→自動化診断→要件定義→既製品照合またはPoC→RFP・インテグレーター選定支援。機器の購入・設置を支援参加の条件にしない。 ARM Instituteが診断と試作、製造企業が工程・要件・導入判断、外部インテグレーターが工場実装を担う。Mill 19にはCMU Manufacturing Futures Instituteと地域製造業支援組織Catalyst Connectionも同居。",
+      "comparison": "産業企業・大学・機器メーカーが実機を試せる共用拠点を持つ。設備を置くだけでなく、課題と導入条件を技術者が調整する。 ARENA2036の会員間共同研究・標準化に対し、ARMのAutomation Servicesは個別の製造現場の診断から、導入業者への移管までが明確。米国内の支援制度であり日本から無料利用できるという意味ではない。",
+      "photoReading": "掲載写真は2023年のMill 19の円卓会議で、背後に製造設備が見える。機器の詳細や現在の配置を示す写真ではない。Kensonの実機セルは公式写真・動画で確認できる。",
+      "questions": [
+        "PoCの部品表・コード・安全条件を、どこまで導入業者へ引き渡せるか。知財帰属・改変権・機密条項は公開資料では未確認。",
+        "診断後の機器購入、設置、教育、保守を誰が負担し、地域助成終了後にどの支援が続くか。",
+        "導入後の品質、作業負担、費用回収を、非導入案件も含めて追跡できるか。"
+      ],
+      "visualSources": [
+        {
+          "title": "Kensonの完成セル写真と実演動画（公式）",
+          "url": "https://arminstitute.org/news/kenson-plastics/",
+          "note": "Kensonの3作業台を扱うロボットセルと実演動画。部品表・コードから導入業者への引渡しまでを読む。"
+        },
+        {
+          "title": "Robotics Manufacturing Hub公式紹介動画",
+          "url": "https://player.vimeo.com/video/1124909067?app_id=122963&dnt=1",
+          "note": "公式Automation Servicesページに埋め込まれている動画。"
+        }
+      ]
+    },
+    "photoId": "arm-mill19-interior"
   }
 ]

@@ -4011,7 +4011,7 @@
   },
   {
     "id": "arena2036",
-    "updated": "2026-09-28",
+    "updated": "2026-10-25",
     "summary": "自動車・生産技術の企業と研究者が、設備だけでなく製品データの表し方や共有条件を共同開発する研究キャンパス。部品を調達し、異なる会社の設備を接続する実務から逆算し、共通データ、検証環境、標準へ落とし込む。製品カタログの実証やDIN規格の刊行は確認できるが、工場での継続利用と投資回収は別途検証が必要である。",
     "inputs": {
       "human": {
@@ -4172,10 +4172,11 @@
         ]
       },
       {
-        "text": "DIN 72036:2024-06のドイツ語版と英語版が2024年に刊行された。研究成果が共同参照できる標準文書になった具体例である。",
+        "text": "DIN 72036は2024年に刊行され、2026-04版が2024-06版を置き換えた。現行版にはワイヤーハーネスの自動化を考慮した設計に加え、デジタル製品記述の要件が含まれる。標準文書の刊行と量産現場での普及は別の成果である。",
         "kind": "fact",
         "refs": [
-          "ar-backcast-07"
+          "ar-backcast-07",
+          "ar-2026-din"
         ]
       }
     ],
@@ -4330,6 +4331,17 @@
         "claim": "規格作成への参画者、KBL/VEC利用、2024年独英版刊行",
         "grade": "official",
         "verified": "2026-09-28"
+      },
+      {
+        "id": "ar-2026-din",
+        "title": "DIN 72036:2026-04 — CURRENT",
+        "url": "https://www.dinmedia.de/en/standard/din-72036/398287446",
+        "publisher": "DIN Media",
+        "published": "2026-04",
+        "locator": "Overview / Replaces DIN 72036:2024-06 / digital product description",
+        "claim": "現行2026-04版、旧2024-06版の置換、デジタル製品記述要件を確認。規格の全文は有料であり、規格内の詳細条項は未検証。",
+        "grade": "official",
+        "verified": "2026-10-25"
       }
     ]
   },
@@ -5657,8 +5669,8 @@
   },
   {
     "id": "arm-robotics-manufacturing-hub",
-    "updated": "2026-09-28",
-    "summary": "中小製造業が設備を購入する前に、現場・投資・人材の条件を診断し、必要なら別施設で試す。価値はPoCの完成だけでなく、部品表・コード・要求仕様を外部インテグレーターへ渡して工場に導入できる状態をつくる点にある。地域向け無償支援には条件と期限があり、現行案内では助成は2026年9月まで。導入後の利益や作業負担は別途追跡が必要である。",
+    "updated": "2026-10-25",
+    "summary": "中小製造業が設備を購入する前に、現場・投資・人材の条件を診断し、必要なら別施設で試す。価値はPoCの完成だけでなく、部品表・コード・要求仕様を外部インテグレーターへ渡して工場に導入できる状態をつくる点にある。地域向け無償支援には条件と期限があり、現行案内では助成期限は2027年4月16日。導入後の利益や作業負担は別途追跡が必要である。",
     "inputs": {
       "human": {
         "self": {
@@ -5722,7 +5734,7 @@
         ]
       },
       "financial": {
-        "text": "従業員500人以下・年商1億ドル未満で南西ペンシルベニア11郡の対象企業に無償支援。現行案内は助成期間を2026年9月までと記す。10月以降の継続、購入設備・保守費の助成は未確認。",
+        "text": "従業員500人以下・年商1億ドル未満で南西ペンシルベニア11郡に事業所を持つ対象製造企業に無償支援。2026年10月25日確認の現行案内では助成期限は2027年4月16日。購入設備・保守費まで助成されるとは記載されていない。",
         "kind": "fact",
         "refs": [
           "arm-backcast-01",
@@ -5844,7 +5856,7 @@
       "50%の分母・観察期間・実装完了の定義を確認したい。残る案件が不適合と判断されたのか、資金不足で止まったのかで評価は変わる。",
       "導入後の稼働率、製品品質、利益、労働負担、保守費、教育費の比較は不足する。購入しなかった企業も含め、診断前から6〜12か月後まで追う必要がある。",
       "中立的支援を掲げる一方、選定する機器・業者には会員が含まれる。推奨基準と利益相反管理、相見積りの範囲、コードの知財・改変権は未確認。",
-      "地域の初期診断費を公費が支えるモデルであり、助成終了後も同じ価格・対象で続くとは限らない。2026年10月以降の条件更新を要確認。"
+      "地域の初期診断費を公費が支えるモデル。現行の助成期限は2027年4月16日であり、その後も同じ価格・対象で続くとは限らない。"
     ],
     "backcast": [
       {
@@ -5911,13 +5923,13 @@
       {
         "id": "arm-backcast-01",
         "title": "Robotics Manufacturing Hub",
-        "url": "https://arminstitute.org/robotics-manufacturing-hub/",
+        "url": "https://arminstitute.org/manufacturing-hub/",
         "publisher": "ARM Institute",
         "published": "日付記載なし",
-        "locator": "How the Hub Works / Who Qualifies / Services / Location",
-        "claim": "対象11郡・企業規模、商務省助成、試験施設、購入義務なし",
+        "locator": "Free for Qualifying Manufacturers in Southwestern Pennsylvania / grant until April 16, 2027",
+        "claim": "地域・規模条件、2027年4月16日の助成期限、購入義務なしの診断・試験と実装への接続",
         "grade": "official",
-        "verified": "2026-09-28"
+        "verified": "2026-10-25"
       },
       {
         "id": "arm-backcast-02",
@@ -5947,10 +5959,10 @@
         "url": "https://arminstitute.org/manufacturing-hub/",
         "publisher": "ARM Institute",
         "published": "日付記載なし",
-        "locator": "Facility Readiness / How services work / Free for qualifying manufacturers",
-        "claim": "4面診断、既製品照合、PoC、RFP・業者選定、助成2026年9月まで",
+        "locator": "Free for Qualifying Manufacturers in Southwestern Pennsylvania / grant until April 16, 2027",
+        "claim": "地域・規模条件、2027年4月16日の助成期限、購入義務なしの診断・試験と実装への接続",
         "grade": "official",
-        "verified": "2026-09-28"
+        "verified": "2026-10-25"
       },
       {
         "id": "arm-backcast-05",
