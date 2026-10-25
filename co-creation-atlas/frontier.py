@@ -5,7 +5,7 @@ from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-VERSION = '20261025.1'
+VERSION = '20261025.2'
 AXES = [('hard', 'HARD', 'ハード', '場所・設備のつくり方'),
         ('soft', 'SOFT', 'ソフト', '試し方・続け方'),
         ('partners', 'PARTNERS', 'パートナー', '役割・つながり方')]
@@ -17,6 +17,7 @@ def read(root=ROOT):
     rows = json.loads((root/'data/frontier.json').read_text())
     stages = {s['step']:s['title'] for s in json.loads((root/'data/step-guide.json').read_text())}
     known = {c['id'] for c in json.loads((root/'data/cases.json').read_text())}
+    media = {m['assetId']:m for m in json.loads((root/'data/media.json').read_text())}
     assert len(rows) == len({c['id'] for c in rows})
     assert set(c['lens'] for c in rows) == {a[0] for a in AXES}
     for c in rows:
@@ -31,13 +32,25 @@ def read(root=ROOT):
         for source in c['sources']:
             assert source['url'].startswith('https://') and source['title'] and source['claim']
         assert not ({'rank', 'rankReason', 'scores', 'scoreNotes'} & set(c))
+        for photo_id in ([c['photoId']] if c.get('photoId') else []) + c.get('extraPhotoIds', []):
+            assert photo_id in media, c['id']
+            selected = media[photo_id]
+            assert selected['caseId'] == c['id'] and selected.get('kind') != 'diagram', c['id']
+        if c.get('sharedLab'):
+            lab = c['sharedLab']
+            for key in ['type', 'facilities', 'access', 'collaboration', 'comparison', 'photoReading']:
+                assert isinstance(lab.get(key), str) and lab[key].strip(), (c['id'], key)
+            assert lab.get('questions') and all(isinstance(q, str) and q.strip() for q in lab['questions'])
+            assert lab.get('visualSources')
+            for visual in lab['visualSources']:
+                assert visual.get('title') and visual.get('note') and visual.get('url', '').startswith('https://')
     return rows, stages
 
 def source(url, title):
     return f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(title)} ↗</a>'
 
 def photo(c, media, eager=False):
-    m = next(m for m in media if m['caseId']==c['id'] and m.get('kind')!='diagram')
+    m = next(m for m in media if m['caseId']==c['id'] and m.get('kind')!='diagram' and (not c.get('photoId') or m['assetId']==c['photoId']))
     src = m.get('remote') or '../'+m['local']
     if m.get('revision') and not m.get('remote'): src += '?v='+m['revision']
     no_crop = m.get('noCrop') or m.get('status')=='cleared-editorial-only'
@@ -53,19 +66,48 @@ def photo(c, media, eager=False):
 def step(s, primary):
     return f'<div class="frontier-step {"primary" if primary else "secondary"}" data-step="{s["number"]}"><span class="frontier-step-role">{"特に活かせる" if primary else "あわせて活かせる"}</span><a href="../learn/step-{s["number"]:02d}/"><b>{s["number"]:02d}</b><strong>{e(s["title"])}</strong><span aria-hidden="true">↗</span></a><p>{e(s["why"])}</p></div>'
 
+def lab_visuals(c):
+    lab = c.get('sharedLab')
+    if not lab: return ''
+    out = ['<aside class="frontier-lab-visuals"><h3>写真から見る、共用する場</h3>', f'<p>{e(lab["photoReading"])}</p>', '<ul>']
+    for visual in lab['visualSources']:
+        out.append(f'<li>{source(visual["url"],visual["title"])}<p>{e(visual["note"])}</p></li>')
+    return ''.join(out)+'</ul></aside>'
+
+def lab_detail(c):
+    lab = c.get('sharedLab')
+    if not lab: return ''
+    out = ['<section class="frontier-lab-detail"><h3>共用研究工場の仕組みを詳しく</h3><dl>']
+    for key, label in [('type','どんな場か'), ('facilities','共用する設備・環境'), ('access','利用条件と支援'), ('collaboration','共同開発の進め方'), ('comparison','ARENA2036との共通点・違い（ATLASの分析）')]:
+        out.append(f'<dt>{label}</dt><dd>{e(lab[key])}</dd>')
+    out.append('</dl><h3>取り入れる前に確かめたいこと</h3><ul>')
+    out.extend(f'<li>{e(q)}</li>' for q in lab['questions'])
+    return ''.join(out)+'</ul></section>'
+
+def shared_lab_feature(rows, media):
+    labs = [c for c in rows if c.get('sharedLab')]
+    if not labs: return ''
+    arena = next(c for c in labs if c['id']=='arena2036')
+    out = ['<section class="frontier-shared-feature" aria-labelledby="frontier-shared-title"><div class="frontier-shared-lead"><div class="frontier-shared-copy"><p class="eyebrow">FOCUS / SHARED RESEARCH FACTORIES</p><h2 id="frontier-shared-title">ARENA2036のような、<br>一緒につくり、試す場所へ。</h2><p>工場、試作設備、技術者、企業の課題。何を共用し、誰が実験を支え、共同開発を次へ進めるのか。研究工場やロボティクス拠点を、空間と運営の両方から読み解きます。</p>', f'<a class="frontier-focus-link" href="?focus=shared-labs#frontier-explore">共用研究工場の{len(labs)}事例を探す <span aria-hidden="true">↓</span></a><p class="frontier-shared-note">類似性はATLASの編集上の分析です。施設の規模や成果の順位ではありません。</p></div>', photo(arena, media, True), '</div><details class="frontier-shared-comparison"><summary>7つの場を、役割の違いから見比べる</summary><div class="frontier-comparison-scroll"><table><caption>共用研究工場・試作拠点の比較はATLASの分析です。詳細と根拠は各事例へ。</caption><thead><tr><th scope="col">施設</th><th scope="col">どんな場か</th><th scope="col">ARENA2036との共通点・違い</th></tr></thead><tbody>']
+    for c in labs:
+        out.append(f'<tr><th scope="row"><a href="?focus=shared-labs#case-{e(c["id"])}">{e(c["name"])}</a></th><td>{e(c["sharedLab"]["type"])}</td><td>{e(c["sharedLab"]["comparison"])}</td></tr>')
+    return ''.join(out)+'</tbody></table></div></details></section>'
+
 def card(c, media, eager=False):
     axis = next(a for a in AXES if a[0]==c['lens'])
     status = ''
     if c.get('statusLabel'):
         status = f'<div class="frontier-status"><strong>{e(c["statusLabel"])}</strong><span>{e(c.get("statusNote", ""))}</span></div>'
-    out = [f'<article class="frontier-card" id="case-{e(c["id"])}" data-case-id="{e(c["id"])}" data-axis="{c["lens"]}" data-steps="{c["primaryStep"]["number"]} {c["secondaryStep"]["number"]}">',
+    out = [f'<article class="frontier-card" id="case-{e(c["id"])}" data-case-id="{e(c["id"])}" data-axis="{c["lens"]}" data-focus="{"shared-labs" if c.get("sharedLab") else ""}" data-steps="{c["primaryStep"]["number"]} {c["secondaryStep"]["number"]}">',
            f'<div class="frontier-card-heading"><div class="frontier-card-meta"><span class="frontier-axis-label">{axis[1]} / {axis[2]}</span><span>{e(c["country"])}</span></div><h2>{e(c["headline"])}</h2><p class="frontier-facility">{e(c["name"])} <span>／ {e(c["city"])}</span></p></div>',
            photo(c, media, eager),
+           ('<details class="frontier-photo-more"><summary>別の角度から空間を見る</summary>'+''.join(photo(dict(c, photoId=pid), media) for pid in c.get('extraPhotoIds', []))+'</details>') if c.get('extraPhotoIds') else '',
            '<div class="frontier-card-body">'+status,
+           lab_visuals(c),
            f'<p class="frontier-mechanism">{e(c["mechanism"])}</p>',
            f'<div class="frontier-insight"><span>ここが面白い</span><p>{e(c["interesting"])}</p></div>',
            '<div class="frontier-steps"><h3>活かせるステップ</h3>'+step(c['primaryStep'],True)+step(c['secondaryStep'],False)+'</div>',
-           f'<details class="frontier-evidence"><summary>実績・取り入れるヒント・一次資料 <span aria-hidden="true">＋</span></summary><div class="frontier-evidence-inner"><h3>確認できた実績と限界</h3><p>{e(c["outcome"]["text"])}</p><p class="frontier-date">対象・公表時点：{e(c["outcome"]["date"])}</p><p>{e(c["outcome"]["caveat"])}</p><h3>取り入れるなら</h3><p>{e(c["transfer"])}</p><p class="frontier-caution">{e(c["caution"])}</p><h3>誰が、何を担う？</h3><dl class="frontier-partner-roles">']
+           f'<details class="frontier-evidence"><summary>{"設備・利用条件・実績・一次資料" if c.get("sharedLab") else "実績・取り入れるヒント・一次資料"} <span aria-hidden="true">＋</span></summary><div class="frontier-evidence-inner">'+lab_detail(c)+f'<h3>確認できた実績と限界</h3><p>{e(c["outcome"]["text"])}</p><p class="frontier-date">対象・公表時点：{e(c["outcome"]["date"])}</p><p>{e(c["outcome"]["caveat"])}</p><h3>取り入れるなら</h3><p>{e(c["transfer"])}</p><p class="frontier-caution">{e(c["caution"])}</p><h3>誰が、何を担う？</h3><dl class="frontier-partner-roles">']
     for p in c['partners']:
         out.append(f'<dt>{e(p["name"])}</dt><dd>{e(p["contribution"])}</dd>')
     out.append(f'</dl><h3>一次資料</h3><p class="frontier-date">確認日：{e(c["checked"])}（日本時間）</p><ul class="frontier-source-list">')
@@ -85,8 +127,10 @@ def build(root, media, head, header, footer, base):
     out = [page_head, header('../'), '<main id="main" class="frontier-page">',
            '<nav class="frontier-breadcrumb" aria-label="現在位置"><a href="../">ATLASトップ</a><span aria-hidden="true">／</span><span aria-current="page">世界の先進事例</span></nav>',
            '<section class="frontier-hero"><div><p class="eyebrow">WORLD CO-CREATION ATLAS / EDITORIAL SELECTION</p><div class="frontier-wordmark" aria-hidden="true">WORLD<br><span>FRONTIERS.</span></div></div><div class="frontier-hero-copy"><h1>共創の次の一手を、<br>世界の面白い仕組みから。</h1><p>ハード、ソフト、パートナー。<br>3つの切り口で発見し、<br>「どのステップで、どう役立つか」まで。</p><a href="#frontier-explore">事例を探す <span aria-hidden="true">↓</span></a></div></section>',
+           shared_lab_feature(rows, media),
            f'<div class="frontier-intro"><p><strong>{len(rows)}の編集選定事例</strong> <span>／ 順位ではなく、仕組みの違いから学ぶ。</span></p><a href="#frontier-policy">選定・読み方について ↓</a></div>',
-           '<section id="frontier-explore" class="frontier-explore" aria-label="切り口とステップで探す"><div id="frontier-controls" class="frontier-controls" hidden><div class="frontier-axis-filters" role="group" aria-label="切り口で絞り込む">',
+           '<section id="frontier-explore" class="frontier-explore" aria-label="切り口とステップで探す"><div id="frontier-controls" class="frontier-controls" hidden>',
+           f'<div class="frontier-focus-controls"><label for="frontier-shared-filter"><input type="checkbox" id="frontier-shared-filter" aria-controls="frontier-results"><span>共用研究工場・試作拠点に絞る <b data-focus-count>{sum(bool(c.get("sharedLab")) for c in rows)}</b></span></label><p>ARENA2036から広げて探す。3つの切り口・8ステップと組み合わせられます。</p></div><div class="frontier-axis-filters" role="group" aria-label="切り口で絞り込む">',
            f'<button type="button" data-axis-filter="all" aria-pressed="true" aria-controls="frontier-results"><span class="frontier-tab-en">ALL</span><span class="frontier-tab-name">すべて <b data-axis-count="all">{len(rows)}</b></span><small>切り口を横断する</small></button>']
     for key, en, ja, desc in AXES:
         out.append(f'<button type="button" data-axis-filter="{key}" aria-pressed="false" aria-controls="frontier-results"><span class="frontier-tab-en">{en}</span><span class="frontier-tab-name">{ja} <b data-axis-count="{key}">{counts[key]}</b></span><small>{desc}</small></button>')
@@ -106,10 +150,23 @@ def build(root, media, head, header, footer, base):
     home = root/'index.html'; page = home.read_text()
     marker = '<div class="step-home-grid" id="start">'
     assert page.count(marker)==1
-    teaser = '<aside class="frontier-entry"><div><p class="eyebrow">WORLD FRONTIERS / 世界の先進事例</p><h2>ハード・ソフト・パートナーから、<br>面白い共創の仕組みを発見する。</h2><p>各事例で「活かせるステップ」と、その理由もわかる。</p></div><a href="frontier/">3つの切り口から探す <span aria-hidden="true">↗</span></a></aside>'
+    shared_count = sum(bool(c.get('sharedLab')) for c in rows)
+    teaser = f'<aside class="frontier-entry"><div><p class="eyebrow">WORLD FRONTIERS / 世界の先進事例</p><h2>ハード・ソフト・パートナーから、<br>面白い共創の仕組みを発見する。</h2><p>各事例で「活かせるステップ」と、その理由もわかる。</p><a class="frontier-entry-topic" href="frontier/?focus=shared-labs#frontier-explore">ARENA2036のような共用研究・試作拠点 {shared_count}件を読む →</a></div><a href="frontier/">3つの切り口から探す <span aria-hidden="true">↗</span></a></aside>'
     page = page.replace(marker, teaser+marker, 1)
     page = page.replace('</head>', f'<link rel="stylesheet" href="frontier.css?v={VERSION}"></head>', 1)
     home.write_text(page)
+    # Add a return route to the freshly generated detail pages of this selection.
+    for c in rows:
+        if not c.get('sharedLab'): continue
+        case_page = root/'cases'/c['id']/'index.html'
+        detail = case_page.read_text()
+        assert detail.count('</main>') == 1, c['id']
+        back = f'<aside class="frontier-case-return"><div><p class="eyebrow">WORLD FRONTIERS / 共用研究・試作拠点</p><h2>この場所を、ARENA2036や他の拠点と見比べる。</h2><p>設備、利用条件、共同開発の進め方を、{shared_count}事例から読み解きます。比較とステップ対応はATLASの分析です。</p></div><a href="../../frontier/?focus=shared-labs#case-{e(c["id"])}">共用研究工場の特集へ →</a></aside>'
+        if 'class="frontier-case-return"' not in detail:
+            detail = detail.replace('</main>', back+'</main>', 1)
+        if '../../frontier.css?' not in detail:
+            detail = detail.replace('</head>', f'<link rel="stylesheet" href="../../frontier.css?v={VERSION}"></head>', 1)
+        case_page.write_text(detail)
     sitemap = root/'sitemap.xml'; xml = sitemap.read_text()
     entry = f'<url><loc>{base}frontier/</loc><lastmod>2026-10-25</lastmod></url>'
     if base+'frontier/' not in xml: sitemap.write_text(xml.replace('</urlset>',entry+'</urlset>'))

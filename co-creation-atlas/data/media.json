@@ -4289,5 +4289,73 @@
     "photoExpansion20261007": true,
     "originalSha256": "c8d95cbb15291ddca575e9beab612cfa78fe8b89feffd16c92aabb29c5fdc478",
     "downloadedFrom": "https://upload.wikimedia.org/wikipedia/commons/9/96/Fountain_in_Washington_Square_Park.JPG"
+  },
+  {
+    "assetId": "michigan-newlab-atrium",
+    "caseId": "michigan-central-newlab-detroit",
+    "name": "Michigan Central / Newlab Detroit",
+    "title": "Newlab at Michigan Central – Interior (6)",
+    "credit": "Brian Ferry / Michigan Central Media Toolkit",
+    "sourceUrl": "https://michigancentral.com/media-toolkit/?_asset_radio=newlab-at-michigan-central",
+    "downloadUrl": "https://michigancentral.com/wp-content/uploads/2024/01/Newlab-at-Michigan-Central-Interior-6-scaled.jpg",
+    "license": "公式Media Toolkitの利用許諾（projects向け公式素材）",
+    "licenseUrl": "https://michigancentral.com/media-toolkit/",
+    "rightsUrl": "https://michigancentral.com/media-toolkit/",
+    "status": "cleared-media-permission",
+    "imageDate": "2024-01-02公開（撮影日未確認）",
+    "verified": "2026-10-25",
+    "caption": "Newlab Detroitの吹き抜けと共用動線を上階から見る。上下階の作業・交流空間が見渡せる構成。公式メディアキット2024年1月公開。",
+    "alt": "Newlab Detroitの吹き抜けを上階から見下ろした内観。天窓、上下階を結ぶ階段、共用ラウンジ、周囲の部屋が見える。",
+    "scopeLabel": "共用空間・上下階の動線",
+    "scope": "Book Depository内Newlab Detroitの共用空間。駅舎ではない。加工機・試験設備を写した写真ではなく、現在の設備配置も保証しない。",
+    "dimensions": [
+      2560,
+      1707
+    ],
+    "local": "assets/michigan-newlab-atrium.jpg",
+    "changes": "公式配布JPEGをそのまま使用。表示サイズのみ調整し、切り抜き・色変更なし。",
+    "hero": false,
+    "feature": false,
+    "rightsEvidence": {
+      "url": "https://michigancentral.com/media-toolkit/",
+      "locator": "Asset Library / Newlab at Michigan Central / Interior (6) and Interior (3)",
+      "permissionSummary": "公式のロゴ・写真等をprojectsのためにダウンロードして使うよう明示。CCではなく当該公式メディア素材の利用許諾。",
+      "creditEvidence": "同ページのNewlab at Michigan CentralフィルタのInterior (6)、Photo credit: Brian Ferry、January 2, 2024"
+    },
+    "noCrop": true
+  },
+  {
+    "assetId": "michigan-newlab-commons",
+    "caseId": "michigan-central-newlab-detroit",
+    "name": "Michigan Central / Newlab Detroit",
+    "title": "Newlab at Michigan Central – Interior (3)",
+    "credit": "Brian Ferry / Michigan Central Media Toolkit",
+    "sourceUrl": "https://michigancentral.com/media-toolkit/?_asset_radio=newlab-at-michigan-central",
+    "downloadUrl": "https://michigancentral.com/wp-content/uploads/2024/01/Newlab-at-Michigan-Central-Interior-3.jpg",
+    "license": "公式Media Toolkitの利用許諾（projects向け公式素材）",
+    "licenseUrl": "https://michigancentral.com/media-toolkit/",
+    "rightsUrl": "https://michigancentral.com/media-toolkit/",
+    "status": "cleared-media-permission",
+    "imageDate": "2024-01-02公開（撮影日未確認）",
+    "verified": "2026-10-25",
+    "caption": "Newlab Detroitの共用ラウンジ。テーブル・ソファの滞在空間と上下階の通路が隣り合う。公式メディアキット2024年1月公開。",
+    "alt": "Newlab Detroitの共用ラウンジ。利用者がテーブルやソファで作業・会話し、奥に階段と上階の回廊が見える。",
+    "scopeLabel": "共用ラウンジ・交流の場",
+    "scope": "Newlab Detroitの共用ラウンジ。共同研究や生産性向上の効果を写真だけから判断しない。加工工房の写真ではない。",
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "local": "assets/michigan-newlab-commons.jpg",
+    "changes": "公式配布JPEGをそのまま使用。表示サイズのみ調整し、切り抜き・色変更なし。",
+    "hero": false,
+    "feature": false,
+    "rightsEvidence": {
+      "url": "https://michigancentral.com/media-toolkit/",
+      "locator": "Asset Library / Newlab at Michigan Central / Interior (6) and Interior (3)",
+      "permissionSummary": "公式のロゴ・写真等をprojectsのためにダウンロードして使うよう明示。",
+      "creditEvidence": "Newlab at Michigan CentralフィルタのInterior (3)、Photo credit: Brian Ferry、January 2, 2024"
+    },
+    "noCrop": true
   }
 ]
