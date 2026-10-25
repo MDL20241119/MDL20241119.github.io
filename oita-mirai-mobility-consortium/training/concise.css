@@ -206,3 +206,17 @@
  .training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .training-concise .calendar-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
+
+
+/* Speaker availability is separate from the general workshop candidates. */
+.speaker-dates-link{display:flex;align-items:center;min-height:44px;font-size:14px;font-weight:900;text-underline-offset:4px}
+.training-concise .calendar-tag.hidaka-candidate{background:#fff;color:#111;border:1px solid #ad4a1d;box-shadow:inset 3px 0 #e68149}
+.training-concise .month-card .has-hidaka{background:#fff8f1}
+.speaker-dates-panel{padding:28px var(--pad) 34px;border-top:1px solid #111;background:#fff}
+.speaker-dates-panel h3{font-size:26px;line-height:1.5;margin:0 0 20px}
+.speaker-dates-panel ul{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.speaker-dates-panel li{padding:18px;border-top:4px solid #e68149;background:#fff8f1}
+.speaker-dates-panel time{display:block;font-size:17px;line-height:1.6}
+.speaker-dates-panel strong{display:block;font:900 23px/1.6 Arial,sans-serif;margin-top:8px;white-space:nowrap}
+@media(max-width:1000px){.speaker-dates-panel ul{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:560px){.speaker-dates-panel ul{grid-template-columns:1fr}.speaker-dates-panel h3{font-size:24px}}
