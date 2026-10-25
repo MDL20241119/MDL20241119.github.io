@@ -55,6 +55,8 @@
 #program-proposals .training-value-flow>li:nth-child(2){background:#fff2e8}
 #program-proposals .training-value-flow>li:last-child{background:#fff8f1}
 #program-proposals .training-value-flow>li>.training-flow-smile{font-size:24px;font-weight:900;line-height:1.8;letter-spacing:-.04em;margin-top:30px}
+#program-proposals .training-flow-smile>.smile-person{display:inline-block;font-size:21px}
+#program-proposals time{white-space:nowrap}
 #program-proposals .input-vehicle{max-width:212px;margin:18px 0 12px}
 #program-proposals .input-vehicle>img{display:block;width:100%;height:auto;aspect-ratio:1280/967;object-fit:contain}
 #program-proposals .input-vehicle figcaption{font-size:10px;line-height:1.8;margin-top:6px}
@@ -82,6 +84,7 @@
 .training-concise .verified-speaker-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
 .training-concise .speaker-profile{display:block;padding:0}
 .training-concise .photo-window{aspect-ratio:1/1;max-height:230px}
+.training-concise #morita-so .photo-window img{width:194%;max-width:none;height:100%;object-fit:cover;object-position:0 0;transform:none}
 .training-concise .profile-copy{padding-top:15px}
 .training-concise .profile-company{font-size:12px;min-height:1.8em;line-height:1.8}
 .training-concise .profile-copy h3{font-size:30px;margin:12px 0}
@@ -95,6 +98,11 @@
 .training-concise .calendar-legend{display:flex;flex-wrap:wrap;gap:10px 24px;margin:0 0 24px}
 .training-concise .calendar-legend li{display:flex;align-items:center;gap:8px;font-size:13px}
 .training-concise .calendar-legend .calendar-tag{font-size:12px;min-width:74px;margin:0;padding:6px 10px}
+.training-concise .calendar-tag.field-primary{background:#e68149;color:#111}
+.training-concise .calendar-tag.field-alternate{background:#fff;color:#111;border-color:#111}
+.training-concise .month-card .has-training{background:#fff1e7}
+.training-concise .month-card .has-field-primary{background:#ffe2ca}
+.training-concise .month-card .has-field-alternate{background:#f4f4f4}
 .month-theme{font-size:20px;line-height:1.6;margin:0 0 18px}
 .training-concise .calendar-grid{gap:18px;align-items:stretch}
 .training-concise .month-card table{table-layout:fixed}
