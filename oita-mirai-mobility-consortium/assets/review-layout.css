@@ -1,0 +1,37 @@
+/* Keep retained content readable after consolidating repeated sections. */
+.review-readable .operations-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.review-readable .plan-dates{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 28px}
+.review-readable .plan-dates>li{min-width:0;padding:22px 0;border-bottom:1px solid currentColor}
+.review-readable .plan-dates time{font-size:clamp(24px,2.5vw,36px);overflow-wrap:anywhere}
+.review-readable .plan-dates p{font-size:15px;line-height:1.8}
+.review-readable .who-body>div>p{margin-top:0}
+.review-readable .closing-end{grid-template-columns:1fr}
+.review-readable .home-start-footer{justify-content:flex-start}
+.review-readable #why>.hero-bottom{grid-template-columns:minmax(0,1.4fr) minmax(0,1fr)}
+.review-readable #why>.hero-bottom .hero-photo{min-height:260px}
+.review-readable #why>.hero-bottom .hero-invite{justify-content:center;gap:20px}
+.review-readable #annual-project .project-relationship-heading>p{max-width:64em}
+.review-readable #program-menu.project-child{scroll-margin-top:calc(var(--consortium-header-height,140px) + 24px)}
+@media(min-width:1000px){
+ .review-readable .project-relationship{padding-top:36px;padding-bottom:40px}
+ .review-readable .project-relationship-heading{margin-bottom:24px}
+ .review-readable .project-relationship-heading h2{font-size:40px}
+ .review-readable .project-child{padding:24px}
+ .review-readable .project-child h4{font-size:26px}
+ .review-readable .project-child p{font-size:16px;line-height:1.8}
+ .review-readable .project-child .project-child-note{font-size:14px}
+ .review-readable .project-continuation{margin-top:24px;padding-top:20px}
+ .review-readable .project-continuation>p{font-size:15px;line-height:1.8}
+ .review-readable .value-creation-story{padding-top:36px;padding-bottom:40px}
+ .review-readable .value-creation-heading{margin:20px 0 24px}
+ .review-readable .value-creation-heading h2{font-size:40px}
+ .review-readable .value-creation-steps>li{padding:22px 18px}
+ .review-readable .value-creation-steps h3{font-size:23px;line-height:1.5}
+ .review-readable .value-creation-steps p{font-size:15px;line-height:1.8}
+}
+@media(max-width:760px){
+ .review-readable .operations-grid,.review-readable .plan-dates{grid-template-columns:1fr}
+ .review-readable #why>.hero-bottom{grid-template-columns:1fr}
+ .review-readable #why>.hero-bottom .hero-photo{min-height:0}
+ .review-readable .plan-dates time{font-size:27px}
+}
