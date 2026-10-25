@@ -88,3 +88,10 @@ body[data-theme=index] .index-card:hover .card-arrow{text-decoration:underline;t
 @media(max-width:560px){body[data-theme=index] .index-grid{grid-template-columns:1fr}body[data-theme=index] .index-card .genre-group{min-height:0}body[data-theme=index] .index-card h2{min-height:0;font-size:32px}body[data-theme=index] .card-photo{aspect-ratio:4/3}}
 @media(prefers-reduced-motion:no-preference){a{transition:text-decoration-color .15s ease}}
 @media print{.regional-layout .three-fields{display:block}.regional-layout .three-fields>section{margin-bottom:20px;break-inside:avoid}.regional-layout .creation{display:block}.regional-layout .photo-collage{max-width:600px}.idea-section{margin:24px 0}.idea-grid{grid-template-columns:repeat(3,1fr)}.idea-card{break-inside:avoid}.idea-card h3{font-size:16pt}.idea-card>p{font-size:10pt}.regional-layout .sheet{break-inside:auto}.regional-layout .top h1{font-size:28pt}.regional-layout .photo-frame{print-color-adjust:exact}.plan-details{break-inside:avoid}}
+
+/* The AI vehicle reference keeps its full native frame, without letterboxing or cropping. */
+.regional-layout .scene .photo-collage .vehicle-photo{grid-column:1/-1}
+.regional-layout .vehicle-photo .photo-frame{aspect-ratio:1672/941;background:transparent}
+.regional-layout .vehicle-photo .photo-frame img{position:static;inset:auto;display:block;width:100%;height:auto;object-fit:contain}
+body[data-theme=index] .hero-layout .photo.vehicle-photo{height:auto;min-height:0;max-height:none;aspect-ratio:1672/941;background:transparent}
+body[data-theme=index] .hero-layout .vehicle-photo img{position:static;inset:auto;display:block;width:100%;height:auto;object-fit:contain}
