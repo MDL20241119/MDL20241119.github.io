@@ -1,0 +1,14 @@
+/* Shared, equally prominent entry points. */
+.program-hub{--program-ink:#111;--program-accent:#e68149;max-width:1440px;margin:0 auto;padding:64px clamp(24px,4.2vw,76px);color:var(--program-ink);background:#fff;box-sizing:border-box}
+.program-hub *{box-sizing:border-box}
+.program-kicker{font-size:11px;font-weight:900;letter-spacing:.08em;margin:0 0 16px}
+.program-hub h2{font-family:var(--black,var(--display,sans-serif));font-weight:900;font-size:clamp(30px,4vw,54px);line-height:1.35;letter-spacing:-.04em;margin:0 0 20px;overflow-wrap:anywhere}
+.program-hub-intro{font-size:17px;line-height:1.8;margin:0 0 32px}
+.program-menu-paths{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px}
+.program-menu-paths article{display:flex;flex-direction:column;min-width:0;padding:28px;border:1px solid #d7d7da;border-top:5px solid var(--program-accent);background:#fff}
+.program-path-number{font-size:38px;line-height:1;font-weight:900;color:var(--program-accent);margin-bottom:22px}
+.program-menu-paths h3{font-family:var(--black,var(--display,sans-serif));font-size:clamp(25px,2.6vw,36px);font-weight:900;line-height:1.5;letter-spacing:-.04em;min-height:3em;margin:0 0 16px;overflow-wrap:anywhere}
+.program-menu-paths p{font-size:16px;line-height:1.9;margin:0 0 28px}
+.program-menu-paths a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:60px;margin-top:auto;padding:16px 18px;color:#fff;background:#111;text-decoration:none;font-size:15px;font-weight:900;line-height:1.6}
+.program-menu-paths a:hover{background:#373737}.program-menu-paths a:focus-visible{outline:3px solid #111;outline-offset:5px}
+@media(max-width:700px){.program-hub{padding-block:40px}.program-menu-paths{grid-template-columns:1fr;gap:20px}.program-menu-paths article{padding:24px}.program-menu-paths h3{min-height:0;font-size:27px}.program-hub-intro{font-size:16px}}
