@@ -1,0 +1,78 @@
+/* Separate the annual funded project, the continuing organization and the training program. */
+.project-relationship{background:#f8f7f1;border-block:1px solid #d8d2ca;color:#111}
+.project-relationship-heading{display:grid;grid-template-columns:1fr 1fr;gap:16px 40px;margin-bottom:26px;align-items:end}
+.project-relationship-heading>.eyebrow{grid-column:1/-1;color:#6b4c32;font-size:11px;font-weight:900}
+.project-relationship h2{font-size:clamp(30px,3.5vw,48px);line-height:1.4;letter-spacing:-.045em}
+.project-relationship-heading>p:last-child{font-size:16px;line-height:1.9;max-width:40em}
+.project-parent{border:2px solid #a95d32;border-radius:4px;overflow:hidden;background:#fff}
+.project-parent-label{display:flex;gap:18px;padding:22px 26px;background:#fae7d5;border-bottom:1px solid #c89c7f;align-items:center}
+.project-number{font-size:34px;line-height:1.3;font-weight:900;flex-shrink:0;letter-spacing:-.06em}
+.project-parent-label p{font-size:12px;line-height:1.7}
+.project-parent-label h3{font-size:clamp(23px,2.5vw,34px);line-height:1.5;letter-spacing:-.025em;margin:4px 0}
+.project-parent-label .project-type{font-size:14px}
+.project-children{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));padding:24px;gap:24px}
+.project-child{min-width:0;padding:22px;border:1px solid #c8c8be;border-top:4px solid #8b9a69;border-radius:3px;background:#fff}
+.project-child-kicker{font-size:12px;color:#4e5a36;font-weight:900}
+.project-child h4{font-size:clamp(21px,2vw,28px);letter-spacing:-.035em;line-height:1.5;margin:10px 0 16px}
+.project-child h4>span{color:#536637}
+.project-child>p{font-size:16px;line-height:1.9}
+.project-child>.project-child-note{font-size:13px;color:#555;line-height:1.85;margin-top:12px}
+.project-child>a,.project-prior-year a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;font-size:14px;font-weight:900;line-height:1.7;margin-top:16px;padding:10px 0;border-bottom:1px solid #444;text-decoration:none}
+.project-child>a:hover,.project-prior-year a:hover{background:#f2f4e9}
+.project-prior-year{padding:18px;margin-top:24px;border-left:3px solid #9b9f94;background:#f4f4f0}
+.project-prior-year>strong{font-size:11px;line-height:1.6;color:#555}
+.project-prior-year>p{font-size:15px;line-height:1.8;margin-top:6px}
+.project-prior-year>a{font-size:12px;margin-top:8px;min-height:44px}
+.project-continuation{border-left:4px solid #8b9a69;padding:14px 18px;margin:24px 0 12px;background:#eaf0df}
+.project-continuation>strong{font-size:18px;line-height:1.7}
+.project-continuation>p{font-size:14px;line-height:1.9;margin-top:8px}
+.project-relationship>.note{font-size:12px;margin-top:18px;line-height:1.9}
+.project-directory-link{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:44px;font-size:13px;font-weight:900;margin-top:10px;padding:10px 12px;background:#fff1e4;border:1px solid #cba88b;border-radius:3px;text-decoration:none}
+.home-ux .home-destination{grid-template-columns:minmax(0,1fr)}
+.home-ux .home-destination-description{grid-column:1}
+.home-ux .program-year-paths{grid-template-columns:minmax(0,1fr)}
+.home-ux .program-year-paths>article{border-top:4px solid #e68149}
+.program-prior-year-reference{margin-top:28px;padding:20px 22px;background:#f4f4f0;border-left:3px solid #979d90}
+.program-prior-year-reference>.reference-caption{font-size:11px;font-weight:900;color:#555;margin-bottom:12px}
+.home-ux .program-prior-year-reference>article{border:0;background:transparent;padding:0}
+.home-ux .program-prior-year-reference .program-year-label{font-size:15px;margin-bottom:10px}
+.home-ux .program-prior-year-reference .program-year-label>span{font-size:24px}
+.home-ux .program-prior-year-reference h3{font-size:23px;line-height:1.6}
+.home-ux .program-prior-year-reference p:not(.program-year-label){font-size:14px;line-height:1.9}
+.home-ux .program-prior-year-reference a{font-size:14px;min-height:44px;display:inline-flex;align-items:center}
+.project-context{display:flex;align-items:center;flex-wrap:wrap;gap:6px 14px;margin:0;padding:14px clamp(20px,4.2vw,76px);background:#fff1e4;border-block:1px solid #d1b59f;font-size:13px;line-height:1.8}
+.project-context>a{display:flex;align-items:center;min-height:44px;font-weight:900}
+.project-context-reference{font-size:12px;color:#555;flex-basis:100%}
+.training-prior-year-reference{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:center;gap:24px;margin:32px var(--pad,5%);padding:24px;background:#f4f4f0;border-left:4px solid #8b957a}
+.training-prior-year-reference h2{font-size:25px;line-height:1.6;letter-spacing:-.025em;margin:8px 0 12px}
+.training-prior-year-reference p:not(.eyebrow){font-size:14px;line-height:1.9;max-width:65em}
+.training-prior-year-reference>.text-link{font-size:13px;min-height:44px}
+.annual-page-intro{background:#fff;padding-bottom:36px}
+.annual-page-intro h1{font-size:clamp(40px,5.8vw,76px);line-height:1.4;letter-spacing:-.055em;margin:18px 0}
+.annual-page-intro>p:not(.eyebrow){font-size:18px;line-height:1.9}
+.annual-page-intro>a{display:inline-flex;align-items:center;min-height:44px;font-size:14px;margin-top:18px}
+.annual-project-page .annual-page-intro{display:grid;grid-template-columns:1fr 1fr;gap:12px 32px;padding-top:28px;padding-bottom:28px;align-items:center}
+.annual-project-page .annual-page-intro>.eyebrow{grid-column:1/-1}
+.annual-project-page .annual-page-intro h1{font-size:42px;line-height:1.45;margin:0}
+.annual-project-page .annual-page-intro>p:not(.eyebrow){font-size:16px}
+.annual-project-page .annual-page-intro>a,.annual-project-page .annual-year-switch{margin-top:0}
+.annual-year-switch{display:flex;flex-wrap:wrap;gap:12px;margin-top:20px;font-size:14px}
+.annual-year-switch>a{display:flex;align-items:center;min-height:44px;padding:10px 16px;border:1px solid #c8b6a8;border-radius:3px;text-decoration:none}
+.annual-year-switch>a[aria-current="page"]{background:#fae7d5;border-color:#a95d32;font-weight:900}
+.annual-project-page .home-header .brand-mark{font-size:32px;letter-spacing:-.08em}
+.project-year-scope h2,.project-official h2{font-size:clamp(28px,3.1vw,42px);line-height:1.5;margin:16px 0 24px}
+.project-year-scope>p{font-size:16px;line-height:1.9;max-width:80em;margin-top:18px}
+.project-year-scope>.note{font-size:13px;border-left:3px solid #a95d32;padding-left:16px}
+.project-year-scope>nav,.project-source-links{display:flex;flex-wrap:wrap;gap:0 28px;margin-top:20px;font-size:14px}
+.project-year-scope>nav>a,.project-source-links>a{display:flex;align-items:center;min-height:44px}
+.project-official{border-top:1px solid #d8d2ca;background:#fafafa}
+.project-official dl{margin:0}
+.project-official dl>div{display:grid;grid-template-columns:180px minmax(0,1fr);gap:18px;border-top:1px solid #d1d1c8;padding:18px 0;font-size:15px;line-height:1.9}
+.project-official dt{font-weight:900}
+.project-official dd{margin:0;overflow-wrap:anywhere}
+.project-official>.note{font-size:12px;margin-top:16px}
+.project-relationship a:focus-visible,.project-directory-link:focus-visible,.project-context a:focus-visible,.training-prior-year-reference a:focus-visible{outline:3px solid #93441e;outline-offset:4px}
+@media(max-width:850px){.project-relationship-heading{grid-template-columns:minmax(0,1fr);gap:14px}.project-children{gap:16px;padding:18px}.project-child{padding:18px}.project-child h4{font-size:24px}.project-parent-label h3{font-size:27px}.training-prior-year-reference{grid-template-columns:minmax(0,1fr);gap:16px}}
+@media(max-width:600px){.project-relationship-heading>p:last-child{font-size:15px}.project-relationship h2{font-size:31px}.project-parent-label{padding:18px 16px;gap:12px}.project-number{font-size:34px}.project-parent-label h3{font-size:23px}.project-parent-label .project-type{font-size:12px}.project-children{grid-template-columns:minmax(0,1fr);padding:14px;gap:16px}.project-child{padding:18px 16px}.project-child h4{font-size:23px}.project-child>p{font-size:15px}.project-child>a{font-size:13px}.project-prior-year{padding:16px 14px}.project-continuation{padding:14px;margin-top:20px}.project-continuation>strong{font-size:17px}.project-directory-link{font-size:12px}.program-prior-year-reference{padding:18px 16px}.home-ux .program-prior-year-reference h3{font-size:22px}.project-context{padding:10px 20px;font-size:12px;gap:4px 10px}.project-context-reference{font-size:11px}.training-prior-year-reference{margin:24px 20px;padding:20px 16px}.training-prior-year-reference h2{font-size:23px}.annual-page-intro h1{font-size:42px}.annual-page-intro>p:not(.eyebrow){font-size:16px}.project-official dl>div{grid-template-columns:minmax(0,1fr);gap:8px;font-size:14px}.project-source-links{gap:4px}.project-year-scope>nav{display:grid;gap:4px}}
+@media print{.project-children{grid-template-columns:repeat(2,minmax(0,1fr))}.project-child,.project-prior-year,.project-official dl>div{break-inside:avoid}.project-context{display:none}.project-relationship{break-before:page}}
+@media(max-width:600px){.annual-project-page .annual-page-intro{grid-template-columns:minmax(0,1fr);gap:14px}.annual-project-page .annual-page-intro h1{font-size:34px}.project-parent-label>.project-number{font-size:27px}.annual-project-page .annual-page-intro>p:not(.eyebrow){font-size:15px}}

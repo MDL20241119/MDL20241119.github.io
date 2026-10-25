@@ -1,0 +1,28 @@
+/* Two peer fiscal-year entrances; the current-year workstreams stay inside 2026. */
+.hero-footer{flex-wrap:wrap}
+.mdl-year-quicklinks{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;flex:1;min-width:0}
+.hero-footer>.mdl-year-quicklinks>a{display:flex;align-items:center;justify-content:space-between;gap:12px;min-height:48px;padding:12px 16px;border:1px solid #bdbbb0;border-radius:3px;color:inherit;font-size:13px;line-height:1.7;text-decoration:none}
+.hero-footer>.mdl-year-quicklinks>a:last-child{border-color:#b57b51;background:#fff0e3}
+.hero-footer>.mdl-year-quicklinks>a:hover{background:#f0eee6}
+.mdl-project-years{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin:30px 0 48px}
+.mdl-project-year{min-width:0;padding:28px;border:1px solid #c7c5bb;border-top:5px solid #25261f;border-radius:4px;background:#fff;display:flex;flex-direction:column;gap:18px}
+.mdl-year-2026{border-top-color:#e68149;background:#fffaf5}
+.mdl-year-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;border-bottom:1px solid #d7d4c9;padding-bottom:18px}
+.mdl-year-heading h3{font-size:50px;line-height:1.1;letter-spacing:-.06em;margin:0}
+.mdl-year-heading h3>span{font-size:18px;letter-spacing:0;margin-left:6px}
+.mdl-year-heading>span{font-size:12px;padding:6px 10px;background:#f1f1eb;border-radius:3px;white-space:nowrap}
+.mdl-project-year>h4{font-size:25px;line-height:1.6;margin:0;letter-spacing:-.035em}
+.mdl-project-year>h4>small{font-size:15px;letter-spacing:0;font-weight:600}
+.mdl-project-year>p{font-size:15px;line-height:1.9;margin:0}
+.mdl-project-year>ul{padding-left:1.2em;margin:0 0 6px;display:grid;gap:10px;font-size:14px;line-height:1.8}
+.mdl-year-workstreams{display:grid;gap:10px}
+.mdl-year-workstreams>a{display:flex;flex-direction:column;gap:5px;justify-content:center;padding:14px 16px;min-height:80px;border:1px solid #d6b79e;border-radius:3px;background:#fff;color:inherit;text-decoration:none}
+.mdl-year-workstreams>a:hover{background:#fbe8d7;border-color:#925334}
+.mdl-year-workstreams strong{font-size:17px;line-height:1.6}
+.mdl-year-workstreams span{font-size:12px;line-height:1.8;color:#555}
+.mdl-project-year>.button{margin-top:auto;min-height:50px;display:flex;align-items:center;justify-content:space-between;gap:18px;font-size:14px}
+.mdl-project-year>.mdl-year-note{font-size:11px;line-height:1.8;color:#666;margin-top:-4px}
+.mdl-project-years a:focus-visible{outline:3px solid #93441e;outline-offset:4px}
+@media(max-width:700px){.mdl-project-years{gap:16px;margin:24px 0 36px}.mdl-project-year{padding:20px;gap:16px}.mdl-year-heading{display:block}.mdl-year-heading>span{display:inline-block;margin-top:12px}.mdl-year-heading h3{font-size:42px}.mdl-project-year>h4{font-size:22px}.mdl-project-year>h4>small{font-size:13px}.mdl-project-year>p{font-size:14px}.mdl-year-workstreams>a{padding:12px}.mdl-year-workstreams strong{font-size:15px}}
+@media(max-width:540px){.mdl-project-years{grid-template-columns:minmax(0,1fr)}.mdl-year-heading{display:flex}.mdl-year-heading>span{margin-top:0}.mdl-project-year{padding:22px}.mdl-project-year>.button{font-size:14px}.mdl-year-workstreams strong{font-size:16px}.mdl-year-quicklinks{width:100%;flex-basis:100%;gap:8px}.hero-footer>.mdl-year-quicklinks>a{padding:12px 10px;font-size:11px;align-items:start}}
+@media print{.mdl-project-years{grid-template-columns:repeat(2,minmax(0,1fr))}.mdl-project-year{break-inside:avoid}}
