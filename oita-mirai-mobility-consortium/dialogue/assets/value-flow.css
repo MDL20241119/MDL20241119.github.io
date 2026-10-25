@@ -44,3 +44,32 @@
 @media(max-width:760px){.flow-ribbon li>strong{min-height:0}}
 
 .flow-step-body .flow-partner-note,.flow-ribbon .flow-partner-note{font-size:12px;line-height:1.9;margin-top:16px;padding-top:12px;border-top:1px solid #ddc9bb}
+
+
+/* Keep meaningful phrases together, with a desktop overview of all four stages. */
+.flow-heading h2>span{display:inline-block}
+.flow-step h3>span{display:inline-block}
+@media(min-width:1101px){
+ .value-flow{padding-top:20px;padding-bottom:20px}
+ .flow-kicker{margin-bottom:16px}
+ .flow-heading{grid-template-columns:minmax(0,1fr) 350px;gap:28px;margin-bottom:24px}
+ .flow-heading h2{font-size:42px;line-height:1.35}
+ .flow-heading>p{font-size:14px;line-height:1.8}
+ .flow-step{padding:18px 16px}
+ .flow-step-top{margin-bottom:12px}
+ .flow-number{font-size:30px}
+ .flow-step h3{font-size:21px;line-height:1.4;min-height:2.8em;margin-bottom:12px}
+ .flow-step-body>p,.flow-step-body li{font-size:13px;line-height:1.7;margin-bottom:12px}
+ .flow-step-body .flow-lead{font-size:15px;line-height:1.6;margin-bottom:14px}
+ .flow-step-body .flow-partner-note{font-size:12px;line-height:1.7;margin-top:12px;padding-top:10px}
+ .flow-step-body .flow-small{margin-top:12px;line-height:1.7}
+ .flow-step-body .flow-smile{font-size:20px;line-height:1.6;margin:8px 0 14px}
+ .flow-beneficiaries li{padding-top:8px;margin-top:8px;margin-bottom:0}
+ .flow-beneficiaries strong{line-height:1.5;margin-bottom:2px}
+ .flow-beneficiaries span{line-height:1.65}
+ .flow-output-link{padding:10px 0}
+ .flow-output-link span{line-height:1.7}
+ .flow-place{padding-bottom:10px;margin-bottom:10px}
+ .flow-learning{margin-top:16px;padding-top:12px}
+ .flow-arrow{top:40px}
+}
