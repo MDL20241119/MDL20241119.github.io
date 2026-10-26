@@ -79,11 +79,10 @@
 .training-concise .program-designer p{font-size:12px;line-height:1.6}
 .training-concise .program-designer .eyebrow{font-size:10px}
 .training-concise .designer-credit{font-size:9px}
-.training-concise .verified-speaker-grid{grid-template-columns:repeat(4,minmax(0,1fr));gap:24px;align-items:start}
-.training-concise .speaker-profile{display:block;padding:0}
-.training-concise .photo-window{aspect-ratio:1/1;max-height:230px}
-.training-concise #morita-so .photo-window img{width:194%;max-width:none;height:100%;object-fit:cover;object-position:0 0;transform:none}
-.training-concise .profile-copy{padding-top:15px}
+.training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
+.training-concise .speaker-profile{display:grid;grid-template-columns:clamp(120px,13vw,176px) minmax(0,1fr);gap:24px;align-items:start;padding:0}
+.training-concise .photo-window{aspect-ratio:1/1;max-height:none}
+.training-concise .profile-copy{padding-top:0}
 .training-concise .profile-company{font-size:12px;min-height:1.8em;line-height:1.8}
 .training-concise .profile-copy h3{font-size:30px;margin:12px 0}
 .training-concise .profile-title{font-size:12px}
@@ -106,7 +105,7 @@
 .training-concise .month-card table{table-layout:fixed}
 .training-concise .month-card{min-width:0}
 
-.training-concise .field-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.training-concise .field-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
 .training-concise .field-card,.training-concise .field-card:nth-child(n){padding:22px 20px;border:0;border-left:1px solid #bbb;border-bottom:1px solid #bbb;min-width:0}
 .training-concise .field-card:first-child{border-left:0}
 .training-concise .field-top{min-height:0;margin:0}
@@ -135,13 +134,17 @@
  .training-concise .hero-invite{padding:20px}
  .training-concise .hero-facts>div{grid-template-columns:1fr;gap:7px}
  .training-concise .hero-facts dd{font-size:29px}
- .training-concise #benefits .benefit-grid,.training-concise .field-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
- .training-concise .field-card:nth-child(odd){border-left:0}
+ .training-concise #benefits .benefit-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .training-concise .field-card:first-child{border-left:0}
  .training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
  .training-concise .photo-window{max-height:280px}
 }
 @media(max-width:900px){.training-concise .process-flow{grid-template-columns:repeat(2,minmax(0,1fr))}.program-overview-heading{align-items:start}.regional-entry{min-width:140px}}
 @media(max-width:760px){
+ .training-concise .field-grid,.training-concise .verified-speaker-grid{grid-template-columns:1fr}
+ .training-concise .field-card:nth-child(n){border-left:0}
+ .training-concise .field-card h3{min-height:0}
+ .training-concise #calendar-title{font-size:clamp(26px,7.8vw,38px);line-height:1.4}
  .training-concise .section-pad,#program-proposals{padding-top:30px;padding-bottom:34px}
  .training-concise .hero-copy{padding-block:28px}
  .training-concise .hero h1>span{font-size:7vw}.training-concise .hero h1 strong{font-size:9vw}

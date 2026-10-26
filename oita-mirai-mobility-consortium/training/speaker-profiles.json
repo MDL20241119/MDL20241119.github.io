@@ -17,31 +17,6 @@
       "photo_asset": "assets/hidaka-yosuke.jpg"
     },
     {
-      "id": "narita-tomoya",
-      "name": "成田 智哉",
-      "company": "マドラー株式会社",
-      "title": "代表取締役 CEO",
-      "bio": "北海道厚真町を拠点に、共助サービス「ミーツ」や交流拠点を展開。地域のつながりから、困りごとの解決に取り組む。",
-      "sources": [
-        "https://muddler.mystrikingly.com/",
-        "https://ezozaidan.com/"
-      ],
-      "photo_source": "https://muddler.mystrikingly.com/",
-      "photo_asset": "assets/narita-tomoya.jpg"
-    },
-    {
-      "id": "morita-so",
-      "name": "森田 創",
-      "company": "合同会社うさぎ企画",
-      "title": "代表",
-      "bio": "鉄道会社で23年間勤務し、伊豆の観光型MaaSを担当。2021年にうさぎ企画を設立し、人・場・足づくりに取り組む。",
-      "sources": [
-        "https://usagi-kikaku.com/about/"
-      ],
-      "photo_source": "https://usagi-kikaku.com/about/",
-      "photo_asset": "assets/morita-so.jpg"
-    },
-    {
       "id": "miyadai-haruyuki",
       "name": "宮代 陽之",
       "company": "株式会社国際経済研究所",
