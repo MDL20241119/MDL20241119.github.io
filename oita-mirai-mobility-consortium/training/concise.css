@@ -79,8 +79,8 @@
 .training-concise .program-designer p{font-size:12px;line-height:1.6}
 .training-concise .program-designer .eyebrow{font-size:10px}
 .training-concise .designer-credit{font-size:9px}
-.training-concise .verified-speaker-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:32px;align-items:start}
-.training-concise .speaker-profile{display:grid;grid-template-columns:clamp(120px,13vw,176px) minmax(0,1fr);gap:24px;align-items:start;padding:0}
+.training-concise .verified-speaker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
+.training-concise .speaker-profile{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:start;padding:0}
 .training-concise .photo-window{aspect-ratio:1/1;max-height:none}
 .training-concise .profile-copy{padding-top:0}
 .training-concise .profile-company{font-size:12px;min-height:1.8em;line-height:1.8}
@@ -144,7 +144,7 @@
  .training-concise .field-grid,.training-concise .verified-speaker-grid{grid-template-columns:1fr}
  .training-concise .field-card:nth-child(n){border-left:0}
  .training-concise .field-card h3{min-height:0}
- .training-concise #calendar-title{font-size:clamp(26px,7.8vw,38px);line-height:1.4}
+ .training-concise #calendar-title{font-size:clamp(25px,7.8vw,38px);line-height:1.4}
  .training-concise .section-pad,#program-proposals{padding-top:30px;padding-bottom:34px}
  .training-concise .hero-copy{padding-block:28px}
  .training-concise .hero h1>span{font-size:7vw}.training-concise .hero h1 strong{font-size:9vw}
@@ -309,3 +309,6 @@
 .training-concise .hero h1{font-size:clamp(21px,2.3vw,31px);line-height:1.5;letter-spacing:-.04em}
 .training-concise .hero h1 strong{margin-top:0}
 @media print{.training-concise .hero h1{font-size:18pt}}
+
+.training-concise .producer-role{font-weight:900;color:#93441e}
+.training-concise .profile-candidate{display:inline-block;margin-left:8px;font-size:11px;line-height:1.5;letter-spacing:0;vertical-align:middle;white-space:nowrap;color:#93441e}

@@ -1,8 +1,21 @@
 {
   "verified_at": "2026-10-19",
-  "status": "講師候補・登壇承諾未確認",
-  "photo_publication": "公式掲載写真を出典付きで掲載。登壇承諾とは別です。",
+  "status": "講師・登壇候補を掲載",
+  "photo_publication": "公式掲載写真を出典付きで掲載。登壇候補者の承諾は未確認です。",
   "profiles": [
+    {
+      "id": "ueno-naoaki",
+      "name": "植野 直亮",
+      "company": "モビリティ専門家",
+      "title": "講師・プログラムプロデュース",
+      "participation_status": "講師・プログラムプロデュース",
+      "bio": "地域の課題解決に取り組むプログラムを企画し、講師として議論・実践を進める。",
+      "sources": [
+        "https://rev-m.com/event_schedule/mo2025/speakers/"
+      ],
+      "photo_source": "https://rev-m.com/event_schedule/mo2025/speakers/",
+      "photo_asset": "assets/ueno-naoaki.jpg"
+    },
     {
       "id": "hidaka-yosuke",
       "name": "日高 洋祐",
@@ -14,7 +27,8 @@
         "https://www.maas.co.jp/news/82102/"
       ],
       "photo_source": "https://www.maas.co.jp/company/",
-      "photo_asset": "assets/hidaka-yosuke.jpg"
+      "photo_asset": "assets/hidaka-yosuke.jpg",
+      "participation_status": "登壇候補・承諾未確認"
     },
     {
       "id": "miyadai-haruyuki",
@@ -28,15 +42,17 @@
       ],
       "photo_source": "https://garrawayf.com/#lnk03",
       "talk_candidate": "共創でつくる、まちとモビリティの未来",
-      "photo_asset": "assets/miyadai-haruyuki.webp"
+      "photo_asset": "assets/miyadai-haruyuki.webp",
+      "participation_status": "登壇候補・承諾未確認"
     }
   ],
-  "selection_policy": "候補の中からテーマに合わせて数名を選定します。",
+  "selection_policy": "登壇候補者はテーマと日程に応じて調整します。",
   "program_designer": {
     "name": "植野 直亮",
-    "role": "プログラム設計・モビリティ専門家",
+    "role": "講師・プログラムプロデュース",
     "photo_asset": "assets/ueno-naoaki.jpg",
     "photo_source": "https://rev-m.com/event_schedule/mo2025/speakers/",
-    "photo_original_url": "https://rev-m.com/wp-content/uploads/2025/01/Naoaki-Ueno.jpeg"
+    "photo_original_url": "https://rev-m.com/wp-content/uploads/2025/01/Naoaki-Ueno.jpeg",
+    "profile_id": "ueno-naoaki"
   }
 }
