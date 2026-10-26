@@ -9,3 +9,8 @@
 @media(max-width:850px){.seminar-invite__body{grid-template-columns:1fr}.seminar-invite__visual img{height:330px;min-height:0;max-height:none}.seminar-invite__chips{grid-template-columns:1fr 1fr 1fr}.seminar-invite__copy h2{font-size:clamp(45px,10vw,75px)!important}}
 @media(max-width:480px){.seminar-invite__chips{grid-template-columns:1fr}.seminar-invite__actions{display:grid}.seminar-invite__copy h2{font-size:clamp(43px,11vw,58px)!important}}
 @media print{.seminar-invite{padding:14px 20px}.seminar-invite__visual img{min-height:180px;max-height:240px}.seminar-invite__actions{display:none}.seminar-invite__copy h2{font-size:34px!important}.seminar-invite__lead{font-size:11px!important}}
+
+/* Make the proposed venue visible immediately beneath the lecturer profile. */
+.seminar-invite__venue{display:flex;align-items:center;flex-wrap:wrap;gap:7px 12px;background:#eeff2d;border-left:5px solid #111;padding:9px 12px;margin:11px 0!important;line-height:1.35!important}
+.seminar-invite__venue span{font-size:12px;font-weight:900}.seminar-invite__venue strong{font-size:clamp(19px,2vw,25px);font-weight:950}.seminar-invite__venue small{font-size:12px;font-weight:700}
+@media print{.seminar-invite__venue{padding:6px 9px}.seminar-invite__venue strong{font-size:17px}}
