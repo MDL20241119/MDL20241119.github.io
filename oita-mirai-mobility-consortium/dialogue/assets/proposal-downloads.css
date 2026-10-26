@@ -1,0 +1,23 @@
+/* Download controls extend the existing proposal cards without changing their design. */
+.proposal-download-card{display:flex;flex-direction:column;min-width:0}
+body[data-theme=index] .proposal-download-card>.index-card{flex:1}
+.proposal-pdf-download{display:inline-flex;align-items:center;justify-content:space-between;gap:18px;min-height:48px;padding:12px 18px;border:1px solid currentColor;color:#101018;background:#fff;text-decoration:none;font-family:var(--regional-heading,var(--black,inherit));font-size:15px;font-weight:900;line-height:1.6}
+.proposal-pdf-download:hover{background:#fff1e6;text-decoration:underline;text-underline-offset:4px}
+.proposal-pdf-download:focus-visible{outline:3px solid #101018;outline-offset:4px}
+.proposal-download-card>.proposal-pdf-download{margin-top:18px;align-self:stretch}
+.proposal-pdf-note{font-size:16px;line-height:1.8;margin-top:24px;margin-bottom:0}
+.policy-jump>.proposal-pdf-download{padding:7px 14px;min-height:40px;font-size:13px;margin-left:auto;align-self:center}
+.proposal-download-actions{display:flex;align-items:center;justify-content:space-between;gap:24px;margin:36px 40px 24px;padding:24px 0;border-top:3px solid #fe975a;border-bottom:1px solid #ccc}
+.proposal-download-actions h2{font-size:26px;line-height:1.5;margin:0 0 10px}
+.proposal-download-actions p{font-size:15px;line-height:1.8;margin:0}
+.proposal-download-actions>.proposal-pdf-download{flex:none}
+@media(max-width:760px){
+ .proposal-download-actions{display:block;margin:28px 24px 18px}
+ .proposal-download-actions h2{font-size:24px}
+ .proposal-download-actions>.proposal-pdf-download{display:flex;margin-top:18px}
+ .policy-jump>.proposal-pdf-download{margin-left:0;font-size:13px}
+}
+@media print{
+ .proposal-download-card{break-inside:avoid}
+ .proposal-download-card>.proposal-pdf-download,.proposal-pdf-note,.proposal-download-actions{display:none}
+}
