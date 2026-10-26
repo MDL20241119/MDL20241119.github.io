@@ -65,6 +65,33 @@
           "end": "17:00"
         }
       ]
+    },
+    "miyadai_haruyuki": {
+      "name": "宮代 陽之",
+      "status": "candidate_not_confirmed",
+      "timezone": "Asia/Tokyo",
+      "dates": []
     }
+  },
+  "lectures": {
+    "planned_count": 2,
+    "approximate": true,
+    "status": "under_coordination",
+    "sessions": [
+      {
+        "speaker_id": "hidaka-yosuke",
+        "name": "日高 洋祐",
+        "planned_count": 1,
+        "date": null,
+        "status": "speaker_and_date_under_coordination"
+      },
+      {
+        "speaker_id": "miyadai-haruyuki",
+        "name": "宮代 陽之",
+        "planned_count": 1,
+        "date": null,
+        "status": "speaker_and_date_under_coordination"
+      }
+    ]
   }
 }
