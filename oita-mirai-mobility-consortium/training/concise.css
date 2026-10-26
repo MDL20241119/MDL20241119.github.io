@@ -227,7 +227,7 @@
 }
 
 /* One explanation: solve a local problem, with joined-up support, and learn by doing. */
-.site-head.navigation-bar.nav-training>.desktop-nav{grid-template-columns:repeat(6,minmax(0,1fr)) 120px}
+.site-head.navigation-bar.nav-training>.desktop-nav{grid-template-columns:repeat(5,minmax(0,1fr)) 120px}
 .training-concise .hero-copy{padding-block:26px}
 .training-concise .hero h1>span,.training-concise .hero h1 strong{display:inline;font-size:clamp(21px,2.3vw,31px);line-height:1.5;letter-spacing:-.04em}
 .training-concise .hero h1 strong{margin-left:.3em}
