@@ -82,6 +82,7 @@
 .training-concise .verified-speaker-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;align-items:start}
 .training-concise .speaker-profile{display:grid;grid-template-columns:120px minmax(0,1fr);gap:18px;align-items:start;padding:0}
 .training-concise .photo-window{aspect-ratio:1/1;max-height:none}
+.training-concise #ueno-naoaki .speaker-photo{object-fit:contain;object-position:center top;background:var(--paper)}
 .training-concise .profile-copy{padding-top:0}
 .training-concise .profile-company{font-size:12px;min-height:1.8em;line-height:1.8}
 .training-concise .profile-copy h3{font-size:30px;margin:12px 0}
