@@ -1,0 +1,499 @@
+{
+  "beppu": {
+    "region": "別府市",
+    "english": "BEPPU",
+    "headline": [
+      "夜の別府へ。",
+      "帰り道まで、",
+      "楽しみに。"
+    ],
+    "concept": "BEPPU DAY & NIGHT PASS",
+    "promise": "帰りを気にせず、もう一つの体験へ。夜の外出を、宿・店・地域クルーの仕事につなぐ。",
+    "challenge": "帰りの足や予約への不安から、映画・食・バーへの外出をためらう場面があるのではないか。",
+    "service": "宿と映画館・夜カフェ・バーをつなぎ、体験予約から帰着までを一つの行程に。既存交通で満たせない時間・場所を見極める。",
+    "epalette": "有人の夜の短区間便を企画。停車中は、予約確認と帰路相談ができる「まちの待合」にする。",
+    "autonomy": "日中・晴天・立入管理下で、観光・宿泊拠点内の短距離接続を検証。乗降支援は人が担い、夜の街中・幹線は対象外。",
+    "partners": "交通が運行、宿が販売。映画館・店と地域クルーが体験・案内を担う案。",
+    "revenue": "旅行者の商品代金から、運行・案内へ報酬を届ける。宿等の共同負担は協議する。",
+    "outputs": [
+      "夜間の接続ルート案",
+      "体験・帰路の予約導線",
+      "運営・費用分担案"
+    ],
+    "outcomes": [
+      "夜の外出を選びやすく",
+      "追加の体験購入へ",
+      "案内の仕事を地域へ"
+    ],
+    "first_test": "市・交通・宿・店で、夜の外出断念と配車できなかった場面を確認。既存車両で小さく試し、追加輸送の要否を判断する。",
+    "metrics": [
+      "帰着できた割合",
+      "追加の体験購入",
+      "調整に要した時間"
+    ],
+    "policy_context": "別府版ライドシェア「GLOBAL」は2027年3月まで実証予定。配車できない時間帯もある。内成棚田線・関の江循環線も実証中で、既存の交通との補完が出発点。",
+    "decision_questions": [
+      "既存交通で足りない時間・場所はどこか",
+      "体験予約と帰路を一緒に手配できるか",
+      "運転・案内・調整の費用を誰が負担するか"
+    ],
+    "scope_note": "企画例・検証案であり、関係者の合意や実施決定ではない。自動運転は別の安全体制・予算・手続で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/assets/beppu.webp",
+        "alt": "田ノ浦ビーチから望む別府湾と別府市の街並み",
+        "credit": "別府湾と別府市（2021年） · Project Kei / CC BY-SA 4.0 · 縮小・WebP変換済み。",
+        "source": "https://commons.wikimedia.org/wiki/File:Beppu_City_and_Beppu_Bay.jpg",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "別府市地域公共交通計画・協議会",
+        "url": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/kassei_kyougikai.html"
+      },
+      {
+        "label": "令和8年度第2回協議会・会議要旨",
+        "url": "https://www.city.beppu.oita.jp/doc/seikatu/bouhan_anzen/koukyou_koutuu/koukyou_kassei/r08/02.pdf"
+      },
+      {
+        "label": "別府版ライドシェア「GLOBAL」",
+        "url": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/rideshare4.html"
+      }
+    ]
+  },
+  "yufuin": {
+    "region": "由布市（湯布院）",
+    "english": "YUFUIN",
+    "headline": [
+      "車はハブへ。",
+      "旅は、まちへ。"
+    ],
+    "concept": "YUFUIN PARK & TRIP",
+    "promise": "車を停めた先から、旅が広がる。案内・荷物・移動をつなぎ、宿や店を身軽に巡る湯布院へ。",
+    "challenge": "行き先ごとの運転や駐車場探しが、まちで過ごす時間を分断しているのではないか。",
+    "service": "既存駐車場をハブ候補に、行き先と帰り方を案内。荷物受付、有人e-Palette、既存交通、まち歩きを組み合わせる。",
+    "epalette": "ハブと協力宿・飲食店・土産店・観光地側の乗降点を結ぶ有人回遊を企画。旧商店街への立寄りも考える。",
+    "autonomy": "ハブと近接する接続拠点の短区間で、反復接続を検証。通学・混雑と分離し、乗降や荷物の引継ぎは人が支える。",
+    "partners": "駐車場・施設管理者、運行・配送担当、宿・店舗、地域の受付チーム。",
+    "revenue": "駐車・移動・荷物の対価と、参加事業者の共同負担を組み合わせる案。料金・運営主体は未定。",
+    "outputs": [
+      "ハブから帰着までの行程表",
+      "回遊・配送の役割分担案",
+      "運営費用と判断基準"
+    ],
+    "outcomes": [
+      "駐車場探しの負担を減らす",
+      "店への立寄りを増やす",
+      "住民の通行と両立する"
+    ],
+    "first_test": "候補駐車場と既存交通を一枚の行程表に整理。担当・費用上限・対象日・判断基準を合意し、受付・案内・帰路接続を小さく試す。",
+    "metrics": [
+      "車へ戻れた割合",
+      "立寄り店舗",
+      "待ち時間・運営負担"
+    ],
+    "policy_context": "2022・2023年にP&Rを実施。現在は観光周遊の「ノルク」と手荷物配送「ゆふいんチッキ」がある。既存の駐車・周遊・配送でつながらない行先や時間を補う。",
+    "decision_questions": [
+      "自分の車よりハブを選ぶ条件は何か",
+      "受付・乗換えが店への立寄りにつながるか",
+      "観光と生活交通の枠・費用を分けられるか"
+    ],
+    "scope_note": "企画例であり、施設新設・候補地・料金・参加先・ルートは未定。生活交通と分け、自動運転は別の技術・安全体制と予算で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/yufuin-yunotsubo.webp",
+        "alt": "由布岳を背景に、湯の坪街道の店先を歩く人々",
+        "credit": "湯の坪街道と由布岳の参考風景 · 写真提供：由布市フォトアルバム · 縮小・WebP変換済み。",
+        "source": "https://www.city.yufu.oita.jp/kankou/photomovie",
+        "license": "https://www.city.yufu.oita.jp/kankou/photomovie"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "由布市地域公共交通計画",
+        "url": "https://www.city.yufu.oita.jp/cate_1/article_82084"
+      },
+      {
+        "label": "ノルク・2026年の運行案内",
+        "url": "https://yufuin.gr.jp/news/news-5769/"
+      },
+      {
+        "label": "ゆふいんチッキの利用案内",
+        "url": "https://yufuin.gr.jp/spot/spot-2295/"
+      }
+    ]
+  },
+  "hiji": {
+    "region": "日出町",
+    "english": "HIJI",
+    "headline": [
+      "旅のときめきを、",
+      "地域の商いへ。"
+    ],
+    "concept": "HARMONY JOURNEY & MARKET",
+    "promise": "到着前から帰り道まで、特別な旅に。移動・買物・裏方の仕事をつなぎ、迎える時間を増やす。",
+    "challenge": "移動や補充・運搬の負担を減らし、接客や体験に使える時間を増やせないか。",
+    "service": "ホスト付きの有人移動、停車店舗、常温品の補充・回収を用途別に企画。旅の体験と物販、施設物流を三つの事業として設計する。",
+    "epalette": "ショー後やホテルでの停車販売、短区間の有人移動、バックヤードと売場の補充に。清掃・積替え時間も確保する。",
+    "autonomy": "日中・晴天・立入管理下で、バックヤード等の常温備品を反復運搬。積卸し・受渡しは人が担い、来園者動線と分離。旅客は乗せない。",
+    "partners": "施設、交通、ホスト、販売・物流担当が、用途ごとの責任を分ける案。",
+    "revenue": "旅の商品代金・物販粗利・施設の物流委託料を別会計にし、ホスト・販売・補充へ対価を残す。",
+    "outputs": [
+      "旅・売場・物流の三事業案",
+      "車両共用の運用表",
+      "用途別の役割・収支案"
+    ],
+    "outcomes": [
+      "旅先での購入を増やす",
+      "迎える時間を増やす",
+      "運ぶ負担を軽くする"
+    ],
+    "first_test": "町・交通・施設・出店者で、休日の行程と既存便を照合。回遊・店舗・物流を分けて試し、既存交通で同等の便益が出る場合は活用を優先する。",
+    "metrics": [
+      "立寄り・購入",
+      "売上・設営時間",
+      "物流の作業時間・荷量"
+    ],
+    "policy_context": "ハーモニーライナーは2026年4月から事業者の継続運行へ移行。町の計画は休日観光の共創実証を記載するが、本提案やe-Paletteの採用・予算確保を意味しない。",
+    "decision_questions": [
+      "既存便に何の回遊・案内を足すべきか",
+      "三事業それぞれに買い手と担い手がいるか",
+      "設営・積替え・充電まで運営できるか"
+    ],
+    "scope_note": "企画例・検証案。施設利用・権利使用・販売・運行条件は協議が必要。自動運転は別の技術・安全体制・予算・手続で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/hiji-harmonyland.webp",
+        "alt": "日出町のハーモニーランド園内。フェアリーキティカルーセルとハローキティのエンジェルコースター",
+        "credit": "ハーモニーランド園内（2019年7月） · yuki5287「IMGP7377」 / CC BY 2.0 · 縦横比を保った縮小・WebP変換。",
+        "source": "https://www.flickr.com/photos/yuki5287/48314747057/",
+        "license": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "日出町地域公共交通計画",
+        "url": "https://www.town.hiji.lg.jp/kurashi_tetsuzuki/seikatsu_sumai/kotsu_doro/tiikikoukyoukoutuukeikaku/3445.html"
+      },
+      {
+        "label": "計画本編・共創実証等",
+        "url": "https://www.town.hiji.lg.jp/material/files/group/12/2024_06_hiji_kotsu_plan.pdf"
+      },
+      {
+        "label": "ハーモニーライナーの継続運行",
+        "url": "https://www.pref.oita.jp/soshiki/10540/harmony-liner.html"
+      }
+    ]
+  },
+  "usa": {
+    "region": "宇佐市（安心院含む）",
+    "english": "USA / AJIMU",
+    "headline": [
+      "旅の感動を、",
+      "地元の仕事に。"
+    ],
+    "concept": "USA / AJIMU CULTURE TABLE",
+    "promise": "つくり手に会う、特別な一日へ。文化・醸し・食の対価を、地域の店と若者の有償の仕事に残す。",
+    "challenge": "地域の魅力との出会いを、つくり手や案内する人の継続する仕事につなげたい。",
+    "service": "神宮・醸し・食を組み合わせ、予約から会場移動、帰着までを設計。旅行者が支払う体験代金を、つくり手と地域クルーへ届ける。",
+    "epalette": "安心院の乗換え拠点とワイン・食の会場を、多言語クルーと有人で接続。移動中はつくり手の話、停車時は案内・購入相談を。",
+    "autonomy": "施設が動線を管理できる限定区間で、駐車区画と会場の反復接続を検証。乗降支援は人が担い、空港からの全線自動化は前提にしない。",
+    "partners": "交通が運行、つくり手が接遇。若手・多言語クルーが車内と会場を案内する案。",
+    "revenue": "体験商品の代金から、交通・つくり手・クルーの準備と接遇へ支払う。継続時の会場接続費も協議する。",
+    "outputs": [
+      "予約から帰着までの体験商品案",
+      "販売・案内・接続の役割表",
+      "つくり手への支払設計"
+    ],
+    "outcomes": [
+      "つくり手の手取りを増やす",
+      "案内を有償の仕事にする",
+      "生活交通との両立を守る"
+    ],
+    "first_test": "市の交通・観光担当、観光組織、運行者、体験の担い手で、既存商品の行程・価格・販売窓口を確認。既存車両で予約から帰着まで試す。",
+    "metrics": [
+      "体験商品の購入率",
+      "つくり手の手取り",
+      "案内の有償業務"
+    ],
+    "policy_context": "安心院の住民向け登録制乗合タクシーは本格運行、院内は実証、旧宇佐市域は調査段階。生活交通の登録・予算を、そのまま観光商品に使うとは扱わない。",
+    "decision_questions": [
+      "住民交通を守り、観光の帰路を用意できるか",
+      "予約・販売・案内・支払いを何で改善するか",
+      "運転者・車両・費用の取り合いを避けられるか"
+    ],
+    "scope_note": "企画例・検証案であり、関係者の合意や実施決定ではない。試飲は会場で行い、自動運転は別の技術・安全体制と予算で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/usa-jingu.webp",
+        "alt": "宇佐神宮の朱色の大鳥居と緑に囲まれた参道",
+        "credit": "宇佐神宮の大鳥居と参道（2012年） · lensonjapan「A torii gate of Usa Jingu」 / CC BY 2.0 · 縮小・WebP変換。",
+        "source": "https://www.flickr.com/photos/lensonjapan/8697300339/",
+        "license": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "宇佐市地域公共交通計画",
+        "url": "https://www.city.usa.oita.jp/sougo/soshiki/10/sogoseisaku/2/1_2/20617.html"
+      },
+      {
+        "label": "安心院地域の予約制乗合タクシー",
+        "url": "https://www.city.usa.oita.jp/sougo/soshiki/10/sogoseisaku/2/a2/17122.html"
+      },
+      {
+        "label": "院内地域の予約制乗合タクシー",
+        "url": "https://www.city.usa.oita.jp/sougo/soshiki/10/sogoseisaku/2/a2/23989.html"
+      }
+    ]
+  },
+  "kunisaki": {
+    "region": "国東市",
+    "english": "KUNISAKI",
+    "headline": [
+      "通えるから、",
+      "ここで働ける。"
+    ],
+    "concept": "SHIFT LINK KUNISAKI",
+    "promise": "企業を越えて勤務に合う往復をつくり、働く人の選択肢と、地域の人材確保を支える。",
+    "challenge": "勤務時刻と交通が合わず、働く場所を選びにくい。残業や勤務変更のたびに、帰りの足も組み直す必要がある。",
+    "service": "空港周辺の企業・宿泊施設を念頭に、勤務時刻が近い人の共同便を設計。帰路変更も一つの窓口で相談し、既存バス・各社送迎・タクシーを組み合わせる。",
+    "epalette": "共同乗降点と職場・滞在拠点を有人e-Paletteで接続。停車中は待合と乗車確認に使う案。",
+    "autonomy": "需要が重なる短区間を候補に、監視・例外対応込みの負担を検証する。空港制限区域は前提にしない。",
+    "partners": "企業・働く人・市交通担当・運行者・勤務変更と企業間精算を担う共同調整役。",
+    "revenue": "企業が必要な往復枠を購入し、利用者との負担を契約で分ける。調整・代替輸送にも対価を置く。",
+    "outputs": [
+      "共同通勤・帰路調整の企画",
+      "予約と企業間精算の仕組み",
+      "担い手・収支・実証計画"
+    ],
+    "outcomes": [
+      "希望する仕事へ通える",
+      "企業の人材確保を支える",
+      "帰路の調整が地域の仕事に"
+    ],
+    "first_test": "個人を特定しない通勤需要を集計し、既存便の接続・共同便・タクシー契約を比較。需要が分散する場合は小型車等も検討する。",
+    "metrics": [
+      "勤務前の到着率",
+      "残業後の帰着",
+      "1人往復あたり費用"
+    ],
+    "policy_context": "国見では予約制のくにみ号、武蔵・安岐等では週末夜間タクシーの増車を実証。空港周辺の共同通勤とは対象が異なり、全シフトの帰宅を保証するものではない。",
+    "decision_questions": [
+      "同時刻・同方向の需要は集まるか",
+      "既存便で補える移動はどこか",
+      "企業が継続購入できる価格か"
+    ],
+    "scope_note": "企画例・未合意。e-Paletteは有人・停車利用から。自動運転は技術・安全体制と予算を別途協議する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/airport.webp",
+        "alt": "国東市・大分空港の旅客ターミナルと駐機場",
+        "credit": "国東市に所在する大分空港（2018年） · Project Kei / CC BY-SA 4.0 · Web用に縮小・WebP変換。全体を保持して表示。",
+        "source": "https://commons.wikimedia.org/wiki/File:Oita_Airport_Passenger_Terminal_and_Apron.jpg",
+        "license": "https://creativecommons.org/licenses/by-sa/4.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "国東市地域公共交通計画",
+        "url": "https://www.city.kunisaki.oita.jp/site/transportation-information/kotsukeikaku.html"
+      },
+      {
+        "label": "くにみ号の運行案内",
+        "url": "https://www.city.kunisaki.oita.jp/soshiki/kikaku/demand.html"
+      },
+      {
+        "label": "週末夜間タクシーの増車実証",
+        "url": "https://www.city.kunisaki.oita.jp/soshiki/kikaku/taxi.html"
+      }
+    ]
+  },
+  "usuki": {
+    "region": "臼杵市",
+    "english": "USUKI",
+    "headline": [
+      "暮らしの往復に、",
+      "食の楽しみを。"
+    ],
+    "concept": "臼杵 食卓のよりみち便",
+    "promise": "住民の用事が済む往復を守りながら、郷土の一皿と店主に会う旅を、地域の仕事へつなぐ。",
+    "challenge": "生活の足と食を楽しむ観光を両立したい。診療・買物・体験の終了時刻と既存便が合わない場面を見つける。",
+    "service": "住民の通院・買物と、来訪者の食の旅を時間と費用で分けて設計。住民の往復枠を先に確保し、食事予約と帰路の調整をつなぐ。",
+    "epalette": "生活拠点・港や駅の乗降点と城下町周縁を有人e-Paletteで接続。停車中は乗継ぎ待合と帰路確認に。",
+    "autonomy": "港・駅側の拠点と城下町周縁の短区間を候補に検討。歴史的な細街路の自動走行は前提にしない。",
+    "partners": "市交通・観光担当、交通事業者、住民・地区代表、店主・食の案内者、地域の受付。",
+    "revenue": "旅行者の商品購入と、生活側の利用料・公共負担を別会計にし、運行・案内・受付への対価を協議する。",
+    "outputs": [
+      "生活便と食の旅のサービス案",
+      "予約・帰路調整と別会計",
+      "運営体制・実証計画"
+    ],
+    "outcomes": [
+      "用事を終えて帰れる",
+      "店と案内者に対価が残る",
+      "食とまちを楽しむ機会が増す"
+    ],
+    "first_test": "既存便の利用と帰路の組み直しを試す。計画策定の調査・指標と合わせ、住民の必要な便を守りながら追加便の要否を判断する。",
+    "metrics": [
+      "外出の往復完了",
+      "店・案内者の手取り",
+      "住民が乗れなかった件数"
+    ],
+    "policy_context": "ふぐバス等の生活交通と予約型のふじがわち号、2026年度の観光タクシーが既存。まず既存便と用事・食体験の終了時刻のずれを確かめる。",
+    "decision_questions": [
+      "用事の終了と便が合わないのはどこか",
+      "店・案内・交通への対価を組み込めるか",
+      "住民の便と運転者の勤務を守れるか"
+    ],
+    "scope_note": "企画例・未合意。清掃・充電等の切替時間を取れない日は無理に共用しない。自動運転は別の安全体制・予算で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/usuki-stone-buddhas.webp",
+        "alt": "岩壁に彫られた臼杵石仏の磨崖仏群",
+        "credit": "臼杵石仏（2009年） · TANAKA Juuyoh (田中十洋)「Usuki Stone Buddhas / 臼杵磨崖仏(うすきまがいぶつ)」 / CC BY 2.0 · 縮小・WebP変換。表示枠に応じてトリミング。",
+        "source": "https://www.flickr.com/photos/tanaka_juuyoh/3577806578/",
+        "license": "https://creativecommons.org/licenses/by/2.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "臼杵市地域公共交通計画",
+        "url": "https://www.city.usuki.oita.jp/docs/2017050800014/file_contents/240926.pdf"
+      },
+      {
+        "label": "コミュニティバス・デマンド交通",
+        "url": "https://www.city.usuki.oita.jp/docs/2023020200029/"
+      },
+      {
+        "label": "2026年度観光タクシープラン",
+        "url": "https://www.city.usuki.oita.jp/article/2026062600017/"
+      }
+    ]
+  },
+  "oita": {
+    "region": "大分市",
+    "english": "OITA",
+    "headline": [
+      "用事を終えて、",
+      "ちゃんと帰れる。"
+    ],
+    "concept": "おかえり便｜暮らしの往復デスク",
+    "promise": "通院のあとに買物も、自分で選べる一日へ。往復の外出を支え、家族だけに頼らない暮らしをつくる。",
+    "challenge": "診察や用事が長引いたとき、満席や雨天運休のときに、帰りの手配が家族や本人の負担になる。",
+    "service": "一つの生活圏で、買物・通院・交流の予約と帰路変更を一つの窓口へ。既存交通と代替の帰り方をつなぎ、用事を終えて帰るまで支える。",
+    "epalette": "地域の乗降点とスーパー・病院・公民館・バス接続点を有人e-Paletteで結ぶ。停車中は待合と乗降支援に。",
+    "autonomy": "受付拠点と一つのスーパー・公民館等の短区間を候補に、監視・例外対応込みの負担を検証する。支援・変更は人が担う。",
+    "partners": "市都市交通対策課、運行者、医療・商業施設、利用者、地域の受付・乗降支援者。",
+    "revenue": "利用料、施設等の契約負担、公共サービス購入を協議し、受付・支援・代替帰路の調整にも対価を設計する。",
+    "outputs": [
+      "一生活圏の往復サービス案",
+      "予約・帰路変更の受付",
+      "役割・費用・実証計画"
+    ],
+    "outcomes": [
+      "通院と買物を一度の外出に",
+      "家族の臨時送迎を減らす",
+      "外出を支える地域の仕事"
+    ],
+    "first_test": "新車両を置く前に、一生活圏の行程を確認。既存交通で予約・帰路調整を試し、外出を断念した理由と調整に要した費用も測る。",
+    "metrics": [
+      "外出の往復完了",
+      "外出を断念した件数",
+      "家族の臨時送迎時間"
+    ],
+    "policy_context": "大南・野津原では区域運行を実証中。大南グリスロは手動運転・予約不可で、雨天等の運休もある。既存交通を生かし、帰路の不足を検証する。",
+    "decision_questions": [
+      "既存窓口でも補えない不足は何か",
+      "予定変更時の帰路を誰が調整するか",
+      "受付・支援の対価を誰が払うか"
+    ],
+    "scope_note": "企画例・未合意。区域運行の最終評価は未確認。大南グリスロを自動運転とは扱わず、自動運転は別の安全体制・予算で検討する。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/oita-saganoseki-fishing-village.webp",
+        "alt": "夜明けの大分市佐賀関。漁船が並ぶ港と、手前に見える漁村の家並み",
+        "credit": "佐賀関の漁港と家並み（2013年） · 「漁港の朝」（部分）／大分市デジタルアーカイブ / CC BY · WebP変換。表示枠に応じてトリミング（部分使用）。",
+        "source": "https://oitacity-archive.jp/detail/?id=1088",
+        "license": "https://oitacity-archive.jp/kiyaku/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "大分市地域公共交通計画",
+        "url": "https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/keikaku.html"
+      },
+      {
+        "label": "大南・野津原の区域運行実証",
+        "url": "https://www.city.oita.oita.jp/o171/machizukuri/kotsu/2026fureaikuiki.html"
+      },
+      {
+        "label": "大南グリーンスローモビリティ",
+        "url": "https://www.city.oita.oita.jp/o256/greslo/dainan.html"
+      }
+    ]
+  },
+  "taiyonoie": {
+    "region": "太陽の家",
+    "english": "KAMEGAWA",
+    "headline": [
+      "「行きたい」を、",
+      "「行ってきた」へ。"
+    ],
+    "concept": "亀川モビリティコモンズ（構想案）",
+    "promise": "本人が行き先を選ぶ外出と、経験を生かす有償の仕事を、当事者・地域の仲間と一緒につくる。",
+    "challenge": "行きたい気持ちがあっても、車両・乗降・同行支援・目的地の入口・帰路がそろわなければ、外出を完了できない。",
+    "service": "JR亀川駅・太陽の家・サンストア等への有人・予約型の回遊を検討。本人の希望を起点に、移動・仕事・技術改善・他地域への展開を一体で考える。",
+    "epalette": "実車と乗り場で車いす固定・同行者・荷物を確認。既存送迎や福祉車両と組み合わせ、入口と帰路まで設計する。",
+    "autonomy": "有人で確認した課題から、管理区域等の条件を整えられる区間で将来の別企画として検討。必要な乗降・同行支援は維持する。",
+    "partners": "本人・太陽の家・支援者・交通事業者・行先施設・地域の店。当事者と使いやすさを磨く。",
+    "revenue": "ユーザー・職場・施設等が目的別の負担を協議。希望する当事者の予約・案内・評価・改善の仕事にも対価を設計する。",
+    "outputs": [
+      "支援込みの予約型外出案",
+      "当事者が担う有償業務",
+      "適合・安全・継続財源の条件"
+    ],
+    "outcomes": [
+      "本人が外出先を選べる",
+      "希望した外出を完了できる",
+      "経験と得意が有償の仕事に"
+    ],
+    "first_test": "本人の同意を得て、希望する一日の行程を確認。既存の対応車両と支援を組み合わせ、完了できた外出と利用できなかった理由を記録する。",
+    "metrics": [
+      "希望した外出の完了",
+      "選べる行先・時間",
+      "待ち時間と支援者負担"
+    ],
+    "policy_context": "別府には路線バス・タクシー・GLOBAL等があるが、車いす対応や乗降・同行支援は個別確認が必要。車両の存在だけで外出可能とは判断しない。",
+    "decision_questions": [
+      "本人の希望と必要な支援をそろえられるか",
+      "入口の受渡しと帰路を誰が担うか",
+      "支援を減らさず選択肢を増やせるか"
+    ],
+    "scope_note": "構想案であり太陽の家との合意・参画決定を示さない。行先・本数・費用・自動運転の導入時期は未定。写真は太陽の家の実写ではない参考。",
+    "photos": [
+      {
+        "src": "/oita-mirai-mobility-consortium/dialogue/assets/taiyo-wheelchair-mobility-reference.webp",
+        "alt": "電動車椅子を使う人と同行する2人が、街の歩道を並んで移動している参考写真（太陽の家の撮影ではない）",
+        "credit": "車椅子での移動の参考写真 · Disabled And Here「Landscape walking shot」／撮影：Chona Kasinger / CC BY 4.0 · 1800×1200pxへ縮小・WebP変換。トリミングなし。",
+        "source": "https://affecttheverb.com/gallery/disabledandhere/landscapewalking/",
+        "license": "https://creativecommons.org/licenses/by/4.0/"
+      }
+    ],
+    "source_links": [
+      {
+        "label": "おおいた地域交通ビジョン2026",
+        "url": "https://www.pref.oita.jp/soshiki/10540/chiikikotsuvision.html"
+      },
+      {
+        "label": "別府市地域公共交通計画・協議会",
+        "url": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/kassei_kyougikai.html"
+      },
+      {
+        "label": "別府版ライドシェアGLOBAL",
+        "url": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/rideshare4.html"
+      }
+    ]
+  }
+}
