@@ -208,22 +208,22 @@
 }
 
 
-/* Speaker availability is separate from the general workshop candidates. */
-.training-concise .calendar-tag.hidaka-candidate{background:#fff;color:#111;border:1px solid #ad4a1d;box-shadow:inset 3px 0 #e68149}
-.training-concise .month-card .has-hidaka{background:#fff8f1}
+/* Confirmed lectures and unassigned session candidates are distinct. */
+.training-concise .calendar-tag:is(.session-candidate,.lecture-confirmed){background:#fff;color:#111;border:1px solid #ad4a1d;box-shadow:inset 3px 0 #e68149}
+.training-concise .month-card .has-session-candidate{background:#fff8f1}
 
 
 
 
-/* Keep speaker availability inside its calendar date cell. */
-.training-concise .month-card .calendar-tag.hidaka-candidate{display:block;min-height:0;padding:3px 0;text-align:center;line-height:1.45}
-.hidaka-candidate .candidate-name{display:block;font-size:inherit;white-space:nowrap}
-.hidaka-candidate .candidate-hours{display:block;font-family:Arial,sans-serif;font-size:9px;font-weight:700;line-height:1.5;letter-spacing:0}
-.hidaka-candidate .candidate-hours>time,.hidaka-candidate .candidate-hours>span{display:block;white-space:nowrap}
+/* Keep session labels and times inside their calendar date cells. */
+.training-concise .month-card .calendar-tag:is(.session-candidate,.lecture-confirmed){display:block;min-height:0;padding:3px 0;text-align:center;line-height:1.45}
+:is(.session-candidate,.lecture-confirmed) .candidate-name{display:block;font-size:inherit;white-space:nowrap}
+:is(.session-candidate,.lecture-confirmed) .candidate-hours{display:block;font-family:Arial,sans-serif;font-size:9px;font-weight:700;line-height:1.5;letter-spacing:0}
+:is(.session-candidate,.lecture-confirmed) .candidate-hours>time,:is(.session-candidate,.lecture-confirmed) .candidate-hours>span{display:block;white-space:nowrap}
 @media(max-width:760px){
  #program-proposals .output-items>li{font-size:20px;line-height:1.5;padding:14px 0}
- .training-concise .month-card .calendar-tag.hidaka-candidate{padding:5px 0}
- .hidaka-candidate .candidate-hours{font-size:10px}
+ .training-concise .month-card .calendar-tag:is(.session-candidate,.lecture-confirmed){padding:5px 0}
+ :is(.session-candidate,.lecture-confirmed) .candidate-hours{font-size:10px}
 }
 
 /* One explanation: solve a local problem, with joined-up support, and learn by doing. */
@@ -312,7 +312,7 @@
 @media print{.training-concise .hero h1{font-size:18pt}}
 
 .training-concise .producer-role{font-weight:900;color:#93441e}
-.training-concise .profile-candidate{display:inline-block;margin-left:8px;font-size:11px;line-height:1.5;letter-spacing:0;vertical-align:middle;white-space:nowrap;color:#93441e}
+.training-concise .profile-candidate,.training-concise .profile-confirmed{display:inline-block;margin-left:8px;font-size:11px;line-height:1.5;letter-spacing:0;vertical-align:middle;white-space:nowrap;color:#93441e}
 
 /* Two planned lectures; workshop and fieldwork candidates remain separate. */
 .training-concise .lecture-plan li a{display:block;text-decoration:none}
@@ -344,3 +344,11 @@
  .training-concise .lecture-plan-detail>p{font-size:14px}
 }
 @media print{.training-concise .lecture-plan{break-inside:avoid}.training-concise .lecture-plan h3 b{font-size:50px}.training-concise .lecture-plan li{font-size:18pt}}
+
+/* A confirmed lecture is visibly distinct in color and text, including printouts. */
+.training-concise .calendar-tag.lecture-confirmed,.schedule-status-confirmed{background:#e68149;color:#111;border:1px solid #ad4a1d}
+.training-concise .month-card .has-lecture-confirmed{background:#ffe2ca}
+.lecture-confirmed .confirmed-label{display:block;font-size:inherit;line-height:1.45}
+.training-concise .month-card .calendar-tag.session-candidate{border-style:dashed;box-shadow:none}
+.schedule-status-confirmed{display:inline-block;padding:1px 6px;font-size:12px;line-height:1.6}
+.training-concise .profile-confirmed{padding:1px 5px;background:#ffe2ca}

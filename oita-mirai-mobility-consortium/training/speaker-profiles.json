@@ -1,7 +1,7 @@
 {
   "verified_at": "2026-10-19",
   "status": "講師・登壇候補を掲載",
-  "photo_publication": "公式掲載写真を出典付きで掲載。登壇候補者の承諾は未確認です。",
+  "photo_publication": "公式掲載写真を出典付きで掲載。宮代氏の登壇承諾は未確認です。",
   "profiles": [
     {
       "id": "hidaka-yosuke",
@@ -15,7 +15,7 @@
       ],
       "photo_source": "https://www.maas.co.jp/company/",
       "photo_asset": "assets/hidaka-yosuke.jpg",
-      "participation_status": "登壇候補・承諾未確認"
+      "participation_status": "登壇確定"
     },
     {
       "id": "miyadai-haruyuki",
