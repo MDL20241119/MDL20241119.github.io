@@ -109,12 +109,12 @@
 .program-open-invite>strong{display:block;font-size:clamp(28px,3.2vw,44px);font-weight:900;line-height:1.4;letter-spacing:-.05em}
 .program-open-invite>p{margin:10px 0 0;font-size:16px;line-height:1.8}
 .opportunity-program .process-flow{align-items:stretch}
-.opportunity-program .process-step,.opportunity-program .process-step:nth-child(n){grid-template-rows:auto auto minmax(96px,1fr) auto}
+.opportunity-program .process-step,.opportunity-program .process-step:nth-child(n){grid-template-rows:auto auto minmax(0,1fr) auto}
 .opportunity-program .process-step>.step-activity{grid-column:1/-1;grid-row:3;margin:0;font-size:16px;line-height:1.8}
 .opportunity-program .process-step>.step-deliverable{grid-column:1/-1;grid-row:4;align-self:end;display:block;min-width:0;margin-top:18px;padding-top:14px;border-top:1px solid #777}
 .opportunity-program .step-deliverable>span{display:block;font-size:12px;line-height:1.5;letter-spacing:0;color:#e8e8e8}
 .opportunity-program .step-deliverable>strong{display:block;margin-top:6px;font-size:20px;font-weight:900;line-height:1.5;letter-spacing:-.035em}
-.opportunity-program .process-step h3{min-height:2.8em}
+.opportunity-program .process-step h3{min-height:0}
 @media(max-width:900px){
  .opportunity-program .welcome-services{grid-template-columns:1fr;gap:10px}
  .opportunity-program .welcome-services li{font-size:clamp(18px,3vw,26px)}
@@ -141,4 +141,19 @@
  .opportunity-program .process-step h3{font-size:18pt}
  .opportunity-program .process-step>.step-activity{font-size:9pt;line-height:1.6}
  .opportunity-program .step-deliverable>strong{font-size:11pt}
+}
+
+/* Keep all six actions easy to scan together on a desktop. */
+@media(min-width:901px){
+ .opportunity-program .purpose{padding-block:24px}
+ .opportunity-program .purpose .split-heading{margin:0 0 20px}
+ .opportunity-program .purpose .split-heading h2{font-size:clamp(38px,4vw,56px);line-height:1.25}
+ .opportunity-program .process-flow{gap:16px}
+ .opportunity-program .process-step,.opportunity-program .process-step:nth-child(n){padding:16px}
+ .opportunity-program .step-meta b{font-size:72px}
+ .opportunity-program .process-step h3{font-size:clamp(28px,2.55vw,38px);margin:12px 0 8px}
+ .opportunity-program .process-step>.step-activity{line-height:1.7}
+ .opportunity-program .process-step>.step-deliverable{margin-top:12px;padding-top:10px}
+ .opportunity-program .step-deliverable>span{font-size:11px}
+ .opportunity-program .step-deliverable>strong{font-size:18px;line-height:1.45}
 }
