@@ -93,5 +93,10 @@
         "status": "speaker_and_date_under_coordination"
       }
     ]
+  },
+  "program_designer": {
+    "speaker_id": "ueno-naoaki",
+    "name": "植野 直亮",
+    "role": "講師・プログラムプロデュース"
   }
 }
