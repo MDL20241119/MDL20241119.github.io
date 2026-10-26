@@ -144,7 +144,7 @@
  .training-concise .field-grid,.training-concise .verified-speaker-grid{grid-template-columns:1fr}
  .training-concise .field-card:nth-child(n){border-left:0}
  .training-concise .field-card h3{min-height:0}
- .training-concise #calendar-title{font-size:clamp(26px,7.8vw,38px);line-height:1.4}
+ .training-concise #calendar-title{font-size:clamp(25px,7.8vw,38px);line-height:1.4}
  .training-concise .section-pad,#program-proposals{padding-top:30px;padding-bottom:34px}
  .training-concise .hero-copy{padding-block:28px}
  .training-concise .hero h1>span{font-size:7vw}.training-concise .hero h1 strong{font-size:9vw}
