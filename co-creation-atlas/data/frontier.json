@@ -541,7 +541,11 @@
       "sourceUrl": "https://mitnano.mit.edu/request-tour-mitnano",
       "title": "Happy Nano Day 2021: Step inside MIT.nano",
       "note": "MIT公式のクリーンルーム見学動画（2021年）。現行設備総数の証拠には用いない。"
-    }
+    },
+    "photoId": "mit-nano-nemo-2026",
+    "extraPhotoIds": [
+      "mit-nano-fineplacer-2026"
+    ]
   },
   {
     "id": "amrf-bradfield",
@@ -670,7 +674,11 @@
     "photoLink": {
       "url": "https://bradfield.city/places/amrf-precinct/first-building",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "amrf-manufacturing-hall-2026",
+    "extraPhotoIds": [
+      "amrf-first-building-atrium"
+    ]
   },
   {
     "id": "doll-living-lab",
@@ -749,7 +757,11 @@
     "mappingBasis": "ステップへの対応は、公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "checkedTimezone": "Asia/Tokyo",
     "statusLabel": "実環境テストベッド",
-    "statusNote": "設備・支援手順は現行公式で確認。事例数の公表と導入効果は分けて読む。"
+    "statusNote": "設備・支援手順は現行公式で確認。事例数の公表と導入効果は分けて読む。",
+    "photoId": "doll-outdoor-lighting-test-pole",
+    "extraPhotoIds": [
+      "doll-smart-epc-visit"
+    ]
   },
   {
     "id": "michigan-central-newlab-detroit",
@@ -1299,7 +1311,15 @@
     "verificationStatus": "現行公式説明、公式PDFの事例、Fraunhofer沿革を再確認。PDF p.20の個別結果は自己報告で、第三者評価ではない。",
     "caseUrl": "https://mobilitydlab.com/co-creation-atlas/cases/josephs/",
     "statusLabel": "体験型の開発支援",
-    "statusNote": "現在のサービス案内を確認。紹介するアプリ比較の個別実施年は非公開。"
+    "statusNote": "現在のサービス案内を確認。紹介するアプリ比較の個別実施年は非公開。",
+    "photoId": "josephs-ai-showroom-2023",
+    "extraPhotoIds": [
+      "josephs-hololens-testing",
+      "josephs-innohikes-dialogue"
+    ],
+    "excludedPhotoIds": [
+      "josephs-photo"
+    ]
   },
   {
     "id": "cern-ideasquare",
@@ -1816,11 +1836,11 @@
     "mappingBasis": "ステップへの対応は公開資料の仕組みに基づくATLASの編集上の解釈です。各施設がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
     "sharedLab": {
       "type": "現場の働く人と試作するロボティクス拠点",
-      "facilities": "TU Delft Campusで、企業・研究者・スタートアップがロボットや、実世界で動くAIを開発・試験する拠点。現行所在地はMolengraaffsingel 29。掲載した旧拠点の建物写真は2002年の入居前で、現在の設備を写したものではない。",
+      "facilities": "TU Delft Campusで、企業・研究者・スタートアップがロボットや、実世界で動くAIを開発・試験する拠点。現行所在地はMolengraaffsingel 29。人の実演を記録する教示装置やグリッパーを用いたRobot Learningの実験設備を公開している。",
       "access": "企業からの課題相談を起点に、RoboHouseが期間と費用を見積もる。Action trackは3〜4か月、Innovation trackは6〜8か月。公開イベントへの参加と、研究設備の利用契約は別。機器予約、費用、成果の知財条件は案件ごとの確認が必要。",
       "collaboration": "Innovation trackは複数案と二回の実験を、従業員などの関係者と進める。Minor Roboticsでは5〜6人の学生が5か月で概念実証を行う。Newasco案件では技術者の現場訪問と企業側の実務知識を合わせ、RFIDの誤読条件を絞って試作した。",
       "comparison": "業界全体の規格化より、企業の現場課題を作業者と整理して試作する役割。公式に『完成品は製造しない』と説明しており、後続供給者の責任が残る。",
-      "photoReading": "旧拠点の写真と、現在の設備・試作品を区別する。公式のNewasco案件では、洗濯物のRFIDを一括読取する試作品の配置を確認できる。",
+      "photoReading": "人が操作する教示装置、グリッパー、画面を同じ机に集めたRobot Learningの実験。現拠点外観は2025年移転告知で確認。NewascoのRFID実験写真とは区別。",
       "questions": [
         "個別設備リストと新拠点の機器予約条件",
         "案件費用、補助対象資格、IPの契約条項",
@@ -1844,7 +1864,13 @@
         }
       ]
     },
-    "photoId": "robohouse-former-building"
+    "photoId": "robohouse-robot-learning-apparatus",
+    "extraPhotoIds": [
+      "robohouse-current-building-2025"
+    ],
+    "excludedPhotoIds": [
+      "robohouse-former-building"
+    ]
   },
   {
     "checked": "2026-10-25",
@@ -2177,7 +2203,11 @@
       "sourceUrl": "https://mhub.org/virtual-tour",
       "title": "mHUB Virtual Tour",
       "note": "mHUB公式の施設見学。試作工房と共同作業の空間を動画で見る。"
-    }
+    },
+    "photoId": "mhub-laser-workshop",
+    "extraPhotoIds": [
+      "mhub-electronics-workbench"
+    ]
   },
   {
     "id": "atelier-luma",
@@ -2290,7 +2320,11 @@
     "photoLink": {
       "url": "https://luma.org/en/arles/the-parc-des-ateliers/le-magasin-electrique",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "atelier-luma-materials-workspace",
+    "extraPhotoIds": [
+      "atelier-luma-adaptable-interior"
+    ]
   },
   {
     "id": "waag-fablab-amsterdam",
@@ -2407,7 +2441,11 @@
       "sourceUrl": "https://vimeo.com/688065969",
       "title": "Overview of the FabLab",
       "note": "Waag Futurelab公式のFabLab案内動画（2022年3月14日公開、18分44秒）。Vimeo公開ページJSON-LDに著作者・埋め込みURL・日時を確認。"
-    }
+    },
+    "photoId": "waag-fablab-workbench-museumnacht",
+    "extraPhotoIds": [
+      "waag-fablab-3d-printing-2011"
+    ]
   },
   {
     "id": "volvo-campx",
@@ -2520,7 +2558,9 @@
       "sourceUrl": "https://www.volvogroup.com/en/news-and-media/news/2019/mar/news-3249994.html",
       "title": "This is CampX",
       "note": "Volvo Group公式のCampX開設時紹介（2019年）。公式発表からリンク。"
-    }
+    },
+    "photoId": "campx-incubator-glazed-workspace-2023",
+    "extraPhotoIds": []
   },
   {
     "id": "station-f",
@@ -2725,7 +2765,9 @@
     "photoLink": {
       "url": "https://greentown.org/boston",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "greentown-labs-shared-entrance-2019",
+    "extraPhotoIds": []
   },
   {
     "id": "brainport-industries-campus",
@@ -2847,7 +2889,11 @@
     "photoLink": {
       "url": "https://www.brainportindustriescampus.com/en/open-innovation-under-a-single-roof/",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "bic-flexible-manufacturing-demonstration",
+    "extraPhotoIds": [
+      "bic-shared-campus-entrance-2019"
+    ]
   },
   {
     "id": "mars-discovery-district",
@@ -2960,7 +3006,11 @@
     "photoLink": {
       "url": "https://www.marsdd.com/media-centre/press-kit/",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "mars-incubator-lab-benches",
+    "extraPhotoIds": [
+      "mars-incubator-shared-lab"
+    ]
   },
   {
     "id": "biopolis-singapore",
@@ -3066,7 +3116,11 @@
     "photoLink": {
       "url": "https://www.jtc.gov.sg/find-space/biopolis",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "biopolis-research-blocks",
+    "extraPhotoIds": [
+      "biopolis-cafe-common-space"
+    ]
   },
   {
     "id": "munich-urban-colab",
@@ -3172,7 +3226,11 @@
     "photoLink": {
       "url": "https://www.munich-urban-colab.de/en/press",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "munich-urban-colab-wintergarden",
+    "extraPhotoIds": [
+      "munich-urban-colab-coworking"
+    ]
   },
   {
     "id": "tum-robogym",
@@ -3293,7 +3351,12 @@
     "photoLink": {
       "url": "https://www.tum.de/en/news-and-events/all-news/press-releases/details/making-robots-smarter",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "tum-robogym-boxes-2026",
+    "extraPhotoIds": [
+      "tum-robogym-sorting-2026",
+      "tum-robogym-gestures-2026"
+    ]
   },
   {
     "id": "fraunhofer-ipai-robotics",
@@ -3538,7 +3601,11 @@
     "photoLink": {
       "url": "https://developer.nvidia.com/blog/the-machines-that-make-the-machines/",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "nvidia-seattle-assembly-cell-2026",
+    "extraPhotoIds": [
+      "nvidia-seattle-grippers-2026"
+    ]
   },
   {
     "id": "toyota-research-institute-robotics",
@@ -3675,7 +3742,11 @@
     "photoLink": {
       "url": "https://co-training-lbm.github.io/",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "tri-dual-arm-pack-frame-2026",
+    "extraPhotoIds": [
+      "tri-dual-arm-dishes-frame-2026"
+    ]
   },
   {
     "id": "robotics-ai-institute-cambridge",
@@ -3812,7 +3883,11 @@
     "photoLink": {
       "url": "https://rai-inst.com/resources/blog/pushing-the-pace-of-progress/",
       "note": "実験セル・設備・空間を、運営者の公式写真・映像で見る。"
-    }
+    },
+    "photoId": "rai-cambridge-lab-2025",
+    "extraPhotoIds": [
+      "rai-handheld-data-collection-2026"
+    ]
   },
   {
     "id": "aist-eart-waterfront",
@@ -3951,7 +4026,11 @@
     ],
     "checked": "2026-10-25",
     "checkedTimezone": "Asia/Tokyo",
-    "mappingBasis": "ステップへの対応と施設を読む視点は、公開資料に基づくATLASの編集上の解釈です。研究機関自身がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。"
+    "mappingBasis": "ステップへの対応と施設を読む視点は、公開資料に基づくATLASの編集上の解釈です。研究機関自身がこの8ステップを採用している、または工程別の効果が実証されたという意味ではありません。",
+    "photoId": "aist-eart-bimanual-teaching-2026",
+    "extraPhotoIds": [
+      "aist-eart-arm-monitor-2026"
+    ]
   },
   {
     "id": "hmgics-corporate-lab",

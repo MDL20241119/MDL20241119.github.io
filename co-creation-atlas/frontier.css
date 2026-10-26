@@ -95,16 +95,19 @@
 .frontier-extra-photos figcaption{padding:10px 14px}
 .frontier-shared-lead{align-items:start}
 
+/* Shared tracks align the title, lead photograph and body in each result row. */
 @supports(grid-template-rows:subgrid){
   @media screen and (min-width:761px){
-    .frontier-card{display:grid;grid-template-rows:subgrid;grid-row:span 14;row-gap:0}
+    .frontier-card{display:grid;grid-template-rows:subgrid;grid-row:span 15;row-gap:0}
     .frontier-card-heading{display:grid;grid-template-rows:subgrid;grid-row:span 3;row-gap:0}
     .frontier-card-heading>.frontier-card-meta{grid-row:1}
     .frontier-card-heading>h2{grid-row:2}
     .frontier-card-heading>.frontier-facility{grid-row:3}
-    .frontier-card>.frontier-photo{display:grid;grid-template-rows:subgrid;grid-row:span 2;row-gap:0}
-    .frontier-card>.frontier-photo>.frontier-image{grid-row:1;align-self:start;width:100%}
-    .frontier-card>.frontier-photo>figcaption{grid-row:2}
+    .frontier-card>.frontier-gallery{display:grid;grid-template-rows:subgrid;grid-row:span 3;row-gap:0}
+    .frontier-gallery>.frontier-photo{display:grid;grid-template-rows:subgrid;grid-row:1 / span 2;row-gap:0}
+    .frontier-gallery>.frontier-photo>.frontier-image{grid-row:1;align-self:start;width:100%}
+    .frontier-gallery>.frontier-photo>figcaption{grid-row:2}
+    .frontier-gallery>.frontier-gallery-thumbs{grid-row:3;align-self:start}
     .frontier-card-body{display:grid;grid-template-rows:subgrid;grid-row:span 9;row-gap:0}
     .frontier-card-body>.frontier-status{grid-row:1}
     .frontier-card-body>.frontier-mechanism{grid-row:2}
@@ -130,3 +133,45 @@
 
 /* Long official-gallery labels keep their full height on narrow screens. */
 @media(max-width:760px){.frontier-photo-link .frontier-image{aspect-ratio:auto;min-height:240px}.frontier-photo-link .frontier-image>a{height:auto;min-height:240px;padding:20px;gap:12px}}
+
+/* Photographs stay visible: the lead shows the space; the rail adds other views. */
+.frontier-gallery{min-width:0;background:#f5f4ee;border-bottom:var(--line)}
+.frontier-gallery>.frontier-photo{border-bottom:0}
+.frontier-gallery-thumbs{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 12px)/2);gap:12px;overflow-x:auto;overscroll-behavior-x:contain;scroll-snap-type:x proximity;scrollbar-width:thin;padding:12px;border-top:1px solid #c9c8c1;min-width:0;max-width:100%}
+.frontier-gallery-thumbs>.frontier-photo{border:1px solid #b9b9b0;background:#fff;scroll-snap-align:start;min-width:0;display:flex;flex-direction:column}
+.frontier-gallery-thumbs>.frontier-photo:only-child{grid-column:span 2}
+.frontier-gallery-thumbs .frontier-image{height:160px;aspect-ratio:auto;flex-shrink:0}
+.frontier-gallery-thumbs figcaption{padding:9px 10px;font-size:10px;flex:1}
+.frontier-gallery-thumbs figcaption>span{line-height:1.65}
+.frontier-gallery .frontier-image>a{position:relative;cursor:zoom-in}
+.frontier-gallery .frontier-image>a:focus-visible{outline:4px solid var(--yellow);outline-offset:-4px}
+.frontier-gallery .frontier-image>a::after{content:'拡大 ↗';position:absolute;right:8px;bottom:8px;padding:4px 7px;border:1px solid #fff;background:rgba(15,20,30,.82);color:#fff;font-size:10px;font-weight:800;line-height:1.5;pointer-events:none}
+.frontier-card-heading h2,.frontier-facility,.frontier-mechanism{overflow-wrap:anywhere}
+.frontier-card-meta{flex-wrap:wrap}
+.frontier-filter-line>*{min-width:0;max-width:100%}
+.frontier-filter-line label{min-width:min(320px,100%)}
+.frontier-visual-details>summary,.frontier-evidence>summary{line-height:1.75;padding:10px 0}
+.frontier-case-link{line-height:1.8}
+.frontier-lightbox{width:min(1180px,calc(100vw - 28px));max-width:calc(100vw - 28px);max-height:calc(100dvh - 28px);padding:0;border:var(--line);background:#121727;color:#fff;overflow:auto}
+.frontier-lightbox::backdrop{background:rgba(10,13,24,.9)}
+.frontier-lightbox-header{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:12px 18px;border-bottom:1px solid #444857;position:sticky;top:0;background:#121727;z-index:1}
+.frontier-lightbox-header h2{font-size:14px;line-height:1.65;min-width:0}
+.frontier-lightbox button{flex-shrink:0;min-height:44px;min-width:44px;padding:8px 13px;border:1px solid #fff;background:var(--yellow);color:var(--ink);font:inherit;font-size:12px;font-weight:800;cursor:pointer}
+.frontier-lightbox button:focus-visible,.frontier-lightbox a:focus-visible{outline:3px solid var(--yellow);outline-offset:3px}
+.frontier-lightbox img{display:block;width:100%;height:auto;max-height:calc(100dvh - 180px);object-fit:contain;background:#0b1020}
+.frontier-lightbox-caption{padding:14px 20px;font-size:12px;line-height:1.85;overflow-wrap:anywhere}
+.frontier-lightbox-caption a{text-decoration:underline;color:var(--yellow)}
+.frontier-lightbox-caption p+p{margin-top:8px}
+@media(max-width:760px){
+  .frontier-gallery{display:block}
+  .frontier-gallery-thumbs{gap:10px;padding:10px;grid-auto-columns:calc((100% - 10px)/2)}
+  .frontier-gallery-thumbs .frontier-image{height:130px}
+  .frontier-gallery-thumbs figcaption{font-size:9px;padding:8px}
+  .frontier-card-heading h2{font-size:clamp(21px,5.8vw,24px)}
+  .frontier-card-meta{row-gap:5px}
+  .frontier-lightbox-header{padding:10px 12px;gap:10px}
+  .frontier-lightbox-header h2{font-size:12px}
+  .frontier-lightbox-caption{font-size:11px;padding:12px 14px}
+}
+@media(prefers-reduced-motion:reduce){.frontier-gallery-thumbs{scroll-behavior:auto}}
+@media print{.frontier-gallery{display:block}.frontier-gallery-thumbs{display:grid;grid-auto-flow:row;grid-template-columns:1fr 1fr;overflow:visible}.frontier-gallery-thumbs>.frontier-photo:only-child{grid-column:1/-1}.frontier-lightbox{display:none}}

@@ -78,3 +78,46 @@
   render();
   controls.hidden = false;
 })();
+
+/* Real image links remain usable without JS. The dialog preserves each photo's
+   own caption, attribution and rights details and restores keyboard focus. */
+(() => {
+  'use strict';
+  const dialog = document.querySelector('.frontier-lightbox');
+  if (!dialog || typeof dialog.showModal !== 'function') return;
+  const imageBox = dialog.querySelector('[data-photo-viewer-image]');
+  const captionBox = dialog.querySelector('.frontier-lightbox-caption');
+  const title = dialog.querySelector('h2');
+  let opener;
+  document.querySelectorAll('.frontier-photo-open').forEach(link => {
+    link.addEventListener('click', event => {
+      if (event.ctrlKey || event.metaKey || event.shiftKey || event.altKey || event.button !== 0) return;
+      event.preventDefault();
+      opener = link;
+      const original = link.querySelector('img');
+      const image = new Image();
+      image.src = link.href;
+      image.alt = original.alt;
+      image.width = original.width;
+      image.height = original.height;
+      imageBox.replaceChildren(image);
+      title.textContent = link.closest('.frontier-card')?.querySelector('.frontier-facility')?.textContent || '写真を拡大して見る';
+      const caption = link.closest('figure').querySelector('figcaption');
+      captionBox.replaceChildren(caption.cloneNode(true));
+      // Credits are directly visible in the enlarged view.
+      captionBox.querySelectorAll('details').forEach(details => { details.open = true; });
+      dialog.showModal();
+    });
+  });
+  dialog.querySelector('[data-photo-close]').addEventListener('click', () => dialog.close());
+  dialog.addEventListener('click', event => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (event.clientX < bounds.left || event.clientX > bounds.right || event.clientY < bounds.top || event.clientY > bounds.bottom) dialog.close();
+  });
+  dialog.addEventListener('close', () => {
+    imageBox.replaceChildren();
+    captionBox.replaceChildren();
+    opener?.focus({preventScroll: true});
+  });
+})();

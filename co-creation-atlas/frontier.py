@@ -6,7 +6,7 @@ from pathlib import Path
 from urllib.parse import urlsplit
 
 ROOT = Path(__file__).resolve().parent
-VERSION = '20261025.3'
+VERSION = '20261026.1'
 AXES = [('hard', 'HARD', 'ハード', '場所・設備のつくり方'),
         ('soft', 'SOFT', 'ソフト', '試し方・続け方'),
         ('partners', 'PARTNERS', 'パートナー', '役割・つながり方')]
@@ -88,6 +88,12 @@ def read(root=ROOT):
 def source(url, title):
     return f'<a href="{e(url)}" target="_blank" rel="noopener noreferrer">{e(title)} ↗</a>'
 
+def case_photos(c, media):
+    """Every selection needs a real photograph, including without JavaScript."""
+    photos = [m for m in media if m['caseId'] == c['id'] and m.get('kind') != 'diagram' and m['assetId'] not in c.get('excludedPhotoIds', [])]
+    preferred = ([c['photoId']] if c.get('photoId') else []) + c.get('extraPhotoIds', [])
+    return sorted(photos, key=lambda m: preferred.index(m['assetId']) if m['assetId'] in preferred else len(preferred))
+
 def photo(c, media, eager=False):
     if c.get('visualEmbed') and not c.get('photoId'):
         v = c['visualEmbed']
@@ -98,15 +104,29 @@ def photo(c, media, eager=False):
     m = next(m for m in media if m['caseId']==c['id'] and m.get('kind')!='diagram' and (not c.get('photoId') or m['assetId']==c['photoId']))
     src = m.get('remote') or '../'+m['local']
     if m.get('revision') and not m.get('remote'): src += '?v='+m['revision']
-    no_crop = m.get('noCrop') or m.get('status')=='cleared-editorial-only'
+    no_crop = m.get('noCrop') or m.get('status') in {'cleared-editorial-only', 'editorial-quotation'}
     width, height = m.get('dimensions', [1600,1000])
     image = f'<img src="{e(src)}" alt="{e(m["alt"])}" width="{width}" height="{height}" loading="{"eager" if eager else "lazy"}" decoding="async">'
     if m.get('status')=='provider-embed':
         image = f'<a data-flickr-embed="true" href="{e(m["sourceUrl"])}" target="_blank" rel="noopener noreferrer" aria-label="{e(c["name"])}の写真を掲載元で見る">{image}</a>'
+    else:
+        image = f'<a class="frontier-photo-open" href="{e(src)}" target="_blank" rel="noopener noreferrer" aria-label="{e(c["name"])}：{e(m["alt"])}（写真を拡大）">{image}</a>'
     rights = (m.get('licenseUrl') if m.get('status')=='cleared-cc' else m.get('rightsUrl')) or m.get('rightsUrl') or m.get('licenseUrl') or m['sourceUrl']
     caption = m.get('scopeLabel') or m.get('caption') or m['alt']
-    credit = f'<figcaption><span>{e(caption)}</span><details><summary>写真の出典・利用条件</summary><p>PHOTO: {e(m["credit"])} · {source(m["sourceUrl"],"掲載元")} · {source(rights,m["license"])}</p><p>{e(m.get("imageDate", ""))} {e(m.get("changes", ""))}</p><p>{e(m.get("caption", ""))}</p></details></figcaption>'
+    credit = f'<figcaption><span>{e(caption)}</span><details><summary>写真の出典・利用条件</summary><p>PHOTO: {e(m["credit"])} · {source(m["sourceUrl"],"掲載元")} · {source(rights,m["license"])}</p><p>{e(m.get("imageDate", ""))} {e(m.get("changes", ""))}</p><p>{e(m.get("caption", ""))}</p><p>{e(m.get("rightsNote", ""))}</p></details></figcaption>'
     return f'<figure class="frontier-photo{" no-crop" if no_crop else ""}"><div class="frontier-image">{image}</div>{credit}</figure>'
+
+def gallery(c, media, eager=False):
+    photos = case_photos(c, media)
+    assert photos, '先進事例の写真がありません: '+c['id']
+    lead = photo(dict(c, photoId=photos[0]['assetId']), media, eager)
+    rail = ''
+    if len(photos) > 1:
+        rail = '<div class="frontier-gallery-thumbs" aria-label="別の角度から見る写真">'+''.join(photo(dict(c, photoId=m['assetId']), media) for m in photos[1:])+'</div>'
+    return f'<div class="frontier-gallery" data-photo-count="{len(photos)}">{lead}{rail}</div>'
+
+def photo_dialog():
+    return '<dialog class="frontier-lightbox" aria-labelledby="frontier-photo-title"><div class="frontier-lightbox-header"><h2 id="frontier-photo-title">写真を拡大して見る</h2><button type="button" data-photo-close autofocus>閉じる ×</button></div><div data-photo-viewer-image></div><div class="frontier-lightbox-caption"></div></dialog>'
 
 def step(s, primary):
     return f'<div class="frontier-step {"primary" if primary else "secondary"}" data-step="{s["number"]}"><span class="frontier-step-role">{"特に活かせる" if primary else "あわせて活かせる"}</span><a href="../learn/step-{s["number"]:02d}/"><b>{s["number"]:02d}</b><strong>{e(s["title"])}</strong><span aria-hidden="true">↗</span></a><p>{e(s["why"])}</p></div>'
@@ -144,15 +164,11 @@ def physical_ai_detail(c):
     return '<section class="frontier-lab-detail frontier-physical-ai-detail"><h3>フィジカルAIを動かす実験環境</h3><dl>'+items+'</dl></section>'
 
 def photo_notes(c, media):
-    """Keep optional visual research in one shared card row, without hiding the lead photo."""
+    """Keep reading notes separate from the always-visible photographs."""
     content = lab_visuals(c)
-    if c.get('extraPhotoIds'):
-        content += '<div class="frontier-extra-photos"><h3>別の角度から空間を見る</h3>'
-        content += ''.join(photo(dict(c, photoId=pid), media) for pid in c['extraPhotoIds'])
-        content += '</div>'
     if not content:
         return '<div class="frontier-visuals-row" aria-hidden="true"></div>'
-    return '<div class="frontier-visuals-row"><details class="frontier-visual-details"><summary>施設・空間の写真を見る <span aria-hidden="true">＋</span></summary><div class="frontier-visual-details-inner">'+content+'</div></details></div>'
+    return '<div class="frontier-visuals-row"><details class="frontier-visual-details"><summary>写真で読み解く、空間の特徴 <span aria-hidden="true">＋</span></summary><div class="frontier-visual-details-inner">'+content+'</div></details></div>'
 
 def shared_lab_feature(rows, media):
     labs = [c for c in rows if c.get('sharedLab')]
@@ -175,7 +191,7 @@ def card(c, media, eager=False):
         status = f'<div class="frontier-status"><strong>{e(c["statusLabel"])}</strong><span>{e(c.get("statusNote", ""))}</span></div>'
     out = [f'<article class="frontier-card" id="case-{e(c["id"])}" data-case-id="{e(c["id"])}" data-axis="{c["lens"]}" data-focus="{" ".join(focus_tags(c))}" data-steps="{c["primaryStep"]["number"]} {c["secondaryStep"]["number"]}">',
            f'<div class="frontier-card-heading"><div class="frontier-card-meta"><span class="frontier-axis-label">{axis[1]} / {axis[2]}</span><span>{e(c["country"])}</span></div><h2>{e(c["headline"])}</h2><p class="frontier-facility">{e(c["name"])} <span>／ {e(c["city"])}</span></p></div>',
-           photo(c, media, eager),
+           gallery(c, media, eager),
            '<div class="frontier-card-body">'+status,
            f'<p class="frontier-mechanism">{e(c["mechanism"])}</p>',
            f'<div class="frontier-insight"><span>ここが面白い</span><p>{e(c["interesting"])}</p></div>',
@@ -222,7 +238,7 @@ def build(root, media, head, header, footer, base):
     out.append(f'<noscript><p class="frontier-noscript">全{len(rows)}件を表示しています。絞り込みはJavaScriptを有効にすると使えます。</p></noscript><div class="frontier-result-line"><p id="frontier-result-status" role="status" aria-live="polite" aria-atomic="true"><strong>{len(rows)}</strong> 件 ／ すべての切り口・ステップ</p><a href="../#start">8ステップの全体像を見る ↗</a></div><div id="frontier-empty" class="frontier-empty" hidden><p class="frontier-tab-en">NO MATCH</p><h2>この組み合わせの選定事例は、まだありません。</h2><p>取り組みが存在しない、という意味ではありません。条件を変えて探してみてください。</p><button type="button" data-frontier-reset>すべての事例に戻す →</button></div><div class="frontier-grid" id="frontier-results">')
     for i,c in enumerate(rows): out.append(card(c, media, i<2))
     out.append('</div></section><section id="frontier-policy" class="frontier-policy"><div><p class="eyebrow">HOW TO READ</p><h2>新しさを、<br>実践に変えるために。</h2></div><div><p><strong>世界の先進事例を、仕組みで選ぶ。</strong><br>世界の研究・試作・実証拠点から、設備・運営・連携の工夫が一次資料で具体的に読める事例を編集選定しています。世界全域の網羅調査、公式の世界順位、効果の優劣を示すものではありません。掲載順に優劣はありません。</p><p><strong>ステップへの対応は、ATLASの分析。</strong><br>主に役立つステップと、あわせて役立つステップを、その理由とともに示しています。各施設がこの8ステップを採用しているという意味や、工程別の効果の保証ではありません。</p><p><strong>実績、計画、限界を分ける。</strong><br>運営者の報告は独立した効果測定と区別し、計画・実証終了・標準化への移管などの状態も表示。写真の時点・対象範囲・権利は各写真の詳細に、根拠と確認日は各カードの一次資料に記載しています。</p><p class="frontier-date">選定・資料確認：2026年10月25日（日本時間）</p><div class="frontier-policy-links"><a href="../#start">8ステップで学ぶ →</a><a href="../#explore">全115事例を探す →</a></div></div></section></main>')
-    out.append(footer().replace('学習版 3.3 · 更新日 2026.10.07', 'フロンティア選定 · 確認日 2026.10.25')+'</body></html>')
+    out.append(photo_dialog()+footer().replace('学習版 3.3 · 更新日 2026.10.07', 'フロンティア選定 · 写真・レイアウト更新 2026.10.26')+'</body></html>')
     dest = root/'frontier'; dest.mkdir(exist_ok=True)
     (dest/'index.html').write_text(''.join(out))
     # Add one high-visibility entry, after the existing hero and before the eight steps.
@@ -234,7 +250,7 @@ def build(root, media, head, header, footer, base):
     physical_ai_entry = f'<a class="frontier-entry-topic" href="frontier/?focus=physical-ai#frontier-explore">フィジカルAIのラボ {physical_ai_count}件を読む →</a>' if physical_ai_count else ''
     teaser = f'<aside class="frontier-entry"><div><p class="eyebrow">WORLD FRONTIERS / 世界の先進事例</p><h2>ハード・ソフト・パートナーから、<br>面白い共創の仕組みを発見する。</h2><p>各事例で「活かせるステップ」と、その理由もわかる。</p><a class="frontier-entry-topic" href="frontier/?focus=shared-labs#frontier-explore">ARENA2036のような共用研究・試作拠点 {shared_count}件を読む →</a>{physical_ai_entry}</div><a href="frontier/">3つの切り口から探す <span aria-hidden="true">↗</span></a></aside>'
     page = page.replace(marker, teaser+marker, 1)
-    page = page.replace('</head>', f'<link rel="stylesheet" href="frontier.css?v={VERSION}"></head>', 1)
+    page = page.replace('</head>', f'<link rel="stylesheet" href="frontier.css?v={VERSION}"><link rel="stylesheet" href="atlas-layout.css?v={VERSION}"></head>', 1)
     home.write_text(page)
     # Add a return route to the freshly generated detail pages of this selection.
     for c in rows:

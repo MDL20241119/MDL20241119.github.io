@@ -1,0 +1,54 @@
+/* Result cards share tracks without clipping descriptions or changing the Atlas palette. */
+.cards{align-items:stretch}
+.cards .case-card{min-width:0;background:#fff}
+.cards .case-card[hidden]{display:none!important}
+.cards .case-card>a:first-child{display:block;min-width:0;background:#eeeae0}
+.cards .card-photo{width:100%;height:auto;aspect-ratio:4/3}
+.cards .card-photo-strip{background:#eeeae0;min-width:0}
+.cards .card-photo-strip img{height:150px}
+.cards .card-photo-count{display:flex;align-items:center;justify-content:flex-end;min-height:38px;line-height:1.65}
+.cards .card-body{min-width:0}
+.cards .card-body h3{line-height:1.45;overflow-wrap:anywhere}
+.cards .card-body .tagline{overflow-wrap:anywhere}
+.cards .card-body .facility-axes{min-width:0}
+.cards .facility-axes dd{min-width:0;overflow-wrap:anywhere}
+.cards .card-foot{flex-wrap:wrap;gap:10px 14px;margin-top:auto}
+.cards .card-foot>a{max-width:100%;min-height:44px;display:flex;align-items:center;white-space:normal}
+.cards .card-foot>a strong{font-size:14px}
+.cards .card-credit{min-width:0;overflow-wrap:anywhere;line-height:1.75}
+.cards .case-card:hover .card-photo.no-crop img{transform:none}
+.frontier-entry>div{min-width:0}
+.frontier-entry>a{white-space:normal;min-width:210px;line-height:1.8}
+.frontier-entry-topic{overflow-wrap:anywhere}
+@supports(grid-template-rows:subgrid){
+  @media screen and (min-width:761px){
+    .cards{row-gap:0}
+    .cards .case-card{display:grid;grid-template-rows:subgrid;grid-row:span 15;row-gap:0;background:#f8f7f2}
+    .cards .case-card>a:first-child{grid-row:1}
+    .cards .card-photo-strip{grid-row:2;align-self:start}
+    .cards .card-photo-count{grid-row:3}
+    .cards .case-card>.card-photo-context{grid-row:4}
+    .cards .card-body{display:grid;grid-template-rows:subgrid;grid-row:5 / span 10;row-gap:0;background:#fff}
+    .cards .card-body>.atlas-badges{grid-row:1}
+    .cards .card-body>.card-place{grid-row:2}
+    .cards .card-body>h3{grid-row:3}
+    .cards .card-body>.card-learning-label{grid-row:4}
+    .cards .card-body>.tagline{grid-row:5}
+    .cards .card-body>.facility-axes{display:grid;grid-template-rows:subgrid;grid-row:6 / span 3;row-gap:0}
+    .cards .facility-axes>div:nth-child(1){grid-row:1}
+    .cards .facility-axes>div:nth-child(2){grid-row:2}
+    .cards .facility-axes>div:nth-child(3){grid-row:3}
+    .cards .card-body>.card-stage{grid-row:9}
+    .cards .card-body>.card-foot{grid-row:10;align-self:end;margin-top:16px}
+    .cards .case-card>.card-credit{grid-row:15;background:#fff}
+  }
+}
+@media(max-width:760px){
+  .cards .case-card{background:#fff}
+  .cards .card-photo-strip img{height:135px}
+  .cards .card-body{padding:22px 20px}
+  .cards .card-body h3{font-size:25px}
+  .cards .card-foot{margin-top:18px}
+  .frontier-entry>a{min-width:0;width:100%}
+}
+@media print{.cards .case-card,.cards .card-body{display:block}.cards .card-photo-strip{display:none}}

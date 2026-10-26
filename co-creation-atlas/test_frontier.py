@@ -12,13 +12,14 @@ SHARED_IDS = {'arena2036', 'hvm-catapult', 'newlab-brooklyn', 'michigan-central-
 
 class Parser(HTMLParser):
     def __init__(self, page):
-        super().__init__(); self.cards=[]; self.photos=[]; self.links=[]; self.steps=[]; self.feed(page)
+        super().__init__(); self.cards=[]; self.photos=[]; self.links=[]; self.steps=[]; self.galleries=[]; self.feed(page)
     def handle_starttag(self, tag, attrs):
         attrs=dict(attrs)
         if tag=='article' and attrs.get('class')=='frontier-card':self.cards.append(attrs)
         if tag=='img':self.photos.append(attrs)
         if tag=='a':self.links.append(attrs.get('href',''))
         if tag=='div' and 'frontier-step ' in attrs.get('class',''):self.steps.append(attrs)
+        if tag=='div' and attrs.get('class')=='frontier-gallery':self.galleries.append(attrs)
 
 def main():
     rows, stages=frontier.read(ROOT)
@@ -37,8 +38,15 @@ def main():
     assert all(c.get('statusLabel') and c.get('statusNote') for c in rows)
     page=(ROOT/'frontier/index.html').read_text();parsed=Parser(page)
     assert len(parsed.cards)==len(rows)
-    photo_leads=sum(bool(c.get('photoId') or not (c.get('photoLink') or c.get('visualEmbed'))) for c in rows)
-    assert len(parsed.photos)==photo_leads+1+sum(len(c.get('extraPhotoIds',[])) for c in rows)
+    media=frontier.editorial_media(ROOT)
+    # A provider link or video is not photo coverage. Every card must contain a
+    # visible real photo, with all additional angles outside collapsed details.
+    expected_photos=sum(len(frontier.case_photos(c,media)) for c in rows)
+    assert len(parsed.photos)==expected_photos+1
+    assert len(parsed.galleries)==len(rows)
+    assert all(int(g['data-photo-count'])>0 for g in parsed.galleries)
+    assert 'frontier-photo-link' not in page and '<iframe' not in page
+    assert page.count('class="frontier-lightbox"')==1
     assert {c['data-case-id'] for c in parsed.cards if 'shared-labs' in c.get('data-focus','').split()}==SHARED_IDS
     assert len(parsed.steps)==2*len(rows)
     assert {c['data-case-id'] for c in parsed.cards if 'physical-ai' in c.get('data-focus','').split()}=={c['id'] for c in physical}
@@ -83,7 +91,7 @@ def main():
     facility_count=sum(bool(c.get('sharedLab') or c.get('facilityStudy')) for c in rows)
     assert page.count('class="frontier-lab-visuals"')==facility_count
     assert page.count('class="frontier-lab-detail"')==facility_count
-    assert page.count('class="frontier-visual-details"')==sum(bool(c.get('sharedLab') or c.get('facilityStudy') or c.get('extraPhotoIds')) for c in rows)
+    assert page.count('class="frontier-visual-details"')==sum(bool(c.get('sharedLab') or c.get('facilityStudy')) for c in rows)
     home=(ROOT/'index.html').read_text()
     assert home.count('class="frontier-entry"')==1
     assert home.index('class="frontier-entry"')<home.index('class="step-home-grid"')
@@ -96,7 +104,9 @@ def main():
     extension=json.loads((ROOT/'data/frontier-media.json').read_text())
     for m in extension:
         assert all(m.get(key) for key in ['assetId','caseId','sourceUrl','credit','alt','license','licenseUrl','imageDate','dimensions'])
-        assert m.get('status') in {'cleared-cc','cleared-editorial-only','provider-embed'}
+        assert m.get('status') in {'cleared-cc','cleared-editorial-only','provider-embed','editorial-quotation'}
+        if m.get('status')=='editorial-quotation':
+            assert m.get('noCrop') and m.get('rightsNote'),m['assetId']
         assert m.get('remote') or ((ROOT/m['local']).is_file() and (ROOT/m['local']).stat().st_size>0)
     print(f'PASS: {len(rows)} source-backed selections, axis counts {dict(counts)}, original 16 retained, 7 shared research factories, all 8 steps, attributed space photos and valid external cases; 115 existing cases retained.')
 
