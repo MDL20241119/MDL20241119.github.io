@@ -90,3 +90,55 @@
  .opportunity-program #benefits .opportunity-total,.opportunity-summary .opportunity-total{font-size:100px}
  .opportunity-program #benefits .opportunity-heading-word,.opportunity-summary .opportunity-heading-word{font-size:35px}
 }
+
+/* Open participation and hands-on steps. */
+.opportunity-program .program-welcome{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:18px 32px;margin:24px 0;padding:24px 0;border-block:3px solid #e68149;color:#111}
+.opportunity-program .welcome-audience{align-self:center;min-width:0}
+.opportunity-program .welcome-audience>strong{display:block;font-size:clamp(28px,3vw,42px);font-weight:900;line-height:1.4;letter-spacing:-.055em}
+.opportunity-program .welcome-audience>p{margin:8px 0 0;font-size:16px;line-height:1.6}
+.opportunity-program .welcome-price{display:flex;flex-direction:column;justify-content:center;gap:6px}
+.opportunity-program .welcome-price>span{font-size:14px;font-weight:900;line-height:1.5}
+.opportunity-program .welcome-price>strong{font-size:clamp(48px,5.2vw,72px);font-weight:900;line-height:1.15;letter-spacing:-.055em;color:#a4491c;white-space:nowrap}
+.opportunity-program .welcome-services{grid-column:1/-1;display:grid;grid-template-columns:auto minmax(0,1fr);align-items:center;gap:24px;padding-top:16px;border-top:1px solid #bbb}
+.opportunity-program .welcome-services>p{margin:0;font-size:14px;font-weight:900;line-height:1.6}
+.opportunity-program .welcome-services>ul{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px;margin:0;padding:0;list-style:none}
+.opportunity-program .welcome-services li{margin:0;padding:10px;text-align:center;background:#fff3e9;border:1px solid #e68149;font-size:clamp(18px,2.2vw,30px);font-weight:900;line-height:1.4;letter-spacing:-.05em;white-space:nowrap}
+.opportunity-program .program-participation{font-size:15px;line-height:1.7}
+.opportunity-program .program-participation>strong{font-weight:900}
+.program-open-invite{margin-top:24px;padding:24px 0;border-top:3px solid #e68149}
+.program-open-invite>strong{display:block;font-size:clamp(28px,3.2vw,44px);font-weight:900;line-height:1.4;letter-spacing:-.05em}
+.program-open-invite>p{margin:10px 0 0;font-size:16px;line-height:1.8}
+.opportunity-program .process-flow{align-items:stretch}
+.opportunity-program .process-step,.opportunity-program .process-step:nth-child(n){grid-template-rows:auto auto minmax(96px,1fr) auto}
+.opportunity-program .process-step>.step-activity{grid-column:1/-1;grid-row:3;margin:0;font-size:16px;line-height:1.8}
+.opportunity-program .process-step>.step-deliverable{grid-column:1/-1;grid-row:4;align-self:end;display:block;min-width:0;margin-top:18px;padding-top:14px;border-top:1px solid #777}
+.opportunity-program .step-deliverable>span{display:block;font-size:12px;line-height:1.5;letter-spacing:0;color:#e8e8e8}
+.opportunity-program .step-deliverable>strong{display:block;margin-top:6px;font-size:20px;font-weight:900;line-height:1.5;letter-spacing:-.035em}
+.opportunity-program .process-step h3{min-height:2.8em}
+@media(max-width:900px){
+ .opportunity-program .welcome-services{grid-template-columns:1fr;gap:10px}
+ .opportunity-program .welcome-services li{font-size:clamp(18px,3vw,26px)}
+}
+@media(max-width:760px){
+ .opportunity-program .program-welcome{grid-template-columns:1fr;gap:16px;margin:20px 0;padding:18px 0}
+ .opportunity-program .welcome-audience>strong{font-size:clamp(24px,6.7vw,36px)}
+ .opportunity-program .welcome-audience>p{font-size:14px}
+ .opportunity-program .welcome-price{flex-direction:row;align-items:center;justify-content:space-between;gap:12px}
+ .opportunity-program .welcome-price>span{font-size:13px}
+ .opportunity-program .welcome-price>strong{font-size:clamp(42px,12vw,64px)}
+ .opportunity-program .welcome-services>ul{gap:6px}
+ .opportunity-program .welcome-services li{padding:10px 3px;font-size:clamp(14px,4vw,22px)}
+ .opportunity-program .process-step,.opportunity-program .process-step:nth-child(n){grid-template-rows:auto auto auto auto}
+ .opportunity-program .process-step h3{min-height:0;font-size:clamp(29px,8.3vw,38px);line-height:1.4}
+ .opportunity-program .step-deliverable>strong{font-size:20px}
+}
+@media print{
+ .opportunity-program .program-welcome{break-inside:avoid;padding:12px 0;gap:12px 24px}
+ .opportunity-program .welcome-audience>strong{font-size:22pt}
+ .opportunity-program .welcome-price>strong{font-size:36pt}
+ .opportunity-program .welcome-services{grid-template-columns:1fr;gap:8px}
+ .opportunity-program .welcome-services li{font-size:14pt}
+ .opportunity-program .process-step h3{font-size:18pt}
+ .opportunity-program .process-step>.step-activity{font-size:9pt;line-height:1.6}
+ .opportunity-program .step-deliverable>strong{font-size:11pt}
+}
