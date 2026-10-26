@@ -4,19 +4,6 @@
   "photo_publication": "公式掲載写真を出典付きで掲載。登壇候補者の承諾は未確認です。",
   "profiles": [
     {
-      "id": "ueno-naoaki",
-      "name": "植野 直亮",
-      "company": "モビリティ専門家",
-      "title": "講師・プログラムプロデュース",
-      "participation_status": "講師・プログラムプロデュース",
-      "bio": "地域の課題解決に取り組むプログラムを企画し、講師として議論・実践を進める。",
-      "sources": [
-        "https://rev-m.com/event_schedule/mo2025/speakers/"
-      ],
-      "photo_source": "https://rev-m.com/event_schedule/mo2025/speakers/",
-      "photo_asset": "assets/ueno-naoaki.jpg"
-    },
-    {
       "id": "hidaka-yosuke",
       "name": "日高 洋祐",
       "company": "株式会社MaaS Tech Japan",
@@ -44,6 +31,19 @@
       "talk_candidate": "共創でつくる、まちとモビリティの未来",
       "photo_asset": "assets/miyadai-haruyuki.webp",
       "participation_status": "登壇候補・承諾未確認"
+    },
+    {
+      "id": "ueno-naoaki",
+      "name": "植野 直亮",
+      "company": "モビリティ専門家",
+      "title": "講師・プログラムプロデュース",
+      "participation_status": "講師・プログラムプロデュース",
+      "bio": "地域の課題解決に取り組むプログラムを企画し、講師として議論・実践を進める。",
+      "sources": [
+        "https://rev-m.com/event_schedule/mo2025/speakers/"
+      ],
+      "photo_source": "https://rev-m.com/event_schedule/mo2025/speakers/",
+      "photo_asset": "assets/ueno-naoaki.jpg"
     }
   ],
   "selection_policy": "登壇候補者はテーマと日程に応じて調整します。",
