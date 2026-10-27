@@ -103,62 +103,56 @@ class PDF:
 
 def build(p):
  p.header(1)
- p.text('来年度の準備を、<br/>無料の専門支援で前に進める',M,49,CW,65,24,30.5,True,INK)
- # The reference's large message, framed content and navy headings.
- p.panel(M,126,CW,76)
- p.text('どなたでも',M+15,134,245,18,11.5,17,True,NAVY)
- p.text('参加無料',M+13,154,250,43,31,41,True,NAVY)
- p.rect(299,139,.6,49,LINE)
- p.text('2026年11月〜2027年2月',315,137,238,29,19,28,True,NAVY)
- p.text('自治体・企業・地域事業者・住民・学生など、<br/>関心のある方が参加できます。',315,170,238,27,9.5,13)
- p.text('本プログラム内のサービス開発・アプリ開発・データ分析も無料',M,209,CW,16,10,14,True,NAVY,align=1)
+ # Read from national project, to shared vision, this year's activity and benefits.
+ p.text('01  国土交通省の人材・組織育成事業の一環として',M,49,CW,24,14.4,22,True,NAVY)
+ p.text('令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,79,CW,27,9.2,13)
+ p.text('トヨタカローラ大分株式会社が採択。株式会社モビリティデザインラボと連携して企画・運営。',M,111,CW,16,9.3,14,False,MUTED)
+ p.text('大分未来モビリティ<br/>コンソーシアムを立ち上げる',M,140,CW,63,24.5,30.5,True,INK)
+ p.text('JMSで発表した構想。設立に向けた準備を進めます。',M,207,CW,17,9.7,14,False,MUTED)
 
- gap=16;half=(CW-gap)/2;right=M+half+gap
- p.panel(M,236,half,130);p.band(M,236,half,'01  コンソーシアムを立ち上げる',11.2)
- p.text('JMSで発表した設立構想',M+12,270,half-24,20,12.5,18,True,NAVY)
- p.text('自治体・企業・大学・地域が課題・技術・人材を持ち寄り、具体的なサービスや実証を進める枠組みをつくります。',M+12,296,half-24,43,9.8,14)
- p.rect(M+10,340,half-20,19,PALE)
- p.text('e-Palette活用・自動運転実証を起点に',M+17,342,half-34,15,9.3,13,True,NAVY)
- p.panel(right,236,half,130);p.band(right,236,half,'02  国交省の採択事業で人材育成',11.2)
- p.text('構想の実現に向け、地域で実践',right+12,270,half-24,20,12,18,True,NAVY)
- p.text('トヨタカローラ大分株式会社が採択。<br/>株式会社モビリティデザインラボ<br/>（MobilityDesignLab）と連携して企画・運営。',right+12,298,half-24,45,9.8,14)
- p.text('将来は陸・海・空のモビリティに関わる取組みとの連携を目指します。',M,373,CW,16,9.3,14,False,MUTED)
- p.text('制度：令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,394,CW,27,8.8,12.4,False,MUTED)
+ p.panel(M,233,CW,100);p.band(M,233,CW,'02  VISION / コンソーシアムが目指す大分',12.5,h=23)
+ p.text('大分をモビリティで、もっと元気に。',M+13,264,CW-26,33,23,31,True,NAVY)
+ p.text('人口減少の抑制に貢献し、暮らし・仕事・交流が続く大分を目指す。<br/>e-Palette活用や自動運転実証を起点に、将来は陸・海・空の取組みとの連携へ。',M+13,301,CW-26,29,9.8,13.5)
 
- p.panel(M,434,CW,155);p.band(M,434,CW,'学びを、来年度の検討に使える計画へ',13.0)
- inner=M+12;usable=CW-24;sw=(usable-4*13)/5
- steps=[('課題を共有','困りごと・希望'),('現地調査','現地・利用者を知る'),('サービス企画','使い方・運営を考える'),('アプリ開発','必要な機能を形に'),('データ分析','結果を見て改善')]
- for i,(title,body) in enumerate(steps):
-  x=inner+i*(sw+13)
-  p.panel(x,470,sw,48,PALE)
-  p.text(f'{i+1:02d}',x+6,473,sw-12,23,17,22,True,NAVY,align=1)
-  p.text(title,x+4,498,sw-8,18,11.3,16,True,NAVY,align=1)
-  if i<4:p.arrow(x+sw+2,494,x+sw+11,494)
- p.arrow(inner+4*(sw+13)+sw/2,521,inner+4*(sw+13)+sw/2,531)
- p.panel(inner,535,usable,30,PALE)
- p.text('06',inner+9,540,27,20,13,19,True,NAVY)
- p.text('地域別の実施・実証計画',inner+43,539,269,23,14.5,21,True,NAVY)
- p.text('2027年2月末を目標に',inner+324,543,usable-333,18,9.7,14,True,NAVY,align=2)
- p.text('来年度以降を見据え、車両管理・整備保守、継続的な運営まで計画します。',inner,571,usable,15,9.0,13,False,MUTED,align=1)
+ p.text('いろいろな分野・業界の皆さまと、共創する。',M,345,CW,23,14.4,21,True,NAVY)
+ p.text('自治体・交通・観光・商業・福祉・企業・大学・住民・学生など',M,374,CW,18,10.8,16)
+ p.text('課題・技術・人材を持ち寄り、具体的なサービスや事業を一緒につくります。',M,397,CW,15,9.8,14,False,MUTED)
 
- # Distinct planning tracks; vehicle usage is not labelled autonomous driving.
- for x,title,body in [(M,'e-Paletteのサービス企画','移動・観光・物流・停車中の活用など、<br/>地域に合う使い方を具体化。'),(right,'自動運転実証の計画','ルート・安全性・運営条件を整理し、<br/>来年度以降の実証計画を検討。')]:
-  p.panel(x,601,half,68)
-  p.rect(x+.7,601.7,half-1.4,23,PALE)
-  p.text(title,x+12,605,half-24,19,11.7,17,True,NAVY)
-  p.text(body,x+12,632,half-24,30,9.7,14)
+ p.text('03  今年度の人材育成プログラムで、来年度の事業案をつくる',M,418,CW,23,14.0,21,True,NAVY)
+ leftw=347;gap=18;right=M+leftw+gap;rightw=CW-leftw-gap
+ p.panel(M,450,leftw,91);p.band(M,450,leftw,'今年度  2026年11月〜2027年2月',12.5,h=24)
+ p.text('地域の課題・やってみたいことを、みんなで持ち寄る。',M+12,484,leftw-24,17,10.1,15,True,NAVY)
+ p.text('課題共有→現地調査→企画→アプリ開発→データ分析',M+12,504,leftw-24,15,9.2,13.5)
+ p.text('2027年2月末を目標に、地域別の実施・実証計画へ',M+12,524,leftw-24,14,9.1,13,False,MUTED)
+ p.panel(right,450,rightw,91);p.band(right,450,rightw,'来年度  2027年度〜',11.5,h=24)
+ p.text('実施・実証を検討',right+10,485,rightw-20,24,14.0,21,True,NAVY,align=1)
+ p.text('費用・体制・実施条件を協議し、<br/>事業化や実証につなげる。',right+10,513,rightw-20,27,9.1,12.5,False,INK,align=1)
+ p.arrow(M+leftw+2,500,right-2,500)
 
- p.band(M,682,CW,'今、参加しておきたい3つの理由',13,h=24)
- benefits=[('企画・開発・分析が無料','地域だけで抱え込まず、<br/>専門家・企業と具体化できる'),('地域の希望を構想へ','構想段階から、課題や希望を<br/>サービス・実証候補地の検討へ'),('来年度の準備を先に','実践する仲間と計画をつくり、<br/>庁内説明・次年度の検討に使う')]
- bw=(CW-16)/3
+ p.text('04  参加する6つのメリット',M,553,323,25,15.3,23,True,NAVY)
+ p.text('どなたでも参加無料',357,552,W-M-357,26,18,24,True,NAVY,align=2)
+ p.text('トヨタのe-Paletteのサービス開発と、自動運転実証の検討を、一緒に。',M,583,CW,16,10.1,14.5,True,NAVY)
+ benefits=[
+  ('モビリティサービス企画','課題を、利用者・使い方・運営の具体案へ'),
+  ('e-Paletteを活用したサービス開発','トヨタのe-Paletteを使うサービスを一緒に開発'),
+  ('自動運転実証','ルート・安全性を整理し、実証を一緒に検討'),
+  ('アプリ開発・DX・AI活用','必要な機能を、アプリや試作を通じて形に'),
+  ('データ分析・改善','現地や試作のデータを、サービス改善に活用'),
+  ('車両管理・整備保守','管理・整備保守を含め、続ける体制を考える'),
+ ]
+ half=(CW-12)/2
  for i,(title,body) in enumerate(benefits):
-  x=M+i*(bw+8);p.panel(x,714,bw,65)
-  p.text(title,x+8,722,bw-16,21,12,18,True,NAVY,align=1)
-  p.text(body,x+8,747,bw-16,29,9.1,13,False,INK,align=1)
- p.text('参加を見送ると、無料の専門支援と、地域の希望を構想に届ける機会も見送ることに。',M,789,CW,18,10,15,True,NAVY,align=1)
+  col=i%2;row=i//2;x=M+col*(half+12);y=605+row*59
+  core=i in (1,2)
+  p.panel(x,y,half,51,PALE if core else WHITE,ORANGE if core else NAVY)
+  p.circle(x+16,y+15,9,ORANGE if core else NAVY,i+1,9.8)
+  p.text(title,x+33,y+7,half-44,18,11.0,16,True,NAVY)
+  p.text(body,x+10,y+33,half-20,15,9.2,13)
+ p.text('本プログラム内のサービス開発・アプリ開発・データ分析も無料。<br/>実運行・車両・保険・継続運用・管理保守等は別途協議。地域の希望を構想段階から検討に反映。',M,781,CW,27,9.0,12.5,False,MUTED)
  p.footer(1);p.next();p.header(2)
 
- p.text('11月11日の特別講演と、<br/>プログラムへの参加・相談',M,49,CW,65,24,30.5,True,INK)
+ p.text('05  人材育成プログラムの一環として',M,49,CW,22,12.5,19,True,NAVY)
+ p.text('11月11日 特別講演を開催',M,79,CW,38,24.5,34,True,INK)
  p.panel(M,127,CW,327);p.band(M,127,CW,'日高洋祐氏 特別講演',16,h=28)
  p.photo(M+13,166,84,99)
  p.text('写真：MaaS Tech Japan公式',M+9,270,100,12,6.3,9,False,MUTED)
