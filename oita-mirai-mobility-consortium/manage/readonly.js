@@ -74,7 +74,6 @@ function taskTable(tasks,today,context='all'){
   const name=td(row,'何を');name.append(el('b',t.title,'task-title'));
   if(t.summary)name.append(el('small',t.summary));
   if(!closed(t)&&t.taskKind==='lecture-invitation'&&t.sendStatus==='送信済み')name.append(el('small','送信済み・再送不要'));
-  if(closed(t))appendReferences(name,t);
   if(t.completedSteps?.length)for(const step of t.completedSteps)name.append(el('small','✓ '+step.title+'：確認済み'));
   const detail=el('details',null,'task-detail');detail.append(el('summary','詳細・資料'),el('p',conciseDetail(t)));
   if(!closed(t)&&t.taskKind!=='lecture-invitation')detail.append(el('p','次：'+nextAction(t)));
@@ -99,7 +98,8 @@ function taskTable(tasks,today,context='all'){
   if(overdue(t,today))due.append(el('em','期限超過'));else if(row.classList.contains('task-soon'))due.append(el('em','期限間近'));
   const state=td(row,'状況');const badge=el('span',shortStatus(t),'status');badge.title=STATUS[t.status];state.append(badge);
   if(t.sendStatus&&t.status!=='unconfirmed')state.append(el('small','送信：'+t.sendStatus));
-  if(closed(t)&&t.completionBasis?.scope)state.append(el('small',t.completionBasis.scope+'のみ')); 
+  if(closed(t)&&t.completionBasis?.scope)state.append(el('small',t.completionBasis.scope+'のみ'));
+  if(closed(t)){const artifacts=el('div',null,'completion-artifacts');artifacts.append(el('b','成果物・資料','artifact-label'));appendReferences(artifacts,t);state.append(artifacts);} 
   if(closed(t)&&t.completionBasis)detail.append(el('small',typeof t.completionBasis==='string'?t.completionBasis:t.completionBasis.summary||t.completionBasis.note||'本人の最新指示で完了を確認'));
   if(t.status==='review'){
    const review=el('div',null,'review-detail');review.append(el('b','確認内容：'+(t.review?.request||'未定')),el('span','判断：'+(t.review?.reviewerLabel||'未定')),el('span','確認期限：'+labelDate(t.review?.dueDate)));
