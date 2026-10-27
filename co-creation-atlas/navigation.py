@@ -24,6 +24,7 @@ GROUPS = [
         ('資料をダウンロード', '/research/fukuoka-startup-policy/#downloads', 'スマホ版・PC版の37枚'),
     ]),
     ('考え方と進め方を学ぶ', [
+        ('空間をつくる4社の思想を読む', BASE+'spatial-design/', 'O+A・Gensler・CWA・PENSON／23の実空間'),
         ('都市の思想家から学ぶ', BASE+'learn/urban-thinkers/', '9人の思想と18の実践'),
         ('8つの工程で学ぶ', BASE+'#start', '課題を捉えるところから社会実装まで'),
         ('横断分析を読む', BASE+'#insights', '複数の実践から考える'),

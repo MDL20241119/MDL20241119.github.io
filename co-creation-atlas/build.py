@@ -10,6 +10,7 @@ import city_research
 import navigation
 import step_guide
 import frontier
+import spatial_design
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
@@ -274,5 +275,6 @@ catalog.build(ROOT,head,header,footer,BASE)
 expert_context.build(DATA,head,header,footer)
 step_guide.update(ROOT, DATA, STAGES, MEDIA)
 frontier.build(ROOT, MEDIA, head, header, footer, BASE)
+spatial_design.build(ROOT, head, header, footer, STAGES)
 (ROOT/'data/cases.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2))
 print(f'Built {len(DATA)} cases and index. {len([m for m in MEDIA if m.get('kind') != 'diagram'])} photographs; {len([m for m in MEDIA if m.get('kind') == 'diagram'])} diagrams. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')

@@ -82,6 +82,37 @@ a second case database.
 
 ## Release gate
 
+### Spatial design feature — 2026-10-27
+
+- `spatial_design.py` adds five pages from the five `data/spatial-design-*.json`
+  files. Rebuild with `python3 co-creation-atlas/build.py` from the repository root.
+  The feature is independent of the 115-case and 37-frontier datasets.
+- The 23 spaces have primary-company counts of 6 / 6 / 6 / 5. McDonald's 2018
+  headquarters is counted once and cross-references its joint design roles.
+- The 69 photographs in the supplied report remain permission-pending reference
+  links. Never promote these to image publication without individual clearance.
+- Forty-four independently licensed local photographs are included: Slack 14,
+  Google London 23 interiors plus one building-context view, NVIDIA three exterior
+  views, Adobe one exterior and Googleplex two context views. Context photographs
+  do not document the relevant interiors. All have source, date, author, license,
+  caption and alteration metadata; display retains the complete image.
+- `test_spatial_design.py` checks IDs, project references, attribution, licensed
+  local image sources, pending-image exclusion, counts, entry links and sitemap.
+  Existing Atlas, Frontier, experts, step-guide and JS checks also passed.
+- Chromium iframe viewport checks covered all five new pages at 320, 390, 768,
+  1280 and 1440 CSS pixels, plus expanded details and disabled JavaScript. No
+  horizontal page overflow was found. These are not physical-device tests.
+- Photo dialog keyboard/Escape/focus return, URL filter reload/back/forward,
+  existing search, mouse and keyboard map switching and a learning step were
+  exercised. Existing case/article bodies and four original datasets were
+  checked against the starting revision. Repeat build is stable.
+- URL retrieval of the 108 supplied references returned 102 successful responses
+  and no 404/410 responses. Six remain machine-unverified (timeout, 403, 429 or
+  HEAD-not-supported); this is not full claim-by-claim factual validation.
+- The user reviewed the implementation summary and authorized the website
+  update on 2026-10-27. Publish the checked feature with its assets and verify
+  the live feature, photo credits, and existing navigation after deployment.
+
 Run build.py and test_atlas.py, check changed JavaScript, and inspect the public
 pages after deployment. Keep changes scoped to this directory, publish without
 force, and reconcile any concurrent upstream edit before retrying. Preserve

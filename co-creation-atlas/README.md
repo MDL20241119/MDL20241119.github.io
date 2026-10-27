@@ -1,5 +1,12 @@
 # WORLD CO-CREATION ATLAS
 
+## 4社の空間設計思想（2026年10月27日）
+
+- `spatial-design/` にStudio O+A、Gensler、Clive Wilkinson Architects、PENSONの独立特集を追加。23の実空間を、仕掛け・行動の仮説・運営・成果と限界・8ステップとの関係から読みます。
+- CCライセンス確認済みの写真44枚を追加。Slackの内観14枚、Google Londonの内観23枚、外観・周辺写真7枚です。写真の対象・撮影時期・撮影者・出典・利用条件を表示し、全体を拡大できます。
+- 提供資料の69写真候補は許諾未取得のため公式参照リンクとして保持。既存115事例とFrontier37選定の集計には混ぜません。
+- `spatial_design.py` と `data/spatial-design-*.json` から再生成します。通常のビルド・既存テストに加え、`python3 co-creation-atlas/test_spatial_design.py` を実行してください。
+
 ## 写真・レイアウト更新（2026年10月26日）
 
 - 先進事例37件すべてに実写真を表示。公式ページへのリンクや動画のみだった16件を写真へ置換し、JOSEPHS・RoboHouse・DOLLの施設・活動写真も補強。新規画像37枚を追加。
