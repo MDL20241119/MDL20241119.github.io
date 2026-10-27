@@ -30,8 +30,8 @@ M=28; CW=W-2*M
 NAVY='#102E53'; ORANGE='#D96732'; INK='#17212D'; MUTED='#536276'; LINE='#C7D3E1'; PALE='#EAF1FB'; PAPER='#F3F5F7'; WHITE='#FFFFFF'
 
 class PDF:
- def __init__(self, path, photo):
-  self.path=path; self.photo_path=photo; self.page=1; self.records=[]
+ def __init__(self, path, photo, epalette_photo):
+  self.path=path; self.photo_path=photo; self.epalette_photo_path=epalette_photo; self.page=1; self.records=[]
   self.c=canvas.Canvas(str(path),pagesize=(W,H),pageCompression=1,invariant=0)
   self.c.setTitle('大分未来モビリティ人材育成プログラム｜説明資料')
   self.c.setAuthor('トヨタカローラ大分株式会社／株式会社モビリティデザインラボ')
@@ -67,6 +67,14 @@ class PDF:
   im.thumbnail((700,850));buf=io.BytesIO();im.save(buf,'JPEG',quality=91);data=buf.getvalue()
   self.c.drawImage(ImageReader(io.BytesIO(data)),x,H-y-h,w,h)
   self.record('photo',x=x,y=y,w=w,h=h,data=base64.b64encode(data).decode())
+ def vehicle_photo(self,x,y,w,h):
+  # Preserve the full vehicle and the source photograph's proportions.
+  im=Image.open(self.epalette_photo_path).convert('RGB');iw,ih=im.size
+  scale=min(w/iw,h/ih);dw,dh=iw*scale,ih*scale
+  x+=(w-dw)/2;y+=(h-dh)/2
+  im.thumbnail((900,700));buf=io.BytesIO();im.save(buf,'JPEG',quality=92);data=buf.getvalue()
+  self.c.drawImage(ImageReader(io.BytesIO(data)),x,H-y-dh,dw,dh)
+  self.record('photo',x=x,y=y,w=dw,h=dh,data=base64.b64encode(data).decode(),alt='トヨタe-Paletteの参考写真')
  def panel(self,x,y,w,h,fill=WHITE,stroke=NAVY,r=3):
   self.c.setFillColor(HexColor(fill));self.c.setStrokeColor(HexColor(stroke));self.c.setLineWidth(.7)
   self.c.roundRect(x,H-y-h,w,h,r,stroke=1,fill=1)
@@ -107,8 +115,10 @@ def build(p):
  p.text('01  国土交通省の採択事業で人材育成',M,49,CW,31,22.5,30,True,NAVY)
  p.text('令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,85,CW,27,9.2,13)
  p.text('トヨタカローラ大分株式会社が採択。株式会社モビリティデザインラボと連携して企画・運営。',M,117,CW,16,9.3,14,False,MUTED)
- p.text('大分未来モビリティ<br/>コンソーシアムを立ち上げる',M,140,CW,63,24.5,30.5,True,INK)
- p.text('JMSで発表した構想。設立に向けた準備を進めます。',M,207,CW,17,9.7,14,False,MUTED)
+ p.text('大分未来モビリティ<br/>コンソーシアムを立ち上げる',M,140,CW-180,63,24.5,30.5,True,INK)
+ p.text('JMSで発表した構想。設立に向けた準備を進めます。',M,207,CW-180,17,9.7,14,False,MUTED)
+ p.vehicle_photo(W-M-160,132,160,81)
+ p.text('e-Palette参考写真：TTTNIS / CC0',W-M-160,216,160,10,6.3,9,False,MUTED,align=1)
 
  p.panel(M,227,CW,108);p.band(M,227,CW,'02  コンソーシアムが目指す大分',22.5,h=34)
  p.text('大分をモビリティで、もっと元気に。',M+13,269,CW-26,33,23,31,True,NAVY)
@@ -218,13 +228,13 @@ def write_html(p,fontpaths,out):
    elif r['kind']=='circle':parts.append(f'<div style="position:absolute;{sty}background:{r["color"]};border-radius:50%"></div>')
    elif r['kind']=='arrow':parts.append(f'<div style="position:absolute;{sty}">{r["svg"]}</div>')
    elif r['kind']=='qr':parts.append(f'<a aria-label="{r["label"]}" href="{html.escape(r["url"])}" style="position:absolute;{sty}">{r["svg"]}</a>')
-   elif r['kind']=='photo':parts.append(f'<img alt="日高洋祐氏" style="position:absolute;{sty}" src="data:image/jpeg;base64,{r["data"]}">')
+   elif r['kind']=='photo':parts.append(f'<img alt="{html.escape(r.get("alt","日高洋祐氏"))}" style="position:absolute;{sty}" src="data:image/jpeg;base64,{r["data"]}">')
   parts.append('</section>')
  parts.append('''<script>function saveCopy(){const h='<!doctype html>'+document.documentElement.outerHTML;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='oita-mirai-mobility-program-guide-edited.html';a.click();URL.revokeObjectURL(a.href)}</script></html>''')
  (out/'oita-mirai-mobility-program-guide-editable.html').write_text(''.join(parts))
 
 def main():
- ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--font-variable',required=True);ap.add_argument('--photo',default=str(Path(__file__).resolve().parent.parent/'assets'/'hidaka-yosuke.jpg'));ap.add_argument('--output-dir',default=str(Path(__file__).resolve().parent.parent));ap.add_argument('--pdf-name',default='program-guide.pdf');ap.add_argument('--qa-json');ap.add_argument('--font-cache');a=ap.parse_args()
+ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--font-variable',required=True);ap.add_argument('--photo',default=str(Path(__file__).resolve().parent.parent/'assets'/'hidaka-yosuke.jpg'));ap.add_argument('--epalette-photo',default=str(Path(__file__).resolve().parent.parent.parent/'assets'/'mobility-epalette.webp'));ap.add_argument('--output-dir',default=str(Path(__file__).resolve().parent.parent));ap.add_argument('--pdf-name',default='program-guide.pdf');ap.add_argument('--qa-json');ap.add_argument('--font-cache');a=ap.parse_args()
  out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory() as td:
   fps={}
@@ -240,7 +250,7 @@ def main():
     f.save(fp)
    fps[name]=fp;pdfmetrics.registerFont(TTFont(name,str(fp)))
   pdfmetrics.registerFontFamily('JP',normal='JP',bold='JPB',italic='JP',boldItalic='JPB')
-  p=PDF(out/a.pdf_name,Path(a.photo));build(p);p.save()
+  p=PDF(out/a.pdf_name,Path(a.photo),Path(a.epalette_photo));build(p);p.save()
   # Subset only the HTML font bytes; editable Japanese can fall back to local fonts.
   chars=''.join(re.sub('<[^>]+>','',r.get('text','')) for r in p.records)+'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ本文をクリックして編集できます。編集済みHTMLを保存印刷・PDF保存編集保存テスト'
   for name,fp in list(fps.items()):
