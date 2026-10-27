@@ -1808,11 +1808,11 @@
     ],
     "type": "company",
     "tagline": "部門を越えてチームをつくり、案件の履歴を残す。",
-    "lead": "社員・インターン・顧客・パートナーが、職務の境界を越えて実験する企業内プログラム。世界各地の工房と全社Hackathonに加え、現在はInnovation Studioでアイデア登録、仲間探し、審査、イベント後の追跡を接続する。参加の熱量を継続する案件の情報へ変える設計が特徴。",
+    "lead": "社員・インターン・顧客・パートナーが、職務の境界を越えて実験してきた企業内プログラム。世界各地の工房、全社Hackathon、Innovation Studioによる案件管理から、参加の熱量を次の仕事へつなぐ設計を読む。2026年10月には中央プログラムの終了方針が報じられたため、制度の説明は2026年9月時点の資料、写真は各公表時点の記録として扱う。",
     "established": "Garage自体の創設年は今回の一次資料では未確認",
     "operator": "Microsoft Garageチーム／各拠点・事業部・参加プロジェクトチーム",
     "payer": "Microsoftの社内資源が基盤。案件別予算・正式稼働時間・顧客向けInnovation Studioの費用は公開資料で未確認。",
-    "operatingModel": "Garageはオンラインの学習・ワークショップと実拠点を用意し、全社Hackathonで社員やインターンが異なる役割の仲間と短期間の制作に取り組む。Growth Frameworkでは外部変化の発見から必要能力を持つ仲間集めへ進み、情熱だけでなく実行能力・役割を確認する。Innovation Studioはアイデア、チーム、制作、共有、審査、事後情報を同じ仕組みで扱い、スキル・関心・協働の関係を蓄積する。2026年9月確認時、同製品は社内利用に加え顧客向けprivate previewを支援する段階で、誰でも契約できる一般サービスとは限らない。採択後の事業移管を一律保証する制度は公開されず、個別の事業部関与と製品化の実績を分けて確認する必要がある。",
+    "operatingModel": "以下は2026年9月時点の公開資料で確認した運営モデル。Garageはオンラインの学習・ワークショップと実拠点を用意し、全社Hackathonで社員やインターンが異なる役割の仲間と短期間の制作に取り組む。Growth Frameworkでは外部変化の発見から必要能力を持つ仲間集めへ進み、情熱だけでなく実行能力・役割を確認する。Innovation Studioはアイデア、チーム、制作、共有、審査、事後情報を同じ仕組みで扱い、スキル・関心・協働の関係を蓄積する。2026年9月確認時、同製品は社内利用に加え顧客向けprivate previewを支援する段階で、誰でも契約できる一般サービスとは限らない。採択後の事業移管を一律保証する制度は公開されず、個別の事業部関与と製品化の実績を分けて確認する必要がある。",
     "process": [
       "外部変化・現場課題を見つける",
       "異なる技能の仲間を募る",
@@ -1984,6 +1984,61 @@
         "claim": "学校での採用、教員の観察報告、学校向け利用導線",
         "grade": "official",
         "verified": "2026-09-28"
+      },
+      {
+        "id": "MG-PH01",
+        "title": "Cute high-tech cubes want to get to know you",
+        "url": "https://news.microsoft.com/life/cute-high-tech-cubes-want-to-get-to-know-you/",
+        "publisher": "Microsoft News Center",
+        "published": "2015-08-13",
+        "locator": "本文・掲載写真",
+        "claim": "RedmondのGarageで、インターンがExplorerを制作する写真と道具・材料の使い方。",
+        "grade": "official",
+        "verified": "2026-10-27"
+      },
+      {
+        "id": "MG-PH02",
+        "title": "An easier way to help people give tech support to loved ones wins Microsoft Hackathon top prize",
+        "url": "https://news.microsoft.com/source/features/innovation/an-easier-way-to-help-people-give-tech-support-to-loved-ones-wins-microsoft-hackathon-top-prize/",
+        "publisher": "Microsoft News Center",
+        "published": "2022-11-10",
+        "locator": "本文・掲載写真",
+        "claim": "New EnglandのScience Fair、アイデア壁、Garageの共用部。",
+        "grade": "official",
+        "verified": "2026-10-27"
+      },
+      {
+        "id": "MG-PH03",
+        "title": "New Microsoft offices boast ultramodern design and stunning views",
+        "url": "https://news.microsoft.com/life/new-microsoft-offices-boast-ultramodern-design-stunning-views/",
+        "publisher": "Microsoft News Center",
+        "published": "2016-06-17",
+        "locator": "本文・掲載写真",
+        "claim": "VancouverのMCECにGarageが含まれることと、共用部・オフィスの写真。",
+        "grade": "official",
+        "verified": "2026-10-27"
+      },
+      {
+        "id": "MG-PH04",
+        "title": "Latest Microsoft Garage releases break new ground for do-it-yourselfers, note takers and more",
+        "url": "https://news.microsoft.com/features/latest-microsoft-garage-releases-break-new-ground-for-do-it-yourselfers-note-takers-and-more/",
+        "publisher": "Microsoft News Center",
+        "published": "2015-06-30",
+        "locator": "本文・掲載写真",
+        "claim": "3-in-1 DockがGarageで公表された試作であることと、利用例の写真。",
+        "grade": "official",
+        "verified": "2026-10-27"
+      },
+      {
+        "id": "MG-UPD202610",
+        "title": "Microsoft shuts the door on The Garage, the central program behind its hackathon and maker spaces",
+        "url": "https://www.geekwire.com/2026/microsoft-shuts-the-door-on-the-garage-the-central-program-behind-its-hackathon-and-maker-spaces/",
+        "publisher": "GeekWire / Todd Bishop",
+        "published": "2026-10-20（10月23日更新）",
+        "locator": "内部FAQとMicrosoft広報の説明に基づく報道",
+        "claim": "中央機能としての終了と、拠点ごとに異なる影響。全拠点が同じ日に閉鎖したとは報じていない。",
+        "grade": "primary-reporting",
+        "verified": "2026-10-27"
       }
     ],
     "videos": [
@@ -2000,17 +2055,17 @@
       "people",
       "digital"
     ],
-    "image": "assets/microsoft-garage-nerd.jpg",
-    "imageAlt": "青空の下に立つOne Memorial Driveの高層ビル。",
+    "image": "assets/microsoft-garage/redmond-workbench-2015.jpg",
+    "imageAlt": "赤い試作筐体、配線、道具を広げた作業台の周りで、インターンが共同作業する。説明する人と手を動かす人が同じ机を囲む。",
     "imageNoCrop": true,
     "imageEmbedSource": "",
-    "imageCredit": "Kenneth C. Zirkel",
-    "imageSource": "https://commons.wikimedia.org/wiki/File:One_Memorial_Drive,_Cambridge_Massachusetts.jpg",
-    "imageRights": "https://creativecommons.org/licenses/by/4.0/",
-    "imageLicense": "CC BY 4.0",
-    "imageDate": "2024-11-12",
-    "imageChanges": "表示用に縮小。切り抜き・色変更なし。",
-    "imageCaption": "Microsoft GarageのNew England拠点が入るOne Memorial Drive。複数都市にあるGarageのうち、ケンブリッジの建物を示す。",
+    "imageCredit": "Meghan O’Brien / Microsoft News Center · Used with permission from Microsoft.",
+    "imageSource": "https://news.microsoft.com/life/cute-high-tech-cubes-want-to-get-to-know-you/",
+    "imageRights": "https://www.microsoft.com/en-us/legal/intellectualproperty/copyright/permissions",
+    "imageLicense": "Microsoft News Center：Press向け編集利用条件",
+    "imageDate": "2015-08-13付の公式記事に掲載。写真ごとの初公開日・撮影日・現在の内装の継続は未確認。",
+    "imageChanges": "公式記事で配信される写真ファイルをそのまま使用。追加の切り抜き・色変更なし。",
+    "imageCaption": "赤い試作筐体、配線、道具を広げた作業台の周りで、インターンが共同作業する。説明する人と手を動かす人が同じ机を囲む。",
     "valueChainSearch": "Microsoft Garageは社員が部門を越え、既存の技術と現場の困りごとを結び付ける実験基盤。Immersive ReaderではOneNoteの開発者、研究者、教育の知見を持つ人材が集まり、学校で使う約束を持って試作し、正式な製品チームへつないだ。ハッカソンの受賞よりも、その後の責任者と既存製品への組込みが実装を支えた。 Garage運営スタッフ、社員・インターン、各製品部門の開発者。Immersive ReaderではWindows、OneNote、Bing、Microsoft Researchが部門を越えて協働した。 Garage全体は顧客やパートナーを対象に含む。Immersive ReaderではMicrosoftの製品チームが継続開発の受け手で、外部企業の初期発注額は未確認。 行政がGarage全体の常設チームを担うことや、Immersive Readerの開発費を行政が負担したことは今回の公開資料では未確認。 初期案を社内の小さな起業のように扱うが、案件に外部スタートアップが必ず参加する制度ではない。Immersive Readerは主に社内横断チームから生まれた。 読字・学習の研究知見は使うが、初期案件の外部大学の正式参加は今回の公開資料では未確認。Microsoft Researchの研究者は自社の人的資本として扱う。 学校の教員、学習上の困難を持つ児童生徒、保護者、専門家の声が設計・改善の入力となる。利用者の困りごとと、教師が教室で扱える条件を確認する。 世界各地の協働・制作スペースと、オンラインの講座・ワークショップ。ソフト案件では新しい専用設備より、既存の製品・クラウド技術が試作の足場になる。 職務や地域を越えた社員のつながり、製品責任者、教育現場の接点。Innovation Studioは技能・関心・チーム・進捗を案件の履歴として残す仕組みを持つ。 社員工数、実験費、正式移管後の予算を含む案件原価は公開資料では未確認。無料利用機能があることと、開発・運用費がゼロであることは別である。 Bingの音声認識、Windowsの読み上げ等、Microsoft Researchの言語処理を再利用。技術をゼロから作らず、組み合わせに集中できる。 読字・書字の困難が、学習機会の障壁になる課題。対象者に障害の印を付ける専用ツールにせず、誰でも使える機能として設計することも課題に含めた。 課題と技能から部門横断チームをつくる 外部変化・利用者の困りごとを起点に、異なる技能の仲間を探す。Immersive Readerでは読字研究、学校経験、開発力を束ねる担当が目的をそろえた。 既存技術を組み合わせて学校で試す 読字支援の小さな機能をOneNoteへ統合し、短い反復で試作する。Garageは学校との初期接点を支え、実際の教員・生徒の反応から仕様を磨いた。 製品チームが継続し既存製品に載せる 受賞後にMike Tholfsenが担当PMとなり、OneNoteからWord等へ機能を広げた。試作を正式な製品・運用の担当に渡すことで多数の利用者へ届く。 イベント後の履歴を残して次へ進める 現在のInnovation Studioはアイデア、チーム、制作、審査、事後情報をつなぐ。ただし台帳があること自体は、採択案件の予算や正式移管を保証しない。 部門横断チームと動作する試作。Immersive Readerの前身は2015年の全社ハッカソンで受賞し、学校に持ち込めるOneNoteの拡張へ進んだ。 読み上げ、文字サイズ・色・行間の調整などを既存アプリへ組み込んだ機能群。機能ができたことと、学習成果が改善したことは分けて評価する。 Innovation StudioはMicrosoft内で利用され、顧客向けはprivate previewを支援する段階。一般公開済みの汎用サービスと断定しない。 Microsoftは2020年7月、Immersive Readerの月間利用者が2300万人超と報告した。これは当時の利用規模であり、2026年の最新値でも学力向上の人数でもない。 Hamlin Robinson校は遠隔授業でTeams内の読字支援を活用したと紹介される。児童の表現や自立への好影響は教員等の事例報告で、全利用者への因果効果とは区別する。 全ハッカソン案件を分母とした移管率、撤退率、予算、社員工数は未確認。受賞した成功例だけからプログラム全体の投資効果を推定できない。 利用者数は、学習機会や理解度の改善を直接示さない。学年・言語・特性別の比較、教師の指導との相互作用、継続利用のデータが必要。 Microsoftの大きな既存製品基盤が普及を助けている。地域の小規模拠点で再現するには、成果を組み込むサービスと、その継続責任者を別に確保する必要がある。 試作前に持ち込む現場を決める OneNote側は学校に届けることを前提に開発し、ハッカソンを締切として使った。品川でも、発表会の予定だけでなく現場で使い始める日を置くと判断が具体化する。 すでにある技術を結び直す 音声・言語・表示技術の部門をつなぎ、利用者が使えるまとまりへ編集する。場の役割は新技術を毎回開発することに限らず、社内資産の接続コストを下げることにもある。 利用者を特別扱いしない導線にする 学習困難のある人の要求から設計しながら、既存アプリの誰でも使える機能にする。本人が使う心理的負担と、学校側の新規導入の手間を減らす意味がある。 正式な引受責任者を置く 受賞後の担当PMと製品チームが改善・展開を担った。場の運営者だけで案件を抱え続けず、顧客接点と開発・提供能力のある組織へ移す設計。 出会いを次の行動の記録に変える Innovation Studioは技能や関心、審査、事後の情報を蓄積する。現場の引受責任者、次の検証、予算判断を案件に結び付ける運営へ応用できる。 Learning Tools／Immersive Reader 展開 2015年に社内のOneNote案へWindows・Bing・研究者・教育経験者が合流した。Garageを初期試作と学校との接点に使い、正式な製品開発へつなげた。 読字支援機能がOneNoteから複数のMicrosoftアプリへ広がり、第三者のアプリから利用できるサービスとしても提供されるようになった。 広範な利用と学校の採用事例まで確認できる。Hamlin Robinson校では教員が生徒の表現の変化を報告したが、同校の全児童や長期学習効果の比較検証ではない。 無料機能が生むMicrosoftの事業効果、継続コスト、学校側の指導・設定負担、第三者評価の詳細は別途確認が必要。",
     "entry": {
       "lenses": [
@@ -2055,7 +2110,61 @@
       },
       "related": []
     },
-    "photoCount": 1
+    "photoCount": 22,
+    "photoOverview": "写真更新：2026年10月27日。Redmondの試作・組み立て、New Englandのアイデア募集・発表、Vancouverの拠点共用部、試作品の利用例を比較します。Vancouverの写真はGarageを含むMCECの共用部・オフィスであり、Garage専用工房と同一ではありません。",
+    "photoStatusNote": "2026年10月20日、GeekWireはMicrosoft内部FAQと同社広報への取材に基づき、Garageの中央プログラムの終了方針を報道しました。拠点ごとの影響は異なり、現在の稼働・利用条件は未確認です。以下は当時の写真です。",
+    "photoStatusSource": "https://www.geekwire.com/2026/microsoft-shuts-the-door-on-the-garage-the-central-program-behind-its-hackathon-and-maker-spaces/",
+    "photoGroups": [
+      {
+        "id": "photos-redmond",
+        "title": "01｜Redmond：つくる・組み立てる",
+        "description": "2015年の記事。インターンのProject Atlasを通して、道具・部品・工作・ソフトウェア作業のつながりを見る。",
+        "assetIds": [
+          "microsoft-garage-redmond-parts-2015",
+          "microsoft-garage-redmond-assembly-2015",
+          "microsoft-garage-redmond-printed-parts-2015",
+          "microsoft-garage-redmond-explorers-2015",
+          "microsoft-garage-redmond-team-table-2015",
+          "microsoft-garage-redmond-intern-project-2015"
+        ]
+      },
+      {
+        "id": "photos-new-england",
+        "title": "02｜New England：発表・仲間づくり",
+        "description": "2022年の公式記事に掲載されたScience Fairと共用部。2024年撮影の建物外観を最後に置き、内観と区別する。",
+        "assetIds": [
+          "microsoft-garage-new-england-idea-wall-2022",
+          "microsoft-garage-new-england-hackathon-space-2022",
+          "microsoft-garage-new-england-science-fair-2022",
+          "microsoft-garage-nerd"
+        ]
+      },
+      {
+        "id": "photos-vancouver",
+        "title": "03｜Vancouver：拠点の共用空間",
+        "description": "2016年の記事。Garageが入るMicrosoft Canada Excellence Centre（MCEC）の共有席、階段、小室、仕事場。専用工房の内部とは特定していない。",
+        "assetIds": [
+          "microsoft-garage-vancouver-shared-hall-2016",
+          "microsoft-garage-vancouver-long-tables-2016",
+          "microsoft-garage-vancouver-stair-2016",
+          "microsoft-garage-vancouver-booths-2016",
+          "microsoft-garage-vancouver-yellow-enclosure-2016",
+          "microsoft-garage-vancouver-small-discussion-2016",
+          "microsoft-garage-vancouver-workplace-2016",
+          "microsoft-garage-vancouver-common-seating-2016",
+          "microsoft-garage-vancouver-reception-2016"
+        ]
+      },
+      {
+        "id": "photos-prototypes",
+        "title": "04｜試作の成果：3-in-1 Dock",
+        "description": "2015年の記事。Garageで公開された試作物が机上の使い方をどう変えるかを見る。施設の内観写真ではない。",
+        "assetIds": [
+          "microsoft-garage-surface-dock-use-2015",
+          "microsoft-garage-surface-dock-mechanism-2015"
+        ]
+      }
+    ]
   },
   {
     "id": "station-f",

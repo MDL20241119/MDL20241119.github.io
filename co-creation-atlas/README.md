@@ -113,3 +113,10 @@ node --check co-creation-atlas/learning.js
 2026-09-28：全28事例に写真を配置（44点）。新規13点をローカル配信し、FirstBuildは大学のFlickr共有写真を出典リンク付きで埋め込み。写真のない事例・欠落ファイルをビルド時に検出します。
 
 撮影年を明記した建物（MIT N51、Digital Catapult、東京科学大学）、RoboHouseの旧拠点、Microsoft GarageのNew England拠点、実証地区（Kalasatama、Ülemiste City）、分散型プログラムの本部（Fraunhofer）を区別して説明。CampXは支援案件Cetasolの関係者写真です。DOLLの写真はEnergy CitiesのCC BY-NC-SA 4.0、CampXの写真はQamcomの非営利・無改変の条件に従い、無料の学習・解説記事に使用しています。広告や有料商品への写真転用は許諾されません。FirstBuildのAll Rights Reservedは維持し、画像を本リポジトリへ複製していません。
+
+## Microsoft Garage 写真追加（2026-10-27）
+
+- 詳細ページに実写真21枚を追加し、既存の建物外観と合わせて22枚に更新。冒頭もRedmondの共同制作の写真へ変更。
+- Redmondの制作、New Englandの発表・仲間づくり、VancouverのMCEC共用部、試作物の利用例の4テーマに整理。写真ごとに見るポイント・出典・時点を記載。
+- Microsoft News CenterのPress向け編集利用条件を確認し、指定の `Used with permission from Microsoft.` を保持。一般的な再利用許諾や広告用途の許諾ではありません。
+- 2026-10-20の中央プログラム終了方針の報道を追記。各拠点の現行稼働を断定せず、旧写真と2026年9月時点の制度資料を区別。既存115事例、先進37事例、4社特集を維持。

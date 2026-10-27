@@ -182,3 +182,13 @@ the distinction between a verified structure and a verified factual claim.
 | thg-media-city | 0 | 0 | 3 |
 | jojoe-gentilly | 0 | 0 | 3 |
 | gsk-global-hq | 1 | 0 | 2 |
+
+## Microsoft Garage photo expansion — 2026-10-27
+
+- The case now contains 22 photographs: 21 News Center editorial additions and the existing CC BY 4.0 exterior. The main corpus now has 162 photographs; the 18 diagrams are unchanged.
+- New records in `data/media.json` keep original article/image URLs, original bytes and SHA-256, dimensions, article dates, individual photographer credits, full-frame display, current-status caveats, and the Microsoft Legal permissions URL.
+- Microsoft Legal, “Use of Microsoft copyrighted content,” Press section, offers News Center imagery for editorial use by press and industry analysts. This free industry-analysis article follows that context and retains the required permission statement. This is not an unrestricted licence or advertising clearance.
+- The selected sources are the 2015 Explorer fabrication story, 2016 MCEC workplace story, 2022 New England Hackathon story, and 2015 3-in-1 Dock story. The nine Vancouver views are labelled as MCEC common/office areas; they are not presented as verified interiors of the dedicated Garage workshop. The Dock views are prototype outcomes, not facility interiors.
+- Explicit third-party-copyright-marked candidates (the 2022 winning-team lead and a Red Box Pictures portrait), All Rights Reserved mayoral photos, illustrations, unrelated office/portrait teasers, and duplicate views were not imported.
+- The page records GeekWire’s 2026-10-20 report (updated 10-23), which cites an internal FAQ and Microsoft’s spokesperson. It does not assert that every Garage closed at the same time. Original operating-model material is qualified as September 2026 information.
+- `photoGroups` is optional case data. When supplied, the builder requires every non-hero photograph to occur in exactly one group. Existing ungrouped cases retain their layout. `publicationNote` appears only for records that supply it.

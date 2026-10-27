@@ -60,7 +60,8 @@ def credit(m):
     license_link=external(license_url,e(m.get('license','利用条件')))
     changes=(' · '+e(m['changes'])) if m.get('changes') else ''
     caption=f'<strong>{e(m.get("scopeLabel") or m.get("caption") or m.get("alt", ""))}</strong><br>'
-    details=f'<details class="photo-details"><summary>写真の詳細</summary><p>{e(m.get("caption", ""))}<br>{e(m.get("title",m.get("name","")))}{date}{changes}</p></details>'
+    rights_note=f'<p>{e(m["publicationNote"])}</p>' if m.get('publicationNote') else ''
+    details=f'<details class="photo-details"><summary>写真の詳細</summary><p>{e(m.get("caption", ""))}<br>{e(m.get("title",m.get("name","")))}{date}{changes}</p>{rights_note}</details>'
     return f'<figcaption class="credit">{caption}PHOTO: {e(m["credit"])} · {external(m["sourceUrl"],"掲載元")} · {license_link}{details}</figcaption>'
 
 def media_url(m,prefix=""):
@@ -205,7 +206,21 @@ def build_case(c):
     real_photos=[x for x in ms if x.get('kind')!='diagram']
     gallery=''
     if len(real_photos)>1:
-        gallery='<section class="field-photos" id="field-photos"><div class="field-photo-heading"><p class="eyebrow">FIELD PHOTOS / '+str(len(real_photos))+' PHOTOS</p><h2>写真で、場所と活動を読む。</h2></div><div class="field-photo-grid">'+''.join(photo(x,prefix=prefix) for x in real_photos[1:])+'</div></section>'
+        gallery='<section class="field-photos" id="field-photos"><div class="field-photo-heading"><p class="eyebrow">FIELD PHOTOS / '+str(len(real_photos))+' PHOTOS</p><h2>写真で、場所と活動を読む。</h2></div>'
+        if c.get('photoOverview'):
+            gallery+='<p style="max-width:900px;margin-bottom:22px">'+e(c['photoOverview'])+'</p>'
+        if c.get('photoStatusNote'):
+            gallery+='<p class="note-inline" style="margin-bottom:22px">'+e(c['photoStatusNote'])+' '+external(c['photoStatusSource'],'現況の報道を読む')+'</p>'
+        if c.get('photoGroups'):
+            by_id={x['assetId']:x for x in real_photos[1:]}
+            grouped=[asset_id for group in c['photoGroups'] for asset_id in group['assetIds']]
+            assert len(grouped)==len(set(grouped)) and set(grouped)==set(by_id), 'Photo groups must cover each gallery photo once'
+            gallery+='<nav class="related-list" aria-label="写真のテーマ" style="margin-bottom:24px">'+''.join('<a href="#'+e(g['id'])+'">'+e(g['title'])+' ↓</a>' for g in c['photoGroups'])+'</nav>'
+            for group in c['photoGroups']:
+                gallery+='<section id="'+e(group['id'])+'" style="margin-top:32px;scroll-margin-top:90px"><div class="field-photo-heading"><h3>'+e(group['title'])+'</h3><p class="eyebrow">'+str(len(group['assetIds']))+' PHOTOS</p></div><p style="margin-bottom:20px">'+e(group['description'])+'</p><div class="field-photo-grid">'+''.join(photo(by_id[asset_id],prefix=prefix) for asset_id in group['assetIds'])+'</div></section>'
+        else:
+            gallery+='<div class="field-photo-grid">'+''.join(photo(x,prefix=prefix) for x in real_photos[1:])+'</div>'
+        gallery+='</section>'
     elif real_photos:
         out[2]=out[2].replace('<section class="detail-hero">','<section class="detail-hero" id="field-photos">')
     out.append(f'</section>{gallery}<dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
