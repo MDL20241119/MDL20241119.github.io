@@ -29,7 +29,7 @@ const $=id=>document.getElementById(id),el=(tag,text,cls)=>{const n=document.cre
 let data=null,view='all',lastDay=todayJST();
 const expandedGoals=new Set();
 function labelDate(day){return validDay(day)?`${Number(day.slice(5,7))}/${Number(day.slice(8,10))}`:'未定'}
-function link(text,url){const a=el('a',text),safe=safeLink(url);if(safe)a.href=safe;else a.removeAttribute('href');if(safe&&/^https?:/.test(safe)){a.target='_blank';a.rel='noreferrer noopener'}return a}
+function link(text,url){const a=el('a',text),safe=safeLink(url);if(safe)a.href=safe;else a.removeAttribute('href');if(safe&&new URL(safe,location.href).origin!==location.origin){a.target='_blank';a.rel='noreferrer noopener'}return a}
 function td(row,label){const cell=el('td');cell.dataset.label=label;row.append(cell);return cell}
 function table(headers,cls){const wrap=el('div',null,'table-wrap'),t=el('table',null,'board-table '+cls),thead=el('thead'),head=el('tr'),tbody=el('tbody');for(const name of headers){const th=el('th',name);th.scope='col';head.append(th)}thead.append(head);t.append(thead,tbody);wrap.append(t);return {wrap,tbody}}
 function appendReferences(container,t){
