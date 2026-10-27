@@ -103,7 +103,7 @@ class PDF:
 
 def build(p):
  p.header(1)
- p.text('地域の課題を、来年度の<br/>実施・実証計画へ',M,49,CW,65,24,30.5,True,INK)
+ p.text('来年度の準備を、<br/>無料の専門支援で前に進める',M,49,CW,65,24,30.5,True,INK)
  # The reference's large message, framed content and navy headings.
  p.panel(M,126,CW,76)
  p.text('どなたでも',M+15,134,245,18,11.5,17,True,NAVY)
@@ -125,7 +125,7 @@ def build(p):
  p.text('将来は陸・海・空のモビリティに関わる取組みとの連携を目指します。',M,373,CW,16,9.3,14,False,MUTED)
  p.text('制度：令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,394,CW,27,8.8,12.4,False,MUTED)
 
- p.panel(M,434,CW,155);p.band(M,434,CW,'地域の課題から、具体的な計画をつくる',13.0)
+ p.panel(M,434,CW,155);p.band(M,434,CW,'学びを、来年度の検討に使える計画へ',13.0)
  inner=M+12;usable=CW-24;sw=(usable-4*13)/5
  steps=[('課題を共有','困りごと・希望'),('現地調査','現地・利用者を知る'),('サービス企画','使い方・運営を考える'),('アプリ開発','必要な機能を形に'),('データ分析','結果を見て改善')]
  for i,(title,body) in enumerate(steps):
@@ -148,14 +148,14 @@ def build(p):
   p.text(title,x+12,605,half-24,19,11.7,17,True,NAVY)
   p.text(body,x+12,632,half-24,30,9.7,14)
 
- p.band(M,682,CW,'参加すると、何が得られるか',13,h=24)
- benefits=[('課題を具体化','専門家・企業と一緒に、<br/>企画・アプリ開発・分析に取り組む'),('仲間を見つける','一緒に実践する仲間や<br/>地域の連携先を見つける'),('次年度に備える','来年度の検討や庁内説明に<br/>使える計画をつくる')]
+ p.band(M,682,CW,'今、参加しておきたい3つの理由',13,h=24)
+ benefits=[('企画・開発・分析が無料','地域だけで抱え込まず、<br/>専門家・企業と具体化できる'),('地域の希望を構想へ','構想段階から、課題や希望を<br/>サービス・実証候補地の検討へ'),('来年度の準備を先に','実践する仲間と計画をつくり、<br/>庁内説明・次年度の検討に使う')]
  bw=(CW-16)/3
  for i,(title,body) in enumerate(benefits):
   x=M+i*(bw+8);p.panel(x,714,bw,65)
   p.text(title,x+8,722,bw-16,21,12,18,True,NAVY,align=1)
   p.text(body,x+8,747,bw-16,29,9.1,13,False,INK,align=1)
- p.text('構想段階から、地域の課題・希望をサービス・実証候補地の検討に反映。',M,789,CW,18,10,15,True,NAVY,align=1)
+ p.text('参加を見送ると、無料の専門支援と、地域の希望を構想に届ける機会も見送ることに。',M,789,CW,18,10,15,True,NAVY,align=1)
  p.footer(1);p.next();p.header(2)
 
  p.text('11月11日の特別講演と、<br/>プログラムへの参加・相談',M,49,CW,65,24,30.5,True,INK)
@@ -174,7 +174,7 @@ def build(p):
  p.text('後半：トークセッション・質疑応答',M+18,416,300,18,10.5,15,True,NAVY)
  p.text('進行：MobilityDesignLabの植野氏',M+18,432,CW-36,16,10.5,15,True,NAVY)
 
- p.text('企画書・事前資料は不要。まずは相談から。',M,470,CW,27,18,26,True,NAVY)
+ p.text('企画書・事前資料は不要。まずは無料相談。',M,470,CW,27,18,26,True,NAVY)
  tw=(CW-26)/3
  for i,(title,body) in enumerate([
   ('1  困りごとを伝える','課題や、やってみたいことを<br/>フォームから伝える'),
