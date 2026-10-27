@@ -1,5 +1,7 @@
 #!/usr/bin/env python3
-"""Rebuild the existing municipal guide (2 A4 pages) and participation flyer.
+"""Rebuild the existing municipal guide (2 A4 pages).
+
+The user-selected distribution flyer is an approved PDF original and is not regenerated.
 
 Usage: python3 scripts/build-participation-pdfs.py --font-variable /path/NotoSansJP.ttf
 Dependencies: reportlab, fonttools, Pillow. Font: Google Fonts Noto Sans JP (OFL).
@@ -132,45 +134,6 @@ def guide():
  foot(p,2)
  return p.save()
 
-def flyer():
- p=PDF(HERE/'participation-flyer.pdf',(841.8898,595.2756),'大分未来モビリティ人材育成プログラム｜参加案内・11月11日特別講演')
- p.rect(0,0,p.w,6,INK)
- p.text('大分未来モビリティ人材育成プログラム',25,22,625,22,12,18,'JPB')
- p.text('2026年度 国土交通省採択事業',609,23,208,18,9.2,14,'JPB',DEEP)
- p.text('地域の困りごとを、来年度の具体的な計画へ。',25,55,635,42,23,34,'JPB')
- p.text('自治体参加無料',25,107,174,28,17.5,24,'JPB',DEEP)
- p.text('企画・開発・分析を無料支援',215,109,335,23,13.5,20,'JPB')
- p.text('2026年11月〜2027年2月',25,144,360,20,10,15,'JPB')
- p.text('6つのオポチュニティ',280,143,380,23,13,19,'JPB')
- p.photo('mobility-epalette.webp',679,55,138,92,True)
- p.text('e-Palette 参考写真／TTTNIS・CC0',679,151,138,13,6.5,10,'JP',GRAY)
- y=179;gap=8;w=(p.w-50-5*gap)/6
- titles=['モビリティ<br/>サービス企画','e-Paletteを活用した<br/>サービス開発','自動運転実証','アプリ開発・<br/>DX・AI活用','データ分析・改善','車両管理・<br/>整備保守']
- for i,title in enumerate(titles):
-  x=25+i*(w+gap);p.rect(x,y,w,139,PALE);p.rect(x,y,w,3,ORANGE)
-  p.text(f'{i+1:02d}',x+10,y+9,w-20,28,25,27,'Helvetica-Bold',DEEP)
-  p.text(title,x+10,y+44,w-20,45,10.3,15,'JPB')
-  p.text(OPPORTUNITIES[i][1],x+10,y+94,w-20,40,7.6,11.2)
- p.text('目指す成果：課題・調査の整理／サービス企画／テーマに応じた試作・分析／仲間と役割／実施・実証計画',25,327,792,18,8.5,13,'JPB')
- p.text('A｜e-Paletteの地域に合う使い方を企画。　B｜自動運転は地域課題・運行方法・担い手・継続性から実証を計画。',25,348,792,17,8.1,12)
- p.rule(25,369,792)
- p.photo('hidaka-yosuke.jpg',25,372,65,78)
- p.text('写真：MaaS Tech Japan公式',25,452,150,11,6,9,'JP',GRAY)
- p.text('参加の入口｜日高洋祐氏 特別講演・トークセッション',103,370,485,21,12,18,'JPB')
- p.text('2026年11月11日（水）14:00〜16:00',103,398,469,25,17,23,'JPB')
- p.text('会場 Garraway0｜大分市府内町1丁目1-12',103,429,469,18,9.4,14)
- p.text('講演で趣旨を知り、地域で取り組みたいことを相談できます。',25,463,530,18,9,14,'JPB')
- p.photo('garraway0-space.webp',601,372,126,78)
- p.text('Garraway0公式／既存掲載素材',601,452,126,12,6,9,'JP',GRAY)
- p.qr(WEB+'guide.html',738,369,79)
- p.text('詳細・申込み・相談',735,452,84,16,7.5,11,'JPB',DEEP)
- p.link('11/11の講演を見る',WEB+'lecture-20261111.html',25,489,226,18,9.4)
- p.link('プログラムに申し込む・相談する',FORM,262,489,465,18,9.4)
- p.text('共通フォームでプログラムに登録し、講演への参加予定は別に回答。講演欠席でも登録できます。',25,513,792,16,7.8,11.5)
- p.text('自治体側：窓口担当・課題共有・地域調整・可能な範囲のデータ／現地調査にご協力ください。初回相談30分〜1時間。<br/>無料はプログラム内のサービス開発・アプリ開発・データ分析。実運行・車両・保険・継続運用・車両管理・整備保守は別途協議。<br/>企業のコンソーシアム年会費とは別です。プログラム参加に参画は不要。同コンソーシアムでの実証には参画が必要です。<br/>地域に応じた取組みです。同一のアプリ・実証、車両提供、実証地域選定、補助金採択、事業化は保証しません。',25,533,792,39,6.9,9.5)
- p.text('事業主体：トヨタカローラ大分株式会社｜企画・運営・伴走支援：株式会社モビリティデザインラボ<br/>国土交通省 令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」モビリティ人材・組織育成タイプ',25,575,792,17,6,8)
- return p.save()
-
 def main():
  parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--font-variable',required=True);parser.add_argument('--qa-json');args=parser.parse_args()
  with tempfile.TemporaryDirectory() as td:
@@ -184,7 +147,7 @@ def main():
      record.string=value.encode(record.getEncoding(),errors='replace')
    path=Path(td)/(name+'.ttf');f.save(path);pdfmetrics.registerFont(TTFont(name,str(path)))
   pdfmetrics.registerFontFamily('JP',normal='JP',bold='JPB',italic='JP',boldItalic='JPB')
-  results=[guide(),flyer()]
+  results=[guide()]
  if args.qa_json:Path(args.qa_json).write_text(json.dumps(results,ensure_ascii=False,indent=2))
  print(json.dumps([{'file':r['file'],'pages':r['pages'],'text_boxes':len(r['boxes'])} for r in results],ensure_ascii=False))
 if __name__=='__main__':main()

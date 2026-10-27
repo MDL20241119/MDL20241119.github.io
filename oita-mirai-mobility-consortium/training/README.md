@@ -76,7 +76,7 @@
 - 自治体参加とプログラム内の企画・開発・分析は無料。実運行・車両・保険・継続運用等は別途協議。企業のコンソーシアム会費とは分離。
 - 既存の共通フォームを継続使用。プログラム登録と任意の講演参加予定を区別し、講演欠席でも登録できる旨を明記。フォーム送信・メール送信・共有権限変更なし。
 - `program-guide.pdf` はA4縦2ページ、`participation-flyer.pdf` は既存写真3点入りA4横1ページを維持し、同じ6つのオポチュニティと条件を反映。
-- PDF再生成：`python3 scripts/build-participation-pdfs.py --font-variable /path/to/NotoSansJP.ttf`（training配下から）。ReportLab、fonttools、Pillowを使用。フルフォントはローカル入力のみ、PDFは使用文字を埋め込む。
+- 概要PDFのみ再生成：`python3 scripts/build-participation-pdfs.py --font-variable /path/to/NotoSansJP.ttf`（training配下から）。ReportLab、fonttools、Pillowを使用。フルフォントはローカル入力のみ、PDFは使用文字を埋め込む。
 - `guide-benefits.css` と専用の `assets/guide-jp-{regular,black}.woff` を使用。Noto Sans JPの400/900、使用文字＋空白を収録。ライセンスは `../assets/OFL-NotoSansJP.txt`。
 - 確認：PCと390/320 CSS pxのブラウザー表示枠で冒頭の参加価値・ボタン・横はみ出しを確認。ページ内リンク・画像・PDF導線を静的確認。両PDF全3ページを画像化し、文字切れ・重なりとリンク・日時・費用表記を確認。国交省採択資料6ページと正式事業名を照合。
 
@@ -85,3 +85,10 @@
 - 研修トップの既存6項目を基準に統一。トップとmunicipal.cssは5項目化前のefff13bc版へ復元。既存の参加申込フォームを維持。
 - 自治体向けguideと両PDFを、モビリティサービス企画／e-Paletteを活用したサービス開発／自動運転実証／アプリ開発・DX・AI活用／データ分析・改善／車両管理・整備保守の6項目へ統一。
 - 車両管理・整備保守を含む相談可能範囲と、プログラム内の無料範囲を区別。6項目すべての実施・提供を保証しない。
+
+## 2026-10-27 配布用PDFをユーザー選択の元版へ復元
+
+- ユーザー添付 `oita-mirai-mobility-program-A4.pdf` を、既存 `participation-flyer.pdf` にバイト変更なしで復元。3つの訴求、講師・会場・e-Palette写真の元レイアウトを使用。
+- 原本はGit `94957bccc8e3dd3e0e58d2948ca8f48bb786eac2` の同パスと完全一致。SHA256: `2ae17827ecbbf42a250b46387d6f94d477214742bd576b3be237de723dfa715c`。
+- 研修トップ・概要ページの6項目と概要PDF2ページは変更しない。講演案内と概要ページの配布PDFリンクのキャッシュ識別子のみ更新。
+- `scripts/build-participation-pdfs.py` は概要PDFのみを再生成する。配布用PDFはユーザー選択済み原本として保持し、自動再生成しない。
