@@ -25,3 +25,44 @@ header{padding-top:12px;padding-bottom:12px}.task-intro{padding-top:15px;padding
 /* Completed task artifacts belong beside the completion status. */
 .completion-artifacts{margin-top:10px;padding-top:8px;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:4px}.artifact-label{font-size:11px}.completion-artifacts>a{font-size:12px;line-height:1.7;font-weight:700}.completion-artifacts small{margin-top:1px}.completion-artifacts .reference-note{width:100%}
 @media(max-width:760px){.completed-tasks .task-table td[data-label="状況"]{grid-column:1/-1;border-top:1px dashed var(--line);margin-top:5px;padding-top:10px}.completion-artifacts>a{min-height:40px;display:flex;align-items:center;font-size:13px}.completion-artifacts{margin-top:9px;gap:2px}.artifact-label{font-size:12px}}
+
+/* Category colours, paired deadline panels and in-progress materials. */
+#goal-01{--goal-color:#173e6a;--goal-tint:#eef3f8}
+#goal-02{--goal-color:#17624d;--goal-tint:#eef5f1}
+#goal-03{--goal-color:#6a3e87;--goal-tint:#f4eff7}
+.goal-section>.goal-heading{border-top-color:var(--goal-color);border-left:4px solid var(--goal-color);background:var(--goal-tint);padding-inline:16px}
+.goal-section>.goal-heading .goal-keyword{color:var(--goal-color)}
+.goal-section>.goal-heading .tree-chevron{border-color:var(--goal-color)}
+#weekly{--panel-color:#173e6a;--panel-tint:#eef3f8}
+#undated{--panel-color:#92420d;--panel-tint:#fff3e6}
+#weekly,#undated{margin:5px 0 9px!important;border:1px solid var(--line);border-left:4px solid var(--panel-color);padding:0 14px;background:var(--panel-tint)}
+#weekly>summary,#undated>summary{display:flex;flex-wrap:wrap;align-items:center;gap:6px 9px;min-height:52px;padding:9px 0;color:var(--panel-color);list-style:none}
+#weekly>summary::-webkit-details-marker,#undated>summary::-webkit-details-marker{display:none}
+#weekly>summary:before,#undated>summary:before{content:'▸';font-size:15px;line-height:1;flex:none}
+#weekly[open]>summary:before,#undated[open]>summary:before{content:'▾'}
+#weekly-total,#undated-total{display:inline;margin:0;color:var(--accent);font:900 24px/1.2 Arial;white-space:nowrap}
+#weekly>summary #week-label{display:inline;margin:0 0 0 auto;font-size:10px;color:#625f57;font-weight:400}
+.status[data-status='doing']{color:#173e6a;background:#e8f0fa;border-color:#6683a4}
+.status[data-status='confirmed']{color:#17523e;background:#e7f2eb;border-color:#709881}
+.status[data-status='waiting']{color:#6f4c08;background:#fff3d9;border-color:#b49657}
+.status[data-status='review']{color:#60317c;background:#f2eaf7;border-color:#a184b3}
+.status[data-status='hold']{color:#555454;background:#eae8e4;border-color:#99958e}
+.status[data-status='unconfirmed'],.status[data-status='incomplete']{color:#494640;background:#f2f0eb;border-color:#aaa59c}
+.status[data-status='policy']{color:#15574f;background:#e4f2ef;border-color:#6e9b94}
+.status[data-status='unnecessary'],.status[data-status='done']{color:#625f59;background:#f0efec;border-color:#b2aea6}
+.task-urgent .status[data-status='review']{color:#8b2923;background:#fceae7;border-color:#b96960}
+.task-materials{margin-top:10px;padding-top:8px;border-top:1px solid var(--line);display:flex;flex-direction:column;align-items:flex-start;gap:4px;min-width:0}
+.task-materials>a,.completion-artifacts>a{max-width:100%;font-size:12px;line-height:1.7;font-weight:700;overflow-wrap:anywhere}
+.task-materials small{margin-top:1px}.task-materials .reference-note{width:100%}
+@media(max-width:760px){
+ .goal-section>.goal-heading{padding-inline:11px}
+ #weekly,#undated{padding-inline:11px}
+ #weekly>summary,#undated>summary{min-height:70px;align-content:center;padding-block:9px}
+ #weekly>summary #week-label{flex-basis:100%;margin-left:17px;font-size:10px}
+ .task-table td.has-artifacts{grid-column:1/-1;border-top:1px dashed var(--line);margin-top:5px;padding-top:10px}
+ .task-materials>a,.completion-artifacts>a{min-height:40px;display:flex;align-items:center;font-size:13px}
+ .task-materials{margin-top:9px;gap:2px}
+}
+@media print{
+ .goal-section>.goal-heading,#weekly,#undated{background:transparent}
+}

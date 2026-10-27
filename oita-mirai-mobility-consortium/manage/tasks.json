@@ -47,7 +47,22 @@
       "number": "01-01",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "意思決定ルール案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "情報共有ルール案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p10",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-039"
       ],
@@ -81,7 +96,15 @@
       "number": "01-02",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "運営体制案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p06",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-039"
       ],
@@ -115,7 +138,15 @@
       "number": "01-03",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "会費の検討案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p16",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-039"
       ],
@@ -161,7 +192,15 @@
       "number": "01-04",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "運営資金・会計案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p09",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-039"
       ],
@@ -195,7 +234,15 @@
       "number": "01-05",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "契約前の確認事項（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p17",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-039"
       ],
@@ -237,10 +284,17 @@
           "verificationNote": "内容確認済み。TCO・MDL側の閲覧権限は未確認。合意・完了を証明しない参考資料。"
         },
         {
-          "label": "既存の説明スライド",
+          "label": "設立基本案スライド（9/26版）",
           "url": "https://docs.google.com/presentation/d/1f1kkzJ_9ACYEyJ9NvyuGiNwCVM5htd-JRww_XPNVzMA/edit",
           "verified": true,
-          "verificationNote": "内容確認済み。TCO・MDL側の閲覧権限は未確認。合意・完了を証明しない参考資料。"
+          "verificationNote": "9/26更新の既存案。TCO・MDL側の閲覧権限は未確認。合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "役割分担案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
@@ -285,7 +339,15 @@
       "number": "01-07",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "参画・役割の構想案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "VIEW-PLAT"
       ],
@@ -320,7 +382,15 @@
       "number": "01-08",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "県協議用資料（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/meeting/",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "VIEW-PREF"
       ],
@@ -360,7 +430,15 @@
       "review": null,
       "resume": null,
       "evidenceLinks": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "設立までの工程案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p13",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "displayOrder": 109,
       "legacyIds": [],
       "statusNote": "状況未確認。未着手・進行中を断定しない。",
@@ -392,7 +470,22 @@
       "review": null,
       "resume": null,
       "evidenceLinks": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "相談の入口（2項目）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html#consult",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "displayOrder": 201,
       "legacyIds": [],
       "statusNote": "状況未確認。未着手・進行中を断定しない。",
@@ -426,7 +519,22 @@
       "number": "02-02",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "11〜2月の工程案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p13",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "プログラムの進め方（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-035",
         "OMC-031"
@@ -546,7 +654,15 @@
       "number": "02-05",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "実施・実証計画の進め方（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/#next-year",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-035",
         "OMC-031"
@@ -586,7 +702,22 @@
       "number": "02-06",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-beppu"
       ],
@@ -633,7 +764,22 @@
       "number": "02-07",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-oita"
       ],
@@ -680,7 +826,22 @@
       "number": "02-08",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-hiji"
       ],
@@ -727,7 +888,22 @@
       "number": "02-09",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-usa"
       ],
@@ -774,7 +950,22 @@
       "number": "02-10",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-kunisaki"
       ],
@@ -821,7 +1012,22 @@
       "number": "02-11",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-usuki"
       ],
@@ -868,7 +1074,22 @@
       "number": "02-12",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-yufu"
       ],
@@ -915,7 +1136,22 @@
       "number": "02-13",
       "goalId": "02",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "講演の開催案内",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/lecture-20261111.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        },
+        {
+          "label": "自治体向け説明資料（10/26）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "OMC-014-kitsuki"
       ],
@@ -997,7 +1233,15 @@
       "number": "03-01",
       "goalId": "03",
       "collaborators": [],
-      "referenceLinks": [],
+      "referenceLinks": [
+        {
+          "label": "発起人構成案（10/27）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p04",
+          "verified": true,
+          "verifiedAt": "2026-10-27",
+          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+        }
+      ],
       "legacyIds": [
         "VIEW-RECRUIT"
       ],

@@ -13,7 +13,7 @@ function urgency(t,today){if(overdue(t,today))return 0;if(t.status==='review')re
 function selected(tasks,filters={},today=todayJST()) {
  const q=(filters.query||'').trim().toLocaleLowerCase('ja'),bucket=filters.view||'all',exactNumber=/^\d{2}-\d{2}$/.test(q);
  return tasks.filter(t=>{
-  const inView=bucket==='completed'?closed(t):bucket==='hold'?!closed(t)&&t.status==='hold':!closed(t)&&t.status!=='hold'&&(bucket==='week'?thisWeek(t,today):bucket==='overdue'?overdue(t,today):bucket==='review'?t.status==='review':bucket==='unscheduled'?!t.plannedWeek&&!t.dueDate:true);
+  const inView=bucket==='completed'?closed(t):bucket==='hold'?!closed(t)&&t.status==='hold':!closed(t)&&t.status!=='hold'&&(bucket==='week'?thisWeek(t,today):bucket==='overdue'?overdue(t,today):bucket==='review'?t.status==='review':bucket==='undated'?!t.dueDate:bucket==='unscheduled'?!t.plannedWeek&&!t.dueDate:true);
   return inView&&(!filters.phase||t.phase===filters.phase)&&(!filters.owner||(t.ownerTeam||'未定')===filters.owner)&&(!filters.region||(t.region||'未定')===filters.region)&&(!filters.status||t.status===filters.status)&&(!q||(exactNumber?t.id===q:[t.title,t.detail,t.counterparty,t.municipality,t.ownerTeam,t.id,t.number,...(t.legacyIds||[]),...(t.themes||[])].join(' ').toLocaleLowerCase('ja').includes(q)));
  }).sort((a,b)=>{
   const sort=filters.sort||'attention';
@@ -33,9 +33,10 @@ function link(text,url){const a=el('a',text),safe=safeLink(url);if(safe)a.href=s
 function td(row,label){const cell=el('td');cell.dataset.label=label;row.append(cell);return cell}
 function table(headers,cls){const wrap=el('div',null,'table-wrap'),t=el('table',null,'board-table '+cls),thead=el('thead'),head=el('tr'),tbody=el('tbody');for(const name of headers){const th=el('th',name);th.scope='col';head.append(th)}thead.append(head);t.append(thead,tbody);wrap.append(t);return {wrap,tbody}}
 function appendReferences(container,t){
- const refs=t.referenceLinks||[];
- for(const ref of refs){const url=safeLink(ref.url);if(url){container.append(link('参考：'+(ref.label||'資料')+' ↗',url));if(ref.verificationNote){const note=el('details',null,'reference-note');note.append(el('summary','リンクの確認状況'),el('small',ref.verificationNote));container.append(note)}}}
- if(t.source&&!refs.some(r=>r.url===t.source))container.append(link('既存資料 ↗',t.source));
+ const refs=t.referenceLinks||[],notes=new Set();
+ for(const ref of refs){const url=safeLink(ref.url);if(!url)continue;container.append(link('参考：'+(ref.label||'資料')+' ↗',url));if(ref.verificationNote)notes.add(ref.verificationNote)}
+ if(t.source&&!refs.length)container.append(link('参考：既存資料 ↗',t.source));
+ if(notes.size){const note=el('details',null,'reference-note');note.append(el('summary','資料の確認状況'));for(const text of notes)note.append(el('small',text));container.append(note)}
  const proof=(t.evidenceLinks||[]).map(safeLink).filter(Boolean);
  if(proof.length){proof.forEach((url,i)=>container.append(link('完了根拠 '+(i+1)+' ↗',url)))}else if(closed(t))container.append(el('small','完了根拠：資料リンク未確認'));
 }
@@ -66,7 +67,7 @@ function shortStatus(t){if(t.sendStatus&&t.status==='unconfirmed')return '送信
 function taskTable(tasks,today,context='all'){
  const {wrap,tbody}=table(['番号','何を','誰に','誰が','いつまでに','状況'],'task-table');
  for(const t of tasks){
-  const row=el('tr');row.id=context==='weekly'?'weekly-'+t.id:t.id;row.dataset.taskId=t.id;
+  const row=el('tr');row.id=context==='all'?t.id:context+'-'+t.id;row.dataset.taskId=t.id;
   if(overdue(t,today))row.classList.add('task-overdue');
   if(!closed(t)&&t.status!=='hold'&&deadline(t)&&deadline(t)>=today&&deadline(t)<=addDays(today,3))row.classList.add('task-soon');
   if(t.status==='review'&&urgency(t,today)<=1)row.classList.add('task-urgent');
@@ -87,7 +88,7 @@ function taskTable(tasks,today,context='all'){
   
   
   if(t.privateDetailsPending)detail.append(el('p','相手先・協議記録：非公開保存先は未接続。'));
-  if(!closed(t))appendReferences(detail,t);
+  if(!closed(t)&&t.source&&!(t.referenceLinks||[]).length)detail.append(link('既存の参考資料 ↗',t.source));
   name.append(detail);
   td(row,'誰に').append(el('span',t.municipality?t.municipality+'（窓口：'+(t.counterparty||'未定')+'）':(t.privateDetailsPending?'非公開・未接続':t.counterparty||'未定')));
   const owner=td(row,'誰が');owner.append(el('b',t.ownerTeam||'未定'));if(t.ownerName)owner.append(el('small',t.ownerName));
@@ -96,10 +97,10 @@ function taskTable(tasks,today,context='all'){
   if(t.businessSendTarget)due.append(el('small',t.businessSendTargetLabel||'営業日の送信目安：'+labelDate(t.businessSendTarget),'send-target'));
   if(t.dueDate&&t.dueCertainty!=='confirmed')due.append(el('small','仮置き'));
   if(overdue(t,today))due.append(el('em','期限超過'));else if(row.classList.contains('task-soon'))due.append(el('em','期限間近'));
-  const state=td(row,'状況');const badge=el('span',shortStatus(t),'status');badge.title=STATUS[t.status];state.append(badge);
+  const state=td(row,'状況');const badge=el('span',shortStatus(t),'status');badge.dataset.status=t.status;badge.title=STATUS[t.status];state.append(badge);
   if(t.sendStatus&&t.status!=='unconfirmed')state.append(el('small','送信：'+t.sendStatus));
   if(closed(t)&&t.completionBasis?.scope)state.append(el('small',t.completionBasis.scope+'のみ'));
-  if(closed(t)){const artifacts=el('div',null,'completion-artifacts');artifacts.append(el('b','成果物・資料','artifact-label'));appendReferences(artifacts,t);state.append(artifacts);} 
+  if(closed(t)||(t.referenceLinks||[]).length||(t.evidenceLinks||[]).length){const artifacts=el('div',null,closed(t)?'completion-artifacts':'task-materials');artifacts.append(el('b',closed(t)?'成果物・資料':'参考資料','artifact-label'));appendReferences(artifacts,t);state.classList.add('has-artifacts');state.append(artifacts);} 
   if(closed(t)&&t.completionBasis)detail.append(el('small',typeof t.completionBasis==='string'?t.completionBasis:t.completionBasis.summary||t.completionBasis.note||'本人の最新指示で完了を確認'));
   if(t.status==='review'){
    const review=el('div',null,'review-detail');review.append(el('b','確認内容：'+(t.review?.request||'未定')),el('span','判断：'+(t.review?.reviewerLabel||'未定')),el('span','確認期限：'+labelDate(t.review?.dueDate)));
@@ -137,11 +138,14 @@ function draw(){
  const weekTasks=selected(data.tasks,{...f,view:'week'},today);
  $('weekly-items').replaceChildren(weekTasks.length?taskTable(weekTasks,today,'weekly'):el('p','この条件で今週に該当するタスクはありません。','weekly-empty'));
  $('weekly-total').textContent=weekTasks.length+'件';
+ const undatedTasks=selected(data.tasks,{...f,view:'undated'},today);
+ $('undated-items').replaceChildren(undatedTasks.length?taskTable(undatedTasks,today,'undated'):el('p','該当なし','weekly-empty'));
+ $('undated-total').textContent=undatedTasks.length+'件';
  $('weekly-note').textContent='同じタスクを抽出。予定週と期限は別管理。超過・確認待ちは継続表示。';
  $('count').textContent=`未完了 ${tasks.length} ／ 完了 ${completed.length} ／ 全 ${data.tasks.length}件`;
  $('empty').hidden=tasks.length+completed.length!==0;
- $('show-unscheduled').hidden=view!=='week'||!selected(data.tasks,{...f,view:'unscheduled'},today).length;
- for(const v of ['week','overdue','review','all','unscheduled','hold'])$(v+'-count').textContent=String(selected(data.tasks,{...f,view:v},today).length);
+ $('show-unscheduled').hidden=view!=='week'||!selected(data.tasks,{...f,view:'undated'},today).length;
+ for(const v of ['week','overdue','review','all','undated','hold'])$(v+'-count').textContent=String(selected(data.tasks,{...f,view:v},today).length);
  document.querySelectorAll('[data-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===view)));
  revealSection();
 }
@@ -152,7 +156,7 @@ function drawOutreach(){const {wrap,tbody}=table(['企業・団体名','窓口',
 function drawProgramme(){const schedule=el('div',null,'schedule-months');for(const month of data.programmeSchedule?.months||[]){const article=el('article');article.append(el('b',month.month),el('p',month.activity));schedule.append(article)}$('programme-schedule').replaceChildren(el('p','月別案（未合意・期限とは別）','small-note'),schedule);const {wrap,tbody}=table(['テーマ','実施条件・確認内容','担当','状況','期限'],'theme-table');for(const theme of data.themePlans||[]){const row=el('tr');td(row,'テーマ').append(el('b',theme.title));td(row,'実施条件・確認内容').append(el('p',theme.detail));td(row,'担当').append(el('span',theme.ownerTeam||'未定'));td(row,'状況').append(el('span',theme.status,'status'));td(row,'期限').append(el('span',labelDate(theme.dueDate)));tbody.append(row)}$('theme-plans').replaceChildren(wrap)}
 for(const [id,open] of [['tree-open',true],['tree-close',false]])$(id).addEventListener('click',()=>{for(const section of document.querySelectorAll('#items > .task-groups > .goal-section')){section.open=open;const goalId=section.id.slice(5);if(open)expandedGoals.add(goalId);else expandedGoals.delete(goalId)}});
 for(const id of ['search','phase','owner','region','status','sort'])$(id).addEventListener(id==='search'?'input':'change',draw);
-document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{view=button.dataset.view;draw()}));$('show-unscheduled').addEventListener('click',()=>{view='unscheduled';draw();$('list-title').scrollIntoView({block:'start'})});$('reset').addEventListener('click',()=>{for(const id of ['search','phase','owner','region','status'])$(id).value='';$('sort').value='number';view='all';draw();$('search').focus()});
+document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{view=button.dataset.view;draw()}));$('show-unscheduled').addEventListener('click',()=>{$('undated').open=true;$('undated').scrollIntoView({block:'start'})});$('reset').addEventListener('click',()=>{for(const id of ['search','phase','owner','region','status'])$(id).value='';$('sort').value='number';view='all';draw();$('search').focus()});
 fetch('./tasks.json',{cache:'no-store',credentials:'omit'}).then(r=>{if(!r.ok)throw Error('表示データを取得できません');return r.json()}).then(value=>{data=validate(value);$('data-date').textContent='整理日 '+value.asOf.slice(0,10).replaceAll('-','.');for(const [key,label] of Object.entries(STATUS)){const o=el('option',label);o.value=key;$('status').append(o)}for(const region of [...new Set(data.tasks.map(t=>t.region).filter(Boolean))]){const o=el('option',region);o.value=region;$('region').append(o)}draw();drawChecklist();drawOperations();drawHistory();drawOutreach();drawProgramme()}).catch(()=>{$('count').textContent='表示データを読み込めませんでした。再読み込みするか、構想説明書をご確認ください。'});
 setInterval(()=>{if(document.visibilityState==='visible'&&todayJST()!==lastDay)draw()},30000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')draw()});
 function revealSection(){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch(_){return}const target=document.getElementById(id);if(!target)return;if(target.tagName==='DETAILS')target.open=true;let parent=target.parentElement;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement}}window.addEventListener('hashchange',revealSection);revealSection();
