@@ -11,7 +11,7 @@ import re
 ROOT = Path(__file__).resolve().parent
 BASE = '/co-creation-atlas/'
 FEATURE = BASE + 'spatial-design/'
-VERSION = '20261027.5'
+VERSION = '20261027.6'
 BEHANCE_EMBED_URL = re.compile(r'https://www\.behance\.net/embed/project/([0-9]+)\?ilo0=1\Z')
 
 
