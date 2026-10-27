@@ -89,11 +89,13 @@ a second case database.
   The feature is independent of the 115-case and 37-frontier datasets.
 - The 23 spaces have primary-company counts of 6 / 6 / 6 / 5. McDonald's 2018
   headquarters is counted once and cross-references its joint design roles.
-- The 69 photographs in the supplied report remain permission-pending reference
-  links. Never promote these to image publication without individual clearance.
-- The feature now has 147 media items: 123 photographs and 24 still frames
-  from a Business Wire-distributed official NVIDIA/Honeywell film. Coverage
-  expanded from five to thirteen spaces. Each video frame has its time code.
+- The 69 photographs in the supplied report remain reference records. Do not
+  promote them wholesale into a gallery or imply that separate reuse permission
+  has been obtained. Every additional display has its own recorded basis.
+- All 23 spaces now display actual photographs. The feature has 128 regular
+  photographs, 24 official video frames, 2 authorized provider photo embeds,
+  and 8 specifically analysed photographic quotations. Do not combine these
+  into an undifferentiated licensed-photo count. Each video frame has its time code.
   Googleplex historic/event views, Macquarie exterior views, the later T-Mobile
   additions and actual design authorship are explicitly distinguished.
 - Newly added CC NC photographs are used only in the free, advertising-free
@@ -101,16 +103,30 @@ a second case database.
   original titles and requested author links are preserved. Publisher editorial
   media terms from PR TIMES, Business Wire and GSK are recorded per item; those
   materials are not generally reusable stock. The GSK JPEG remains unmodified.
-- The original 69 report candidates remain link-only. Unconfirmed Etsy press
-  assets, Core77/v2com materials behind media download requirements, and IBM
-  candidates were not imported. Do not treat a visible image or a download
-  button alone as confirmed reuse permission.
+- The two CWA photo embeds use the official Behance oEmbed route. Validate the
+  exact provider URL and keep its standard aspect ratio and attribution UI.
+  Never extract or rehost those covers. Their continued availability depends
+  on the provider and the author's embed settings.
+- Frasers' two official press-bank photos are recorded as
+  `press-editorial-offer-assessed`, with the specific press/download context
+  and `explicitLicenseText: false`. This is a limited editorial-use assessment,
+  not an assertion of express permission or a reusable stock license.
+- Eight photos are marked `statutory-quotation`, each limited to one picture
+  per space with three original analysis paragraphs, the whole-image necessity,
+  author and original source. They are small complete frames, not cropped.
+  The index also shows a photograph-specific analysis and attribution rather
+  than an ornamental thumbnail. These images are excluded from modal sets,
+  company covers, OG images and promotional reuse. A quotation is not a claim
+  of separate permission; keep its purpose, scope and presentation together.
+  The basis was checked against the Agency for Cultural Affairs' 2026 copyright
+  text and its legal FAQ 5-13. Changing the purpose requires a fresh assessment.
 - The gallery, project index and company jump links show real media counts.
   Modal controls cycle only within one space; captions, author links, original
   titles, dates and license links update with the selected image. Full images
   and original-image links remain available without JavaScript.
-- `test_spatial_design.py` checks IDs, project references, attribution, licensed
-  local image sources, pending-image exclusion, counts, entry links and sitemap.
+- `test_spatial_design.py` checks IDs, project references, attribution, image
+  sources, exact embed allowlists, quotation boundaries, all-23 visual coverage,
+  counts, entry links and sitemap.
   Existing Atlas, Frontier, experts, step-guide and JS checks also passed.
 - Chromium iframe viewport checks covered all five new pages at 320, 390, 768,
   1280 and 1440 CSS pixels, plus expanded details and disabled JavaScript. No
@@ -131,30 +147,30 @@ pages after deployment. Keep changes scoped to this directory, publish without
 force, and reconcile any concurrent upstream edit before retrying. Preserve
 the distinction between a verified structure and a verified factual claim.
 
-### Photo coverage after expansion
+### Photo coverage after completion
 
-| Space | Media items |
-| --- | ---: |
-| kokuyo-hq | 10 |
-| mcdonalds-innovation-center | 0 |
-| microsoft-envisioning-center | 0 |
-| slack-hq | 27 |
-| uber-old-hq | 1 |
-| mcdonalds-hq | 16 |
-| nvidia-campus | 27 |
-| adobe-founders-tower | 1 |
-| etsy-brooklyn | 0 |
-| t-mobile-campus | 4 |
-| gensler-san-francisco | 0 |
-| ibm-one-madison | 0 |
-| tbwa-chiat-day | 5 |
-| pallotta-teamworks | 0 |
-| googleplex-2005 | 14 |
-| macquarie-one-shelley | 3 |
-| barbarian-group | 14 |
-| intuit-bayshore | 0 |
-| google-super-hq | 24 |
-| frasers-london | 0 |
-| thg-media-city | 0 |
-| jojoe-gentilly | 0 |
-| gsk-global-hq | 1 |
+| Space | Gallery media | Official photo embed | Analytical quotation |
+| --- | ---: | ---: | ---: |
+| kokuyo-hq | 10 | 0 | 0 |
+| mcdonalds-innovation-center | 0 | 0 | 1 |
+| microsoft-envisioning-center | 0 | 0 | 1 |
+| slack-hq | 27 | 0 | 0 |
+| uber-old-hq | 1 | 0 | 0 |
+| mcdonalds-hq | 16 | 0 | 0 |
+| nvidia-campus | 27 | 0 | 0 |
+| adobe-founders-tower | 1 | 0 | 0 |
+| etsy-brooklyn | 1 | 0 | 1 |
+| t-mobile-campus | 4 | 0 | 0 |
+| gensler-san-francisco | 1 | 0 | 1 |
+| ibm-one-madison | 1 | 0 | 1 |
+| tbwa-chiat-day | 5 | 0 | 0 |
+| pallotta-teamworks | 0 | 1 | 0 |
+| googleplex-2005 | 14 | 0 | 0 |
+| macquarie-one-shelley | 3 | 0 | 0 |
+| barbarian-group | 14 | 0 | 0 |
+| intuit-bayshore | 0 | 1 | 0 |
+| google-super-hq | 24 | 0 | 0 |
+| frasers-london | 2 | 0 | 1 |
+| thg-media-city | 0 | 0 | 1 |
+| jojoe-gentilly | 0 | 0 | 1 |
+| gsk-global-hq | 1 | 0 | 0 |

@@ -789,7 +789,8 @@
     "mediaIds": [
       "mcdonalds-innovation-center-view-1",
       "mcdonalds-innovation-center-view-2",
-      "mcdonalds-innovation-center-view-3"
+      "mcdonalds-innovation-center-view-3",
+      "mcdonalds-innovation-center-completion-quotation-01"
     ],
     "existingCaseId": null,
     "steps": [
@@ -984,7 +985,8 @@
     "mediaIds": [
       "microsoft-envisioning-center-view-1",
       "microsoft-envisioning-center-view-2",
-      "microsoft-envisioning-center-view-3"
+      "microsoft-envisioning-center-view-3",
+      "microsoft-envisioning-center-completion-quotation-01"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2114,12 +2116,16 @@
     "sourceIds": [
       "SD-S034",
       "SD-S035",
-      "SD-S036"
+      "SD-S036",
+      "SD-S223",
+      "SD-S229"
     ],
     "mediaIds": [
       "etsy-brooklyn-view-1",
       "etsy-brooklyn-view-2",
-      "etsy-brooklyn-view-3"
+      "etsy-brooklyn-view-3",
+      "etsy-brooklyn-completion-etsy-brooklyn-exterior-2024",
+      "etsy-brooklyn-completion-etsy-brooklyn-interior-quotation"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2134,7 +2140,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2024年撮影の本社建物外観です。2016年のGensler内装の竣工写真ではありません。"
   },
   {
     "id": "t-mobile-campus",
@@ -2409,12 +2416,15 @@
       "SD-S043",
       "SD-S044",
       "SD-S045",
-      "SD-S046"
+      "SD-S046",
+      "SD-S224"
     ],
     "mediaIds": [
       "gensler-san-francisco-view-1",
       "gensler-san-francisco-view-2",
-      "gensler-san-francisco-view-3"
+      "gensler-san-francisco-view-3",
+      "gensler-san-francisco-completion-gensler-sf-mills-exterior-2022",
+      "gensler-san-francisco-completion-gensler-sf-interior-quotation"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2424,7 +2434,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "入居建物Mills Buildingの外観です。撮影は2022年で、2023年のGensler新オフィス内装の竣工写真ではありません。"
   },
   {
     "id": "ibm-one-madison",
@@ -2542,12 +2553,15 @@
       "SD-S047",
       "SD-S048",
       "SD-S049",
-      "SD-S050"
+      "SD-S050",
+      "SD-S225"
     ],
     "mediaIds": [
       "ibm-one-madison-view-1",
       "ibm-one-madison-view-2",
-      "ibm-one-madison-view-3"
+      "ibm-one-madison-view-3",
+      "ibm-one-madison-completion-ibm-one-madison-exterior-2025",
+      "ibm-one-madison-completion-ibm-one-madison-interior-quotation"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2557,7 +2571,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2025年撮影の入居建物One Madison Avenueの外観です。GenslerによるIBMオフィス内装とは設計範囲を区別しています。"
   },
   {
     "id": "tbwa-chiat-day",
@@ -2754,12 +2769,14 @@
     ],
     "sourceIds": [
       "SD-S057",
-      "SD-S063"
+      "SD-S063",
+      "SD-S226"
     ],
     "mediaIds": [
       "pallotta-teamworks-view-1",
       "pallotta-teamworks-view-2",
-      "pallotta-teamworks-view-3"
+      "pallotta-teamworks-view-3",
+      "pallotta-teamworks-completion-behance-4859177"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3278,12 +3295,14 @@
     ],
     "sourceIds": [
       "SD-S061",
-      "SD-S070"
+      "SD-S070",
+      "SD-S227"
     ],
     "mediaIds": [
       "intuit-bayshore-view-1",
       "intuit-bayshore-view-2",
-      "intuit-bayshore-view-3"
+      "intuit-bayshore-view-3",
+      "intuit-bayshore-completion-behance-203671295"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3562,12 +3581,16 @@
     "sourceIds": [
       "SD-S081",
       "SD-S073",
-      "SD-S082"
+      "SD-S082",
+      "SD-S228"
     ],
     "mediaIds": [
       "frasers-london-view-1",
       "frasers-london-view-2",
-      "frasers-london-view-3"
+      "frasers-london-view-3",
+      "frasers-london-completion-quotation-sliding-wall",
+      "frasers-london-completion-official-press-exterior",
+      "frasers-london-completion-official-press-terrace"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3577,7 +3600,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "施主公式のHead Office向けプレス画像として配布された、Academy Houseの外観・屋上の写真です。PENSONが設計した室内の可動壁・会議席は、下の写真分析枠で区別して読みます。"
   },
   {
     "id": "thg-media-city",
@@ -3662,7 +3686,8 @@
     "mediaIds": [
       "thg-media-city-view-1",
       "thg-media-city-view-2",
-      "thg-media-city-view-3"
+      "thg-media-city-view-3",
+      "thg-media-city-completion-photo-quotation-lab"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3795,7 +3820,8 @@
     "mediaIds": [
       "jojoe-gentilly-view-1",
       "jojoe-gentilly-view-2",
-      "jojoe-gentilly-view-3"
+      "jojoe-gentilly-view-3",
+      "jojoe-gentilly-completion-quotation-restaurant-stage"
     ],
     "existingCaseId": null,
     "steps": [

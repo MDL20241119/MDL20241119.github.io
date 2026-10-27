@@ -11,11 +11,41 @@ import re
 ROOT = Path(__file__).resolve().parent
 BASE = '/co-creation-atlas/'
 FEATURE = BASE + 'spatial-design/'
-VERSION = '20261027.3'
+VERSION = '20261027.4'
+BEHANCE_EMBED_URL = re.compile(r'https://www\.behance\.net/embed/project/([0-9]+)\?ilo0=1\Z')
 
 
 def e(value):
     return escape(str(value), quote=True)
+
+
+def validate_official_embed(media):
+    match = BEHANCE_EMBED_URL.fullmatch(media.get('embedUrl', ''))
+    assert match, 'Unsupported official embed URL'
+    assert media.get('rightsStatus') == 'official-embed'
+    assert all(media.get(k) for k in ['credit', 'caption', 'alt', 'imageDate', 'permission'])
+    assert not media.get('local'), 'Embed content must not be rehosted'
+    if media.get('embedId'):
+        assert str(media['embedId']) == match.group(1)
+    permission = media['permission']
+    assert permission.get('basis') == 'official-embed'
+    assert urlparse(permission.get('termsUrl', '')).scheme == 'https'
+
+
+def validate_quotation(media, root):
+    assert media.get('rightsStatus') == 'statutory-quotation'
+    assert all(media.get(k) for k in ['local', 'credit', 'caption', 'alt', 'imageDate', 'dimensions', 'quoteAnalysis', 'quoteSummary', 'quotePurpose', 'permission'])
+    assert (root/media['local']).is_file()
+    assert media.get('noCrop', True)
+    assert len(media['dimensions']) == 2 and all(isinstance(n, int) and n > 0 for n in media['dimensions'])
+    assert isinstance(media['quoteAnalysis'], list) and len(media['quoteAnalysis']) == 3
+    assert all(isinstance(p, str) and p.strip() for p in media['quoteAnalysis'])
+    assert 100 <= len(media['quoteSummary']) <= 180
+    permission = media['permission']
+    assert permission.get('basis') == 'japanese-copyright-act-32'
+    assert all(permission.get(k) for k in ['sourceUrl', 'verified', 'evidence', 'termsUrl'])
+    assert urlparse(permission['sourceUrl']).scheme == 'https'
+    assert urlparse(permission['termsUrl']).scheme == 'https'
 
 
 def read(root=ROOT):
@@ -41,20 +71,29 @@ def read(root=ROOT):
     for media in data['media']:
         assert media['projectId'] in project_ids and media['sourceId'] in source_ids
         if media['publicationMode'] == 'image':
-            assert media['rightsStatus'] in {'cleared-cc', 'cleared-public-domain', 'cleared-permission'}
+            assert media['rightsStatus'] in {'cleared-cc', 'cleared-public-domain', 'cleared-permission', 'press-editorial-offer-assessed'}
             assert all(media.get(k) for k in ['local', 'credit', 'license', 'licenseUrl', 'alt', 'caption', 'dimensions', 'permission'])
             assert (root/media['local']).is_file()
             assert media.get('kind', 'photograph') in {'photograph', 'video-still'}
             assert media.get('noCrop', True)
             if media.get('kind') == 'video-still':
                 assert media.get('videoTimeDisplay') and media.get('originalImageUrl')
-            if 'by-nc' in media['licenseUrl'] or media['rightsStatus'] == 'cleared-permission':
+            if 'by-nc' in media['licenseUrl'] or media['rightsStatus'] in {'cleared-permission', 'press-editorial-offer-assessed'}:
                 assert media['permission'].get('useContext') == 'free-editorial-learning'
                 assert media['permission'].get('commercialPromotion') is False
+            if media['rightsStatus'] == 'press-editorial-offer-assessed':
+                assert media['permission'].get('basis') == 'official-press-imagery-download-offer'
+                assert media['permission'].get('explicitLicenseText') is False
             for credit_link in media.get('creditLinks', []):
                 assert urlparse(credit_link['url']).scheme == 'https'
+        elif media['publicationMode'] == 'embed':
+            validate_official_embed(media)
+        elif media['publicationMode'] == 'quotation':
+            validate_quotation(media, root)
         else:
             assert media['publicationMode'] == 'link-only'
+    quoted_projects = [m['projectId'] for m in data['media'] if m['publicationMode'] == 'quotation']
+    assert len(quoted_projects) == len(set(quoted_projects)), 'Use one specifically analysed quotation per space'
     return data
 
 
@@ -134,6 +173,18 @@ def project_photos(project, data):
     return sorted(photos, key=lambda m: not m.get('featured', False))
 
 
+def project_embeds(project, data):
+    return [m for m in data['media'] if m['projectId'] == project['id'] and m['publicationMode'] == 'embed']
+
+
+def project_quotations(project, data):
+    return [m for m in data['media'] if m['projectId'] == project['id'] and m['publicationMode'] == 'quotation']
+
+
+def project_visuals(project, data):
+    return project_photos(project, data) + project_embeds(project, data) + project_quotations(project, data)
+
+
 def photo_count(project, data):
     return len(project_photos(project, data))
 
@@ -141,6 +192,28 @@ def photo_count(project, data):
 def media_count_label(photos):
     stills = sum(p.get('kind') == 'video-still' for p in photos)
     return f'{len(photos)}点（写真{len(photos)-stills}枚・映像静止画{stills}点）' if stills else f'写真{len(photos)}枚'
+
+
+def availability_label(project, data):
+    photos, embeds, quotations = project_photos(project, data), project_embeds(project, data), project_quotations(project, data)
+    parts = ['掲載 ' + media_count_label(photos)] if photos else []
+    if embeds:
+        parts.append(f'公式写真を表示（{len(embeds)}配信）')
+    if quotations:
+        parts.append(f'分析用の写真引用 {len(quotations)}点')
+    return ' ／ '.join(parts) if parts else '公式掲載元の写真を参照'
+
+
+def visual_coverage(data):
+    return {p['id'] for p in data['projects'] if project_visuals(p, data)}
+
+
+def visual_summary(data):
+    local = [m for m in data['media'] if m['publicationMode'] == 'image']
+    stills = sum(m.get('kind') == 'video-still' for m in local)
+    embeds = sum(m['publicationMode'] == 'embed' for m in data['media'])
+    quotes = sum(m['publicationMode'] == 'quotation' for m in data['media'])
+    return f'掲載写真{len(local)-stills}枚・映像静止画{stills}点 ／ 公式写真の配信{embeds}件 ／ 分析用の写真引用{quotes}点'
 
 
 def media_kind_label(photo):
@@ -151,6 +224,8 @@ def media_kind_label(photo):
 
 
 def usage_label(photo):
+    if photo['rightsStatus'] == 'press-editorial-offer-assessed':
+        return '公式Pressの配布素材を、この本社を扱う編集記事で使用。自由再利用の許諾ではありません。'
     if 'by-nc' in photo['licenseUrl']:
         return '非営利の学習・分析記事で使用。広告・営業資料への写真転用はしません。'
     if photo['rightsStatus'] == 'cleared-permission':
@@ -205,6 +280,83 @@ def image_gallery(project, data, compact=False):
     return ''.join(out) + '</div>'
 
 
+def official_embed_frame(project, media):
+    validate_official_embed(media)
+    return (f'<div class="sd-official-embed-frame"><iframe '
+            f'src="{e(media["embedUrl"])}" '
+            f'title="{e(project["name"])}｜設計者公式の空間写真" '
+            f'width="404" height="316" loading="lazy" allowfullscreen '
+            f'allow="clipboard-write" referrerpolicy="strict-origin-when-cross-origin" '
+            f'data-sd-embed="{e(media["id"])}" data-sd-project="{e(project["id"])}"></iframe></div>')
+
+
+def official_embed_gallery(project, data):
+    embeds = project_embeds(project, data)
+    if not embeds:
+        return ''
+    sources = source_map(data)
+    out = ['<section class="sd-official-embeds"><header class="sd-gallery-heading"><h4>公式配信の空間写真</h4><p>設計者が公開した写真を、提供元の標準枠で表示しています。</p></header>']
+    for media in embeds:
+        out.append('<figure class="sd-official-embed">' + official_embed_frame(project, media)
+                   + f'<figcaption><span class="sd-media-kind">{e(media.get("provider", "Behance"))}公式埋め込み</span>'
+                   + f'<strong>{e(media["caption"])}</strong><span>{e(media["credit"])} · '
+                   + link(sources[media['sourceId']]['url'], '設計者の掲載元') + '</span>'
+                   + f'<span>{e(media["imageDate"])}</span><span>写真ファイルを複製せず、提供元から配信しています。'
+                   + link(media['permission']['termsUrl'], '公式埋め込みについて') + '</span></figcaption></figure>')
+    return ''.join(out) + '</section>'
+
+
+def quotation_figure(project, media, data, compact=False):
+    source = source_map(data)[media['sourceId']]
+    w, h = media['dimensions']
+    cls = 'sd-quotation-figure sd-quotation-compact' if compact else 'sd-quotation-figure'
+    return (f'<figure class="{cls}"><img src="{BASE}{e(media["local"])}" '
+            f'alt="{e(media["alt"])}" width="{w}" height="{h}" loading="lazy" '
+            f'data-sd-quotation="{e(media["id"])}" data-sd-project="{e(project["id"])}">'
+            f'<figcaption><span class="sd-media-kind">写真引用</span>'
+            + (f'<strong>{e(media["caption"])}</strong>' if not compact else '')
+            + f'<span>{e(media["credit"])} · ' + link(source['url'], '原掲載元') + '</span>'
+            + ('' if compact else f'<span>{e(media["imageDate"])} · {e(media.get("changes", "写真全体を縮小。切り抜き・色変更なし。"))}</span>')
+            + '</figcaption></figure>')
+
+
+def quotation_gallery(project, data):
+    quotations = project_quotations(project, data)
+    if not quotations:
+        return ''
+    out = ['<section class="sd-photo-analysis"><header class="sd-gallery-heading"><h4>写真から読む</h4><p>写真の具体的な構成を、分析と限界を併せて検討します。</p></header>']
+    for media in quotations:
+        analysis = ''.join('<p>'+e(p)+'</p>' for p in media['quoteAnalysis'])
+        out.append(f'<div class="sd-photo-quotation" data-sd-quote-id="{e(media["id"])}">'
+                   + quotation_figure(project, media, data)
+                   + f'<div class="sd-quote-analysis"><p class="sd-kicker">写真引用を読む / 編集上の分析</p>'
+                   + f'<h5>{e(media.get("quoteTitle") or "写真の配置を読む。")}</h5>{analysis}'
+                   + '<p class="sd-quote-scope">分析のための写真引用です。写真の権利は各権利者に帰属します。'
+                   + link(media['permission']['termsUrl'], '引用の確認根拠') + '</p></div></div>')
+    return ''.join(out) + '</section>'
+
+
+def index_visual(project, data):
+    photos, embeds, quotations = project_photos(project, data), project_embeds(project, data), project_quotations(project, data)
+    if quotations:
+        media = quotations[0]
+        return (f'<div class="sd-index-quotation" data-sd-quote-id="{e(media["id"])}">'
+                + quotation_figure(project, media, data, compact=True)
+                + f'<p class="sd-index-quote-summary">{e(media["quoteSummary"])}</p></div>')
+    if photos:
+        cover = photos[0]
+        w, h = cover['dimensions']
+        return f'<a class="sd-index-visual" href="{project_url(project)}"><img src="{BASE}{e(cover["local"])}" alt="{e(cover["alt"])}" width="{w}" height="{h}" loading="lazy"><span>{e(media_kind_label(cover))}</span></a>'
+    if embeds:
+        media = embeds[0]
+        source = source_map(data)[media['sourceId']]
+        return ('<div class="sd-index-official-embed">' + official_embed_frame(project, media)
+                + f'<p>{e(media["credit"])} · ' + link(source['url'], '設計者の掲載元') + '</p></div>')
+    reference = next(m for m in data['media'] if m['projectId'] == project['id'] and m['publicationMode'] == 'link-only')
+    source = source_map(data)[reference['sourceId']]
+    return f'<a class="sd-index-visual sd-reference-visual" href="{e(source["url"])}" target="_blank" rel="noopener noreferrer">公式掲載元の空間写真を見る ↗</a>'
+
+
 def photo_reading(project, data):
     sources = source_map(data)
     media = [m for m in data['media'] if m['projectId']==project['id'] and m['publicationMode']=='link-only']
@@ -214,7 +366,7 @@ def photo_reading(project, data):
         out.append(f'<article><span class="sd-view-number">{e(m["label"])}</span><p>{e(m["reading"])}</p>{link(s["url"],"公式の空間写真を見る")}</article>')
     out.append('</div><details class="sd-rights-note"><summary>撮影・掲載時点と権利の確認状況</summary>')
     for note in dict.fromkeys(m['rightsNote'] for m in media):out.append('<p>'+e(note)+'</p>')
-    out.append('<p>提供レポートの69候補は当初、転載許諾未取得でした。追加掲載した写真は、撮影者や配布元の利用条件を別途確認しています。未確認画像は複製・埋め込みをせず、参照先を案内しています。</p></details></details>')
+    out.append('<p>提供レポートの69候補は当初、転載許諾未取得でした。追加素材は掲載の根拠を個別に記録しています。公式配信と、写真を具体的に分析する引用枠は通常の写真ギャラリーから区別して表示しています。</p></details></details>')
     return ''.join(out)
 
 
@@ -233,7 +385,7 @@ def project_article(p, data, stages):
         ('evidence','EVIDENCE','成果の根拠と留保','何が、確かめられたか。')])
     steps=''.join(f'<li><a href="{BASE}learn/step-{s["number"]:02d}/"><b>{s["number"]:02d}</b> {e(stages[s["number"]])} →</a><p>{e(s["why"])}</p></li>' for s in p['steps'])
     existing=f'<a href="{BASE}cases/{p["existingCaseId"]}/">既存Atlasの記事を読む →</a>' if p['existingCaseId'] else ''
-    return (f'<article class="sd-project" id="{p["id"]}" data-project-id="{p["id"]}"><header class="sd-project-heading"><p class="sd-kicker">CASE STUDY <span>{e(p["status"])}</span></p><h3>{e(p["name"])}</h3><p class="sd-project-tagline">{e(p["tagline"])}</p></header>'+meta+image_gallery(p,data)+'<div class="sd-case-points">'+glance+'</div>'+f'<div class="sd-case-limit"><strong>真似する前の条件・限界</strong><p>{e(p["limits"])}</p></div>'+photo_reading(p,data)+f'<details class="sd-deep-reading"><summary>仕掛け・運営・成果を、詳しく読む <span aria-hidden="true">＋</span></summary><div class="sd-prose">{render_blocks(p["body"],source_map(data),4)}</div></details><section class="sd-case-steps"><h4>Atlasの工程で読む</h4><p class="sd-note">実空間単位の編集上の解釈です。各社がAtlasの工程を採用したという意味ではありません。</p><ul>{steps}</ul>{existing}</section>'+project_sources(p,data)+'</article>')
+    return (f'<article class="sd-project" id="{p["id"]}" data-project-id="{p["id"]}"><header class="sd-project-heading"><p class="sd-kicker">CASE STUDY <span>{e(p["status"])}</span></p><h3>{e(p["name"])}</h3><p class="sd-project-tagline">{e(p["tagline"])}</p></header>'+meta+quotation_gallery(p,data)+image_gallery(p,data)+official_embed_gallery(p,data)+'<div class="sd-case-points">'+glance+'</div>'+f'<div class="sd-case-limit"><strong>真似する前の条件・限界</strong><p>{e(p["limits"])}</p></div>'+photo_reading(p,data)+f'<details class="sd-deep-reading"><summary>仕掛け・運営・成果を、詳しく読む <span aria-hidden="true">＋</span></summary><div class="sd-prose">{render_blocks(p["body"],source_map(data),4)}</div></details><section class="sd-case-steps"><h4>Atlasの工程で読む</h4><p class="sd-note">実空間単位の編集上の解釈です。各社がAtlasの工程を採用したという意味ではありません。</p><ul>{steps}</ul>{existing}</section>'+project_sources(p,data)+'</article>')
 
 
 def source_library(ids, data):
@@ -293,17 +445,10 @@ def build(root, head, header, footer, stages):
     project_cards=[]
     for i,p in enumerate(data['projects'],1):
         c=next(c for c in data['companies'] if c['id']==p['companyId'])
-        count = photo_count(p, data)
-        photos = project_photos(p, data)
-        availability = '掲載 ' + media_count_label(photos) if count else '掲載写真 0枚 · 公式写真へのリンクあり'
-        if photos:
-            cover = photos[0]
-            w, h = cover['dimensions']
-            visual = f'<a class="sd-index-visual" href="{project_url(p)}"><img src="{BASE}{e(cover["local"])}" alt="{e(cover["alt"])}" width="{w}" height="{h}" loading="lazy"><span>{e(media_kind_label(cover))}</span></a>'
-        else:
-            reference = next(m for m in data['media'] if m['projectId'] == p['id'] and m['publicationMode'] == 'link-only')
-            visual = f'<a class="sd-index-visual sd-reference-visual" href="{e(sources[reference["sourceId"]]["url"])}" target="_blank" rel="noopener noreferrer">公式掲載元の空間写真を見る ↗</a>'
-        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p>{visual}<h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><p class="sd-index-photo-count">{availability}</p><a class="sd-index-cta" href="{project_url(p)}">仕掛け・運営・成果を読む →</a></article>')
+        availability = availability_label(p, data)
+        visual = index_visual(p, data)
+        cta = '写真と分析を読む' if project_quotations(p, data) else '仕掛け・運営・成果を読む'
+        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p>{visual}<h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><p class="sd-index-photo-count">{availability}</p><a class="sd-index-cta" href="{project_url(p)}">{cta} →</a></article>')
     stage_rows=[]
     for n in range(1,9):
         matches=[(p,s) for p in data['projects'] for s in p['steps'] if s['number']==n]
@@ -319,13 +464,15 @@ def build(root, head, header, footer, stages):
     body+='<section class="sd-section" id="steps"><header class="sd-section-heading"><span>04 / CONNECT TO 8 STEPS</span><h2>既存の8工程へ、つなぐ。</h2><p>実空間単位の編集上の解釈です。支える工程と、別途必要な仕事を確認できます。</p></header><div class="sd-stages">'+''.join(stage_rows)+'</div></section>'
     body+='<section class="sd-section sd-check" id="before-you-build"><header class="sd-section-heading"><span>05 / BEFORE YOU BUILD</span><h2>取り入れる前に、決める。</h2><p>交流が増えたことだけで、成功にしない。</p></header><div class="sd-checklist">'+''.join(f'<article><b>{i:02d}</b><h3>{title}</h3><p>{desc}</p></article>' for i,(title,desc) in enumerate(checklist,1))+'</div><details class="sd-deep-reading"><summary>導入3案＋現状維持と、30・90・365日の検証案 ＋</summary><div class="sd-prose">'+render_blocks(editorial['options']+editorial['experiment'],sources)+'</div></details><a class="sd-button" href="'+BASE+'learn/workbook/">既存の実践シートで計画する →</a></section>'
     cleared = [m for m in data['media'] if m['publicationMode'] == 'image']
-    summary = media_count_label(cleared)
-    body = body.replace('<a class="sd-button" href="#companies">', f'<p class="sd-hero-media">{summary}を掲載</p><a class="sd-button" href="#companies">', 1)
-    body+=f'<section class="sd-section" id="sources"><header class="sd-section-heading"><span>SOURCES / 原典と確認範囲</span><h2>根拠と限界を、一緒に読む。</h2></header><div class="sd-prose">{render_blocks(editorial["sourceScope"],sources)}<p>利用条件を個別に確認した{summary}を掲載しています。提供レポートの69候補は、未許諾のまま複製せず公式掲載元への参照リンクを保持しています。追加素材の条件は写真ごとに異なり、写真・設計の権利は各権利者に帰属します。</p></div>'+source_library([s['id'] for s in data['sources']],data)+'</section>'
+    summary = visual_summary(data)
+    coverage = len(visual_coverage(data))
+    coverage_heading = f'全{len(data["projects"])}空間に写真を掲載' if coverage == len(data['projects']) else f'{coverage} / {len(data["projects"])}空間に写真を表示'
+    body = body.replace('<a class="sd-button" href="#companies">', f'<p class="sd-hero-media">{coverage_heading}<br><span>{summary}</span></p><a class="sd-button" href="#companies">', 1)
+    body+=f'<section class="sd-section" id="sources"><header class="sd-section-heading"><span>SOURCES / 原典と確認範囲</span><h2>根拠と限界を、一緒に読む。</h2></header><div class="sd-prose">{render_blocks(editorial["sourceScope"],sources)}<p>{summary}。表示対象は{coverage} / {len(data["projects"])}空間です。写真・映像静止画、提供元の公式配信、分析用の写真引用は区別しています。提供レポートの69候補は公式掲載元への参照リンクとして保持し、追加素材の掲載条件や引用の目的を別々に記録しています。写真・設計の権利は各権利者に帰属します。</p></div>'+source_library([s['id'] for s in data['sources']],data)+'</section>'
     (dest/'index.html').write_text(shell('空間は、共創をどう変えるか。｜4つの設計思想','O+A・Gensler・Clive Wilkinson Architects・PENSONの4社、23空間の仕掛け・運営・成果の根拠を読む。', 'https://mobilitydlab.com'+FEATURE,body,head,header,footer))
     for c in data['companies']:
         projects=[p for p in data['projects'] if p['companyId']==c['id']]
-        jump='<nav class="sd-case-jump" aria-label="この会社の実空間">'+''.join(f'<a href="#{p["id"]}"><span>{e(p["name"])}<small>掲載 {media_count_label(project_photos(p, data))}</small></span><span aria-hidden="true">↓</span></a>' for p in projects)+'</nav>'
+        jump='<nav class="sd-case-jump" aria-label="この会社の実空間">'+''.join(f'<a href="#{p["id"]}"><span>{e(p["name"])}<small>{e(availability_label(p, data))}</small></span><span aria-hidden="true">↓</span></a>' for p in projects)+'</nav>'
         body=breadcrumb(c)+f'<section class="sd-company-hero sd-color-{c["number"]}"><p class="sd-kicker">{c["number"]} / {c["word"]}</p><h1>{e(c["name"])}</h1><h2>{e(c["keyword"])}</h2><p>{e(c["intro"])}</p></section>'+company_nav(data,c['id'])
         body+='<section class="sd-section"><header class="sd-section-heading"><span>PHILOSOPHY & METHOD</span><h2>思想と、設計の方法。</h2><p>'+e(c['lead'])+'</p></header><details class="sd-deep-reading"><summary>思想・方法と成立条件を詳しく読む ＋</summary><div class="sd-prose">'+render_blocks(c['philosophy'],sources)+'</div></details>'+jump+'</section>'
         body+='<section class="sd-section sd-company-cases" aria-label="代表空間のケーススタディ">'+''.join(project_article(p,data,stages) for p in projects)+'</section>'
@@ -336,7 +483,7 @@ def build(root, head, header, footer, stages):
         out=dest/c['id'];out.mkdir(exist_ok=True)
         (out/'index.html').write_text(shell(c['name']+'｜'+c['keyword'],c['lead'],'https://mobilitydlab.com'+FEATURE+c['id']+'/',body,head,header,footer))
     integrate(root)
-    print(f'Spatial design: 4 companies, 23 spaces, {len(cleared)} cleared media ({summary}); 69 original candidates remain link-only.')
+    print(f'Spatial design: 4 companies, {coverage}/23 spaces with visuals; {summary}; 69 original candidates remain link-only.')
 
 
 def teaser():

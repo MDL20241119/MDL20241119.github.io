@@ -6550,5 +6550,633 @@
     "noCrop": true,
     "expansionBatch": "20261027-gallery",
     "featured": false
+  },
+  {
+    "id": "etsy-brooklyn-completion-etsy-brooklyn-exterior-2024",
+    "projectId": "etsy-brooklyn",
+    "sourceId": "SD-S223",
+    "kind": "photograph",
+    "imageScope": "exterior",
+    "caption": "Etsy Brooklyn本社が入る117 Adams Streetの外観（2024年）。歴史的な建物と街路との関係を読むための写真で、Genslerによる2016年の内装を写すものではありません。",
+    "alt": "Etsy Brooklyn本社の黄土色の外壁とEtsyの看板、建物をつなぐ連絡橋。",
+    "credit": "Bylan2 / Wikimedia Commons",
+    "photographer": "Bylan2",
+    "imageDate": "2024-12-16撮影（配信元記載）。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/etsy-brooklyn-completion-etsy-brooklyn-exterior-2024.jpg",
+    "dimensions": [
+      2048,
+      1332
+    ],
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/1/13/Offices_near_Clumber_Corner%2C_Brooklyn%2C_New_York_City.png",
+    "changes": "配信元の写真全体を縦横比を保って長辺2048px以内へ縮小しJPEG形式で保存。切り抜き・色調変更なし。",
+    "publicationMode": "image",
+    "rightsStatus": "cleared-cc",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "permission": {
+      "basis": "creative-commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Offices_near_Clumber_Corner,_Brooklyn,_New_York_City.png",
+      "termsUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "evidence": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。",
+      "verified": "2026-10-27"
+    },
+    "creditLinks": [
+      {
+        "label": "Bylan2",
+        "url": "https://commons.wikimedia.org/wiki/User:Bylan2"
+      }
+    ]
+  },
+  {
+    "id": "gensler-san-francisco-completion-gensler-sf-mills-exterior-2022",
+    "projectId": "gensler-san-francisco",
+    "sourceId": "SD-S224",
+    "kind": "photograph",
+    "imageScope": "exterior",
+    "caption": "Gensler San Franciscoが入居するMills Buildingの街路側外観（2022年）。既存建物の構成を読む写真で、2023年のGensler新オフィス内装を写すものではありません。",
+    "alt": "街角から見るMills Buildingの連続する窓と装飾のある外観。",
+    "credit": "Dead.rabbit / Wikimedia Commons",
+    "photographer": "Dead.rabbit",
+    "imageDate": "2022-02-05 10:31:04撮影（配信元記載）。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/gensler-san-francisco-completion-gensler-sf-mills-exterior-2022.jpg",
+    "dimensions": [
+      2048,
+      1600
+    ],
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/f/f7/Mills_Building_wide.jpg",
+    "changes": "配信元の写真全体を縦横比を保って長辺2048px以内へ縮小しJPEG形式で保存。切り抜き・色調変更なし。",
+    "publicationMode": "image",
+    "rightsStatus": "cleared-cc",
+    "license": "CC BY-SA 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "permission": {
+      "basis": "creative-commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:Mills_Building_wide.jpg",
+      "termsUrl": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "evidence": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。",
+      "verified": "2026-10-27"
+    },
+    "creditLinks": [
+      {
+        "label": "Dead.rabbit",
+        "url": "https://commons.wikimedia.org/wiki/User:Dead.rabbit"
+      }
+    ]
+  },
+  {
+    "id": "ibm-one-madison-completion-ibm-one-madison-exterior-2025",
+    "projectId": "ibm-one-madison",
+    "sourceId": "SD-S225",
+    "kind": "photograph",
+    "imageScope": "exterior",
+    "caption": "IBM旗艦オフィスが入るOne Madison Avenueの外観（2025年）。既存の低層部に新しいガラスのボリュームが重なる。建物の改修・増築設計はKPFで、Genslerのオフィス内装とは設計範囲が異なります。",
+    "alt": "公園の木々越しに見上げるOne Madison Avenueの既存低層部とガラスの増築部。",
+    "credit": "Eden, Janine and Jim / Wikimedia Commons",
+    "photographer": "Eden, Janine and Jim",
+    "imageDate": "2025-10-13 10:47撮影（配信元記載）。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/ibm-one-madison-completion-ibm-one-madison-exterior-2025.jpg",
+    "dimensions": [
+      1152,
+      2048
+    ],
+    "originalImageUrl": "https://upload.wikimedia.org/wikipedia/commons/6/6f/One_Madison_Avenue_%2854851516787%29.jpg",
+    "changes": "配信元の写真全体を縦横比を保って長辺2048px以内へ縮小しJPEG形式で保存。切り抜き・色調変更なし。",
+    "publicationMode": "image",
+    "rightsStatus": "cleared-cc",
+    "license": "CC BY 4.0",
+    "licenseUrl": "https://creativecommons.org/licenses/by/4.0/",
+    "permission": {
+      "basis": "creative-commons",
+      "sourceUrl": "https://commons.wikimedia.org/wiki/File:One_Madison_Avenue_(54851516787).jpg",
+      "termsUrl": "https://creativecommons.org/licenses/by/4.0/",
+      "evidence": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。",
+      "verified": "2026-10-27"
+    },
+    "creditLinks": [
+      {
+        "label": "Eden, Janine and Jim",
+        "url": "https://www.flickr.com/people/10485077@N06/"
+      }
+    ]
+  },
+  {
+    "id": "pallotta-teamworks-completion-behance-4859177",
+    "projectId": "pallotta-teamworks",
+    "sourceId": "SD-S226",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "倉庫の大きな空間の中に、オレンジ色のコンテナを積んだ小室群と通路がある。外周の大空間と、人が滞在する小さな囲いを分ける構成を見る。",
+    "alt": "倉庫の大きな空間の中に、オレンジ色のコンテナを積んだ小室群と通路がある。外周の大空間と、人が滞在する小さな囲いを分ける構成を見る。",
+    "credit": "Benny Chan / Fotoworks",
+    "photographer": "Benny Chan / Fotoworks",
+    "imageDate": "2012-08-18公開。2002年の設計事例。撮影日は未確認。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "publicationMode": "embed",
+    "rightsStatus": "official-embed",
+    "embedUrl": "https://www.behance.net/embed/project/4859177?ilo0=1",
+    "provider": "Behance",
+    "dimensions": [
+      404,
+      316
+    ],
+    "license": "設計者が公開したBehance公式埋め込み",
+    "licenseUrl": "https://help.behance.net/hc/en-us/articles/19288565618971-Guide-Sharing-and-Embedding-Behance-Content",
+    "changes": "提供元の公式埋め込みを使用。写真を複製・再ホストしない。",
+    "permission": {
+      "basis": "official-embed",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://www.behance.net/gallery/4859177/Pallotta-Teamworks-Los-Angeles",
+      "termsUrl": "https://help.behance.net/hc/en-us/articles/19288565618971-Guide-Sharing-and-Embedding-Behance-Content",
+      "evidence": "Behance公式ヘルプは公開プロジェクトの第三者サービスへのiframe埋め込みを認め、制作者がアカウント設定で拒否できると明記。各プロジェクトの公式oEmbed APIが現在iframe HTMLを返しており、埋め込みページはHTTP 200で画像入り。画像を複製・再ホストせず、このiframeを使用する。"
+    }
+  },
+  {
+    "id": "intuit-bayshore-completion-behance-203671295",
+    "projectId": "intuit-bayshore",
+    "sourceId": "SD-S227",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "受付からラウンジ、木の大階段、上階の吹抜けへ見通しが続く。移動する経路と短く滞在する席が近接する構成を見る。",
+    "alt": "受付からラウンジ、木の大階段、上階の吹抜けへ見通しが続く。移動する経路と短く滞在する席が近接する構成を見る。",
+    "credit": "Jason O’Rear",
+    "photographer": "Jason O’Rear",
+    "imageDate": "2024-07-20公開。2023年竣工の設計事例。撮影日は未確認。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "publicationMode": "embed",
+    "rightsStatus": "official-embed",
+    "embedUrl": "https://www.behance.net/embed/project/203671295?ilo0=1",
+    "provider": "Behance",
+    "dimensions": [
+      404,
+      316
+    ],
+    "license": "設計者が公開したBehance公式埋め込み",
+    "licenseUrl": "https://help.behance.net/hc/en-us/articles/19288565618971-Guide-Sharing-and-Embedding-Behance-Content",
+    "changes": "提供元の公式埋め込みを使用。写真を複製・再ホストしない。",
+    "permission": {
+      "basis": "official-embed",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://www.behance.net/gallery/203671295/Intuit-MTV-22-Bayshore-Building",
+      "termsUrl": "https://help.behance.net/hc/en-us/articles/19288565618971-Guide-Sharing-and-Embedding-Behance-Content",
+      "evidence": "Behance公式ヘルプは公開プロジェクトの第三者サービスへのiframe埋め込みを認め、制作者がアカウント設定で拒否できると明記。各プロジェクトの公式oEmbed APIが現在iframe HTMLを返しており、埋め込みページはHTTP 200で画像入り。画像を複製・再ホストせず、このiframeを使用する。"
+    }
+  },
+  {
+    "id": "mcdonalds-innovation-center-completion-quotation-01",
+    "projectId": "mcdonalds-innovation-center",
+    "sourceId": "SD-S007",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "床の黄色い動線、階段状の滞在場所、キャスター付きテーブルが一つの場に隣接する。",
+    "alt": "床の黄色い動線、階段状の滞在場所、キャスター付きテーブルが一つの場に隣接する。",
+    "credit": "写真：Garrett Rowland／公表：Studio O+A",
+    "photographer": "Garrett Rowland",
+    "imageDate": "2019年の改修事例。撮影日は未確認。現在の施設構成を示すものではありません。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/mcdonalds-innovation-center-completion-quotation-01.jpg",
+    "dimensions": [
+      800,
+      533
+    ],
+    "originalImageUrl": "https://o-plus-a.com/oplusa/wp/wp-content/uploads/2019/12/McDonaldsInnovation_0182-2200x1467.jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "写真の手前から奥へ延びる黄色い矢印と輪郭線に対し、中央の階段状の場所には腰掛ける人が写る。移動の方向を示す床と、短く滞在できる縁を同時に置いている点が、この空間を読む手掛かりになる。この関係は机だけ、階段だけを切り出すと分からなくなるため、画面全体を引用した。",
+      "右手前のハイテーブルはキャスター付きで、背後には青い枠の開口部が並ぶ。机を動かして使い方を変える余地は読み取れるが、自由に移せる運用まで写真から確かめることはできない。人が歩く線と、移動後の机やスツールが占める範囲を分けて検証する必要がある。",
+      "この写真は設計上の近接関係を示す記録であり、厨房職員と事務職員が実際に何回協働したかを証明するものではない。取り入れるなら、短い相談から試験へ移る時間と、通行・片付けの負担を測る。OSB材や鮮やかな線の見た目を再現するだけでは、活動のつながりを移植したことにはならない。"
+    ],
+    "quoteTitle": "通り道の脇に、相談の縁をつくる。",
+    "quoteSummary": "黄色い床の矢印の脇に、腰掛けられる階段と可動机が並ぶ。移動と短い滞在を近づける構成は見えるが、机の移動後にも通路を確保できるか、相談が厨房での試験につながったかは写真だけでは分からない。形を真似る前に、移動・片付けと相談後の行動を確かめたい。",
+    "quotePurpose": "移動経路と滞在場所の交点をどのように設計したかを、この写真の具体的な配置に即して批評するため。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://o-plus-a.com/project/mcdonalds-innovation-center/",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "移動経路と滞在場所の交点をどのように設計したかを、この写真の具体的な配置に即して批評するため。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "microsoft-envisioning-center-completion-quotation-01",
+    "projectId": "microsoft-envisioning-center",
+    "sourceId": "SD-S010",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "木のフレームで囲むHexagonに、対面の参加者と遠隔参加者を映す画面が配置され、天井が赤く照らされる。",
+    "alt": "木のフレームで囲むHexagonに、対面の参加者と遠隔参加者を映す画面が配置され、天井が赤く照らされる。",
+    "credit": "写真：Jeremy Bittermann／公表：Studio O+A",
+    "photographer": "Jeremy Bittermann",
+    "imageDate": "2016年の設計事例、公式画像URLの公開フォルダーは2018年3月。撮影日は未確認。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/microsoft-envisioning-center-completion-quotation-01.jpg",
+    "dimensions": [
+      800,
+      618
+    ],
+    "originalImageUrl": "https://o-plus-a.com/oplusa/wp/wp-content/uploads/2018/03/OA_Microsoft_13568_F2.jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "写真では、木のフレームの内側に複数の画面があり、左側の画面には遠隔の参加者が映る。対面で座る人、立って画面を示す人、外側へ開く入口が一つの画面に収まっている。会議室を机と椅子の容器としてではなく、複数の参加経路を組み合わせた装置として読むために、写真全体を引用した。",
+      "天井を赤く照らす光は、公式説明では使用中を示す状態表示である。囲いが完全に閉じていなくても、周囲へ利用状態を知らせる手段になる。一方、光だけで誰もが状態を理解できるか、音が外へ漏れないか、途中参加がしやすいかまでは読み取れない。開放性と会議への参加しやすさを同じ意味に扱わないことが重要になる。",
+      "写真から確認できるのは設計時点の配置であり、遠隔参加者が同等に発言できたことや、会議の成果が改善したことではない。応用する際は、誰が画面を操作できるか、発言が遠隔側に届くか、入口や席へ支障なく近づけるかを試す。木の多面体を再現する前に、参加の権限と道具を確かめたい。"
+    ],
+    "quoteTitle": "囲いと画面で、参加の経路をつなぐ。",
+    "quoteSummary": "木の囲いの中に対面の参加者と遠隔の参加者を映す画面があり、天井の赤い光が使用状態を知らせる。入口を開く設計と、誰もが発言できる会議は同じではない。音の漏れ、画面の操作権限、遠隔側への音声到達は写真に写らず、別に検証する必要がある。",
+    "quotePurpose": "画面・参加者・開口部・状態表示を一体にする会議空間の構成と限界を、この写真に即して批評するため。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://o-plus-a.com/project/microsoft-envisioning-center/",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "画面・参加者・開口部・状態表示を一体にする会議空間の構成と限界を、この写真に即して批評するため。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "thg-media-city-completion-photo-quotation-lab",
+    "projectId": "thg-media-city",
+    "sourceId": "SD-S083",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "引用写真：THG Media CityのRemote Programming Lab。前面の穴・収納部・キャスターと、背後の固定された執務環境の関係を分析する。",
+    "alt": "THG Media Cityの白い可動機器ユニット。前面左に多数の小さな穴、右に扉、下部にキャスターが見え、背後には机・椅子とガラス間仕切りがある。",
+    "credit": "撮影：Tom Donald／掲載元・設計：PENSON",
+    "photographer": "Tom Donald",
+    "imageDate": "撮影日未確認。公式掲載写真。対象案件は2018年のMedia City執務空間。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/thg-media-city-completion-photo-quotation-lab.jpg",
+    "dimensions": [
+      545,
+      800
+    ],
+    "originalImageUrl": "https://penson-co-cache-production.fra1.cdn.digitaloceanspaces.com/image_2048_webp/5d038c3b0ddc1/penson-thg-media-city-remote-programming-lab-pr.webp?originalExtension=jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "この写真を分析対象にするのは、可動機器ユニットの形と執務席との位置関係を、文章だけでは検証しにくいためである。前面左に規則的な穴、右に扉と引手、足元にキャスターが見える。背後には机と椅子、ガラス間仕切りがあり、装置を固定席から切り離す構成を読み取れる。",
+      "これにより、試験の道具をチームの近くへ運ぶ仮説が立つ。一方、筐体は机より高く、周囲の視線や通路を妨げる可能性がある。",
+      "写真には電源・通信の接続経路、施錠方法、移動を担当する人、試験中の状態は写っていない。「動く形」を採用する際は、移動から接続・安全確認・復旧までの時間を測り、固定設備との比較で日々の試行を容易にするか検証する必要がある。白い一体的な造形の見栄えから、試験回数や学習の増加までを推定することはできない。"
+    ],
+    "quoteTitle": "装置の移動と、試せる運用を分ける。",
+    "quoteSummary": "白い筐体の前面には穴と扉、足元にはキャスターが見える。試験の道具を執務席から切り離して運ぶ構成だが、机より高い装置が視線や通路を妨げる可能性もある。移動できる形から試験のしやすさを推定せず、電源・通信の接続や復旧にかかる手間まで確かめたい。",
+    "quotePurpose": "可動ユニットの前面構成・キャスター・周囲の机とのスケール関係そのものを論じるため、この1写真の全体を必要な範囲で引用。PENSON公式掲載写真のうち、この論点に対応する1点だけ。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://penson.co/en/works/media-city-workspace-the-hut-group",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "可動ユニットの前面構成・キャスター・周囲の机とのスケール関係そのものを論じるため、この1写真の全体を必要な範囲で引用。PENSON公式掲載写真のうち、この論点に対応する1点だけ。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "jojoe-gentilly-completion-quotation-restaurant-stage",
+    "projectId": "jojoe-gentilly",
+    "sourceId": "SD-S084",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "JO&JOE Paris Gentillyのレストランと舞台。手前の食事卓、奥の演奏者、頭上の放射状フレームと赤い揚重機が一枚に写る。",
+    "alt": "JO&JOE Paris Gentillyのレストランと舞台。手前の食事卓、奥の演奏者、頭上の放射状フレームと赤い揚重機が一枚に写る。",
+    "credit": "写真 © Tom Donald／掲載元 PENSON",
+    "photographer": "Tom Donald",
+    "imageDate": "2019年の設計事例。2019年10月29日付PENSON記事に同じ写真を掲載。撮影日時は未確認。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/jojoe-gentilly-completion-quotation-restaurant-stage.jpg",
+    "dimensions": [
+      800,
+      520
+    ],
+    "originalImageUrl": "https://penson-co-cache-production.fra1.cdn.digitaloceanspaces.com/image_2048_webp/5e8c53b01f7ba/191022-penson-jo-and-joe-37.webp?originalExtension=jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "この写真で検討すべきなのは派手な配色より、食事と上演を同じ床に重ねる方法である。手前には食器を載せた食事卓、奥には演奏者のいる舞台、右側には長いカウンターと客席が見える。天井の放射状フレームから赤い揚重機と鎖が下がり、卓周辺まで延びている。",
+      "この位置関係は、飲食中にも上演が視界に入り、客が舞台の近くに留まる配置を読み取る根拠になる。一方、人物には動きのぶれがあり、この一場面だけでは、初対面同士が交流したことや音が客室へ届かないことまでは証明できない。",
+      "設計者は卓を天井へ上げる転換方法を説明するが、このカットだけでは昇降中の立入管理、避難幅、切替時間、運用担当は分からない。応用する際は、色や舞台の形を移すより先に、飲食を続けたい人と公演参加者の共存、吊り設備の安全、片付けと復旧の手順を確かめる必要がある。"
+    ],
+    "quoteTitle": "食事と上演を、同じ場へ重ねる。",
+    "quoteSummary": "手前の食事卓、奥の舞台、頭上の揚重機が同じ場に重なる。食事を続けながら上演が視界に入る配置だが、写真は一場面の記録にとどまる。卓を上げて用途を切り替える際の立入管理や復旧時間、飲食を続けたい人と公演参加者の共存は、別に検証する必要がある。",
+    "quotePurpose": "一階の飲食席と上演を重ねる配置、および吊り設備を伴う用途転換の成立条件を、写真に写る相互の位置関係から批評する。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://penson.co/en/works/jo-joe-paris-gentilly",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "一階の飲食席と上演を重ねる配置、および吊り設備を伴う用途転換の成立条件を、写真に写る相互の位置関係から批評する。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "frasers-london-completion-quotation-sliding-wall",
+    "projectId": "frasers-london",
+    "sourceId": "SD-S081",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "引用写真：Frasers Group Londonの会議席と飲食・共用席。折り畳まれた間仕切りを挟む二つの活動の関係を分析する。",
+    "alt": "Frasers Group Londonの黒い会議卓と多数の椅子。中央に畳まれた間仕切りがあり、右側には人が使う小さなテーブルとカウンターが続く。",
+    "credit": "写真 © Tom Donald／掲載元・設計 PENSON",
+    "photographer": "Tom Donald",
+    "imageDate": "PENSON公式掲載の完成内観。撮影日未確認（ファイル名の180928は撮影日と断定しない）。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/frasers-london-completion-quotation-sliding-wall.jpg",
+    "dimensions": [
+      800,
+      533
+    ],
+    "originalImageUrl": "https://penson-co-cache-production.fra1.cdn.digitaloceanspaces.com/image_2048_webp/5d075e320b02d/180928-penson-sd-669.webp?originalExtension=jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "この写真を引用するのは、可動壁の形だけでなく、開いた境界の両側に残る活動の違いを検討するためである。左には大きな黒い会議卓と向きを揃えた椅子、中央には畳まれた間仕切りと画面、右には小さなテーブルとカウンターが見える。",
+      "壁を開くことで会議と飲食の場所を近づけられる一方、机と椅子の配置はそれぞれの活動の向きを保っている。したがって、部屋を一体化できることだけでは、発表会・日常の会話・静かな会議の共存まで説明できない。",
+      "写真には閉じた状態の遮音性能、照明や映像の切替、机を動かす際の保管先、復旧を担う人は写っていない。転用する際は、開放時の音と情報の境界、参加しない人の通り道、切替と復旧に要する時間を確かめたい。可動壁を設置した面積ではなく、異なる活動を必要な時刻に無理なく成立させられるかが評価の対象になる。"
+    ],
+    "quoteTitle": "壁を開く前に、切替の条件を読む。",
+    "quoteSummary": "会議卓のそばで可動壁が畳まれ、その奥に飲食に使うカウンターと席が続く。閉じた会議から開いた集まりへ使い方を変える余地は見えるが、壁を動かす担当や時間、音と機密の扱いは写真に写らない。開ける形より、実際に切り替えられる運用を確かめたい。",
+    "quotePurpose": "会議卓・畳まれた可動壁・飲食席という三つの配置の関係そのものを批評するため、対象となるこの1カット全体を引用。単独の家具の装飾写真では論点を説明できない。800pxで必要な要素が読めるため高解像度原画や追加写真を引用しない。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://penson.co/en/works/sports-direct-hq",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "会議卓・畳まれた可動壁・飲食席という三つの配置の関係そのものを批評するため、対象となるこの1カット全体を引用。単独の家具の装飾写真では論点を説明できない。800pxで必要な要素が読めるため高解像度原画や追加写真を引用しない。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "gensler-san-francisco-completion-gensler-sf-interior-quotation",
+    "projectId": "gensler-san-francisco",
+    "sourceId": "SD-S045",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "Gensler San Francisco公式掲載写真。前景のラウンジ席と奥のガラス区画・カウンターの隣接を批評するための写真引用。",
+    "alt": "手前の低いソファと革張りの椅子、中央奥のガラス区画、右奥のカウンターと窓が連なるGensler San Franciscoの内観。",
+    "credit": "写真：Jason O’Rear / 出典：Gensler",
+    "photographer": "Jason O’Rear",
+    "imageDate": "撮影日は未確認。公式配布JPEGの更新日時は2025-02-12で、撮影日時を意味しません。2023年に移転したMills Building内のオフィスの公式掲載写真。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/gensler-san-francisco-completion-gensler-sf-interior-quotation.jpg",
+    "dimensions": [
+      800,
+      493
+    ],
+    "originalImageUrl": "https://static1.gensler.com/uploads/image/96574/project-gensler-san-francisco-220M-04-2000x_1739493471.jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "手前には低いソファと二脚の革張りの椅子、中央奥には机を置いたガラス区画、右奥にはカウンターが見える。これらの間を白い柱と床の連続がつなぎ、画面左右には移動する人が写る。設備を露出させた明るい天井の下で、囲われた場所と開かれた席が、互いの気配を残して並ぶ。",
+      "この画面から読む設計上の焦点は、交流のための部屋を一つ設けることではなく、移動の近くに異なる滞在先を置くことである。右のソファで端末を使う人と、奥のカウンターに立つ人が同時に見えるため、座る姿勢や関わり方を選ぶ構成を検討できる。ただし、その近さが集中を助けるか妨げるかは、業務によって変わる。",
+      "写真にある透明な境界は、音の遮断や会話の機密性を証明しない。通行量、席の占有率、静かな退避先との距離も、この一枚では分からない。人物のぶれを日常の活発さの測定結果とせず、ガラス区画の実際の用途や予約、音環境を調べてから、同様の配置を応用する必要がある。"
+    ],
+    "quoteTitle": "通り道と、仕事の居場所はどう重なるか。",
+    "quoteSummary": "前景のソファと椅子、奥のガラス区画、右のカウンターの間を、人が通る床がつなぐ。移動の近くに異なる滞在先を置く構成は見えるが、その近さが集中を助けるか妨げるかは業務によって変わる。透明な境界を遮音の証拠とせず、実際の用途や音環境も確かめたい。",
+    "quotePurpose": "手前のソファ、奥のガラス区画、右のカウンター、その間の移動経路を比較する批評に限って使う。画面全体を示すことで、異なる居場所の近さと見通しの関係を読者が検証できる。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://www.gensler.com/projects/gensler-san-francisco",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "手前のソファ、奥のガラス区画、右のカウンター、その間の移動経路を比較する批評に限って使う。画面全体を示すことで、異なる居場所の近さと見通しの関係を読者が検証できる。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "ibm-one-madison-completion-ibm-one-madison-interior-quotation",
+    "projectId": "ibm-one-madison",
+    "sourceId": "SD-S049",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "IBM One Madison AvenueのGensler公式掲載写真。手前の小卓と奥の共有卓、木のルーバーによる領域の分け方を批評するための写真引用。",
+    "alt": "手前の小さなテーブルで端末を使う人と、奥の大きなテーブルで対話する三人。縦の木ルーバーと色の変化する壁が囲むIBMオフィスの内観。",
+    "credit": "写真：Alexander Severin / 出典：Gensler",
+    "photographer": "Alexander Severin",
+    "imageDate": "撮影日は未確認。個別JPEGのDateTimeDigitizedは2024-10-04、更新日時は2025-01-29。いずれも撮影日の確証としません。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/ibm-one-madison-completion-ibm-one-madison-interior-quotation.jpg",
+    "dimensions": [
+      800,
+      533
+    ],
+    "originalImageUrl": "https://static1.gensler.com/uploads/image/96250/project-ibm-flagship-one-madison-11-2000x_1738252443.jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "この一枚では、手前に小さなテーブルが複数並び、左では一人が端末に向かう。その奥の大きなテーブルでは三人が向き合い、背後には色が連続的に変わる壁がある。木の縦ルーバーが両側と上部に枠をつくる一方、前面は開き、個人作業と少人数の対話が同じ視野に入る。",
+      "注目すべきは「壁をなくす」という単純な開放ではない。奥の共有卓と手前の小卓は別のまとまりを持ち、ルーバー、吊り照明、壁の色によって、奥の領域の輪郭が読み取りやすい。写真を比較の対象にすると、席を一様に並べる代わりに、活動の規模を選べる場所を近接させる可能性と、その境界の弱さを同時に考えられる。",
+      "ただし、木のルーバーが見えることだけで吸音性能や会話の聞こえにくさは判断できない。奥の対話が手前の集中を妨げないか、席の予約や滞在時間がどう決まるかも不明である。この写真は試作道具や検証設備を示していないため、見栄えのよい協働席を、事業の試作・実装を生む仕組みの証拠へ広げない。"
+    ],
+    "quoteTitle": "個人作業と対話の距離を読む。",
+    "quoteSummary": "手前の小卓での個人作業と、奥の共有卓での対話が同じ視野に入る。木のルーバーと照明で領域を分けながら前面を開く構成だが、会話の機密や集中への影響は写真では判断できない。協働席の見栄えを事業成果の証拠へ広げず、席の運用と音環境を別に検証する。",
+    "quotePurpose": "手前と奥の机の規模、両側のルーバー、前面の開口と照明の位置を同時に対照する批評であり、一部の席だけを切り抜くと、領域を分ける境界と活動の近接という論点が失われる。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://www.gensler.com/projects/ibm-flagship-office-at-one-madison-avenue",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "手前と奥の机の規模、両側のルーバー、前面の開口と照明の位置を同時に対照する批評であり、一部の席だけを切り抜くと、領域を分ける境界と活動の近接という論点が失われる。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "etsy-brooklyn-completion-etsy-brooklyn-interior-quotation",
+    "projectId": "etsy-brooklyn",
+    "sourceId": "SD-S229",
+    "kind": "photograph",
+    "imageScope": "interior",
+    "caption": "Etsy Brooklyn公式Press「Office photos / image 4」。曲線のソファ、中央のカウンター、窓際の席の関係を批評するための写真引用。",
+    "alt": "Etsy Brooklynオフィスの曲線の赤い背もたれ席、中央のカウンターと青いスツール、吊り下げ植栽。",
+    "credit": "写真提供：Etsy（公式Press配布写真。撮影者名の記載なし）",
+    "photographer": "撮影者名の記載なし",
+    "imageDate": "公式配布ファイルのEXIF撮影日時：2025-01-13 01:13:29。時計・時差は未検証。2016年竣工時点の写真ではありません。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/etsy-brooklyn-completion-etsy-brooklyn-interior-quotation.jpg",
+    "dimensions": [
+      800,
+      534
+    ],
+    "originalImageUrl": "https://extfiles.etsy.com/Press/brand-assets/Etsy-dumbo-office-04.jpg",
+    "changes": "写真全体を縦横比を保ち長辺800px以内へ縮小。切り抜き・色変更なし。",
+    "publicationMode": "quotation",
+    "rightsStatus": "statutory-quotation",
+    "quoteAnalysis": [
+      "この写真の手前には、赤い背もたれが円弧を描く小さなテーブル席が並ぶ。中央にはカウンターと青いスツール、奥には窓に沿った席があり、座席のまとまりが同じ室内で重なっている。植栽は天井から下がり、背の高い壁で分けずに、視線の先へ緑と別の居場所が現れる構成をつくる。",
+      "注目したいのは、曲線そのものより、席の選び方を変えられる距離である。手前の背もたれは隣の活動と緩く境界をつくり、中央のスツールはカウンターに向く人を並べる。これらを一画面で比べると、少人数で落ち着く場と、立ち寄る人の気配に触れる場を、隣接させる設計上の仮説を読める。",
+      "ただし、写る人の動きから自然な交流の頻度や、日々の席の使われ方までは確定できない。通路の混雑、会話音の伝わり、車椅子での回転余地も寸法と現場確認が要る。これは公式が配布する後年の写真であり、2016年の内装や現在の運用が同じである証拠にはしない。"
+    ],
+    "quoteTitle": "曲線の席と、立ち寄る場所をつなぐ。",
+    "quoteSummary": "円弧を描く背もたれ席、中央のカウンター、奥の窓際席が同じ室内に重なる。少人数で落ち着く場と、立ち寄る人の気配に触れる場を近づける構成だが、会話の頻度や通路の混雑は写真から分からない。2025年の後年の写真で、2016年の完成内装とは区別して読む。",
+    "quotePurpose": "手前の曲線席・中央のカウンター・奥の窓際席の位置関係を同時に比較する批評であり、単一の家具への切り抜きでは、隣接と境界に関する論点を検討できない。",
+    "permission": {
+      "basis": "japanese-copyright-act-32",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://www.etsy.com/press",
+      "termsUrl": "https://www.bunka.go.jp/seisaku/bunka_gyosei/kibankyoka/faq/index.html",
+      "evidence": "公表された公式掲載写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。",
+      "necessity": "手前の曲線席・中央のカウンター・奥の窓際席の位置関係を同時に比較する批評であり、単一の家具への切り抜きでは、隣接と境界に関する論点を検討できない。",
+      "separateReusePermission": false,
+      "useContext": "photo-specific-criticism",
+      "commercialPromotion": false
+    }
+  },
+  {
+    "id": "frasers-london-completion-official-press-exterior",
+    "projectId": "frasers-london",
+    "sourceId": "SD-S228",
+    "kind": "photograph",
+    "imageScope": "exterior",
+    "caption": "Academy Houseの街路側外観。低層のFLANNELS店舗と、その上に重なるオフィス階を写す。",
+    "alt": "夜のAcademy House。角地に建つガラスの建物で、低層の店舗に花模様が表示され、上層には明るい窓が連続している。",
+    "credit": "写真提供：Frasers Group／撮影：Tom Donald（PENSON掲載の同一写真・案件クレジットで確認）",
+    "photographer": "Tom Donald",
+    "imageDate": "撮影日・公開日の記載なし。2026年10月27日に公式PressのHead Office画像として確認。",
+    "noCrop": true,
+    "featured": true,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/frasers-london-completion-official-press-exterior.jpg",
+    "dimensions": [
+      1920,
+      1254
+    ],
+    "originalImageUrl": "https://frasers-cms.netlify.app/assets/frasersgroup_academyhouse_1.png",
+    "changes": "配布画像の全体を、縦横比を保ち長辺1920pxに縮小。トリミング・色変更なし。",
+    "publicationMode": "image",
+    "rightsStatus": "press-editorial-offer-assessed",
+    "license": "Frasers Group公式プレス画像・編集用途での利用判断",
+    "licenseUrl": "https://frasers.group/press/imagery-bank/head-office",
+    "permission": {
+      "basis": "official-press-imagery-download-offer",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://frasers.group/press/imagery-bank/head-office",
+      "explicitLicenseText": false,
+      "useContext": "free-editorial-learning",
+      "commercialPromotion": false,
+      "evidence": "施主公式PressからImagery Bank > Head Officeへ案内され、Academy House写真を個別Downloadリンクで配布。公開JSのHead Office resolverはfrasersgroup_academyhouse_1.png / frasersgroup_academyhouse.png を指定し、getImageryBankImagesは元画像へのbgImgDownloadLinkを生成する。一般的な著作物の無制限許諾とせず、当該企業・本社を扱う独立した無料の編集分析記事内に限定する。公式Legal一覧とDisclaimerも確認したが、書面による明示ライセンスは未記載。",
+      "restrictions": [
+        "Frasers GroupおよびAcademy Houseを論じる編集記事内のみ",
+        "広告・営業資料・再配布素材としての利用は不可",
+        "出典と提供元を必ず表示",
+        "全体写真を使用、トリミング・色変更なし",
+        "明示許諾・自由再利用・CCとは表示しない"
+      ],
+      "termsUrl": "https://frasers.group/press/imagery-bank/head-office"
+    }
+  },
+  {
+    "id": "frasers-london-completion-official-press-terrace",
+    "projectId": "frasers-london",
+    "sourceId": "SD-S228",
+    "kind": "photograph",
+    "imageScope": "exterior-context",
+    "caption": "Academy Houseの屋上テラス。ガラスの外壁沿いに細長いデッキとベンチが続き、Oxford Streetを見渡す。",
+    "alt": "Academy Houseの屋上テラス。ガラス壁と手すりの間に細長いデッキがあり、壁際にベンチが置かれ、下にはOxford Streetが見える。",
+    "credit": "写真提供：Frasers Group公式Imagery Bank（配布ページに撮影者の個人名記載なし）",
+    "photographer": "配布ページに個人名記載なし",
+    "imageDate": "撮影日・公開日の記載なし。2026年10月27日に公式PressのHead Office画像として確認。",
+    "noCrop": true,
+    "featured": false,
+    "companyFeatured": false,
+    "completionBatch": "20261027-all-spaces",
+    "local": "assets/spatial-design/frasers-london-completion-official-press-terrace.jpg",
+    "dimensions": [
+      1920,
+      1280
+    ],
+    "originalImageUrl": "https://frasers-cms.netlify.app/assets/frasersgroup_academyhouse.png",
+    "changes": "配布画像の全体を、縦横比を保ち長辺1920pxに縮小。トリミング・色変更なし。",
+    "publicationMode": "image",
+    "rightsStatus": "press-editorial-offer-assessed",
+    "license": "Frasers Group公式プレス画像・編集用途での利用判断",
+    "licenseUrl": "https://frasers.group/press/imagery-bank/head-office",
+    "permission": {
+      "basis": "official-press-imagery-download-offer",
+      "verified": "2026-10-27",
+      "sourceUrl": "https://frasers.group/press/imagery-bank/head-office",
+      "explicitLicenseText": false,
+      "useContext": "free-editorial-learning",
+      "commercialPromotion": false,
+      "evidence": "施主公式PressからImagery Bank > Head Officeへ案内され、Academy House写真を個別Downloadリンクで配布。公開JSのHead Office resolverはfrasersgroup_academyhouse_1.png / frasersgroup_academyhouse.png を指定し、getImageryBankImagesは元画像へのbgImgDownloadLinkを生成する。一般的な著作物の無制限許諾とせず、当該企業・本社を扱う独立した無料の編集分析記事内に限定する。公式Legal一覧とDisclaimerも確認したが、書面による明示ライセンスは未記載。",
+      "restrictions": [
+        "Frasers GroupおよびAcademy Houseを論じる編集記事内のみ",
+        "広告・営業資料・再配布素材としての利用は不可",
+        "出典と提供元を必ず表示",
+        "全体写真を使用、トリミング・色変更なし",
+        "明示許諾・自由再利用・CCとは表示しない"
+      ],
+      "termsUrl": "https://frasers.group/press/imagery-bank/head-office"
+    }
   }
 ]

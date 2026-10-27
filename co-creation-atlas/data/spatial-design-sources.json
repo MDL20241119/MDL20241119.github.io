@@ -2110,5 +2110,75 @@
     "verified": "2026-10-27",
     "kind": "photograph-source",
     "verification": "対象・撮影時点・個別条件を確認。写真から利用率や因果効果を推定しない。"
+  },
+  {
+    "id": "SD-S223",
+    "url": "https://commons.wikimedia.org/wiki/File:Offices_near_Clumber_Corner,_Brooklyn,_New_York_City.png",
+    "title": "Etsy Brooklyn本社が入る117 Adams Streetの外観（2024年）。歴史的な建物と街路との関係を読むための写真で、Genslerによる2016年の内装を写すものではありません。｜写真の原典",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。"
+  },
+  {
+    "id": "SD-S224",
+    "url": "https://commons.wikimedia.org/wiki/File:Mills_Building_wide.jpg",
+    "title": "Gensler San Franciscoが入居するMills Buildingの街路側外観（2022年）。既存建物の構成を読む写真で、2023年のGensler新オフィス内装を写すものではありません。｜写真の原典",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。"
+  },
+  {
+    "id": "SD-S225",
+    "url": "https://commons.wikimedia.org/wiki/File:One_Madison_Avenue_(54851516787).jpg",
+    "title": "IBM旗艦オフィスが入るOne Madison Avenueの外観（2025年）。既存の低層部に新しいガラスのボリュームが重なる。建物の改修・増築設計はKPFで、Genslerのオフィス内装とは設計範囲が異なります。｜写真の原典",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "Wikimedia Commonsの個別ファイルページに撮影者自身によるCCライセンス、撮影日、被写体の記載を確認。作者・ライセンス・出典と変更内容を近くに表示。"
+  },
+  {
+    "id": "SD-S226",
+    "url": "https://www.behance.net/gallery/4859177/Pallotta-Teamworks-Los-Angeles",
+    "title": "Pallotta Teamworks, Los Angeles - Clive Wilkinson Architects",
+    "publisher": "Clive Wilkinson Architects",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "official-photo-embed",
+    "verification": "Behance公式ヘルプは公開プロジェクトの第三者サービスへのiframe埋め込みを認め、制作者がアカウント設定で拒否できると明記。各プロジェクトの公式oEmbed APIが現在iframe HTMLを返しており、埋め込みページはHTTP 200で画像入り。画像を複製・再ホストせず、このiframeを使用する。"
+  },
+  {
+    "id": "SD-S227",
+    "url": "https://www.behance.net/gallery/203671295/Intuit-MTV-22-Bayshore-Building",
+    "title": "Intuit MTV-22 Bayshore Building - Clive Wilkinson Architects",
+    "publisher": "Clive Wilkinson Architects",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "official-photo-embed",
+    "verification": "Behance公式ヘルプは公開プロジェクトの第三者サービスへのiframe埋め込みを認め、制作者がアカウント設定で拒否できると明記。各プロジェクトの公式oEmbed APIが現在iframe HTMLを返しており、埋め込みページはHTTP 200で画像入り。画像を複製・再ホストせず、このiframeを使用する。"
+  },
+  {
+    "id": "SD-S228",
+    "url": "https://frasers.group/press/imagery-bank/head-office",
+    "title": "Frasers Group公式Press / Imagery Bank / Head Office",
+    "publisher": "frasers.group",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "施主公式PressからImagery Bank > Head Officeへ案内され、Academy House写真を個別Downloadリンクで配布。公開JSのHead Office resolverはfrasersgroup_academyhouse_1.png / frasersgroup_academyhouse.png を指定し、getImageryBankImagesは元画像へのbgImgDownloadLinkを生成する。一般的な著作物の無制限許諾とせず、当該企業・本社を扱う独立した無料の編集分析記事内に限定する。公式Legal一覧とDisclaimerも確認したが、書面による明示ライセンスは未記載。"
+  },
+  {
+    "id": "SD-S229",
+    "url": "https://www.etsy.com/press",
+    "title": "Etsy公式Press / Office photos / image 4",
+    "publisher": "www.etsy.com",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-quotation",
+    "verification": "公表された設計者公式写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。"
   }
 ]
