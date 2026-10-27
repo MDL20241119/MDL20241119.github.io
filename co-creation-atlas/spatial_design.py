@@ -11,7 +11,7 @@ import re
 ROOT = Path(__file__).resolve().parent
 BASE = '/co-creation-atlas/'
 FEATURE = BASE + 'spatial-design/'
-VERSION = '20261027.1'
+VERSION = '20261027.3'
 
 
 def e(value):
@@ -44,6 +44,15 @@ def read(root=ROOT):
             assert media['rightsStatus'] in {'cleared-cc', 'cleared-public-domain', 'cleared-permission'}
             assert all(media.get(k) for k in ['local', 'credit', 'license', 'licenseUrl', 'alt', 'caption', 'dimensions', 'permission'])
             assert (root/media['local']).is_file()
+            assert media.get('kind', 'photograph') in {'photograph', 'video-still'}
+            assert media.get('noCrop', True)
+            if media.get('kind') == 'video-still':
+                assert media.get('videoTimeDisplay') and media.get('originalImageUrl')
+            if 'by-nc' in media['licenseUrl'] or media['rightsStatus'] == 'cleared-permission':
+                assert media['permission'].get('useContext') == 'free-editorial-learning'
+                assert media['permission'].get('commercialPromotion') is False
+            for credit_link in media.get('creditLinks', []):
+                assert urlparse(credit_link['url']).scheme == 'https'
         else:
             assert media['publicationMode'] == 'link-only'
     return data
@@ -120,18 +129,79 @@ def company_nav(data, active=None):
     return f'<nav class="sd-company-nav" aria-label="設計会社から読む"><a href="{FEATURE}">特集トップ</a>{links}</nav>'
 
 
+def project_photos(project, data):
+    photos = [m for m in data['media'] if m['projectId'] == project['id'] and m['publicationMode']=='image']
+    return sorted(photos, key=lambda m: not m.get('featured', False))
+
+
+def photo_count(project, data):
+    return len(project_photos(project, data))
+
+
+def media_count_label(photos):
+    stills = sum(p.get('kind') == 'video-still' for p in photos)
+    return f'{len(photos)}点（写真{len(photos)-stills}枚・映像静止画{stills}点）' if stills else f'写真{len(photos)}枚'
+
+
+def media_kind_label(photo):
+    if photo.get('kind') == 'video-still':
+        return '公式映像の静止画 ' + photo['videoTimeDisplay']
+    return {'interior': '内観', 'exterior': '外観', 'exterior-context': '外観・周辺',
+            'activity': '活動の記録', 'opening-event-context': '開業時の記録'}.get(photo.get('imageScope'), '写真')
+
+
+def usage_label(photo):
+    if 'by-nc' in photo['licenseUrl']:
+        return '非営利の学習・分析記事で使用。広告・営業資料への写真転用はしません。'
+    if photo['rightsStatus'] == 'cleared-permission':
+        return '提供元が認める報道・編集用途で掲載。一般的な再利用許諾ではありません。'
+    return ''
+
+
 def image_gallery(project, data, compact=False):
     sources = source_map(data)
-    photos = [m for m in data['media'] if m['projectId'] == project['id'] and m['publicationMode']=='image']
-    photos.sort(key=lambda m: not m.get('featured', False))
-    if compact:photos = photos[:1]
-    if not photos:return ''
-    out = ['<div class="sd-photo-gallery">']
+    photos = project_photos(project, data)
+    if not photos:
+        return ''
+    payload = {'projectId': project['id'], 'photos': []}
     for photo in photos:
+        payload['photos'].append({
+            'id': photo['id'], 'src': BASE + photo['local'], 'title': project['name'],
+            'alt': photo['alt'], 'caption': photo['caption'], 'credit': photo['credit'],
+            'source': sources[photo['sourceId']]['url'], 'license': photo['license'],
+            'licenseUrl': photo['licenseUrl'], 'photoTitle': photo.get('photoTitle', ''),
+            'creditLinks': photo.get('creditLinks', []),
+            'meta': photo['imageDate'] + ' · ' + photo.get('changes', '改変なし'),
+            'kindLabel': media_kind_label(photo), 'usage': usage_label(photo)})
+    serialized = json.dumps(payload, ensure_ascii=False, separators=(',', ':'))
+    serialized = serialized.replace('<', chr(92)+'u003c').replace('&', chr(92)+'u0026')
+    stills = sum(photo.get('kind') == 'video-still' for photo in photos)
+    out = [f'<div class="sd-photo-gallery" data-sd-gallery="{e(project["id"])}">']
+    if not compact:
+        heading = f'写真・映像静止画 <b>{len(photos)}</b>点' if stills else f'空間写真 <b>{len(photos)}</b>枚'
+        note = e(project.get('galleryNote', '写真を選ぶと拡大できます。前後の写真も続けて読めます。'))
+        out.append(f'<header class="sd-gallery-heading"><h4>{heading}</h4><p>{note}</p></header>')
+    out.append('<script type="application/json" data-sd-photo-set>'+serialized+'</script>')
+    for photo in (photos[:1] if compact else photos):
         src = BASE + photo['local']
         source = sources[photo['sourceId']]
         width, height = photo['dimensions']
-        out.append(f'<figure class="sd-photo" data-rights="{e(photo["rightsStatus"])}"><a href="{e(src)}" data-sd-photo data-title="{e(project["name"])}" data-caption="{e(photo["caption"])}" data-credit="{e(photo["credit"])}" data-source="{e(source["url"])}" data-license="{e(photo["license"])}" data-license-url="{e(photo["licenseUrl"])}"><img src="{e(src)}" alt="{e(photo["alt"])}" width="{width}" height="{height}" loading="lazy"><span class="sd-enlarge">拡大 <span aria-hidden="true">↗</span></span></a><figcaption><strong>{e(photo["caption"])}</strong><span>{e(photo["credit"])} · {link(source["url"],"掲載元")} · {link(photo["licenseUrl"],photo["license"])}</span><span>{e(photo["imageDate"])} · {e(photo.get("changes","改変なし"))}</span></figcaption></figure>')
+        unit = '点' if stills else '枚'
+        enlarge = f'{len(photos)}{unit}を見る' if compact else '拡大'
+        credit_links = ' · '.join(link(c['url'], c['label']) for c in photo.get('creditLinks', []))
+        original_title = f'<span>原題：{e(photo["photoTitle"])}</span>' if photo.get('photoTitle') else ''
+        usage = f'<span class="sd-usage">{e(usage_label(photo))}</span>' if usage_label(photo) else ''
+        out.append(
+            f'<figure class="sd-photo" data-rights="{e(photo["rightsStatus"])}">'
+            f'<a href="{e(src)}" data-sd-photo data-sd-project="{e(project["id"])}" data-sd-photo-id="{e(photo["id"])}">'
+            f'<img src="{e(src)}" alt="{e(photo["alt"])}" width="{width}" height="{height}" loading="lazy">'
+            f'<span class="sd-enlarge">{enlarge} <span aria-hidden="true">↗</span></span></a>'
+            f'<figcaption><span class="sd-media-kind">{e(media_kind_label(photo))}</span>'
+            f'<strong>{e(photo["caption"])}</strong><span>{e(photo["credit"])} · '
+            + link(source['url'], '掲載元') + ' · ' + link(photo['licenseUrl'], photo['license']) + '</span>'
+            + original_title + (f'<span>{credit_links}</span>' if credit_links else '')
+            + f'<span>{e(photo["imageDate"])} · {e(photo.get("changes", "改変なし"))}</span>'
+            + usage + '</figcaption></figure>')
     return ''.join(out) + '</div>'
 
 
@@ -144,7 +214,7 @@ def photo_reading(project, data):
         out.append(f'<article><span class="sd-view-number">{e(m["label"])}</span><p>{e(m["reading"])}</p>{link(s["url"],"公式の空間写真を見る")}</article>')
     out.append('</div><details class="sd-rights-note"><summary>撮影・掲載時点と権利の確認状況</summary>')
     for note in dict.fromkeys(m['rightsNote'] for m in media):out.append('<p>'+e(note)+'</p>')
-    out.append('<p>提供レポートの69点は転載許諾未取得。許諾確認待ちの画像は複製・埋め込みをせず、参照先を案内しています。</p></details></details>')
+    out.append('<p>提供レポートの69候補は当初、転載許諾未取得でした。追加掲載した写真は、撮影者や配布元の利用条件を別途確認しています。未確認画像は複製・埋め込みをせず、参照先を案内しています。</p></details></details>')
     return ''.join(out)
 
 
@@ -172,7 +242,7 @@ def source_library(ids, data):
 
 
 def dialog():
-    return '<dialog class="sd-lightbox" aria-labelledby="sd-photo-title"><div class="sd-lightbox-bar"><h2 id="sd-photo-title">空間の写真</h2><button type="button" data-sd-close autofocus>閉じる ×</button></div><img alt=""><div class="sd-lightbox-caption"><p data-caption></p><p data-credit></p><a data-source target="_blank" rel="noopener noreferrer">原掲載元 ↗</a> · <a data-license target="_blank" rel="noopener noreferrer">利用条件 ↗</a></div></dialog>'
+    return '<dialog class="sd-lightbox" aria-labelledby="sd-photo-title"><div class="sd-lightbox-bar"><h2 id="sd-photo-title">空間の写真</h2><button type="button" data-sd-close autofocus>閉じる ×</button><nav class="sd-lightbox-controls" aria-label="この空間の写真を切り替える"><button type="button" data-sd-prev aria-label="前の写真">← 前</button><p data-sd-count role="status" aria-live="polite" aria-atomic="true"></p><button type="button" data-sd-next aria-label="次の写真">次 →</button></nav></div><img alt=""><div class="sd-lightbox-caption"><p data-kind-label></p><p data-caption></p><p data-credit></p><p data-credit-links></p><p data-original-title></p><p data-photo-meta></p><p data-usage></p><a data-source target="_blank" rel="noopener noreferrer">原掲載元 ↗</a> · <a data-license target="_blank" rel="noopener noreferrer">利用条件 ↗</a></div></dialog>'
 
 
 def shell(title, description, url, body, head, header, footer):
@@ -213,7 +283,7 @@ def build(root, head, header, footer, stages):
     cards=[]
     for c in data['companies']:
         photos=[m for m in data['media'] if m['publicationMode']=='image' and next(p for p in data['projects'] if p['id']==m['projectId'])['companyId']==c['id']]
-        photos.sort(key=lambda m: not m.get('featured', False))
+        photos.sort(key=lambda m: (not m.get('companyFeatured', False), not m.get('featured', False)))
         photo=''
         if photos:
             p=next(p for p in data['projects'] if p['id']==photos[0]['projectId'])
@@ -223,7 +293,17 @@ def build(root, head, header, footer, stages):
     project_cards=[]
     for i,p in enumerate(data['projects'],1):
         c=next(c for c in data['companies'] if c['id']==p['companyId'])
-        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p><h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><a class="sd-index-cta" href="{project_url(p)}">仕掛け・運営・成果を読む →</a></article>')
+        count = photo_count(p, data)
+        photos = project_photos(p, data)
+        availability = '掲載 ' + media_count_label(photos) if count else '掲載写真 0枚 · 公式写真へのリンクあり'
+        if photos:
+            cover = photos[0]
+            w, h = cover['dimensions']
+            visual = f'<a class="sd-index-visual" href="{project_url(p)}"><img src="{BASE}{e(cover["local"])}" alt="{e(cover["alt"])}" width="{w}" height="{h}" loading="lazy"><span>{e(media_kind_label(cover))}</span></a>'
+        else:
+            reference = next(m for m in data['media'] if m['projectId'] == p['id'] and m['publicationMode'] == 'link-only')
+            visual = f'<a class="sd-index-visual sd-reference-visual" href="{e(sources[reference["sourceId"]]["url"])}" target="_blank" rel="noopener noreferrer">公式掲載元の空間写真を見る ↗</a>'
+        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p>{visual}<h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><p class="sd-index-photo-count">{availability}</p><a class="sd-index-cta" href="{project_url(p)}">仕掛け・運営・成果を読む →</a></article>')
     stage_rows=[]
     for n in range(1,9):
         matches=[(p,s) for p in data['projects'] for s in p['steps'] if s['number']==n]
@@ -238,12 +318,14 @@ def build(root, head, header, footer, stages):
     body+='<section class="sd-section sd-principles" id="principles"><header class="sd-section-heading"><span>TRANSFER / 編集上の解釈・提案</span><h2>形より、原理を持ち帰る。</h2></header><ol>'+''.join('<li><span class="sd-principle-number">'+f'{i:02d}'+'</span><p>'+e(re.sub(r'^\d+\s+', '', b['text']))+'</p></li>' for i,b in enumerate(editorial['principles'],1) if b['type']=='p' and b['text'].strip())+'</ol></section>'
     body+='<section class="sd-section" id="steps"><header class="sd-section-heading"><span>04 / CONNECT TO 8 STEPS</span><h2>既存の8工程へ、つなぐ。</h2><p>実空間単位の編集上の解釈です。支える工程と、別途必要な仕事を確認できます。</p></header><div class="sd-stages">'+''.join(stage_rows)+'</div></section>'
     body+='<section class="sd-section sd-check" id="before-you-build"><header class="sd-section-heading"><span>05 / BEFORE YOU BUILD</span><h2>取り入れる前に、決める。</h2><p>交流が増えたことだけで、成功にしない。</p></header><div class="sd-checklist">'+''.join(f'<article><b>{i:02d}</b><h3>{title}</h3><p>{desc}</p></article>' for i,(title,desc) in enumerate(checklist,1))+'</div><details class="sd-deep-reading"><summary>導入3案＋現状維持と、30・90・365日の検証案 ＋</summary><div class="sd-prose">'+render_blocks(editorial['options']+editorial['experiment'],sources)+'</div></details><a class="sd-button" href="'+BASE+'learn/workbook/">既存の実践シートで計画する →</a></section>'
-    cleared=sum(m['publicationMode']=='image' for m in data['media'])
-    body+=f'<section class="sd-section" id="sources"><header class="sd-section-heading"><span>SOURCES / 原典と確認範囲</span><h2>根拠と限界を、一緒に読む。</h2></header><div class="sd-prose">{render_blocks(editorial["sourceScope"],sources)}<p>追加確認した利用条件付き写真 {cleared}点を掲載。提供レポートの69点は、未許諾のまま画像として掲載せず、各事例から公式掲載元へ案内しています。写真・設計の権利は各権利者に帰属します。</p></div>'+source_library([s['id'] for s in data['sources']],data)+'</section>'
+    cleared = [m for m in data['media'] if m['publicationMode'] == 'image']
+    summary = media_count_label(cleared)
+    body = body.replace('<a class="sd-button" href="#companies">', f'<p class="sd-hero-media">{summary}を掲載</p><a class="sd-button" href="#companies">', 1)
+    body+=f'<section class="sd-section" id="sources"><header class="sd-section-heading"><span>SOURCES / 原典と確認範囲</span><h2>根拠と限界を、一緒に読む。</h2></header><div class="sd-prose">{render_blocks(editorial["sourceScope"],sources)}<p>利用条件を個別に確認した{summary}を掲載しています。提供レポートの69候補は、未許諾のまま複製せず公式掲載元への参照リンクを保持しています。追加素材の条件は写真ごとに異なり、写真・設計の権利は各権利者に帰属します。</p></div>'+source_library([s['id'] for s in data['sources']],data)+'</section>'
     (dest/'index.html').write_text(shell('空間は、共創をどう変えるか。｜4つの設計思想','O+A・Gensler・Clive Wilkinson Architects・PENSONの4社、23空間の仕掛け・運営・成果の根拠を読む。', 'https://mobilitydlab.com'+FEATURE,body,head,header,footer))
     for c in data['companies']:
         projects=[p for p in data['projects'] if p['companyId']==c['id']]
-        jump='<nav class="sd-case-jump" aria-label="この会社の実空間">'+''.join(f'<a href="#{p["id"]}">{e(p["name"])} <span aria-hidden="true">↓</span></a>' for p in projects)+'</nav>'
+        jump='<nav class="sd-case-jump" aria-label="この会社の実空間">'+''.join(f'<a href="#{p["id"]}"><span>{e(p["name"])}<small>掲載 {media_count_label(project_photos(p, data))}</small></span><span aria-hidden="true">↓</span></a>' for p in projects)+'</nav>'
         body=breadcrumb(c)+f'<section class="sd-company-hero sd-color-{c["number"]}"><p class="sd-kicker">{c["number"]} / {c["word"]}</p><h1>{e(c["name"])}</h1><h2>{e(c["keyword"])}</h2><p>{e(c["intro"])}</p></section>'+company_nav(data,c['id'])
         body+='<section class="sd-section"><header class="sd-section-heading"><span>PHILOSOPHY & METHOD</span><h2>思想と、設計の方法。</h2><p>'+e(c['lead'])+'</p></header><details class="sd-deep-reading"><summary>思想・方法と成立条件を詳しく読む ＋</summary><div class="sd-prose">'+render_blocks(c['philosophy'],sources)+'</div></details>'+jump+'</section>'
         body+='<section class="sd-section sd-company-cases" aria-label="代表空間のケーススタディ">'+''.join(project_article(p,data,stages) for p in projects)+'</section>'
@@ -254,7 +336,7 @@ def build(root, head, header, footer, stages):
         out=dest/c['id'];out.mkdir(exist_ok=True)
         (out/'index.html').write_text(shell(c['name']+'｜'+c['keyword'],c['lead'],'https://mobilitydlab.com'+FEATURE+c['id']+'/',body,head,header,footer))
     integrate(root)
-    print(f'Spatial design: 4 companies, 23 spaces, {cleared} licensed photos; 69 pending candidates remain link-only.')
+    print(f'Spatial design: 4 companies, 23 spaces, {len(cleared)} cleared media ({summary}); 69 original candidates remain link-only.')
 
 
 def teaser():

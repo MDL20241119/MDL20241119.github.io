@@ -482,12 +482,25 @@
       "SD-S003",
       "SD-S004",
       "SD-S005",
-      "SD-S006"
+      "SD-S006",
+      "SD-S166",
+      "SD-S167",
+      "SD-S168"
     ],
     "mediaIds": [
       "kokuyo-hq-view-1",
       "kokuyo-hq-view-2",
-      "kokuyo-hq-view-3"
+      "kokuyo-hq-view-3",
+      "kokuyo-hq-exp-kokuyo-01",
+      "kokuyo-hq-exp-kokuyo-02",
+      "kokuyo-hq-exp-kokuyo-03",
+      "kokuyo-hq-exp-kokuyo-04",
+      "kokuyo-hq-exp-kokuyo-05",
+      "kokuyo-hq-exp-semba-02",
+      "kokuyo-hq-exp-semba-03",
+      "kokuyo-hq-exp-cheers-01",
+      "kokuyo-hq-exp-cheers-03",
+      "kokuyo-hq-exp-cheers-04"
     ],
     "existingCaseId": null,
     "steps": [
@@ -497,7 +510,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2026年の内観・素材ディテールと、SUMMER FES当日の活動写真を掲載しています。イベント時の設え・混雑を、日常の利用率とは区別して読みます。"
   },
   {
     "id": "mcdonalds-innovation-center",
@@ -1180,7 +1194,20 @@
       "SD-S119",
       "SD-S120",
       "SD-S121",
-      "SD-S122"
+      "SD-S122",
+      "SD-S153",
+      "SD-S154",
+      "SD-S155",
+      "SD-S156",
+      "SD-S157",
+      "SD-S158",
+      "SD-S159",
+      "SD-S160",
+      "SD-S161",
+      "SD-S162",
+      "SD-S163",
+      "SD-S164",
+      "SD-S165"
     ],
     "mediaIds": [
       "slack-hq-view-1",
@@ -1199,7 +1226,20 @@
       "slack-hq-licensed-12",
       "slack-hq-licensed-13",
       "slack-hq-licensed-14",
-      "slack-hq-licensed-01"
+      "slack-hq-licensed-01",
+      "slack-hq-exp-slack-extra-01",
+      "slack-hq-exp-slack-extra-02",
+      "slack-hq-exp-slack-extra-03",
+      "slack-hq-exp-slack-extra-04",
+      "slack-hq-exp-slack-extra-05",
+      "slack-hq-exp-slack-extra-06",
+      "slack-hq-exp-slack-extra-07",
+      "slack-hq-exp-slack-extra-08",
+      "slack-hq-exp-slack-extra-09",
+      "slack-hq-exp-slack-extra-10",
+      "slack-hq-exp-slack-extra-11",
+      "slack-hq-exp-slack-extra-12",
+      "slack-hq-exp-slack-extra-13"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1397,12 +1437,14 @@
     ],
     "sourceIds": [
       "SD-S012",
-      "SD-S013"
+      "SD-S013",
+      "SD-S185"
     ],
     "mediaIds": [
       "uber-old-hq-view-1",
       "uber-old-hq-view-2",
-      "uber-old-hq-view-3"
+      "uber-old-hq-view-3",
+      "uber-old-hq-exp-uber-1455"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1412,7 +1454,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "掲載写真は旧本社が入居したビルの2021年の外観です。2014年のO+Aの内装を写すものではありません。"
   },
   {
     "id": "mcdonalds-hq",
@@ -1630,12 +1673,44 @@
       "SD-S014",
       "SD-S015",
       "SD-S008",
-      "SD-S016"
+      "SD-S016",
+      "SD-S169",
+      "SD-S170",
+      "SD-S171",
+      "SD-S172",
+      "SD-S173",
+      "SD-S174",
+      "SD-S175",
+      "SD-S176",
+      "SD-S177",
+      "SD-S178",
+      "SD-S179",
+      "SD-S180",
+      "SD-S181",
+      "SD-S182",
+      "SD-S183",
+      "SD-S184"
     ],
     "mediaIds": [
       "mcdonalds-hq-view-1",
       "mcdonalds-hq-view-2",
-      "mcdonalds-hq-view-3"
+      "mcdonalds-hq-view-3",
+      "mcdonalds-hq-exp-45369844135",
+      "mcdonalds-hq-exp-50497576858",
+      "mcdonalds-hq-exp-50145900451",
+      "mcdonalds-hq-exp-52381027317",
+      "mcdonalds-hq-exp-54320785682",
+      "mcdonalds-hq-exp-54321678001",
+      "mcdonalds-hq-exp-48922031212",
+      "mcdonalds-hq-exp-48922025037",
+      "mcdonalds-hq-exp-48921821381",
+      "mcdonalds-hq-exp-48945153531",
+      "mcdonalds-hq-exp-48921821571",
+      "mcdonalds-hq-exp-48945349462",
+      "mcdonalds-hq-exp-48944613953",
+      "mcdonalds-hq-exp-48945350662",
+      "mcdonalds-hq-exp-48944614188",
+      "mcdonalds-hq-exp-48945154041"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1645,7 +1720,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2018年の受付・階段、入口外観、開業時の記録に加え、2019年のHamburger Universityでの外部研修イベントを掲載しています。研修施設も含む共同設計案件であり、O+A単独の設計や日常利用の写真とは扱いません。"
   },
   {
     "id": "nvidia-campus",
@@ -1767,7 +1843,8 @@
       "SD-S030",
       "SD-S127",
       "SD-S128",
-      "SD-S129"
+      "SD-S129",
+      "SD-S220"
     ],
     "mediaIds": [
       "nvidia-campus-view-1",
@@ -1775,7 +1852,31 @@
       "nvidia-campus-view-3",
       "nvidia-campus-licensed-voyager-entrance",
       "nvidia-campus-licensed-endeavor-walk",
-      "nvidia-campus-licensed-endeavor-landscape"
+      "nvidia-campus-licensed-endeavor-landscape",
+      "nvidia-campus-exp-nvidia-voyager-bw-01",
+      "nvidia-campus-exp-nvidia-voyager-bw-02",
+      "nvidia-campus-exp-nvidia-voyager-bw-04",
+      "nvidia-campus-exp-nvidia-voyager-bw-08",
+      "nvidia-campus-exp-nvidia-voyager-bw-10",
+      "nvidia-campus-exp-nvidia-voyager-bw-14",
+      "nvidia-campus-exp-nvidia-voyager-bw-15",
+      "nvidia-campus-exp-nvidia-voyager-bw-16",
+      "nvidia-campus-exp-nvidia-voyager-bw-17",
+      "nvidia-campus-exp-nvidia-voyager-bw-18",
+      "nvidia-campus-exp-nvidia-voyager-bw-28",
+      "nvidia-campus-exp-nvidia-voyager-bw-29",
+      "nvidia-campus-exp-nvidia-voyager-bw-30",
+      "nvidia-campus-exp-nvidia-voyager-bw-34",
+      "nvidia-campus-exp-nvidia-voyager-bw-38",
+      "nvidia-campus-exp-nvidia-voyager-bw-39",
+      "nvidia-campus-exp-nvidia-voyager-bw-41",
+      "nvidia-campus-exp-nvidia-voyager-bw-42",
+      "nvidia-campus-exp-nvidia-voyager-bw-47",
+      "nvidia-campus-exp-nvidia-voyager-bw-48",
+      "nvidia-campus-exp-nvidia-voyager-bw-49",
+      "nvidia-campus-exp-nvidia-voyager-bw-51",
+      "nvidia-campus-exp-nvidia-voyager-bw-52",
+      "nvidia-campus-exp-nvidia-voyager-bw-57"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1785,7 +1886,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "外観写真3枚と、2026年配布の公式映像から取り出した静止画24点です。映像の時刻を各カットに表示し、室内の通路・階段・滞在席・設備を読みます。"
   },
   {
     "id": "adobe-founders-tower",
@@ -2163,12 +2265,17 @@
       "SD-S039",
       "SD-S040",
       "SD-S041",
-      "SD-S042"
+      "SD-S042",
+      "SD-S221"
     ],
     "mediaIds": [
       "t-mobile-campus-view-1",
       "t-mobile-campus-view-2",
-      "t-mobile-campus-view-3"
+      "t-mobile-campus-view-3",
+      "t-mobile-campus-exp-2-Cyber-Command-Center-2-web",
+      "t-mobile-campus-exp-5-Cyber-Lab-web",
+      "t-mobile-campus-exp-4-Executive-Briefing-Center-Entrance-web",
+      "t-mobile-campus-exp-6-Executive-Briefing-Center-Demo-1-web"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2183,7 +2290,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2025年に本社へ追加されたEBC／CDCの参考写真です。2018〜2022年の改修竣工写真ではありません。CDCの設計者は未確認であり、Gensler作品と断定していません。"
   },
   {
     "id": "gensler-san-francisco",
@@ -2529,12 +2637,22 @@
       }
     ],
     "sourceIds": [
-      "SD-S056"
+      "SD-S056",
+      "SD-S215",
+      "SD-S216",
+      "SD-S217",
+      "SD-S218",
+      "SD-S219"
     ],
     "mediaIds": [
       "tbwa-chiat-day-view-1",
       "tbwa-chiat-day-view-2",
-      "tbwa-chiat-day-view-3"
+      "tbwa-chiat-day-view-3",
+      "tbwa-chiat-day-exp-604572372",
+      "tbwa-chiat-day-exp-604339885",
+      "tbwa-chiat-day-exp-2650537387",
+      "tbwa-chiat-day-exp-636184070",
+      "tbwa-chiat-day-exp-4997177941"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2544,7 +2662,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2007年の室内の街路・ポッド・コート、2008年の入口展示、2010年の屋外イベントを掲載しています。完成内観と催事の記録を区別します。"
   },
   {
     "id": "pallotta-teamworks",
@@ -2732,14 +2851,38 @@
     "sourceIds": [
       "SD-S058",
       "SD-S124",
-      "SD-S125"
+      "SD-S125",
+      "SD-S201",
+      "SD-S204",
+      "SD-S205",
+      "SD-S206",
+      "SD-S207",
+      "SD-S208",
+      "SD-S209",
+      "SD-S210",
+      "SD-S211",
+      "SD-S212",
+      "SD-S213",
+      "SD-S214"
     ],
     "mediaIds": [
       "googleplex-2005-view-1",
       "googleplex-2005-view-2",
       "googleplex-2005-view-3",
       "googleplex-2005-licensed-patio",
-      "googleplex-2005-licensed-entrance"
+      "googleplex-2005-licensed-entrance",
+      "googleplex-2005-exp-214631999",
+      "googleplex-2005-exp-214622375",
+      "googleplex-2005-exp-214674027",
+      "googleplex-2005-exp-214680143",
+      "googleplex-2005-exp-214675811",
+      "googleplex-2005-exp-214539939",
+      "googleplex-2005-exp-214578363",
+      "googleplex-2005-exp-214667061",
+      "googleplex-2005-exp-214538344",
+      "googleplex-2005-exp-214557814",
+      "googleplex-2005-exp-214556823",
+      "googleplex-2005-exp-214503338"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2749,7 +2892,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "2006年のSciFoo開催時の室内・設備・活動と、建物・中庭の記録です。CWAが改修した箇所の竣工写真と断定せず、撮影時点のGoogleplexの環境を読む参考写真として掲載しています。"
   },
   {
     "id": "macquarie-one-shelley",
@@ -2886,12 +3030,18 @@
       "SD-S065",
       "SD-S066",
       "SD-S067",
-      "SD-S068"
+      "SD-S068",
+      "SD-S199",
+      "SD-S202",
+      "SD-S203"
     ],
     "mediaIds": [
       "macquarie-one-shelley-view-1",
       "macquarie-one-shelley-view-2",
-      "macquarie-one-shelley-view-3"
+      "macquarie-one-shelley-view-3",
+      "macquarie-one-shelley-exp-4761742763",
+      "macquarie-one-shelley-exp-4761742587",
+      "macquarie-one-shelley-exp-4761743281"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2901,7 +3051,8 @@
         "kind": "editorial-interpretation"
       }
     ],
-    "asOf": "2026-10-27"
+    "asOf": "2026-10-27",
+    "galleryNote": "3枚はWoods Bagotによる建築の外観・入口周辺です。CWAが担当したオフィス内装の写真は、現時点で掲載できていません。"
   },
   {
     "id": "barbarian-group",
@@ -2986,12 +3137,40 @@
     ],
     "sourceIds": [
       "SD-S060",
-      "SD-S069"
+      "SD-S069",
+      "SD-S186",
+      "SD-S187",
+      "SD-S188",
+      "SD-S189",
+      "SD-S190",
+      "SD-S191",
+      "SD-S192",
+      "SD-S193",
+      "SD-S194",
+      "SD-S195",
+      "SD-S196",
+      "SD-S197",
+      "SD-S198",
+      "SD-S200"
     ],
     "mediaIds": [
       "barbarian-group-view-1",
       "barbarian-group-view-2",
-      "barbarian-group-view-3"
+      "barbarian-group-view-3",
+      "barbarian-group-exp-14321032588",
+      "barbarian-group-exp-14321037128",
+      "barbarian-group-exp-14504249321",
+      "barbarian-group-exp-14506504132",
+      "barbarian-group-exp-14320980270",
+      "barbarian-group-exp-14527749043",
+      "barbarian-group-exp-14527754563",
+      "barbarian-group-exp-14504254881",
+      "barbarian-group-exp-14321041629",
+      "barbarian-group-exp-14507651585",
+      "barbarian-group-exp-14320995900",
+      "barbarian-group-exp-14506307954",
+      "barbarian-group-exp-14321056348",
+      "barbarian-group-exp-14506304264"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3739,12 +3918,14 @@
       "SD-S088",
       "SD-S089",
       "SD-S076",
-      "SD-S090"
+      "SD-S090",
+      "SD-S222"
     ],
     "mediaIds": [
       "gsk-global-hq-view-1",
       "gsk-global-hq-view-2",
-      "gsk-global-hq-view-3"
+      "gsk-global-hq-view-3",
+      "gsk-global-hq-exp-gsk-hq-london-1"
     ],
     "existingCaseId": null,
     "steps": [

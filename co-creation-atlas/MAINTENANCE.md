@@ -82,7 +82,7 @@ a second case database.
 
 ## Release gate
 
-### Spatial design feature — 2026-10-27
+### Spatial design feature and photo expansion — 2026-10-27
 
 - `spatial_design.py` adds five pages from the five `data/spatial-design-*.json`
   files. Rebuild with `python3 co-creation-atlas/build.py` from the repository root.
@@ -91,11 +91,24 @@ a second case database.
   headquarters is counted once and cross-references its joint design roles.
 - The 69 photographs in the supplied report remain permission-pending reference
   links. Never promote these to image publication without individual clearance.
-- Forty-four independently licensed local photographs are included: Slack 14,
-  Google London 23 interiors plus one building-context view, NVIDIA three exterior
-  views, Adobe one exterior and Googleplex two context views. Context photographs
-  do not document the relevant interiors. All have source, date, author, license,
-  caption and alteration metadata; display retains the complete image.
+- The feature now has 147 media items: 123 photographs and 24 still frames
+  from a Business Wire-distributed official NVIDIA/Honeywell film. Coverage
+  expanded from five to thirteen spaces. Each video frame has its time code.
+  Googleplex historic/event views, Macquarie exterior views, the later T-Mobile
+  additions and actual design authorship are explicitly distinguished.
+- Newly added CC NC photographs are used only in the free, advertising-free
+  learning/analysis feature. They are not promotional materials. NC/ND terms,
+  original titles and requested author links are preserved. Publisher editorial
+  media terms from PR TIMES, Business Wire and GSK are recorded per item; those
+  materials are not generally reusable stock. The GSK JPEG remains unmodified.
+- The original 69 report candidates remain link-only. Unconfirmed Etsy press
+  assets, Core77/v2com materials behind media download requirements, and IBM
+  candidates were not imported. Do not treat a visible image or a download
+  button alone as confirmed reuse permission.
+- The gallery, project index and company jump links show real media counts.
+  Modal controls cycle only within one space; captions, author links, original
+  titles, dates and license links update with the selected image. Full images
+  and original-image links remain available without JavaScript.
 - `test_spatial_design.py` checks IDs, project references, attribution, licensed
   local image sources, pending-image exclusion, counts, entry links and sitemap.
   Existing Atlas, Frontier, experts, step-guide and JS checks also passed.
@@ -117,3 +130,31 @@ Run build.py and test_atlas.py, check changed JavaScript, and inspect the public
 pages after deployment. Keep changes scoped to this directory, publish without
 force, and reconcile any concurrent upstream edit before retrying. Preserve
 the distinction between a verified structure and a verified factual claim.
+
+### Photo coverage after expansion
+
+| Space | Media items |
+| --- | ---: |
+| kokuyo-hq | 10 |
+| mcdonalds-innovation-center | 0 |
+| microsoft-envisioning-center | 0 |
+| slack-hq | 27 |
+| uber-old-hq | 1 |
+| mcdonalds-hq | 16 |
+| nvidia-campus | 27 |
+| adobe-founders-tower | 1 |
+| etsy-brooklyn | 0 |
+| t-mobile-campus | 4 |
+| gensler-san-francisco | 0 |
+| ibm-one-madison | 0 |
+| tbwa-chiat-day | 5 |
+| pallotta-teamworks | 0 |
+| googleplex-2005 | 14 |
+| macquarie-one-shelley | 3 |
+| barbarian-group | 14 |
+| intuit-bayshore | 0 |
+| google-super-hq | 24 |
+| frasers-london | 0 |
+| thg-media-city | 0 |
+| jojoe-gentilly | 0 |
+| gsk-global-hq | 1 |
