@@ -1,127 +1,651 @@
 {
   "kind": "approved-readonly-snapshot",
+  "schemaVersion": 2,
   "audience": "prefecture-tco-common",
-  "asOf": "2026-10-08T23:50:45Z",
+  "asOf": "2026-10-27T00:00:00+09:00",
+  "updateBasis": "2026年10月27日の本人指定方針。業務進捗・担当・期限は正本での確認が必要。",
+  "period": {
+    "start": "2026-11",
+    "end": "2027-02",
+    "launchMonth": "2027-01",
+    "launchDate": null
+  },
+  "sync": {
+    "mode": "manual-readonly-projection",
+    "authoritativeStore": "既存の管理アプリ",
+    "masterChanged": false,
+    "writeEndpoint": null,
+    "sharedEditingEnabled": false,
+    "note": "既存の正本・名簿・履歴・完了状態は変更していない。VIEW-で始まる3件は今回の共有表示案で、正本への追加・登録を意味しない。"
+  },
   "tasks": [
     {
-      "detail": "設立目的と対象課題を共有し、採用する版を確認する。",
-      "status": "状況未確認",
-      "id": "OMC-001",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "設立目的・対象課題・活動方針の最新版を関係者が確認し、採用版を記録した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p02",
-      "sourceLabel": "関連する構想説明書 p.2",
-      "title": "目的・活動方針を文章化"
-    },
-    {
-      "detail": "共通運営と個別事業の責任・契約・収支の境界を協議する。",
-      "status": "状況未確認",
-      "id": "OMC-002",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "コンソーシアムと個別PJの責任・契約・収支の境界を文章で合意した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p08",
-      "sourceLabel": "関連する構想説明書 p.8",
-      "title": "コンソーシアムの役割範囲を決定"
-    },
-    {
-      "detail": "基本構成を軸に、発起人の意向と追加の必要性を確認する。",
-      "status": "状況未確認",
-      "id": "OMC-003",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "発起人・代表窓口・参加承諾を記録した",
-      "owner": "トヨタカローラ大分（打診の中心案）【役割案・未合意】",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
-      "sourceLabel": "関連する構想説明書 p.4",
-      "title": "発起人を確定"
-    },
-    {
-      "detail": "事務局機能の分担と、意思決定・連絡の手順をそろえる。",
-      "status": "状況未確認",
-      "id": "OMC-004",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "事務局の業務別責任者・決定権・連絡先を合意した",
-      "owner": "トヨタカローラ大分（主）／MDL（支援案）【役割案・未合意】",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p06",
-      "sourceLabel": "関連する構想説明書 p.6",
-      "title": "事務局の役割分担を決定"
-    },
-    {
-      "detail": "規約、入退会、代表・会長、議決方法を協議する。",
-      "status": "状況未確認",
-      "id": "OMC-005",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "組織形態、規約、代表、入退会・議決方法の承認手順を決めた",
-      "owner": "モビリティデザインラボ（案作成）【管理記録上の担当。関係者合意は別途確認】",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
-      "sourceLabel": "関連する構想説明書 p.7",
-      "title": "組織形態・規約・意思決定方法を決定"
-    },
-    {
-      "detail": "会費の是非と、必要運営費・負担条件を比較する。",
-      "status": "状況未確認",
-      "id": "OMC-006",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "運営費・会費・負担者・予算承認方法を合意した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p16",
-      "sourceLabel": "関連する構想説明書 p.16",
-      "title": "運営費・会費を決定"
-    },
-    {
-      "detail": "活動テーマと成果の測り方を定める。",
-      "status": "状況未確認",
-      "id": "OMC-007",
-      "due": "未設定・協議して決定",
-      "group": "枠組み・運営",
-      "outcome": "初年度の活動テーマと評価指標・測定担当・確認時期を合意した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "関連する構想説明書 p.11",
-      "title": "活動テーマ・成果指標を決定"
-    },
-    {
-      "detail": "県との相談窓口と庁内の連携範囲を確認する。",
-      "status": "状況未確認",
-      "id": "OMC-008",
-      "due": "未設定・協議して決定",
-      "group": "県・ぷらっと調整",
-      "outcome": "県庁の統括・実務・権利確認窓口を記録した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
-      "sourceLabel": "関連する構想説明書 p.7",
-      "title": "県庁内の担当・役割を確定"
-    },
-    {
-      "detail": "2027年1月26日（仮）に向けた成立条件と準備工程を確認する。",
-      "status": "状況未確認",
-      "id": "OMC-032",
-      "due": "未設定・協議して決定",
-      "group": "設立準備",
-      "outcome": "今年度の必須成果、正式発足の成立条件、目標日を議事で確認した",
-      "owner": "担当未定",
+      "id": "OMC-039",
+      "title": "コンソーシアムを立ち上げる",
+      "goal": "設立",
+      "group": "設立",
+      "detail": "設立準備8項目の案・確認状況・最新版資料をそろえる。2027年1月を目標とし、正式日は未定。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "発起人・関係者",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
       "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "関連する構想説明書 p.13",
-      "title": "1/26（仮）正式発足の必須成果と承認工程を合意"
+      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）"
     },
     {
-      "detail": "情報共有と知財・利益相反等の扱いを協議する。",
-      "status": "状況未確認",
-      "id": "OMC-037",
-      "due": "未設定・協議して決定",
-      "group": "設立準備",
-      "outcome": "取得・保管・共有・成果利用・利益相反・苦情窓口のルールを承認した",
-      "owner": "担当未定",
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p10",
-      "sourceLabel": "関連する構想説明書 p.10",
-      "title": "情報・データ・知財・利益相反の基本ルールを整える"
+      "id": "OMC-014",
+      "title": "自治体にプログラムを説明し、課題を聞く",
+      "goal": "人材育成",
+      "group": "人材育成",
+      "detail": "人材育成プログラムを説明し、30分〜1時間の課題ヒアリング・参加意向確認につなげる。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "参加を相談する自治体",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
+      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）"
+    },
+    {
+      "id": "OMC-035",
+      "title": "現地調査からデータ分析まで進める",
+      "goal": "人材育成",
+      "group": "人材育成",
+      "detail": "現地調査→サービス企画→アプリ開発→データ分析。企画内で、困りごとの当事者・運営主体・費用負担を確認する。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": "MDL",
+      "owner": "MDL",
+      "ownerCertainty": "confirmed",
+      "counterparty": "参加自治体・地域事業者・住民・学生等",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
+      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）"
+    },
+    {
+      "id": "OMC-022",
+      "title": "e-Palette活用の条件を整理する",
+      "goal": "人材育成",
+      "group": "人材育成",
+      "detail": "車両管理・運行・保険・装飾・IP等の条件と費用を、個別案件ごとに確認する。個別の協議記録は非公開の正本で扱う。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "車両・運行等の関係者",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [
+        "e-Palette活用"
+      ],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p08",
+      "sourceLabel": "既存の構想説明書 p.8（最新合意は別途確認）"
+    },
+    {
+      "id": "OMC-031",
+      "title": "地域別に来年度の実施・実証計画をつくる",
+      "goal": "人材育成",
+      "group": "人材育成",
+      "detail": "地域ごとに、サービス案・効果・運営体制・費用・安全性・継続条件をまとめる。e-Palette活用と自動運転実証は別テーマで管理する。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "参加自治体・実施主体",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [
+        "e-Palette活用",
+        "自動運転実証"
+      ],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
+      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）"
+    },
+    {
+      "id": "OMC-033",
+      "title": "月次活動報告・契約・会計をまとめる",
+      "goal": "設立",
+      "group": "設立",
+      "detail": "月に1回程度、活動・成果・課題をまとめて共有。会費・無料事業・個別案件費を分けて二重負担を避け、契約と会計を確認する。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "関係者",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p16",
+      "sourceLabel": "既存の構想説明書 p.16（最新合意は別途確認）"
+    },
+    {
+      "id": "VIEW-PREF",
+      "title": "大分県へ継続的に情報共有する",
+      "goal": "設立",
+      "group": "設立",
+      "detail": "初回説明後の進捗・相談事項を継続共有する。県MaaS実行委員会との連携は前提にしない。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "大分県",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
+      "sourceLabel": "既存の構想説明書 p.7（最新合意は別途確認）"
+    },
+    {
+      "id": "VIEW-PLAT",
+      "title": "おおいたプラットへ説明する",
+      "goal": "仲間づくり",
+      "group": "仲間づくり",
+      "detail": "県への説明と分け、コンソーシアムの構想・参加の意向・協力範囲を説明して確認する。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "おおいたプラット",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
+      "sourceLabel": "既存の構想説明書 p.4（最新合意は別途確認）"
+    },
+    {
+      "id": "VIEW-RECRUIT",
+      "title": "コンソーシアムの仲間を集める",
+      "goal": "仲間づくり",
+      "group": "仲間づくり",
+      "detail": "大分でe-Palette活用や自動運転実証を一緒に企画・推進する参画を相談する。候補・相談中・正式加入を区別して管理する。",
+      "outcome": "実施内容・成果物・確認状況を正本に記録する。",
+      "ownerTeam": null,
+      "owner": "未定",
+      "ownerCertainty": "unknown",
+      "counterparty": "企業・団体等",
+      "status": "unconfirmed",
+      "phase": "before",
+      "region": null,
+      "plannedWeek": null,
+      "dueDate": null,
+      "dueCertainty": "unknown",
+      "archived": false,
+      "evidenceLinks": [],
+      "review": null,
+      "resume": null,
+      "themes": [],
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
+      "sourceLabel": "既存の構想説明書 p.4（最新合意は別途確認）"
+    }
+  ],
+  "checklist": [
+    {
+      "id": "CHECK-01",
+      "title": "目的・活動内容",
+      "decide": "目的、対象地域、活動の範囲",
+      "prepare": "目的・活動方針の最新版",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-001",
+        "OMC-002",
+        "OMC-007"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p02",
+      "sourceLabel": "既存の構想説明書 p.2（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-02",
+      "title": "組織・代表・意思決定ルール",
+      "decide": "組織形態、代表、事務局、決定権と議決方法",
+      "prepare": "組織図・役割と意思決定ルール案",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-003",
+        "OMC-004",
+        "OMC-005"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p06",
+      "sourceLabel": "既存の構想説明書 p.6（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-03",
+      "title": "規約",
+      "decide": "規約の適用範囲、改定、入退会、情報・知財の扱い",
+      "prepare": "既存の規約案・改訂履歴",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-005",
+        "OMC-037"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
+      "sourceLabel": "既存の構想説明書 p.7（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-04",
+      "title": "会員条件・年会費",
+      "decide": "企業年会費10万円の税区分、無料対象、徴収時期、正式な会員規程",
+      "prepare": "会員規程案・費用の区分表",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-006"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p16",
+      "sourceLabel": "既存の構想説明書 p.16（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-05",
+      "title": "TCO・MDL等の役割分担・必要な契約",
+      "decide": "役割、責任、契約主体、業務範囲と費用",
+      "prepare": "役割分担表・既存契約案・案件別合意書",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-004",
+        "OMC-002"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p08",
+      "sourceLabel": "既存の構想説明書 p.8（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-06",
+      "title": "初年度の活動計画・予算・会計の準備",
+      "decide": "活動、共通活動費、予算、会計・証憑管理",
+      "prepare": "活動計画・収支予算案・会計手順",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-007",
+        "OMC-006"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
+      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-07",
+      "title": "発起人・会員の同意確認",
+      "decide": "各団体の参画意思、発起人就任、規約や負担への同意",
+      "prepare": "非公開の名簿・団体の同意記録",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-003"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
+      "sourceLabel": "既存の構想説明書 p.4（最新合意は別途確認）"
+    },
+    {
+      "id": "CHECK-08",
+      "title": "設立会議・議事記録",
+      "decide": "正式日、会議方法、議案、決議・記録方法",
+      "prepare": "議案・参加確認・議事記録。正式日は未定",
+      "ownerTeam": null,
+      "status": "未確認",
+      "latestLink": null,
+      "sourceIds": [
+        "OMC-032"
+      ],
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "legalStatus": "未確認",
+      "legalNote": "運営上の準備項目。法令・契約上の義務の有無と適用条件は別途確認し、根拠を記録する。",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
+      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）"
+    }
+  ],
+  "operations": [
+    {
+      "id": "OPS-REPORT",
+      "title": "月次活動報告",
+      "detail": "月に1回程度、活動・成果・課題・次の行動をまとめて共有する。",
+      "ownerTeam": null,
+      "status": "未確認",
+      "phase": "after",
+      "relatedTaskIds": [
+        "OMC-033",
+        "VIEW-PREF"
+      ],
+      "latestLink": null
+    },
+    {
+      "id": "OPS-FINANCE",
+      "title": "会費・会計",
+      "detail": "年会費・無料事業・個別案件費を分け、収支と証憑を管理する。",
+      "ownerTeam": null,
+      "status": "未確認",
+      "phase": "after",
+      "relatedTaskIds": [
+        "OMC-033"
+      ],
+      "latestLink": null
+    },
+    {
+      "id": "OPS-PROGRESS",
+      "title": "会員・案件の進捗",
+      "detail": "非公開名簿と関連タスクを参照し、参加・案件の次の行動を確認する。",
+      "ownerTeam": null,
+      "status": "未確認",
+      "phase": "after",
+      "relatedTaskIds": [
+        "VIEW-RECRUIT",
+        "OMC-031"
+      ],
+      "latestLink": null
+    },
+    {
+      "id": "OPS-RULES",
+      "title": "規約等の見直し",
+      "detail": "課題・改定理由・確認根拠・合意記録を残す。",
+      "ownerTeam": null,
+      "status": "未確認",
+      "phase": "after",
+      "relatedTaskIds": [
+        "OMC-039"
+      ],
+      "latestLink": null
+    }
+  ],
+  "fees": {
+    "corporateAnnualYen": 100000,
+    "taxTreatment": null,
+    "freeEligibility": null,
+    "collectionTiming": null,
+    "membershipRules": null,
+    "value": "トヨタのe-Palette活用や自動運転実証を、大分で一緒に企画・推進する企業として参画すること。",
+    "commonActivities": [
+      "共同企画",
+      "関係者調整",
+      "仲間づくり",
+      "進行管理",
+      "成果共有"
+    ],
+    "separateProjectCosts": [
+      "車両利用",
+      "開発",
+      "運行",
+      "保険"
+    ],
+    "freeProgrammeActivities": [
+      "人材育成",
+      "サービス企画",
+      "アプリ開発",
+      "データ分析"
+    ],
+    "notGuaranteed": [
+      "車両利用権",
+      "IP利用",
+      "受注",
+      "実証成功"
+    ]
+  },
+  "directory": {
+    "mode": "private-master-only",
+    "publishedCount": 0,
+    "fields": [
+      "団体名",
+      "窓口",
+      "担当主体",
+      "参加状況",
+      "連絡履歴",
+      "次の行動",
+      "期限",
+      "関連タスク"
+    ],
+    "statuses": [
+      "候補",
+      "相談中",
+      "参加意向あり",
+      "正式加入",
+      "保留",
+      "見送り"
+    ],
+    "note": "個人の連絡先・交渉記録・団体別の参加状況は公開JSONへ保存しない。関連タスクの次の行動・期限を参照し二重管理しない。"
+  },
+  "history": [
+    {
+      "id": "snapshot-20261008",
+      "asOf": "2026-10-08T23:50:45Z",
+      "scope": "以前から公開されている10論点のみ。正本の完了・保管状態とは別。",
+      "tasks": [
+        {
+          "detail": "設立目的と対象課題を共有し、採用する版を確認する。",
+          "status": "状況未確認",
+          "id": "OMC-001",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "設立目的・対象課題・活動方針の最新版を関係者が確認し、採用版を記録した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p02",
+          "sourceLabel": "関連する構想説明書 p.2",
+          "title": "目的・活動方針を文章化"
+        },
+        {
+          "detail": "共通運営と個別事業の責任・契約・収支の境界を協議する。",
+          "status": "状況未確認",
+          "id": "OMC-002",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "コンソーシアムと個別PJの責任・契約・収支の境界を文章で合意した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p08",
+          "sourceLabel": "関連する構想説明書 p.8",
+          "title": "コンソーシアムの役割範囲を決定"
+        },
+        {
+          "detail": "基本構成を軸に、発起人の意向と追加の必要性を確認する。",
+          "status": "状況未確認",
+          "id": "OMC-003",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "発起人・代表窓口・参加承諾を記録した",
+          "owner": "トヨタカローラ大分（打診の中心案）【役割案・未合意】",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
+          "sourceLabel": "関連する構想説明書 p.4",
+          "title": "発起人を確定"
+        },
+        {
+          "detail": "事務局機能の分担と、意思決定・連絡の手順をそろえる。",
+          "status": "状況未確認",
+          "id": "OMC-004",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "事務局の業務別責任者・決定権・連絡先を合意した",
+          "owner": "トヨタカローラ大分（主）／MDL（支援案）【役割案・未合意】",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p06",
+          "sourceLabel": "関連する構想説明書 p.6",
+          "title": "事務局の役割分担を決定"
+        },
+        {
+          "detail": "規約、入退会、代表・会長、議決方法を協議する。",
+          "status": "状況未確認",
+          "id": "OMC-005",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "組織形態、規約、代表、入退会・議決方法の承認手順を決めた",
+          "owner": "モビリティデザインラボ（案作成）【管理記録上の担当。関係者合意は別途確認】",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "sourceLabel": "関連する構想説明書 p.7",
+          "title": "組織形態・規約・意思決定方法を決定"
+        },
+        {
+          "detail": "会費の是非と、必要運営費・負担条件を比較する。",
+          "status": "状況未確認",
+          "id": "OMC-006",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "運営費・会費・負担者・予算承認方法を合意した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p16",
+          "sourceLabel": "関連する構想説明書 p.16",
+          "title": "運営費・会費を決定"
+        },
+        {
+          "detail": "活動テーマと成果の測り方を定める。",
+          "status": "状況未確認",
+          "id": "OMC-007",
+          "due": "未設定・協議して決定",
+          "group": "枠組み・運営",
+          "outcome": "初年度の活動テーマと評価指標・測定担当・確認時期を合意した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
+          "sourceLabel": "関連する構想説明書 p.11",
+          "title": "活動テーマ・成果指標を決定"
+        },
+        {
+          "detail": "県との相談窓口と庁内の連携範囲を確認する。",
+          "status": "状況未確認",
+          "id": "OMC-008",
+          "due": "未設定・協議して決定",
+          "group": "県・ぷらっと調整",
+          "outcome": "県庁の統括・実務・権利確認窓口を記録した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "sourceLabel": "関連する構想説明書 p.7",
+          "title": "県庁内の担当・役割を確定"
+        },
+        {
+          "detail": "2027年1月26日（仮）に向けた成立条件と準備工程を確認する。",
+          "status": "状況未確認",
+          "id": "OMC-032",
+          "due": "未設定・協議して決定",
+          "group": "設立準備",
+          "outcome": "今年度の必須成果、正式発足の成立条件、目標日を議事で確認した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
+          "sourceLabel": "関連する構想説明書 p.13",
+          "title": "1/26（仮）正式発足の必須成果と承認工程を合意"
+        },
+        {
+          "detail": "情報共有と知財・利益相反等の扱いを協議する。",
+          "status": "状況未確認",
+          "id": "OMC-037",
+          "due": "未設定・協議して決定",
+          "group": "設立準備",
+          "outcome": "取得・保管・共有・成果利用・利益相反・苦情窓口のルールを承認した",
+          "owner": "担当未定",
+          "source": "/oita-mirai-mobility-consortium/read/main/#main_p10",
+          "sourceLabel": "関連する構想説明書 p.10",
+          "title": "情報・データ・知財・利益相反の基本ルールを整える"
+        }
+      ]
     }
   ]
 }
