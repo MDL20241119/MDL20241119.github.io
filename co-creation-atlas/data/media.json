@@ -5155,5 +5155,101 @@
       "creditEvidence": "Newlab at Michigan CentralフィルタのInterior (3)、Photo credit: Brian Ferry、January 2, 2024"
     },
     "noCrop": true
+  },
+  {
+    "assetId": "ars-jku-medspace",
+    "caseId": "ars-electronica-futurelab",
+    "name": "Ars Electronica Futurelab",
+    "title": "Cinematic Anatomy x Deep Space @ JKU medSPACE / Ars Electronica Futurelab; Siemens Healthineers; Univ.-Prof. Dr. Franz Fellner (Johannes Kepler University Linz)",
+    "credit": "tom mesic / Ars Electronica",
+    "sourceUrl": "https://photos.ars.electronica.art/picture.php?/898/category/56",
+    "license": "Ars関連記事向け編集利用条件（個別書面許諾の取得を意味しません）",
+    "licenseUrl": null,
+    "rightsUrl": "https://photos.ars.electronica.art/",
+    "imageDate": "2021-09-12",
+    "status": "cleared-editorial-only",
+    "alt": "JKU medSPACEの大きな人体投影を前に共同開発チームが並ぶ。学生の授業風景ではない。",
+    "caption": "JKU medSPACEの大きな人体投影を前に共同開発チームが並ぶ。学生の授業風景ではない。 写真から協働の効果・導入成果までは判断できません。",
+    "local": "assets/ars-jku-medspace.jpg",
+    "hero": false,
+    "feature": false,
+    "noCrop": true,
+    "changes": "配布画像を無改変で保存。表示時の縮小のみ、切り抜き・色変更なし。無料の独立したArs解説記事内に限定し、広告・営業資料へ転用しません。",
+    "dimensions": [
+      1600,
+      945
+    ]
+  },
+  {
+    "assetId": "ars-open-research-talk",
+    "caseId": "ars-electronica-futurelab",
+    "name": "Ars Electronica Futurelab",
+    "title": "Future Humanity: Open Research Talk II / Airí Dordas Perpinyà (ES), Jiabao Li (CN), Misako Kawata (JP), Takashi Nishimura (JP), Kyoko Kunoh (JP)",
+    "credit": "tom mesic",
+    "sourceUrl": "https://photos.ars.electronica.art/picture.php?/6255/category/56",
+    "license": "Ars関連記事向け編集利用条件（個別書面許諾の取得を意味しません）",
+    "licenseUrl": null,
+    "rightsUrl": "https://photos.ars.electronica.art/",
+    "imageDate": "2025-09-06",
+    "status": "cleared-editorial-only",
+    "alt": "POSTCITYで開かれた公開研究トーク。中央の登壇者を着席した来場者が囲む。",
+    "caption": "POSTCITYで開かれた公開研究トーク。中央の登壇者を着席した来場者が囲む。 写真から協働の効果・導入成果までは判断できません。",
+    "local": "assets/ars-open-research-talk.jpg",
+    "hero": false,
+    "feature": false,
+    "noCrop": true,
+    "changes": "配布画像を無改変で保存。表示時の縮小のみ、切り抜き・色変更なし。無料の独立したArs解説記事内に限定し、広告・営業資料へ転用しません。",
+    "dimensions": [
+      1600,
+      1066
+    ]
+  },
+  {
+    "assetId": "ars-hello-worlds",
+    "caseId": "ars-electronica-futurelab",
+    "name": "Ars Electronica Futurelab",
+    "title": "Hello Worlds! / Ars Electronica Futurelab (AT), Toyota Motor Corporation Advanced R&D and Engineering Company (JP)",
+    "credit": "vog.photo",
+    "sourceUrl": "https://photos.ars.electronica.art/picture.php?/14722/category/56",
+    "license": "Ars関連記事向け編集利用条件（個別書面許諾の取得を意味しません）",
+    "licenseUrl": null,
+    "rightsUrl": "https://photos.ars.electronica.art/",
+    "imageDate": "2026-09-07",
+    "status": "cleared-editorial-only",
+    "alt": "Ars Electronica Centerの公開展示で、来場者が透明スクリーンに手をかざす。Futurelabの執務室ではない。",
+    "caption": "Ars Electronica Centerの公開展示で、来場者が透明スクリーンに手をかざす。Futurelabの執務室ではない。 写真から協働の効果・導入成果までは判断できません。",
+    "local": "assets/ars-hello-worlds.jpg",
+    "hero": false,
+    "feature": false,
+    "noCrop": true,
+    "changes": "配布画像を無改変で保存。表示時の縮小のみ、切り抜き・色変更なし。無料の独立したArs解説記事内に限定し、広告・営業資料へ転用しません。",
+    "dimensions": [
+      1600,
+      1067
+    ]
+  },
+  {
+    "assetId": "ars-founding-lab-data",
+    "caseId": "ars-electronica-futurelab",
+    "name": "Ars Electronica Futurelab",
+    "title": "FOUNDING LAB Fall Term Chapter 2 Workshop: Data Collection / Chapter co-authors: Arianna Salazar Miranda, Roland van Dierendonck, Paolo Cirio",
+    "credit": "Martin Hieslmair",
+    "sourceUrl": "https://photos.ars.electronica.art/picture.php?/8398/category/56",
+    "license": "Ars関連記事向け編集利用条件（個別書面許諾の取得を意味しません）",
+    "licenseUrl": null,
+    "rightsUrl": "https://photos.ars.electronica.art/",
+    "imageDate": "",
+    "status": "cleared-editorial-only",
+    "alt": "FOUNDING LABの参加者が街路で観察・データ収集に取り組む。施設内ではなく屋外での活動。",
+    "caption": "FOUNDING LABの参加者が街路で観察・データ収集に取り組む。施設内ではなく屋外での活動。 写真から協働の効果・導入成果までは判断できません。",
+    "local": "assets/ars-founding-lab-data.jpg",
+    "hero": false,
+    "feature": false,
+    "noCrop": true,
+    "changes": "配布画像を無改変で保存。表示時の縮小のみ、切り抜き・色変更なし。無料の独立したArs解説記事内に限定し、広告・営業資料へ転用しません。",
+    "dimensions": [
+      1600,
+      1200
+    ]
   }
 ]

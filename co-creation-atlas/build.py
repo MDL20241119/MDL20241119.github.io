@@ -11,6 +11,7 @@ import navigation
 import step_guide
 import frontier
 import spatial_design
+import photo_sources
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parent
@@ -223,6 +224,9 @@ def build_case(c):
         gallery+='</section>'
     elif real_photos:
         out[2]=out[2].replace('<section class="detail-hero">','<section class="detail-hero" id="field-photos">')
+    if c['id'] in photo_sources.DATA:
+        out[0] = out[0].replace('</head>', photo_sources.stylesheet(prefix) + '</head>')
+        gallery += photo_sources.render(c['id'])
     out.append(f'</section>{gallery}<dl class="detail-meta"><div><dt>LOCATION / 所在地</dt><dd>{e(c["country"])}・{e(c["city"])}<br><small>{e(c.get("locationNote","代表所在地"))}</small></dd></div><div><dt>ESTABLISHED / 設立・開始</dt><dd>{e(c["established"])}</dd></div><div><dt>OPERATOR / 運営</dt><dd>{e(c["operator"])}</dd></div><div><dt>ROLE / 主な工程</dt><dd>{" / ".join(STAGES[s] for s in c["stages"])}</dd></div></dl><section class="case-glance" id="at-a-glance"><div class="glance-heading"><p class="eyebrow">AT A GLANCE</p><h2>この事例の要点。</h2><p>概要をつかんでから、知りたい項目へ。</p></div><div><h3>何をする場・制度？</h3><p>{e(c["lead"].split("。")[0])}。</p><a href="#mechanism">運営の仕組みを読む ↓</a></div><div><h3>何を学べる？</h3><p>{e(c["tagline"])}</p><a href="#transfer">日本で活かす条件を読む ↓</a></div><div><h3>どこまでわかっている？</h3><p>公表された成果と、まだ確認できない点を分けて整理しています。</p><a href="#evidence">成果と根拠を確かめる ↓</a></div></section><div class="detail-layout"><aside class="detail-toc"><nav aria-label="この事例の目次"><div class="display">IN THIS CASE.</div><p class="toc-guide">知りたい項目から読む</p><a href="#mechanism">01 どんな仕組みで動く？</a><a href="#funding">02 誰が費用と責任を担う？</a><a href="#evidence">03 どこまで成果が出た？</a><a href="#transfer">04 日本で活かす条件は？</a><a href="#limits">05 真似する際の注意点は？</a><a href="#next-test">06 次に何を検証する？</a><a href="#media">07 写真・動画で見る</a><a href="#evidence-sources">08 元サイト・出典へ</a></nav></aside><article>')
     if c['id'] in CHAINS:
         out[-1] = out[-1].replace('<section class="case-glance"', evidence.notice(c)+expert_context.case_context(c)+'<section class="case-glance"')
@@ -293,3 +297,4 @@ frontier.build(ROOT, MEDIA, head, header, footer, BASE)
 spatial_design.build(ROOT, head, header, footer, STAGES)
 (ROOT/'data/cases.json').write_text(json.dumps(DATA,ensure_ascii=False,indent=2))
 print(f'Built {len(DATA)} cases and index. {len([m for m in MEDIA if m.get('kind') != 'diagram'])} photographs; {len([m for m in MEDIA if m.get('kind') == 'diagram'])} diagrams. '+str(len(set(s['url'] for c in DATA for s in c['sources'] if s.get('url'))))+' unique case sources.')
+

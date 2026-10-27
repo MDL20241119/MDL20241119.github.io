@@ -1,0 +1,87 @@
+{
+  "aalto-design-factory": [
+    {
+      "title": "3Dプリントの使い方を、装置の前で学ぶ",
+      "url": "https://www.flickr.com/photos/aaltodesignfactory/54296922215/",
+      "scenes": [
+        "DF Labsで、複数の参加者が3Dプリンタの前で説明を聞く。"
+      ],
+      "context": "設備だけでなく、使い方を伝える場面を見る。"
+    },
+    {
+      "title": "試作品を来場者に体験してもらう",
+      "url": "https://www.flickr.com/photos/aaltodesignfactory/52939946310/",
+      "scenes": [
+        "PdP Gala 2023で、来場者がVRヘッドセットとコントローラを使う。周囲に説明者と観客がいる。"
+      ],
+      "context": "2023年の公開実演。現在の設備構成や検証成果を示す写真ではない。"
+    },
+    {
+      "title": "工房の作業台を囲む",
+      "url": "https://www.flickr.com/photos/aaltodesignfactory/55065409528/",
+      "scenes": [
+        "DF Labsで学生たちが作業台を囲み、後方にも別のチームが見える。"
+      ],
+      "context": "複数チームの位置関係に注目する。協働の効果は写真だけでは判断できない。"
+    }
+  ],
+  "arena2036": [
+    {
+      "title": "装置・対話・発表を同じイベントで見る",
+      "url": "https://arena2036.de/en/uebermorgen2025/impressionen/",
+      "scenes": [
+        "配線や機構を見渡せるデモ装置。",
+        "研究ホールの装置前で説明を聞く参加者。",
+        "資料画面を囲む少人数の技術セッション。",
+        "舞台の発表者と着席した聴衆。"
+      ],
+      "context": "Ü:MO 2025の公式ギャラリー。Project Fair・Deep Dives・Keynotesの場面を比較できる。"
+    },
+    {
+      "title": "線材とコネクタを扱うロボット",
+      "url": "https://arena2036.de/en/thls/robotik-challenge/",
+      "scenes": [
+        "グリッパー、線材、コネクタが写るロボット機構の近景。"
+      ],
+      "context": "候補写真のファイル名は2023年。ページ上の最新大会情報と撮影年を混同しない。"
+    }
+  ],
+  "newlab-brooklyn": [
+    {
+      "title": "工房・実験・実物大の試験を見る",
+      "url": "https://www.newlab.com/locations/brooklyn",
+      "scenes": [
+        "吹き抜けに集まる多数の人。",
+        "機器ラックとノートPCに向き合う2人。",
+        "屋根状の試験体と装置を確認する複数人。",
+        "機械や作業台が並ぶ工房での作業。",
+        "手袋を着けた作業者と実験・測定器具。",
+        "大型加工装置を扱う作業者。",
+        "作業台上の装置を見ながら作業する2人。"
+      ],
+      "context": "Brooklyn拠点の公式紹介に掲載された7つの場面。個別の実施日・人物の役割・製品の成果は写真だけでは確定できない。"
+    }
+  ],
+  "quintbridge": [
+    {
+      "title": "本施設のステージ・共創スペース・工房",
+      "url": "https://www.quintbridge.jp/about/floor/",
+      "scenes": [
+        "1階：階段状の客席とメインステージ。",
+        "1階：テーブルと可動家具のある共創スペース。",
+        "2階：画面・机・椅子を備えたCreate Garage。",
+        "2階：工作機器・工具・部品収納のあるMakers Factory。"
+      ],
+      "context": "冒頭の写真は同じi-CAMPUS内のNTT西日本本社ビル（別棟）。QUINTBRIDGE本体の館内は、こちらの公式写真で確認できる。"
+    },
+    {
+      "title": "ピッチと付箋を囲むワークショップ",
+      "url": "https://www.quintbridge.jp/about/library/detail/202305090000.html",
+      "scenes": [
+        "1周年イベントのビジネスピッチで、観覧者が登壇者に向き合う。",
+        "ワークショップで、参加者が壁や机上の付箋を囲む。"
+      ],
+      "context": "2023年の1周年イベント。対話の様子と、事業化・導入の成果は分けて読む。"
+    }
+  ]
+}
