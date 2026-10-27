@@ -92,9 +92,9 @@ a second case database.
 - The 69 photographs in the supplied report remain reference records. Do not
   promote them wholesale into a gallery or imply that separate reuse permission
   has been obtained. Every additional display has its own recorded basis.
-- All 23 spaces now display actual photographs. The feature has 128 regular
+- All 23 spaces now display at least three actual photographic views. The feature has 135 regular
   photographs, 24 official video frames, 2 authorized provider photo embeds,
-  and 8 specifically analysed photographic quotations. Do not combine these
+  and 42 specifically analysed photographic quotations. Do not combine these
   into an undifferentiated licensed-photo count. Each video frame has its time code.
   Googleplex historic/event views, Macquarie exterior views, the later T-Mobile
   additions and actual design authorship are explicitly distinguished.
@@ -111,11 +111,14 @@ a second case database.
   `press-editorial-offer-assessed`, with the specific press/download context
   and `explicitLicenseText: false`. This is a limited editorial-use assessment,
   not an assertion of express permission or a reusable stock license.
-- Eight photos are marked `statutory-quotation`, each limited to one picture
-  per space with three original analysis paragraphs, the whole-image necessity,
+- Forty-two photos are marked `statutory-quotation`, with at most three
+  independently reviewed comparison views per space. This is an editorial
+  ceiling, not a statutory safe number. Each has three original analysis
+  paragraphs, a distinct `quoteComparisonFocus`, the whole-image necessity,
   author and original source. They are small complete frames, not cropped.
-  The index also shows a photograph-specific analysis and attribution rather
-  than an ornamental thumbnail. These images are excluded from modal sets,
+  The index uses one analysed lead image per space; further comparisons stay
+  in the article with their own text, source and topic navigation. They are
+  excluded from modal sets,
   company covers, OG images and promotional reuse. A quotation is not a claim
   of separate permission; keep its purpose, scope and presentation together.
   The basis was checked against the Agency for Cultural Affairs' 2026 copyright
@@ -124,12 +127,17 @@ a second case database.
   Modal controls cycle only within one space; captions, author links, original
   titles, dates and license links update with the selected image. Full images
   and original-image links remain available without JavaScript.
+- The 41 additional photographs include no new video frames. Duplicate
+  source records and perceptual near-duplicates were checked. Kokuyo's two
+  shared second-floor lobby views are distinguished from O+A's HQ interior.
+  T-Mobile's 2021 renovation photos are distinguished from the 2025 additions.
 - `test_spatial_design.py` checks IDs, project references, attribution, image
   sources, exact embed allowlists, quotation boundaries, all-23 visual coverage,
-  counts, entry links and sitemap.
+  at least three photographic views per space (video frames cannot fill that
+  requirement), comparison topics, direct photo anchors, counts, entry links and sitemap.
   Existing Atlas, Frontier, experts, step-guide and JS checks also passed.
 - Chromium iframe viewport checks covered all five new pages at 320, 390, 768,
-  1280 and 1440 CSS pixels, plus expanded details and disabled JavaScript. No
+  1280 and 1440 CSS pixels. No
   horizontal page overflow was found. These are not physical-device tests.
 - Photo dialog keyboard/Escape/focus return, URL filter reload/back/forward,
   existing search, mouse and keyboard map switching and a learning step were
@@ -147,30 +155,30 @@ pages after deployment. Keep changes scoped to this directory, publish without
 force, and reconcile any concurrent upstream edit before retrying. Preserve
 the distinction between a verified structure and a verified factual claim.
 
-### Photo coverage after completion
+### Photo coverage after expansion
 
 | Space | Gallery media | Official photo embed | Analytical quotation |
 | --- | ---: | ---: | ---: |
-| kokuyo-hq | 10 | 0 | 0 |
-| mcdonalds-innovation-center | 0 | 0 | 1 |
-| microsoft-envisioning-center | 0 | 0 | 1 |
+| kokuyo-hq | 12 | 0 | 0 |
+| mcdonalds-innovation-center | 0 | 0 | 3 |
+| microsoft-envisioning-center | 0 | 0 | 3 |
 | slack-hq | 27 | 0 | 0 |
-| uber-old-hq | 1 | 0 | 0 |
-| mcdonalds-hq | 16 | 0 | 0 |
-| nvidia-campus | 27 | 0 | 0 |
-| adobe-founders-tower | 1 | 0 | 0 |
-| etsy-brooklyn | 1 | 0 | 1 |
-| t-mobile-campus | 4 | 0 | 0 |
-| gensler-san-francisco | 1 | 0 | 1 |
-| ibm-one-madison | 1 | 0 | 1 |
-| tbwa-chiat-day | 5 | 0 | 0 |
-| pallotta-teamworks | 0 | 1 | 0 |
-| googleplex-2005 | 14 | 0 | 0 |
-| macquarie-one-shelley | 3 | 0 | 0 |
+| uber-old-hq | 1 | 0 | 2 |
+| mcdonalds-hq | 17 | 0 | 0 |
+| nvidia-campus | 31 | 0 | 0 |
+| adobe-founders-tower | 1 | 0 | 2 |
+| etsy-brooklyn | 1 | 0 | 3 |
+| t-mobile-campus | 4 | 0 | 2 |
+| gensler-san-francisco | 1 | 0 | 3 |
+| ibm-one-madison | 1 | 0 | 3 |
+| tbwa-chiat-day | 5 | 0 | 2 |
+| pallotta-teamworks | 0 | 1 | 2 |
+| googleplex-2005 | 14 | 0 | 2 |
+| macquarie-one-shelley | 3 | 0 | 2 |
 | barbarian-group | 14 | 0 | 0 |
-| intuit-bayshore | 0 | 1 | 0 |
+| intuit-bayshore | 0 | 1 | 2 |
 | google-super-hq | 24 | 0 | 0 |
-| frasers-london | 2 | 0 | 1 |
-| thg-media-city | 0 | 0 | 1 |
-| jojoe-gentilly | 0 | 0 | 1 |
-| gsk-global-hq | 1 | 0 | 0 |
+| frasers-london | 2 | 0 | 3 |
+| thg-media-city | 0 | 0 | 3 |
+| jojoe-gentilly | 0 | 0 | 3 |
+| gsk-global-hq | 1 | 0 | 2 |

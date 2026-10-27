@@ -11,7 +11,7 @@ import re
 ROOT = Path(__file__).resolve().parent
 BASE = '/co-creation-atlas/'
 FEATURE = BASE + 'spatial-design/'
-VERSION = '20261027.4'
+VERSION = '20261027.5'
 BEHANCE_EMBED_URL = re.compile(r'https://www\.behance\.net/embed/project/([0-9]+)\?ilo0=1\Z')
 
 
@@ -92,13 +92,25 @@ def read(root=ROOT):
             validate_quotation(media, root)
         else:
             assert media['publicationMode'] == 'link-only'
-    quoted_projects = [m['projectId'] for m in data['media'] if m['publicationMode'] == 'quotation']
-    assert len(quoted_projects) == len(set(quoted_projects)), 'Use one specifically analysed quotation per space'
+    for project in data['projects']:
+        quotations = project_quotations(project, data)
+        # This is an editorial ceiling, not a statutory safe number. Every
+        # selected view must support an independently reviewed comparison.
+        assert len(quotations) <= 3, 'Limit quotations to the specific comparative analysis'
+        if len(quotations) > 1:
+            focuses = [m.get('quoteComparisonFocus', '').strip() for m in quotations]
+            assert all(focuses) and len(focuses) == len(set(focuses)), 'Each quotation needs a distinct comparison focus'
+            paragraphs = [paragraph for m in quotations for paragraph in m['quoteAnalysis']]
+            assert len(paragraphs) == len(set(paragraphs)), 'Do not repeat generic analysis across views'
     return data
 
 
 def project_url(p):
     return FEATURE + p['companyId'] + '/#' + p['id']
+
+
+def project_photo_url(p):
+    return FEATURE + p['companyId'] + '/#photos-' + p['id']
 
 
 def link(url, title, cls=''):
@@ -213,13 +225,13 @@ def visual_summary(data):
     stills = sum(m.get('kind') == 'video-still' for m in local)
     embeds = sum(m['publicationMode'] == 'embed' for m in data['media'])
     quotes = sum(m['publicationMode'] == 'quotation' for m in data['media'])
-    return f'掲載写真{len(local)-stills}枚・映像静止画{stills}点 ／ 公式写真の配信{embeds}件 ／ 分析用の写真引用{quotes}点'
+    return f'掲載写真{len(local)-stills+quotes}枚（うち分析用の写真引用{quotes}枚） ／ 公式写真の配信{embeds}件 ／ 映像静止画{stills}点'
 
 
 def media_kind_label(photo):
     if photo.get('kind') == 'video-still':
         return '公式映像の静止画 ' + photo['videoTimeDisplay']
-    return {'interior': '内観', 'exterior': '外観', 'exterior-context': '外観・周辺',
+    return {'interior': '内観', 'building-common-area': '建物の共用部', 'exterior': '外観', 'exterior-context': '外観・周辺',
             'activity': '活動の記録', 'opening-event-context': '開業時の記録'}.get(photo.get('imageScope'), '写真')
 
 
@@ -324,12 +336,15 @@ def quotation_gallery(project, data):
     quotations = project_quotations(project, data)
     if not quotations:
         return ''
-    out = ['<section class="sd-photo-analysis"><header class="sd-gallery-heading"><h4>写真から読む</h4><p>写真の具体的な構成を、分析と限界を併せて検討します。</p></header>']
-    for media in quotations:
+    out = [f'<section class="sd-photo-analysis"><header class="sd-gallery-heading"><h4>写真から読む <b>{len(quotations)}</b>枚</h4><p>異なる構成を写真ごとに読み、設計の条件と限界を比較します。</p></header>']
+    if len(quotations) > 1:
+        choices = ''.join(f'<a href="#view-{e(m["id"])}"><b>{i:02d}</b><span>{e(m["quoteTitle"])}</span><span aria-hidden="true">↓</span></a>' for i, m in enumerate(quotations, 1))
+        out.append('<nav class="sd-photo-topics" aria-label="写真の視点を選ぶ">'+choices+'</nav>')
+    for number, media in enumerate(quotations, 1):
         analysis = ''.join('<p>'+e(p)+'</p>' for p in media['quoteAnalysis'])
-        out.append(f'<div class="sd-photo-quotation" data-sd-quote-id="{e(media["id"])}">'
+        out.append(f'<div class="sd-photo-quotation" id="view-{e(media["id"])}" data-sd-quote-id="{e(media["id"])}">'
                    + quotation_figure(project, media, data)
-                   + f'<div class="sd-quote-analysis"><p class="sd-kicker">写真引用を読む / 編集上の分析</p>'
+                   + f'<div class="sd-quote-analysis"><p class="sd-kicker">写真引用 {number:02d} / {len(quotations):02d} · 編集上の分析</p>'
                    + f'<h5>{e(media.get("quoteTitle") or "写真の配置を読む。")}</h5>{analysis}'
                    + '<p class="sd-quote-scope">分析のための写真引用です。写真の権利は各権利者に帰属します。'
                    + link(media['permission']['termsUrl'], '引用の確認根拠') + '</p></div></div>')
@@ -385,7 +400,7 @@ def project_article(p, data, stages):
         ('evidence','EVIDENCE','成果の根拠と留保','何が、確かめられたか。')])
     steps=''.join(f'<li><a href="{BASE}learn/step-{s["number"]:02d}/"><b>{s["number"]:02d}</b> {e(stages[s["number"]])} →</a><p>{e(s["why"])}</p></li>' for s in p['steps'])
     existing=f'<a href="{BASE}cases/{p["existingCaseId"]}/">既存Atlasの記事を読む →</a>' if p['existingCaseId'] else ''
-    return (f'<article class="sd-project" id="{p["id"]}" data-project-id="{p["id"]}"><header class="sd-project-heading"><p class="sd-kicker">CASE STUDY <span>{e(p["status"])}</span></p><h3>{e(p["name"])}</h3><p class="sd-project-tagline">{e(p["tagline"])}</p></header>'+meta+quotation_gallery(p,data)+image_gallery(p,data)+official_embed_gallery(p,data)+'<div class="sd-case-points">'+glance+'</div>'+f'<div class="sd-case-limit"><strong>真似する前の条件・限界</strong><p>{e(p["limits"])}</p></div>'+photo_reading(p,data)+f'<details class="sd-deep-reading"><summary>仕掛け・運営・成果を、詳しく読む <span aria-hidden="true">＋</span></summary><div class="sd-prose">{render_blocks(p["body"],source_map(data),4)}</div></details><section class="sd-case-steps"><h4>Atlasの工程で読む</h4><p class="sd-note">実空間単位の編集上の解釈です。各社がAtlasの工程を採用したという意味ではありません。</p><ul>{steps}</ul>{existing}</section>'+project_sources(p,data)+'</article>')
+    return (f'<article class="sd-project" id="{p["id"]}" data-project-id="{p["id"]}"><header class="sd-project-heading"><p class="sd-kicker">CASE STUDY <span>{e(p["status"])}</span></p><h3>{e(p["name"])}</h3><p class="sd-project-tagline">{e(p["tagline"])}</p></header>'+meta+f'<div class="sd-project-visuals" id="photos-{p["id"]}">'+quotation_gallery(p,data)+image_gallery(p,data)+official_embed_gallery(p,data)+'</div><div class="sd-case-points">'+glance+'</div>'+f'<div class="sd-case-limit"><strong>真似する前の条件・限界</strong><p>{e(p["limits"])}</p></div>'+photo_reading(p,data)+f'<details class="sd-deep-reading"><summary>仕掛け・運営・成果を、詳しく読む <span aria-hidden="true">＋</span></summary><div class="sd-prose">{render_blocks(p["body"],source_map(data),4)}</div></details><section class="sd-case-steps"><h4>Atlasの工程で読む</h4><p class="sd-note">実空間単位の編集上の解釈です。各社がAtlasの工程を採用したという意味ではありません。</p><ul>{steps}</ul>{existing}</section>'+project_sources(p,data)+'</article>')
 
 
 def source_library(ids, data):
@@ -448,7 +463,7 @@ def build(root, head, header, footer, stages):
         availability = availability_label(p, data)
         visual = index_visual(p, data)
         cta = '写真と分析を読む' if project_quotations(p, data) else '仕掛け・運営・成果を読む'
-        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p>{visual}<h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><p class="sd-index-photo-count">{availability}</p><a class="sd-index-cta" href="{project_url(p)}">{cta} →</a></article>')
+        project_cards.append(f'<article class="sd-index-card" data-company="{p["companyId"]}"><p class="sd-kicker">{i:02d} / {e(c["shortName"])}</p>{visual}<h3><a href="{project_url(p)}">{e(p["name"])}</a></h3><p class="sd-index-meta">{e(p["location"])}<br>{e(p["year"])}</p><p>{e(p["tagline"])}</p><p class="sd-index-photo-count">{availability}</p><a class="sd-index-cta" href="{project_photo_url(p)}">{cta} →</a></article>')
     stage_rows=[]
     for n in range(1,9):
         matches=[(p,s) for p in data['projects'] for s in p['steps'] if s['number']==n]
@@ -467,6 +482,8 @@ def build(root, head, header, footer, stages):
     summary = visual_summary(data)
     coverage = len(visual_coverage(data))
     coverage_heading = f'全{len(data["projects"])}空間に写真を掲載' if coverage == len(data['projects']) else f'{coverage} / {len(data["projects"])}空間に写真を表示'
+    if coverage == len(data['projects']) and all(sum(m.get('kind') != 'video-still' for m in project_visuals(p,data)) >= 3 for p in data['projects']):
+        coverage_heading = f'全{len(data["projects"])}空間を、複数の写真で読む'
     body = body.replace('<a class="sd-button" href="#companies">', f'<p class="sd-hero-media">{coverage_heading}<br><span>{summary}</span></p><a class="sd-button" href="#companies">', 1)
     body+=f'<section class="sd-section" id="sources"><header class="sd-section-heading"><span>SOURCES / 原典と確認範囲</span><h2>根拠と限界を、一緒に読む。</h2></header><div class="sd-prose">{render_blocks(editorial["sourceScope"],sources)}<p>{summary}。表示対象は{coverage} / {len(data["projects"])}空間です。写真・映像静止画、提供元の公式配信、分析用の写真引用は区別しています。提供レポートの69候補は公式掲載元への参照リンクとして保持し、追加素材の掲載条件や引用の目的を別々に記録しています。写真・設計の権利は各権利者に帰属します。</p></div>'+source_library([s['id'] for s in data['sources']],data)+'</section>'
     (dest/'index.html').write_text(shell('空間は、共創をどう変えるか。｜4つの設計思想','O+A・Gensler・Clive Wilkinson Architects・PENSONの4社、23空間の仕掛け・運営・成果の根拠を読む。', 'https://mobilitydlab.com'+FEATURE,body,head,header,footer))

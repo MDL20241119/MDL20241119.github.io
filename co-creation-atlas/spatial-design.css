@@ -195,6 +195,14 @@
 .sd-quotation-figure figcaption strong{font-size:13px}
 .sd-quote-analysis{padding:24px 28px;font-size:15px;line-height:2}
 .sd-quote-analysis h5{font-size:21px;line-height:1.7;margin:12px 0 20px}
+.sd-project-visuals{scroll-margin-top:95px}
+.sd-photo-quotation+.sd-photo-quotation{margin-top:30px}
+.sd-photo-quotation{scroll-margin-top:95px}
+.sd-photo-topics{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin:18px 0 25px}
+.sd-photo-topics>a{display:grid;grid-template-columns:auto 1fr auto;gap:10px;align-items:start;border:1px solid #b9b9c4;padding:14px;text-decoration:none;font-size:12px;line-height:1.8}
+.sd-photo-topics>a:hover,.sd-photo-topics>a:focus-visible{background:#e9e9ff;border-color:#2e2dff}
+.sd-photo-topics b{color:#2e2dff;font-size:18px;line-height:1.3}
+@media(max-width:760px){.sd-photo-topics{grid-template-columns:1fr}}
 .sd-quote-analysis>p{margin:0 0 18px}
 .sd-quote-analysis>.sd-quote-scope{font-size:11px;line-height:1.9;margin:25px 0 0;padding-top:15px;border-top:1px solid #aaa}
 .sd-index-quotation{border:1px solid #101018;background:#f4f4f7;align-self:start}

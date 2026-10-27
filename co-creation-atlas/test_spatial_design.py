@@ -73,6 +73,9 @@ def main():
     assert sum(m.get('kind')=='video-still' for m in cleared)==24
     assert all(m['rightsStatus']=='permission-pending' for m in pending)
     assert spatial_design.visual_coverage(data)=={p['id'] for p in data['projects']}, 'Every space needs displayed photos, an official photo embed, or a specifically analysed photo quotation'
+    for project in data['projects']:
+        photographic_views=[m for m in spatial_design.project_visuals(project,data) if m.get('kind')!='video-still']
+        assert len(photographic_views)>=3, project['id']+' needs at least three actual photographic views; video frames do not fill this requirement'
     assert embeds, 'Official photo embeds must remain represented separately'
     test_embed_contract(embeds)
     pages={p:Page(p.read_text()) for p in (ROOT/'spatial-design').rglob('index.html')}
@@ -125,6 +128,8 @@ def main():
     for p in data['projects']:
         page=(ROOT/'spatial-design'/p['companyId']/'index.html').read_text()
         assert p['name'] in unescape(page) and p['id'] in page
+        assert 'id="photos-'+p['id']+'"' in page
+        assert spatial_design.project_photo_url(p) in (ROOT/'spatial-design/index.html').read_text()
         count=len(by_project[p['id']])
         stills=any(m.get('kind')=='video-still' for m in cleared if m['projectId']==p['id'])
         if count:
@@ -144,12 +149,17 @@ def main():
             assert spatial_design.e(m['quotePurpose']) not in fragment, 'Internal quotation review purpose must not become reader copy'
             assert all(spatial_design.e(paragraph) in fragment for paragraph in m['quoteAnalysis'])
             assert m['id'] in fragment and '写真引用' in fragment
+            assert 'id="view-'+m['id']+'"' in fragment
+            if len(spatial_design.project_quotations(p,data))>1:
+                assert 'href="#view-'+m['id']+'"' in fragment
             assert 'data-sd-photo' not in fragment and 'data-sd-photo-set' not in fragment
-            assert spatial_design.e(m['quoteSummary']) in (ROOT/'spatial-design/index.html').read_text()
             assert spatial_design.e(m['credit']) in page and m['permission']['termsUrl'] in page
             assert not any(p['id']==g['projectId'] and m['id'] in {photo['id'] for photo in g['photos']} for parsed in pages.values() for g in parsed.photo_sets)
             index=spatial_design.index_visual(p,data)
-            assert 'sd-index-quotation' in index and spatial_design.e(m['quoteSummary']) in index
+            lead=spatial_design.project_quotations(p,data)[0]
+            assert 'sd-index-quotation' in index and spatial_design.e(lead['quoteSummary']) in index
+            if m['id'] != lead['id']:
+                assert m['id'] not in index, 'Keep the index to one analysed lead image; compare further views in the article'
     for path in [ROOT/'index.html', ROOT/'frontier/index.html']:
         assert path.read_text().count('class="sd-feature-entry"')==1
     sitemap=(ROOT/'sitemap.xml').read_text()

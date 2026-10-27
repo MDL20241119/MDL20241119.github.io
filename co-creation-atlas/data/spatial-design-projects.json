@@ -485,7 +485,8 @@
       "SD-S006",
       "SD-S166",
       "SD-S167",
-      "SD-S168"
+      "SD-S168",
+      "SD-S230"
     ],
     "mediaIds": [
       "kokuyo-hq-view-1",
@@ -500,7 +501,9 @@
       "kokuyo-hq-exp-semba-03",
       "kokuyo-hq-exp-cheers-01",
       "kokuyo-hq-exp-cheers-03",
-      "kokuyo-hq-exp-cheers-04"
+      "kokuyo-hq-exp-cheers-04",
+      "kokuyo-hq-more-kokuyo-building-lobby-wave-bench",
+      "kokuyo-hq-more-kokuyo-building-lobby-island-bench"
     ],
     "existingCaseId": null,
     "steps": [
@@ -511,7 +514,7 @@
       }
     ],
     "asOf": "2026-10-27",
-    "galleryNote": "2026年の内観・素材ディテールと、SUMMER FES当日の活動写真を掲載しています。イベント時の設え・混雑を、日常の利用率とは区別して読みます。"
+    "galleryNote": "2026年の内観・素材ディテールと、SUMMER FES当日の活動写真を掲載しています。イベント時の設え・混雑を、日常の利用率とは区別して読みます。 同じ入居ビル2階の共用ロビーに置かれたKOKUYO×VUILDのベンチは、14階本社のO+A内装とは区別して掲載しています。"
   },
   {
     "id": "mcdonalds-innovation-center",
@@ -790,7 +793,9 @@
       "mcdonalds-innovation-center-view-1",
       "mcdonalds-innovation-center-view-2",
       "mcdonalds-innovation-center-view-3",
-      "mcdonalds-innovation-center-completion-quotation-01"
+      "mcdonalds-innovation-center-completion-quotation-01",
+      "mcdonalds-innovation-center-more-ic-0572",
+      "mcdonalds-innovation-center-more-ic-0468"
     ],
     "existingCaseId": null,
     "steps": [
@@ -986,7 +991,9 @@
       "microsoft-envisioning-center-view-1",
       "microsoft-envisioning-center-view-2",
       "microsoft-envisioning-center-view-3",
-      "microsoft-envisioning-center-completion-quotation-01"
+      "microsoft-envisioning-center-completion-quotation-01",
+      "microsoft-envisioning-center-more-ms-13785",
+      "microsoft-envisioning-center-more-ms-13874"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1446,7 +1453,9 @@
       "uber-old-hq-view-1",
       "uber-old-hq-view-2",
       "uber-old-hq-view-3",
-      "uber-old-hq-exp-uber-1455"
+      "uber-old-hq-exp-uber-1455",
+      "uber-old-hq-more-uber-8825",
+      "uber-old-hq-more-uber-9127"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1691,7 +1700,8 @@
       "SD-S181",
       "SD-S182",
       "SD-S183",
-      "SD-S184"
+      "SD-S184",
+      "SD-S231"
     ],
     "mediaIds": [
       "mcdonalds-hq-view-1",
@@ -1712,7 +1722,8 @@
       "mcdonalds-hq-exp-48944613953",
       "mcdonalds-hq-exp-48945350662",
       "mcdonalds-hq-exp-48944614188",
-      "mcdonalds-hq-exp-48945154041"
+      "mcdonalds-hq-exp-48945154041",
+      "mcdonalds-hq-more-ele-48922025497"
     ],
     "existingCaseId": null,
     "steps": [
@@ -1846,7 +1857,11 @@
       "SD-S127",
       "SD-S128",
       "SD-S129",
-      "SD-S220"
+      "SD-S220",
+      "SD-S232",
+      "SD-S233",
+      "SD-S234",
+      "SD-S235"
     ],
     "mediaIds": [
       "nvidia-campus-view-1",
@@ -1878,7 +1893,11 @@
       "nvidia-campus-exp-nvidia-voyager-bw-49",
       "nvidia-campus-exp-nvidia-voyager-bw-51",
       "nvidia-campus-exp-nvidia-voyager-bw-52",
-      "nvidia-campus-exp-nvidia-voyager-bw-57"
+      "nvidia-campus-exp-nvidia-voyager-bw-57",
+      "nvidia-campus-more-nvidia-add-cc-3",
+      "nvidia-campus-more-nvidia-add-cc-4",
+      "nvidia-campus-more-nvidia-add-cc-5",
+      "nvidia-campus-more-nvidia-add-cc-6"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2011,7 +2030,9 @@
       "adobe-founders-tower-view-1",
       "adobe-founders-tower-view-2",
       "adobe-founders-tower-view-3",
-      "adobe-founders-tower-licensed-exterior"
+      "adobe-founders-tower-licensed-exterior",
+      "adobe-founders-tower-more-adobe-founders-tower-spatial-analysis-6",
+      "adobe-founders-tower-more-adobe-founders-tower-spatial-analysis-8"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2125,7 +2146,9 @@
       "etsy-brooklyn-view-2",
       "etsy-brooklyn-view-3",
       "etsy-brooklyn-completion-etsy-brooklyn-exterior-2024",
-      "etsy-brooklyn-completion-etsy-brooklyn-interior-quotation"
+      "etsy-brooklyn-completion-etsy-brooklyn-interior-quotation",
+      "etsy-brooklyn-more-etsy-brooklyn-spatial-analysis-5",
+      "etsy-brooklyn-more-etsy-brooklyn-spatial-analysis-6"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2273,7 +2296,8 @@
       "SD-S040",
       "SD-S041",
       "SD-S042",
-      "SD-S221"
+      "SD-S221",
+      "SD-S236"
     ],
     "mediaIds": [
       "t-mobile-campus-view-1",
@@ -2282,7 +2306,9 @@
       "t-mobile-campus-exp-2-Cyber-Command-Center-2-web",
       "t-mobile-campus-exp-5-Cyber-Lab-web",
       "t-mobile-campus-exp-4-Executive-Briefing-Center-Entrance-web",
-      "t-mobile-campus-exp-6-Executive-Briefing-Center-Demo-1-web"
+      "t-mobile-campus-exp-6-Executive-Briefing-Center-Demo-1-web",
+      "t-mobile-campus-more-t-mobile-campus-spatial-analysis-16",
+      "t-mobile-campus-more-t-mobile-campus-spatial-analysis-37"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2424,7 +2450,9 @@
       "gensler-san-francisco-view-2",
       "gensler-san-francisco-view-3",
       "gensler-san-francisco-completion-gensler-sf-mills-exterior-2022",
-      "gensler-san-francisco-completion-gensler-sf-interior-quotation"
+      "gensler-san-francisco-completion-gensler-sf-interior-quotation",
+      "gensler-san-francisco-more-gensler-san-francisco-spatial-analysis-0",
+      "gensler-san-francisco-more-gensler-san-francisco-spatial-analysis-6"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2561,7 +2589,9 @@
       "ibm-one-madison-view-2",
       "ibm-one-madison-view-3",
       "ibm-one-madison-completion-ibm-one-madison-exterior-2025",
-      "ibm-one-madison-completion-ibm-one-madison-interior-quotation"
+      "ibm-one-madison-completion-ibm-one-madison-interior-quotation",
+      "ibm-one-madison-more-ibm-one-madison-spatial-analysis-1",
+      "ibm-one-madison-more-ibm-one-madison-spatial-analysis-7"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2667,7 +2697,9 @@
       "tbwa-chiat-day-exp-604339885",
       "tbwa-chiat-day-exp-2650537387",
       "tbwa-chiat-day-exp-636184070",
-      "tbwa-chiat-day-exp-4997177941"
+      "tbwa-chiat-day-exp-4997177941",
+      "tbwa-chiat-day-more-max-cwa-tbwa-official-7",
+      "tbwa-chiat-day-more-max-cwa-tbwa-official-9"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2776,7 +2808,9 @@
       "pallotta-teamworks-view-1",
       "pallotta-teamworks-view-2",
       "pallotta-teamworks-view-3",
-      "pallotta-teamworks-completion-behance-4859177"
+      "pallotta-teamworks-completion-behance-4859177",
+      "pallotta-teamworks-more-max-cwa-pallotta-4",
+      "pallotta-teamworks-more-max-cwa-pallotta-8"
     ],
     "existingCaseId": null,
     "steps": [
@@ -2899,7 +2933,9 @@
       "googleplex-2005-exp-214538344",
       "googleplex-2005-exp-214557814",
       "googleplex-2005-exp-214556823",
-      "googleplex-2005-exp-214503338"
+      "googleplex-2005-exp-214503338",
+      "googleplex-2005-more-max-cwa-google-official-5",
+      "googleplex-2005-more-max-cwa-google-official-9"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3058,7 +3094,9 @@
       "macquarie-one-shelley-view-3",
       "macquarie-one-shelley-exp-4761742763",
       "macquarie-one-shelley-exp-4761742587",
-      "macquarie-one-shelley-exp-4761743281"
+      "macquarie-one-shelley-exp-4761743281",
+      "macquarie-one-shelley-more-max-cwa-macquarie-4",
+      "macquarie-one-shelley-more-max-cwa-macquarie-10"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3302,7 +3340,9 @@
       "intuit-bayshore-view-1",
       "intuit-bayshore-view-2",
       "intuit-bayshore-view-3",
-      "intuit-bayshore-completion-behance-203671295"
+      "intuit-bayshore-completion-behance-203671295",
+      "intuit-bayshore-more-max-cwa-intuit-4",
+      "intuit-bayshore-more-max-cwa-intuit-15"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3590,7 +3630,9 @@
       "frasers-london-view-3",
       "frasers-london-completion-quotation-sliding-wall",
       "frasers-london-completion-official-press-exterior",
-      "frasers-london-completion-official-press-terrace"
+      "frasers-london-completion-official-press-terrace",
+      "frasers-london-more-frasers-workspace-sofa",
+      "frasers-london-more-frasers-deli-tables"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3687,7 +3729,9 @@
       "thg-media-city-view-1",
       "thg-media-city-view-2",
       "thg-media-city-view-3",
-      "thg-media-city-completion-photo-quotation-lab"
+      "thg-media-city-completion-photo-quotation-lab",
+      "thg-media-city-more-thg-vision-meeting",
+      "thg-media-city-more-thg-deli-link"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3821,7 +3865,9 @@
       "jojoe-gentilly-view-1",
       "jojoe-gentilly-view-2",
       "jojoe-gentilly-view-3",
-      "jojoe-gentilly-completion-quotation-restaurant-stage"
+      "jojoe-gentilly-completion-quotation-restaurant-stage",
+      "jojoe-gentilly-more-jojoe-garden-lounge",
+      "jojoe-gentilly-more-jojoe-circular-bar"
     ],
     "existingCaseId": null,
     "steps": [
@@ -3951,7 +3997,9 @@
       "gsk-global-hq-view-1",
       "gsk-global-hq-view-2",
       "gsk-global-hq-view-3",
-      "gsk-global-hq-exp-gsk-hq-london-1"
+      "gsk-global-hq-exp-gsk-hq-london-1",
+      "gsk-global-hq-more-gsk-plant-boundaries",
+      "gsk-global-hq-more-gsk-circular-lounge"
     ],
     "existingCaseId": null,
     "steps": [

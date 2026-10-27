@@ -2180,5 +2180,75 @@
     "checkedInReport": null,
     "kind": "photograph-quotation",
     "verification": "公表された設計者公式写真そのものの空間構成を批評する。独自の分析本文を主とし、当該論点に必要な1写真の全体だけを縮小して明瞭な引用枠に表示。撮影者と原典を近傍に明示。比較一覧でも同じ写真について固有の分析を常時表示する。一般鑑賞ギャラリー・拡大・会社カバー・広告には使用しない。個別の再利用許諾とは区別する。"
+  },
+  {
+    "id": "SD-S230",
+    "url": "https://prtimes.jp/main/html/rd/p/000001344.000048998.html",
+    "title": "PR TIMES | pr-000001344.000048998",
+    "publisher": "prtimes.jp",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S231",
+    "url": "https://www.flickr.com/photos/learningexecutive/48922025497/",
+    "title": "2019 ELE Chicago Exchange @ McDonald's Hamburger University",
+    "publisher": "www.flickr.com",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S232",
+    "url": "https://commons.wikimedia.org/wiki/File:2788-2888_San_Tomas_Expwy.jpg",
+    "title": "File:2788-2888 San Tomas Expwy.jpg",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S233",
+    "url": "https://commons.wikimedia.org/wiki/File:NVIDIA_Headquarters.jpg",
+    "title": "File:NVIDIA Headquarters.jpg",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S234",
+    "url": "https://commons.wikimedia.org/wiki/File:Nvidia_campus_aerial.jpg",
+    "title": "File:Nvidia campus aerial.jpg",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S235",
+    "url": "https://commons.wikimedia.org/wiki/File:San_Tomas_Expressway_at_Nvidia.jpg",
+    "title": "File:San Tomas Expressway at Nvidia.jpg",
+    "publisher": "commons.wikimedia.org",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-source",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
+  },
+  {
+    "id": "SD-S236",
+    "url": "https://www.t-mobile.com/news/community/visionary-on-hq-renovations-and-covid-safety-upgrades",
+    "title": "階段と短い滞在を、同じ動線に重ねる。｜公式掲載写真",
+    "publisher": "www.t-mobile.com",
+    "verified": "2026-10-27",
+    "checkedInReport": null,
+    "kind": "photograph-quotation",
+    "verification": "被写体・時点・作者表記と、個別の掲載根拠を確認。"
   }
 ]
