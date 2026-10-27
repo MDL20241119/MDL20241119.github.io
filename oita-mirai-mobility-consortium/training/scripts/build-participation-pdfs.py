@@ -27,7 +27,7 @@ LECTURE=WEB+'lecture-20261111.html'
 FORM='https://docs.google.com/forms/d/e/1FAIpQLSfuYI4BEl_HRrIx0bEcORS43flu51UYpkyn_p_A4yXNzsQkew/viewform'
 W,H=595.2756,841.8898
 M=28; CW=W-2*M
-NAVY='#102E53'; ORANGE='#D96732'; INK='#17212D'; MUTED='#536276'; LINE='#C7D3E1'; PALE='#EAF1FB'; PAPER='#F3F5F7'; WHITE='#FFFFFF'
+NAVY='#102E53'; ORANGE='#D96732'; INK='#17212D'; MUTED='#536276'; LINE='#C7D3E1'; PALE='#EAF1FB'; PAPER='#F8FAFC'; WHITE='#FFFFFF'
 
 class PDF:
  def __init__(self, path, photo):
@@ -103,99 +103,117 @@ class PDF:
 
 def build(p):
  p.header(1)
- # Read from national project, to shared vision, this year's activity and benefits.
- p.text('01  国土交通省の人材・組織育成事業の一環として',M,49,CW,24,14.4,22,True,NAVY)
- p.text('令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,79,CW,27,9.2,13)
- p.text('トヨタカローラ大分株式会社が採択。株式会社モビリティデザインラボと連携して企画・運営。',M,111,CW,16,9.3,14,False,MUTED)
- p.text('大分未来モビリティ<br/>コンソーシアムを立ち上げる',M,140,CW,63,24.5,30.5,True,INK)
- p.text('JMSで発表した構想。設立に向けた準備を進めます。',M,207,CW,17,9.7,14,False,MUTED)
+ # A large numeral and a short heading establish each chapter at a glance.
+ def chapter(number,title,y,size=20):
+  p.text(number,M,y,45,37,30,35,True,ORANGE)
+  p.text(title,M+52,y+5,CW-52,30,size,28,True,NAVY)
 
- p.panel(M,233,CW,100);p.band(M,233,CW,'02  VISION / コンソーシアムが目指す大分',12.5,h=23)
- p.text('大分をモビリティで、もっと元気に。',M+13,264,CW-26,33,23,31,True,NAVY)
- p.text('人口減少の抑制に貢献し、暮らし・仕事・交流が続く大分を目指す。<br/>e-Palette活用や自動運転実証を起点に、将来は陸・海・空の取組みとの連携へ。',M+13,301,CW-26,29,9.8,13.5)
+ chapter('01','国の採択事業で、人と組織を育てる',47)
+ p.text('令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,89,CW,27,9.3,13)
+ p.text('トヨタカローラ大分株式会社が採択。株式会社モビリティデザインラボと連携して企画・運営。',M,119,CW,15,9.3,14,False,MUTED)
+ p.text('大分未来モビリティ<br/>コンソーシアムを立ち上げる',M,140,CW,70,29,34.5,True,INK)
+ p.text('JMSで発表した構想。国土交通省の人材・組織育成事業の一環として、設立準備を進めます。',M,216,CW,15,9.6,14,False,MUTED)
 
- p.text('いろいろな分野・業界の皆さまと、共創する。',M,345,CW,23,14.4,21,True,NAVY)
- p.text('自治体・交通・観光・商業・福祉・企業・大学・住民・学生など',M,374,CW,18,10.8,16)
- p.text('課題・技術・人材を持ち寄り、具体的なサービスや事業を一緒につくります。',M,397,CW,15,9.8,14,False,MUTED)
+ chapter('02','大分をモビリティで、もっと元気に。',240,23)
+ p.text('人口減少の抑制に貢献し、暮らし・仕事・交流が続く大分を目指す。',M,281,CW,16,10.6,15)
+ p.text('いろいろな分野・業界の皆さまと、共創する。',M,302,CW,23,15.5,22,True,NAVY)
+ p.text('自治体・企業・地域事業者・大学・住民・学生などが、課題・技術・人材を持ち寄る。<br/>e-Palette活用・自動運転実証を起点に、将来は陸・海・空の取組みとの連携へ。',M,329,CW,28,9.8,13.5,False,MUTED)
 
- p.text('03  今年度の人材育成プログラムで、来年度の事業案をつくる',M,418,CW,23,14.0,21,True,NAVY)
+ chapter('03','今年度の学びを、来年度の事業案へ',363)
  leftw=347;gap=18;right=M+leftw+gap;rightw=CW-leftw-gap
- p.panel(M,450,leftw,91);p.band(M,450,leftw,'今年度  2026年11月〜2027年2月',12.5,h=24)
- p.text('地域の課題・やってみたいことを、みんなで持ち寄る。',M+12,484,leftw-24,17,10.1,15,True,NAVY)
- p.text('課題共有→現地調査→企画→アプリ開発→データ分析',M+12,504,leftw-24,15,9.2,13.5)
- p.text('2027年2月末を目標に、地域別の実施・実証計画へ',M+12,524,leftw-24,14,9.1,13,False,MUTED)
- p.panel(right,450,rightw,91);p.band(right,450,rightw,'来年度  2027年度〜',11.5,h=24)
- p.text('実施・実証を検討',right+10,485,rightw-20,24,14.0,21,True,NAVY,align=1)
- p.text('費用・体制・実施条件を協議し、<br/>事業化や実証につなげる。',right+10,513,rightw-20,27,9.1,12.5,False,INK,align=1)
- p.arrow(M+leftw+2,500,right-2,500)
+ p.panel(M,407,leftw,80)
+ p.text('今年度の人材育成｜2026年11月〜2027年2月',M+11,413,leftw-22,15,10,14,True,NAVY)
+ p.text('11月〜2月',M+10,430,leftw-20,37,28,35,True,NAVY)
+ p.text('課題共有 → 現地調査 → 企画 → アプリ開発 → データ分析',M+11,470,leftw-22,14,9.3,13)
+ p.panel(right,407,rightw,80,PALE)
+ p.text('来年度',right+11,413,rightw-22,15,10,14,True,NAVY)
+ p.text('2027',right+10,430,rightw-20,37,31,35,True,NAVY)
+ p.text('実施・実証を検討',right+11,470,rightw-22,15,11.4,14,True,NAVY)
+ p.arrow(M+leftw+2,447,right-2,447)
+ p.text('地域の課題・やってみたいことから、2027年2月末を目標に、地域別の実施・実証計画へ。',M,493,CW,15,9.8,14,False,MUTED)
 
- p.text('04  参加する6つのメリット',M,553,323,25,15.3,23,True,NAVY)
- p.text('どなたでも参加無料',357,552,W-M-357,26,18,24,True,NAVY,align=2)
- p.text('トヨタのe-Paletteのサービス開発と、自動運転実証の検討を、一緒に。',M,583,CW,16,10.1,14.5,True,NAVY)
+ p.text('04',M,523,45,37,30,35,True,NAVY)
+ p.text('6',M+56,515,42,52,46,50,True,ORANGE)
+ p.text('つの',M+100,523,43,18,11.5,16,True,NAVY)
+ p.text('参加メリット',M+99,540,220,27,21,26,True,NAVY)
+ p.text('どなたでも',M+361,518,CW-361,17,11.5,16,True,NAVY,align=2)
+ p.text('参加無料',M+332,537,CW-332,36,28.5,34,True,NAVY,align=2)
+ p.text('トヨタのe-Paletteのサービス開発と、自動運転実証の検討を、一緒に。',M,578,CW,16,10.6,15,True,NAVY)
  benefits=[
-  ('モビリティサービス企画','課題を、利用者・使い方・運営の具体案へ'),
-  ('e-Paletteを活用したサービス開発','トヨタのe-Paletteを使うサービスを一緒に開発'),
-  ('自動運転実証','ルート・安全性を整理し、実証を一緒に検討'),
-  ('アプリ開発・DX・AI活用','必要な機能を、アプリや試作を通じて形に'),
-  ('データ分析・改善','現地や試作のデータを、サービス改善に活用'),
-  ('車両管理・整備保守','管理・整備保守を含め、続ける体制を考える'),
+  ('モビリティサービス企画','地域の課題と希望を、構想段階から企画へ'),
+  ('e-Paletteを活用したサービス開発','地域に合うサービスを、企業・専門家と開発'),
+  ('自動運転実証','ルート・安全性・運営条件を一緒に整理'),
+  ('アプリ開発・DX・AI活用','必要な機能を、アプリや試作で形に'),
+  ('データ分析・改善','調査・試作のデータを、改善に生かす'),
+  ('車両管理・整備保守','継続運営に必要な管理・保守を相談'),
  ]
+ keywords=[('モビリティ','サービス企画'),('e-Palette','を活用したサービス開発'),('自動運転','実証を一緒に検討'),('アプリ','開発・DX・AI活用'),('データ','分析・改善'),('車両管理','整備保守')]
  half=(CW-12)/2
- for i,(title,body) in enumerate(benefits):
-  col=i%2;row=i//2;x=M+col*(half+12);y=605+row*59
+ for i,((title,body),(key,action)) in enumerate(zip(benefits,keywords)):
+  col=i%2;row=i//2;x=M+col*(half+12);y=601+row*62
   core=i in (1,2)
-  p.panel(x,y,half,51,PALE if core else WHITE,ORANGE if core else NAVY)
-  p.circle(x+16,y+15,9,ORANGE if core else NAVY,i+1,9.8)
-  p.text(title,x+33,y+7,half-44,18,11.0,16,True,NAVY)
-  p.text(body,x+10,y+33,half-20,15,9.2,13)
- p.text('本プログラム内のサービス開発・アプリ開発・データ分析も無料。<br/>実運行・車両・保険・継続運用・管理保守等は別途協議。地域の希望を構想段階から検討に反映。',M,781,CW,27,9.0,12.5,False,MUTED)
+  p.panel(x,y,half,60,PALE if core else WHITE,ORANGE if core else LINE)
+  p.text(f'{i+1:02d}',x+9,y+5,40,34,26,32,True,ORANGE if core else NAVY)
+  p.text(key,x+57,y+4,half-67,26,19.5,24,True,NAVY)
+  p.text(action,x+57,y+28,half-67,15,10.7,14,True,NAVY)
+  # Canonical headings stay in the editable layout data, with readable keyword typography.
+  p.records[-1]['canonical_benefit_title']=title
+  p.text(body,x+9,y+44,half-18,14,10,13.5)
+ p.text('本プログラム内のサービス開発・アプリ開発・データ分析も無料。',M,790,CW,15,10,14,True,NAVY)
  p.footer(1);p.next();p.header(2)
 
- p.text('05  人材育成プログラムの一環として',M,49,CW,22,12.5,19,True,NAVY)
- p.text('11月11日 特別講演を開催',M,79,CW,38,24.5,34,True,INK)
- p.panel(M,127,CW,327);p.band(M,127,CW,'日高洋祐氏 特別講演',16,h=28)
- p.photo(M+13,166,84,99)
- p.text('写真：MaaS Tech Japan公式',M+9,270,100,12,6.3,9,False,MUTED)
- p.text('2026年11月11日（水）',M+116,166,CW-132,28,19,26,True,NAVY)
- p.text('14:00-16:00',M+116,201,CW-132,43,30,40,True,NAVY)
- p.text('会場 Garraway0　参加費 無料',M+116,246,CW-132,23,12.5,19,True,NAVY)
- p.text('大分市府内町1丁目1-12',M+116,272,CW-132,17,9.5,14,False,MUTED)
- p.rule(M+12,299,CW-24,LINE)
- p.text('講師：MTJ社長 日高洋祐氏',M+13,311,CW-26,25,14,21,True,NAVY)
- p.text('株式会社MaaS Tech Japan 代表取締役CEO',M+13,338,CW-26,18,10,15,False,MUTED)
- p.text('国土交通省が目指す方向性と、地域交通・自動運転実証・データ分析／連携について、具体例を交えてお話しいただきます。<br/>当日は、コンソーシアムと人材育成プログラムの趣旨も説明します。',M+13,365,CW-26,48,10.1,15)
- p.rect(M+10,414,CW-20,35,PALE)
- p.text('後半：トークセッション・質疑応答',M+18,416,300,18,10.5,15,True,NAVY)
- p.text('進行：MobilityDesignLabの植野氏',M+18,432,CW-36,16,10.5,15,True,NAVY)
+ chapter('05','プログラムの一環で、特別講演',47,21)
+ p.text('11/11',M,91,189,62,52,59,True,NAVY)
+ p.text('水',M+189,119,30,27,17,25,True,NAVY)
+ p.text('特別講演',M+250,101,CW-250,45,31,41,True,INK)
+ p.panel(M,162,CW,307);p.band(M,162,CW,'日高洋祐氏 特別講演',18,h=31)
+ p.photo(M+13,207,91,106)
+ p.text('写真：MaaS Tech Japan公式',M+9,317,103,12,6.3,9,False,MUTED)
+ p.text('2026年11月11日（水）',M+123,207,CW-139,24,16.5,23,True,NAVY)
+ p.text('14:00-16:00',M+123,237,CW-139,44,34,42,True,NAVY)
+ p.text('Garraway0',M+123,286,236,27,20,26,True,NAVY)
+ p.text('参加無料',M+389,288,CW-402,25,16.5,24,True,NAVY,align=2)
+ p.text('会場：大分市府内町1丁目1-12',M+123,317,CW-139,15,10,14,False,MUTED)
+ p.rule(M+12,338,CW-24,LINE)
+ p.text('講師：MTJ社長 日高洋祐氏',M+13,345,CW-26,25,17.5,24,True,NAVY)
+ p.text('株式会社MaaS Tech Japan 代表取締役CEO',M+13,373,CW-26,15,10,14,False,MUTED)
+ p.text('国土交通省が目指す方向性と、地域交通・自動運転実証・データ分析／連携を、具体例とともに解説。コンソーシアムと人材育成プログラムの趣旨も説明します。',M+13,394,CW-26,30,10.3,14.5)
+ p.rect(M+10,431,CW-20,32,PALE)
+ p.text('後半：トークセッション・質疑応答',M+18,432,CW-36,15,10.6,14.5,True,NAVY)
+ p.text('進行：MobilityDesignLabの植野氏',M+18,448,CW-36,15,10.6,14.5,True,NAVY)
 
- p.text('企画書・事前資料は不要。まずは無料相談。',M,470,CW,27,18,26,True,NAVY)
+ chapter('06','企画書不要。まずは無料相談。',486,22)
  tw=(CW-26)/3
  for i,(title,body) in enumerate([
-  ('1  困りごとを伝える','課題や、やってみたいことを<br/>フォームから伝える'),
-  ('2  初回の打合せ','<b>30分〜1時間</b>で相談。<br/>地域の課題と希望を一緒に整理'),
-  ('3  地域で具体化','仲間と現地調査・企画へ。<br/>来年度以降の実施・実証計画に')]):
-  x=M+i*(tw+13);p.panel(x,506,tw,78)
-  p.rect(x+.7,506.7,tw-1.4,24,PALE)
-  p.text(title,x+8,511,tw-16,18,10.5,16,True,NAVY)
-  p.text(body,x+9,541,tw-18,33,9.4,14,False,INK)
-  if i<2:p.arrow(x+tw+2,548,x+tw+11,548)
+  ('困りごとを送る','課題・やりたいことを<br/>フォームから伝える'),
+  ('初回の打合せ','地域の課題と希望を一緒に整理'),
+  ('仲間と具体化','現地調査・企画から、<br/>来年度の実施・実証計画へ')]):
+  x=M+i*(tw+13);p.panel(x,536,tw,82)
+  p.text(str(i+1),x+8,542,27,34,26,32,True,ORANGE)
+  p.text(title,x+39,550,tw-47,21,12.6,19,True,NAVY)
+  if i==1:
+   p.text('30分〜1時間',x+10,577,tw-20,23,16.5,22,True,NAVY)
+   p.text(body,x+10,602,tw-20,13,9.1,12)
+  else:p.text(body,x+10,581,tw-20,29,9.8,14)
+  if i<2:p.arrow(x+tw+2,577,x+tw+11,577)
 
- p.text('目的に合わせて選べる、3つの入口',M,600,CW,21,13.5,20,True,NAVY)
+ p.text('3',M,630,30,29,24,28,True,ORANGE)
+ p.text('つの入口｜目的に合わせて選ぶ',M+32,635,CW-32,23,16.5,22,True,NAVY)
  links=[('人材育成<br/>プログラムHP','全体像・活動・最新情報',WEB,'プログラム全体の案内'),('11/11 特別講演<br/>詳細ページ','日時・会場・講演内容',LECTURE,'講演の詳細を確認'),('プログラム<br/>参加・相談フォーム','困りごと・希望を伝える',FORM,'講演専用ではありません')]
  lw=(CW-16)/3
  for i,(title,body,url,caption) in enumerate(links):
-  x=M+i*(lw+8);p.panel(x,631,lw,138)
-  p.rect(x+.7,631.7,lw-1.4,37,NAVY)
-  p.text(title,x+7,635,lw-14,31,10.7,14.5,True,WHITE,link=url,align=1)
-  p.text(body,x+7,675,lw-14,16,9.1,13,False,INK,link=url,align=1)
-  p.qr(url,x+(lw-56)/2,694,56,caption)
-  p.text(caption,x+5,752,lw-10,14,8.3,12,False,NAVY,link=url,align=1)
- p.text('参加無料と企業向けコンソーシアム年会費は別制度です。実際の運行・車両・保険等の費用・条件は別途協議。車両貸与・実証実施・採択・事業化を保証するものではありません。',M,784,CW,26,8.3,11.5,False,MUTED)
+  x=M+i*(lw+8);p.panel(x,668,lw,115)
+  p.rect(x+.7,668.7,lw-1.4,32,NAVY)
+  p.text(title,x+7,670,lw-14,29,10.7,14,True,WHITE,link=url,align=1)
+  p.text(body,x+7,704,lw-14,14,8.7,12,False,INK,link=url,align=1)
+  p.qr(url,x+(lw-50)/2,718,50,caption)
+  p.text(caption,x+5,770,lw-10,12,8.1,11.5,False,NAVY,link=url,align=1)
+ p.text('企画書・事前資料は不要。参加無料と企業年会費は別制度です。実際の運行・車両・保険・管理保守等の費用・条件は別途協議。車両貸与・実証実施・採択・事業化を保証するものではありません。',M,790,CW,23,8.1,11.2,False,MUTED)
  p.footer(2)
  return benefits
 
 def write_html(p,fontpaths,out):
- css='''@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;background:#e6ebf1;color:#1D2D3E;font-family:JP,sans-serif}.page{position:relative;width:595.2756pt;height:841.8898pt;background:white;margin:15pt auto;overflow:hidden}.text{position:absolute;white-space:normal;overflow:visible}.text a{color:inherit;text-decoration:none}.text:focus{outline:1px solid #D96732}svg,img{display:block;width:100%;height:100%}.toolbar{font:14px sans-serif;background:white;padding:12px;text-align:center;position:sticky;top:0;z-index:3}.toolbar button{margin-left:15px;padding:6px 12px}@media print{body{background:white}.page{margin:0;break-after:page}.page:last-child{break-after:auto}.toolbar{display:none}}'''
+ css='''@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;background:#e6ebf1;color:#1D2D3E;font-family:JP,sans-serif}.page{position:relative;width:595.2756pt;height:841.8898pt;background:white;margin:15pt auto;overflow:hidden}.text{position:absolute;white-space:normal;overflow:visible}.text a{color:inherit;text-decoration:none}.text:focus{outline:1px solid #D96732}svg,img{display:block;width:100%;height:100%}.toolbar{font:14px JP,sans-serif;background:white;padding:12px;text-align:center;position:sticky;top:0;z-index:3}.toolbar button{margin-left:15px;padding:6px 12px;font:inherit}@media print{body{background:white}.page{margin:0;break-after:page}.page:last-child{break-after:auto}.toolbar{display:none}}'''
  for name,key,weight in [('JP','JP',400),('JPB','JPB',800)]:
   css+=f"@font-face{{font-family:{name};src:url(data:font/ttf;base64,{base64.b64encode(Path(fontpaths[key]).read_bytes()).decode()}) format('truetype');font-weight:{weight}}}"
  parts=['<!doctype html><html lang="ja"><meta charset="utf-8"><title>大分未来モビリティ人材育成プログラム 編集用原稿</title><style>'+css+'</style><div class="toolbar">本文をクリックして編集できます。<button onclick="saveCopy()">編集済みHTMLを保存</button><button onclick="window.print()">印刷・PDF保存</button></div>']
@@ -205,6 +223,10 @@ def write_html(p,fontpaths,out):
    if r['page']!=page:continue
    sty=f"left:{r['x']}pt;top:{r['y']}pt;width:{r['w']}pt;height:{r['h']}pt;"
    if r['kind']=='text':
+    # Browser glyph ascenders/descent extend past a compact PDF line box.
+    # Allow their full height without changing the authored text position.
+    browser_h=r['h']+max(0,1.45*r['size']-r['leading'])
+    sty=f"left:{r['x']}pt;top:{r['y']}pt;width:{r['w']}pt;height:{browser_h}pt;"
     sty+=f"font-family:{'JPB' if r['bold'] else 'JP'};font-size:{r['size']}pt;line-height:{r['leading']}pt;color:{r['color']};font-weight:{800 if r['bold'] else 400};text-align:{['left','center','right'][r['align']]};"
     txt=r['text']
     if r['link']:txt='<a href="'+html.escape(r['link'])+'">'+txt+'</a>'
@@ -238,7 +260,7 @@ def main():
   pdfmetrics.registerFontFamily('JP',normal='JP',bold='JPB',italic='JP',boldItalic='JPB')
   p=PDF(out/a.pdf_name,Path(a.photo));build(p);p.save()
   # Subset only the HTML font bytes; editable Japanese can fall back to local fonts.
-  chars=''.join(re.sub('<[^>]+>','',r.get('text','')) for r in p.records)+'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  chars=''.join(re.sub('<[^>]+>','',r.get('text','')) for r in p.records)+'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ本文をクリックして編集できます。編集済みHTMLを保存印刷・PDF保存編集保存テスト'
   for name,fp in list(fps.items()):
    f=FTFont(fp);s=subset.Subsetter();s.populate(text=chars);s.subset(f)
    subset_path=Path(td)/(name+'-subset.ttf');f.save(subset_path);fps[name]=subset_path
