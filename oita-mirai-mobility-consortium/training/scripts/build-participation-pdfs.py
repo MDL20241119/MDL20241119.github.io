@@ -1,153 +1,216 @@
 #!/usr/bin/env python3
-"""Rebuild the existing municipal guide (2 A4 pages).
+"""Create the two-page programme explanation. Never writes participation-flyer.pdf.
 
-The user-selected distribution flyer is an approved PDF original and is not regenerated.
-
-Usage: python3 scripts/build-participation-pdfs.py --font-variable /path/NotoSansJP.ttf
-Dependencies: reportlab, fonttools, Pillow. Font: Google Fonts Noto Sans JP (OFL).
-The full font is supplied locally; the generator makes no network requests.
-All text boxes have explicit overflow checks. Existing source photos are retained.
+python3 build-program-guide.py --font-variable NotoSansJP.ttf --photo assets/hidaka-yosuke.jpg --output-dir .
+Dependencies: reportlab, fonttools, Pillow. Font: Noto Sans JP (OFL).
+The companion HTML preserves editable text, links and embedded fonts.
 """
-from __future__ import annotations
-import argparse, html, io, json, tempfile
 from pathlib import Path
-from PIL import Image
+import argparse, base64, html, io, json, re, tempfile
 from fontTools.ttLib import TTFont as FTFont
 from fontTools.varLib.instancer import instantiateVariableFont
+from fontTools import subset
+from PIL import Image
 from reportlab.pdfgen import canvas
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
 from reportlab.lib.colors import HexColor
-from reportlab.lib.utils import ImageReader
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.platypus import Paragraph
 from reportlab.graphics.barcode.qr import QrCodeWidget
 from reportlab.graphics.shapes import Drawing
-from reportlab.graphics import renderPDF
+from reportlab.graphics import renderPDF, renderSVG
+from reportlab.lib.utils import ImageReader
 
-HERE=Path(__file__).resolve().parent.parent
-ASSETS=HERE.parent/'assets'
 WEB='https://mobilitydlab.com/oita-mirai-mobility-consortium/training/'
+LECTURE=WEB+'lecture-20261111.html'
 FORM='https://docs.google.com/forms/d/e/1FAIpQLSfuYI4BEl_HRrIx0bEcORS43flu51UYpkyn_p_A4yXNzsQkew/viewform'
-MLIT='https://www.mlit.go.jp/report/press/content/002012284.pdf#page=6'
-INK='#141414'; ORANGE='#E68149'; DEEP='#A34A1E'; PALE='#FFF2E9'; GRAY='#555555'; LINE='#D8D4D0'
-OPPORTUNITIES=[
- ('モビリティサービス企画','課題の整理から、対象者・使い方・運営方法を具体化します。'),
- ('e-Paletteを活用したサービス開発','地域での使い方を考え、実証内容と実施候補地の検討を進めます。'),
- ('自動運転実証','ルート・安全性・担い手を調べ、来年度の実証に向けた条件を整理します。'),
- ('アプリ開発・DX・AI活用','必要な機能を整理し、既存の仕組みや試作を活用して形にします。'),
- ('データ分析・改善','現地調査と試作品のデータを分析し、サービス案を改善します。'),
- ('車両管理・整備保守','継続して運営するための車両管理・整備保守の体制も相談できます。')
-]
+W,H=595.2756,841.8898
+M=34; CW=W-2*M
+NAVY='#142D4E'; ORANGE='#D96732'; INK='#1D2D3E'; MUTED='#596779'; LINE='#D9E0E7'; PALE='#F3F6F9'
 
 class PDF:
- def __init__(self,path,size,title):
-  self.w,self.h=size;self.path=path;self.records=[];self.page=1
-  self.c=canvas.Canvas(str(path),pagesize=size,pageCompression=1,invariant=1)
-  self.c.setTitle(title);self.c.setAuthor('トヨタカローラ大分株式会社／株式会社モビリティデザインラボ')
-  self.c.setSubject('自治体の参加価値・無料支援・地域別実施計画と11月11日講演の案内')
- def rect(self,x,y,w,h,col):
-  self.c.setFillColor(HexColor(col));self.c.rect(x,self.h-y-h,w,h,fill=1,stroke=0)
- def rule(self,x,y,w,col=LINE):
-  self.c.setStrokeColor(HexColor(col));self.c.setLineWidth(.6);self.c.line(x,self.h-y,x+w,self.h-y)
- def text(self,s,x,y,w,h,size=10,leading=None,font='JP',color=INK,label=''):
-  p=Paragraph(s,ParagraphStyle('x',fontName=font,fontSize=size,leading=leading or size*1.5,textColor=HexColor(color),wordWrap='CJK',allowWidows=0,allowOrphans=0))
-  aw,ah=p.wrap(w,h)
-  if ah>h+.1:raise ValueError(f'{self.path.name} p{self.page} {label or s[:25]}: {ah} > {h}')
-  if min(x,y)<0 or x+w>self.w+.1 or y+ah>self.h+.1:raise ValueError('Outside page: '+label)
-  p.drawOn(self.c,x,self.h-y-ah)
-  self.records.append({'page':self.page,'text':s,'size':size,'bounds':[x,y,w,ah]})
-  return ah
- def link(self,s,url,x,y,w,h,size=9,font='JPB',color=DEEP):
-  return self.text('<link href="'+html.escape(url,quote=True)+'" color="'+color+'">'+s+'</link>',x,y,w,h,size,font=font,color=color)
- def photo(self,name,x,y,w,h,contain=False):
-  p=HERE/'assets'/name if name=='hidaka-yosuke.jpg' else ASSETS/name
-  with Image.open(p) as im:
-   im=im.convert('RGB');iw,ih=im.size;factor=min(w/iw,h/ih) if contain else max(w/iw,h/ih);dw,dh=iw*factor,ih*factor
-   self.rect(x,y,w,h,'#F1F1F1');self.c.saveState();clip=self.c.beginPath();clip.rect(x,self.h-y-h,w,h);self.c.clipPath(clip,stroke=0,fill=0)
-   im.thumbnail((int(dw*2.5),int(dh*2.5)),Image.Resampling.LANCZOS);buf=io.BytesIO();im.save(buf,'JPEG',quality=90);buf.seek(0)
-   self.c.drawImage(ImageReader(buf),x+(w-dw)/2,self.h-y-h+(h-dh)/2,dw,dh);self.c.restoreState()
- def qr(self,url,x,y,size):
-  q=QrCodeWidget(url);a,b,c,d=q.getBounds();drawing=Drawing(size,size,transform=[size/(c-a),0,0,size/(d-b),0,0]);drawing.add(q);renderPDF.draw(drawing,self.c,x,self.h-y-size)
-  self.c.linkURL(url,(x,self.h-y-size,x+size,self.h-y),relative=0,thickness=0)
+ def __init__(self, path, photo):
+  self.path=path; self.photo_path=photo; self.page=1; self.records=[]
+  self.c=canvas.Canvas(str(path),pagesize=(W,H),pageCompression=1,invariant=0)
+  self.c.setTitle('大分未来モビリティ人材育成プログラム｜説明資料')
+  self.c.setAuthor('トヨタカローラ大分株式会社／株式会社モビリティデザインラボ')
+  self.c.setSubject('設立構想・国土交通省採択事業・活動・参加メリット・11月11日特別講演・参加方法')
+ def record(self,kind,**kw): self.records.append(dict(page=self.page,kind=kind,**kw))
+ def rect(self,x,y,w,h,color):
+  self.c.setFillColor(HexColor(color));self.c.rect(x,H-y-h,w,h,stroke=0,fill=1)
+  self.record('rect',x=x,y=y,w=w,h=h,color=color)
+ def rule(self,x,y,w,color=LINE):self.rect(x,y,w,.55,color)
+ def text(self,s,x,y,w,h,size=10.5,leading=None,bold=False,color=INK,link=None):
+  leading=leading or size*1.48
+  st=ParagraphStyle('t',fontName='JPB' if bold else 'JP',fontSize=size,leading=leading,textColor=HexColor(color),wordWrap='CJK',splitLongWords=True,allowWidows=0,allowOrphans=0)
+  p=Paragraph(s,st);_,ph=p.wrap(w,h)
+  if ph>h+.01:raise ValueError(f'Page {self.page} overflow: {s[:50]} {ph}>{h}')
+  if x<0 or y<0 or x+w>W+.1 or y+ph>H:raise ValueError('Page bounds')
+  p.drawOn(self.c,x,H-y-ph)
+  if link:self.c.linkURL(link,(x,H-y-ph,x+w,H-y),relative=0,thickness=0)
+  self.record('text',text=s,x=x,y=y,w=w,h=ph,size=size,leading=leading,bold=bold,color=color,link=link)
+ def qr(self,url,x,y,size,label):
+  q=QrCodeWidget(url,barLevel='M');a,b,c,d=q.getBounds()
+  dr=Drawing(size,size,transform=[size/(c-a),0,0,size/(d-b),0,0]);dr.add(q)
+  renderPDF.draw(dr,self.c,x,H-y-size)
+  self.c.linkURL(url,(x,H-y-size,x+size,H-y),relative=0,thickness=0)
+  self.record('qr',url=url,x=x,y=y,w=size,h=size,label=label,svg=renderSVG.drawToString(dr))
+ def photo(self,x,y,w,h):
+  im=Image.open(self.photo_path).convert('RGB');iw,ih=im.size
+  # Fit width and crop vertically around the upper part of the portrait.
+  target=w/h;ratio=iw/ih
+  if ratio>target:
+   nw=ih*target;left=(iw-nw)/2;im=im.crop((left,0,left+nw,ih))
+  else:
+   nh=iw/target;top=max(0,(ih-nh)*.18);im=im.crop((0,top,iw,top+nh))
+  im.thumbnail((700,850));buf=io.BytesIO();im.save(buf,'JPEG',quality=91);data=buf.getvalue()
+  self.c.drawImage(ImageReader(io.BytesIO(data)),x,H-y-h,w,h)
+  self.record('photo',x=x,y=y,w=w,h=h,data=base64.b64encode(data).decode())
+ def section(self,num,title,y):
+  self.text(num,M,y,30,25,19,25,True,ORANGE)
+  self.text(title,M+39,y+1,CW-39,25,16,24,True,NAVY)
+ def header(self,n):
+  self.rect(M,24,26,3,ORANGE)
+  self.text('OITA MIRAI MOBILITY',M+36,20,255,16,8.5,13,True,NAVY)
+  self.text('PROGRAM GUIDE  /  2026.10.27',367,20,195,16,8,13,False,MUTED)
+  self.rule(M,45,CW)
+ def footer(self,n):
+  self.rule(M,811,CW)
+  self.text('大分未来モビリティ人材育成プログラム',M,818,420,13,7.8,11,False,MUTED)
+  self.text(f'{n:02d} / 02',518,818,46,13,8,11,True,NAVY)
  def next(self):self.c.showPage();self.page+=1
- def save(self):self.c.save();return {'file':str(self.path),'pages':self.page,'boxes':self.records}
+ def save(self):self.c.save()
 
-def head(p,page):
- p.rect(0,0,p.w,6,INK)
- p.text('OITA MIRAI MOBILITY / PROGRAM 2026',30,20,360,16,8.3,11,'Helvetica-Bold')
- p.text('自治体向け参加案内',410,20,155,16,8.5,11,'JPB',DEEP)
- p.rule(30,44,p.w-60)
-def foot(p,n):
- p.rule(30,799,p.w-60)
- p.link('最新情報・申込み：自治体向け案内ページ',WEB+'guide.html',30,809,360,16,8)
- p.text(f'2026.10.27　{n} / 2',440,809,125,16,8,11,'JP',GRAY)
+def build(p):
+ p.header(1)
+ p.text('大分未来モビリティ人材育成プログラム',M,64,CW,34,22.3,32,True,NAVY)
+ p.text('地域の課題を、来年度の実施・実証計画へ。',M,105,CW,20,12,18,False,MUTED)
 
-def guide():
- p=PDF(HERE/'program-guide.pdf',(595.2756,841.8898),'大分未来モビリティ人材育成プログラム｜自治体向け参加案内')
- head(p,1)
- p.text('地域の困りごとを、<br/>来年度の具体的な計画へ。',30,65,535,88,27,38,'JPB')
- p.text('大分未来モビリティ人材育成プログラム',30,154,535,23,13,20,'JPB')
- p.text('買物・通院・観光の移動、担い手不足、地域のにぎわい。<br/>地域の仲間と専門家と、考え、つくり、実施計画にまとめます。',30,187,535,44,10.6,16)
- for i,(top,big,small) in enumerate([
-  ('自治体参加','無料','2026年11月〜2027年2月'),
-  ('プログラム内で一緒に','企画・開発・分析','必要な専門性を無料で支援'),
-  ('手元に残すもの','実施・実証計画','2027年2月末を目標に具体化')]):
-  x=30+i*182;p.rect(x,247,171,82,PALE);p.rect(x,247,171,3,ORANGE)
-  p.text(top,x+12,258,147,17,8.8,13,'JPB',DEEP);p.text(big,x+12,278,147,27,18 if i==0 else 13,22,'JPB');p.text(small,x+12,309,147,16,7.6,11,'JP',GRAY)
- p.text('6つのオポチュニティ',30,350,535,31,20,28,'JPB')
- y=395
- for i,(title,body) in enumerate(OPPORTUNITIES):
-  p.rule(30,y-8,535);p.text(f'{i+1:02d}',30,y,42,32,26,30,'Helvetica-Bold',DEEP)
-  p.text(title,87,y,478,25,14,21,'JPB')
-  p.text(body,87,y+27,478,36,9.2,14)
-  y+=63
- p.text('無料の範囲は本プログラム内のサービス開発・アプリ開発・データ分析。個別の実証・運行、継続的な車両管理・整備保守は別途協議します。',30,768,535,26,8,12)
- foot(p,1);p.next();head(p,2)
- p.text('参加後に目指す、5つの成果。',30,63,535,32,21,29,'JPB')
- outcomes=['地域の課題と現地調査の整理','具体的なサービス企画','テーマに応じたアプリの試作・データ分析','協力する相手と役割の整理','来年度以降の実施・実証計画']
- for i,s in enumerate(outcomes):p.text(f'<font color="{DEEP}">{i+1:02d}</font>　{s}',30,108+i*23,340,22,10.3,16,'JPB')
- p.photo('garraway0-cocreation.webp',389,106,176,111)
- p.text('地域の仲間と考える場／Garraway0',389,220,176,13,7,10,'JP',GRAY)
- p.text('地域の課題に応じて内容を組み立てます。同じアプリや実証を全自治体へ一律に提供するものではありません。',30,241,535,31,9,14)
- p.rule(30,282,535)
- p.text('A　e-Paletteをどう使うか',30,296,258,23,12.8,19,'JPB')
- p.text('観光、生活の移動、移動店舗、物流、停車中の活用。地域に合ったサービスを企画します。',30,324,258,46,9.3,14)
- p.text('B　自動運転実証をどう進めるか',309,296,256,23,12.8,19,'JPB')
- p.text('地域の課題、運行方法、担い手、継続性から、走らせる目的と実証計画を考えます。',309,324,256,46,9.3,14)
- p.text('構想段階から参加することで、地域の課題や希望を企画に反映しやすくなります。',30,373,535,18,9.3,14,'JPB',DEEP)
- p.rect(30,406,535,71,PALE)
- p.text('困りごと・希望 → 初回相談〈30分〜1時間〉 → 現地調査・企画',43,418,509,21,10,15,'JPB')
- p.text('地域の仲間と進める → 必要な開発・分析 → 実施・実証計画',43,445,509,21,10,15,'JPB')
- p.text('自治体にお願いすること',30,493,535,20,11.3,17,'JPB')
- p.text('窓口担当の設定／課題の共有／地域関係者との調整／可能な範囲のデータ・現地調査への協力。参加回数・時間は相談します。',30,519,535,34,9.2,14)
- p.photo('hidaka-yosuke.jpg',30,571,60,70)
- p.text('写真：MaaS Tech Japan公式',30,643,180,11,6,9,'JP',GRAY)
- p.text('まずは11/11の講演で、趣旨を知り、相談を。',103,568,383,23,12.8,19,'JPB')
- p.text('日高 洋祐 氏｜MaaS Tech Japan 代表取締役CEO<br/><b>2026年11月11日（水）14:00〜16:00　会場 Garraway0</b>',103,598,383,36,9.2,14)
- p.qr(WEB+'guide.html',494,568,71)
- p.link('11/11の講演を見る',WEB+'lecture-20261111.html',30,653,190,19,9.5)
- p.link('プログラムに申し込む・相談する',FORM,231,653,334,19,9.5)
- p.text('共通フォームでプログラムに登録し、任意設問「11月11日 特別講演・トークセッションへの参加予定」に回答します。講演欠席でも登録できます。',30,677,535,27,8.1,12)
- p.text('<b>費用・条件：</b>自治体参加とプログラム内の企画・開発・分析は無料。実運行・車両・保険・継続運用・管理保守等は別途協議。企業向けコンソーシアム年会費とは別です。参画はプログラム参加の前提ではありませんが、同コンソーシアムでの実証には参画が必要です。',30,710,535,44,7.6,11)
- p.text('車両提供、実証地域への選定、補助金採択、事業化は保証しません。<br/>事業主体：トヨタカローラ大分株式会社／企画・運営・伴走支援：株式会社モビリティデザインラボ<br/>国土交通省 令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」モビリティ人材・組織育成タイプ<br/>採択事業名：大分未来モビリティ・コンソーシアムによる交通空白解消人材育成・地域交通実装組織構築事業',30,751,535,44,6.6,9.8)
- foot(p,2)
- return p.save()
+ p.text('どなたでも参加無料',M,142,280,35,25,34,True,NAVY)
+ p.text('自治体・企業・地域事業者・住民・学生など',M,180,290,18,9.8,15)
+ p.text('2026.11 - 2027.2',341,144,222,30,21,29,True,NAVY)
+ p.text('2026年11月〜2027年2月',341,180,222,18,10,15,False,MUTED)
+ p.rule(M,207,CW)
+
+ p.section('01','コンソーシアムを立ち上げる',222)
+ p.text('JMSで発表した構想。自治体・企業・大学・地域の皆さまが課題・技術・人材を持ち寄り、具体的なサービスや実証を進める枠組みです。',M,255,CW,34,10.5,16)
+ p.text('e-Palette活用や自動運転実証を起点に、将来は陸・海・空のモビリティに関わる取組みとの連携を目指します。',M,292,CW,31,9.7,14.5,False,MUTED)
+
+ p.section('02','国土交通省の採択事業として人材育成',334)
+ p.text('令和8年度「『交通空白』解消等リ・デザイン全面展開プロジェクト」<br/>（モビリティ人材・組織育成タイプ）',M,366,CW,32,9.5,14.5)
+ p.text('トヨタカローラ大分株式会社が採択され、株式会社モビリティデザインラボ<br/>（MobilityDesignLab）と連携して企画・運営します。',M,402,CW,32,10.2,15.5)
+
+ p.section('03','課題から、地域別の実施・実証計画へ',450)
+ steps=['課題を共有','現地調査','サービス企画','アプリ開発','データ分析']
+ stepw=CW/5
+ for i,t in enumerate(steps):
+  x=M+i*stepw
+  p.text(f'{i+1:02d}',x,486,stepw-13,22,17,22,True,ORANGE)
+  p.text(t,x,513,stepw-13,18,10.3,16,True,NAVY)
+  if i<4:p.text('→',x+stepw-21,500,16,18,11,16,False,MUTED)
+ p.rect(M,541,CW,35,PALE)
+ p.text('2027年2月末を目標に',M+12,549,141,19,10,16,True,NAVY)
+ p.text('来年度以降の実施・実証計画',M+160,547,CW-172,23,14,21,True,NAVY)
+ p.text('本プログラム内のサービス開発・アプリ開発・データ分析も無料。<br/>車両管理・整備保守や、継続的な運営も見据えて計画します。',M,584,CW,31,9.8,14.5)
+ p.rule(M,626,CW)
+ p.text('e-Paletteを活用したサービス企画',M,638,255,22,12,18,True,NAVY)
+ p.text('移動・観光・物流・停車中の活用など、<br/>地域に合うサービスを具体化します。',M,664,248,31,9.7,14.5)
+ p.rect(299,639,.6,55,LINE)
+ p.text('自動運転実証の計画',316,638,246,22,12,18,True,NAVY)
+ p.text('ルート・安全性・運営条件を整理し、<br/>来年度以降の実証計画を検討します。',316,664,246,31,9.7,14.5)
+
+ p.section('04','参加で得られること',711)
+ # Five concise benefits retain all the invitation's value propositions.
+ benefits=[
+  '専門家・企業と、地域だけでは進めにくい課題を具体化',
+  'サービス企画・アプリ開発・データ分析に取り組む',
+  '一緒に実践する仲間・連携先を見つける',
+  '来年度の検討・庁内説明に使える計画をつくる',
+  '構想段階から、課題・希望をサービス・実証候補地の検討に反映',
+ ]
+ for i,t in enumerate(benefits):
+  p.text('・'+t,M+(0 if i<3 else 272),746+(i if i<3 else i-3)*18,260 if i<3 else 255,36,9.4,14,False,INK)
+ p.footer(1);p.next();p.header(2)
+
+ p.text('人材育成プログラム 特別講演',M,66,CW,21,11,17,True,ORANGE)
+ p.text('日高洋祐氏 特別講演',M,94,CW,35,25,34,True,NAVY)
+ p.text('2026年11月11日（水）',M,143,386,26,18,25,True,NAVY)
+ p.text('14:00-16:00',M,174,385,57,40,54,True,NAVY)
+ p.text('会場 Garraway0　　参加費 無料',M,236,385,24,14,21,True,NAVY)
+ p.text('大分市府内町1丁目1-12',M,266,385,18,10,15,False,MUTED)
+ p.photo(451,142,110,130)
+ p.text('写真：MaaS Tech Japan公式',443,279,119,13,6.8,10,False,MUTED)
+ p.rule(M,296,CW)
+ p.text('講師：MTJ社長 日高洋祐氏',M,309,CW,24,15,22,True,NAVY)
+ p.text('株式会社MaaS Tech Japan 代表取締役CEO',M,335,CW,18,10.5,16,False,MUTED)
+ p.text('国土交通省が目指す方向性と、地域交通・自動運転実証・データ分析／連携について、具体例を交えてお話しいただきます。<br/>当日は、コンソーシアムと人材育成プログラムの趣旨も説明します。',M,361,CW,51,10.5,16.5)
+ p.text('後半：トークセッション・質疑応答',M,416,CW,20,11.5,18,True,NAVY)
+ p.text('進行：MobilityDesignLabの植野氏',M,440,CW,21,12,18,True,NAVY)
+ p.rule(M,474,CW)
+ p.text('困りごと・やってみたいことから参加',M,491,CW,28,19,27,True,NAVY)
+ p.text('フォームで関心や希望をお知らせください。',M,525,CW,18,10.5,16)
+ p.text('企画書・事前資料は不要',M,550,270,23,12.5,19,True,NAVY)
+ p.text('初回は30分〜1時間で相談',315,550,248,23,12.5,19,True,NAVY)
+ p.rule(M,584,CW)
+ p.text('01',M,595,30,21,15,21,True,ORANGE)
+ p.text('人材育成プログラムHP',M+39,595,428,21,12,18,True,NAVY,WEB)
+ p.text('全体像・活動テーマ・最新情報を確認',M+39,619,428,16,9.3,14,False,MUTED,WEB)
+ p.rule(M,640,CW)
+ p.text('02',M,651,30,21,15,21,True,ORANGE)
+ p.text('11/11 特別講演の詳細',M+39,651,387,21,12,18,True,NAVY,LECTURE)
+ p.text('日時・会場・当日の内容を確認',M+39,675,387,16,9.3,14,False,MUTED,LECTURE)
+ p.qr(LECTURE,503,645,58,'講演の詳細')
+ p.rule(M,705,CW)
+ p.text('03',M,716,30,21,15,21,True,ORANGE)
+ p.text('プログラム参加・相談フォーム',M+39,716,387,21,12,18,True,NAVY,FORM)
+ p.text('地域の困りごと・やってみたいことを伝える',M+39,740,387,16,9.3,14,False,MUTED,FORM)
+ p.qr(FORM,503,710,58,'プログラム参加・相談')
+ p.text('講演専用の申込フォームではありません。',M+39,760,398,15,8.4,12,False,MUTED)
+ p.text('参加無料と企業向けコンソーシアム年会費は別制度です。実際の運行・車両・保険等の費用・条件は別途協議。車両貸与・実証実施・採択・事業化を保証するものではありません。',M,781,CW,26,8.3,11.5,False,MUTED)
+ p.footer(2)
+ return benefits
+
+def write_html(p,fontpaths,out):
+ css='''@page{size:A4;margin:0}*{box-sizing:border-box}body{margin:0;background:#e6ebf1;color:#1D2D3E;font-family:JP,sans-serif}.page{position:relative;width:595.2756pt;height:841.8898pt;background:white;margin:15pt auto;overflow:hidden}.text{position:absolute;white-space:normal;overflow:visible}.text a{color:inherit;text-decoration:none}.text:focus{outline:1px solid #D96732}svg,img{display:block;width:100%;height:100%}.toolbar{font:14px sans-serif;background:white;padding:12px;text-align:center;position:sticky;top:0;z-index:3}.toolbar button{margin-left:15px;padding:6px 12px}@media print{body{background:white}.page{margin:0;break-after:page}.page:last-child{break-after:auto}.toolbar{display:none}}'''
+ for name,key,weight in [('JP','JP',400),('JPB','JPB',700)]:
+  css+=f"@font-face{{font-family:{name};src:url(data:font/ttf;base64,{base64.b64encode(Path(fontpaths[key]).read_bytes()).decode()}) format('truetype');font-weight:{weight}}}"
+ parts=['<!doctype html><html lang="ja"><meta charset="utf-8"><title>大分未来モビリティ人材育成プログラム 編集用原稿</title><style>'+css+'</style><div class="toolbar">本文をクリックして編集できます。<button onclick="saveCopy()">編集済みHTMLを保存</button><button onclick="window.print()">印刷・PDF保存</button></div>']
+ for page in (1,2):
+  parts.append('<section class="page">')
+  for r in p.records:
+   if r['page']!=page:continue
+   sty=f"left:{r['x']}pt;top:{r['y']}pt;width:{r['w']}pt;height:{r['h']}pt;"
+   if r['kind']=='text':
+    sty+=f"font-family:{'JPB' if r['bold'] else 'JP'};font-size:{r['size']}pt;line-height:{r['leading']}pt;color:{r['color']};font-weight:{700 if r['bold'] else 400};"
+    txt=r['text']
+    if r['link']:txt='<a href="'+html.escape(r['link'])+'">'+txt+'</a>'
+    parts.append(f'<div class="text" contenteditable="true" style="{sty}">{txt}</div>')
+   elif r['kind']=='rect':parts.append(f'<div style="position:absolute;{sty}background:{r["color"]}"></div>')
+   elif r['kind']=='qr':parts.append(f'<a aria-label="{r["label"]}" href="{html.escape(r["url"])}" style="position:absolute;{sty}">{r["svg"]}</a>')
+   elif r['kind']=='photo':parts.append(f'<img alt="日高洋祐氏" style="position:absolute;{sty}" src="data:image/jpeg;base64,{r["data"]}">')
+  parts.append('</section>')
+ parts.append('''<script>function saveCopy(){const h='<!doctype html>'+document.documentElement.outerHTML;const a=document.createElement('a');a.href=URL.createObjectURL(new Blob([h],{type:'text/html'}));a.download='oita-mirai-mobility-program-guide-edited.html';a.click();URL.revokeObjectURL(a.href)}</script></html>''')
+ (out/'oita-mirai-mobility-program-guide-editable.html').write_text(''.join(parts))
 
 def main():
- parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--font-variable',required=True);parser.add_argument('--qa-json');args=parser.parse_args()
+ ap=argparse.ArgumentParser(description=__doc__);ap.add_argument('--font-variable',required=True);ap.add_argument('--photo',default=str(Path(__file__).resolve().parent.parent/'assets'/'hidaka-yosuke.jpg'));ap.add_argument('--output-dir',default=str(Path(__file__).resolve().parent.parent));ap.add_argument('--pdf-name',default='program-guide.pdf');ap.add_argument('--qa-json');a=ap.parse_args()
+ out=Path(a.output_dir);out.mkdir(parents=True,exist_ok=True)
  with tempfile.TemporaryDirectory() as td:
-  for name,weight in [('JP',400),('JPB',900)]:
-   f=FTFont(args.font_variable);instantiateVariableFont(f,{'wght':weight},inplace=True);f.flavor=None
-   # ReportLab keys embedded font faces by PostScript name. Variable-font
-   # instances must have distinct names or the black face silently reuses 400.
-   for record in list(f['name'].names):
-    if record.nameID in (1,2,3,4,6):
-     value={1:'NotoSansJP-Training',2:('Regular' if weight==400 else 'Black'),3:f'Training-{weight}',4:f'NotoSansJP-Training-{weight}',6:f'NotoSansJP-Training-{weight}'}[record.nameID]
-     record.string=value.encode(record.getEncoding(),errors='replace')
-   path=Path(td)/(name+'.ttf');f.save(path);pdfmetrics.registerFont(TTFont(name,str(path)))
+  fps={}
+  for name,weight in [('JP',400),('JPB',700)]:
+   f=FTFont(a.font_variable);instantiateVariableFont(f,{'wght':weight},inplace=True);f.flavor=None
+   for rec in list(f['name'].names):
+    if rec.nameID in (1,2,3,4,6):rec.string=f'NotoSansJP-Programme-{weight}'.encode(rec.getEncoding(),errors='replace')
+   fp=Path(td)/(name+'.ttf');f.save(fp);fps[name]=fp;pdfmetrics.registerFont(TTFont(name,str(fp)))
   pdfmetrics.registerFontFamily('JP',normal='JP',bold='JPB',italic='JP',boldItalic='JPB')
-  results=[guide()]
- if args.qa_json:Path(args.qa_json).write_text(json.dumps(results,ensure_ascii=False,indent=2))
- print(json.dumps([{'file':r['file'],'pages':r['pages'],'text_boxes':len(r['boxes'])} for r in results],ensure_ascii=False))
+  p=PDF(out/a.pdf_name,Path(a.photo));build(p);p.save()
+  # Subset only the HTML font bytes; editable Japanese can fall back to local fonts.
+  chars=''.join(re.sub('<[^>]+>','',r.get('text','')) for r in p.records)+'0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+  for fp in fps.values():
+   f=FTFont(fp);s=subset.Subsetter();s.populate(text=chars);s.subset(f);f.save(fp)
+  write_html(p,fps,out)
+  (out/'layout.json').write_text(json.dumps(p.records,ensure_ascii=False,indent=2))
+  if a.qa_json:Path(a.qa_json).write_text(json.dumps([r for r in p.records if r['kind']=='text'],ensure_ascii=False,indent=2))
+ print(json.dumps({'pages':2,'pdf':str(p.path),'text_boxes':sum(r['kind']=='text' for r in p.records)},ensure_ascii=False))
 if __name__=='__main__':main()

@@ -92,3 +92,14 @@
 - 原本はGit `94957bccc8e3dd3e0e58d2948ca8f48bb786eac2` の同パスと完全一致。SHA256: `2ae17827ecbbf42a250b46387d6f94d477214742bd576b3be237de723dfa715c`。
 - 研修トップ・概要ページの6項目と概要PDF2ページは変更しない。講演案内と概要ページの配布PDFリンクのキャッシュ識別子のみ更新。
 - `scripts/build-participation-pdfs.py` は概要PDFのみを再生成する。配布用PDFはユーザー選択済み原本として保持し、自動再生成しない。
+
+
+## 2026-10-27 説明用PDFを案内メールに合わせて更新
+
+- `program-guide.pdf` をA4縦2ページの説明資料として更新。コンソーシアム設立構想、国交省採択の人材育成、活動と参加メリット、11/11講演、参加方法の順に整理。
+- どなたでも参加無料。無料のサービス開発・アプリ開発・データ分析と、実運行・車両・保険等の別途協議を区別。e-Palette活用と自動運転実証計画を分離。
+- 講演後半の進行は最新案内に従い「MobilityDesignLabの植野氏」。リンクはプログラムHP・講演詳細・参加相談フォームの3種類のみ。会議終了済みの `meeting/` は掲載しない。
+- `guide.html` を公開窓口とし、説明PDFへの3導線を同じ最新版に統一。本文の6項目・既存レイアウトは保持。
+- 日本語Noto Sans JPの使用文字を埋め込み。全2ページの再描画、文字範囲、3種類のURL、2つのQRの実読取りを確認。フォームの取得のみで送信なし。Windows・スマホ実機固有の検証は行っていない。
+- `scripts/build-participation-pdfs.py` は説明PDFと編集用HTMLを生成する。フォントはローカル入力のみ。再生成コマンド：`python3 scripts/build-participation-pdfs.py --font-variable /path/to/NotoSansJP.ttf`。必要に応じ `--photo` / `--output-dir` / `--pdf-name` / `--qa-json` を指定可能。
+- `participation-flyer.pdf` は承認済み原本のまま保持。生成処理・公開データとも変更しない。メール送信・共有権限変更なし。
