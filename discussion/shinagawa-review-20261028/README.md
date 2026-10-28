@@ -1,6 +1,6 @@
 # Encrypted discussion package
 
-This review branch adds an encrypted, offline document package. It does not change the published site.
+This page serves an encrypted discussion package. Publication of this password-protected page was requested by the document owner.
 
 Download the complete package folder, including `payload/`, and open `index.html` in a current browser. A self-contained HTML copy is also supplied with the review artifacts. Obtain the passphrase separately from the document owner. The passphrase is not stored in this repository.
 
@@ -12,4 +12,4 @@ This is a shared passphrase scheme. It does not provide identity-based revocatio
 
 The source archive includes its own editing and rebuild instructions. `tools/seal.py` and `tools/gate.template.html` are generic packaging code. Do not commit clear source, passwords, PDFs, or previews to this public repository.
 
-No site deployment or external sending is included in this update.
+Publication is limited to this password-protected page. Existing site content is unchanged. No email or other person-directed sending is included.
