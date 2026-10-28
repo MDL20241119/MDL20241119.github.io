@@ -1,0 +1,71 @@
+{
+  "version": "20261028-founding3",
+  "target_date": "2027-01-26",
+  "documents": [
+    {
+      "key": "main",
+      "number": "01",
+      "label": "構想・設立趣意書",
+      "title": "構想説明書・設立趣意書",
+      "path": "read/main/",
+      "pdf": "documents/main.pdf",
+      "summary": "PVMV、設立の目的、参加価値、運営の全体像。",
+      "pages": 10,
+      "chapter_pages": {
+        "main_ch01": 1,
+        "main_ch02": 3,
+        "main_ch03": 4,
+        "main_ch04": 6,
+        "main_ch05": 7,
+        "main_ch06": 9,
+        "main_ch07": 10
+      }
+    },
+    {
+      "key": "members",
+      "number": "02",
+      "label": "発起人・会員・役員名簿",
+      "title": "発起人・会員・役員名簿",
+      "path": "members/",
+      "pdf": "documents/members.pdf",
+      "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。",
+      "pages": 3,
+      "chapter_pages": {
+        "members_ch01": 1,
+        "members_ch02": 2,
+        "members_ch03": 3
+      }
+    },
+    {
+      "key": "rules",
+      "number": "03",
+      "label": "規約",
+      "title": "規約",
+      "path": "rules/",
+      "pdf": "documents/rules.pdf",
+      "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。",
+      "pages": 4,
+      "chapter_pages": {
+        "rules_ch01": 1,
+        "rules_ch02": 2,
+        "rules_ch03": 3,
+        "rules_ch04": 4
+      }
+    },
+    {
+      "key": "secretariat",
+      "number": "04",
+      "label": "事務局・会計",
+      "title": "事務局の役割分担・会計の取扱い",
+      "path": "secretariat/",
+      "pdf": "documents/secretariat.pdf",
+      "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
+      "pages": 3,
+      "chapter_pages": {
+        "secretariat_ch01": 1,
+        "secretariat_ch02": 2,
+        "secretariat_ch03": 3
+      }
+    }
+  ]
+}

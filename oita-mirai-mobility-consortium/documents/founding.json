@@ -1,0 +1,42 @@
+{
+  "version": "20261028-founding3",
+  "updated": "2026-10-28",
+  "status": "協議用の提案",
+  "name": "大分未来モビリティ・コンソーシアム",
+  "target_date": "2027-01-26",
+  "target_date_label": "2027年1月26日",
+  "target_status": "設立目標",
+  "plan_deadline": "2027-02-28",
+  "purpose": "モビリティを通じて、人と地域の可能性をひらき、大分を元気にする。",
+  "vision": "「行きたい」「会いたい」「やってみたい」がかなう。人と地域に、豊かさがめぐる大分へ。",
+  "mission": "地域の声と仲間の強みをつなぎ、ともにつくり、試し、地域で続く仕組みへ育てる。",
+  "values": ["持ち寄る", "ともにつくる", "試して学ぶ", "役割を担う", "人・地域・自然を大切に。"],
+  "founder_groups": [
+    {"name": "大分県", "status": "参画を協議", "role": "発起人としての後押し、関係部署・自治体・活用の場への橋渡し"},
+    {"name": "県内各自治体", "status": "募集中", "role": "地域課題と現場を持ち寄り、共同案件をつくる"},
+    {"name": "おおいたプラット", "status": "参画を協議", "role": "県内企業・団体への紹介・声掛け、案件に合う仲間との接点づくり"},
+    {"name": "トヨタカローラ大分", "status": "設立準備・正式参画の承認を確認", "role": "事業推進・実務事務局"},
+    {"name": "モビリティデザインラボ", "status": "設立準備・正式参画の承認を確認", "role": "企画・実務事務局、共通運営の契約・口座・会計管理"}
+  ],
+  "officers": [
+    {"position": "共同代表候補", "name": "大分県の副知事クラス", "status": "了承待ち"},
+    {"position": "共同代表候補", "name": "トヨタカローラ大分 本田常務", "status": "了承待ち"},
+    {"position": "事務局長候補", "name": "MDL 佐藤CEO", "status": "了承待ち"}
+  ],
+  "annual_fee_yen": 100000,
+  "free_members": "企業・自治体・大学・スタートアップなど",
+  "voting_groups": ["有料企業会員", "事務局を担う団体", "発起人団体"],
+  "votes_per_organization": 1,
+  "meeting_name": "運営会議",
+  "meeting_status": "仮称",
+  "meeting_frequency": "月1回を基本",
+  "sanrio_relationship": "県の後援＝サンリオの利用許諾",
+  "sanrio_scope": "県の後援を受ける取組みを、県とサンリオの契約に基づく利用許諾の対象として進める。活動・用途・表現の具体的な範囲は県と確認する。",
+  "unresolved": ["候補者・関係団体の了承", "無料対象の基準", "定足数・可決条件・同数時・書面議決", "会費年度・月割り・納付・入退会の運用", "役員の任期・権限の詳細", "初年度予算とTCOの負担額・上限・期間", "契約・口座の実際の名義と開設可否"],
+  "documents": [
+    {"key": "main", "number": "01", "label": "構想・設立趣意書", "title": "構想説明書・設立趣意書", "path": "read/main/", "pdf": "documents/main.pdf", "summary": "PVMV、設立の目的、参加価値、運営の全体像。"},
+    {"key": "members", "number": "02", "label": "発起人・会員・役員名簿", "title": "発起人・会員・役員名簿", "path": "members/", "pdf": "documents/members.pdf", "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。"},
+    {"key": "rules", "number": "03", "label": "規約", "title": "規約", "path": "rules/", "pdf": "documents/rules.pdf", "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。"},
+    {"key": "secretariat", "number": "04", "label": "事務局・会計", "title": "事務局の役割分担・会計の取扱い", "path": "secretariat/", "pdf": "documents/secretariat.pdf", "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。"}
+  ]
+}
