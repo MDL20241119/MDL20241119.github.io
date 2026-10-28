@@ -3,7 +3,7 @@
   "schemaVersion": 2,
   "audience": "prefecture-tco-common",
   "asOf": "2026-10-27T14:14:08+09:00",
-  "updateBasis": "2026/10/27 本人の最新指示：固定番号28件、3分類直下の表示、完了訂正、自治体別の講演案内メール8件。未合意の担当・窓口・期限を補完しない。",
+  "updateBasis": "2026/10/27 本人の最新指示：固定番号28件、3分類直下の表示、完了訂正、自治体別の講演案内メール8件。未合意の担当・窓口・期限を補完しない。 2026/10/28 利用者の最新方針により会費選択制・議決権例外・発起人5区分を同期。団体承認、担当、期限、既存完了状態・履歴を変更しない。",
   "period": {
     "start": "2026-11",
     "end": "2027-02",
@@ -48,6 +48,12 @@
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
+        {
+          "label": "設立時承認に向けた規約案（10/28）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/",
+          "verified": false,
+          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+        },
         {
           "label": "意思決定ルール案（10/27）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
@@ -98,6 +104,12 @@
       "collaborators": [],
       "referenceLinks": [
         {
+          "label": "発起人・会員・役員名簿案（10/28）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/members/",
+          "verified": false,
+          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+        },
+        {
           "label": "運営体制案（10/27）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p06",
           "verified": true,
@@ -115,7 +127,7 @@
       "title": "会費の方針を決める",
       "goal": "設立",
       "group": "設立",
-      "detail": "年会費10万円または無料の方針は決定済み。無料対象の細則・税込／税別・徴収方法・正式な会員規程は未決。",
+      "detail": "利用者の基本方針：企業は年会費10万円・議決権あり、または無料・議決権なしを選択。無料でも企画提案・情報交換・個別案件参加は可能。自治体・大学等も無料。正式な発起人・事務局団体は会費によらず1団体1票。団体としての正式承認は未了。",
       "outcome": "成果物・確認状況を既存の業務正本で管理する。",
       "ownerTeam": null,
       "owner": "未定",
@@ -134,11 +146,17 @@
       "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
       "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
       "displayOrder": 103,
-      "nextAction": "無料対象の細則・税・徴収方法・正式規程を確認する。",
+      "nextAction": "選択制・議決権例外を規約へ反映し、会費年度・途中入会・区分変更・未納・税務等の提案を設立時に承認する。",
       "number": "01-03",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
+        {
+          "label": "会費・議決権の規約案（10/28）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/",
+          "verified": false,
+          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+        },
         {
           "label": "会費の検討案（10/27）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p16",
@@ -150,19 +168,20 @@
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "方針決定済み。細則等は未決。",
+      "statusNote": "利用者の基本方針・団体承認前。徴収等の細則は未決・提案。",
       "policyDecision": {
         "annualYenOptions": [
           100000,
           0
         ],
-        "confirmedBy": "本人の最新指示",
-        "freeEligibility": null,
-        "taxTreatment": null,
-        "collectionMethod": null,
-        "membershipRules": null
+        "confirmedBy": "利用者の最新指示（団体としての正式承認とは別）",
+        "freeEligibility": "すべての企業が無料区分を選択可能。自治体・大学等も無料参加。",
+        "taxTreatment": "未確認。税込・税別を断定せず税理士へ確認する。",
+        "collectionMethod": "未決・提案：会費年度4/1〜3/31、請求後30日以内。詳細は規約案で確認。",
+        "membershipRules": "/oita-mirai-mobility-consortium/rules/",
+        "votingRights": "年会費10万円の有料会員団体と、正式参画した発起人団体・正式に事務局を担う団体に議決権。1団体1票で重複加算なし。募集段階の自治体に票を付与しない。"
       },
-      "summary": "年会費10万円または無料。細則は未定。"
+      "summary": "企業は10万円・議決権あり／無料・議決権なしを選択。発起人・事務局の例外あり。団体承認前。"
     },
     {
       "id": "01-04",
@@ -193,6 +212,12 @@
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
+        {
+          "label": "事務局の役割分担・会計の取扱い案（10/28）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/secretariat/",
+          "verified": false,
+          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+        },
         {
           "label": "運営資金・会計案（10/27）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p09",
@@ -1210,7 +1235,7 @@
       "title": "声掛けリストをアプリ内にまとめる",
       "goal": "仲間づくり",
       "group": "仲間づくり",
-      "detail": "企業・団体名／窓口／主担当／状況／次の行動／期限を非公開保存先で管理する。次の行動と期限は関連タスクを参照し二重管理しない。",
+      "detail": "発起人構成案は大分県・県内各自治体（募集中）・おおいたプラット・TCO・MDLの5区分。各団体の了承は別管理し、自治体は個別確認後に正式参画として掲載する。個人連絡先・了承記録は非公開台帳で管理する。",
       "outcome": "成果物・確認状況を既存の業務正本で管理する。",
       "ownerTeam": null,
       "owner": "未定",
@@ -1234,6 +1259,12 @@
       "goalId": "03",
       "collaborators": [],
       "referenceLinks": [
+        {
+          "label": "公開名簿・内部台帳の管理案（10/28）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/members/",
+          "verified": false,
+          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+        },
         {
           "label": "発起人構成案（10/27）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p04",
@@ -1423,7 +1454,7 @@
       "prepare": "組織図・役割と意思決定ルール案",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/members/",
       "sourceIds": [
         "OMC-003",
         "OMC-004",
@@ -1445,7 +1476,7 @@
       "prepare": "既存の規約案・改訂履歴",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/rules/",
       "sourceIds": [
         "OMC-005",
         "OMC-037"
@@ -1461,11 +1492,11 @@
     {
       "id": "CHECK-04",
       "title": "会員条件・年会費",
-      "decide": "年会費10万円または無料の方針を前提に、無料対象の細則、税、徴収方法、正式な会員規程を決める。",
+      "decide": "企業の選択制10万円・議決権あり／無料・議決権なし、正式発起人・事務局団体の例外を前提に、税務・徴収・入退会等の提案を承認する。",
       "prepare": "会員規程案・費用の区分表",
       "ownerTeam": null,
-      "status": "方針決定済み・細則等は未決",
-      "latestLink": null,
+      "status": "利用者の基本方針・団体承認前",
+      "latestLink": "/oita-mirai-mobility-consortium/rules/",
       "sourceIds": [
         "OMC-006"
       ],
@@ -1484,7 +1515,7 @@
       "prepare": "役割分担表・既存契約案・案件別合意書",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/secretariat/",
       "sourceIds": [
         "OMC-004",
         "OMC-002"
@@ -1505,7 +1536,7 @@
       "prepare": "活動計画・収支予算案・会計手順",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/secretariat/",
       "sourceIds": [
         "OMC-007",
         "OMC-006"
@@ -1521,11 +1552,11 @@
     {
       "id": "CHECK-07",
       "title": "発起人・会員の同意確認",
-      "decide": "各団体の参画意思、発起人就任、規約や負担への同意",
+      "decide": "発起人構成案5区分の各団体の参画意思、規約や負担への同意。各自治体は個別に確認する。",
       "prepare": "非公開の名簿・団体の同意記録",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/members/",
       "sourceIds": [
         "OMC-003"
       ],
@@ -1612,11 +1643,11 @@
   ],
   "fees": {
     "corporateAnnualYen": 100000,
-    "taxTreatment": null,
-    "freeEligibility": null,
-    "collectionTiming": null,
-    "membershipRules": null,
-    "value": "トヨタのe-Palette活用や自動運転実証を、大分で一緒に企画・推進する企業として参画すること。",
+    "taxTreatment": "未確認。税理士へ確認する。",
+    "freeEligibility": "すべての企業が無料区分を選択可能。自治体・大学等も無料参加。",
+    "collectionTiming": "未決・提案：会費年度4/1〜3/31、初年度は設立日〜2027/3/31、請求後30日以内。",
+    "membershipRules": "/oita-mirai-mobility-consortium/rules/",
+    "value": "e-Paletteを活用するサービスと、自動運転実証の検討を分け、地域の課題・強みから共同案件をつくる。車両提供や実証実施は確約しない。",
     "commonActivities": [
       "共同企画",
       "関係者調整",
@@ -1646,8 +1677,10 @@
       100000,
       0
     ],
-    "policyStatus": "年会費10万円または無料の方針決定済み。細則等は未決。",
-    "collectionMethod": null
+    "policyStatus": "利用者の基本方針・団体承認前。企業は10万円・議決権あり／無料・議決権なしを選択。",
+    "collectionMethod": "未決・提案：会費入金を照合し区分帳簿で管理。規約・事務局会計案を参照。",
+    "votingRights": "年会費10万円の有料会員団体と、正式参画した発起人団体・正式に事務局を担う団体に議決権。1団体1票で重複加算なし。募集段階の自治体に票を付与しない。",
+    "programmeSeparation": "無料の人材育成プログラムとコンソーシアムの会員区分・会費は別。"
   },
   "directory": {
     "mode": "private-master-only",
@@ -1670,7 +1703,16 @@
       "見送り"
     ],
     "note": "個人の連絡先・交渉記録・団体別の参加状況は公開JSONへ保存しない。関連タスクの次の行動・期限を参照し二重管理しない。",
-    "relatedTaskId": "03-01"
+    "relatedTaskId": "03-01",
+    "founderCategories": [
+      "大分県",
+      "県内各自治体（募集中）",
+      "おおいたプラット",
+      "トヨタカローラ大分",
+      "モビリティデザインラボ"
+    ],
+    "founderStatus": "構成案・各団体の了承待ち。県内自治体は個別確認し、候補段階では正式参加・議決権を付与しない。",
+    "publicRoster": "/oita-mirai-mobility-consortium/members/"
   },
   "history": [
     {

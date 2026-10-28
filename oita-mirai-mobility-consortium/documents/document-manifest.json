@@ -1,6 +1,7 @@
 {
-  "version": "20261028-founding3",
+  "version": "20261028-founding4",
   "target_date": "2027-01-26",
+  "target_status": "日程候補・未決・提案。正式日は設立時承認で決定",
   "documents": [
     {
       "key": "main",
@@ -10,15 +11,15 @@
       "path": "read/main/",
       "pdf": "documents/main.pdf",
       "summary": "PVMV、設立の目的、参加価値、運営の全体像。",
-      "pages": 10,
+      "pages": 8,
       "chapter_pages": {
         "main_ch01": 1,
         "main_ch02": 3,
         "main_ch03": 4,
-        "main_ch04": 6,
-        "main_ch05": 7,
-        "main_ch06": 9,
-        "main_ch07": 10
+        "main_ch04": 5,
+        "main_ch05": 6,
+        "main_ch06": 7,
+        "main_ch07": 8
       }
     },
     {
@@ -29,11 +30,12 @@
       "path": "members/",
       "pdf": "documents/members.pdf",
       "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。",
-      "pages": 3,
+      "pages": 2,
       "chapter_pages": {
         "members_ch01": 1,
-        "members_ch02": 2,
-        "members_ch03": 3
+        "members_ch02": 1,
+        "members_ch03": 2,
+        "members_ch04": 2
       }
     },
     {
@@ -44,12 +46,18 @@
       "path": "rules/",
       "pdf": "documents/rules.pdf",
       "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。",
-      "pages": 4,
+      "pages": 5,
       "chapter_pages": {
         "rules_ch01": 1,
-        "rules_ch02": 2,
-        "rules_ch03": 3,
-        "rules_ch04": 4
+        "rules_ch02": 1,
+        "rules_ch03": 2,
+        "rules_ch04": 3,
+        "rules_ch05": 3,
+        "rules_ch06": 4,
+        "rules_ch07": 4,
+        "rules_ch08": 5,
+        "rules_ch09": 5,
+        "rules_ch10": 5
       }
     },
     {
@@ -60,11 +68,17 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 3,
+      "pages": 7,
       "chapter_pages": {
         "secretariat_ch01": 1,
         "secretariat_ch02": 2,
-        "secretariat_ch03": 3
+        "secretariat_ch03": 3,
+        "secretariat_ch04": 3,
+        "secretariat_ch05": 4,
+        "secretariat_ch06": 5,
+        "secretariat_ch07": 5,
+        "secretariat_ch08": 6,
+        "conditions": 7
       }
     }
   ]
