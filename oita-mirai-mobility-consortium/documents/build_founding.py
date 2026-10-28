@@ -19,7 +19,10 @@ def build():
     assert DATA['annual_fee_yen']==100000 and DATA['votes_per_organization']==1
     assert DATA['plan_deadline']=='2027-02-26'
     assert len(DATA['founder_groups'])==5
-    assert '別' in DATA['sanrio_relationship']
+    assert DATA['target_date']=='2027-01-26'
+    assert DATA['target_date_label']=='2027年1月26日'
+    assert DATA['sanrio_relationship']=='県の後援＝サンリオの利用許諾'
+    assert '契約' in DATA['sanrio_scope']
     for doc in DATA['documents']:
         p=ROOT/doc['path']/'index.html';s=p.read_text();r=html.fromstring(s)
         assert r.xpath('//script[contains(@src,"/entry.js")]'),p
@@ -27,6 +30,10 @@ def build():
         assert r.xpath('//nav[@class="founding-doc-nav"]'),p
         text=r.xpath('//main')[0].text_content()
         assert '未決' in s,p
+        assert DATA['target_date_label'] in r.text_content(),p
+        assert '県の後援≠' not in text,p
+        assert '1月26日は日程候補' not in text and '1月26日は候補' not in text,p
+        if doc['key']=='main':assert DATA['sanrio_relationship'] in text,p
         for a in r.xpath('//a[@href]'):
             href=a.get('href')
             if href.startswith('/oita-mirai-mobility-consortium/documents/') and '.pdf' in href:

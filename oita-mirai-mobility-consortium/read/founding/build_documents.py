@@ -71,6 +71,7 @@ def boxed(cols,width,gap=12):
 def render(el,width):
     cls=set(el.get('class','').split())
     if el.tag in ('nav','script','style','details','summary'):return []
+    if 'permission-line' in cls:return [para(el,'h3')]
     if el.tag in ('p','h3','h4','strong','a','span','dt','dd'):
         if 'flow-arrow' in cls:return []
         key='h3' if el.tag in ('h3','h4') else 'body'
@@ -136,6 +137,7 @@ def build(slug,path,title):
         lead=sec.xpath('./header/p')
         if lead:story.append(para(lead[0],'lead'))
         if n==1:
+            story.append(Paragraph('<b>設立目標：2027年1月26日。</b>正式な設立は関係者の合意を経て決めます。',ST['note']))
             story.append(Paragraph('<b>未決・提案｜設立時の承認前。</b>候補は了承待ち。正式参画・就任・負担の承認を示すものではありません。',ST['note']))
             links=' / '.join(f'<a href="{ORIGIN}/oita-mirai-mobility-consortium/{u}/" color="#bd3c39"><u>{t}</u></a>' for u,t in [('read/main','構想・趣意書'),('members','名簿'),('rules','規約'),('secretariat','事務局・会計')]);story.append(Paragraph(links,ST['note']));story.append(Spacer(1,12))
         body=sec.xpath('./div[contains(@class,"chapter-body")]')[0]
