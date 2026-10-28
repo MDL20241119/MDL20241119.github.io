@@ -1,42 +1,149 @@
 {
-  "version": "20261028-founding3",
+  "version": "20261028-founding4",
   "updated": "2026-10-28",
   "status": "協議用の提案",
-  "name": "大分未来モビリティ・コンソーシアム",
+  "name": "大分未来モビリティコンソーシアム",
   "target_date": "2027-01-26",
-  "target_date_label": "2027年1月26日",
-  "target_status": "設立目標",
-  "plan_deadline": "2027-02-28",
+  "target_date_label": "2027年1月26日（候補・未決）",
+  "target_status": "日程候補・未決・提案。正式日は設立時承認で決定",
+  "plan_deadline": "2027-02-26",
   "purpose": "モビリティを通じて、人と地域の可能性をひらき、大分を元気にする。",
   "vision": "「行きたい」「会いたい」「やってみたい」がかなう。人と地域に、豊かさがめぐる大分へ。",
   "mission": "地域の声と仲間の強みをつなぎ、ともにつくり、試し、地域で続く仕組みへ育てる。",
-  "values": ["持ち寄る", "ともにつくる", "試して学ぶ", "役割を担う", "人・地域・自然を大切に。"],
+  "values": [
+    "持ち寄る",
+    "ともにつくる",
+    "試して学ぶ",
+    "役割を担う",
+    "人・地域・自然を大切に。"
+  ],
   "founder_groups": [
-    {"name": "大分県", "status": "参画を協議", "role": "発起人としての後押し、関係部署・自治体・活用の場への橋渡し"},
-    {"name": "県内各自治体", "status": "募集中", "role": "地域課題と現場を持ち寄り、共同案件をつくる"},
-    {"name": "おおいたプラット", "status": "参画を協議", "role": "県内企業・団体への紹介・声掛け、案件に合う仲間との接点づくり"},
-    {"name": "トヨタカローラ大分", "status": "設立準備・正式参画の承認を確認", "role": "事業推進・実務事務局"},
-    {"name": "モビリティデザインラボ", "status": "設立準備・正式参画の承認を確認", "role": "企画・実務事務局、共通運営の契約・口座・会計管理"}
+    {
+      "name": "大分県",
+      "status": "参画を協議",
+      "role": "発起人としての後押し、関係部署・自治体・活用の場への橋渡し"
+    },
+    {
+      "name": "県内各自治体",
+      "status": "募集中",
+      "role": "地域課題と現場を持ち寄り、共同案件をつくる"
+    },
+    {
+      "name": "おおいたプラット",
+      "status": "参画を協議",
+      "role": "県内企業・団体への紹介・声掛け、案件に合う仲間との接点づくり"
+    },
+    {
+      "name": "トヨタカローラ大分",
+      "status": "設立準備・正式参画の承認を確認",
+      "role": "事業推進・実務事務局"
+    },
+    {
+      "name": "モビリティデザインラボ",
+      "status": "設立準備・正式参画の承認を確認",
+      "role": "企画・実務事務局、請求・記帳・報告。団体名義の口座・契約が難しい場合の受託管理案を協議"
+    }
   ],
   "officers": [
-    {"position": "共同代表候補", "name": "大分県の副知事クラス", "status": "了承待ち"},
-    {"position": "共同代表候補", "name": "トヨタカローラ大分 本田常務", "status": "了承待ち"},
-    {"position": "事務局長候補", "name": "MDL 佐藤CEO", "status": "了承待ち"}
+    {
+      "position": "共同代表候補",
+      "name": "大分県の副知事クラス",
+      "status": "了承待ち"
+    },
+    {
+      "position": "共同代表候補",
+      "name": "トヨタカローラ大分 本田常務",
+      "status": "了承待ち"
+    },
+    {
+      "position": "事務局長候補",
+      "name": "MDL 佐藤CEO",
+      "status": "了承待ち"
+    }
   ],
   "annual_fee_yen": 100000,
   "free_members": "企業・自治体・大学・スタートアップなど",
-  "voting_groups": ["有料企業会員", "事務局を担う団体", "発起人団体"],
+  "voting_groups": [
+    "有料会員団体",
+    "正式に事務局を担う団体",
+    "正式に参画した発起人団体"
+  ],
   "votes_per_organization": 1,
   "meeting_name": "運営会議",
   "meeting_status": "仮称",
   "meeting_frequency": "月1回を基本",
-  "sanrio_relationship": "県の後援＝サンリオの利用許諾",
-  "sanrio_scope": "県の後援を受ける取組みを、県とサンリオの契約に基づく利用許諾の対象として進める。活動・用途・表現の具体的な範囲は県と確認する。",
-  "unresolved": ["候補者・関係団体の了承", "無料対象の基準", "定足数・可決条件・同数時・書面議決", "会費年度・月割り・納付・入退会の運用", "役員の任期・権限の詳細", "初年度予算とTCOの負担額・上限・期間", "契約・口座の実際の名義と開設可否"],
+  "sanrio_relationship": "県の後援とサンリオの利用許諾は別に確認",
+  "sanrio_scope": "県の後援を許諾取得と同一視せず、県と権利者に契約上の用途・範囲・表現を確認する。",
+  "unresolved": [
+    "発起人・役員・掲載の個別了承",
+    "設立正式日（1月26日は候補）",
+    "会費年度・初年度・途中入会・区分変更・未納等の具体案の承認",
+    "定足数・可決条件・代理書面参加・役員任期の具体案の承認",
+    "共通予算・TCO負担額上限・事務局業務と対価",
+    "団体名義の契約・口座とMDL受託管理協定",
+    "税務・代表権限・知財等の専門家確認",
+    "最終交付決定・承認KPI・変更承認の照合"
+  ],
   "documents": [
-    {"key": "main", "number": "01", "label": "構想・設立趣意書", "title": "構想説明書・設立趣意書", "path": "read/main/", "pdf": "documents/main.pdf", "summary": "PVMV、設立の目的、参加価値、運営の全体像。"},
-    {"key": "members", "number": "02", "label": "発起人・会員・役員名簿", "title": "発起人・会員・役員名簿", "path": "members/", "pdf": "documents/members.pdf", "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。"},
-    {"key": "rules", "number": "03", "label": "規約", "title": "規約", "path": "rules/", "pdf": "documents/rules.pdf", "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。"},
-    {"key": "secretariat", "number": "04", "label": "事務局・会計", "title": "事務局の役割分担・会計の取扱い", "path": "secretariat/", "pdf": "documents/secretariat.pdf", "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。"}
-  ]
+    {
+      "key": "main",
+      "number": "01",
+      "label": "構想・設立趣意書",
+      "title": "構想説明書・設立趣意書",
+      "path": "read/main/",
+      "pdf": "documents/main.pdf",
+      "summary": "PVMV、設立の目的、参加価値、運営の全体像。"
+    },
+    {
+      "key": "members",
+      "number": "02",
+      "label": "発起人・会員・役員名簿",
+      "title": "発起人・会員・役員名簿",
+      "path": "members/",
+      "pdf": "documents/members.pdf",
+      "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。"
+    },
+    {
+      "key": "rules",
+      "number": "03",
+      "label": "規約",
+      "title": "規約",
+      "path": "rules/",
+      "pdf": "documents/rules.pdf",
+      "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。"
+    },
+    {
+      "key": "secretariat",
+      "number": "04",
+      "label": "事務局・会計",
+      "title": "事務局の役割分担・会計の取扱い",
+      "path": "secretariat/",
+      "pdf": "documents/secretariat.pdf",
+      "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。"
+    }
+  ],
+  "goal_month": "2027-01",
+  "goal_label": "2027年1月設立目標・正式日未決",
+  "plan_deadline_status": "公募要領・申請記載。対象経費の支払完了を含む。最終交付条件と照合",
+  "membership_choice": {
+    "enterprise_paid": {
+      "annual_fee_yen": 100000,
+      "voting": true
+    },
+    "enterprise_free": {
+      "annual_fee_yen": 0,
+      "voting": false
+    },
+    "municipalities_universities": "無料参加可",
+    "free_member_activities": [
+      "企画提案",
+      "情報交換",
+      "個別プロジェクト参加"
+    ],
+    "exceptions": "正式な発起人団体と事務局を担う正式団体は会費の有無によらず議決権。発起人として正式参画した各自治体も対象。募集・候補段階は無票。",
+    "votes_per_organization": 1,
+    "tax_status": "未確認。税込・税別を断定しない。",
+    "training_program": "無料の人材育成プログラムとコンソーシアム会費は別"
+  },
+  "canonical_content": "各文書のHTML本文。shared policy metadata is validated by documents/build_founding.py."
 }

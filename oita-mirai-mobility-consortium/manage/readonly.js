@@ -1,5 +1,5 @@
 (function(root){'use strict';
-const STATUS={unconfirmed:'状況未確認',incomplete:'未完了（着手状況未確認）',policy:'方針決定済み（細則未決）',todo:'未着手',doing:'進行中',waiting:'相手待ち',review:'作業完了・確認待ち',confirmed:'確認済み完了',hold:'保留',unnecessary:'不要',done:'旧完了（確認記録未確認）'};
+const STATUS={unconfirmed:'状況未確認',incomplete:'未完了（着手状況未確認）',policy:'利用者の基本方針（団体承認前）（細則未決）',todo:'未着手',doing:'進行中',waiting:'相手待ち',review:'作業完了・確認待ち',confirmed:'確認済み完了',hold:'保留',unnecessary:'不要',done:'旧完了（確認記録未確認）'};
 const dayPattern=/^\d{4}-\d{2}-\d{2}$/;
 function validDay(day){return typeof day==='string'&&dayPattern.test(day)&&!Number.isNaN(Date.parse(day+'T12:00:00Z'))&&new Date(day+'T12:00:00Z').toISOString().startsWith(day)}
 function todayJST(now=new Date()){return new Intl.DateTimeFormat('sv-SE',{timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'}).format(now)}
@@ -63,7 +63,7 @@ function conciseDetail(t){
  if(t.event)text=text.replace(/講演は[^。]+。/,'');
  return text.trim();
 }
-function shortStatus(t){if(t.sendStatus&&t.status==='unconfirmed')return '送信'+t.sendStatus;return {unconfirmed:'未確認',incomplete:'未完了',policy:'方針決定済み'}[t.status]||STATUS[t.status]}
+function shortStatus(t){if(t.sendStatus&&t.status==='unconfirmed')return '送信'+t.sendStatus;return {unconfirmed:'未確認',incomplete:'未完了',policy:'利用者の基本方針（団体承認前）'}[t.status]||STATUS[t.status]}
 function taskTable(tasks,today,context='all'){
  const {wrap,tbody}=table(['番号','何を','誰に','誰が','いつまでに','状況'],'task-table');
  for(const t of tasks){
