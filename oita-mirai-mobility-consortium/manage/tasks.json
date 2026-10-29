@@ -2,13 +2,14 @@
   "kind": "approved-readonly-snapshot",
   "schemaVersion": 2,
   "audience": "prefecture-tco-common",
-  "asOf": "2026-10-27T14:14:08+09:00",
-  "updateBasis": "2026/10/27 本人の最新指示：固定番号28件、3分類直下の表示、完了訂正、自治体別の講演案内メール8件。未合意の担当・窓口・期限を補完しない。 2026/10/28 利用者の最新方針により会費選択制・議決権例外・発起人5区分を同期。団体承認、担当、期限、既存完了状態・履歴を変更しない。",
+  "asOf": "2026-10-29T13:00:00+09:00",
+  "updateBasis": "2026/10/27 本人の最新指示：固定番号28件、3分類直下の表示、完了訂正、自治体別の講演案内メール8件。未合意の担当・窓口・期限を補完しない。 2026/10/28 利用者の最新方針により会費選択制・議決権例外・発起人5区分を同期。団体承認、担当、期限、既存完了状態・履歴を変更しない。 2026/10/29 本人依頼で最新会話・公開説明書・案内展開依頼を照合。設立目標1/26、資料作成進捗、自治体別送付確認を更新。既存完了・担当・確定期限・履歴は維持。",
   "period": {
     "start": "2026-11",
     "end": "2027-02",
     "launchMonth": "2027-01",
-    "launchDate": null
+    "launchDate": null,
+    "launchTargetDate": "2027-01-26"
   },
   "sync": {
     "mode": "manual-readonly-projection",
@@ -16,7 +17,7 @@
     "masterChanged": false,
     "writeEndpoint": null,
     "sharedEditingEnabled": false,
-    "note": "既存の管理アプリを業務正本として維持。本人の最新指示に基づく表示用の固定番号・タスク更新を正本への書き込みとみなさない。非公開名簿・団体別交渉記録・共有編集は未接続。"
+    "note": "既存の管理アプリを業務正本として維持。本人の最新指示に基づく表示用の固定番号・タスク更新を正本への書き込みとみなさない。非公開名簿・団体別交渉記録・共有編集は未接続。 2026/10/29の更新はこの表示データのみ。正本への自動同期・書き戻しは行っていない。"
   },
   "tasks": [
     {
@@ -40,39 +41,33 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch06",
+      "sourceLabel": "構想説明書 第6章（資料更新と合意は別）",
       "displayOrder": 101,
-      "nextAction": "規約案の未決部分を確認する。",
+      "nextAction": "最新版の規約案を確認し、未決事項を設立時の承認事項へ整理する。",
       "number": "01-01",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "設立時承認に向けた規約案（10/28）",
+          "label": "規約案（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/",
-          "verified": false,
-          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "意思決定ルール案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "label": "意思決定・議決方法",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch06",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
-        },
-        {
-          "label": "情報共有ルール案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p10",
-          "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "未完了。未着手・進行中の内訳は未確認。"
+      "statusNote": "規約案は更新済み。定足数・可決条件等の団体承認は未確認。"
     },
     {
       "id": "01-02",
@@ -95,32 +90,33 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch03",
+      "sourceLabel": "構想説明書 第3章（資料更新と合意は別）",
       "displayOrder": 102,
-      "nextAction": "運営体制案の未決部分を確認する。",
+      "nextAction": "役職候補・発起人の了承と、TCO・MDLの実務分担を確認する。",
       "number": "01-02",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "発起人・会員・役員名簿案（10/28）",
+          "label": "発起人・会員・役員名簿案",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/members/",
-          "verified": false,
-          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "運営体制案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p06",
+          "label": "運営体制・発起人5区分",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch03",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "未完了。未着手・進行中の内訳は未確認。"
+      "statusNote": "運営体制・発起人5区分の提案資料は更新済み。就任・参画の了承は未確認。"
     },
     {
       "id": "01-03",
@@ -143,8 +139,8 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch05",
+      "sourceLabel": "構想説明書 第5章（資料更新と合意は別）",
       "displayOrder": 103,
       "nextAction": "選択制・議決権例外を規約へ反映し、会費年度・途中入会・区分変更・未納・税務等の提案を設立時に承認する。",
       "number": "01-03",
@@ -152,17 +148,18 @@
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "会費・議決権の規約案（10/28）",
+          "label": "会費・議決権の規約案",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/",
-          "verified": false,
-          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "会費の検討案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p16",
+          "label": "会費・参加条件",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch05",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
@@ -204,32 +201,33 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch07",
+      "sourceLabel": "構想説明書 第7章（資料更新と合意は別）",
       "displayOrder": 104,
-      "nextAction": "必要な運営費と負担区分を整理する。",
+      "nextAction": "共通運営と個別案件の費用を分け、初年度予算・負担額・承認者を協議する。",
       "number": "01-04",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "事務局の役割分担・会計の取扱い案（10/28）",
+          "label": "事務局・会計の取扱い案",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/secretariat/",
-          "verified": false,
-          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "運営資金・会計案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p09",
+          "label": "共通運営費・案件費の整理",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch07",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "未完了。未着手・進行中の内訳は未確認。"
+      "statusNote": "事務局・会計案は更新済み。TCO負担額・上限・予算承認は未決。"
     },
     {
       "id": "01-05",
@@ -252,26 +250,33 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch06",
+      "sourceLabel": "構想説明書 第6章（資料更新と合意は別）",
       "displayOrder": 105,
-      "nextAction": "必要な契約と既存案を確認する。",
+      "nextAction": "事務局業務と個別案件の契約当事者・範囲・責任を確認する。",
       "number": "01-05",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "契約前の確認事項（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p17",
+          "label": "契約主体・会計の取扱い案",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/secretariat/",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
+        },
+        {
+          "label": "個別案件の意思決定",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch06",
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "未完了。未着手・進行中の内訳は未確認。"
+      "statusNote": "契約主体・会計の取扱い案は更新済み。個別契約の締結状況は未確認。"
     },
     {
       "id": "01-06",
@@ -294,38 +299,39 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p13",
-      "sourceLabel": "既存の構想説明書 p.13（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch03",
+      "sourceLabel": "構想説明書 第3章（資料更新と合意は別）",
       "displayOrder": 106,
-      "nextAction": "設立内容と役割分担の未合意部分を確認する。",
+      "nextAction": "最新版の設立文書を使い、役割分担と未合意事項をTCO・MDLで確認する。",
       "number": "01-06",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "設立・役割分担の参考資料",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/meeting/",
+          "label": "構想説明書・設立趣意書（最新版）",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/",
           "verified": true,
-          "verificationNote": "内容確認済み。TCO・MDL側の閲覧権限は未確認。合意・完了を証明しない参考資料。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
+        },
+        {
+          "label": "事務局の役割分担・会計案",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/secretariat/",
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
           "label": "設立基本案スライド（9/26版）",
           "url": "https://docs.google.com/presentation/d/1f1kkzJ_9ACYEyJ9NvyuGiNwCVM5htd-JRww_XPNVzMA/edit",
           "verified": true,
           "verificationNote": "9/26更新の既存案。TCO・MDL側の閲覧権限は未確認。合意・完了の根拠ではありません。"
-        },
-        {
-          "label": "役割分担案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
-          "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "本人の最新指示により未完了へ訂正済み。完了へ戻さない。",
+      "statusNote": "構想説明書・設立文書は更新済み。設立内容と役割分担の合意は未完了。本人の完了訂正を維持。",
       "previousTaskNumber": 2,
       "corrections": [
         {
@@ -357,26 +363,33 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
-      "sourceLabel": "既存の構想説明書 p.4（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch07",
+      "sourceLabel": "構想説明書 第7章（資料更新と合意は別）",
       "displayOrder": 107,
-      "nextAction": "既存の打診・説明記録を確認して、次の連絡を決める。",
+      "nextAction": "既存の打診・説明記録を確認し、発起人参画・企業への声掛け・県との連携を相談する。",
       "number": "01-07",
       "goalId": "01",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "参画・役割の構想案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p07",
+          "label": "おおいたプラットへの相談3点",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch07",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
+        },
+        {
+          "label": "構想説明書・設立文書一式",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/guide/",
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "VIEW-PLAT"
       ],
-      "statusNote": "状況未確認。未着手・進行中を断定しない。",
+      "statusNote": "おおいたプラットへの説明資料は更新済み。説明日程・実施状況は未確認。",
       "scheduleStatus": "未確認"
     },
     {
@@ -400,8 +413,8 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p07",
-      "sourceLabel": "既存の構想説明書 p.7（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch04",
+      "sourceLabel": "構想説明書 第4章（資料更新と合意は別）",
       "displayOrder": 108,
       "nextAction": "最新の進展・相談事項を県へ共有する。",
       "number": "01-08",
@@ -441,7 +454,7 @@
       "goal": "設立",
       "group": "設立",
       "detail": "2027年1月の設立を目標に合意・手続きを進める。正式日は未定。",
-      "nextAction": "合意が必要な事項と手続きを確認する。",
+      "nextAction": "1/26目標に向け、発起人同意・規約・役員・計画予算・事務局・正式日を確認する。",
       "ownerTeam": null,
       "owner": "未定",
       "ownerCertainty": "unknown",
@@ -457,19 +470,29 @@
       "evidenceLinks": [],
       "referenceLinks": [
         {
-          "label": "設立までの工程案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p13",
+          "label": "設立目標・今年度工程",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch02",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
+        },
+        {
+          "label": "設立時に確認する文書一式",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/guide/",
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "displayOrder": 109,
       "legacyIds": [],
-      "statusNote": "状況未確認。未着手・進行中を断定しない。",
+      "statusNote": "2027年1月26日を設立目標として資料更新済み。正式日・関係者合意は未確認。",
       "outcome": "成果物・確認状況を既存の業務正本で管理する。",
       "targetMonth": "2027-01",
-      "dueLabel": "2027年1月目標／正式日未定"
+      "dueLabel": "2027年1月26日目標／正式合意前",
+      "targetDate": "2027-01-26",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）"
     },
     {
       "id": "02-01",
@@ -481,7 +504,7 @@
       "goal": "人材育成",
       "group": "人材育成",
       "detail": "既存の参加説明資料・ヒアリング項目を活用し、作成済みのものを重複作成しない。",
-      "nextAction": "既存資料を確認し、不足する説明・質問項目だけを整える。",
+      "nextAction": "既存説明ページ・相談項目を確認し、追加が必要な質問だけを整える。",
       "ownerTeam": null,
       "owner": "未定",
       "ownerCertainty": "unknown",
@@ -497,23 +520,23 @@
       "evidenceLinks": [],
       "referenceLinks": [
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "相談の入口（2項目）",
+          "label": "相談の入口",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html#consult",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "displayOrder": 201,
       "legacyIds": [],
-      "statusNote": "状況未確認。未着手・進行中を断定しない。",
+      "statusNote": "自治体向け説明ページは更新済み。ヒアリング項目の最終確認は未確認。",
       "outcome": "成果物・確認状況を既存の業務正本で管理する。"
     },
     {
@@ -537,34 +560,34 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
       "displayOrder": 202,
-      "nextAction": "既存の工程案と関係者の予定を確認し、4か月の予定に落とす。",
+      "nextAction": "講演・現地調査・開発・分析・成果物の工程を調整し、2/26と既存2/28の期限を交付条件で照合する。",
       "number": "02-02",
       "goalId": "02",
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "11〜2月の工程案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p13",
+          "label": "今年度の工程・成果物",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch02",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "プログラムの進め方（10/27）",
+          "label": "人材育成プログラム",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
         "OMC-035",
         "OMC-031"
       ],
-      "statusNote": "状況未確認。未着手・進行中を断定しない。",
+      "statusNote": "11〜2月の工程案は掲載済み。地域別の実施日・担当の合意は未確認。",
       "periodStart": "2026-11",
       "periodEnd": "2027-02"
     },
@@ -672,10 +695,10 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
       "displayOrder": 205,
-      "nextAction": "地域別の課題・実施主体・費用負担をサービス企画に整理し、実施・実証計画へつなげる。",
+      "nextAction": "TCO保管の要領・交付条件で2/26の成果物・支払期限を確認し、既存2/28との不整合を解消して工程を調整する。",
       "number": "02-05",
       "goalId": "02",
       "collaborators": [],
@@ -692,7 +715,7 @@
         "OMC-035",
         "OMC-031"
       ],
-      "statusNote": "状況未確認。未着手・進行中を断定しない。",
+      "statusNote": "地域別計画は作成途上の状況未確認。最新説明書の2/26と既存登録期限2/28に差異があり、要領・交付条件の照合が必要。",
       "previousTaskNumber": 10,
       "themes": [
         "e-Palette活用",
@@ -720,9 +743,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 206,
       "number": "02-06",
       "goalId": "02",
@@ -736,17 +759,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-beppu"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 11,
       "municipality": "別府市",
       "entryTheme": "観光・ナイトエコノミー",
@@ -782,9 +805,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 207,
       "number": "02-07",
       "goalId": "02",
@@ -798,17 +821,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-oita"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 12,
       "municipality": "大分市",
       "entryTheme": "生活の移動、佐賀関",
@@ -844,9 +867,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 208,
       "number": "02-08",
       "goalId": "02",
@@ -860,17 +883,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-hiji"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 13,
       "municipality": "日出町",
       "entryTheme": "ハーモニーランド周辺の移動・物流",
@@ -906,9 +929,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 209,
       "number": "02-09",
       "goalId": "02",
@@ -922,17 +945,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-usa"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 14,
       "municipality": "宇佐市",
       "entryTheme": "地域の課題と取り組む場所を確認",
@@ -968,9 +991,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 210,
       "number": "02-10",
       "goalId": "02",
@@ -984,17 +1007,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-kunisaki"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 15,
       "municipality": "国東市",
       "entryTheme": "空港・観光地を起点とする移動",
@@ -1030,9 +1053,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 211,
       "number": "02-11",
       "goalId": "02",
@@ -1046,17 +1069,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-usuki"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 16,
       "municipality": "臼杵市",
       "entryTheme": "観光・生活の移動",
@@ -1092,9 +1115,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 212,
       "number": "02-12",
       "goalId": "02",
@@ -1108,17 +1131,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-yufu"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 17,
       "municipality": "由布市",
       "entryTheme": "湯布院のモビリティハブ",
@@ -1154,9 +1177,9 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p11",
-      "sourceLabel": "既存の構想説明書 p.11（最新合意は別途確認）",
-      "nextAction": "案内メールを送る",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch02",
+      "sourceLabel": "構想説明書 第2章（資料更新と合意は別）",
+      "nextAction": "自治体別の送付記録を確認し、未送付分だけ案内する。返信・次の行動を正本に記録する。",
       "displayOrder": 213,
       "number": "02-13",
       "goalId": "02",
@@ -1170,17 +1193,17 @@
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         },
         {
-          "label": "自治体向け説明資料（10/26）",
+          "label": "自治体向け説明資料（最新版）",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/training/guide.html",
           "verified": true,
-          "verifiedAt": "2026-10-27",
+          "verifiedAt": "2026-10-29",
           "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
         }
       ],
       "legacyIds": [
         "OMC-014-kitsuki"
       ],
-      "statusNote": "送信状況未確認。未送信とは断定しない。",
+      "statusNote": "10/27にTCOへ案内展開を依頼済み。自治体別の送付・返信は未確認。未送信とは断定しない。",
       "previousTaskNumber": 18,
       "municipality": "杵築市",
       "entryTheme": "参加意向と地域の課題を確認",
@@ -1216,8 +1239,8 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p16",
-      "sourceLabel": "既存の構想説明書 p.16（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch06",
+      "sourceLabel": "構想説明書 第6章（資料更新と合意は別）",
       "displayOrder": 214,
       "nextAction": "今月の活動をまとめ、報告日を確認する。",
       "number": "02-14",
@@ -1251,8 +1274,8 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p04",
-      "sourceLabel": "既存の構想説明書 p.4（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch03",
+      "sourceLabel": "構想説明書 第3章（資料更新と合意は別）",
       "displayOrder": 301,
       "nextAction": "既存名簿の正本と安全な保存先を確認する。",
       "number": "03-01",
@@ -1260,17 +1283,18 @@
       "collaborators": [],
       "referenceLinks": [
         {
-          "label": "公開名簿・内部台帳の管理案（10/28）",
+          "label": "公開名簿・内部台帳の管理案",
           "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/members/",
-          "verified": false,
-          "verificationNote": "2026/10/28の設立協議案。団体承認・専門家確認は未了。"
+          "verified": true,
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         },
         {
-          "label": "発起人構成案（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_p04",
+          "label": "発起人構成案",
+          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch03",
           "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
+          "verifiedAt": "2026-10-29",
+          "verificationNote": "最新ソースの内容・参照先を確認。資料の更新と関係者の合意・業務完了は別。"
         }
       ],
       "legacyIds": [
@@ -1338,8 +1362,8 @@
       "evidenceLinks": [],
       "review": null,
       "resume": null,
-      "source": "/oita-mirai-mobility-consortium/read/main/#main_p08",
-      "sourceLabel": "既存の構想説明書 p.8（最新合意は別途確認）",
+      "source": "/oita-mirai-mobility-consortium/read/main/#main_ch06",
+      "sourceLabel": "構想説明書 第6章（資料更新と合意は別）",
       "displayOrder": 303,
       "nextAction": "既存の協議記録を確認し、活用の調整と参加相談それぞれの次の行動を整理する。",
       "number": "03-03",
@@ -1433,7 +1457,7 @@
       "prepare": "目的・活動方針の最新版",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/read/main/#main_ch01",
       "sourceIds": [
         "OMC-001",
         "OMC-002",
@@ -1572,10 +1596,10 @@
       "id": "CHECK-08",
       "title": "設立会議・議事記録",
       "decide": "正式日、会議方法、議案、決議・記録方法",
-      "prepare": "議案・参加確認・議事記録。正式日は未定",
+      "prepare": "1/26目標の議案・参加確認・議事記録。正式日は関係者合意後に決定",
       "ownerTeam": null,
       "status": "未確認",
-      "latestLink": null,
+      "latestLink": "/oita-mirai-mobility-consortium/guide/",
       "sourceIds": [
         "OMC-032"
       ],
@@ -2546,13 +2570,44 @@
           "nextAction": "今月の活動・成果・課題をまとめ、関係者に報告する。"
         }
       ]
+    },
+    {
+      "id": "snapshot-update-20261029",
+      "asOf": "2026-10-29T13:00:00+09:00",
+      "scope": "最新版資料と会話を照合した表示データ更新。正本未同期。",
+      "changedTaskIds": [
+        "01-01",
+        "01-02",
+        "01-03",
+        "01-04",
+        "01-05",
+        "01-06",
+        "01-07",
+        "01-08",
+        "01-09",
+        "02-01",
+        "02-02",
+        "02-05",
+        "02-06",
+        "02-07",
+        "02-08",
+        "02-09",
+        "02-10",
+        "02-11",
+        "02-12",
+        "02-13",
+        "02-14",
+        "03-01",
+        "03-03"
+      ],
+      "note": "完了状態・担当・確定期限・固定番号・旧履歴を維持。非公開の連絡先・メール本文は掲載しない。"
     }
   ],
   "goals": [
     {
       "id": "01",
       "title": "コンソーシアムを設立する",
-      "result": "2027年1月目標。正式日は未定。"
+      "result": "2027年1月26日を目標。正式な設立日は関係者合意後に決定。"
     },
     {
       "id": "02",
