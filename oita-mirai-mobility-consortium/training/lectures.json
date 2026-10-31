@@ -1,0 +1,54 @@
+{
+  "updated_at": "2026-11-01",
+  "timezone": "Asia/Tokyo",
+  "profile_source": "speaker-profiles.json",
+  "lectures": [
+    {
+      "id": "lecture-20261111",
+      "speaker_id": "hidaka-yosuke",
+      "page": "lecture-20261111.html",
+      "appearance_status": "confirmed",
+      "starts_at": "2026-11-11T14:00:00+09:00",
+      "ends_at": "2026-11-11T16:00:00+09:00",
+      "venue": "Garraway0",
+      "source": "既存の日高氏講演ページ。今回の変更対象外。"
+    },
+    {
+      "id": "lecture-20261202",
+      "speaker_id": "miyadai-haruyuki",
+      "page": "lecture-20261202.html",
+      "appearance_status": "confirmed",
+      "starts_at": "2026-12-02T15:30:00+09:00",
+      "ends_at": "2026-12-02T17:30:00+09:00",
+      "confirmation_source": "依頼者による本人確認済み情報",
+      "editorial_heading": "誰もが行きたい場所に行ける地域をつくる",
+      "editorial_subtitle": "移動のつながりと、行き先への行きやすさから考える",
+      "official_title": null,
+      "copy_approval_status": "publication_authorized_by_organizer",
+      "publication_status": "published",
+      "program": [
+        {
+          "content": "宮代陽之氏による講演",
+          "duration_minutes": null
+        },
+        {
+          "content": "トーク・質疑応答（予定）",
+          "facilitator_id": "ueno-naoaki",
+          "duration_minutes": null
+        }
+      ],
+      "venue": null,
+      "fee": null,
+      "capacity": null,
+      "registration_deadline": null,
+      "reception_starts_at": null,
+      "online_delivery": null,
+      "registration": {
+        "status": "open",
+        "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfDbZLiKjkF6AjARFsjPIHBbTj1HWBSvsxTcBamXwP9vh27g/viewform?usp=publish-editor",
+        "method": "Googleフォーム（12月2日講演申込・人材育成プログラム参加登録兼用）"
+      },
+      "publication_authorization_source": "依頼者による公開指示（2026-11-01）"
+    }
+  ]
+}

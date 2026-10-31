@@ -1,7 +1,7 @@
 {
   "verified_at": "2026-10-19",
-  "status": "講師・登壇候補を掲載",
-  "photo_publication": "公式掲載写真を出典付きで掲載。宮代氏の登壇承諾は未確認です。",
+  "status": "講師共通プロフィール。各回の開催情報はlectures.jsonで管理。",
+  "photo_publication": "既存掲載写真と写真出典を維持。",
   "profiles": [
     {
       "id": "hidaka-yosuke",
@@ -14,8 +14,7 @@
         "https://www.maas.co.jp/news/82102/"
       ],
       "photo_source": "https://www.maas.co.jp/company/",
-      "photo_asset": "assets/hidaka-yosuke.jpg",
-      "participation_status": "登壇確定"
+      "photo_asset": "assets/hidaka-yosuke.jpg"
     },
     {
       "id": "miyadai-haruyuki",
@@ -28,9 +27,7 @@
         "https://www.iies.co.jp/researcher/researcher.html?id=HaruyukiMiyadai"
       ],
       "photo_source": "https://garrawayf.com/#lnk03",
-      "talk_candidate": "共創でつくる、まちとモビリティの未来",
-      "photo_asset": "assets/miyadai-haruyuki.webp",
-      "participation_status": "登壇候補・承諾未確認"
+      "photo_asset": "assets/miyadai-haruyuki.webp"
     },
     {
       "id": "ueno-naoaki",
@@ -46,7 +43,7 @@
       "photo_asset": "assets/ueno-naoaki.jpg"
     }
   ],
-  "selection_policy": "登壇候補者はテーマと日程に応じて調整します。",
+  "selection_policy": "登壇・日時・演題・申込は、講師共通プロフィールと分けて各回の開催情報で管理します。",
   "program_designer": {
     "name": "植野 直亮",
     "role": "講師・プログラムプロデュース",
