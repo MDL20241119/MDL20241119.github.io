@@ -18,3 +18,13 @@
 @media print{.lecture-miyadai .skip-link{display:none}.lecture-miyadai .hero{grid-template-columns:1.6fr .8fr}.lecture-miyadai .hero h1{font-size:39px}.lecture-miyadai .speaker-name{font-size:38px}.lecture-miyadai .hero-schedule{flex-direction:row;align-items:flex-end;gap:20px}.lecture-miyadai .schedule-day{font-size:54px}.lecture-miyadai .schedule-hours{font-size:33px}.lecture-miyadai .photo-wrap{min-height:0;height:auto}.lecture-miyadai .cards{grid-template-columns:repeat(3,minmax(0,1fr))}.lecture-miyadai .card h2{font-size:22px}.lecture-miyadai .event{grid-template-columns:.75fr 1fr 1fr}.lecture-miyadai .event>div:last-child{grid-column:auto}.lecture-miyadai .talk-panel{padding:16px;grid-template-columns:.3fr 1fr}.lecture-miyadai .talk-panel h2{font-size:26px}.lecture-miyadai .application-panel{flex-direction:row}.lecture-miyadai .application-link{min-width:180px;width:auto}.lecture-miyadai .event-facts>div{font-size:12px}}
 
 .lecture-miyadai .application-link:hover{background:#333}
+.lecture-miyadai .masthead{align-items:flex-start}.lecture-miyadai .masthead nav{justify-content:flex-end}.lecture-miyadai .masthead nav button{min-height:44px}.lecture-miyadai .event .btn{white-space:normal;font-size:14px}
+.lecture-miyadai .lecture-print-sheet{display:none}
+@media(max-width:650px){.lecture-miyadai .masthead nav{justify-content:flex-start}.lecture-miyadai .masthead nav button{padding:10px 11px}}
+@media print{
+  @page{size:A4 landscape;margin:0}
+  html,body.lecture-miyadai{margin:0!important;padding:0!important;width:297mm;height:209mm;overflow:hidden}
+  .lecture-miyadai>.shell{display:none!important}
+  .lecture-miyadai>.lecture-print-sheet{display:block!important;width:297mm;height:209mm;break-inside:avoid}
+  .lecture-miyadai>.lecture-print-sheet img{display:block;width:100%;height:100%;object-fit:contain}
+}
