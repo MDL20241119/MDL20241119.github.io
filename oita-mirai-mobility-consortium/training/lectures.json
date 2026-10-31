@@ -37,18 +37,21 @@
           "duration_minutes": null
         }
       ],
-      "venue": null,
-      "fee": null,
+      "venue": "Garraway0",
+      "fee": 0,
       "capacity": null,
       "registration_deadline": null,
       "reception_starts_at": null,
-      "online_delivery": null,
+      "online_delivery": false,
       "registration": {
         "status": "open",
         "url": "https://docs.google.com/forms/d/e/1FAIpQLSdfDbZLiKjkF6AjARFsjPIHBbTj1HWBSvsxTcBamXwP9vh27g/viewform?usp=publish-editor",
         "method": "Googleフォーム（12月2日講演申込・人材育成プログラム参加登録兼用）"
       },
-      "publication_authorization_source": "依頼者による公開指示（2026-11-01）"
+      "publication_authorization_source": "依頼者による公開指示（2026-11-01）",
+      "venue_address": "大分市府内町1丁目1-12",
+      "fee_currency": "JPY",
+      "confirmed_details_source": "依頼者による開催条件の確定指示（2026-11-01）"
     }
   ]
 }
