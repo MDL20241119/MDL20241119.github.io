@@ -1,0 +1,43 @@
+{
+  "date": "2026-10-31",
+  "environment": "Cloud Chrome; managed preview; responsive iframe widths 390 and 320 px",
+  "checks": [
+    {
+      "name": "SVG map renders all 47 prefecture paths after header count update",
+      "result": "pass"
+    },
+    {
+      "name": "Click Oita on SVG selects Oita and displays both Oita MaaS and Yufuin Noruku",
+      "result": "pass",
+      "case_count": 2
+    },
+    {
+      "name": "390px frame: Fukuoka + 2024 + autonomous driving filters to Miyama",
+      "result": "pass",
+      "case_ids": [
+        "mlit_miyama"
+      ],
+      "content_width": 375,
+      "scroll_width": 375
+    },
+    {
+      "name": "320px frame: select 2024 in chart updates regional/policy counts",
+      "result": "pass",
+      "regional": 60,
+      "policy": 10,
+      "content_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "name": "COMmmmONS event deep-link expands parent disclosure and metadata",
+      "result": "pass",
+      "event_id": "EV-10b110e49831",
+      "parent_open": true,
+      "metadata_open": true
+    },
+    {
+      "name": "Desktop map and timeline visual inspection",
+      "result": "pass"
+    }
+  ]
+}

@@ -1,0 +1,6 @@
+{
+  "source": "https://github.com/nvkelso/natural-earth-vector/blob/master/geojson/ne_10m_admin_1_states_provinces.geojson",
+  "license": "Public domain",
+  "source_sha256": "22d0e3ad85eb3e27f17cabf8ba2d50e554fbc27a87796ff891d958185da62fb5",
+  "processing": "Japan only, RDP 0.012 degree, remove rings below 0.0015 square degrees; southwestern islands inset; some remote islands omitted. Geometry is illustrative."
+}

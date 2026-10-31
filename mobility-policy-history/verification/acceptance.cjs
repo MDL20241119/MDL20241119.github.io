@@ -3,6 +3,8 @@ const root=path.resolve(__dirname,'..');
 const context={window:{},location:{hash:'#home'},URLSearchParams,console,Map,Set,Array,String,Object,Number,JSON,Math};
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(root+'/data/view-data.js','utf8'),context);
+vm.runInContext(fs.readFileSync(root+'/data/japan-map.js','utf8'),context);
+vm.runInContext(fs.readFileSync(root+'/assets/infographics.js','utf8'),context);
 vm.runInContext(fs.readFileSync(root+'/assets/history.js','utf8'),context);
 const {window:W}=context,D=W.MOBILITY_DATA,U=W.MOBILITY_UI;
 const rows=[];
@@ -67,7 +69,7 @@ check('Internal hash routes and every generated local asset reference resolve',(
  const htmls=[U.pageHtml({view:'home',p:{}}),U.pageHtml({view:'cases',p:{}}),U.pageHtml({view:'programs',p:{}}),U.pageHtml({view:'timeline',p:{}}),U.pageHtml({view:'sources',p:{}}),...D.cases.map(c=>U.caseDetail(c.id,{})),...D.programs.map(p=>U.programDetail(p.id,{})),...D.sources.map(s=>U.sourceDetail(s.source_id,{}))];
  for(const html of htmls)for(const m of html.matchAll(/href="([^"]+)"/g)){
   const url=m[1].replaceAll('&amp;','&');if(url.startsWith('#')){
-   const r=U.readRoute(url.slice(1));assert(['home','cases','programs','timeline','sources','case','program','source'].includes(r.view));
+   const r=U.readRoute(url.slice(1));assert(['home','map','cases','programs','timeline','sources','case','program','source'].includes(r.view));
    if(r.view==='case')assert(D.cases.some(c=>c.id===(D.id_mapping.cases[r.id]||r.id)));
    if(r.view==='program')assert(D.programs.some(p=>p.id===(D.id_mapping.programs[r.id]||r.id)));
    if(r.view==='source')assert(D.sources.some(s=>s.source_id===r.id));links++;

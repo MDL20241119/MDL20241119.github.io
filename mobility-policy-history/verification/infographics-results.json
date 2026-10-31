@@ -1,0 +1,38 @@
+{
+  "passed": 8,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Map has 47 unique prefectures with finite vector coordinates",
+      "result": "pass"
+    },
+    {
+      "name": "Every prefecture map count agrees with independent case memberships",
+      "result": "pass"
+    },
+    {
+      "name": "Map year and theme combinations agree with original event and theme records",
+      "result": "pass"
+    },
+    {
+      "name": "Map selected area, empty state, wide-area records and pagination render",
+      "result": "pass"
+    },
+    {
+      "name": "All new map routes and source-backed policy milestone event IDs resolve",
+      "result": "pass"
+    },
+    {
+      "name": "Annual stacked chart counts agree with independent 2016–2026 event totals",
+      "result": "pass"
+    },
+    {
+      "name": "Both timeline lanes retain every original event and no duplicate IDs",
+      "result": "pass"
+    },
+    {
+      "name": "Case year markers only link to actual recorded events",
+      "result": "pass"
+    }
+  ]
+}
