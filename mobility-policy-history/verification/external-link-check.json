@@ -1,0 +1,3041 @@
+{
+  "summary": {
+    "None": 1,
+    "200": 302,
+    "403": 18,
+    "404": 16,
+    "503": 4
+  },
+  "results": [
+    {
+      "source_id": "SRC-2360d413e6",
+      "display_id": "S001",
+      "url": "https://blog.jama.or.jp/?p=7112",
+      "status": 200,
+      "final_url": "https://blog.jama.or.jp/?p=7112",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.57
+    },
+    {
+      "source_id": "SRC-b3c49faa5c",
+      "display_id": "S002",
+      "url": "https://chushikoku.env.go.jp/content/000128710.pdf",
+      "status": 200,
+      "final_url": "https://chushikoku.env.go.jp/content/000128710.pdf",
+      "type": "application/pdf",
+      "seconds": 4.4
+    },
+    {
+      "source_id": "SRC-85ed858f18",
+      "display_id": "S003",
+      "url": "https://chushikoku.env.go.jp/shikoku/content/000128392.pdf",
+      "status": 200,
+      "final_url": "https://chushikoku.env.go.jp/shikoku/content/000128392.pdf",
+      "type": "application/pdf",
+      "seconds": 4.4
+    },
+    {
+      "source_id": "SRC-292f7ff35f",
+      "display_id": "S004",
+      "url": "https://cio.go.jp/sites/default/files/uploads/documents/its_roadmap_2019_point.pdf",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable",
+      "seconds": 3.57
+    },
+    {
+      "source_id": "SRC-81c89f14ae",
+      "display_id": "S005",
+      "url": "https://cio.go.jp/sites/default/files/uploads/documents/its_roadmap_2020.pdf",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable",
+      "seconds": 3.57
+    },
+    {
+      "source_id": "SRC-98d450e0f0",
+      "display_id": "S006",
+      "url": "https://cio.go.jp/sites/default/files/uploads/documents/its_roadmapkeiitopoint.pdf",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable",
+      "seconds": 3.57
+    },
+    {
+      "source_id": "SRC-ae053c7dd8",
+      "display_id": "S007",
+      "url": "https://criepi.denken.or.jp/hokokusho/pb/reportDetail?reportNoUkCode=GD21001",
+      "status": 200,
+      "final_url": "https://criepi.denken.or.jp/hokokusho/pb/reportDetail?reportNoUkCode=GD21001",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.71
+    },
+    {
+      "source_id": "SRC-7d6913e3d4",
+      "display_id": "S008",
+      "url": "https://fukuappli.jp/hapiticket/",
+      "status": 200,
+      "final_url": "https://fukuappli.jp/hapiticket/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.94
+    },
+    {
+      "source_id": "SRC-26242a4423",
+      "display_id": "S009",
+      "url": "https://gc.iwamiginzan.jp/ja",
+      "status": 200,
+      "final_url": "https://gc.iwamiginzan.jp/ja",
+      "type": "text/html; charset=utf-8",
+      "seconds": 4.77
+    },
+    {
+      "source_id": "SRC-458513f969",
+      "display_id": "S010",
+      "url": "https://green-innovation.nedo.go.jp/project/smart-mobility-society/progress/",
+      "status": 200,
+      "final_url": "https://green-innovation.nedo.go.jp/project/smart-mobility-society/progress/",
+      "type": "text/html",
+      "seconds": 4.83
+    },
+    {
+      "source_id": "SRC-c71fcdb9bd",
+      "display_id": "S011",
+      "url": "https://green-innovation.nedo.go.jp/resources/pdf/smart-mobility-society/item-002/vision-fukushima-koutu-003.pdf",
+      "status": 200,
+      "final_url": "https://green-innovation.nedo.go.jp/resources/pdf/smart-mobility-society/item-002/vision-fukushima-koutu-003.pdf",
+      "type": "application/pdf",
+      "seconds": 4.84
+    },
+    {
+      "source_id": "SRC-9c34acf210",
+      "display_id": "S012",
+      "url": "https://hokkaido.env.go.jp/content/000066911.pdf",
+      "status": 200,
+      "final_url": "https://hokkaido.env.go.jp/content/000066911.pdf",
+      "type": "application/pdf",
+      "seconds": 4.17
+    },
+    {
+      "source_id": "SRC-1a3fa50c24",
+      "display_id": "S013",
+      "url": "https://kotsu-kuhaku-r8.jp/",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku-r8.jp/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.18
+    },
+    {
+      "source_id": "SRC-3ee58251dd",
+      "display_id": "S014",
+      "url": "https://kotsu-kuhaku.jp/adopter_6/",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_6/",
+      "type": "text/html",
+      "seconds": 4.74
+    },
+    {
+      "source_id": "SRC-39a2bad972",
+      "display_id": "S015",
+      "url": "https://kotsu-kuhaku.jp/adopter_6/kyousou/report/kyousou_all.pdf",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_6/kyousou/report/kyousou_all.pdf",
+      "type": "application/pdf",
+      "seconds": 4.71
+    },
+    {
+      "source_id": "SRC-84b979ac9d",
+      "display_id": "S016",
+      "url": "https://kotsu-kuhaku.jp/adopter_7/kotsu/detail.php?CN=426566",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_7/kotsu/detail.php?CN=426566",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.19
+    },
+    {
+      "source_id": "SRC-e1b6404c3c",
+      "display_id": "S017",
+      "url": "https://kotsu-kuhaku.jp/adopter_7/kyoso/detail.php?CN=426571",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_7/kyoso/detail.php?CN=426571",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 1.92
+    },
+    {
+      "source_id": "SRC-2553a76079",
+      "display_id": "S018",
+      "url": "https://kotsu-kuhaku.jp/adopter_7/kyoso/detail.php?CN=426573",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_7/kyoso/detail.php?CN=426573",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 1.8
+    },
+    {
+      "source_id": "SRC-d89c42a8f3",
+      "display_id": "S019",
+      "url": "https://kotsu-kuhaku.jp/adopter_7/mobi/detail.php?CN=426329",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_7/mobi/detail.php?CN=426329",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 1.31
+    },
+    {
+      "source_id": "SRC-c02578fa81",
+      "display_id": "S020",
+      "url": "https://kotsu-kuhaku.jp/adopter_r5/",
+      "status": 200,
+      "final_url": "https://kotsu-kuhaku.jp/adopter_r5/",
+      "type": "text/html",
+      "seconds": 3.75
+    },
+    {
+      "source_id": "SRC-5e7d755892",
+      "display_id": "S021",
+      "url": "https://michinoeki-kamikoani.jp/news_cat/",
+      "status": 200,
+      "final_url": "https://michinoeki-kamikoani.jp/news_cat/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.74
+    },
+    {
+      "source_id": "SRC-d2efbb104e",
+      "display_id": "S022",
+      "url": "https://michinoeki-kamikoani.jp/news_cat/7667/",
+      "status": 200,
+      "final_url": "https://michinoeki-kamikoani.jp/news_cat/7667/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.46
+    },
+    {
+      "source_id": "SRC-2a4e51c86c",
+      "display_id": "S023",
+      "url": "https://michinoeki-kamikoani.jp/self_driving_service/",
+      "status": 200,
+      "final_url": "https://michinoeki-kamikoani.jp/self_driving_service/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.31
+    },
+    {
+      "source_id": "SRC-469871fe16",
+      "display_id": "S024",
+      "url": "https://policies.env.go.jp/policy/roadmap/assets/examples/chiiki-datsutanso-senkou-jirei.pdf",
+      "status": 200,
+      "final_url": "https://policies.env.go.jp/policy/roadmap/assets/examples/chiiki-datsutanso-senkou-jirei.pdf",
+      "type": "application/pdf",
+      "seconds": 4.54
+    },
+    {
+      "source_id": "SRC-8004a9d509",
+      "display_id": "S025",
+      "url": "https://policies.env.go.jp/policy/roadmap/assets/preceding-region/kanto-R6-shinchoku-joukyou-hokokusyo-02.pdf#page=1",
+      "status": 200,
+      "final_url": "https://policies.env.go.jp/policy/roadmap/assets/preceding-region/kanto-R6-shinchoku-joukyou-hokokusyo-02.pdf#page=1",
+      "type": "application/pdf",
+      "seconds": 4.47
+    },
+    {
+      "source_id": "SRC-93db88e59e",
+      "display_id": "S026",
+      "url": "https://policies.env.go.jp/policy/roadmap/assets/preceding-region/tyubu-R5-shinchoku-joukyou-hokokusyo-03.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 4.4
+    },
+    {
+      "source_id": "SRC-96c044bd76",
+      "display_id": "S027",
+      "url": "https://policies.env.go.jp/policy/roadmap/preceding-region/",
+      "status": 200,
+      "final_url": "https://policies.env.go.jp/policy/roadmap/preceding-region/",
+      "type": "text/html",
+      "seconds": 4.31
+    },
+    {
+      "source_id": "SRC-0f43c3a686",
+      "display_id": "S028",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250610rcsad-info_case2.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250610rcsad-info_case2.pdf",
+      "type": "application/pdf",
+      "seconds": 3.94
+    },
+    {
+      "source_id": "SRC-c3999aa7a9",
+      "display_id": "S029",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_gunma_maebashi_nakanojo.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_gunma_maebashi_nakanojo.pdf",
+      "type": "application/pdf",
+      "seconds": 3.97
+    },
+    {
+      "source_id": "SRC-8b71946062",
+      "display_id": "S030",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_hokkaido_kamishihoro.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_hokkaido_kamishihoro.pdf",
+      "type": "application/pdf",
+      "seconds": 3.12
+    },
+    {
+      "source_id": "SRC-fad30d1732",
+      "display_id": "S031",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_ishikawa_komatsu.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250714rcsad-info_houkoku_ishikawa_komatsu.pdf",
+      "type": "application/pdf",
+      "seconds": 3.28
+    },
+    {
+      "source_id": "SRC-d4dcb51510",
+      "display_id": "S032",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250729rcsad-info_gaiyou_hiroshima_fukuyama.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20250729rcsad-info_gaiyou_hiroshima_fukuyama.pdf",
+      "type": "application/pdf",
+      "seconds": 3.4
+    },
+    {
+      "source_id": "SRC-846bbdb748",
+      "display_id": "S033",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_kouchi.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_kouchi.pdf",
+      "type": "application/pdf",
+      "seconds": 2.77
+    },
+    {
+      "source_id": "SRC-67094370f5",
+      "display_id": "S034",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_shimane_matsue.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_shimane_matsue.pdf",
+      "type": "application/pdf",
+      "seconds": 2.7
+    },
+    {
+      "source_id": "SRC-6510930b8a",
+      "display_id": "S035",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_shimane_misato.pdf",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/eqghpc000000030i-att/20260603rcsad-info_houkoku_shimane_misato.pdf",
+      "type": "application/pdf",
+      "seconds": 2.38
+    },
+    {
+      "source_id": "SRC-dd614f096b",
+      "display_id": "S036",
+      "url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/index.html",
+      "status": 200,
+      "final_url": "https://pubpjt.mri.co.jp/pjt_related/rcsad-info/index.html",
+      "type": "text/html",
+      "seconds": 0.86
+    },
+    {
+      "source_id": "SRC-fc67d3588c",
+      "display_id": "S037",
+      "url": "https://reamo.nedo.go.jp/library/2026/03/03_JUIDA_Slides_260216.pdf",
+      "status": 200,
+      "final_url": "https://reamo.nedo.go.jp/library/2026/03/03_JUIDA_Slides_260216.pdf",
+      "type": "application/pdf",
+      "seconds": 6.17
+    },
+    {
+      "source_id": "SRC-f118c3256d",
+      "display_id": "S038",
+      "url": "https://setouchitourism.or.jp/ja/info/setoda_mobility_press/",
+      "status": 200,
+      "final_url": "https://setouchitourism.or.jp/ja/info/setoda_mobility_press/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.87
+    },
+    {
+      "source_id": "SRC-32212cfeb1",
+      "display_id": "S039",
+      "url": "https://sii.or.jp/vpp02/uploads/B2_tepco.pdf",
+      "status": 200,
+      "final_url": "https://sii.or.jp/vpp02/uploads/B2_tepco.pdf",
+      "type": "application/pdf",
+      "seconds": 3.55
+    },
+    {
+      "source_id": "SRC-780b5aff93",
+      "display_id": "S040",
+      "url": "https://sip3.nedo.go.jp/smartmobility/about/index.html",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/about/index.html",
+      "type": "text/html",
+      "seconds": 5.21
+    },
+    {
+      "source_id": "SRC-d42a6710f2",
+      "display_id": "S041",
+      "url": "https://sip3.nedo.go.jp/smartmobility/theme/02/index.html",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/theme/02/index.html",
+      "type": "text/html",
+      "seconds": 3.84
+    },
+    {
+      "source_id": "SRC-23d9646bd1",
+      "display_id": "S042",
+      "url": "https://sip3.nedo.go.jp/smartmobility/theme/15/index.html",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/theme/15/index.html",
+      "type": "text/html",
+      "seconds": 3.56
+    },
+    {
+      "source_id": "SRC-62046980c6",
+      "display_id": "S043",
+      "url": "https://sip3.nedo.go.jp/smartmobility/theme/16/index.html",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/theme/16/index.html",
+      "type": "text/html",
+      "seconds": 3.54
+    },
+    {
+      "source_id": "SRC-19aba14d34",
+      "display_id": "S044",
+      "url": "https://sip3.nedo.go.jp/smartmobility/theme/index.html",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/theme/index.html",
+      "type": "text/html",
+      "seconds": 4.74
+    },
+    {
+      "source_id": "SRC-f420e4751a",
+      "display_id": "S045",
+      "url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/7650a0e5fb857f859b853f1d600af61154d13e30.pdf",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/7650a0e5fb857f859b853f1d600af61154d13e30.pdf",
+      "type": "application/pdf",
+      "seconds": 3.58
+    },
+    {
+      "source_id": "SRC-856396d4df",
+      "display_id": "S046",
+      "url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/c145794ffd601929b62e99c486e5da33d78a0f47.pdf",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/c145794ffd601929b62e99c486e5da33d78a0f47.pdf",
+      "type": "application/pdf",
+      "seconds": 4.37
+    },
+    {
+      "source_id": "SRC-2441cac973",
+      "display_id": "S047",
+      "url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/fff151fc3abc36822d34b4009cbc88f664668456.pdf",
+      "status": 200,
+      "final_url": "https://sip3.nedo.go.jp/smartmobility/upload/docs/fff151fc3abc36822d34b4009cbc88f664668456.pdf",
+      "type": "application/pdf",
+      "seconds": 3.18
+    },
+    {
+      "source_id": "SRC-7b22d6f8e2",
+      "display_id": "S048",
+      "url": "https://sora-iina.com/",
+      "status": 200,
+      "final_url": "https://sora-iina.com/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.26
+    },
+    {
+      "source_id": "SRC-8e3ccf6070",
+      "display_id": "S049",
+      "url": "https://sora-iina.com/news/press/20260119_514.html",
+      "status": 200,
+      "final_url": "https://sora-iina.com/news/press/20260119_514.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.07
+    },
+    {
+      "source_id": "SRC-75fc3a52d4",
+      "display_id": "S050",
+      "url": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st02701",
+      "status": 200,
+      "final_url": "https://station.orix-carshare.com/orix-carshare/spot/detail?code=st02701",
+      "type": "text/html;charset=UTF-8",
+      "seconds": 4.02
+    },
+    {
+      "source_id": "SRC-053d2c3113",
+      "display_id": "S051",
+      "url": "https://tohoku.env.go.jp/content/000220128.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 4.28
+    },
+    {
+      "source_id": "SRC-57608459c3",
+      "display_id": "S052",
+      "url": "https://town.eiheiji.lg.jp/200/206/208/p010484.html",
+      "status": 503,
+      "error": "HTTP Error 503: Service Unavailable",
+      "seconds": 3.61
+    },
+    {
+      "source_id": "SRC-4e0e0818e7",
+      "display_id": "S053",
+      "url": "https://town.matsuda.kanagawa.jp/site/gikai/r0802teireikai.html",
+      "status": 200,
+      "final_url": "https://town.matsuda.kanagawa.jp/site/gikai/r0802teireikai.html",
+      "type": "text/html",
+      "seconds": 3.99
+    },
+    {
+      "source_id": "SRC-a58ad356af",
+      "display_id": "S054",
+      "url": "https://town.matsuda.kanagawa.jp/uploaded/attachment/18774.pdf",
+      "status": 200,
+      "final_url": "https://town.matsuda.kanagawa.jp/uploaded/attachment/18774.pdf",
+      "type": "application/pdf",
+      "seconds": 3.68
+    },
+    {
+      "source_id": "SRC-e3724464f9",
+      "display_id": "S055",
+      "url": "https://www.affrc.maff.go.jp/docs/smart_agri_pro/smart_agri_pro.htm",
+      "status": 200,
+      "final_url": "https://www.affrc.maff.go.jp/docs/smart_agri_pro/smart_agri_pro.htm",
+      "type": "text/html",
+      "seconds": 3.82
+    },
+    {
+      "source_id": "SRC-a37d4e2ae5",
+      "display_id": "S056",
+      "url": "https://www.aist.go.jp/Portals/0/resource_images/aist_j/topics/to2021/to20210330/chatan_lastmile.pdf",
+      "status": 200,
+      "final_url": "https://www.aist.go.jp/Portals/0/resource_images/aist_j/topics/to2021/to20210330/chatan_lastmile.pdf",
+      "type": "application/pdf",
+      "seconds": 3.72
+    },
+    {
+      "source_id": "SRC-e81ab0e964",
+      "display_id": "S057",
+      "url": "https://www.aist.go.jp/aist_j/news/announce/pr20171213.html",
+      "status": 200,
+      "final_url": "https://www.aist.go.jp/aist_j/news/announce/pr20171213.html",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.71
+    },
+    {
+      "source_id": "SRC-d3d8b500d6",
+      "display_id": "S058",
+      "url": "https://www.aist.go.jp/aist_j/news/au20210323.html",
+      "status": 200,
+      "final_url": "https://www.aist.go.jp/aist_j/news/au20210323.html",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.66
+    },
+    {
+      "source_id": "SRC-bd3fb938ed",
+      "display_id": "S059",
+      "url": "https://www.aist.go.jp/aist_j/news/au20230512.html",
+      "status": 200,
+      "final_url": "https://www.aist.go.jp/aist_j/news/au20230512.html",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.57
+    },
+    {
+      "source_id": "SRC-84c6819f9a",
+      "display_id": "S060",
+      "url": "https://www.aist.go.jp/aist_j/news/pr20161107.html",
+      "status": 200,
+      "final_url": "https://www.aist.go.jp/aist_j/news/pr20161107.html",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.14
+    },
+    {
+      "source_id": "SRC-789ae32241",
+      "display_id": "S061",
+      "url": "https://www.cao.go.jp/minister/2111_s_noda/kaiken/20220318kaiken.html",
+      "status": 200,
+      "final_url": "https://www.cao.go.jp/minister/2111_s_noda/kaiken/20220318kaiken.html",
+      "type": "text/html",
+      "seconds": 6.56
+    },
+    {
+      "source_id": "SRC-730b20ee66",
+      "display_id": "S062",
+      "url": "https://www.chisou.go.jp/sousei/about/chiikimiraikoufukin/index.html",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.2
+    },
+    {
+      "source_id": "SRC-da7ad753ec",
+      "display_id": "S063",
+      "url": "https://www.chisou.go.jp/sousei/about/chiikimiraikoufukin/pdf/chiikimiraikouhukin_2025digital_koufuyoukou.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.19
+    },
+    {
+      "source_id": "SRC-bcddb05111",
+      "display_id": "S064",
+      "url": "https://www.chisou.go.jp/sousei/about/mirai/list03/pdf/ministry_mlit.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.02
+    },
+    {
+      "source_id": "SRC-5cf5383cae",
+      "display_id": "S065",
+      "url": "https://www.chisou.go.jp/sousei/about/shinchihoukouhukin/digital/index.html",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 2.92
+    },
+    {
+      "source_id": "SRC-b7027fcd32",
+      "display_id": "S066",
+      "url": "https://www.chisou.go.jp/tiiki/kinmirai/pdf/01_mirai_h30torimatome.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 2.89
+    },
+    {
+      "source_id": "SRC-86dbdeccec",
+      "display_id": "S067",
+      "url": "https://www.city.fukui.lg.jp/kurasi/koutu/public/p070161.html",
+      "status": 200,
+      "final_url": "https://www.city.fukui.lg.jp/kurasi/koutu/public/p070161.html",
+      "type": "text/html",
+      "seconds": 4.42
+    },
+    {
+      "source_id": "SRC-14f79fae36",
+      "display_id": "S068",
+      "url": "https://www.city.fukuyama.hiroshima.jp/site/shicho/137014.html",
+      "status": 200,
+      "final_url": "https://www.city.fukuyama.hiroshima.jp/site/shicho/137014.html",
+      "type": "text/html",
+      "seconds": 3.9
+    },
+    {
+      "source_id": "SRC-04660a1fbc",
+      "display_id": "S069",
+      "url": "https://www.city.iruma.saitama.jp/material/files/group/4/kouyaku-shinchoku-R0409.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 4.44
+    },
+    {
+      "source_id": "SRC-62e072869c",
+      "display_id": "S070",
+      "url": "https://www.city.iyo.lg.jp/kikakuseisaku/jidouunten-kyushi.html",
+      "status": 200,
+      "final_url": "https://www.city.iyo.lg.jp/kikakuseisaku/jidouunten-kyushi.html",
+      "type": "text/html",
+      "seconds": 4.98
+    },
+    {
+      "source_id": "SRC-2f236bc8f2",
+      "display_id": "S071",
+      "url": "https://www.city.kasugai.lg.jp/shisei/machi/new_town/1022354/1024425/index.html",
+      "status": 200,
+      "final_url": "https://www.city.kasugai.lg.jp/shisei/machi/new_town/1022354/1024425/index.html",
+      "type": "text/html",
+      "seconds": 6.56
+    },
+    {
+      "source_id": "SRC-ef2ccc06a7",
+      "display_id": "S072",
+      "url": "https://www.city.kawachinagano.lg.jp/soshiki/2/106773.html",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/soshiki/2/106773.html",
+      "type": "text/html",
+      "seconds": 7.23
+    },
+    {
+      "source_id": "SRC-8055476fc0",
+      "display_id": "S073",
+      "url": "https://www.city.kawachinagano.lg.jp/soshiki/2/34689.html",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/soshiki/2/34689.html",
+      "type": "text/html",
+      "seconds": 6.81
+    },
+    {
+      "source_id": "SRC-7c332e66bc",
+      "display_id": "S074",
+      "url": "https://www.city.kawachinagano.lg.jp/soshiki/2/86194.html",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/soshiki/2/86194.html",
+      "type": "text/html",
+      "seconds": 6.54
+    },
+    {
+      "source_id": "SRC-f860ec03b5",
+      "display_id": "S075",
+      "url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/28288.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/28288.pdf",
+      "type": "application/pdf",
+      "seconds": 6.87
+    },
+    {
+      "source_id": "SRC-afb7396463",
+      "display_id": "S076",
+      "url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/37054.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/37054.pdf",
+      "type": "application/pdf",
+      "seconds": 6.16
+    },
+    {
+      "source_id": "SRC-ef928050fb",
+      "display_id": "S077",
+      "url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/43648.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/43648.pdf",
+      "type": "application/pdf",
+      "seconds": 6.74
+    },
+    {
+      "source_id": "SRC-a5bcf01cc7",
+      "display_id": "S078",
+      "url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/44006.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kawachinagano.lg.jp/uploaded/attachment/44006.pdf",
+      "type": "application/pdf",
+      "seconds": 6.07
+    },
+    {
+      "source_id": "SRC-65d143b215",
+      "display_id": "S079",
+      "url": "https://www.city.kosai.shizuoka.jp/material/files/group/26/shiryou1sannkou.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kosai.shizuoka.jp/material/files/group/26/shiryou1sannkou.pdf",
+      "type": "application/pdf",
+      "seconds": 3.05
+    },
+    {
+      "source_id": "SRC-f906f5adbb",
+      "display_id": "S080",
+      "url": "https://www.city.kosai.shizuoka.jp/material/files/group/9/20250310_007_dx.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.09
+    },
+    {
+      "source_id": "SRC-daa1cc130f",
+      "display_id": "S081",
+      "url": "https://www.city.kosai.shizuoka.jp/soshikiichiran/toshikeikakuka/gyomuannai/koutuu/kigyousyatorubaas/10651.html",
+      "status": 200,
+      "final_url": "https://www.city.kosai.shizuoka.jp/soshikiichiran/toshikeikakuka/gyomuannai/koutuu/kigyousyatorubaas/10651.html",
+      "type": "text/html",
+      "seconds": 3.13
+    },
+    {
+      "source_id": "SRC-25815fa80f",
+      "display_id": "S082",
+      "url": "https://www.city.kumamoto.jp/kiji0032432/3_2432_495498_up_emz8jvz1.pdf",
+      "status": 200,
+      "final_url": "https://www.city.kumamoto.jp/kiji0032432/3_2432_495498_up_emz8jvz1.pdf",
+      "type": "application/pdf",
+      "seconds": 4.97
+    },
+    {
+      "source_id": "SRC-2f41ffbca3",
+      "display_id": "S083",
+      "url": "https://www.city.maebashi.gunma.jp/material/files/group/7/R5gyouseihyoyukahoukokusyo.pdf",
+      "status": 200,
+      "final_url": "https://www.city.maebashi.gunma.jp/material/files/group/7/R5gyouseihyoyukahoukokusyo.pdf",
+      "type": "application/pdf",
+      "seconds": 7.82
+    },
+    {
+      "source_id": "SRC-251a6bcb0a",
+      "display_id": "S084",
+      "url": "https://www.city.matsumoto.nagano.jp/site/yokosomayorsoffice/178856.html",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/site/yokosomayorsoffice/178856.html",
+      "type": "text/html",
+      "seconds": 4.03
+    },
+    {
+      "source_id": "SRC-fa66663dbc",
+      "display_id": "S085",
+      "url": "https://www.city.matsumoto.nagano.jp/site/yokosomayorsoffice/182961.html",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/site/yokosomayorsoffice/182961.html",
+      "type": "text/html",
+      "seconds": 3.39
+    },
+    {
+      "source_id": "SRC-7a5564c4a6",
+      "display_id": "S086",
+      "url": "https://www.city.matsumoto.nagano.jp/soshiki/51/76758.html",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/soshiki/51/76758.html",
+      "type": "text/html",
+      "seconds": 3.35
+    },
+    {
+      "source_id": "SRC-74282be904",
+      "display_id": "S087",
+      "url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/114806.pdf",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/114806.pdf",
+      "type": "application/pdf",
+      "seconds": 3.14
+    },
+    {
+      "source_id": "SRC-9c4df5bed6",
+      "display_id": "S088",
+      "url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/120342.pdf",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/120342.pdf",
+      "type": "application/pdf",
+      "seconds": 2.61
+    },
+    {
+      "source_id": "SRC-e961907831",
+      "display_id": "S089",
+      "url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/74679.pdf",
+      "status": 200,
+      "final_url": "https://www.city.matsumoto.nagano.jp/uploaded/attachment/74679.pdf",
+      "type": "application/pdf",
+      "seconds": 2.39
+    },
+    {
+      "source_id": "SRC-64c0e37087",
+      "display_id": "S090",
+      "url": "https://www.city.mitoyo.lg.jp/hotnews_old/reiwa2/hot2010/7339.html",
+      "status": 200,
+      "final_url": "https://www.city.mitoyo.lg.jp/hotnews_old/reiwa2/hot2010/7339.html",
+      "type": "text/html",
+      "seconds": 6.34
+    },
+    {
+      "source_id": "SRC-e037e71a0a",
+      "display_id": "S091",
+      "url": "https://www.city.mitoyo.lg.jp/hotnews_old/reiwa4/202206hot/9757.html",
+      "status": 200,
+      "final_url": "https://www.city.mitoyo.lg.jp/hotnews_old/reiwa4/202206hot/9757.html",
+      "type": "text/html",
+      "seconds": 6.14
+    },
+    {
+      "source_id": "SRC-10c4bb0955",
+      "display_id": "S092",
+      "url": "https://www.city.miyama.lg.jp/s008/shisei/070/020/R5syuyousesaku.pdf",
+      "status": 200,
+      "final_url": "https://www.city.miyama.lg.jp/s008/shisei/070/020/R5syuyousesaku.pdf",
+      "type": "application/pdf",
+      "seconds": 5.65
+    },
+    {
+      "source_id": "SRC-f2fb94be7b",
+      "display_id": "S093",
+      "url": "https://www.city.miyama.lg.jp/s068/kurashi/giandaiichigo.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 5.89
+    },
+    {
+      "source_id": "SRC-240fd47012",
+      "display_id": "S094",
+      "url": "https://www.city.nishio.aichi.jp/kenkofukushi/kourei/1001451/1002501.html",
+      "status": 200,
+      "final_url": "https://www.city.nishio.aichi.jp/kenkofukushi/kourei/1001451/1002501.html",
+      "type": "text/html",
+      "seconds": 4.51
+    },
+    {
+      "source_id": "SRC-4f1e2a8991",
+      "display_id": "S095",
+      "url": "https://www.city.oda.lg.jp/files/original/2021042211214575288dbeee7.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.78
+    },
+    {
+      "source_id": "SRC-3f73b78582",
+      "display_id": "S096",
+      "url": "https://www.city.odawara.kanagawa.jp/field/envi/energy/electric_vehicle/ki-20200148.html",
+      "status": 200,
+      "final_url": "https://www.city.odawara.kanagawa.jp/field/envi/energy/electric_vehicle/ki-20200148.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 6.26
+    },
+    {
+      "source_id": "SRC-602cc6f972",
+      "display_id": "S097",
+      "url": "https://www.city.odawara.kanagawa.jp/global-image/units/670149/1-20260305105128_b69a8e1a0d28d1.pdf",
+      "status": 200,
+      "final_url": "https://www.city.odawara.kanagawa.jp/global-image/units/670149/1-20260305105128_b69a8e1a0d28d1.pdf",
+      "type": "application/pdf",
+      "seconds": 6.58
+    },
+    {
+      "source_id": "SRC-9540ddcf59",
+      "display_id": "S098",
+      "url": "https://www.city.odawara.kanagawa.jp/global-image/units/720789/1-20260305105907_b69a8e36bc156c.pdf",
+      "status": 200,
+      "final_url": "https://www.city.odawara.kanagawa.jp/global-image/units/720789/1-20260305105907_b69a8e36bc156c.pdf",
+      "type": "application/pdf",
+      "seconds": 5.92
+    },
+    {
+      "source_id": "SRC-d77ac5f76b",
+      "display_id": "S099",
+      "url": "https://www.city.odawara.kanagawa.jp/public/detail.php?id=11235",
+      "status": 200,
+      "final_url": "https://www.city.odawara.kanagawa.jp/public/detail.php?id=11235",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 6.37
+    },
+    {
+      "source_id": "SRC-205c7e7740",
+      "display_id": "S100",
+      "url": "https://www.city.onomichi.hiroshima.jp/uploaded/attachment/31064.pdf",
+      "status": 200,
+      "final_url": "https://www.city.onomichi.hiroshima.jp/uploaded/attachment/31064.pdf",
+      "type": "application/pdf",
+      "seconds": 3.6
+    },
+    {
+      "source_id": "SRC-0df8a26dad",
+      "display_id": "S101",
+      "url": "https://www.city.sagamihara.kanagawa.jp/shisei/1026709/mayor/1009760/1030513/1030710.html",
+      "status": 200,
+      "final_url": "https://www.city.sagamihara.kanagawa.jp/shisei/1026709/mayor/1009760/1030513/1030710.html",
+      "type": "text/html",
+      "seconds": 3.44
+    },
+    {
+      "source_id": "SRC-8a018442fd",
+      "display_id": "S102",
+      "url": "https://www.city.sagamihara.kanagawa.jp/shisei/1026823/toshikotsu/1029044.html",
+      "status": 200,
+      "final_url": "https://www.city.sagamihara.kanagawa.jp/shisei/1026823/toshikotsu/1029044.html",
+      "type": "text/html",
+      "seconds": 3.55
+    },
+    {
+      "source_id": "SRC-3005cf57c0",
+      "display_id": "S103",
+      "url": "https://www.city.saitama.lg.jp/001/009/015/010/004/p116572_d/fil/E-decokatsu_News_2.pdf",
+      "status": 200,
+      "final_url": "https://www.city.saitama.lg.jp/001/009/015/010/004/p116572_d/fil/E-decokatsu_News_2.pdf",
+      "type": "application/pdf",
+      "seconds": 8.78
+    },
+    {
+      "source_id": "SRC-449663c5ee",
+      "display_id": "S104",
+      "url": "https://www.city.saitama.lg.jp/001/009/015/e-kizuna/kyoutei/p097814.html",
+      "status": 200,
+      "final_url": "https://www.city.saitama.lg.jp/001/009/015/e-kizuna/kyoutei/p097814.html",
+      "type": "text/html",
+      "seconds": 3.92
+    },
+    {
+      "source_id": "SRC-6a6efd6b68",
+      "display_id": "S105",
+      "url": "https://www.city.saitama.lg.jp/006/014/008/003/012/011/p112653.html",
+      "status": 200,
+      "final_url": "https://www.city.saitama.lg.jp/006/014/008/003/012/011/p112653.html",
+      "type": "text/html",
+      "seconds": 5.89
+    },
+    {
+      "source_id": "SRC-1b1c8e79eb",
+      "display_id": "S106",
+      "url": "https://www.city.saitama.lg.jp/006/014/008/003/015/003/p131508_d/fil/r9zenkiyoubou.pdf",
+      "status": null,
+      "error": "The read operation timed out",
+      "seconds": 13.71
+    },
+    {
+      "source_id": "SRC-115881087c",
+      "display_id": "S107",
+      "url": "https://www.city.shiojiri.lg.jp/soshiki/8/21176.html",
+      "status": 200,
+      "final_url": "https://www.city.shiojiri.lg.jp/soshiki/8/21176.html",
+      "type": "text/html",
+      "seconds": 3.9
+    },
+    {
+      "source_id": "SRC-21eeb6d244",
+      "display_id": "S108",
+      "url": "https://www.city.shiojiri.lg.jp/uploaded/attachment/28013.pdf",
+      "status": 200,
+      "final_url": "https://www.city.shiojiri.lg.jp/uploaded/attachment/28013.pdf",
+      "type": "application/pdf",
+      "seconds": 3.44
+    },
+    {
+      "source_id": "SRC-a3aa12f026",
+      "display_id": "S109",
+      "url": "https://www.city.shiojiri.lg.jp/uploaded/attachment/39971.pdf",
+      "status": 200,
+      "final_url": "https://www.city.shiojiri.lg.jp/uploaded/attachment/39971.pdf",
+      "type": "application/pdf",
+      "seconds": 3.24
+    },
+    {
+      "source_id": "SRC-a0a1581a4c",
+      "display_id": "S110",
+      "url": "https://www.city.suwa.lg.jp/site/bus/66256.html",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/site/bus/66256.html",
+      "type": "text/html",
+      "seconds": 3.34
+    },
+    {
+      "source_id": "SRC-04925820e8",
+      "display_id": "S111",
+      "url": "https://www.city.suwa.lg.jp/uploaded/attachment/46118.pdf",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/uploaded/attachment/46118.pdf",
+      "type": "application/pdf",
+      "seconds": 3.26
+    },
+    {
+      "source_id": "SRC-d532d0a46b",
+      "display_id": "S112",
+      "url": "https://www.city.suwa.lg.jp/uploaded/attachment/48577.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 2.43
+    },
+    {
+      "source_id": "SRC-5788470ae3",
+      "display_id": "S113",
+      "url": "https://www.city.suwa.lg.jp/uploaded/attachment/48592.pdf",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/uploaded/attachment/48592.pdf",
+      "type": "application/pdf",
+      "seconds": 2.65
+    },
+    {
+      "source_id": "SRC-eb055b1c2a",
+      "display_id": "S114",
+      "url": "https://www.city.suwa.lg.jp/uploaded/attachment/49474.pdf",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/uploaded/attachment/49474.pdf",
+      "type": "application/pdf",
+      "seconds": 2.17
+    },
+    {
+      "source_id": "SRC-9e1ea90bb0",
+      "display_id": "S115",
+      "url": "https://www.city.suwa.lg.jp/uploaded/attachment/49677.pdf",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/uploaded/attachment/49677.pdf",
+      "type": "application/pdf",
+      "seconds": 2.12
+    },
+    {
+      "source_id": "SRC-9d31ef74ef",
+      "display_id": "S116",
+      "url": "https://www.city.suwa.lg.jp/uploaded/life/79649_174466_misc.pdf",
+      "status": 200,
+      "final_url": "https://www.city.suwa.lg.jp/uploaded/life/79649_174466_misc.pdf",
+      "type": "application/pdf",
+      "seconds": 1.85
+    },
+    {
+      "source_id": "SRC-f6967212a7",
+      "display_id": "S117",
+      "url": "https://www.city.takamatsu.kagawa.jp/kurashi/shichoushitsu/hatsugen/teirei/h29/290802.html",
+      "status": 200,
+      "final_url": "https://www.city.takamatsu.kagawa.jp/kurashi/shichoushitsu/hatsugen/teirei/h29/290802.html",
+      "type": "text/html",
+      "seconds": 11.1
+    },
+    {
+      "source_id": "SRC-8276e606e9",
+      "display_id": "S118",
+      "url": "https://www.city.toyoake.lg.jp/6461.htm",
+      "status": 200,
+      "final_url": "https://www.city.toyoake.lg.jp/6461.htm",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.84
+    },
+    {
+      "source_id": "SRC-95c65a80b0",
+      "display_id": "S119",
+      "url": "https://www.city.toyoake.lg.jp/secure/29408/250114kaigisiryou.pdf",
+      "status": 200,
+      "final_url": "https://www.city.toyoake.lg.jp/secure/29408/250114kaigisiryou.pdf",
+      "type": "application/pdf",
+      "seconds": 3.37
+    },
+    {
+      "source_id": "SRC-6fdd2f91ae",
+      "display_id": "S120",
+      "url": "https://www.city.wakkanai.hokkaido.jp/kurashi/kotsu/jidounten.html",
+      "status": 200,
+      "final_url": "https://www.city.wakkanai.hokkaido.jp/kurashi/kotsu/jidounten.html",
+      "type": "text/html",
+      "seconds": 5.06
+    },
+    {
+      "source_id": "SRC-ee08c116a0",
+      "display_id": "S121",
+      "url": "https://www.city.yasu.lg.jp/material/files/group/68/shiryou2_20250806.pdf",
+      "status": 200,
+      "final_url": "https://www.city.yasu.lg.jp/material/files/group/68/shiryou2_20250806.pdf",
+      "type": "application/pdf",
+      "seconds": 3.98
+    },
+    {
+      "source_id": "SRC-af58c7d8c3",
+      "display_id": "S122",
+      "url": "https://www.city.yatomi.lg.jp/_res/projects/default_project/_page_/001/005/389/R50401.pdf",
+      "status": 200,
+      "final_url": "https://www.city.yatomi.lg.jp/_res/projects/default_project/_page_/001/005/389/R50401.pdf",
+      "type": "application/pdf",
+      "seconds": 3.62
+    },
+    {
+      "source_id": "SRC-dc35151b94",
+      "display_id": "S123",
+      "url": "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/kotsu/toshikotsu/seisaku/kako/past.files/0150_20210203.pdf",
+      "status": 200,
+      "final_url": "https://www.city.yokohama.lg.jp/kurashi/machizukuri-kankyo/kotsu/toshikotsu/seisaku/kako/past.files/0150_20210203.pdf",
+      "type": "application/pdf",
+      "seconds": 4.91
+    },
+    {
+      "source_id": "SRC-e3d9f28a4b",
+      "display_id": "S124",
+      "url": "https://www.city.yufu.oita.jp/newly/nolk-2",
+      "status": 200,
+      "final_url": "https://www.city.yufu.oita.jp/newly/nolk-2",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.73
+    },
+    {
+      "source_id": "SRC-052b9b1fa9",
+      "display_id": "S125",
+      "url": "https://www.city.yufu.oita.jp/uploads/files/2024/02/r5-12-7dai4kaiteireikaikaigiroku.pdf",
+      "status": 200,
+      "final_url": "https://www.city.yufu.oita.jp/uploads/files/2024/02/r5-12-7dai4kaiteireikaikaigiroku.pdf",
+      "type": "application/pdf",
+      "seconds": 2.82
+    },
+    {
+      "source_id": "SRC-e03de77c7c",
+      "display_id": "S126",
+      "url": "https://www.city.yufu.oita.jp/uploads/files/2024/10/r5zimuzigyouhyoukasyo.pdf",
+      "status": 200,
+      "final_url": "https://www.city.yufu.oita.jp/uploads/files/2024/10/r5zimuzigyouhyoukasyo.pdf",
+      "type": "application/pdf",
+      "seconds": 3.04
+    },
+    {
+      "source_id": "SRC-20bc3a1de2",
+      "display_id": "S127",
+      "url": "https://www.cyber-port.net/ja/information/detail/218",
+      "status": 200,
+      "final_url": "https://www.cyber-port.net/ja/information/detail/218",
+      "type": "text/html; charset=utf-8",
+      "seconds": 4.18
+    },
+    {
+      "source_id": "SRC-919bf820f3",
+      "display_id": "S128",
+      "url": "https://www.daihatsu.co.jp/goissho/oshirase/d8f2f70000000151.htm",
+      "status": 200,
+      "final_url": "https://www.daihatsu.co.jp/goissho/oshirase/d8f2f70000000151.htm",
+      "type": "text/html",
+      "seconds": 3.61
+    },
+    {
+      "source_id": "SRC-d458f87443",
+      "display_id": "S129",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/11045673/20260721_meeting_mobility_01.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/11045673/20260721_meeting_mobility_01.pdf",
+      "type": "application/pdf",
+      "seconds": 5.14
+    },
+    {
+      "source_id": "SRC-ec89da6096",
+      "display_id": "S130",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/12f4e4f4/20240621_mobility-working-group_summary_01.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/12f4e4f4/20240621_mobility-working-group_summary_01.pdf",
+      "type": "application/pdf",
+      "seconds": 4.89
+    },
+    {
+      "source_id": "SRC-f6cb688da7",
+      "display_id": "S131",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/9efd41a7/20260721_meeting_mobility_02.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/9efd41a7/20260721_meeting_mobility_02.pdf",
+      "type": "application/pdf",
+      "seconds": 4.19
+    },
+    {
+      "source_id": "SRC-58d6252d1d",
+      "display_id": "S132",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/b1e4eee0/20250613_resources_mobility_policy_01.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/2415ad00-6a79-4ebc-8fb1-51a47b1b0552/b1e4eee0/20250613_resources_mobility_policy_01.pdf",
+      "type": "application/pdf",
+      "seconds": 3.99
+    },
+    {
+      "source_id": "SRC-9622d84fa1",
+      "display_id": "S133",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/82a1ea56-128f-4cf6-bbd5-9ef6d4b7bafc/fbcd8e86/20260413_policies_budget_entrustment_deliverables_report_outline_01.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/82a1ea56-128f-4cf6-bbd5-9ef6d4b7bafc/fbcd8e86/20260413_policies_budget_entrustment_deliverables_report_outline_01.pdf",
+      "type": "application/pdf",
+      "seconds": 3.75
+    },
+    {
+      "source_id": "SRC-9ab498aac5",
+      "display_id": "S134",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/84c08375-e8c4-440f-8ef4-521a4a36ed9f/a87ac6b5/20250901_policies_digital-garden-city-nation_guideline-of-area-data-coordination-platform_02.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/84c08375-e8c4-440f-8ef4-521a4a36ed9f/a87ac6b5/20250901_policies_digital-garden-city-nation_guideline-of-area-data-coordination-platform_02.pdf",
+      "type": "application/pdf",
+      "seconds": 3.39
+    },
+    {
+      "source_id": "SRC-7f8e9cdf06",
+      "display_id": "S135",
+      "url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a71c2b0b-0506-43de-b7f8-2cb20172752a/c2d27e05/20260113_policies_mobility_r7earlyareas_06.pdf",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/assets/contents/node/basic_page/field_ref_resources/a71c2b0b-0506-43de-b7f8-2cb20172752a/c2d27e05/20260113_policies_mobility_r7earlyareas_06.pdf",
+      "type": "application/pdf",
+      "seconds": 3.18
+    },
+    {
+      "source_id": "SRC-15606c8ca9",
+      "display_id": "S136",
+      "url": "https://www.digital.go.jp/councils/mobility-working-group",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/councils/mobility-working-group",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 2.22
+    },
+    {
+      "source_id": "SRC-98f2bec305",
+      "display_id": "S137",
+      "url": "https://www.digital.go.jp/councils/mobility-working-group/6936350f-a070-42d7-8ab1-3bbd9471bba8",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/councils/mobility-working-group/6936350f-a070-42d7-8ab1-3bbd9471bba8",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.77
+    },
+    {
+      "source_id": "SRC-a2849c4e36",
+      "display_id": "S138",
+      "url": "https://www.digital.go.jp/news/uWAA9Dcp",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/news/uWAA9Dcp",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.5
+    },
+    {
+      "source_id": "SRC-56d3235213",
+      "display_id": "S139",
+      "url": "https://www.digital.go.jp/policies/digital_garden_city_nation",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/policies/digital_garden_city_nation",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.28
+    },
+    {
+      "source_id": "SRC-81596a932d",
+      "display_id": "S140",
+      "url": "https://www.digital.go.jp/policies/digital_garden_city_nation/area-data-coordination-platform",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/policies/digital_garden_city_nation/area-data-coordination-platform",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 2.9
+    },
+    {
+      "source_id": "SRC-af66eca641",
+      "display_id": "S141",
+      "url": "https://www.digital.go.jp/policies/mobility",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/policies/mobility",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 1.16
+    },
+    {
+      "source_id": "SRC-91022ef486",
+      "display_id": "S142",
+      "url": "https://www.digital.go.jp/policies/mobility/a71c2b0b-0506-43de-b7f8-2cb20172752a",
+      "status": 200,
+      "final_url": "https://www.digital.go.jp/policies/mobility/a71c2b0b-0506-43de-b7f8-2cb20172752a",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 2.13
+    },
+    {
+      "source_id": "SRC-007f173d67",
+      "display_id": "S143",
+      "url": "https://www.enecho.meti.go.jp/about/special/johoteikyo/automobile_industry_policy_02.html",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 5.59
+    },
+    {
+      "source_id": "SRC-85eede1bce",
+      "display_id": "S144",
+      "url": "https://www.env.go.jp/annai/kaiken/r2/0626.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/annai/kaiken/r2/0626.html",
+      "type": "text/html",
+      "seconds": 3.53
+    },
+    {
+      "source_id": "SRC-4b469435ff",
+      "display_id": "S145",
+      "url": "https://www.env.go.jp/content/000099395.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/000099395.pdf",
+      "type": "application/pdf",
+      "seconds": 3.48
+    },
+    {
+      "source_id": "SRC-34d5e30cc6",
+      "display_id": "S146",
+      "url": "https://www.env.go.jp/content/000126068.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/000126068.pdf",
+      "type": "application/pdf",
+      "seconds": 3.03
+    },
+    {
+      "source_id": "SRC-d1c42a88c8",
+      "display_id": "S147",
+      "url": "https://www.env.go.jp/content/000254037.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/000254037.pdf",
+      "type": "application/pdf",
+      "seconds": 2.46
+    },
+    {
+      "source_id": "SRC-e6fbbaf5f1",
+      "display_id": "S148",
+      "url": "https://www.env.go.jp/content/000303692.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/000303692.pdf",
+      "type": "application/pdf",
+      "seconds": 2.72
+    },
+    {
+      "source_id": "SRC-194d232a22",
+      "display_id": "S149",
+      "url": "https://www.env.go.jp/content/000356399.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/000356399.pdf",
+      "type": "application/pdf",
+      "seconds": 2.48
+    },
+    {
+      "source_id": "SRC-727e544f4c",
+      "display_id": "S150",
+      "url": "https://www.env.go.jp/content/900441906.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/900441906.pdf",
+      "type": "application/pdf",
+      "seconds": 3.1
+    },
+    {
+      "source_id": "SRC-81bb6b746e",
+      "display_id": "S151",
+      "url": "https://www.env.go.jp/content/900442061.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/900442061.pdf",
+      "type": "application/pdf",
+      "seconds": 3.15
+    },
+    {
+      "source_id": "SRC-b6855910f0",
+      "display_id": "S152",
+      "url": "https://www.env.go.jp/content/900502155.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/content/900502155.pdf",
+      "type": "application/pdf",
+      "seconds": 2.12
+    },
+    {
+      "source_id": "SRC-008ea08a9d",
+      "display_id": "S153",
+      "url": "https://www.env.go.jp/earth/earth/ondanka/enetoku/2024/?word=%E3%82%BC%E3%83%AD%E3%82%AB%E3%83%BC%E3%83%9C%E3%83%B3%E3%82%B7%E3%83%86%E3%82%A3",
+      "status": 200,
+      "final_url": "https://carbon-neutral.env.go.jp/subsidy-contract/list/?word=%E3%82%BC%E3%83%AD%E3%82%AB%E3%83%BC%E3%83%9C%E3%83%B3%E3%82%B7%E3%83%86%E3%82%A3",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 6.05
+    },
+    {
+      "source_id": "SRC-675ff070ab",
+      "display_id": "S154",
+      "url": "https://www.env.go.jp/earth/earth/ondanka/enetoku/2026/?word=%E3%83%AC%E3%82%B8%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9",
+      "status": 200,
+      "final_url": "https://carbon-neutral.env.go.jp/subsidy-contract/list/?word=%E3%83%AC%E3%82%B8%E3%83%AA%E3%82%A8%E3%83%B3%E3%82%B9",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.68
+    },
+    {
+      "source_id": "SRC-04fb8f7ad1",
+      "display_id": "S155",
+      "url": "https://www.env.go.jp/earth/earth/ondanka/enetoku/pamphlet/pdf/2026/enetoku_jigyo_gaiyo_2026-R8.pdf",
+      "status": 200,
+      "final_url": "https://carbon-neutral.env.go.jp/subsidy-contract/pamphlet/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.32
+    },
+    {
+      "source_id": "SRC-858cecb7d2",
+      "display_id": "S156",
+      "url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/index.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/index.html",
+      "type": "text/html",
+      "seconds": 1.39
+    },
+    {
+      "source_id": "SRC-052833d4c2",
+      "display_id": "S157",
+      "url": "https://www.env.go.jp/earth/ondanka/cpttv_funds/db/",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/earth/ondanka/cpttv_funds/db/",
+      "type": "text/html",
+      "seconds": 3.85
+    },
+    {
+      "source_id": "SRC-b7e7392af8",
+      "display_id": "S158",
+      "url": "https://www.env.go.jp/earth/ondanka/cpttv_funds/pdf/db/222.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/earth/ondanka/cpttv_funds/pdf/db/222.pdf",
+      "type": "application/pdf",
+      "seconds": 3.43
+    },
+    {
+      "source_id": "SRC-735258b810",
+      "display_id": "S159",
+      "url": "https://www.env.go.jp/earth/ondanka/min_action_award/files/winners_r04_13.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/earth/ondanka/min_action_award/files/winners_r04_13.pdf",
+      "type": "application/pdf",
+      "seconds": 3.6
+    },
+    {
+      "source_id": "SRC-0bd9935111",
+      "display_id": "S160",
+      "url": "https://www.env.go.jp/policy/hakusyo/r03/html/hj21010201.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/policy/hakusyo/r03/html/hj21010201.html",
+      "type": "text/html",
+      "seconds": 3.8
+    },
+    {
+      "source_id": "SRC-0638f0fbc7",
+      "display_id": "S161",
+      "url": "https://www.env.go.jp/press/103519.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/103519.html",
+      "type": "text/html",
+      "seconds": 3.32
+    },
+    {
+      "source_id": "SRC-cad9c8908f",
+      "display_id": "S162",
+      "url": "https://www.env.go.jp/press/108692.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/108692.html",
+      "type": "text/html",
+      "seconds": 3.49
+    },
+    {
+      "source_id": "SRC-5c578ad767",
+      "display_id": "S163",
+      "url": "https://www.env.go.jp/press/109781.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/109781.html",
+      "type": "text/html",
+      "seconds": 2.97
+    },
+    {
+      "source_id": "SRC-7392e4491e",
+      "display_id": "S164",
+      "url": "https://www.env.go.jp/press/110740.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/110740.html",
+      "type": "text/html",
+      "seconds": 2.91
+    },
+    {
+      "source_id": "SRC-d86ad7b571",
+      "display_id": "S165",
+      "url": "https://www.env.go.jp/press/press_02957.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/press_02957.html",
+      "type": "text/html",
+      "seconds": 3.15
+    },
+    {
+      "source_id": "SRC-e87e180e50",
+      "display_id": "S166",
+      "url": "https://www.env.go.jp/press/press_03007.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/press_03007.html",
+      "type": "text/html",
+      "seconds": 3.1
+    },
+    {
+      "source_id": "SRC-d57a84a0d3",
+      "display_id": "S167",
+      "url": "https://www.env.go.jp/press/press_03240.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/press_03240.html",
+      "type": "text/html",
+      "seconds": 2.97
+    },
+    {
+      "source_id": "SRC-3cc5111d85",
+      "display_id": "S168",
+      "url": "https://www.env.go.jp/press/press_05761.html",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/press/press_05761.html",
+      "type": "text/html",
+      "seconds": 2.85
+    },
+    {
+      "source_id": "SRC-a622b09291",
+      "display_id": "S169",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_01.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_01.pdf",
+      "type": "application/pdf",
+      "seconds": 0.89
+    },
+    {
+      "source_id": "SRC-8dbda88238",
+      "display_id": "S170",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_02.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_02.pdf",
+      "type": "application/pdf",
+      "seconds": 5.73
+    },
+    {
+      "source_id": "SRC-75cbe03af4",
+      "display_id": "S171",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_03.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_03.pdf",
+      "type": "application/pdf",
+      "seconds": 5.8
+    },
+    {
+      "source_id": "SRC-042a78d4f8",
+      "display_id": "S172",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_05.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_05.pdf",
+      "type": "application/pdf",
+      "seconds": 5.73
+    },
+    {
+      "source_id": "SRC-28fec0efe3",
+      "display_id": "S173",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_summary.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/company/PDF/demonstration_summary.pdf",
+      "type": "application/pdf",
+      "seconds": 5.31
+    },
+    {
+      "source_id": "SRC-b7b3891ed5",
+      "display_id": "S174",
+      "url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/support-tool-info/PDF_Excel/support-tool_lca-guide_ver2-1.pdf",
+      "status": 200,
+      "final_url": "https://www.env.go.jp/seisaku/list/ondanka_saisei/lowcarbon-h2-sc/support-tool-info/PDF_Excel/support-tool_lca-guide_ver2-1.pdf",
+      "type": "application/pdf",
+      "seconds": 5.71
+    },
+    {
+      "source_id": "SRC-f76df920ec",
+      "display_id": "S175",
+      "url": "https://www.gunma-u.ac.jp/information/84393",
+      "status": 200,
+      "final_url": "https://www.gunma-u.ac.jp/information/84393",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.2
+    },
+    {
+      "source_id": "SRC-fea7df62a9",
+      "display_id": "S176",
+      "url": "https://www.iinan.jp/soshiki/6/4799.html",
+      "status": 200,
+      "final_url": "https://www.iinan.jp/soshiki/6/4799.html",
+      "type": "text/html",
+      "seconds": 3.92
+    },
+    {
+      "source_id": "SRC-99e75edb33",
+      "display_id": "S177",
+      "url": "https://www.iinan.jp/uploaded/attachment/5148.pdf",
+      "status": 200,
+      "final_url": "https://www.iinan.jp/uploaded/attachment/5148.pdf",
+      "type": "application/pdf",
+      "seconds": 3.71
+    },
+    {
+      "source_id": "SRC-e3e51bf75a",
+      "display_id": "S178",
+      "url": "https://www.iinan.jp/uploaded/attachment/7631.pdf",
+      "status": 200,
+      "final_url": "https://www.iinan.jp/uploaded/attachment/7631.pdf",
+      "type": "application/pdf",
+      "seconds": 3.81
+    },
+    {
+      "source_id": "SRC-81f9cf7210",
+      "display_id": "S179",
+      "url": "https://www.inacity.jp/koho/pressrelease/inapress0802/inapress080218.files/PR080218_chiikisozo.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 4.6
+    },
+    {
+      "source_id": "SRC-61c177a334",
+      "display_id": "S180",
+      "url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/dronekatuyou/174kija20210129.html",
+      "status": 200,
+      "final_url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/dronekatuyou/174kija20210129.html",
+      "type": "text/html",
+      "seconds": 4.52
+    },
+    {
+      "source_id": "SRC-8e7596ba84",
+      "display_id": "S181",
+      "url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/dronekatuyou/174kija2021111716.html",
+      "status": 200,
+      "final_url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/dronekatuyou/174kija2021111716.html",
+      "type": "text/html",
+      "seconds": 4.51
+    },
+    {
+      "source_id": "SRC-802395fdd3",
+      "display_id": "S182",
+      "url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/mobileclinic/mobileclinicmain.html",
+      "status": 200,
+      "final_url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/mobileclinic/mobileclinicmain.html",
+      "type": "text/html",
+      "seconds": 4.49
+    },
+    {
+      "source_id": "SRC-c94d4689db",
+      "display_id": "S183",
+      "url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/yuuaimarket/index.html",
+      "status": 200,
+      "final_url": "https://www.inacity.jp/shisei/inashiseisakusesaku/shinsangyougijutu/yuuaimarket/index.html",
+      "type": "text/html",
+      "seconds": 4.48
+    },
+    {
+      "source_id": "SRC-74f7454ed3",
+      "display_id": "S184",
+      "url": "https://www.inacity.jp/shisei/zaiseishiryoko/yosankankei/R7yosansho.files/R7_tosho_ippan.pdf",
+      "status": 200,
+      "final_url": "https://www.inacity.jp/shisei/zaiseishiryoko/yosankankei/R7yosansho.files/R7_tosho_ippan.pdf",
+      "type": "application/pdf",
+      "seconds": 4.11
+    },
+    {
+      "source_id": "SRC-d58b271b04",
+      "display_id": "S185",
+      "url": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2025/10/23/20251024_my_route_ticket_kitakyushu_Changes_to_usage_methods.pdf",
+      "status": 200,
+      "final_url": "https://www.jrkyushu.co.jp/common/inc/news/newtopics/__icsFiles/afieldfile/2025/10/23/20251024_my_route_ticket_kitakyushu_Changes_to_usage_methods.pdf",
+      "type": "application/pdf",
+      "seconds": 3.23
+    },
+    {
+      "source_id": "SRC-170a29faaa",
+      "display_id": "S186",
+      "url": "https://www.jstage.jst.go.jp/article/jarijrj/2024/4/2024_JRJ20240401/_html/-char/ja",
+      "status": 200,
+      "final_url": "https://www.jstage.jst.go.jp/article/jarijrj/2024/4/2024_JRJ20240401/_html/-char/ja",
+      "type": "text/html;charset=utf-8",
+      "seconds": 3.66
+    },
+    {
+      "source_id": "SRC-e70b6bf666",
+      "display_id": "S187",
+      "url": "https://www.jstage.jst.go.jp/article/jjrm/75/1/75_37/_article/-char/ja",
+      "status": 200,
+      "final_url": "https://www.jstage.jst.go.jp/article/jjrm/75/1/75_37/_article/-char/ja",
+      "type": "text/html;charset=utf-8",
+      "seconds": 3.61
+    },
+    {
+      "source_id": "SRC-6bba5e5a9d",
+      "display_id": "S188",
+      "url": "https://www.kamishihoro.jp/sp/self_driving_bus",
+      "status": 200,
+      "final_url": "https://www.kamishihoro.jp/sp/self_driving_bus",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.25
+    },
+    {
+      "source_id": "SRC-ff582e59bf",
+      "display_id": "S189",
+      "url": "https://www.kkr.mlit.go.jp/news/top/press/2017/20171102-4.html",
+      "status": 200,
+      "final_url": "https://www.kkr.mlit.go.jp/news/top/press/2017/20171102-4.html",
+      "type": "text/html",
+      "seconds": 4.0
+    },
+    {
+      "source_id": "SRC-a094a2d09e",
+      "display_id": "S190",
+      "url": "https://www.kkr.mlit.go.jp/news/top/press/2019/sih68m0000001y8m-att/191107-2jidouunten.pdf",
+      "status": 200,
+      "final_url": "https://www.kkr.mlit.go.jp/news/top/press/2019/sih68m0000001y8m-att/191107-2jidouunten.pdf",
+      "type": "application/pdf",
+      "seconds": 4.48
+    },
+    {
+      "source_id": "SRC-7d81d5caf8",
+      "display_id": "S191",
+      "url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/l3qeuq000000fxfr-att/r9733f000003de1k.pdf",
+      "status": 200,
+      "final_url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/l3qeuq000000fxfr-att/r9733f000003de1k.pdf",
+      "type": "application/pdf",
+      "seconds": 3.95
+    },
+    {
+      "source_id": "SRC-6c5dc4fc02",
+      "display_id": "S192",
+      "url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/okueigenji.html",
+      "status": 200,
+      "final_url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/okueigenji.html",
+      "type": "text/html",
+      "seconds": 3.31
+    },
+    {
+      "source_id": "SRC-6f5bff755a",
+      "display_id": "S193",
+      "url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/or2riv000001md9t-att/c9us5e00000aj7zp.pdf",
+      "status": 200,
+      "final_url": "https://www.kkr.mlit.go.jp/road/dgmx/jidouunten/or2riv000001md9t-att/c9us5e00000aj7zp.pdf",
+      "type": "application/pdf",
+      "seconds": 3.89
+    },
+    {
+      "source_id": "SRC-8a9ae80cf1",
+      "display_id": "S194",
+      "url": "https://www.kotsu.town.komono.mie.jp/",
+      "status": 200,
+      "final_url": "https://www.kotsu.town.komono.mie.jp/",
+      "type": "text/html;charset=UTF-8",
+      "seconds": 4.85
+    },
+    {
+      "source_id": "SRC-413409abe3",
+      "display_id": "S195",
+      "url": "https://www.ktr.mlit.go.jp/ktr_content/content/000809002.pdf",
+      "status": 200,
+      "final_url": "https://www.ktr.mlit.go.jp/ktr_content/content/000809002.pdf",
+      "type": "application/pdf",
+      "seconds": 7.68
+    },
+    {
+      "source_id": "SRC-1d9f8b59a3",
+      "display_id": "S196",
+      "url": "https://www.ktr.mlit.go.jp/road/chiiki/road_chiiki00000127.html",
+      "status": 200,
+      "final_url": "https://www.ktr.mlit.go.jp/road/chiiki/road_chiiki00000127.html",
+      "type": "text/html",
+      "seconds": 7.66
+    },
+    {
+      "source_id": "SRC-7647633cb4",
+      "display_id": "S197",
+      "url": "https://www.kyuden.co.jp/company/history/energy/technology/technology-2.html",
+      "status": 200,
+      "final_url": "https://www.kyuden.co.jp/company/history/energy/technology/technology-2.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 6.8
+    },
+    {
+      "source_id": "SRC-0d038964d4",
+      "display_id": "S198",
+      "url": "https://www.kyushu.meti.go.jp/seisaku/chuken/oshirase/250605_1_3.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 3.68
+    },
+    {
+      "source_id": "SRC-11b5defcfd",
+      "display_id": "S199",
+      "url": "https://www.maff.go.jp/j/nousin/digikatsu/attach/pdf/index-47.pdf",
+      "status": 200,
+      "final_url": "https://www.maff.go.jp/j/nousin/digikatsu/attach/pdf/index-47.pdf",
+      "type": "application/pdf",
+      "seconds": 4.23
+    },
+    {
+      "source_id": "SRC-c0a5f9cabe",
+      "display_id": "S200",
+      "url": "https://www.maff.go.jp/j/nousin/digikatsu/attach/pdf/index-48.pdf",
+      "status": 200,
+      "final_url": "https://www.maff.go.jp/j/nousin/digikatsu/attach/pdf/index-48.pdf",
+      "type": "application/pdf",
+      "seconds": 4.19
+    },
+    {
+      "source_id": "SRC-5a60808639",
+      "display_id": "S201",
+      "url": "https://www.maff.go.jp/j/nousin/digikatsu/index.html",
+      "status": 200,
+      "final_url": "https://www.maff.go.jp/j/nousin/digikatsu/index.html",
+      "type": "text/html",
+      "seconds": 3.96
+    },
+    {
+      "source_id": "SRC-52b06b1f93",
+      "display_id": "S202",
+      "url": "https://www.meti.go.jp/meti_lib/report/2020FY/000011.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 3.34
+    },
+    {
+      "source_id": "SRC-c774062e99",
+      "display_id": "S203",
+      "url": "https://www.meti.go.jp/policy/automobile/caseyosan/PDF/r7saitaku.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 3.25
+    },
+    {
+      "source_id": "SRC-e6fc31a150",
+      "display_id": "S204",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/digital_architecture/keikaku.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.92
+    },
+    {
+      "source_id": "SRC-27f9707c1a",
+      "display_id": "S205",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/digital_architecture/lifeline/jitugen2-siryou3.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.88
+    },
+    {
+      "source_id": "SRC-3197dcf70f",
+      "display_id": "S206",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/mono/automobile/automated-driving.html",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.62
+    },
+    {
+      "source_id": "SRC-3d547f8c0c",
+      "display_id": "S207",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/mono/automobile/charging-infra-fukyu.html",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.29
+    },
+    {
+      "source_id": "SRC-63ba9ee69f",
+      "display_id": "S208",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/mono/automobile/jido_soko/pdf/012_s01_00.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.33
+    },
+    {
+      "source_id": "SRC-4a8df284a4",
+      "display_id": "S209",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/mono/automobile/pdf/bmaas2402_03nlj.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.32
+    },
+    {
+      "source_id": "SRC-6985ffcd9c",
+      "display_id": "S210",
+      "url": "https://www.meti.go.jp/policy/mono_info_service/smartcity/2022040508.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 1.73
+    },
+    {
+      "source_id": "SRC-91c991f144",
+      "display_id": "S211",
+      "url": "https://www.meti.go.jp/shingikai/mono_info_service/smart_mobility_challenge/pdf/20220405_01_s01.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 1.37
+    },
+    {
+      "source_id": "SRC-8254ddf9aa",
+      "display_id": "S212",
+      "url": "https://www.meti.go.jp/shingikai/mono_info_service/smart_mobility_challenge/pdf/20240328_04.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 1.34
+    },
+    {
+      "source_id": "SRC-7ffa2cf4ca",
+      "display_id": "S213",
+      "url": "https://www.meti.go.jp/shingikai/mono_info_service/smart_mobility_challenge/pdf/20260327_2.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 1.16
+    },
+    {
+      "source_id": "SRC-c1bd878bf7",
+      "display_id": "S214",
+      "url": "https://www.meti.go.jp/shingikai/mono_info_service/smart_mobility_challenge/pdf/20260327_3.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 1.14
+    },
+    {
+      "source_id": "SRC-4170ff9960",
+      "display_id": "S215",
+      "url": "https://www.meti.go.jp/shingikai/mono_info_service/smart_mobility_challenge/pdf/20260327_5.pdf",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 3.31
+    },
+    {
+      "source_id": "SRC-826dfb8709",
+      "display_id": "S216",
+      "url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192992.html",
+      "status": 200,
+      "final_url": "https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/0000192992.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.44
+    },
+    {
+      "source_id": "SRC-38a27b55b4",
+      "display_id": "S217",
+      "url": "https://www.mitoyoshakyo.or.jp/archives/014/202306/%E4%BB%A4%E5%92%8C%EF%BC%94%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "status": 200,
+      "final_url": "https://www.mitoyoshakyo.or.jp/archives/014/202306/%E4%BB%A4%E5%92%8C%EF%BC%94%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "type": "application/pdf",
+      "seconds": 6.92
+    },
+    {
+      "source_id": "SRC-904a5fb434",
+      "display_id": "S218",
+      "url": "https://www.mitoyoshakyo.or.jp/archives/014/202407/%E2%98%85HP%E2%98%85R%EF%BC%95%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "status": 200,
+      "final_url": "https://www.mitoyoshakyo.or.jp/archives/014/202407/%E2%98%85HP%E2%98%85R%EF%BC%95%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "type": "application/pdf",
+      "seconds": 5.63
+    },
+    {
+      "source_id": "SRC-70a43f8cc7",
+      "display_id": "S219",
+      "url": "https://www.mitoyoshakyo.or.jp/archives/014/202506/R6%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "status": 200,
+      "final_url": "https://www.mitoyoshakyo.or.jp/archives/014/202506/R6%E5%B9%B4%E5%BA%A6%E4%BA%8B%E6%A5%AD%E5%A0%B1%E5%91%8A%E6%9B%B8.pdf",
+      "type": "application/pdf",
+      "seconds": 5.92
+    },
+    {
+      "source_id": "SRC-23e63440fd",
+      "display_id": "S220",
+      "url": "https://www.mitoyoshakyo.or.jp/archives/014/202506/R6%E5%B9%B4%E5%BA%A6%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf",
+      "status": 200,
+      "final_url": "https://www.mitoyoshakyo.or.jp/archives/014/202506/R6%E5%B9%B4%E5%BA%A6%E6%B1%BA%E7%AE%97%E6%9B%B8.pdf",
+      "type": "application/pdf",
+      "seconds": 5.68
+    },
+    {
+      "source_id": "SRC-08ae54183f",
+      "display_id": "S221",
+      "url": "https://www.mitsubishi-motors.com/jp/newsroom/newsrelease/2019/20190226_1.html",
+      "status": 200,
+      "final_url": "https://www.mitsubishi-motors.com/jp/newsroom/newsrelease/2019/20190226_1.html",
+      "type": "text/html;charset=utf-8",
+      "seconds": 4.86
+    },
+    {
+      "source_id": "SRC-e1b1eeef61",
+      "display_id": "S222",
+      "url": "https://www.mlit.go.jp/2chiiki/files/nichiikisesaku_r6240501.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/2chiiki/files/nichiikisesaku_r6240501.pdf",
+      "type": "application/pdf",
+      "seconds": 3.63
+    },
+    {
+      "source_id": "SRC-f8a80a5792",
+      "display_id": "S223",
+      "url": "https://www.mlit.go.jp/common/001179600.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/common/001179600.pdf",
+      "type": "application/pdf",
+      "seconds": 3.63
+    },
+    {
+      "source_id": "SRC-449f8104ca",
+      "display_id": "S224",
+      "url": "https://www.mlit.go.jp/common/001263901.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/common/001263901.pdf",
+      "type": "application/pdf",
+      "seconds": 3.43
+    },
+    {
+      "source_id": "SRC-8a19cf209a",
+      "display_id": "S225",
+      "url": "https://www.mlit.go.jp/common/001289661.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/common/001289661.pdf",
+      "type": "application/pdf",
+      "seconds": 3.42
+    },
+    {
+      "source_id": "SRC-483339b494",
+      "display_id": "S226",
+      "url": "https://www.mlit.go.jp/common/001294739.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/common/001294739.pdf",
+      "type": "application/pdf",
+      "seconds": 3.45
+    },
+    {
+      "source_id": "SRC-97183ed106",
+      "display_id": "S227",
+      "url": "https://www.mlit.go.jp/common/001334283.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/common/001334283.pdf",
+      "type": "application/pdf",
+      "seconds": 3.42
+    },
+    {
+      "source_id": "SRC-9a1a182711",
+      "display_id": "S228",
+      "url": "https://www.mlit.go.jp/jidosha/content/001745506.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/jidosha/content/001745506.pdf",
+      "type": "application/pdf",
+      "seconds": 2.71
+    },
+    {
+      "source_id": "SRC-52977fc627",
+      "display_id": "S229",
+      "url": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000066.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/jidosha/jidosha_fr7_000066.html",
+      "type": "text/html",
+      "seconds": 1.9
+    },
+    {
+      "source_id": "SRC-43225c1e53",
+      "display_id": "S230",
+      "url": "https://www.mlit.go.jp/koku/koku_tk9_000103.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/koku/koku_tk9_000103.html",
+      "type": "text/html",
+      "seconds": 2.08
+    },
+    {
+      "source_id": "SRC-9f9e8dec7d",
+      "display_id": "S231",
+      "url": "https://www.mlit.go.jp/kowan/content/001499199.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/kowan/content/001499199.pdf",
+      "type": "application/pdf",
+      "seconds": 5.64
+    },
+    {
+      "source_id": "SRC-717c24acf5",
+      "display_id": "S232",
+      "url": "https://www.mlit.go.jp/maritime/maritime_fr7_000041.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/maritime/maritime_fr7_000041.html",
+      "type": "text/html",
+      "seconds": 5.11
+    },
+    {
+      "source_id": "SRC-86a449631b",
+      "display_id": "S233",
+      "url": "https://www.mlit.go.jp/maritime/maritime_fr7_000047.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/maritime/maritime_fr7_000047.html",
+      "type": "text/html",
+      "seconds": 5.4
+    },
+    {
+      "source_id": "SRC-a460687a1d",
+      "display_id": "S234",
+      "url": "https://www.mlit.go.jp/policy/shingikai/content/001976226.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/policy/shingikai/content/001976226.pdf",
+      "type": "application/pdf",
+      "seconds": 5.35
+    },
+    {
+      "source_id": "SRC-7430389713",
+      "display_id": "S235",
+      "url": "https://www.mlit.go.jp/report/interview/daijin231031.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/interview/daijin231031.html",
+      "type": "text/html",
+      "seconds": 5.37
+    },
+    {
+      "source_id": "SRC-9b4076dfc2",
+      "display_id": "S236",
+      "url": "https://www.mlit.go.jp/report/press/content/001747045.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/content/001747045.pdf",
+      "type": "application/pdf",
+      "seconds": 5.38
+    },
+    {
+      "source_id": "SRC-27ace55ff4",
+      "display_id": "S237",
+      "url": "https://www.mlit.go.jp/report/press/content/001861145.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/content/001861145.pdf",
+      "type": "application/pdf",
+      "seconds": 5.39
+    },
+    {
+      "source_id": "SRC-0120c48f5e",
+      "display_id": "S238",
+      "url": "https://www.mlit.go.jp/report/press/content/001992826.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/content/001992826.pdf",
+      "type": "application/pdf",
+      "seconds": 5.26
+    },
+    {
+      "source_id": "SRC-2a526f74ad",
+      "display_id": "S239",
+      "url": "https://www.mlit.go.jp/report/press/content/001992827.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/content/001992827.pdf",
+      "type": "application/pdf",
+      "seconds": 5.1
+    },
+    {
+      "source_id": "SRC-cec4fe6799",
+      "display_id": "S240",
+      "url": "https://www.mlit.go.jp/report/press/jidosha04_hh_000134.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/jidosha04_hh_000134.html",
+      "type": "text/html",
+      "seconds": 5.12
+    },
+    {
+      "source_id": "SRC-c5593d93c5",
+      "display_id": "S241",
+      "url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000286.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000286.html",
+      "type": "text/html",
+      "seconds": 5.09
+    },
+    {
+      "source_id": "SRC-7e76d92669",
+      "display_id": "S242",
+      "url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000448.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000448.html",
+      "type": "text/html",
+      "seconds": 3.98
+    },
+    {
+      "source_id": "SRC-01ddef8dc0",
+      "display_id": "S243",
+      "url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000569.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/jidosha07_hh_000569.html",
+      "type": "text/html",
+      "seconds": 3.25
+    },
+    {
+      "source_id": "SRC-25f967230a",
+      "display_id": "S244",
+      "url": "https://www.mlit.go.jp/report/press/road01_hh_000755.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/road01_hh_000755.html",
+      "type": "text/html",
+      "seconds": 3.13
+    },
+    {
+      "source_id": "SRC-d434c18491",
+      "display_id": "S245",
+      "url": "https://www.mlit.go.jp/report/press/road01_hh_001258.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/road01_hh_001258.html",
+      "type": "text/html",
+      "seconds": 2.87
+    },
+    {
+      "source_id": "SRC-b090aec4fc",
+      "display_id": "S246",
+      "url": "https://www.mlit.go.jp/report/press/sogo12_hh_000270.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/sogo12_hh_000270.html",
+      "type": "text/html",
+      "seconds": 1.91
+    },
+    {
+      "source_id": "SRC-1cf61fd376",
+      "display_id": "S247",
+      "url": "https://www.mlit.go.jp/report/press/sogo12_hh_000454.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/sogo12_hh_000454.html",
+      "type": "text/html",
+      "seconds": 6.24
+    },
+    {
+      "source_id": "SRC-e3caafad86",
+      "display_id": "S248",
+      "url": "https://www.mlit.go.jp/report/press/sogo12_hh_000511.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/sogo12_hh_000511.html",
+      "type": "text/html",
+      "seconds": 5.99
+    },
+    {
+      "source_id": "SRC-575495076f",
+      "display_id": "S249",
+      "url": "https://www.mlit.go.jp/report/press/tetsudo07_hh_000229.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/tetsudo07_hh_000229.html",
+      "type": "text/html",
+      "seconds": 5.94
+    },
+    {
+      "source_id": "SRC-1be1fcb435",
+      "display_id": "S250",
+      "url": "https://www.mlit.go.jp/report/press/tokatsu01_hh_000373.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/tokatsu01_hh_000373.html",
+      "type": "text/html",
+      "seconds": 6.04
+    },
+    {
+      "source_id": "SRC-f9fb175705",
+      "display_id": "S251",
+      "url": "https://www.mlit.go.jp/report/press/tokatsu01_hh_000949.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/tokatsu01_hh_000949.html",
+      "type": "text/html",
+      "seconds": 5.96
+    },
+    {
+      "source_id": "SRC-94db9792b7",
+      "display_id": "S252",
+      "url": "https://www.mlit.go.jp/report/press/toshi07_hh_000139.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/report/press/toshi07_hh_000139.html",
+      "type": "text/html",
+      "seconds": 5.97
+    },
+    {
+      "source_id": "SRC-e7c4fe10e7",
+      "display_id": "S253",
+      "url": "https://www.mlit.go.jp/road/ITS/j-html/automatic-driving-service_r4.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/road/ITS/j-html/automatic-driving-service_r4.html",
+      "type": "text/html",
+      "seconds": 5.93
+    },
+    {
+      "source_id": "SRC-4b64509089",
+      "display_id": "S254",
+      "url": "https://www.mlit.go.jp/road/bicycleuse/share-cycle/",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/road/bicycleuse/share-cycle/",
+      "type": "text/html",
+      "seconds": 5.9
+    },
+    {
+      "source_id": "SRC-a23526fc00",
+      "display_id": "S255",
+      "url": "https://www.mlit.go.jp/road/ir/ir-council/nls/pdf01/12.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/road/ir/ir-council/nls/pdf01/12.pdf",
+      "type": "application/pdf",
+      "seconds": 5.99
+    },
+    {
+      "source_id": "SRC-f40220283e",
+      "display_id": "S256",
+      "url": "https://www.mlit.go.jp/scpf/archives/docs/event_seminar220316_all.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/scpf/archives/docs/event_seminar220316_all.pdf",
+      "type": "application/pdf",
+      "seconds": 5.96
+    },
+    {
+      "source_id": "SRC-0468ffa389",
+      "display_id": "S257",
+      "url": "https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_tk_000024.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/seisakutokatsu/freight/seisakutokatsu_tk_000024.html",
+      "type": "text/html",
+      "seconds": 5.86
+    },
+    {
+      "source_id": "SRC-cab746b9fe",
+      "display_id": "S258",
+      "url": "https://www.mlit.go.jp/sogoseisaku/environment/sosei_environment_fr_000152.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/environment/sosei_environment_fr_000152.html",
+      "type": "text/html",
+      "seconds": 5.92
+    },
+    {
+      "source_id": "SRC-311a30ee58",
+      "display_id": "S259",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891586.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891586.pdf",
+      "type": "application/pdf",
+      "seconds": 5.92
+    },
+    {
+      "source_id": "SRC-bf30df8e3d",
+      "display_id": "S260",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891587.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891587.pdf",
+      "type": "application/pdf",
+      "seconds": 5.84
+    },
+    {
+      "source_id": "SRC-4ccec8e791",
+      "display_id": "S261",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891588.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891588.pdf",
+      "type": "application/pdf",
+      "seconds": 5.84
+    },
+    {
+      "source_id": "SRC-2167af436c",
+      "display_id": "S262",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891589.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891589.pdf",
+      "type": "application/pdf",
+      "seconds": 5.89
+    },
+    {
+      "source_id": "SRC-1e75c72403",
+      "display_id": "S263",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891590.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891590.pdf",
+      "type": "application/pdf",
+      "seconds": 6.25
+    },
+    {
+      "source_id": "SRC-9dd27904e8",
+      "display_id": "S264",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891592.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891592.pdf",
+      "type": "application/pdf",
+      "seconds": 6.19
+    },
+    {
+      "source_id": "SRC-d2d0151df3",
+      "display_id": "S265",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891600.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891600.pdf",
+      "type": "application/pdf",
+      "seconds": 6.27
+    },
+    {
+      "source_id": "SRC-ca0fa445f0",
+      "display_id": "S266",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891601.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891601.pdf",
+      "type": "application/pdf",
+      "seconds": 6.23
+    },
+    {
+      "source_id": "SRC-f4063dbc5a",
+      "display_id": "S267",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891602.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891602.pdf",
+      "type": "application/pdf",
+      "seconds": 6.24
+    },
+    {
+      "source_id": "SRC-de515f9fcf",
+      "display_id": "S268",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891603.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891603.pdf",
+      "type": "application/pdf",
+      "seconds": 6.22
+    },
+    {
+      "source_id": "SRC-1de8e7cc9d",
+      "display_id": "S269",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891604.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891604.pdf",
+      "type": "application/pdf",
+      "seconds": 6.19
+    },
+    {
+      "source_id": "SRC-88e1a6bc03",
+      "display_id": "S270",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/kyousou/",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/kyousou/",
+      "type": "text/html",
+      "seconds": 6.14
+    },
+    {
+      "source_id": "SRC-dc31021747",
+      "display_id": "S271",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000160.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000160.html",
+      "type": "text/html",
+      "seconds": 6.15
+    },
+    {
+      "source_id": "SRC-d2c785b30a",
+      "display_id": "S272",
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000193.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000193.html",
+      "type": "text/html",
+      "seconds": 6.16
+    },
+    {
+      "source_id": "SRC-1a249ce887",
+      "display_id": "S273",
+      "url": "https://www.mlit.go.jp/tetudo/tetudo_fr1_000058.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/tetudo/tetudo_fr1_000058.html",
+      "type": "text/html",
+      "seconds": 6.15
+    },
+    {
+      "source_id": "SRC-836d74d5f5",
+      "display_id": "S274",
+      "url": "https://www.mlit.go.jp/tetudo/tetudo_tk5_000011.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/tetudo/tetudo_tk5_000011.html",
+      "type": "text/html",
+      "seconds": 6.18
+    },
+    {
+      "source_id": "SRC-a83731afee",
+      "display_id": "S275",
+      "url": "https://www.mlit.go.jp/toshi/daisei/content/001989644.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/toshi/daisei/content/001989644.pdf",
+      "type": "application/pdf",
+      "seconds": 6.15
+    },
+    {
+      "source_id": "SRC-b6d2a3cc97",
+      "display_id": "S276",
+      "url": "https://www.mlit.go.jp/toshi/tosiko/content/001475403.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/toshi/tosiko/content/001475403.pdf",
+      "type": "application/pdf",
+      "seconds": 6.19
+    },
+    {
+      "source_id": "SRC-5807eb25af",
+      "display_id": "S277",
+      "url": "https://www.mlit.go.jp/toshi/tosiko/content/002002094.pdf",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/toshi/tosiko/content/002002094.pdf",
+      "type": "application/pdf",
+      "seconds": 6.14
+    },
+    {
+      "source_id": "SRC-289bea058a",
+      "display_id": "S278",
+      "url": "https://www.mlit.go.jp/toshi/tosiko/toshi_tosiko_tk_000051.html",
+      "status": 200,
+      "final_url": "https://www.mlit.go.jp/toshi/tosiko/toshi_tosiko_tk_000051.html",
+      "type": "text/html",
+      "seconds": 6.1
+    },
+    {
+      "source_id": "SRC-3babd378b0",
+      "display_id": "S279",
+      "url": "https://www.mobilitychallenge.go.jp/",
+      "status": 200,
+      "final_url": "https://www.mobilitychallenge.go.jp/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.77
+    },
+    {
+      "source_id": "SRC-c150664ffa",
+      "display_id": "S280",
+      "url": "https://www.mobilitychallenge.go.jp/findings/",
+      "status": 200,
+      "final_url": "https://www.mobilitychallenge.go.jp/findings/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 5.76
+    },
+    {
+      "source_id": "SRC-ac2f0f15e2",
+      "display_id": "S281",
+      "url": "https://www.mobilitychallenge.go.jp/introduction/",
+      "status": 200,
+      "final_url": "https://www.mobilitychallenge.go.jp/introduction/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 6.01
+    },
+    {
+      "source_id": "SRC-11b05ca359",
+      "display_id": "S282",
+      "url": "https://www.mof.go.jp/policy/budget/topics/budget_execution_audit/fy2025/hanei/23.pdf",
+      "status": 200,
+      "final_url": "https://www.mof.go.jp/policy/budget/topics/budget_execution_audit/fy2025/hanei/23.pdf",
+      "type": "application/pdf",
+      "seconds": 6.22
+    },
+    {
+      "source_id": "SRC-8dca6bdaca",
+      "display_id": "S283",
+      "url": "https://www.mof.go.jp/policy/budget/topics/budget_execution_audit/fy2025/sy0706/23.pdf",
+      "status": 200,
+      "final_url": "https://www.mof.go.jp/policy/budget/topics/budget_execution_audit/fy2025/sy0706/23.pdf",
+      "type": "application/pdf",
+      "seconds": 6.18
+    },
+    {
+      "source_id": "SRC-0b54f721cb",
+      "display_id": "S284",
+      "url": "https://www.narita-airport.jp/ja/company/airport-operation/action/airnarita/automation/",
+      "status": 200,
+      "final_url": "https://www.narita-airport.jp/ja/company/airport-operation/action/airnarita/automation/",
+      "type": "text/html; charset=utf-8",
+      "seconds": 7.01
+    },
+    {
+      "source_id": "SRC-8065d68bf7",
+      "display_id": "S285",
+      "url": "https://www.narita-airport.jp/ja/company/media-center/news/20181204-jidousoukou/",
+      "status": 200,
+      "final_url": "https://www.narita-airport.jp/ja/company/media-center/news/20181204-jidousoukou/",
+      "type": "text/html; charset=utf-8",
+      "seconds": 6.77
+    },
+    {
+      "source_id": "SRC-1b84e22863",
+      "display_id": "S286",
+      "url": "https://www.nedo.go.jp/activities/ZZJP2_100181.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/activities/ZZJP2_100181.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.07
+    },
+    {
+      "source_id": "SRC-5590a31409",
+      "display_id": "S287",
+      "url": "https://www.nedo.go.jp/activities/ZZJP_100332.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/activities/ZZJP_100332.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.7
+    },
+    {
+      "source_id": "SRC-4217afd180",
+      "display_id": "S288",
+      "url": "https://www.nedo.go.jp/content/100955752.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 5.1
+    },
+    {
+      "source_id": "SRC-6846081d05",
+      "display_id": "S289",
+      "url": "https://www.nedo.go.jp/content/800021379.pdf",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/content/800021379.pdf",
+      "type": "application/pdf",
+      "seconds": 3.94
+    },
+    {
+      "source_id": "SRC-2a1c186ca3",
+      "display_id": "S290",
+      "url": "https://www.nedo.go.jp/media/practical-realization/202301kddi.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/media/practical-realization/202301kddi.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.59
+    },
+    {
+      "source_id": "SRC-f1d7b73408",
+      "display_id": "S291",
+      "url": "https://www.nedo.go.jp/news/press/AA5_101385.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/news/press/AA5_101385.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.74
+    },
+    {
+      "source_id": "SRC-807860fc7e",
+      "display_id": "S292",
+      "url": "https://www.nedo.go.jp/news/press/AA5_101482.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/news/press/AA5_101482.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.27
+    },
+    {
+      "source_id": "SRC-ff48fc5edf",
+      "display_id": "S293",
+      "url": "https://www.nedo.go.jp/news/press/AA5_101535.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/news/press/AA5_101535.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.54
+    },
+    {
+      "source_id": "SRC-d0ec6adda0",
+      "display_id": "S294",
+      "url": "https://www.nedo.go.jp/news/press/AA5_101560.html",
+      "status": 200,
+      "final_url": "https://www.nedo.go.jp/news/press/AA5_101560.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.36
+    },
+    {
+      "source_id": "SRC-63f5ab671c",
+      "display_id": "S295",
+      "url": "https://www.nilim.go.jp/lab/bcg/siryou/tnn/tnn1161pdf/ks1161.pdf",
+      "status": 200,
+      "final_url": "https://www.nilim.go.jp/lab/bcg/siryou/tnn/tnn1161pdf/ks1161.pdf",
+      "type": "application/pdf",
+      "seconds": 4.17
+    },
+    {
+      "source_id": "SRC-82fa3d7d09",
+      "display_id": "S296",
+      "url": "https://www.nilim.go.jp/lab/qcg/research/automated-driving.html",
+      "status": 200,
+      "final_url": "https://www.nilim.go.jp/lab/qcg/research/automated-driving.html",
+      "type": "text/html",
+      "seconds": 3.86
+    },
+    {
+      "source_id": "SRC-0253e3b85b",
+      "display_id": "S297",
+      "url": "https://www.npa.go.jp/bureau/traffic/selfdriving/",
+      "status": 200,
+      "final_url": "https://www.npa.go.jp/bureau/traffic/selfdriving/",
+      "type": "text/html",
+      "seconds": 3.5
+    },
+    {
+      "source_id": "SRC-47ba7181ae",
+      "display_id": "S298",
+      "url": "https://www.npa.go.jp/bureau/traffic/selfdriving/roadtesting/",
+      "status": 200,
+      "final_url": "https://www.npa.go.jp/bureau/traffic/selfdriving/roadtesting/",
+      "type": "text/html",
+      "seconds": 3.24
+    },
+    {
+      "source_id": "SRC-46b6d654b1",
+      "display_id": "S299",
+      "url": "https://www.npsc.go.jp/report_2024/03-21.htm",
+      "status": 200,
+      "final_url": "https://www.npsc.go.jp/report_2024/03-21.htm",
+      "type": "text/html",
+      "seconds": 3.76
+    },
+    {
+      "source_id": "SRC-bf422afeb0",
+      "display_id": "S300",
+      "url": "https://www.orix.co.jp/grp/company/newsroom/newsrelease/210930_ORIXG2.html",
+      "status": 200,
+      "final_url": "https://www.orix.co.jp/grp/company/newsroom/newsrelease/210930_ORIXG2.html",
+      "type": "text/html",
+      "seconds": 4.25
+    },
+    {
+      "source_id": "SRC-13881242c6",
+      "display_id": "S301",
+      "url": "https://www.pa.hrr.mlit.go.jp/file/kouwanshinkou/butsuryu/butsuryu-kanri/upload/R2_08.pdf",
+      "status": 200,
+      "final_url": "https://www.pa.hrr.mlit.go.jp/file/kouwanshinkou/butsuryu/butsuryu-kanri/upload/R2_08.pdf",
+      "type": "application/pdf",
+      "seconds": 4.04
+    },
+    {
+      "source_id": "SRC-1e17f2bc65",
+      "display_id": "S302",
+      "url": "https://www.pref.aichi.jp/uploaded/attachment/542336.pdf",
+      "status": 200,
+      "final_url": "https://www.pref.aichi.jp/uploaded/attachment/542336.pdf",
+      "type": "application/pdf",
+      "seconds": 3.61
+    },
+    {
+      "source_id": "SRC-de4ed058b3",
+      "display_id": "S303",
+      "url": "https://www.pref.gifu.lg.jp/site/pressrelease/503328.html",
+      "status": 200,
+      "final_url": "https://www.pref.gifu.lg.jp/site/pressrelease/503328.html",
+      "type": "text/html",
+      "seconds": 5.88
+    },
+    {
+      "source_id": "SRC-c865dfb1bd",
+      "display_id": "S304",
+      "url": "https://www.pref.gunma.jp/site/gikai/616080.html",
+      "status": 200,
+      "final_url": "https://www.pref.gunma.jp/site/gikai/616080.html",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 3.91
+    },
+    {
+      "source_id": "SRC-2db3be579b",
+      "display_id": "S305",
+      "url": "https://www.pref.kanagawa.jp/docs/u6s/cnt/f536479/p1137761.html",
+      "status": 200,
+      "final_url": "https://www.pref.kanagawa.jp/docs/u6s/cnt/f536479/p1137761.html",
+      "type": "text/html",
+      "seconds": 4.43
+    },
+    {
+      "source_id": "SRC-5f76068b50",
+      "display_id": "S306",
+      "url": "https://www.pref.nagasaki.jp/governor/speak/20251126.html",
+      "status": 200,
+      "final_url": "https://www.pref.nagasaki.jp/governor/speak/20251126.html",
+      "type": "text/html",
+      "seconds": 3.47
+    },
+    {
+      "source_id": "SRC-18eb040d5a",
+      "display_id": "S307",
+      "url": "https://www.pref.tokushima.lg.jp/governor/press-record/7204047/",
+      "status": 200,
+      "final_url": "https://www.pref.tokushima.lg.jp/governor/press-record/7204047/",
+      "type": "text/html; charset=UTF-8",
+      "seconds": 4.86
+    },
+    {
+      "source_id": "SRC-ea3cb3b795",
+      "display_id": "S308",
+      "url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-1_RTL4_5y_20260305.pdf",
+      "status": 200,
+      "final_url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-1_RTL4_5y_20260305.pdf",
+      "type": "application/pdf",
+      "seconds": 4.49
+    },
+    {
+      "source_id": "SRC-3022c44cce",
+      "display_id": "S309",
+      "url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-2_theme01_20260305.pdf",
+      "status": 200,
+      "final_url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-2_theme01_20260305.pdf",
+      "type": "application/pdf",
+      "seconds": 3.75
+    },
+    {
+      "source_id": "SRC-615a2d613e",
+      "display_id": "S310",
+      "url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-3_theme02_20260305.pdf",
+      "status": 200,
+      "final_url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-3_theme02_20260305.pdf",
+      "type": "application/pdf",
+      "seconds": 2.99
+    },
+    {
+      "source_id": "SRC-ff789031bc",
+      "display_id": "S311",
+      "url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-4_theme03_20260305.pdf",
+      "status": 200,
+      "final_url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-4_theme03_20260305.pdf",
+      "type": "application/pdf",
+      "seconds": 2.84
+    },
+    {
+      "source_id": "SRC-71d58a8918",
+      "display_id": "S312",
+      "url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-5_theme04_20260305.pdf",
+      "status": 200,
+      "final_url": "https://www.road-to-the-l4.go.jp/publication/pdf/02-5_theme04_20260305.pdf",
+      "type": "application/pdf",
+      "seconds": 2.87
+    },
+    {
+      "source_id": "SRC-39c18d9fd9",
+      "display_id": "S313",
+      "url": "https://www.sip-adus.go.jp/exhibition/e2.html",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 4.18
+    },
+    {
+      "source_id": "SRC-7cea9604ac",
+      "display_id": "S314",
+      "url": "https://www.sip-adus.go.jp/showcase/a1.html",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 4.05
+    },
+    {
+      "source_id": "SRC-60de26032e",
+      "display_id": "S315",
+      "url": "https://www.sip-adus.go.jp/sip/file/sip_2022_plan_s.pdf",
+      "status": 404,
+      "error": "HTTP Error 404: Not Found",
+      "seconds": 3.69
+    },
+    {
+      "source_id": "SRC-ecd3d8505b",
+      "display_id": "S316",
+      "url": "https://www.softbank.jp/corp/news/press/sbkk/2019/20191119_01/",
+      "status": 200,
+      "final_url": "https://www.softbank.jp/corp/news/press/sbkk/2019/20191119_01/",
+      "type": "text/html; charset=utf-8",
+      "seconds": 3.01
+    },
+    {
+      "source_id": "SRC-b2232578e6",
+      "display_id": "S317",
+      "url": "https://www.tobu.co.jp/cms-pdf/releases/20220316114025nA56U6Qt2NKv0N7Br2sJLQ.pdf",
+      "status": 200,
+      "final_url": "https://www.tobu.co.jp/cms-pdf/releases/20220316114025nA56U6Qt2NKv0N7Br2sJLQ.pdf",
+      "type": "application/pdf",
+      "seconds": 3.99
+    },
+    {
+      "source_id": "SRC-02600a6610",
+      "display_id": "S318",
+      "url": "https://www.tohoku.meti.go.jp/koho/koshin/kobo/saitaku/2025/s250414001.html",
+      "status": 403,
+      "error": "HTTP Error 403: Forbidden",
+      "seconds": 2.78
+    },
+    {
+      "source_id": "SRC-ebdd15ebf0",
+      "display_id": "S319",
+      "url": "https://www.tokyu.co.jp/company/news/detail/321.html",
+      "status": 200,
+      "final_url": "https://www.tokyu.co.jp/company/news/detail/321.html",
+      "type": "text/html",
+      "seconds": 3.93
+    },
+    {
+      "source_id": "SRC-72cd986399",
+      "display_id": "S320",
+      "url": "https://www.tokyu.co.jp/company/news/pdf/20190529-1.pdf",
+      "status": 200,
+      "final_url": "https://www.tokyu.co.jp/company/news/pdf/20190529-1.pdf",
+      "type": "application/pdf",
+      "seconds": 4.34
+    },
+    {
+      "source_id": "SRC-ee011dca8a",
+      "display_id": "S321",
+      "url": "https://www.tokyu.co.jp/company/news/pdf/20210427-1.pdf",
+      "status": 200,
+      "final_url": "https://www.tokyu.co.jp/company/news/pdf/20210427-1.pdf",
+      "type": "application/pdf",
+      "seconds": 3.29
+    },
+    {
+      "source_id": "SRC-9077a9db2f",
+      "display_id": "S322",
+      "url": "https://www.town.ibaraki-sakai.lg.jp/mobile/page/page002440.html",
+      "status": 200,
+      "final_url": "https://www.town.ibaraki-sakai.lg.jp/mobile/page/page002440.html",
+      "type": "text/html",
+      "seconds": 6.37
+    },
+    {
+      "source_id": "SRC-01a2148fd1",
+      "display_id": "S323",
+      "url": "https://www.town.kibichuo.lg.jp/uploaded/attachment/12092.pdf",
+      "status": 200,
+      "final_url": "https://www.town.kibichuo.lg.jp/uploaded/attachment/12092.pdf",
+      "type": "application/pdf",
+      "seconds": 4.72
+    },
+    {
+      "source_id": "SRC-05486448f8",
+      "display_id": "S324",
+      "url": "https://www.town.kotohira.kagawa.jp/soshiki/0/7138.html",
+      "status": 200,
+      "final_url": "https://www.town.kotohira.kagawa.jp/soshiki/0/7138.html",
+      "type": "text/html",
+      "seconds": 4.77
+    },
+    {
+      "source_id": "SRC-267f5d2149",
+      "display_id": "S325",
+      "url": "https://www.town.kotohira.kagawa.jp/uploaded/attachment/2637.pdf",
+      "status": 200,
+      "final_url": "https://www.town.kotohira.kagawa.jp/uploaded/attachment/2637.pdf",
+      "type": "application/pdf",
+      "seconds": 3.71
+    },
+    {
+      "source_id": "SRC-097fc2e83c",
+      "display_id": "S326",
+      "url": "https://www.toyota-tsusho.com/english/press/detail/250210_006531.html",
+      "status": 200,
+      "final_url": "https://www.toyota-tsusho.com/english/press/detail/250210_006531.html",
+      "type": "text/html",
+      "seconds": 3.8
+    },
+    {
+      "source_id": "SRC-b24cdee233",
+      "display_id": "S327",
+      "url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2020/03/ee75db6c3ea506c839ecbb7add4a2d41.pdf",
+      "status": 200,
+      "final_url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2020/03/ee75db6c3ea506c839ecbb7add4a2d41.pdf",
+      "type": "application/pdf",
+      "seconds": 4.23
+    },
+    {
+      "source_id": "SRC-ad429ac9cf",
+      "display_id": "S328",
+      "url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2025/05/572c1c96ddd3355751b12ba7b75fecb6.pdf",
+      "status": 200,
+      "final_url": "https://www.vill.nishimera.lg.jp/village/wp-content/uploads/2025/05/572c1c96ddd3355751b12ba7b75fecb6.pdf",
+      "type": "application/pdf",
+      "seconds": 4.27
+    },
+    {
+      "source_id": "SRC-26c765527b",
+      "display_id": "S329",
+      "url": "https://www4.tepco.co.jp/press/release/2020/pdf2/200608j0101.pdf",
+      "status": 200,
+      "final_url": "https://www4.tepco.co.jp/press/release/2020/pdf2/200608j0101.pdf",
+      "type": "application/pdf",
+      "seconds": 2.78
+    },
+    {
+      "source_id": "SRC-5383f67624",
+      "display_id": "S330",
+      "url": "https://www5.cao.go.jp/keizai-shimon/kaigi/special/reform/wg7/20191101/shiryou1_part5.pdf",
+      "status": 200,
+      "final_url": "https://www5.cao.go.jp/keizai-shimon/kaigi/special/reform/wg7/20191101/shiryou1_part5.pdf",
+      "type": "application/pdf",
+      "seconds": 3.69
+    },
+    {
+      "source_id": "SRC-a45d8967c7",
+      "display_id": "S331",
+      "url": "https://www8.cao.go.jp/cstp/stmain/2019808smartcity.html",
+      "status": 200,
+      "final_url": "https://www8.cao.go.jp/cstp/stmain/2019808smartcity.html",
+      "type": "text/html",
+      "seconds": 4.15
+    },
+    {
+      "source_id": "SRC-fa7a544041",
+      "display_id": "S332",
+      "url": "https://www8.cao.go.jp/cstp/stmain/20200318siparchitecture.html",
+      "status": 200,
+      "final_url": "https://www8.cao.go.jp/cstp/stmain/20200318siparchitecture.html",
+      "type": "text/html",
+      "seconds": 4.26
+    },
+    {
+      "source_id": "SRC-9d6b6f68ea",
+      "display_id": "S333",
+      "url": "https://www8.cao.go.jp/cstp/stmain/20210712sipadus.html",
+      "status": 200,
+      "final_url": "https://www8.cao.go.jp/cstp/stmain/20210712sipadus.html",
+      "type": "text/html",
+      "seconds": 4.26
+    },
+    {
+      "source_id": "SRC-13f574ea28",
+      "display_id": "S334",
+      "url": "https://www8.cao.go.jp/cstp/stmain/20230810smartcity.html",
+      "status": 200,
+      "final_url": "https://www8.cao.go.jp/cstp/stmain/20230810smartcity.html",
+      "type": "text/html",
+      "seconds": 3.31
+    },
+    {
+      "source_id": "SRC-a57cb5713e",
+      "display_id": "S335",
+      "url": "https://www8.cao.go.jp/koutu/taisaku/h30kou_haku/zenbun/genkyo/feature/feature_02.html",
+      "status": 200,
+      "final_url": "https://www8.cao.go.jp/koutu/taisaku/h30kou_haku/zenbun/genkyo/feature/feature_02.html",
+      "type": "text/html",
+      "seconds": 2.78
+    },
+    {
+      "source_id": "SRC-a5212126a0",
+      "display_id": "S336",
+      "url": "https://wwwtb.mlit.go.jp/chubu/tsukuro/hyoka/pdf/jiko/R6/02_fukuishi.pdf",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/chubu/tsukuro/hyoka/pdf/jiko/R6/02_fukuishi.pdf",
+      "type": "application/pdf",
+      "seconds": 4.25
+    },
+    {
+      "source_id": "SRC-478732da21",
+      "display_id": "S337",
+      "url": "https://wwwtb.mlit.go.jp/chugoku/content/000370186.pdf",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/chugoku/content/000370186.pdf",
+      "type": "application/pdf",
+      "seconds": 3.37
+    },
+    {
+      "source_id": "SRC-e178e960c2",
+      "display_id": "S338",
+      "url": "https://wwwtb.mlit.go.jp/chugoku/content/000370683.pdf",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/chugoku/content/000370683.pdf",
+      "type": "application/pdf",
+      "seconds": 3.28
+    },
+    {
+      "source_id": "SRC-ade126a9f0",
+      "display_id": "S339",
+      "url": "https://wwwtb.mlit.go.jp/kanto/content/000378309.pdf",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/kanto/content/000378309.pdf",
+      "type": "application/pdf",
+      "seconds": 3.24
+    },
+    {
+      "source_id": "SRC-dd63f6b973",
+      "display_id": "S340",
+      "url": "https://wwwtb.mlit.go.jp/kanto/koutuu_seisaku/iryo_kaigo.html",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/kanto/koutuu_seisaku/iryo_kaigo.html",
+      "type": "text/html",
+      "seconds": 3.16
+    },
+    {
+      "source_id": "SRC-96a544d338",
+      "display_id": "S341",
+      "url": "https://wwwtb.mlit.go.jp/kyushu/content/000324419.pdf",
+      "status": 200,
+      "final_url": "https://wwwtb.mlit.go.jp/kyushu/content/000324419.pdf",
+      "type": "application/pdf",
+      "seconds": 2.46
+    }
+  ]
+}

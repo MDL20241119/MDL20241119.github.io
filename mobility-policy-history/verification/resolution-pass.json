@@ -1,0 +1,11 @@
+{
+  "scope": "Explanation archive and preview implementation; no national success-rate or causal-effect estimate",
+  "observation": {"status":"complete","result":"Read the 94-page report and all canonical records; reconcile every case, program, event and source ID to Excel; byte-match PDF, JSON and XLSX to the supplied Drive files."},
+  "depth": {"status":"complete","result":"Distinguish vehicle and technology continuity, service continuity, program termination, funding and measured outcomes. Preserve causal uncertainty; do not infer current operation from absent end notices."},
+  "breadth": {"status":"complete","result":"Retain all 111 cases and unsuccessful, suspended, changed and unknown observations; search related Drive reports; do not import ungrounded claims from older summaries."},
+  "structure": {"status":"complete","result":"Stable IDs and aliases connect histories, policies and sources. Time grouping follows original year/fiscal-year labels, and sort bounds are never displayed as event dates."},
+  "refutation": {"status":"complete","result":"Test missing dates, merged source observations, unconfirmed continuity, different services in the same city, funding attribution, monetary bases and source references."},
+  "decision": {"status":"complete","owner":"site owner","decision":"Review the preview and approve the publication scope before any production change","criteria":"Correct counts and histories; readable PC/mobile views; source gaps visible; existing site untouched"},
+  "execution": {"status":"partial","result":"Preview, scoped source, checks and link audit prepared. A clean isolated final browser pass and approval of public downloads remain before release."},
+  "learning": {"status":"designed / not executed","result":"Append new source-backed events without deleting prior history; refresh the ledger and independent count controls; regenerate and rerun relevant checks for each release."}
+}

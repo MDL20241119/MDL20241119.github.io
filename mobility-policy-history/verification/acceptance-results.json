@@ -1,0 +1,63 @@
+{
+  "passed": 14,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "All 111 case detail screens render with original status and IDs",
+      "result": "pass"
+    },
+    {
+      "name": "All 66 policy detail screens render",
+      "result": "pass"
+    },
+    {
+      "name": "All 341 source detail screens render and point to original URLs",
+      "result": "pass"
+    },
+    {
+      "name": "All 467 events are reachable and preserve raw date display",
+      "result": "pass"
+    },
+    {
+      "name": "Canonical old case and policy IDs resolve",
+      "result": "pass"
+    },
+    {
+      "name": "Old name, alias and alternate notation searches resolve",
+      "result": "pass"
+    },
+    {
+      "name": "Every theme, ministry, prefecture, status and year filter has exact selector behavior",
+      "result": "pass"
+    },
+    {
+      "name": "Unknown and non-day precisions remain distinct",
+      "result": "pass"
+    },
+    {
+      "name": "Merged events retain all source observations and event IDs",
+      "result": "pass"
+    },
+    {
+      "name": "Separate services remain separate; subsidy and related-only records differ",
+      "result": "pass"
+    },
+    {
+      "name": "Financial bases and primary report case pages are retained",
+      "result": "pass"
+    },
+    {
+      "name": "Resolved internal route references",
+      "result": "pass",
+      "references": 6535
+    },
+    {
+      "name": "Internal hash routes and every generated local asset reference resolve",
+      "result": "pass"
+    },
+    {
+      "name": "Canonical JSON bytes remain unchanged",
+      "result": "pass"
+    }
+  ]
+}

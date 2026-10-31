@@ -1,0 +1,133 @@
+{
+  "as_of": "2026-10-31",
+  "canonical_sha256": "1343cc22b16bb6b883d9ad4680eb157382fd6e6477e9b2b70814e151b6cf45f2",
+  "counts": {
+    "cases": 111,
+    "programs": 66,
+    "case_events": 378,
+    "policy_events": 89,
+    "events": 467,
+    "sources": 341,
+    "detailed_cases": 25
+  },
+  "excel_rows": {
+    "年表": 467,
+    "事例": 111,
+    "政策制度": 66,
+    "出典": 341
+  },
+  "excel_id_sets_match": true,
+  "excel_source_urls_match": true,
+  "event_ids_unique": true,
+  "source_references_resolve": true,
+  "case_program_references_resolve": true,
+  "precision_distribution": {
+    "day": 209,
+    "month": 81,
+    "fiscal_year": 124,
+    "reference_month": 1,
+    "year": 30,
+    "fiscal_year_end": 1,
+    "retrieval_day": 1,
+    "fiscal_year_overlap": 3,
+    "year_approximate": 1,
+    "year_document_contains": 1,
+    "date_range": 10,
+    "unknown": 2,
+    "publication_year": 1,
+    "evaluation_fiscal_year": 1,
+    "publication_month": 1
+  },
+  "original_case_event_records": 384,
+  "merged_event_groups": 5,
+  "undated_event_ids": [
+    "EV-874cc0577f20",
+    "EV-31a9fadc1014"
+  ],
+  "pdf_pages": 94,
+  "detailed_case_page_map": {
+    "meti_eiheiji": [
+      15,
+      16
+    ],
+    "meti_hitachi": [
+      17
+    ],
+    "mlit_kamikoani": [
+      18
+    ],
+    "mlit_okueigenji": [
+      19
+    ],
+    "mlit_miyama": [
+      20
+    ],
+    "mlit_iinan": [
+      21
+    ],
+    "mlit_izuko": [
+      22
+    ],
+    "mlit_komono": [
+      23
+    ],
+    "mlit_gunma": [
+      24
+    ],
+    "meti_mitoyo": [
+      25,
+      26
+    ],
+    "meti_kosai": [
+      27
+    ],
+    "meti_ina": [
+      28
+    ],
+    "ENV-C01": [
+      29
+    ],
+    "ENV-C06": [
+      30
+    ],
+    "ENV-C07": [
+      31
+    ],
+    "ENV-C12": [
+      32
+    ],
+    "DIG-C11": [
+      33
+    ],
+    "DIG-C14": [
+      34
+    ],
+    "DIG-C16": [
+      35
+    ],
+    "DIG-C17": [
+      36
+    ],
+    "V-C02": [
+      37
+    ],
+    "V-C03": [
+      38
+    ],
+    "V-C04": [
+      39
+    ],
+    "V-C05": [
+      40
+    ],
+    "V-C13": [
+      41
+    ]
+  },
+  "drive_hashes_match": {
+    "pdf": true,
+    "xlsx": true,
+    "json": true
+  },
+  "method": "State/theme labels are search aids; original status text, attribution text, dates, observations and raw canonical JSON are preserved."
+}
