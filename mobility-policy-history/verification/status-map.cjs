@@ -32,8 +32,10 @@ check('Older operating records and republished results do not become current ope
  assert.equal(S.by_case['DIG-C15'].category,'unconfirmed');
  for(const c of U.findCases({status:'continuing'}))assert(/2026/.test(c.status_as_of),'Missing 2026 evidence context '+c.id);
 });
-check('Comparison maps show both statuses without treating a whole prefecture as one status',()=>{
- const html=V.mapPage({});assert.equal([...html.matchAll(/class="japan-map"/g)].length,2);assert(html.includes('map-grid-continuing'));assert(html.includes('map-grid-ended'));
+check('One map defaults to all cases; each category can be selected independently',()=>{
+ const html=V.mapPage({});assert.equal([...html.matchAll(/class="japan-map"/g)].length,1);assert(html.includes('map-grid-all'));assert(!html.includes('すべて・比較'));assert(html.includes('>全体</span>'));assert(html.includes('111<small>事例</small>'));
+ for(const g of S.groups){const h=V.mapPage({status:g.id});assert.equal([...h.matchAll(/class="japan-map"/g)].length,1);assert(h.includes('map-grid-'+g.id));assert(h.includes('class="life-choice selected" data-life="'+g.id+'"'));}
+ const home=V.homeMap();assert.equal([...home.matchAll(/class="japan-map"/g)].length,1);assert(home.includes('map-grid-all'));
  const keep=V.counts(U.findCases({status:'continuing'})),end=V.counts(U.findCases({status:'ended'}));
  assert.equal(keep['神奈川県'],1);assert.equal(end['神奈川県'],1);
  const filtered=V.mapPage({pref:'福岡県',status:'ended'});assert(filtered.includes('data-case-id="mlit_miyama"'));assert.equal([...filtered.matchAll(/data-case-id=/g)].length,1);

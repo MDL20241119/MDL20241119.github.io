@@ -23,7 +23,7 @@
       "result": "pass"
     },
     {
-      "name": "Comparison maps show both statuses without treating a whole prefecture as one status",
+      "name": "One map defaults to all cases; each category can be selected independently",
       "result": "pass"
     },
     {

@@ -1,4 +1,5 @@
 /* State is encoded by both colour and a written category. */
+[data-life="all"]{--life:#52e4f6;--life-dim:#18333d}
 [data-life="continuing"]{--life:#61e6a8;--life-dim:#163e32}
 [data-life="ended"]{--life:#ff756f;--life-dim:#452322}
 [data-life="paused"]{--life:#ffcc66;--life-dim:#45371d}
@@ -27,7 +28,7 @@
 .life-method dl{margin:15px 0;font-size:11px;line-height:1.9}
 .life-method dt{color:var(--life);font-weight:800;margin-top:14px}
 .life-method dd{margin-top:4px;color:#acbfce}
-.status-map-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;align-items:start}
+.status-map-grid{display:grid;grid-template-columns:1fr;gap:15px;align-items:start}
 .status-map-grid.single-status-map{grid-template-columns:1fr}
 .status-map-panel{border:1px solid #40515e;background:#11181e;border-top:3px solid var(--life);min-width:0;overflow:hidden}
 .status-panel-head{display:flex;justify-content:space-between;align-items:end;gap:12px;padding:21px 20px 18px;border-bottom:1px solid #314652;min-height:113px}

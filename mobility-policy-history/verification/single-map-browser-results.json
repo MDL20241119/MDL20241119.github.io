@@ -1,0 +1,29 @@
+{
+  "date": "2026-10-31",
+  "environment": "Cloud Chrome / managed preview",
+  "checks": [
+    {
+      "name": "Default map shows all 111 cases on one SVG",
+      "result": "pass",
+      "map_count": 1,
+      "selected": "全体",
+      "total": 111
+    },
+    {
+      "name": "Select service closures: one map and exactly 3 case cards",
+      "result": "pass",
+      "map_count": 1,
+      "case_ids": [
+        "mlit_miyama",
+        "ENV-C05",
+        "V-C04"
+      ]
+    },
+    {
+      "name": "Select all again: one map and total 111",
+      "result": "pass",
+      "map_count": 1,
+      "total": 111
+    }
+  ]
+}

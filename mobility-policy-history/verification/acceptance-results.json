@@ -49,7 +49,7 @@
     {
       "name": "Resolved internal route references",
       "result": "pass",
-      "references": 6962
+      "references": 6910
     },
     {
       "name": "Internal hash routes and every generated local asset reference resolve",
