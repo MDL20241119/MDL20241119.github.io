@@ -1,0 +1,42 @@
+{
+  "passed": 9,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "111 classifications retain original states, date provenance and valid source/event references",
+      "result": "pass"
+    },
+    {
+      "name": "Six exclusive groups cover all cases with reviewed counts",
+      "result": "pass"
+    },
+    {
+      "name": "Only explicit service closures are red; trial ends and selection withdrawals stay separate",
+      "result": "pass"
+    },
+    {
+      "name": "Mixed technology/service states and negated or planned endings are handled explicitly",
+      "result": "pass"
+    },
+    {
+      "name": "Older operating records and republished results do not become current operation confirmations",
+      "result": "pass"
+    },
+    {
+      "name": "Comparison maps show both statuses without treating a whole prefecture as one status",
+      "result": "pass"
+    },
+    {
+      "name": "Status persists through map filters, pagination, timeline links and case return routes",
+      "result": "pass"
+    },
+    {
+      "name": "Historical event-year filters retain latest status semantics and exact original dates",
+      "result": "pass"
+    },
+    {
+      "name": "Each detail keeps its original wording and exposes scope, reason and evidence date",
+      "result": "pass"
+    }
+  ]
+}

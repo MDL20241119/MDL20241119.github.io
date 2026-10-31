@@ -2,7 +2,7 @@ const fs=require('fs'),vm=require('vm'),assert=require('assert'),path=require('p
 const root=path.resolve(__dirname,'..');
 const ctx={window:{},location:{hash:'#home'},URLSearchParams,console};
 vm.createContext(ctx);
-for(const f of ['data/view-data.js','data/japan-map.js','assets/infographics.js','assets/history.js'])
+for(const f of ['data/view-data.js','data/japan-map.js','data/case-status.js','assets/infographics.js','assets/history.js'])
   vm.runInContext(fs.readFileSync(path.join(root,f),'utf8'),ctx);
 const D=ctx.window.MOBILITY_DATA,U=ctx.window.MOBILITY_UI,V=U.graphics,G=ctx.window.MOBILITY_JAPAN_MAP;
 const results=[];

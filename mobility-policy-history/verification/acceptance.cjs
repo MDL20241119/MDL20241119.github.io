@@ -4,6 +4,7 @@ const context={window:{},location:{hash:'#home'},URLSearchParams,console,Map,Set
 vm.createContext(context);
 vm.runInContext(fs.readFileSync(root+'/data/view-data.js','utf8'),context);
 vm.runInContext(fs.readFileSync(root+'/data/japan-map.js','utf8'),context);
+vm.runInContext(fs.readFileSync(root+'/data/case-status.js','utf8'),context);
 vm.runInContext(fs.readFileSync(root+'/assets/infographics.js','utf8'),context);
 vm.runInContext(fs.readFileSync(root+'/assets/history.js','utf8'),context);
 const {window:W}=context,D=W.MOBILITY_DATA,U=W.MOBILITY_UI;

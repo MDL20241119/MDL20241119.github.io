@@ -1,0 +1,30 @@
+{
+  "date": "2026-10-31",
+  "environment": "Cloud Chrome + responsive iframe widths 390/320 px",
+  "checks": [
+    {
+      "name": "Desktop comparison shows separate green continuation and red service-closure maps, 17 and 3 cases",
+      "result": "pass"
+    },
+    {
+      "name": "390px comparison has 94 SVG paths, 6 exclusive status groups, no horizontal document overflow",
+      "result": "pass",
+      "content_width": 375,
+      "scroll_width": 375
+    },
+    {
+      "name": "320px service-closure filter + year 2024 + Fukuoka retains only Miyama",
+      "result": "pass",
+      "case_ids": [
+        "mlit_miyama"
+      ],
+      "content_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "name": "390px Ibaraki continuation filter leads to Sakai detail: ordinary-car substitution continues the service",
+      "result": "pass",
+      "case_id": "V-C02"
+    }
+  ]
+}
