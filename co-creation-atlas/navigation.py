@@ -13,6 +13,7 @@ GROUPS = [
         ('共創の基礎を学ぶ', BASE+'learn/first-co-creation/', '共創を始めるための考え方'),
     ]),
     ('まちを育てる', [
+        ('行きたくなる場所を探す', BASE+'destination-experiences/', '食と体験・150の事例'),
         ('まちづくりの事例を探す', BASE+'?lens=place#explore', 'まちづくり・地域運営'),
         ('まちづくりの事例を比較する', BASE+'learn/choose/?lens=place', '対象地域・担い手・維持管理・変化'),
         ('まちづくりの基礎を学ぶ', BASE+'learn/#town', '暮らしと地域から考える'),
