@@ -1,0 +1,47 @@
+{
+  "checked_on": "2026-11-01",
+  "engine": "Cloud Chrome",
+  "desktop_viewport_observed": {
+    "document_width": 1348,
+    "scroll_width": 1348
+  },
+  "responsive_frames": [
+    {
+      "css_width": 390,
+      "document_width": 375,
+      "scroll_width": 375,
+      "horizontal_overflow": false,
+      "pages": [
+        "municipal",
+        "policy"
+      ]
+    },
+    {
+      "css_width": 320,
+      "document_width": 305,
+      "scroll_width": 305,
+      "horizontal_overflow": false,
+      "pages": [
+        "municipal",
+        "policy"
+      ]
+    }
+  ],
+  "passed_flows": [
+    "公開版とmainのHTML・地図JS・状態地図CSS・表示データのバイト照合",
+    "函館検索→2案件、詳細→戻る→再読込で条件維持",
+    "都道府県地図→北海道→函館市01202→2案件",
+    "全2,120原票→実績確認153原票→詳細",
+    "政策maas_japan→対応採択135原票・実績11点検記録へ",
+    "313出来事→2025年62出来事→個別イベントへ直リンク→再読込",
+    "函館の利用件数・延べ乗車・費用・原典・年月年表",
+    "単一HTMLの自治体別・政策別切替、詳細、元の政策一覧に戻る、照合結果"
+  ],
+  "not_verified": [
+    "実機iOS/Safariの操作",
+    "原典1,022URLの全数HTTP再監査・全図表の独立再読解"
+  ],
+  "production_deployed": false,
+  "main_merged": false,
+  "application_runtime_dependencies_added": 0
+}

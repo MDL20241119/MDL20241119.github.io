@@ -1,0 +1,73 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Every original record ID has exactly one indexed detail in its own layer",
+      "result": "pass",
+      "controls": {
+        "deep": 72,
+        "selection": 2120,
+        "reference": 497,
+        "review": 343,
+        "local": 100,
+        "legacy": 111,
+        "history": 3041
+      }
+    },
+    {
+      "name": "All 72 result screens retain all 724 claim IDs, 313 event IDs, source IDs and raw date labels",
+      "result": "pass",
+      "claims": 724,
+      "events": 313
+    },
+    {
+      "name": "Every selection, reference, review and local record screen renders",
+      "result": "pass",
+      "rendered": 6101
+    },
+    {
+      "name": "Official report classification remains separate from result evidence",
+      "result": "pass",
+      "counts": {
+        "outcome_result": 153,
+        "outcome_not_obtained": 186,
+        "partial_implementation_result": 1,
+        "termination_only": 1,
+        "study_result": 1,
+        "interim_result": 1
+      }
+    },
+    {
+      "name": "Review event sources all have matching visible source anchors",
+      "result": "pass",
+      "refs": 216
+    },
+    {
+      "name": "Result context, evaluation, challenges and target gaps appear on every reviewed detail",
+      "result": "pass",
+      "checked": 156
+    },
+    {
+      "name": "Filters return exact input memberships and keep training separate",
+      "result": "pass"
+    },
+    {
+      "name": "Pagination reaches every selection and reference without truncation",
+      "result": "pass"
+    },
+    {
+      "name": "Plans do not become results; corrected cross-year rates and latency denominator stay intact",
+      "result": "pass"
+    },
+    {
+      "name": "Public projections have no Drive links, private input ids, credentials, external scripts or source maps",
+      "result": "pass"
+    },
+    {
+      "name": "Default data requests stay below 100KB and never load raw 24MB JSON",
+      "result": "pass",
+      "bootstrap_plus_deep_index_bytes": 44067
+    }
+  ]
+}
