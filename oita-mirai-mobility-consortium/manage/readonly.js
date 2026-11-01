@@ -64,7 +64,7 @@ function conciseDetail(t){
  return text.trim();
 }
 function shortStatus(t){if(t.sendStatus&&t.status==='unconfirmed')return '送信'+t.sendStatus;return {unconfirmed:'未確認',incomplete:'未完了',policy:'利用者の基本方針（団体承認前）'}[t.status]||STATUS[t.status]}
-function taskTable(tasks,today,context='all'){
+function fullTaskTable(tasks,today,context='all'){
  const {wrap,tbody}=table(['番号','何を','誰に','誰が','いつまでに','状況'],'task-table');
  for(const t of tasks){
   const row=el('tr');row.id=context==='all'?t.id:context+'-'+t.id;row.dataset.taskId=t.id;
@@ -112,16 +112,28 @@ function taskTable(tasks,today,context='all'){
  }
  return wrap;
 }
+function taskTable(tasks,today,context='all'){
+ const list=el('div',null,'compact-task-list');
+ for(const t of tasks){const row=el('details',null,'compact-task');row.id=context==='all'?t.id:context+'-'+t.id;row.dataset.taskId=t.id;
+ const summary=el('summary');summary.append(el('b',t.number||t.id,'compact-id'),el('span',t.title,'compact-title'));
+ const meta=el('span',null,'compact-meta');meta.append(el('span',t.ownerTeam||'担当未定'),el('span','期限：'+dueText(t,today)));summary.append(meta);
+ const state=el('span',shortStatus(t),'status');state.dataset.status=t.status;state.title=STATUS[t.status];summary.append(state,el('span','＋','compact-plus'));
+ const body=el('div',null,'compact-task-body');body.append(fullTaskTable([t],today,'detail-'+context));row.append(summary,body);if(overdue(t,today))row.classList.add('task-overdue');list.append(row);
+ }return list;
+}
+let activeGoal='01';
 function filters(){return {view,query:$('search').value,phase:$('phase').value,owner:$('owner').value,region:$('region').value,status:$('status').value,sort:$('sort').value}}
 function draw(){
  if(!data)return;const today=todayJST(),start=weekStart(today);lastDay=today;
  const f=filters(),tasks=selected(data.tasks,f,today),completed=selected(data.tasks,{...f,view:'completed'},today);
  $('week-label').textContent=`${labelDate(start)}–${labelDate(addDays(start,6))} ／ 日本時間`;
  const groups=el('div',null,'task-groups');
- const filtering=!!(f.query||f.owner||f.region||f.status||f.phase||f.view!=='all');
+ const filtering=!!(f.query||f.owner||f.region||f.status||f.phase);
+ document.querySelectorAll('[data-goal-tab]').forEach(b=>b.setAttribute('aria-pressed',String(!filtering&&b.dataset.goalTab===activeGoal)));
  for(const group of data.groups||[]){
+  if(!filtering&&group.id!==activeGoal)continue;
   const active=tasks.filter(t=>t.goalId===group.id),done=completed.filter(t=>t.goalId===group.id);
-  const section=el('details',null,'goal-section');section.id='goal-'+group.id;section.open=filtering?active.length+done.length>0:expandedGoals.has(group.id);
+  const section=el('details',null,'goal-section');section.id='goal-'+group.id;section.open=true;
   const heading=el('summary',null,'goal-heading'),h=el('h2'),wording=el('span',null,'goal-wording');
   if(group.id==='01')wording.append(el('span','コンソーシアムを','goal-context'),el('strong','設立する','goal-keyword'));
   else if(group.id==='02'){const title=el('span',null,'goal-main');title.append(el('strong','人材育成','goal-keyword'),el('span','を実施する','goal-action'));wording.append(title,el('span',group.subtitle,'goal-subtitle'));}
@@ -130,12 +142,12 @@ function draw(){
   const count=el('span',null,'goal-count');count.append(el('strong',active.length+done.length),el('span','件'));if(done.length)count.append(el('small','完了 '+done.length));
   h.append(el('b',group.id,'number'),wording,count,el('span',null,'tree-chevron'));heading.append(h);
   const content=el('div',null,'goal-content');
-  if(group.id==='01'&&root.LaunchChecklist&&data.launchChecklist){content.append(root.LaunchChecklist.render(data.launchChecklist,data.launchComparisons||[]));content.append(el('h3','設立の実行タスク','launch-tasks-heading'));}
   if(active.length)content.append(taskTable(active,today));else if(!done.length)content.append(el('p','該当なし','group-empty'));
   if(done.length){const finished=el('div',null,'completed-tasks');finished.append(el('h3','完了・資料 '+done.length+'件'),taskTable(done,today));content.append(finished);}
   section.append(heading,content);heading.addEventListener('click',()=>{if(section.open)expandedGoals.delete(group.id);else expandedGoals.add(group.id)});groups.append(section);
  }
  $('items').replaceChildren(groups);
+ const shown=tasks.concat(completed).filter(t=>filtering||t.goalId===activeGoal).length; $('category-count').textContent=(filtering?'全分類の検索結果':({'01':'設立','02':'人材育成','03':'仲間づくり'}[activeGoal]))+' '+shown+'件';
  const weekTasks=selected(data.tasks,{...f,view:'week'},today);
  $('weekly-items').replaceChildren(weekTasks.length?taskTable(weekTasks,today,'weekly'):el('p','この条件で今週に該当するタスクはありません。','weekly-empty'));
  $('weekly-total').textContent=weekTasks.length+'件';
@@ -143,8 +155,8 @@ function draw(){
  $('undated-items').replaceChildren(undatedTasks.length?taskTable(undatedTasks,today,'undated'):el('p','該当なし','weekly-empty'));
  $('undated-total').textContent=undatedTasks.length+'件';
  $('weekly-note').textContent='同じタスクを抽出。予定週と期限は別管理。超過・確認待ちは継続表示。';
- $('count').textContent=`未完了 ${tasks.length} ／ 完了 ${completed.length} ／ 全 ${data.tasks.length}件`;
- $('empty').hidden=tasks.length+completed.length!==0;
+ $('count').textContent=`全分類：未完了 ${tasks.length} ／ 完了 ${completed.length} ／ 全 ${data.tasks.length}件`;
+ $('empty').hidden=shown!==0;
  $('show-unscheduled').hidden=view!=='week'||!selected(data.tasks,{...f,view:'undated'},today).length;
  for(const v of ['week','overdue','review','all','undated','hold'])$(v+'-count').textContent=String(selected(data.tasks,{...f,view:v},today).length);
  document.querySelectorAll('[data-view]').forEach(button=>button.setAttribute('aria-pressed',String(button.dataset.view===view)));
@@ -155,11 +167,13 @@ function drawOperations(){const grid=el('div',null,'operation-grid');data.operat
 function drawHistory(){const box=el('div',null,'history-list');let n=0;for(const snapshot of data.history||[]){const group=el('details');group.append(el('summary',snapshot.asOf.slice(0,10)+' 更新前の記録 '+(snapshot.tasks||[]).length+'件'));if(snapshot.note)group.append(el('p',snapshot.note));if(snapshot.changedTaskIds?.length)group.append(el('small','変更対象：'+snapshot.changedTaskIds.join('、')));for(const t of snapshot.tasks||[]){const article=el('article');article.append(el('small',t.id+' ／ '+(t.group||t.goal||'')+' ／ '+(STATUS[t.status]||t.status)),el('h3',t.title),el('p',t.detail),el('small','当時の担当：'+(t.ownerTeam||t.owner||'未定')+' ／ 当時の期限：'+(t.due||labelDate(t.dueDate))));if(t.source)article.append(link('当時の参照資料 ↗',t.source));group.append(article);n++}box.append(group)}$('history-items').replaceChildren(box);$('history-count').textContent=String(n)}
 function drawOutreach(){const {wrap,tbody}=table(['企業・団体名','窓口','主担当','状況','次の行動','期限'],'outreach-table');const row=el('tr'),cell=el('td','非公開保存先は未接続。');cell.colSpan=6;row.append(cell);tbody.append(row);$('outreach-list').replaceChildren(wrap)}
 function drawProgramme(){const schedule=el('div',null,'schedule-months');for(const month of data.programmeSchedule?.months||[]){const article=el('article');article.append(el('b',month.month),el('p',month.activity));schedule.append(article)}$('programme-schedule').replaceChildren(el('p','月別案（未合意・期限とは別）','small-note'),schedule);const {wrap,tbody}=table(['テーマ','実施条件・確認内容','担当','状況','期限'],'theme-table');for(const theme of data.themePlans||[]){const row=el('tr');td(row,'テーマ').append(el('b',theme.title));td(row,'実施条件・確認内容').append(el('p',theme.detail));td(row,'担当').append(el('span',theme.ownerTeam||'未定'));td(row,'状況').append(el('span',theme.status,'status'));td(row,'期限').append(el('span',labelDate(theme.dueDate)));tbody.append(row)}$('theme-plans').replaceChildren(wrap)}
-for(const [id,open] of [['tree-open',true],['tree-close',false]])$(id).addEventListener('click',()=>{for(const section of document.querySelectorAll('#items > .task-groups > .goal-section')){section.open=open;const goalId=section.id.slice(5);if(open)expandedGoals.add(goalId);else expandedGoals.delete(goalId)}});
+for(const [id,open] of [['tree-open',true],['tree-close',false]])$(id).addEventListener('click',()=>{for(const row of document.querySelectorAll('#items .compact-task'))row.open=open;});
+document.querySelectorAll('[data-goal-tab]').forEach(button=>button.addEventListener('click',()=>{activeGoal=button.dataset.goalTab;for(const id of ['search','phase','owner','region','status'])$(id).value='';history.replaceState(null,'','#goal-'+activeGoal);draw();}));
 for(const id of ['search','phase','owner','region','status','sort'])$(id).addEventListener(id==='search'?'input':'change',draw);
-document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{view=button.dataset.view;draw()}));$('show-unscheduled').addEventListener('click',()=>{$('undated').open=true;$('undated').scrollIntoView({block:'start'})});$('reset').addEventListener('click',()=>{for(const id of ['search','phase','owner','region','status'])$(id).value='';$('sort').value='number';view='all';draw();$('search').focus()});
-fetch('./tasks.json',{cache:'no-store',credentials:'omit'}).then(r=>{if(!r.ok)throw Error('表示データを取得できません');return r.json()}).then(value=>{data=validate(value);$('data-date').textContent='整理日 '+value.asOf.slice(0,10).replaceAll('-','.');for(const [key,label] of Object.entries(STATUS)){const o=el('option',label);o.value=key;$('status').append(o)}for(const region of [...new Set(data.tasks.map(t=>t.region).filter(Boolean))]){const o=el('option',region);o.value=region;$('region').append(o)}draw();drawChecklist();drawOperations();drawHistory();drawOutreach();drawProgramme()}).catch(()=>{$('count').textContent='表示データを読み込めませんでした。再読み込みするか、構想説明書をご確認ください。'});
+document.querySelectorAll('[data-view]').forEach(button=>button.addEventListener('click',()=>{view=button.dataset.view;draw()}));$('show-unscheduled').addEventListener('click',()=>{$('supporting-info').open=true;$('undated').open=true;$('undated').scrollIntoView({block:'start'})});$('reset').addEventListener('click',()=>{for(const id of ['search','phase','owner','region','status'])$(id).value='';$('sort').value='number';view='all';draw();$('search').focus()});
+fetch('./tasks.json',{cache:'no-store',credentials:'omit'}).then(r=>{if(!r.ok)throw Error('表示データを取得できません');return r.json()}).then(value=>{data=validate(value);$('data-date').textContent='整理日 '+value.asOf.slice(0,10).replaceAll('-','.');for(const [key,label] of Object.entries(STATUS)){const o=el('option',label);o.value=key;$('status').append(o)}for(const region of [...new Set(data.tasks.map(t=>t.region).filter(Boolean))]){const o=el('option',region);o.value=region;$('region').append(o)}draw();drawChecklist();drawOperations();drawHistory();drawOutreach();drawProgramme();selectHash()}).catch(()=>{$('count').textContent='表示データを読み込めませんでした。再読み込みするか、構想説明書をご確認ください。'});
 setInterval(()=>{if(document.visibilityState==='visible'&&todayJST()!==lastDay)draw()},30000);document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')draw()});
-function revealSection(){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch(_){return}const target=document.getElementById(id);if(!target)return;if(target.tagName==='DETAILS')target.open=true;let parent=target.parentElement;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement}}window.addEventListener('hashchange',revealSection);revealSection();
+function revealSection(){let id;try{id=decodeURIComponent(location.hash.slice(1))}catch(_){return}const target=document.getElementById(id);if(!target)return;if(target.tagName==='DETAILS')target.open=true;let parent=target.parentElement;while(parent){if(parent.tagName==='DETAILS')parent.open=true;parent=parent.parentElement}}function selectHash(){const m=location.hash.match(/^#(?:goal-)?(0[123])(?:-|$)/);if(m&&activeGoal!==m[1]){activeGoal=m[1];if(data)draw();}revealSection();}window.addEventListener('hashchange',selectHash);selectHash();
 })(globalThis);
+
 
