@@ -1,0 +1,222 @@
+{
+  "pdfs": [
+    {
+      "filename": "日本のモビリティ施策と実証の10年_2016_2026.pdf",
+      "pages": 94,
+      "pages_extracted": 94,
+      "characters": 98421,
+      "empty_text_pages": [],
+      "scope": "全ページのテキスト解析。全図表の独立目視再監査ではない。"
+    },
+    {
+      "filename": "日本モビリティ政策_結果報告と時系列_20261101.pdf",
+      "pages": 79,
+      "pages_extracted": 79,
+      "characters": 63257,
+      "empty_text_pages": [],
+      "scope": "全ページのテキスト解析。全図表の独立目視再監査ではない。"
+    },
+    {
+      "filename": "日本モビリティ政策_拡張調査報告_20261101.pdf",
+      "pages": 10,
+      "pages_extracted": 10,
+      "characters": 6910,
+      "empty_text_pages": [],
+      "scope": "全ページのテキスト解析。全図表の独立目視再監査ではない。"
+    }
+  ],
+  "workbooks": [
+    {
+      "filename": "日本モビリティ政策_採択原票拡張台帳_20261101.xlsx",
+      "sheets": [
+        {
+          "name": "読み方",
+          "parsed_rows_including_titles_and_blanks": 38,
+          "nonblank_rows": 25
+        },
+        {
+          "name": "政策年度coverage",
+          "parsed_rows_including_titles_and_blanks": 225,
+          "nonblank_rows": 222
+        },
+        {
+          "name": "全採択records",
+          "parsed_rows_including_titles_and_blanks": 2126,
+          "nonblank_rows": 2123
+        },
+        {
+          "name": "運行等参照records",
+          "parsed_rows_including_titles_and_blanks": 503,
+          "nonblank_rows": 500
+        },
+        {
+          "name": "既存との対応",
+          "parsed_rows_including_titles_and_blanks": 183,
+          "nonblank_rows": 180
+        },
+        {
+          "name": "自治体索引",
+          "parsed_rows_including_titles_and_blanks": 1747,
+          "nonblank_rows": 1744
+        },
+        {
+          "name": "年度履歴",
+          "parsed_rows_including_titles_and_blanks": 3047,
+          "nonblank_rows": 3044
+        },
+        {
+          "name": "地域表記索引",
+          "parsed_rows_including_titles_and_blanks": 1336,
+          "nonblank_rows": 1333
+        },
+        {
+          "name": "出典",
+          "parsed_rows_including_titles_and_blanks": 531,
+          "nonblank_rows": 528
+        },
+        {
+          "name": "未取得",
+          "parsed_rows_including_titles_and_blanks": 269,
+          "nonblank_rows": 266
+        }
+      ]
+    },
+    {
+      "filename": "日本のモビリティ施策_追跡年表台帳_20261031.xlsx",
+      "sheets": [
+        {
+          "name": "年表",
+          "parsed_rows_including_titles_and_blanks": 474,
+          "nonblank_rows": 472
+        },
+        {
+          "name": "事例",
+          "parsed_rows_including_titles_and_blanks": 118,
+          "nonblank_rows": 115
+        },
+        {
+          "name": "政策制度",
+          "parsed_rows_including_titles_and_blanks": 73,
+          "nonblank_rows": 70
+        },
+        {
+          "name": "出典",
+          "parsed_rows_including_titles_and_blanks": 348,
+          "nonblank_rows": 345
+        }
+      ]
+    },
+    {
+      "filename": "日本モビリティ政策_結果時系列_検索台帳_20261101.xlsx",
+      "sheets": [
+        {
+          "name": "結果一覧",
+          "parsed_rows_including_titles_and_blanks": 78,
+          "nonblank_rows": 75
+        },
+        {
+          "name": "観測と費用",
+          "parsed_rows_including_titles_and_blanks": 514,
+          "nonblank_rows": 511
+        },
+        {
+          "name": "時系列",
+          "parsed_rows_including_titles_and_blanks": 319,
+          "nonblank_rows": 316
+        },
+        {
+          "name": "公募と採択",
+          "parsed_rows_including_titles_and_blanks": 150,
+          "nonblank_rows": 147
+        },
+        {
+          "name": "公式資料点検",
+          "parsed_rows_including_titles_and_blanks": 349,
+          "nonblank_rows": 346
+        },
+        {
+          "name": "追加結果の経過",
+          "parsed_rows_including_titles_and_blanks": 222,
+          "nonblank_rows": 219
+        },
+        {
+          "name": "原典",
+          "parsed_rows_including_titles_and_blanks": 642,
+          "nonblank_rows": 639
+        },
+        {
+          "name": "範囲と読み方",
+          "parsed_rows_including_titles_and_blanks": 50,
+          "nonblank_rows": 38
+        }
+      ]
+    }
+  ],
+  "id_checks": [
+    {
+      "label": "追加詳査案件",
+      "json_ids": 72,
+      "xlsx_ids": 72,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "追加詳査出来事",
+      "json_ids": 313,
+      "xlsx_ids": 313,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "公式掲載資料の点検",
+      "json_ids": 343,
+      "xlsx_ids": 343,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "採択・支援原票",
+      "json_ids": 2120,
+      "xlsx_ids": 2120,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "運行等参照原票",
+      "json_ids": 497,
+      "xlsx_ids": 497,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "全国自治体マスタ",
+      "json_ids": 1741,
+      "xlsx_ids": 1741,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "旧事例",
+      "json_ids": 111,
+      "xlsx_ids": 111,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "旧政策制度",
+      "json_ids": 66,
+      "xlsx_ids": 66,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    },
+    {
+      "label": "旧イベント",
+      "json_ids": 467,
+      "xlsx_ids": 467,
+      "missing_ids": [],
+      "duplicate_ids": 0
+    }
+  ],
+  "unreadable_inputs": [],
+  "status": "pass"
+}

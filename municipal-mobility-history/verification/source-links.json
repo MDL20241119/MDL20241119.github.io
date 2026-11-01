@@ -1,0 +1,81 @@
+{
+  "checked_on": "2026-11-01",
+  "distinct_urls_syntax_checked": 1022,
+  "invalid_urls": [],
+  "connection_check_scope": "代表URLのHEAD接続確認のみ。全URLの本文再読解・全数HTTP監査ではない。",
+  "connection_checks": [
+    {
+      "url": "https://www.city.hakodate.hokkaido.jp/docs/2024080200035/file_contents/R6_Report.pdf",
+      "status": 200,
+      "resolved_url": "https://www.city.hakodate.hokkaido.jp/docs/2024080200035/file_contents/R6_Report.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.city.kawagoe.saitama.jp/_res/projects/default_project/_page_/001/008/916/06.pdf",
+      "status": 200,
+      "resolved_url": "https://www.city.kawagoe.saitama.jp/_res/projects/default_project/_page_/001/008/916/06.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.town.toyono.osaka.jp/kurashi/seikatsu-infura/koukyou-koutsuu/koutsuukikan/page007629.html",
+      "status": 200,
+      "resolved_url": "https://www.town.toyono.osaka.jp/kurashi/seikatsu-infura/koukyou-koutsuu/koutsuukikan/page007629.html",
+      "content_type": "text/html"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891586.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891586.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891589.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891589.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891602.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891602.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891590.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891590.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891592.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891592.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891603.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891603.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891587.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891587.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891600.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891600.pdf",
+      "content_type": "application/pdf"
+    },
+    {
+      "url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891604.pdf",
+      "status": 200,
+      "resolved_url": "https://www.mlit.go.jp/sogoseisaku/transport/content/001891604.pdf",
+      "content_type": "application/pdf"
+    }
+  ],
+  "interpretation": "接続不可は資料不存在や記述の誤りを意味しない。原URLを保持。"
+}
