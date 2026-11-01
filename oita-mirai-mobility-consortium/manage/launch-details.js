@@ -1,1 +1,1 @@
-fetch('./tasks.json',{cache:'no-store',credentials:'omit'}).then(r=>{if(!r.ok)throw Error('load');return r.json()}).then(d=>document.getElementById('detail-list').replaceChildren(LaunchChecklist.render(d.launchChecklist,d.launchComparisons))).catch(()=>{document.getElementById('detail-list').textContent='表示データを読み込めません。1枚シートへお戻りください。';});
+location.replace('./launch-summary.html'+location.hash);
