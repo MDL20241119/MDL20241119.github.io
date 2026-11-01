@@ -6,3 +6,8 @@ body[data-municipal] .header nav a{min-height:44px;display:inline-flex;align-ite
 @media(max-width:600px){body[data-municipal] .header nav{gap:18px;overflow-x:auto;flex-wrap:nowrap;justify-content:flex-start;padding-bottom:4px}body[data-municipal] .header nav a{font-size:12px;flex:none;padding:8px 0}.m-root .m-ref{min-height:32px;padding:6px 8px}.m-root{scroll-margin-top:145px}}
 
 .m-program-filter{margin-top:18px;max-width:100%}
+
+/* Additive result-first detail refinements; existing map and archive styling retained. */
+.m-root .m-background{margin:30px 0;padding:18px 0}.m-root .m-background .m-call-grid{padding-top:22px}.m-root .m-background h2{font-size:22px}.m-root .m-metric-heading{font-size:20px;margin:26px 0 14px}.m-root .m-table-wrap td{overflow-wrap:anywhere}
+/* Keep narrow metric tables readable without widening the page. */
+@media(max-width:680px){.m-root .m-detail-layout>article{min-width:0}.m-root .m-table-wrap{max-width:100%;min-width:0;overflow-x:auto;-webkit-overflow-scrolling:touch}.m-root .m-table-wrap table{min-width:640px}.m-root .m-table-wrap td:last-child{min-width:150px}}

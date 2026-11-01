@@ -1,0 +1,3083 @@
+{
+  "baseline_commit": "0d444f70842786d98e9495fd24abf300aeda7de7",
+  "baseline_cases": {
+    "NORTH-R-01": {
+      "detail_sha256": "13d0bba4ee25657f43831e0df4761e22075f81ff377e41f3065c2b66ffc8346d",
+      "claim_ids": [
+        "NORTH-R-01-CL-01",
+        "NORTH-R-01-CL-02",
+        "NORTH-R-01-CL-03",
+        "NORTH-R-01-CL-04",
+        "NORTH-R-01-CL-05",
+        "NORTH-R-01-CL-06",
+        "NORTH-R-01-CL-07",
+        "NORTH-R-01-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-01-EV-01",
+        "NORTH-R-01-EV-02",
+        "NORTH-R-01-EV-03",
+        "NORTH-R-01-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-H-AI"
+      ]
+    },
+    "NORTH-R-02": {
+      "detail_sha256": "4f69343029b8295d70b44cca22f03861e6be7802b971cf4ac8b40700a6b159e3",
+      "claim_ids": [
+        "NORTH-R-02-CL-01",
+        "NORTH-R-02-CL-02",
+        "NORTH-R-02-CL-03",
+        "NORTH-R-02-CL-04",
+        "NORTH-R-02-CL-05",
+        "NORTH-R-02-CL-06",
+        "NORTH-R-02-CL-07",
+        "NORTH-R-02-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-02-EV-01",
+        "NORTH-R-02-EV-02",
+        "NORTH-R-02-EV-03",
+        "NORTH-R-02-EV-04",
+        "NORTH-R-02-EV-05"
+      ],
+      "source_ids": [
+        "NORTH-N-H-GSM"
+      ]
+    },
+    "NORTH-R-03": {
+      "detail_sha256": "01de1df3e6239de998bc482a0405e5a5410f23fd8c21f56e83ab99ee94012d62",
+      "claim_ids": [
+        "NORTH-R-03-CL-01",
+        "NORTH-R-03-CL-02",
+        "NORTH-R-03-CL-03",
+        "NORTH-R-03-CL-04",
+        "NORTH-R-03-CL-05",
+        "NORTH-R-03-CL-06",
+        "NORTH-R-03-CL-07",
+        "NORTH-R-03-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-03-EV-01",
+        "NORTH-R-03-EV-02",
+        "NORTH-R-03-EV-03",
+        "NORTH-R-03-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-AKITA",
+        "NORTH-N-AKITA-C"
+      ]
+    },
+    "NORTH-R-04": {
+      "detail_sha256": "106fc00aa54b6afcf1a2df6675a169a3628a1e060ecf122da7d5474d8a6df937",
+      "claim_ids": [
+        "NORTH-R-04-CL-01",
+        "NORTH-R-04-CL-02",
+        "NORTH-R-04-CL-03",
+        "NORTH-R-04-CL-04",
+        "NORTH-R-04-CL-05",
+        "NORTH-R-04-CL-06",
+        "NORTH-R-04-CL-07",
+        "NORTH-R-04-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-04-EV-01",
+        "NORTH-R-04-EV-02",
+        "NORTH-R-04-EV-03",
+        "NORTH-R-04-EV-04",
+        "NORTH-R-04-EV-05",
+        "NORTH-R-04-EV-06",
+        "NORTH-R-04-EV-07",
+        "NORTH-R-04-EV-08",
+        "NORTH-R-04-EV-09"
+      ],
+      "source_ids": [
+        "NORTH-N-KIRYU",
+        "NORTH-N-KIRYU-R7"
+      ]
+    },
+    "NORTH-R-05": {
+      "detail_sha256": "a2f2f782dd6a138c1be76c5122890679d96bf5b99f3278a4ff7eff6535128235",
+      "claim_ids": [
+        "NORTH-R-05-CL-01",
+        "NORTH-R-05-CL-02",
+        "NORTH-R-05-CL-03",
+        "NORTH-R-05-CL-04",
+        "NORTH-R-05-CL-05",
+        "NORTH-R-05-CL-06",
+        "NORTH-R-05-CL-07",
+        "NORTH-R-05-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-05-EV-01",
+        "NORTH-R-05-EV-02",
+        "NORTH-R-05-EV-03",
+        "NORTH-R-05-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-ISHI-R3",
+        "NORTH-N-ISHI-R3-P",
+        "NORTH-N-ISHI-R4"
+      ]
+    },
+    "NORTH-R-06": {
+      "detail_sha256": "6665af02e02123a2e670d6f818bc4d15650264e8a4022d264027be879a163e25",
+      "claim_ids": [
+        "NORTH-R-06-CL-01",
+        "NORTH-R-06-CL-02",
+        "NORTH-R-06-CL-03",
+        "NORTH-R-06-CL-04",
+        "NORTH-R-06-CL-05",
+        "NORTH-R-06-CL-06",
+        "NORTH-R-06-CL-07",
+        "NORTH-R-06-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-06-EV-01",
+        "NORTH-R-06-EV-02",
+        "NORTH-R-06-EV-03",
+        "NORTH-R-06-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-ISHI-R4"
+      ]
+    },
+    "NORTH-R-07": {
+      "detail_sha256": "2e93bbea287efb446ec03992040de113edfa26d620856ba7c66300bff01fc7ae",
+      "claim_ids": [
+        "NORTH-R-07-CL-01",
+        "NORTH-R-07-CL-02",
+        "NORTH-R-07-CL-03",
+        "NORTH-R-07-CL-04",
+        "NORTH-R-07-CL-05",
+        "NORTH-R-07-CL-06",
+        "NORTH-R-07-CL-07",
+        "NORTH-R-07-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-07-EV-01",
+        "NORTH-R-07-EV-02",
+        "NORTH-R-07-EV-03"
+      ],
+      "source_ids": [
+        "NORTH-N-OFUNATO"
+      ]
+    },
+    "NORTH-R-08": {
+      "detail_sha256": "d58b05afe609c9113ff3884149834839425f075cedc0adb1a2c1e59719c48726",
+      "claim_ids": [
+        "NORTH-R-08-CL-01",
+        "NORTH-R-08-CL-02",
+        "NORTH-R-08-CL-03",
+        "NORTH-R-08-CL-04",
+        "NORTH-R-08-CL-05",
+        "NORTH-R-08-CL-06",
+        "NORTH-R-08-CL-07",
+        "NORTH-R-08-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-08-EV-01",
+        "NORTH-R-08-EV-02"
+      ],
+      "source_ids": [
+        "NORTH-N-OFUNATO"
+      ]
+    },
+    "NORTH-R-09": {
+      "detail_sha256": "5c42169ffe10e9e4f05a4f966e9493d44029d3c4af57df015839afdd80b0926f",
+      "claim_ids": [
+        "NORTH-R-09-CL-01",
+        "NORTH-R-09-CL-02",
+        "NORTH-R-09-CL-03",
+        "NORTH-R-09-CL-04",
+        "NORTH-R-09-CL-05",
+        "NORTH-R-09-CL-06",
+        "NORTH-R-09-CL-07",
+        "NORTH-R-09-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-09-EV-01",
+        "NORTH-R-09-EV-02",
+        "NORTH-R-09-EV-03"
+      ],
+      "source_ids": [
+        "NORTH-N-OFUNATO"
+      ]
+    },
+    "NORTH-R-10": {
+      "detail_sha256": "3e2cb5f0973de26b7d475ff5258ce6b39066bcaf9f04f3c392295558d0b14d6a",
+      "claim_ids": [
+        "NORTH-R-10-CL-01",
+        "NORTH-R-10-CL-02",
+        "NORTH-R-10-CL-03",
+        "NORTH-R-10-CL-04",
+        "NORTH-R-10-CL-05",
+        "NORTH-R-10-CL-06",
+        "NORTH-R-10-CL-07",
+        "NORTH-R-10-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-10-EV-01",
+        "NORTH-R-10-EV-02",
+        "NORTH-R-10-EV-03",
+        "NORTH-R-10-EV-04",
+        "NORTH-R-10-EV-05"
+      ],
+      "source_ids": [
+        "NORTH-N-KESEN"
+      ]
+    },
+    "NORTH-R-11": {
+      "detail_sha256": "1c019b2184edc15cbcd5a8ab5073f1cb8c91ee747d388e2a0d745ebddb1858fb",
+      "claim_ids": [
+        "NORTH-R-11-CL-01",
+        "NORTH-R-11-CL-02",
+        "NORTH-R-11-CL-03",
+        "NORTH-R-11-CL-04",
+        "NORTH-R-11-CL-05",
+        "NORTH-R-11-CL-06",
+        "NORTH-R-11-CL-07",
+        "NORTH-R-11-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-11-EV-01",
+        "NORTH-R-11-EV-02",
+        "NORTH-R-11-EV-03",
+        "NORTH-R-11-EV-04",
+        "NORTH-R-11-EV-05"
+      ],
+      "source_ids": [
+        "NORTH-N-KESEN",
+        "NORTH-N-KESEN-C",
+        "NORTH-N-KESEN-E"
+      ]
+    },
+    "NORTH-R-12": {
+      "detail_sha256": "c83a0b071ba0850685d879565d527a28afe1c1a10e29dcb91e7c955a9dbda1c1",
+      "claim_ids": [
+        "NORTH-R-12-CL-01",
+        "NORTH-R-12-CL-02",
+        "NORTH-R-12-CL-03",
+        "NORTH-R-12-CL-04",
+        "NORTH-R-12-CL-05",
+        "NORTH-R-12-CL-06",
+        "NORTH-R-12-CL-07",
+        "NORTH-R-12-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-12-EV-01",
+        "NORTH-R-12-EV-02",
+        "NORTH-R-12-EV-03",
+        "NORTH-R-12-EV-04",
+        "NORTH-R-12-EV-05"
+      ],
+      "source_ids": [
+        "NORTH-N-KORI",
+        "NORTH-N-KORI-C"
+      ]
+    },
+    "NORTH-R-13": {
+      "detail_sha256": "cafcd57a6fd259535b05549a42c8109495860d43a3c33caeb60ae6e9baa7915b",
+      "claim_ids": [
+        "NORTH-R-13-CL-01",
+        "NORTH-R-13-CL-02",
+        "NORTH-R-13-CL-03",
+        "NORTH-R-13-CL-04",
+        "NORTH-R-13-CL-05",
+        "NORTH-R-13-CL-06",
+        "NORTH-R-13-CL-07",
+        "NORTH-R-13-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-13-EV-01",
+        "NORTH-R-13-EV-02",
+        "NORTH-R-13-EV-03",
+        "NORTH-R-13-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-SAKATA"
+      ]
+    },
+    "NORTH-R-14": {
+      "detail_sha256": "d3c90a8edf91daab3804fc603af0d9de977cdc54ef7e98a162216e942e37412f",
+      "claim_ids": [
+        "NORTH-R-14-CL-01",
+        "NORTH-R-14-CL-02",
+        "NORTH-R-14-CL-03",
+        "NORTH-R-14-CL-04",
+        "NORTH-R-14-CL-05",
+        "NORTH-R-14-CL-06",
+        "NORTH-R-14-CL-07",
+        "NORTH-R-14-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-14-EV-01",
+        "NORTH-R-14-EV-02",
+        "NORTH-R-14-EV-03",
+        "NORTH-R-14-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-AOMORI",
+        "NORTH-N-AOMORI-C"
+      ]
+    },
+    "NORTH-R-15": {
+      "detail_sha256": "d78861856c7c0ee65a06cb4e45b8aeab6902a239d64f898e80790698366ad71d",
+      "claim_ids": [
+        "NORTH-R-15-CL-01",
+        "NORTH-R-15-CL-02",
+        "NORTH-R-15-CL-03",
+        "NORTH-R-15-CL-04",
+        "NORTH-R-15-CL-05",
+        "NORTH-R-15-CL-06",
+        "NORTH-R-15-CL-07",
+        "NORTH-R-15-CL-08"
+      ],
+      "event_ids": [
+        "NORTH-R-15-EV-01",
+        "NORTH-R-15-EV-02",
+        "NORTH-R-15-EV-03",
+        "NORTH-R-15-EV-04"
+      ],
+      "source_ids": [
+        "NORTH-N-ASHI",
+        "NORTH-N-ASHI-P"
+      ]
+    },
+    "EAST-R-01": {
+      "detail_sha256": "ef5d156aee8eea34cd98d35d788f5eef82f4718fc0d1774e19d1ab2387d5ea4d",
+      "claim_ids": [
+        "EAST-R-01-CL-01",
+        "EAST-R-01-CL-02",
+        "EAST-R-01-CL-03",
+        "EAST-R-01-CL-04",
+        "EAST-R-01-CL-05",
+        "EAST-R-01-CL-06",
+        "EAST-R-01-CL-07",
+        "EAST-R-01-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-01-T1",
+        "EAST-R-01-T2",
+        "EAST-R-01-T3",
+        "EAST-R-01-T4",
+        "EAST-R-01-T5",
+        "EAST-R-01-T6"
+      ],
+      "source_ids": [
+        "EAST-E-kawagoe",
+        "EAST-E-kawagoe_tail"
+      ]
+    },
+    "EAST-R-02": {
+      "detail_sha256": "30114cfcb26e627b951b12a1a5ba03101e911275abfe15b76c3205a6e9981895",
+      "claim_ids": [
+        "EAST-R-02-CL-01",
+        "EAST-R-02-CL-02",
+        "EAST-R-02-CL-03",
+        "EAST-R-02-CL-04",
+        "EAST-R-02-CL-05",
+        "EAST-R-02-CL-06",
+        "EAST-R-02-CL-07",
+        "EAST-R-02-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-02-T1",
+        "EAST-R-02-T2",
+        "EAST-R-02-T3",
+        "EAST-R-02-T4",
+        "EAST-R-02-T5"
+      ],
+      "source_ids": [
+        "EAST-E-kumagaya_result",
+        "EAST-E-kumagaya_page"
+      ]
+    },
+    "EAST-R-03": {
+      "detail_sha256": "0d32870cd390281b71b354683ca29f354ff94396443a1c13b8a3cddae7f17d17",
+      "claim_ids": [
+        "EAST-R-03-CL-01",
+        "EAST-R-03-CL-02",
+        "EAST-R-03-CL-03",
+        "EAST-R-03-CL-04",
+        "EAST-R-03-CL-05",
+        "EAST-R-03-CL-06",
+        "EAST-R-03-CL-07",
+        "EAST-R-03-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-03-T1",
+        "EAST-R-03-T2",
+        "EAST-R-03-T3",
+        "EAST-R-03-T4",
+        "EAST-R-03-T5"
+      ],
+      "source_ids": [
+        "EAST-E-chiyoda",
+        "EAST-E-chiyoda_current"
+      ]
+    },
+    "EAST-R-04": {
+      "detail_sha256": "2ca4785f32cfbe1f2c869a96f9e877f5b3aa2a213cf9f88cf90886cda91055b3",
+      "claim_ids": [
+        "EAST-R-04-CL-01",
+        "EAST-R-04-CL-02",
+        "EAST-R-04-CL-03",
+        "EAST-R-04-CL-04",
+        "EAST-R-04-CL-05",
+        "EAST-R-04-CL-06",
+        "EAST-R-04-CL-07",
+        "EAST-R-04-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-04-T1",
+        "EAST-R-04-T2",
+        "EAST-R-04-T3",
+        "EAST-R-04-T4",
+        "EAST-R-04-T5",
+        "EAST-R-04-T6"
+      ],
+      "source_ids": [
+        "EAST-E-hiratsuka_result",
+        "EAST-E-hiratsuka"
+      ]
+    },
+    "EAST-R-05": {
+      "detail_sha256": "952a40625dc70ad68d442005a0eede7911a68ced8f4bf4f418f77ef6e894a6df",
+      "claim_ids": [
+        "EAST-R-05-CL-01",
+        "EAST-R-05-CL-02",
+        "EAST-R-05-CL-03",
+        "EAST-R-05-CL-04",
+        "EAST-R-05-CL-05",
+        "EAST-R-05-CL-06",
+        "EAST-R-05-CL-07",
+        "EAST-R-05-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-05-T1",
+        "EAST-R-05-T2",
+        "EAST-R-05-T3",
+        "EAST-R-05-T4",
+        "EAST-R-05-T5"
+      ],
+      "source_ids": [
+        "EAST-E-nagaoka"
+      ]
+    },
+    "EAST-R-06": {
+      "detail_sha256": "bb3b9f3b6f955eb0f369e532864804018c834f7f4af7e8fb0077b645f6ebd21e",
+      "claim_ids": [
+        "EAST-R-06-CL-01",
+        "EAST-R-06-CL-02",
+        "EAST-R-06-CL-03",
+        "EAST-R-06-CL-04",
+        "EAST-R-06-CL-05",
+        "EAST-R-06-CL-06",
+        "EAST-R-06-CL-07",
+        "EAST-R-06-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-06-T1",
+        "EAST-R-06-T2",
+        "EAST-R-06-T3",
+        "EAST-R-06-T4",
+        "EAST-R-06-T5"
+      ],
+      "source_ids": [
+        "EAST-E-sanjo"
+      ]
+    },
+    "EAST-R-07": {
+      "detail_sha256": "6bd12d7c7643a6b482db75257a63597af8e023354f28032e9261f4955b3d1357",
+      "claim_ids": [
+        "EAST-R-07-CL-01",
+        "EAST-R-07-CL-02",
+        "EAST-R-07-CL-03",
+        "EAST-R-07-CL-04",
+        "EAST-R-07-CL-05",
+        "EAST-R-07-CL-06",
+        "EAST-R-07-CL-07",
+        "EAST-R-07-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-07-T1",
+        "EAST-R-07-T2",
+        "EAST-R-07-T3"
+      ],
+      "source_ids": [
+        "EAST-E-kaga",
+        "EAST-E-kaga_current"
+      ]
+    },
+    "EAST-R-08": {
+      "detail_sha256": "5bc0d74bcd77299614832c4f80491e23b6eb3b4351c3df93f289361c67e61cf3",
+      "claim_ids": [
+        "EAST-R-08-CL-01",
+        "EAST-R-08-CL-02",
+        "EAST-R-08-CL-03",
+        "EAST-R-08-CL-04",
+        "EAST-R-08-CL-05",
+        "EAST-R-08-CL-06",
+        "EAST-R-08-CL-07",
+        "EAST-R-08-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-08-T1",
+        "EAST-R-08-T2",
+        "EAST-R-08-T3",
+        "EAST-R-08-T4"
+      ],
+      "source_ids": [
+        "EAST-E-obama"
+      ]
+    },
+    "EAST-R-09": {
+      "detail_sha256": "b7e905485c354dfc5f8231862eee13a277fe84955c44dd7d9a76e0ae6f728e8d",
+      "claim_ids": [
+        "EAST-R-09-CL-01",
+        "EAST-R-09-CL-02",
+        "EAST-R-09-CL-03",
+        "EAST-R-09-CL-04",
+        "EAST-R-09-CL-05",
+        "EAST-R-09-CL-06",
+        "EAST-R-09-CL-07",
+        "EAST-R-09-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-09-T1",
+        "EAST-R-09-T2",
+        "EAST-R-09-T3"
+      ],
+      "source_ids": [
+        "EAST-E-yamanashi",
+        "EAST-E-yamanashi_current"
+      ]
+    },
+    "EAST-R-10": {
+      "detail_sha256": "db5cfd976a40d8089669a004967d77de1f64ca85b9dfe3bd853a23a97040d493",
+      "claim_ids": [
+        "EAST-R-10-CL-01",
+        "EAST-R-10-CL-02",
+        "EAST-R-10-CL-03",
+        "EAST-R-10-CL-04",
+        "EAST-R-10-CL-05",
+        "EAST-R-10-CL-06",
+        "EAST-R-10-CL-07",
+        "EAST-R-10-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-10-T1",
+        "EAST-R-10-T2",
+        "EAST-R-10-T3",
+        "EAST-R-10-T7",
+        "EAST-R-10-T8",
+        "EAST-R-10-T9",
+        "EAST-R-10-T4",
+        "EAST-R-10-T5",
+        "EAST-R-10-T6"
+      ],
+      "source_ids": [
+        "EAST-E-shiojiri",
+        "EAST-E-shiojiri_current",
+        "EAST-E-shiojiri_full2024",
+        "EAST-E-shiojiri_routes2025"
+      ]
+    },
+    "EAST-R-11": {
+      "detail_sha256": "c1e96655dcc30701ec8e854484f24ae504a0eaefcd071702fde700575eb330b0",
+      "claim_ids": [
+        "EAST-R-11-CL-01",
+        "EAST-R-11-CL-02",
+        "EAST-R-11-CL-03",
+        "EAST-R-11-CL-04",
+        "EAST-R-11-CL-05",
+        "EAST-R-11-CL-06",
+        "EAST-R-11-CL-07",
+        "EAST-R-11-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-11-T1",
+        "EAST-R-11-T2",
+        "EAST-R-11-T3",
+        "EAST-R-11-T4"
+      ],
+      "source_ids": [
+        "EAST-E-gifu"
+      ]
+    },
+    "EAST-R-12": {
+      "detail_sha256": "971bdc44760b801714d62cc41d64cd4da1a518faefd812bd1c3e12f934eead1a",
+      "claim_ids": [
+        "EAST-R-12-CL-01",
+        "EAST-R-12-CL-02",
+        "EAST-R-12-CL-03",
+        "EAST-R-12-CL-04",
+        "EAST-R-12-CL-05",
+        "EAST-R-12-CL-06",
+        "EAST-R-12-CL-07",
+        "EAST-R-12-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-12-T1",
+        "EAST-R-12-T2",
+        "EAST-R-12-T3",
+        "EAST-R-12-T4"
+      ],
+      "source_ids": [
+        "EAST-E-o5"
+      ]
+    },
+    "EAST-R-13": {
+      "detail_sha256": "3da342f3df9d4d98c8fc117760b5adef467fd2e71d9bbc3bda9ddcb0dfcbd81c",
+      "claim_ids": [
+        "EAST-R-13-CL-01",
+        "EAST-R-13-CL-02",
+        "EAST-R-13-CL-03",
+        "EAST-R-13-CL-04",
+        "EAST-R-13-CL-05",
+        "EAST-R-13-CL-06",
+        "EAST-R-13-CL-07",
+        "EAST-R-13-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-13-T1",
+        "EAST-R-13-T2",
+        "EAST-R-13-T3",
+        "EAST-R-13-T4"
+      ],
+      "source_ids": [
+        "EAST-E-shimada"
+      ]
+    },
+    "EAST-R-14": {
+      "detail_sha256": "ff2f810d490480dd6d520fc00a0fa0532c05bee60c3ffa3c0a3b880c0104d770",
+      "claim_ids": [
+        "EAST-R-14-CL-01",
+        "EAST-R-14-CL-02",
+        "EAST-R-14-CL-03",
+        "EAST-R-14-CL-04",
+        "EAST-R-14-CL-05",
+        "EAST-R-14-CL-06",
+        "EAST-R-14-CL-07",
+        "EAST-R-14-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-14-T1",
+        "EAST-R-14-T2",
+        "EAST-R-14-T3"
+      ],
+      "source_ids": [
+        "EAST-E-nagoya"
+      ]
+    },
+    "EAST-R-15": {
+      "detail_sha256": "1227aeb4f879760183b7bdd9fe2e25f4cbccf8079921336a3a0d54b817995c33",
+      "claim_ids": [
+        "EAST-R-15-CL-01",
+        "EAST-R-15-CL-02",
+        "EAST-R-15-CL-03",
+        "EAST-R-15-CL-04",
+        "EAST-R-15-CL-05",
+        "EAST-R-15-CL-06",
+        "EAST-R-15-CL-07",
+        "EAST-R-15-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-15-T1",
+        "EAST-R-15-T2",
+        "EAST-R-15-T3",
+        "EAST-R-15-T4"
+      ],
+      "source_ids": [
+        "EAST-E-aichipark"
+      ]
+    },
+    "EAST-R-16": {
+      "detail_sha256": "7288164ea4a412e25f43bcb91ce05cf5752d91f5c28e0e2f5a64c89c387bd5dc",
+      "claim_ids": [
+        "EAST-R-16-CL-01",
+        "EAST-R-16-CL-02",
+        "EAST-R-16-CL-03",
+        "EAST-R-16-CL-04",
+        "EAST-R-16-CL-05",
+        "EAST-R-16-CL-06",
+        "EAST-R-16-CL-07",
+        "EAST-R-16-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-16-T1",
+        "EAST-R-16-T2",
+        "EAST-R-16-T3",
+        "EAST-R-16-T4",
+        "EAST-R-16-T5"
+      ],
+      "source_ids": [
+        "EAST-E-aichihighway"
+      ]
+    },
+    "EAST-R-17": {
+      "detail_sha256": "e195cc35ff247b57dec8c0cc614aabfa43ea8bbcb738af0c7a89ddc8cf56c844",
+      "claim_ids": [
+        "EAST-R-17-CL-01",
+        "EAST-R-17-CL-02",
+        "EAST-R-17-CL-03",
+        "EAST-R-17-CL-04",
+        "EAST-R-17-CL-05",
+        "EAST-R-17-CL-06",
+        "EAST-R-17-CL-07",
+        "EAST-R-17-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-17-T1",
+        "EAST-R-17-T2",
+        "EAST-R-17-T3",
+        "EAST-R-17-T4",
+        "EAST-R-17-T5"
+      ],
+      "source_ids": [
+        "EAST-E-chiba_result",
+        "EAST-E-chiba_bay"
+      ]
+    },
+    "EAST-R-18": {
+      "detail_sha256": "4c86d8c8caa60001b4f77fe2cc806fd61c2fc7c27715227810011a0a36793b59",
+      "claim_ids": [
+        "EAST-R-18-CL-01",
+        "EAST-R-18-CL-02",
+        "EAST-R-18-CL-03",
+        "EAST-R-18-CL-04",
+        "EAST-R-18-CL-05",
+        "EAST-R-18-CL-06",
+        "EAST-R-18-CL-07",
+        "EAST-R-18-CL-08"
+      ],
+      "event_ids": [
+        "EAST-R-18-T1",
+        "EAST-R-18-T2",
+        "EAST-R-18-T3",
+        "EAST-R-18-T4"
+      ],
+      "source_ids": [
+        "EAST-E-chiba_result",
+        "EAST-E-chiba_tuga"
+      ]
+    },
+    "central_toyono_ai": {
+      "detail_sha256": "fdd8d892fd2c01a9405cf4abedf378e72ca0f136cdd8b25c0a63a80230a974a1",
+      "claim_ids": [
+        "central_toyono_ai-CL-01",
+        "central_toyono_ai-CL-02",
+        "central_toyono_ai-CL-03",
+        "central_toyono_ai-CL-04",
+        "central_toyono_ai-CL-05",
+        "central_toyono_ai-CL-06",
+        "central_toyono_ai-CL-07",
+        "central_toyono_ai-CL-08",
+        "central_toyono_ai-CL-09",
+        "central_toyono_ai-CL-10"
+      ],
+      "event_ids": [
+        "central_toyono_ai-event-1",
+        "central_toyono_ai-event-2",
+        "central_toyono_ai-event-3",
+        "central_toyono_ai-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C01"
+      ]
+    },
+    "central_minoh_ai": {
+      "detail_sha256": "8e17f9a5488ac0fd86eef623f37634b07e76a6dd05510f40d6bcc2079f56bb06",
+      "claim_ids": [
+        "central_minoh_ai-CL-01",
+        "central_minoh_ai-CL-02",
+        "central_minoh_ai-CL-03",
+        "central_minoh_ai-CL-04",
+        "central_minoh_ai-CL-05",
+        "central_minoh_ai-CL-06",
+        "central_minoh_ai-CL-07",
+        "central_minoh_ai-CL-08",
+        "central_minoh_ai-CL-09",
+        "central_minoh_ai-CL-10"
+      ],
+      "event_ids": [
+        "central_minoh_ai-event-1",
+        "central_minoh_ai-event-2",
+        "central_minoh_ai-event-3",
+        "central_minoh_ai-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C02",
+        "CENTRAL-C03"
+      ]
+    },
+    "central_kuwana_knowroute": {
+      "detail_sha256": "da2c7331e9e7040ef7064f8fba656edf9391e2ff8530a0758afb7be1208783f5",
+      "claim_ids": [
+        "central_kuwana_knowroute-CL-01",
+        "central_kuwana_knowroute-CL-02",
+        "central_kuwana_knowroute-CL-03",
+        "central_kuwana_knowroute-CL-04",
+        "central_kuwana_knowroute-CL-05",
+        "central_kuwana_knowroute-CL-06",
+        "central_kuwana_knowroute-CL-07",
+        "central_kuwana_knowroute-CL-08",
+        "central_kuwana_knowroute-CL-09",
+        "central_kuwana_knowroute-CL-10"
+      ],
+      "event_ids": [
+        "central_kuwana_knowroute-event-1",
+        "central_kuwana_knowroute-event-2",
+        "central_kuwana_knowroute-event-3",
+        "central_kuwana_knowroute-event-4",
+        "central_kuwana_knowroute-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C04",
+        "CENTRAL-C05"
+      ]
+    },
+    "central_hikari_ai": {
+      "detail_sha256": "339870e025f02b175305c39992064c1984364495bce043c4c604e958c5b47276",
+      "claim_ids": [
+        "central_hikari_ai-CL-01",
+        "central_hikari_ai-CL-02",
+        "central_hikari_ai-CL-03",
+        "central_hikari_ai-CL-04",
+        "central_hikari_ai-CL-05",
+        "central_hikari_ai-CL-06",
+        "central_hikari_ai-CL-07",
+        "central_hikari_ai-CL-08",
+        "central_hikari_ai-CL-09",
+        "central_hikari_ai-CL-10"
+      ],
+      "event_ids": [
+        "central_hikari_ai-event-1",
+        "central_hikari_ai-event-2",
+        "central_hikari_ai-event-3"
+      ],
+      "source_ids": [
+        "CENTRAL-C06"
+      ]
+    },
+    "central_kobe_nada": {
+      "detail_sha256": "84a6455a8122038b63244eac7d60defaecb21d71d25a779bd79e923f819cbed7",
+      "claim_ids": [
+        "central_kobe_nada-CL-01",
+        "central_kobe_nada-CL-02",
+        "central_kobe_nada-CL-03",
+        "central_kobe_nada-CL-04",
+        "central_kobe_nada-CL-05",
+        "central_kobe_nada-CL-06",
+        "central_kobe_nada-CL-07",
+        "central_kobe_nada-CL-08",
+        "central_kobe_nada-CL-09",
+        "central_kobe_nada-CL-10"
+      ],
+      "event_ids": [
+        "central_kobe_nada-event-1",
+        "central_kobe_nada-event-2",
+        "central_kobe_nada-event-3",
+        "central_kobe_nada-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C07"
+      ]
+    },
+    "central_ine_ev": {
+      "detail_sha256": "851a3fc91eef513dd75f7cfb7eaf45293d6a3211a418a6bd7f93c5809d089314",
+      "claim_ids": [
+        "central_ine_ev-CL-01",
+        "central_ine_ev-CL-02",
+        "central_ine_ev-CL-03",
+        "central_ine_ev-CL-04",
+        "central_ine_ev-CL-05",
+        "central_ine_ev-CL-06",
+        "central_ine_ev-CL-07",
+        "central_ine_ev-CL-08",
+        "central_ine_ev-CL-09",
+        "central_ine_ev-CL-10"
+      ],
+      "event_ids": [
+        "central_ine_ev-event-1",
+        "central_ine_ev-event-2",
+        "central_ine_ev-event-3",
+        "central_ine_ev-event-4",
+        "central_ine_ev-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C08",
+        "CENTRAL-C09"
+      ]
+    },
+    "central_hikone_auto": {
+      "detail_sha256": "9f535c2527c8da6a7e290a5d75ecd689ccd5b59d2eb14645cedebbdc1412f3d5",
+      "claim_ids": [
+        "central_hikone_auto-CL-01",
+        "central_hikone_auto-CL-02",
+        "central_hikone_auto-CL-03",
+        "central_hikone_auto-CL-04",
+        "central_hikone_auto-CL-05",
+        "central_hikone_auto-CL-06",
+        "central_hikone_auto-CL-07",
+        "central_hikone_auto-CL-08",
+        "central_hikone_auto-CL-09",
+        "central_hikone_auto-CL-10"
+      ],
+      "event_ids": [
+        "central_hikone_auto-event-1",
+        "central_hikone_auto-event-2",
+        "central_hikone_auto-event-3",
+        "central_hikone_auto-event-4",
+        "central_hikone_auto-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C10",
+        "CENTRAL-C11",
+        "CENTRAL-C12"
+      ]
+    },
+    "central_kurayoshi_umo": {
+      "detail_sha256": "c70a973ca64e279e8f14b50f54e3ec93debe3079e791fd98f59f54310910f6d3",
+      "claim_ids": [
+        "central_kurayoshi_umo-CL-01",
+        "central_kurayoshi_umo-CL-02",
+        "central_kurayoshi_umo-CL-03",
+        "central_kurayoshi_umo-CL-04",
+        "central_kurayoshi_umo-CL-05",
+        "central_kurayoshi_umo-CL-06",
+        "central_kurayoshi_umo-CL-07",
+        "central_kurayoshi_umo-CL-08",
+        "central_kurayoshi_umo-CL-09",
+        "central_kurayoshi_umo-CL-10"
+      ],
+      "event_ids": [
+        "central_kurayoshi_umo-event-1",
+        "central_kurayoshi_umo-event-2",
+        "central_kurayoshi_umo-event-3"
+      ],
+      "source_ids": [
+        "CENTRAL-C13",
+        "CENTRAL-C14"
+      ]
+    },
+    "central_izumo_sada": {
+      "detail_sha256": "e182271de0f83db572dc3fb022d9a98d53b3d5a6894590c485bc5e6bea76993e",
+      "claim_ids": [
+        "central_izumo_sada-CL-01",
+        "central_izumo_sada-CL-02",
+        "central_izumo_sada-CL-03",
+        "central_izumo_sada-CL-04",
+        "central_izumo_sada-CL-05",
+        "central_izumo_sada-CL-06",
+        "central_izumo_sada-CL-07",
+        "central_izumo_sada-CL-08",
+        "central_izumo_sada-CL-09",
+        "central_izumo_sada-CL-10"
+      ],
+      "event_ids": [
+        "central_izumo_sada-event-1",
+        "central_izumo_sada-event-2",
+        "central_izumo_sada-event-3",
+        "central_izumo_sada-event-4",
+        "central_izumo_sada-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C15",
+        "CENTRAL-C16",
+        "CENTRAL-C17"
+      ]
+    },
+    "central_sanda_gsm": {
+      "detail_sha256": "a3e04797f3fe2adf79cbc0c28358834cddd058e6a15a6f16a91ac1f8b0fe9496",
+      "claim_ids": [
+        "central_sanda_gsm-CL-01",
+        "central_sanda_gsm-CL-02",
+        "central_sanda_gsm-CL-03",
+        "central_sanda_gsm-CL-04",
+        "central_sanda_gsm-CL-05",
+        "central_sanda_gsm-CL-06",
+        "central_sanda_gsm-CL-07",
+        "central_sanda_gsm-CL-08",
+        "central_sanda_gsm-CL-09",
+        "central_sanda_gsm-CL-10"
+      ],
+      "event_ids": [
+        "central_sanda_gsm-event-1",
+        "central_sanda_gsm-event-2",
+        "central_sanda_gsm-event-3"
+      ],
+      "source_ids": [
+        "CENTRAL-C18",
+        "CENTRAL-C19"
+      ]
+    },
+    "central_sanda_ai": {
+      "detail_sha256": "f880c54d8229fbc1b21723191ed43498d96511b53a8ce269463043bbb11b4329",
+      "claim_ids": [
+        "central_sanda_ai-CL-01",
+        "central_sanda_ai-CL-02",
+        "central_sanda_ai-CL-03",
+        "central_sanda_ai-CL-04",
+        "central_sanda_ai-CL-05",
+        "central_sanda_ai-CL-06",
+        "central_sanda_ai-CL-07",
+        "central_sanda_ai-CL-08",
+        "central_sanda_ai-CL-09",
+        "central_sanda_ai-CL-10"
+      ],
+      "event_ids": [
+        "central_sanda_ai-event-1",
+        "central_sanda_ai-event-2",
+        "central_sanda_ai-event-3"
+      ],
+      "source_ids": [
+        "CENTRAL-C18"
+      ]
+    },
+    "central_nara_robot": {
+      "detail_sha256": "9bcd3f832f66588dfde7bb06c330d485d47899adb03fe07ec7894210aefed245",
+      "claim_ids": [
+        "central_nara_robot-CL-01",
+        "central_nara_robot-CL-02",
+        "central_nara_robot-CL-03",
+        "central_nara_robot-CL-04",
+        "central_nara_robot-CL-05",
+        "central_nara_robot-CL-06",
+        "central_nara_robot-CL-07",
+        "central_nara_robot-CL-08",
+        "central_nara_robot-CL-09",
+        "central_nara_robot-CL-10"
+      ],
+      "event_ids": [
+        "central_nara_robot-event-1",
+        "central_nara_robot-event-2",
+        "central_nara_robot-event-3",
+        "central_nara_robot-event-4",
+        "central_nara_robot-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C20"
+      ]
+    },
+    "central_kitahiroshima_lomby": {
+      "detail_sha256": "196d07850f6e92374897b0d8352f18f03109d2239e049c490c87a897354e82a8",
+      "claim_ids": [
+        "central_kitahiroshima_lomby-CL-01",
+        "central_kitahiroshima_lomby-CL-02",
+        "central_kitahiroshima_lomby-CL-03",
+        "central_kitahiroshima_lomby-CL-04",
+        "central_kitahiroshima_lomby-CL-05",
+        "central_kitahiroshima_lomby-CL-06",
+        "central_kitahiroshima_lomby-CL-07",
+        "central_kitahiroshima_lomby-CL-08",
+        "central_kitahiroshima_lomby-CL-09",
+        "central_kitahiroshima_lomby-CL-10"
+      ],
+      "event_ids": [
+        "central_kitahiroshima_lomby-event-1",
+        "central_kitahiroshima_lomby-event-2",
+        "central_kitahiroshima_lomby-event-3"
+      ],
+      "source_ids": [
+        "CENTRAL-C21"
+      ]
+    },
+    "central_shunan_auto": {
+      "detail_sha256": "0f2ea71be2a88f269707269b16ae05e331435462a3aa763eddd29ad6abbf2c2f",
+      "claim_ids": [
+        "central_shunan_auto-CL-01",
+        "central_shunan_auto-CL-02",
+        "central_shunan_auto-CL-03",
+        "central_shunan_auto-CL-04",
+        "central_shunan_auto-CL-05",
+        "central_shunan_auto-CL-06",
+        "central_shunan_auto-CL-07",
+        "central_shunan_auto-CL-08",
+        "central_shunan_auto-CL-09",
+        "central_shunan_auto-CL-10",
+        "central_shunan_auto-CL-11"
+      ],
+      "event_ids": [
+        "central_shunan_auto-event-1",
+        "central_shunan_auto-event-2",
+        "central_shunan_auto-event-3",
+        "central_shunan_auto-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C22",
+        "CENTRAL-C23"
+      ]
+    },
+    "central_wakayama_auto": {
+      "detail_sha256": "c28c1215c1f2f3ac0e225773a0c838ce365dfd388462a0768da8bb840284bb2a",
+      "claim_ids": [
+        "central_wakayama_auto-CL-01",
+        "central_wakayama_auto-CL-02",
+        "central_wakayama_auto-CL-03",
+        "central_wakayama_auto-CL-04",
+        "central_wakayama_auto-CL-05",
+        "central_wakayama_auto-CL-06",
+        "central_wakayama_auto-CL-07",
+        "central_wakayama_auto-CL-08",
+        "central_wakayama_auto-CL-09",
+        "central_wakayama_auto-CL-10"
+      ],
+      "event_ids": [
+        "central_wakayama_auto-event-1",
+        "central_wakayama_auto-event-2",
+        "central_wakayama_auto-event-3",
+        "central_wakayama_auto-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C24",
+        "CENTRAL-C25",
+        "CENTRAL-C26"
+      ]
+    },
+    "central_sakai_nankai": {
+      "detail_sha256": "926a65109a6570ca7e745c3a16555db749205982d4bda12f96c710c6bb5b6e67",
+      "claim_ids": [
+        "central_sakai_nankai-CL-01",
+        "central_sakai_nankai-CL-02",
+        "central_sakai_nankai-CL-03",
+        "central_sakai_nankai-CL-04",
+        "central_sakai_nankai-CL-05",
+        "central_sakai_nankai-CL-06",
+        "central_sakai_nankai-CL-07",
+        "central_sakai_nankai-CL-08",
+        "central_sakai_nankai-CL-09",
+        "central_sakai_nankai-CL-10"
+      ],
+      "event_ids": [
+        "central_sakai_nankai-event-1",
+        "central_sakai_nankai-event-2",
+        "central_sakai_nankai-event-3",
+        "central_sakai_nankai-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C27",
+        "CENTRAL-C28",
+        "CENTRAL-C29"
+      ]
+    },
+    "central_tottori_torimobi": {
+      "detail_sha256": "5794a61f306c6af4afefa077d172e0ee555ff083d9be09b7125a4273e06ecdf3",
+      "claim_ids": [
+        "central_tottori_torimobi-CL-01",
+        "central_tottori_torimobi-CL-02",
+        "central_tottori_torimobi-CL-03",
+        "central_tottori_torimobi-CL-04",
+        "central_tottori_torimobi-CL-05",
+        "central_tottori_torimobi-CL-06",
+        "central_tottori_torimobi-CL-07",
+        "central_tottori_torimobi-CL-08",
+        "central_tottori_torimobi-CL-09",
+        "central_tottori_torimobi-CL-10"
+      ],
+      "event_ids": [
+        "central_tottori_torimobi-event-1",
+        "central_tottori_torimobi-event-2",
+        "central_tottori_torimobi-event-3",
+        "central_tottori_torimobi-event-4",
+        "central_tottori_torimobi-event-5",
+        "central_tottori_torimobi-event-6"
+      ],
+      "source_ids": [
+        "CENTRAL-C30",
+        "CENTRAL-C31"
+      ]
+    },
+    "central_niimi_koigakubo": {
+      "detail_sha256": "e5ef3a4caf293913471f0bd02a03d5d486241f7028088ab945080f40e4b1e796",
+      "claim_ids": [
+        "central_niimi_koigakubo-CL-01",
+        "central_niimi_koigakubo-CL-02",
+        "central_niimi_koigakubo-CL-03",
+        "central_niimi_koigakubo-CL-04",
+        "central_niimi_koigakubo-CL-05",
+        "central_niimi_koigakubo-CL-06",
+        "central_niimi_koigakubo-CL-07",
+        "central_niimi_koigakubo-CL-08",
+        "central_niimi_koigakubo-CL-09",
+        "central_niimi_koigakubo-CL-10"
+      ],
+      "event_ids": [
+        "central_niimi_koigakubo-event-1",
+        "central_niimi_koigakubo-event-2",
+        "central_niimi_koigakubo-event-3",
+        "central_niimi_koigakubo-event-4"
+      ],
+      "source_ids": [
+        "CENTRAL-C32",
+        "CENTRAL-C33"
+      ]
+    },
+    "central_fukuyama_tomo": {
+      "detail_sha256": "3d28547c752c872fb9c9dff4fdcee918f35252853cb3da1e7bb41bce92b10582",
+      "claim_ids": [
+        "central_fukuyama_tomo-CL-01",
+        "central_fukuyama_tomo-CL-02",
+        "central_fukuyama_tomo-CL-03",
+        "central_fukuyama_tomo-CL-04",
+        "central_fukuyama_tomo-CL-05",
+        "central_fukuyama_tomo-CL-06",
+        "central_fukuyama_tomo-CL-07",
+        "central_fukuyama_tomo-CL-08",
+        "central_fukuyama_tomo-CL-09",
+        "central_fukuyama_tomo-CL-10"
+      ],
+      "event_ids": [
+        "central_fukuyama_tomo-event-1",
+        "central_fukuyama_tomo-event-2",
+        "central_fukuyama_tomo-event-3",
+        "central_fukuyama_tomo-event-4",
+        "central_fukuyama_tomo-event-5"
+      ],
+      "source_ids": [
+        "CENTRAL-C34",
+        "CENTRAL-C35",
+        "CENTRAL-C36"
+      ]
+    },
+    "west-36201-01": {
+      "detail_sha256": "43783c716b873436dc0fed0e687da29bae638623ba18804cec7610c55957533f",
+      "claim_ids": [
+        "west-36201-01-CL-01",
+        "west-36201-01-CL-02",
+        "west-36201-01-CL-03",
+        "west-36201-01-CL-04",
+        "west-36201-01-CL-05",
+        "west-36201-01-CL-06",
+        "west-36201-01-CL-07",
+        "west-36201-01-CL-08",
+        "west-36201-01-CL-09",
+        "west-36201-01-CL-10",
+        "west-36201-01-CL-11",
+        "west-36201-01-CL-12",
+        "west-36201-01-CL-13",
+        "west-36201-01-CL-14"
+      ],
+      "event_ids": [
+        "west-36201-01-EV-01",
+        "west-36201-01-EV-02",
+        "west-36201-01-EV-03",
+        "west-36201-01-EV-04",
+        "west-36201-01-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-36201-01-s1",
+        "WEST-west-36201-01-s2"
+      ]
+    },
+    "west-37207-02": {
+      "detail_sha256": "cee7a49692f203471ea19426bc24d547110d084d21d3d4bff4a3a45d141a296b",
+      "claim_ids": [
+        "west-37207-02-CL-01",
+        "west-37207-02-CL-02",
+        "west-37207-02-CL-03",
+        "west-37207-02-CL-04",
+        "west-37207-02-CL-05",
+        "west-37207-02-CL-06",
+        "west-37207-02-CL-07",
+        "west-37207-02-CL-08",
+        "west-37207-02-CL-09",
+        "west-37207-02-CL-10",
+        "west-37207-02-CL-11",
+        "west-37207-02-CL-12",
+        "west-37207-02-CL-13"
+      ],
+      "event_ids": [
+        "west-37207-02-EV-01",
+        "west-37207-02-EV-02",
+        "west-37207-02-EV-03"
+      ],
+      "source_ids": [
+        "WEST-west-37207-02-s1",
+        "WEST-west-37207-02-s2"
+      ]
+    },
+    "west-38201-03": {
+      "detail_sha256": "543baf01a934f932c69d247f39d81ff61bed61590bb5be98151aa1db83230364",
+      "claim_ids": [
+        "west-38201-03-CL-01",
+        "west-38201-03-CL-02",
+        "west-38201-03-CL-03",
+        "west-38201-03-CL-04",
+        "west-38201-03-CL-05",
+        "west-38201-03-CL-06",
+        "west-38201-03-CL-07",
+        "west-38201-03-CL-08",
+        "west-38201-03-CL-09",
+        "west-38201-03-CL-10",
+        "west-38201-03-CL-11",
+        "west-38201-03-CL-12",
+        "west-38201-03-CL-13",
+        "west-38201-03-CL-14"
+      ],
+      "event_ids": [
+        "west-38201-03-EV-01",
+        "west-38201-03-EV-02",
+        "west-38201-03-EV-03",
+        "west-38201-03-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-38201-03-s1",
+        "WEST-west-38201-03-s2",
+        "WEST-west-38201-03-s3"
+      ]
+    },
+    "west-38215-04": {
+      "detail_sha256": "15d4d6569b2ca5117c9ce8b185af89cee069218e7ec96234710db1da37a3f7be",
+      "claim_ids": [
+        "west-38215-04-CL-01",
+        "west-38215-04-CL-02",
+        "west-38215-04-CL-03",
+        "west-38215-04-CL-04",
+        "west-38215-04-CL-05",
+        "west-38215-04-CL-06",
+        "west-38215-04-CL-07",
+        "west-38215-04-CL-08",
+        "west-38215-04-CL-09",
+        "west-38215-04-CL-10",
+        "west-38215-04-CL-11",
+        "west-38215-04-CL-12",
+        "west-38215-04-CL-13"
+      ],
+      "event_ids": [
+        "west-38215-04-EV-01",
+        "west-38215-04-EV-02",
+        "west-38215-04-EV-03",
+        "west-38215-04-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-38215-04-s1"
+      ]
+    },
+    "west-39201-05": {
+      "detail_sha256": "86ffb63582099e1d174b15ab0e5d8ad5b095e00b33d431a497721907ccbbdad3",
+      "claim_ids": [
+        "west-39201-05-CL-01",
+        "west-39201-05-CL-02",
+        "west-39201-05-CL-03",
+        "west-39201-05-CL-04",
+        "west-39201-05-CL-05",
+        "west-39201-05-CL-06",
+        "west-39201-05-CL-07",
+        "west-39201-05-CL-08",
+        "west-39201-05-CL-09",
+        "west-39201-05-CL-10",
+        "west-39201-05-CL-11",
+        "west-39201-05-CL-12",
+        "west-39201-05-CL-13",
+        "west-39201-05-CL-14",
+        "west-39201-05-CL-15"
+      ],
+      "event_ids": [
+        "west-39201-05-EV-01",
+        "west-39201-05-EV-02",
+        "west-39201-05-EV-03",
+        "west-39201-05-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-39201-05-s1"
+      ]
+    },
+    "west-40229-06": {
+      "detail_sha256": "651ae992c72694222df18ec302df929160a582d5480425231466446c40716476",
+      "claim_ids": [
+        "west-40229-06-CL-01",
+        "west-40229-06-CL-02",
+        "west-40229-06-CL-03",
+        "west-40229-06-CL-04",
+        "west-40229-06-CL-05",
+        "west-40229-06-CL-06",
+        "west-40229-06-CL-07",
+        "west-40229-06-CL-08",
+        "west-40229-06-CL-09",
+        "west-40229-06-CL-10",
+        "west-40229-06-CL-11",
+        "west-40229-06-CL-12",
+        "west-40229-06-CL-13",
+        "west-40229-06-CL-14",
+        "west-40229-06-CL-15",
+        "west-40229-06-CL-16"
+      ],
+      "event_ids": [
+        "west-40229-06-EV-01",
+        "west-40229-06-EV-02",
+        "west-40229-06-EV-03",
+        "west-40229-06-EV-04",
+        "west-40229-06-EV-05",
+        "west-40229-06-EV-06"
+      ],
+      "source_ids": [
+        "WEST-west-40229-06-s1",
+        "WEST-west-40229-06-s2",
+        "WEST-west-40229-06-s3"
+      ]
+    },
+    "west-41201-07": {
+      "detail_sha256": "d6a84d774590401c2d97b2bc4386850bdffd305e23a8742e51c7d7d96b773db7",
+      "claim_ids": [
+        "west-41201-07-CL-01",
+        "west-41201-07-CL-02",
+        "west-41201-07-CL-03",
+        "west-41201-07-CL-04",
+        "west-41201-07-CL-05",
+        "west-41201-07-CL-06",
+        "west-41201-07-CL-07",
+        "west-41201-07-CL-08",
+        "west-41201-07-CL-09",
+        "west-41201-07-CL-10",
+        "west-41201-07-CL-11",
+        "west-41201-07-CL-12",
+        "west-41201-07-CL-13",
+        "west-41201-07-CL-14",
+        "west-41201-07-CL-15"
+      ],
+      "event_ids": [
+        "west-41201-07-EV-01",
+        "west-41201-07-EV-02",
+        "west-41201-07-EV-03",
+        "west-41201-07-EV-04",
+        "west-41201-07-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-41201-07-s1"
+      ]
+    },
+    "west-42214-08": {
+      "detail_sha256": "a4e80b66b9c7ea29c819aca2536f01cdbfe2d0b534fc9defa98bf312780c1c95",
+      "claim_ids": [
+        "west-42214-08-CL-01",
+        "west-42214-08-CL-02",
+        "west-42214-08-CL-03",
+        "west-42214-08-CL-04",
+        "west-42214-08-CL-05",
+        "west-42214-08-CL-06",
+        "west-42214-08-CL-07",
+        "west-42214-08-CL-08",
+        "west-42214-08-CL-09",
+        "west-42214-08-CL-10",
+        "west-42214-08-CL-11",
+        "west-42214-08-CL-12",
+        "west-42214-08-CL-13"
+      ],
+      "event_ids": [
+        "west-42214-08-EV-01",
+        "west-42214-08-EV-02",
+        "west-42214-08-EV-03",
+        "west-42214-08-EV-04",
+        "west-42214-08-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-42214-08-s1",
+        "WEST-west-42214-08-s2"
+      ]
+    },
+    "west-42211-09": {
+      "detail_sha256": "b30df6f15295419e02b4c03438af7033c6dfc4359e8641feee70e4cf3ad511ed",
+      "claim_ids": [
+        "west-42211-09-CL-01",
+        "west-42211-09-CL-02",
+        "west-42211-09-CL-03",
+        "west-42211-09-CL-04",
+        "west-42211-09-CL-05",
+        "west-42211-09-CL-06",
+        "west-42211-09-CL-07",
+        "west-42211-09-CL-08",
+        "west-42211-09-CL-09",
+        "west-42211-09-CL-10",
+        "west-42211-09-CL-11",
+        "west-42211-09-CL-12",
+        "west-42211-09-CL-13"
+      ],
+      "event_ids": [
+        "west-42211-09-EV-01",
+        "west-42211-09-EV-02",
+        "west-42211-09-EV-03"
+      ],
+      "source_ids": [
+        "WEST-west-42211-09-s1"
+      ]
+    },
+    "west-43100-10": {
+      "detail_sha256": "d67c58decc7dc0afd4fbf4327769c1222a6379f8f66ba2fd37afc6f653e33825",
+      "claim_ids": [
+        "west-43100-10-CL-01",
+        "west-43100-10-CL-02",
+        "west-43100-10-CL-03",
+        "west-43100-10-CL-04",
+        "west-43100-10-CL-05",
+        "west-43100-10-CL-06",
+        "west-43100-10-CL-07",
+        "west-43100-10-CL-08",
+        "west-43100-10-CL-09",
+        "west-43100-10-CL-10",
+        "west-43100-10-CL-11",
+        "west-43100-10-CL-12"
+      ],
+      "event_ids": [
+        "west-43100-10-EV-01",
+        "west-43100-10-EV-02",
+        "west-43100-10-EV-03",
+        "west-43100-10-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-43100-10-s1",
+        "WEST-west-43100-10-s2"
+      ]
+    },
+    "west-43100-11": {
+      "detail_sha256": "d26c956c1c6e5f0c37ff288e218051ad8830d662964ebf6ffd020a5c22e1fc40",
+      "claim_ids": [
+        "west-43100-11-CL-01",
+        "west-43100-11-CL-02",
+        "west-43100-11-CL-03",
+        "west-43100-11-CL-04",
+        "west-43100-11-CL-05",
+        "west-43100-11-CL-06",
+        "west-43100-11-CL-07",
+        "west-43100-11-CL-08",
+        "west-43100-11-CL-09",
+        "west-43100-11-CL-10",
+        "west-43100-11-CL-11",
+        "west-43100-11-CL-12"
+      ],
+      "event_ids": [
+        "west-43100-11-EV-01",
+        "west-43100-11-EV-02",
+        "west-43100-11-EV-03"
+      ],
+      "source_ids": [
+        "WEST-west-43100-11-s1"
+      ]
+    },
+    "west-43348-12": {
+      "detail_sha256": "5ace21deacd24a91ceec200333ffb6a70fc0759f7d0b16b33f14e37deb7317df",
+      "claim_ids": [
+        "west-43348-12-CL-01",
+        "west-43348-12-CL-02",
+        "west-43348-12-CL-03",
+        "west-43348-12-CL-04",
+        "west-43348-12-CL-05",
+        "west-43348-12-CL-06",
+        "west-43348-12-CL-07",
+        "west-43348-12-CL-08",
+        "west-43348-12-CL-09",
+        "west-43348-12-CL-10",
+        "west-43348-12-CL-11",
+        "west-43348-12-CL-12",
+        "west-43348-12-CL-13"
+      ],
+      "event_ids": [
+        "west-43348-12-EV-01",
+        "west-43348-12-EV-02",
+        "west-43348-12-EV-03",
+        "west-43348-12-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-43348-12-s1"
+      ]
+    },
+    "west-44201-13": {
+      "detail_sha256": "ecfe6e7825e75f5abfadb7ff3622c207e229a5cc44f79976197bb453f8b1d67f",
+      "claim_ids": [
+        "west-44201-13-CL-01",
+        "west-44201-13-CL-02",
+        "west-44201-13-CL-03",
+        "west-44201-13-CL-04",
+        "west-44201-13-CL-05",
+        "west-44201-13-CL-06",
+        "west-44201-13-CL-07",
+        "west-44201-13-CL-08",
+        "west-44201-13-CL-09",
+        "west-44201-13-CL-10",
+        "west-44201-13-CL-11",
+        "west-44201-13-CL-12",
+        "west-44201-13-CL-13"
+      ],
+      "event_ids": [
+        "west-44201-13-EV-01",
+        "west-44201-13-EV-02",
+        "west-44201-13-EV-03",
+        "west-44201-13-EV-04",
+        "west-44201-13-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-44201-13-s1",
+        "WEST-west-44201-13-s2",
+        "WEST-west-44201-13-s3"
+      ]
+    },
+    "west-44211-14": {
+      "detail_sha256": "3f64d1498840f2b3accab7565a3b1a53e996de248cfe17c85821fe55a6165b48",
+      "claim_ids": [
+        "west-44211-14-CL-01",
+        "west-44211-14-CL-02",
+        "west-44211-14-CL-03",
+        "west-44211-14-CL-04",
+        "west-44211-14-CL-05",
+        "west-44211-14-CL-06",
+        "west-44211-14-CL-07",
+        "west-44211-14-CL-08",
+        "west-44211-14-CL-09",
+        "west-44211-14-CL-10",
+        "west-44211-14-CL-11",
+        "west-44211-14-CL-12",
+        "west-44211-14-CL-13"
+      ],
+      "event_ids": [
+        "west-44211-14-EV-01",
+        "west-44211-14-EV-02",
+        "west-44211-14-EV-03",
+        "west-44211-14-EV-04",
+        "west-44211-14-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-44211-14-s1",
+        "WEST-west-44211-14-s2"
+      ]
+    },
+    "west-44211-15": {
+      "detail_sha256": "cd985fa8611f00f2a63f656f751549dbdcf658081b02ffcd2e8e73e496535292",
+      "claim_ids": [
+        "west-44211-15-CL-01",
+        "west-44211-15-CL-02",
+        "west-44211-15-CL-03",
+        "west-44211-15-CL-04",
+        "west-44211-15-CL-05",
+        "west-44211-15-CL-06",
+        "west-44211-15-CL-07",
+        "west-44211-15-CL-08",
+        "west-44211-15-CL-09",
+        "west-44211-15-CL-10",
+        "west-44211-15-CL-11",
+        "west-44211-15-CL-12",
+        "west-44211-15-CL-13"
+      ],
+      "event_ids": [
+        "west-44211-15-EV-01",
+        "west-44211-15-EV-02",
+        "west-44211-15-EV-03",
+        "west-44211-15-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-44211-15-s1",
+        "WEST-west-44211-15-s2"
+      ]
+    },
+    "west-44214-16": {
+      "detail_sha256": "d30ed1c72801463e7d661178fe43399947215e9c82ef1b9a50d601eee6249d09",
+      "claim_ids": [
+        "west-44214-16-CL-01",
+        "west-44214-16-CL-02",
+        "west-44214-16-CL-03",
+        "west-44214-16-CL-04",
+        "west-44214-16-CL-05",
+        "west-44214-16-CL-06",
+        "west-44214-16-CL-07",
+        "west-44214-16-CL-08",
+        "west-44214-16-CL-09",
+        "west-44214-16-CL-10",
+        "west-44214-16-CL-11",
+        "west-44214-16-CL-12",
+        "west-44214-16-CL-13"
+      ],
+      "event_ids": [
+        "west-44214-16-EV-01",
+        "west-44214-16-EV-02",
+        "west-44214-16-EV-03"
+      ],
+      "source_ids": [
+        "WEST-west-44214-16-s1",
+        "WEST-west-44214-16-s2"
+      ]
+    },
+    "west-45203-17": {
+      "detail_sha256": "46f121cc79b52cfef6e8d25b58d8ba5a144d411e10b37139e92529ef8640a432",
+      "claim_ids": [
+        "west-45203-17-CL-01",
+        "west-45203-17-CL-02",
+        "west-45203-17-CL-03",
+        "west-45203-17-CL-04",
+        "west-45203-17-CL-05",
+        "west-45203-17-CL-06",
+        "west-45203-17-CL-07",
+        "west-45203-17-CL-08",
+        "west-45203-17-CL-09",
+        "west-45203-17-CL-10",
+        "west-45203-17-CL-11",
+        "west-45203-17-CL-12",
+        "west-45203-17-CL-13"
+      ],
+      "event_ids": [
+        "west-45203-17-EV-01",
+        "west-45203-17-EV-02",
+        "west-45203-17-EV-03",
+        "west-45203-17-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-45203-17-s1",
+        "WEST-west-45203-17-s2"
+      ]
+    },
+    "west-46201-18": {
+      "detail_sha256": "d1f51351419f3c5031bb41bdd638d7de3188ab50ec1ff5ff27cd9f16d17b43c2",
+      "claim_ids": [
+        "west-46201-18-CL-01",
+        "west-46201-18-CL-02",
+        "west-46201-18-CL-03",
+        "west-46201-18-CL-04",
+        "west-46201-18-CL-05",
+        "west-46201-18-CL-06",
+        "west-46201-18-CL-07",
+        "west-46201-18-CL-08",
+        "west-46201-18-CL-09",
+        "west-46201-18-CL-10",
+        "west-46201-18-CL-11",
+        "west-46201-18-CL-12",
+        "west-46201-18-CL-13",
+        "west-46201-18-CL-14"
+      ],
+      "event_ids": [
+        "west-46201-18-EV-01",
+        "west-46201-18-EV-02",
+        "west-46201-18-EV-03",
+        "west-46201-18-EV-04"
+      ],
+      "source_ids": [
+        "WEST-west-46201-18-s1",
+        "WEST-west-46201-18-s2"
+      ]
+    },
+    "west-47375-19": {
+      "detail_sha256": "764e3b3534c698468cd821fe617ef18e08fd90e2c5d9924511858474bb2e6d72",
+      "claim_ids": [
+        "west-47375-19-CL-01",
+        "west-47375-19-CL-02",
+        "west-47375-19-CL-03",
+        "west-47375-19-CL-04",
+        "west-47375-19-CL-05",
+        "west-47375-19-CL-06",
+        "west-47375-19-CL-07",
+        "west-47375-19-CL-08",
+        "west-47375-19-CL-09",
+        "west-47375-19-CL-10",
+        "west-47375-19-CL-11",
+        "west-47375-19-CL-12",
+        "west-47375-19-CL-13",
+        "west-47375-19-CL-14"
+      ],
+      "event_ids": [
+        "west-47375-19-EV-01",
+        "west-47375-19-EV-02",
+        "west-47375-19-EV-03",
+        "west-47375-19-EV-04",
+        "west-47375-19-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-47375-19-s1",
+        "WEST-west-47375-19-s2"
+      ]
+    },
+    "west-47375-20": {
+      "detail_sha256": "ebd20c9c476fd253199c33cc32b9b090270c24a0560c520b7028d2dec2354238",
+      "claim_ids": [
+        "west-47375-20-CL-01",
+        "west-47375-20-CL-02",
+        "west-47375-20-CL-03",
+        "west-47375-20-CL-04",
+        "west-47375-20-CL-05",
+        "west-47375-20-CL-06",
+        "west-47375-20-CL-07",
+        "west-47375-20-CL-08",
+        "west-47375-20-CL-09",
+        "west-47375-20-CL-10",
+        "west-47375-20-CL-11",
+        "west-47375-20-CL-12",
+        "west-47375-20-CL-13"
+      ],
+      "event_ids": [
+        "west-47375-20-EV-01",
+        "west-47375-20-EV-02",
+        "west-47375-20-EV-03",
+        "west-47375-20-EV-04",
+        "west-47375-20-EV-05"
+      ],
+      "source_ids": [
+        "WEST-west-47375-20-s1",
+        "WEST-west-47375-20-s2",
+        "WEST-west-47375-20-s3",
+        "WEST-west-47375-20-s4"
+      ]
+    }
+  },
+  "continuation": {
+    "case_ids": [
+      "CONT-C-01",
+      "CONT-C-02",
+      "CONT-C-03",
+      "CONT-C-04",
+      "CONT-C-05",
+      "CONT-E-01",
+      "CONT-E-02",
+      "CONT-W-01",
+      "CONT-W-02",
+      "CONT-W-03",
+      "CONT-W-04"
+    ],
+    "metrics": [
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-01",
+        "value": 128,
+        "unit": "回",
+        "period": "2025-10-01/2025-10-31",
+        "definition": "累計運行回数。延べ乗客数ではない",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p3"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-02",
+        "value": 22,
+        "unit": "日",
+        "period": "2025-10",
+        "definition": "運行日数",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p3"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-03",
+        "value": 102,
+        "unit": "人",
+        "period": "2025-10-31時点",
+        "definition": "登録者数",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p3"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-04",
+        "value": 30,
+        "unit": "人",
+        "period": "2025-10",
+        "definition": "登録者のうち利用経験あり",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p3"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-05",
+        "value": 53.3,
+        "unit": "%",
+        "period": "2025-10",
+        "definition": "2回以上利用した人の割合（利用経験者30人）",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p3"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-MT-06",
+        "value": 4,
+        "unit": "件",
+        "period": "2026-04",
+        "definition": "新病院ポイント利用実績。人数でない",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-55",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-MT-01",
+        "value": 597,
+        "unit": "延べ乗車人",
+        "period": "2025-09-28/2025-10-11",
+        "definition": "イベントと公道実証の合計。ユニーク不明",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-MT-02",
+        "value": 250,
+        "unit": "延べ乗車人",
+        "period": "2025-09-28",
+        "definition": "記念イベント乗車",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-MT-03",
+        "value": 347,
+        "unit": "延べ乗車人",
+        "period": "2025-09-29/2025-10-11",
+        "definition": "公道実証のみ",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-MT-04",
+        "value": 31.5,
+        "unit": "人/運行日",
+        "period": "2025-09-29/2025-10-11",
+        "definition": "公道実証11日平均・原典表示",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-MT-05",
+        "value": 66,
+        "unit": "件",
+        "period": "実証期間",
+        "definition": "車内QRアンケート有効回答。全乗客代表性未検証",
+        "phase": "actual",
+        "source_id": "CONT-TOKI-52",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-MT-01",
+        "value": 632,
+        "unit": "延べ人",
+        "period": "2024-10-01/2025-01-19",
+        "definition": "累計利用者（2市広域実証全体）",
+        "phase": "actual",
+        "source_id": "CONT-SETO-REPORT",
+        "locator": "PDF p2「4 実証実験の登録者数及び利用実績」"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-MT-02",
+        "value": 109,
+        "unit": "人",
+        "period": "2024-10-01/2025-01-19",
+        "definition": "利用経験者（実利用人数）",
+        "phase": "actual",
+        "source_id": "CONT-SETO-REPORT",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-MT-03",
+        "value": 335,
+        "unit": "人",
+        "period": "実証終了時",
+        "definition": "登録者合計。実利用と分離",
+        "phase": "actual",
+        "source_id": "CONT-SETO-REPORT",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-MT-04",
+        "value": 158,
+        "unit": "人",
+        "period": "2025-01-15/2025-01-31",
+        "definition": "会員328人対象アンケート回答者",
+        "phase": "actual",
+        "source_id": "CONT-SETO-PREF",
+        "locator": "PDF p17"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-MT-01",
+        "value": 247,
+        "unit": "人",
+        "period": "2026-01実証終了時",
+        "definition": "登録会員",
+        "phase": "actual",
+        "source_id": "CONT-MINAMI-REPORT",
+        "locator": "PDF p10"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-MT-02",
+        "value": 471,
+        "unit": "件",
+        "period": "2025-09-16/2026-01-30",
+        "definition": "予約件数合計。乗車人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-MINAMI-REPORT",
+        "locator": "PDF p11"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-MT-03",
+        "value": 0,
+        "unit": "人",
+        "period": "実証期間",
+        "definition": "小野地区利用者数",
+        "phase": "actual",
+        "source_id": "CONT-MINAMI-REPORT",
+        "locator": "PDF p14"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-MT-04",
+        "value": 0,
+        "unit": "人",
+        "period": "実証期間",
+        "definition": "岩屋地区利用者数",
+        "phase": "actual",
+        "source_id": "CONT-MINAMI-REPORT",
+        "locator": "PDF p14"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-MT-01",
+        "value": 6762,
+        "unit": "件",
+        "period": "2025-10/2026-03",
+        "definition": "期間累計予約件数。実人数でない",
+        "phase": "actual",
+        "source_id": "CONT-FUSO-2026",
+        "locator": "PDF p1表"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-MT-02",
+        "value": 3955,
+        "unit": "人",
+        "period": "2026-03末",
+        "definition": "登録者数合計",
+        "phase": "actual",
+        "source_id": "CONT-FUSO-2026",
+        "locator": "PDF p1表"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-MT-03",
+        "value": 1418,
+        "unit": "人",
+        "period": "2026-03末",
+        "definition": "利用経験者数合計（過去から累積。半年間ユニークではない）",
+        "phase": "actual",
+        "source_id": "CONT-FUSO-2026",
+        "locator": "PDF p1表"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-MT-04",
+        "value": 5792,
+        "unit": "件",
+        "period": "2025-10/2026-03",
+        "definition": "電話予約件数、総予約6762件",
+        "phase": "actual",
+        "source_id": "CONT-FUSO-2026",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-MT-05",
+        "value": 970,
+        "unit": "件",
+        "period": "2025-10/2026-03",
+        "definition": "インターネット予約件数、総予約6762件",
+        "phase": "actual",
+        "source_id": "CONT-FUSO-2026",
+        "locator": "PDF p2"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-01",
+        "value": 566,
+        "unit": "乗車人",
+        "period": "2022-11-03/2022-11-13",
+        "definition": "実証乗車数。ユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-HISTORY",
+        "locator": "令和4年度実証運行"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-02",
+        "value": 2773,
+        "unit": "乗車人",
+        "period": "2024-05-27/2024-08-31",
+        "definition": "有償実証乗車数",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-HISTORY",
+        "locator": "令和6年度実証運行"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-03",
+        "value": 9543,
+        "unit": "延べ乗車人",
+        "period": "2024-11-25/2025-03-31",
+        "definition": "本格化後の令和6年度部分",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-2026",
+        "locator": "PDF p7／印刷p6"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-04",
+        "value": 23186,
+        "unit": "延べ乗車人",
+        "period": "2025-04-01/2025-12-31",
+        "definition": "令和7年度4〜12月の部分集計",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-2026",
+        "locator": "PDF p7／印刷p6"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-05",
+        "value": 32729,
+        "unit": "延べ乗車人",
+        "period": "2024-11-25/2025-12-31",
+        "definition": "本格化後累計。前2指標と重複加算禁止",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-2026",
+        "locator": "PDF p7／印刷p6"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-06",
+        "value": 236,
+        "unit": "件",
+        "period": "2026-01-01集計時点",
+        "definition": "利用者対面・Webアンケート回答",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-2026",
+        "locator": "印刷p9"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-MT-07",
+        "value": 103,
+        "unit": "件",
+        "period": "同調査",
+        "definition": "2回以上利用と回答した人。アンケート236件中",
+        "phase": "actual",
+        "source_id": "CONT-SUGI-2026",
+        "locator": "印刷p9"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-MT-01",
+        "value": 141,
+        "unit": "延べ人",
+        "period": "2023-12/2024-08",
+        "definition": "とよふさ運行実績の累計",
+        "phase": "actual",
+        "source_id": "CONT-TOYOFUSA-REPORT",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-MT-02",
+        "value": 115,
+        "unit": "日",
+        "period": "2023-12/2024-08",
+        "definition": "実運行日数",
+        "phase": "actual",
+        "source_id": "CONT-TOYOFUSA-REPORT",
+        "locator": "PDF p1"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-MT-03",
+        "value": 70,
+        "unit": "延べ人",
+        "period": "2024-04/2024-08",
+        "definition": "年度途中の期間利用、141人の内数",
+        "phase": "actual",
+        "source_id": "CONT-TOYOFUSA-REPORT",
+        "locator": "PDF p3-4"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-MT-04",
+        "value": 13,
+        "unit": "人",
+        "period": "2024-04/2024-08",
+        "definition": "実際に利用した人数",
+        "phase": "actual",
+        "source_id": "CONT-TOYOFUSA-REPORT",
+        "locator": "PDF p4"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-MT-05",
+        "value": 96,
+        "unit": "人",
+        "period": "2024-08末",
+        "definition": "豊房エリア会員登録。全域登録509人とは分離",
+        "phase": "actual",
+        "source_id": "CONT-TOYOFUSA-REPORT",
+        "locator": "PDF p3-4"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-01",
+        "value": 581,
+        "unit": "延べ人",
+        "period": "2024-02-02/2024-03-22",
+        "definition": "試験運行の延べ乗車人数",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-02",
+        "value": 100,
+        "unit": "人",
+        "period": "2024-02-02/2024-03-22",
+        "definition": "実際に利用した登録ID；登録者548人中",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-03",
+        "value": 548,
+        "unit": "人",
+        "period": "2024-02-02/2024-03-22",
+        "definition": "登録ID総数；実利用人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-04",
+        "value": 36,
+        "unit": "運行日",
+        "period": "2024-02-02/2024-03-22",
+        "definition": "期間内実運行日；暦日50日とは区別",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.2"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-05",
+        "value": 7973,
+        "unit": "千円",
+        "period": "2023年度実証",
+        "definition": "事業費；恒常運行費と同一ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.2"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-06",
+        "value": 16.2,
+        "unit": "人/運行日",
+        "period": "2024-02-02/2024-03-22",
+        "definition": "公表日平均利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-MT-07",
+        "value": 100,
+        "unit": "％",
+        "period": "2024-03-06/2024-03-17",
+        "definition": "継続希望；利用経験のあるアンケート回答者22人の意向",
+        "phase": "actual",
+        "source_id": "CONT-W-SEN-RESULT",
+        "locator": "p.11 問13"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-01",
+        "value": 363,
+        "unit": "延べ人",
+        "period": "2023-01-05/2023-02-28",
+        "definition": "延べ利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 実験結果"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-02",
+        "value": 102,
+        "unit": "人",
+        "period": "2023-01-05/2023-02-28",
+        "definition": "期間中利用した人；ユニーク利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 実験結果"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-03",
+        "value": 391,
+        "unit": "人",
+        "period": "2023-01-05/2023-02-28",
+        "definition": "会員登録者数",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 実験結果"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-04",
+        "value": 334,
+        "unit": "件",
+        "period": "2023-01-05/2023-02-28",
+        "definition": "予約成立件数；人数とは異なる",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 実験結果"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-05",
+        "value": 6905,
+        "unit": "千円",
+        "period": "2022年度実証",
+        "definition": "事業費",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 事業概要"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-06",
+        "value": 200,
+        "unit": "円/乗車",
+        "period": "2023-01-05/2023-02-28",
+        "definition": "運賃；未就学児無料",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 事業概要"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-MT-07",
+        "value": 347,
+        "unit": "枚",
+        "period": "実証後アンケート",
+        "definition": "回収枚数。登録会員・設置場所・区域ポスティングを対象、利用経験者のみではない",
+        "phase": "actual",
+        "source_id": "CONT-W-HAN-RESULT",
+        "locator": "p.1 利用者アンケート"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-01",
+        "value": 10858,
+        "unit": "延べ人",
+        "period": "2022-04-01/2023-03-31",
+        "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-02",
+        "value": 2688840,
+        "unit": "円",
+        "period": "2022-04-01/2023-03-31",
+        "definition": "運賃収入額",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-03",
+        "value": 7855,
+        "unit": "延べ人",
+        "period": "2022-04-01/2023-03-31",
+        "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-04",
+        "value": 3003,
+        "unit": "延べ人",
+        "period": "2022-04-01/2023-03-31",
+        "definition": "大島地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-05",
+        "value": 11037,
+        "unit": "延べ人",
+        "period": "2023-04-01/2024-03-31",
+        "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-06",
+        "value": 2769237,
+        "unit": "円",
+        "period": "2023-04-01/2024-03-31",
+        "definition": "運賃収入額",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-07",
+        "value": 8663,
+        "unit": "延べ人",
+        "period": "2023-04-01/2024-03-31",
+        "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-08",
+        "value": 2374,
+        "unit": "延べ人",
+        "period": "2023-04-01/2024-03-31",
+        "definition": "大島地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-09",
+        "value": 10050,
+        "unit": "延べ人",
+        "period": "2024-04-01/2025-03-31",
+        "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-10",
+        "value": 2475900,
+        "unit": "円",
+        "period": "2024-04-01/2025-03-31",
+        "definition": "運賃収入額",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-11",
+        "value": 8787,
+        "unit": "延べ人",
+        "period": "2024-04-01/2025-03-31",
+        "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-12",
+        "value": 1263,
+        "unit": "延べ人",
+        "period": "2024-04-01/2025-03-31",
+        "definition": "大島地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-13",
+        "value": 10109,
+        "unit": "延べ人",
+        "period": "2025-04-01/2026-03-31",
+        "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-14",
+        "value": 2529880,
+        "unit": "円",
+        "period": "2025-04-01/2026-03-31",
+        "definition": "運賃収入額",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3 年度別運賃収入及び利用者"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-15",
+        "value": 9381,
+        "unit": "延べ人",
+        "period": "2025-04-01/2026-03-31",
+        "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-MT-16",
+        "value": 728,
+        "unit": "延べ人",
+        "period": "2025-04-01/2026-03-31",
+        "definition": "大島地区の運賃収受した利用者数",
+        "phase": "actual",
+        "source_id": "CONT-W-INA-R7",
+        "locator": "p.3"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-01",
+        "value": 866,
+        "unit": "延べ人（利用累計）",
+        "period": "2023-12",
+        "definition": "実証期間利用人数。原典は利用者と表記、43.3人/日を併記する累計でユニーク人数ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-TRIAL",
+        "locator": "p.1 冊子p.33"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-02",
+        "value": 27335,
+        "unit": "延べ人",
+        "period": "2024-04-01/2025-03-31",
+        "definition": "年度利用人数合計；原典本文は回、集計表は人と表記",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-03",
+        "value": 75.5,
+        "unit": "人/運行日",
+        "period": "2024年度",
+        "definition": "公表日平均利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-04",
+        "value": 1.52,
+        "unit": "人/停留所間区間",
+        "period": "2024年度",
+        "definition": "停留所間で平均して乗っていた人数（乗合率）。乗合した予約比率ではない",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.3 冊子p.52"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-05",
+        "value": 56347494,
+        "unit": "円",
+        "period": "2024年度",
+        "definition": "運行費45,886,465＋ガソリン4,560,629＋車両リース5,900,400（保険含む）の支出実績計",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-FIN",
+        "locator": "PDF p.11 冊子p.20"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-06",
+        "value": 5295300,
+        "unit": "円",
+        "period": "2024年度",
+        "definition": "運賃収入実績",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-FIN",
+        "locator": "PDF p.11 冊子p.20"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-07",
+        "value": 1876,
+        "unit": "延べ人",
+        "period": "2024-04",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-08",
+        "value": 2004,
+        "unit": "延べ人",
+        "period": "2024-05",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-09",
+        "value": 2057,
+        "unit": "延べ人",
+        "period": "2024-06",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-10",
+        "value": 2500,
+        "unit": "延べ人",
+        "period": "2024-07",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-11",
+        "value": 2120,
+        "unit": "延べ人",
+        "period": "2024-08",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-12",
+        "value": 2477,
+        "unit": "延べ人",
+        "period": "2024-09",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-13",
+        "value": 2620,
+        "unit": "延べ人",
+        "period": "2024-10",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-14",
+        "value": 2385,
+        "unit": "延べ人",
+        "period": "2024-11",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-15",
+        "value": 2380,
+        "unit": "延べ人",
+        "period": "2024-12",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-16",
+        "value": 2189,
+        "unit": "延べ人",
+        "period": "2025-01",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-17",
+        "value": 2236,
+        "unit": "延べ人",
+        "period": "2025-02",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-MT-18",
+        "value": 2491,
+        "unit": "延べ人",
+        "period": "2025-03",
+        "definition": "月別利用人数",
+        "phase": "actual",
+        "source_id": "CONT-W-TEN-RESULT",
+        "locator": "p.2 冊子p.51"
+      }
+    ],
+    "events": [
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-EV-01",
+        "date": "2025-10-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-EV-02",
+        "date": "2025-10-31",
+        "phase": "interim"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-EV-03",
+        "date": "2026-04-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-EV-04",
+        "date": "2026-04",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-01",
+        "id": "CONT-C-01-EV-05",
+        "date": "2026-08",
+        "phase": "planned"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-EV-01",
+        "date": "2025-09-28",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-EV-02",
+        "date": "2025-10-02",
+        "phase": "suspended"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-EV-03",
+        "date": "2025-10-11",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-EV-04",
+        "date": "2025-11-14",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-02",
+        "id": "CONT-C-02-EV-05",
+        "date": "2026-03",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-EV-01",
+        "date": "2024-10-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-EV-02",
+        "date": "2025-01-19",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-C-03",
+        "id": "CONT-C-03-EV-03",
+        "date": "2025-01-31",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-EV-01",
+        "date": "2025-09-16",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-EV-02",
+        "date": "2026-01-30",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-C-04",
+        "id": "CONT-C-04-EV-03",
+        "date": "2026-03-31",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-EV-01",
+        "date": "2022-10-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-EV-02",
+        "date": "2023-10",
+        "phase": "planned"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-EV-03",
+        "date": "2023-10-01",
+        "phase": "planned"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-EV-04",
+        "date": "2024-10-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-C-05",
+        "id": "CONT-C-05-EV-05",
+        "date": "2026-03",
+        "phase": "interim"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-01",
+        "date": "2022-03-25",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-02",
+        "date": "2022-11-03",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-03",
+        "date": "2024-05-27",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-04",
+        "date": "2024-08-31",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-05",
+        "date": "2024-11-25",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-06",
+        "date": "2026-01",
+        "phase": "interim"
+      },
+      {
+        "case_id": "CONT-E-01",
+        "id": "CONT-E-01-EV-07",
+        "date": "2026-10-09",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-EV-01",
+        "date": "2023-12",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-EV-02",
+        "date": "2024-08-31",
+        "phase": "interim"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-EV-03",
+        "date": "2024-09-18",
+        "phase": "planned"
+      },
+      {
+        "case_id": "CONT-E-02",
+        "id": "CONT-E-02-EV-04",
+        "date": "2024-11-30",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-EV-01",
+        "date": "2024-02-02",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-EV-02",
+        "date": "2024-03-22",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-EV-03",
+        "date": "2024-07",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-01",
+        "id": "CONT-W-01-EV-04",
+        "date": "2025-07-25",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-EV-01",
+        "date": "2023-01-05",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-02",
+        "id": "CONT-W-02-EV-02",
+        "date": "2023-02-28",
+        "phase": "trial_ended"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-01",
+        "date": "2020-05-25",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-02",
+        "date": "2020-11",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-03",
+        "date": "2021-04",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-04",
+        "date": "2021-07-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-05",
+        "date": "2022-04-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-06",
+        "date": "2022",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-07",
+        "date": "2024-10",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-03",
+        "id": "CONT-W-03-EV-08",
+        "date": "2026-03",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-EV-01",
+        "date": "2023-12-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-EV-02",
+        "date": "2024-04-01",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-EV-03",
+        "date": "2024-07",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-EV-04",
+        "date": "2025-06-26",
+        "phase": "actual"
+      },
+      {
+        "case_id": "CONT-W-04",
+        "id": "CONT-W-04-EV-05",
+        "date": "2026-06",
+        "phase": "actual"
+      }
+    ],
+    "municipality_codes": [
+      "12205",
+      "12234",
+      "13115",
+      "21212",
+      "23204",
+      "23226",
+      "23362",
+      "23445",
+      "23446",
+      "27228",
+      "27232",
+      "28301",
+      "29204"
+    ]
+  }
+}

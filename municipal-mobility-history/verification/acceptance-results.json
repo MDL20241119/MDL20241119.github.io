@@ -1,12 +1,12 @@
 {
-  "passed": 12,
+  "passed": 15,
   "failed": 0,
   "checks": [
     {
       "name": "Every original record ID has exactly one indexed detail in its own layer",
       "result": "pass",
       "controls": {
-        "deep": 72,
+        "deep": 83,
         "selection": 2120,
         "reference": 497,
         "review": 343,
@@ -16,10 +16,30 @@
       }
     },
     {
-      "name": "All 72 result screens retain all 724 claim IDs, 313 event IDs, source IDs and raw date labels",
+      "name": "All 83 result screens retain 786 claim IDs, 364 event IDs, source IDs and raw date labels",
       "result": "pass",
+      "claims": 786,
+      "events": 364
+    },
+    {
+      "name": "Original 72 details are field-identical to recovered branch; all original 724 claims and 313 events remain",
+      "result": "pass",
+      "cases": 72,
       "claims": 724,
       "events": 313
+    },
+    {
+      "name": "New 11 cases, 84 metrics and 51 events match independently frozen research controls and all source anchors render",
+      "result": "pass",
+      "cases": 11,
+      "metrics": 84,
+      "events": 51,
+      "municipalities": 13
+    },
+    {
+      "name": "New-batch entry preserves original featured cases and filters exactly 11 reachable cases",
+      "result": "pass",
+      "new_cases": 11
     },
     {
       "name": "Every selection, reference, review and local record screen renders",
@@ -67,7 +87,7 @@
     {
       "name": "Default data requests stay below 100KB and never load raw 24MB JSON",
       "result": "pass",
-      "bootstrap_plus_deep_index_bytes": 44067
+      "bootstrap_plus_deep_index_bytes": 51962
     },
     {
       "name": "Oversized number emphasis preserves original text, units and dates",

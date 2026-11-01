@@ -1,0 +1,37 @@
+# 同一台帳から公開データへ追記する
+
+このページは中断Work branchの既存schema・表示・全データ層を土台とする。別schemaへの置換や、自治体名だけでの案件統合は行わない。
+
+## 入力と順序
+
+1. 既存`build.py --inputs /secure/original-inputs`は従来の凍結版を再生成する。旧原JSONと拡張版baselineの493 field差は別保持し、どちらかへ寄せて上書きしない。
+2. 継続研究を重複照合し、accepted ledgerからPDF/XLSX/JSONを同時生成・QA。既存Driveの同一file ID更新とreadback SHA照合を完了する。秘密情報・認証設定をこのrepoに置かない。
+3. 私用の確定JSONにある`continuous_update_appendix_v1`を以下で追記する。
+
+```bash
+python maintenance/append-continuation.py --input /secure/accepted-outcomes.json --site .
+python maintenance/verify-continuation.py --input /secure/accepted-outcomes.json --site . --report verification/continuation-schema-check.json
+```
+
+Python標準ライブラリと検証用`jsonschema`を使用。ブラウザー実行時の依存は増やさない。入力ファイルは公開checkoutへコピーしない。
+
+## 保持と追加
+
+- 元72詳査のdetail shards、724記述、313出来事、出典、日付精度を不変保持する。
+- 採択2120・参照497・資料点検343・自治体公式履歴100・旧代表事例111・年度索引3041・旧政策66・旧出来事467の各層を削除しない。
+- 追加案件は`raw.research_case.case_id`という明示IDごとにまとめ、OBS ID・元event ID・metric IDを残す。別案件の類推結合はしない。
+- 追加detailだけを新shardへ出力し、index-deep/timeline/municipality links/summary/bootstrap/provenanceを追記する。
+- 元templateの再生成後に全accepted ledgerを再適用する。同じ入力の2回目は変更0。更新済みの案件と同一IDで矛盾する新事実は研究側でholdし、承認なく上書きしない。
+- 旧非表示の内部診断2ファイルのみ、公開用の検証範囲/件数/注記へ縮約する別privacy処理を許す。元bytesは公開外で保持し、`verification/continuation-reconciliation.json`の例外欄で元SHAと現SHAを区別する。他supportはbyte保持。
+
+## 公開値
+
+新案件のpublic rawは人が読む属性・結果・留保等だけのallowlist。指標・出来事・出典はrootのtyped arraysで保持するためraw内へ二重複製しない。個人連絡先、私用Drive/Library URL、local path、secretは公開しない。
+
+指標の値・単位・対象期間・定義・phase・原典頁を元ledgerと照合する。計画/実績、実証終了/サービス終了を分ける。広域は1案件と関係自治体コードを保持し、自治体ごとに指標を複製しない。教訓は分析と明記する。
+
+summaryの`deep`等は詳査層だけの件数。旧111や採択2120と合算して全国事業数としない。`as_of`は追加層の原典取得日から更新基準日を示すが、出来事の日付や現在稼働の確認日を代用しない。
+
+## 今回の検証
+
+旧72→83詳査、62→75自治体、313→364出来事。新規11案件/13自治体/51出来事/84指標/33出典/62 OBS。旧724＋新62＝786記述。`verification/continuation-schema-check.json`と`continuation-idempotence.json`が検査結果。公開前には既存全UI検査・モバイル表示・戻る/直リンク・全層到達・privacy scanを別途実施する。

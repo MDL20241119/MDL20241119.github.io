@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Reproducible additive projection. Inputs stay outside the public checkout."""
 import argparse, collections, hashlib, json, pathlib, re, zipfile
+from public_verification import public_audit, public_evidence
 
 ROOT = pathlib.Path(__file__).resolve().parents[2]
 OUT = ROOT / 'municipal-mobility-history'
@@ -154,9 +155,9 @@ def main():
     dump(DATA/'corrections.json',public(new['evidence_corrections']))
     dump(DATA/'research-gaps.json',public({'old':old['gaps'],'expansion':ext['expansion']['gaps'],'addendum':new['gaps']}))
     dump(DATA/'timeline-index.json',public([{k:v for k,v in ev.items() if k in ['event_id','case_id','date_label','date_precision','event_text','status_as_recorded','sort_key']}|{'year':(re.search(r'(?:19|20)\d{2}',ev['date_label']) or ['undated'])[0]} for ev in sorted(new['events'],key=lambda x:x.get('sort_key') or '9999')]))
-    dump(DATA/'support-audit.json',public(ext['audit']))
+    dump(DATA/'support-audit.json',public_audit(ext['audit']))
     dump(DATA/'support-baseline.json',public(ext['baseline']))
-    dump(DATA/'verification-evidence.json',public({'independent':new['independent_verification'],'sets':new['additional_verification_sets']}))
+    dump(DATA/'verification-evidence.json',public_evidence({'independent':new['independent_verification'],'sets':new['additional_verification_sets']}))
     # Do not publish snapshots containing local research paths or private Drive ids.
     dump(DATA/'provenance.json',provenance)
     summary={'as_of':new['as_of'],'built_for':'public_archive','counts':{'baseline_programs':66,'baseline_cases':111,'baseline_events':467,'selection':2120,'training':sum(x.get('training',False) for x in index if x['layer']=='selection'),'reference':497,'municipality_universe':len(munis),'deep':72,'deep_municipalities':len({x['municipality_code'] for x in new['cases']}),'deep_events':313,'claims':len(new['claims']),'review':343,'outcome_result':153,'study_result':1,'interim_result':1,'partial_implementation_result':1,'termination_only':1,'local':100,'history':len(layers['history'])},'evidence_counts':dict(collections.Counter(x['result_evidence_kind'] for x in new['official_document_reviews'])),'input_files':[{'filename':f['name'],'bytes':f['actual_bytes'],'sha256':f['sha256']} for f in manifest],'layers':{k:{'count':len(v),'index':f'data/index-{k}.json'} for k,v in layers.items()},'notes':['件数は資料ごとに単位が異なる。合計して総実証件数にしない。','1,741は調査母集団。全国自治体の10年史を調査し終えた数ではない。','旧111事例と追加72案件は別層。事業同一性を自動判定しない。']}

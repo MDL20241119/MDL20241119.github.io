@@ -1,0 +1,402 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "case_id",
+    "municipality_code",
+    "municipality_codes",
+    "municipality_names",
+    "prefecture",
+    "municipality",
+    "title",
+    "claims",
+    "events",
+    "metrics",
+    "sources",
+    "raw",
+    "current_observation",
+    "state",
+    "state_label",
+    "related_baseline",
+    "corrections",
+    "provenance",
+    "observation_ids"
+  ],
+  "properties": {
+    "case_id": {
+      "type": "string"
+    },
+    "municipality_code": {
+      "type": "string"
+    },
+    "prefecture": {
+      "type": "string"
+    },
+    "municipality": {
+      "type": "string"
+    },
+    "title": {
+      "type": "string"
+    },
+    "current_observation": {
+      "type": "string"
+    },
+    "state": {
+      "type": "string"
+    },
+    "state_label": {
+      "type": "string"
+    },
+    "interpretation_note": {
+      "type": "string"
+    },
+    "call_claim_id": {
+      "type": "string"
+    },
+    "selection_claim_id": {
+      "type": "string"
+    },
+    "lesson_claim_id": {
+      "type": "string"
+    },
+    "municipality_codes": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "municipality_names": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "string"
+      }
+    },
+    "claims": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "claim_id",
+          "case_id",
+          "section",
+          "label",
+          "statement",
+          "claim_type",
+          "analysis_flag",
+          "source_refs"
+        ],
+        "properties": {
+          "claim_id": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "section": {
+            "type": "string"
+          },
+          "label": {
+            "type": "string"
+          },
+          "statement": {
+            "type": "string"
+          },
+          "claim_type": {
+            "type": "string"
+          },
+          "verification_status": {
+            "type": "string"
+          },
+          "observation_id": {
+            "type": "string"
+          },
+          "analysis_flag": {
+            "type": "boolean"
+          },
+          "source_refs": {
+            "type": "array",
+            "items": {
+              "type": "object",
+              "required": [
+                "source_id",
+                "url",
+                "locator"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "locator": {
+                  "type": "string"
+                },
+                "support_scope": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "event_id",
+          "case_id",
+          "date_label",
+          "date_precision",
+          "date_role",
+          "event_text",
+          "status_as_recorded",
+          "phase",
+          "source_refs",
+          "sort_key",
+          "observation_id"
+        ],
+        "properties": {
+          "event_id": {
+            "type": "string"
+          },
+          "case_id": {
+            "type": "string"
+          },
+          "date_label": {
+            "type": "string"
+          },
+          "date_precision": {
+            "type": "string"
+          },
+          "date_role": {
+            "type": "string"
+          },
+          "event_text": {
+            "type": "string"
+          },
+          "status_as_recorded": {
+            "type": "string"
+          },
+          "phase": {
+            "type": "string"
+          },
+          "sort_key": {
+            "type": "string"
+          },
+          "sort_key_note": {
+            "type": "string"
+          },
+          "observation_id": {
+            "type": "string"
+          },
+          "source_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "source_id",
+                "url",
+                "locator"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "locator": {
+                  "type": "string"
+                },
+                "support_scope": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "metrics": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "metric_id",
+          "value",
+          "unit",
+          "period",
+          "definition",
+          "phase",
+          "verification",
+          "source",
+          "source_refs",
+          "observation_id"
+        ],
+        "properties": {
+          "metric_id": {
+            "type": "string"
+          },
+          "unit": {
+            "type": "string"
+          },
+          "period": {
+            "type": "string"
+          },
+          "definition": {
+            "type": "string"
+          },
+          "phase": {
+            "type": "string"
+          },
+          "verification": {
+            "type": "string"
+          },
+          "observation_id": {
+            "type": "string"
+          },
+          "value": {
+            "type": [
+              "number",
+              "string"
+            ]
+          },
+          "source": {
+            "type": "object",
+            "required": [
+              "document_id",
+              "url",
+              "locator"
+            ],
+            "properties": {
+              "document_id": {
+                "type": "string"
+              },
+              "url": {
+                "type": "string"
+              },
+              "locator": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          },
+          "source_refs": {
+            "type": "array",
+            "minItems": 1,
+            "items": {
+              "type": "object",
+              "required": [
+                "source_id",
+                "url",
+                "locator"
+              ],
+              "properties": {
+                "source_id": {
+                  "type": "string"
+                },
+                "url": {
+                  "type": "string"
+                },
+                "locator": {
+                  "type": "string"
+                },
+                "support_scope": {
+                  "type": "string"
+                }
+              },
+              "additionalProperties": false
+            }
+          }
+        },
+        "additionalProperties": false
+      }
+    },
+    "sources": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "source_id",
+          "url",
+          "title"
+        ],
+        "properties": {
+          "source_id": {
+            "type": "string"
+          },
+          "url": {
+            "type": "string"
+          },
+          "title": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "raw": {
+      "type": "object"
+    },
+    "last_documented_event": {
+      "type": [
+        "object",
+        "null"
+      ]
+    },
+    "current_status_checked_at": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "related_baseline": {
+      "type": "array"
+    },
+    "corrections": {
+      "type": "array"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_file",
+        "source_pointer",
+        "original_id",
+        "ledger_sha256",
+        "observation_ids"
+      ]
+    },
+    "observation_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "source_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "result_claim_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "event_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    }
+  },
+  "additionalProperties": false
+}

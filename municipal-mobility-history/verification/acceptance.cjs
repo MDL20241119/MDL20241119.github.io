@@ -1,5 +1,5 @@
 /* Validate data-to-screen correspondence using independent input controls. */
-const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert');
+const fs=require('fs'),path=require('path'),vm=require('vm'),assert=require('assert'),crypto=require('crypto');
 const root=path.resolve(__dirname,'..'),repo=path.dirname(root),results=[];
 const read=p=>JSON.parse(fs.readFileSync(path.join(root,'data',p),'utf8'));
 const context={window:{MOBILITY_RESULTS_SUMMARY:JSON.parse(fs.readFileSync(path.join(root,'data/bootstrap.js'),'utf8').replace(/^window.MOBILITY_RESULTS_SUMMARY=/,'').replace(/;\s*$/,''))},document:{body:{dataset:{}},addEventListener(){}},location:{hash:'#records'},URLSearchParams,console,fetch:async url=>{
@@ -10,13 +10,34 @@ const ui=context.window.MOBILITY_RESULTS;
 async function check(name,fn){try{const detail=await fn();results.push({name,result:'pass',...detail});}catch(e){results.push({name,result:'fail',message:e.message});}}
 (async()=>{
  await check('Every original record ID has exactly one indexed detail in its own layer',async()=>{
-   const controls={deep:72,selection:2120,reference:497,review:343,local:100,legacy:111,history:3041};
+   const controls={deep:83,selection:2120,reference:497,review:343,local:100,legacy:111,history:3041};
    for(const [layer,count] of Object.entries(controls)){const ix=read('index-'+layer+'.json');assert.equal(ix.length,count);assert.equal(new Set(ix.map(r=>r.id)).size,count);for(const row of ix){const sh=JSON.parse(fs.readFileSync(path.join(root,row.detail),'utf8'));assert(sh[row.id],layer+':'+row.id);assert.equal(sh[row.id].provenance.original_id,row.id);}}
    return {controls};
  });
- await check('All 72 result screens retain all 724 claim IDs, 313 event IDs, source IDs and raw date labels',async()=>{
+ await check('All 83 result screens retain 786 claim IDs, 364 event IDs, source IDs and raw date labels',async()=>{
    let claims=0,events=0;for(const r of read('index-deep.json')){const c=JSON.parse(fs.readFileSync(path.join(root,r.detail),'utf8'))[r.id];const html=await ui.content({view:'case',id:r.id,p:{}});for(const cl of c.claims){assert(html.includes(cl.claim_id),cl.claim_id);claims++;}for(const ev of c.events){assert(html.includes('id="event-'+ev.event_id+'"'));assert(html.includes(ev.date_label.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;')));events++;}for(const s of c.sources)assert(html.includes('id="source-'+s.source_id+'"'));}
-   assert.equal(claims,724);assert.equal(events,313);return {claims,events};
+   assert.equal(claims,786);assert.equal(events,364);return {claims,events};
+ });
+ await check('Original 72 details are field-identical to recovered branch; all original 724 claims and 313 events remain',async()=>{
+   const golden=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline-continuation-controls.json'),'utf8'));
+   const canonical=x=>Array.isArray(x)?x.map(canonical):x&&typeof x==='object'?Object.fromEntries(Object.keys(x).sort().map(k=>[k,canonical(x[k])])):x;
+   const ix=read('index-deep.json');let claims=0,events=0;
+   assert.equal(Object.keys(golden.baseline_cases).length,72);
+   for(const [id,g] of Object.entries(golden.baseline_cases)){const row=ix.find(r=>r.id===id);assert(row);const detail=JSON.parse(fs.readFileSync(path.join(root,row.detail),'utf8'))[id];assert.equal(crypto.createHash('sha256').update(JSON.stringify(canonical(detail))).digest('hex'),g.detail_sha256,id);claims+=g.claim_ids.length;events+=g.event_ids.length;}
+   assert.equal(claims,724);assert.equal(events,313);return {cases:72,claims,events};
+ });
+ await check('New 11 cases, 84 metrics and 51 events match independently frozen research controls and all source anchors render',async()=>{
+   const golden=JSON.parse(fs.readFileSync(path.join(__dirname,'baseline-continuation-controls.json'),'utf8')).continuation;
+   assert.equal(golden.case_ids.length,11);assert.equal(golden.metrics.length,84);assert.equal(golden.events.length,51);assert.equal(golden.municipality_codes.length,13);
+   const ix=read('index-deep.json');let renderedMetrics=0,renderedEvents=0;
+   for(const id of golden.case_ids){const row=ix.find(r=>r.id===id);assert(row);const detail=JSON.parse(fs.readFileSync(path.join(root,row.detail),'utf8'))[id];const html=await ui.content({view:'case',id,p:{}});assert(html.indexOf('id="results"')<html.indexOf('公募・採択の背景'));const summary=detail.claims.find(c=>c.claim_id.endsWith(':summary'));assert(summary);const firstMetric=detail.metrics[0];if(firstMetric)assert(html.indexOf(summary.claim_id)<html.indexOf(firstMetric.metric_id));for(const c of detail.claims.filter(c=>c.section==='result'&&c!==summary))assert(html.indexOf(summary.claim_id)<html.indexOf(c.claim_id));for(const m of detail.metrics){const g=golden.metrics.find(x=>x.id===m.metric_id);assert(g,m.metric_id);for(const k of ['value','unit','period','definition','phase'])assert.deepEqual(m[k],g[k],m.metric_id+':'+k);assert(html.includes(m.metric_id));assert(html.includes('id="source-'+m.source.document_id+'"'));assert(html.includes('section=source-'+m.source.document_id));renderedMetrics++;}for(const e of detail.events){const g=golden.events.find(x=>x.id===e.event_id);assert(g);assert.equal(e.date_label,g.date);assert.equal(e.phase,g.phase);renderedEvents++;}}
+   assert.equal(renderedMetrics,84);assert.equal(renderedEvents,51);return {cases:11,metrics:renderedMetrics,events:renderedEvents,municipalities:13};
+ });
+ await check('New-batch entry preserves original featured cases and filters exactly 11 reachable cases',async()=>{
+   const rows=read('index-deep.json'),found=ui.filter(rows,{batch:'continuation'});assert.equal(found.length,11);assert(found.every(x=>x.id.startsWith('CONT-')));
+   const home=await ui.content({view:'home',id:'',p:{}});for(const id of ['NORTH-R-01','central_toyono_ai','central_tottori_torimobi','west-44211-15'])assert(home.includes(id));assert(home.includes('batch=continuation'));
+   const html=await ui.content({view:'projects',id:'',p:{batch:'continuation'}});assert.equal([...html.matchAll(/data-record-id="/g)].length,11);assert(html.includes('name="batch"'));assert(html.includes('全国の案件総数ではありません'));
+   return {new_cases:11};
  });
  await check('Every selection, reference, review and local record screen renders',async()=>{
    let rendered=0;for(const layer of ['selection','reference','review','local','history'])for(const r of read('index-'+layer+'.json')){const html=await ui.content({view:'record',id:r.id,p:{layer}});assert(html.includes(r.id));assert(!html.includes('undefined'));rendered++;}return {rendered};

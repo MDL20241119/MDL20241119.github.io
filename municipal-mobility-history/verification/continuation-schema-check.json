@@ -1,0 +1,14 @@
+{
+  "result": "pass",
+  "schema_validation": "passed",
+  "old_case_ids_retained": 72,
+  "old_claim_ids_retained": 724,
+  "old_event_ids_and_calendar_fields_retained": 313,
+  "new_cases": 11,
+  "new_events": 51,
+  "new_metrics": 84,
+  "new_observations": 62,
+  "new_distinct_municipalities": 13,
+  "all_metric_values_units_periods_phases_and_sources_match_ledger": true,
+  "unchanged_protected_files": 272
+}
