@@ -44,3 +44,24 @@ python3 municipal-mobility-history/maintenance/sync_release.py
 ```
 
 UIのJSON読込・scope検証読込は同releaseを使用する。bootstrapと詳査index/summaryの件数が違う場合は内容表示を停止して再読込を案内する。GitHub Pagesのqueryはimmutable snapshotではなく、古いページは配信キャッシュ期限まで残り得る。版queryは新HTMLの依存cache混在を防ぐもので、過去URLの永久再現を保証しない。公開後は通常URLと再読込/戻る、両ページの件数/版を確認する。公開原典URLにはqueryを付加しない。
+
+## 累積バッチ・既存案件の増補（第2バッチ以降）
+
+- `current_batch_id` と `observation_batches` をaccepted ledgerから受け取り、`summary.current_batch.case_ids`で今回の表示対象を決める。IDの接頭辞で選別しない。`#projects?batch=latest`が正式導線、旧`batch=continuation`は同じ集合への互換alias。
+- 初回の詳査化は新規事業ではない。今回の「新規詳査」と「既存案件の増補」を別数で表示。`update_existing_case`は既存legacy ID、`baseline_layer=legacy`、同一性根拠と更新理由を要求する。元72詳査への変更は現adapterではholdし、明示の別契約なしに上書きしない。
+- adapterを動かす**前**に、accepted累積入力と前公開版から独立期待値を固定する。前公開版の83詳細・111legacyのbyte hashを残す。現在の生成後dataから期待値を作り直してはならない。
+
+```sh
+python maintenance/batch-controls.py --input /secure/accepted-outcomes.json \
+  --previous-site /secure/previous-published/municipal-mobility-history \
+  --output verification/current-batch-controls.json
+python maintenance/append-continuation.py --input /secure/accepted-outcomes.json --site .
+python maintenance/verify-continuation.py --input /secure/accepted-outcomes.json --site . \
+  --report verification/continuation-schema-check.json
+node verification/acceptance.cjs
+```
+
+- 前バッチのcaseが累積ledgerから欠けた場合は停止。前バッチの詳細snapshotは再パック・書換せず、新規詳細は次のshardへ出力。旧legacyもbyteを変えず、同IDの別層詳査と根拠・異説へのリンクを足す。
+- `evidence_conflict=true`のeventは元phase・原eventを保持する一方、確定実績として表示しない。最終確認済み出来事の選出から除外し、詳細と年表で異説表示を優先する。`contradictory_sources`、`correction_note`、`baseline_event_context`を比較できるよう保持する。原典間の相違は確定訂正を意味しない。
+- `coverage_scope`は原claim IDを保持した調査範囲メタデータであり、結果の事実には分類しない。
+- `sync_release.py`は公開JSON・municipal UI資産・旧policyの`history.js`をhash対象にし、両ページのbootstrap/results.jsと旧policy history.jsを同じreleaseに同期する。固定snapshot配信ではなくキャッシュ区別である。

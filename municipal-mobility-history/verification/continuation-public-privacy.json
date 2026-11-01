@@ -1,14 +1,15 @@
 {
   "result": "pass",
-  "files_scanned": 283,
+  "files_scanned": 285,
   "private_url_path_contact_secret_hits": [],
-  "new_source_document_types_preserved": true,
-  "new_source_count": 33,
-  "new_source_document_type_counts": {
-    "mixed": 8,
-    "official_notice": 14,
-    "result_report": 9,
+  "source_document_types_preserved": true,
+  "cumulative_continuation_source_count": 87,
+  "source_document_type_counts": {
+    "mixed": 32,
+    "result_report": 26,
+    "official_notice": 27,
     "interim_report": 2
   },
-  "all_343_original_review_document_types_retained": "protected byte-identical review shards"
+  "all_343_original_review_document_types_retained": "protected byte-identical review shards",
+  "current_batch_id": "CONTINUATION-20261101-BATCH2"
 }

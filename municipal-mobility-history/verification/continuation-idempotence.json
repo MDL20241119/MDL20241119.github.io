@@ -1,5 +1,6 @@
 {
-  "same_input_replay_changed_files": [],
-  "byte_identical": true,
-  "files_checked": 284
+  "result": "pass",
+  "input_sha256": "77ba7ac6e6f2338dcb02f2dcb8f3f4c8d07ed6b40517520b96b7453b81373dbc",
+  "same_input_second_run_changed_files": [],
+  "file_count": 315
 }

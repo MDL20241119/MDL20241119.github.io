@@ -1,0 +1,2720 @@
+{
+  "basis": "accepted ledger plus prior published byte snapshots, not generated overlay",
+  "input_sha256": "77ba7ac6e6f2338dcb02f2dcb8f3f4c8d07ed6b40517520b96b7453b81373dbc",
+  "ledger_sha256": "461ba0cdc61273488a79897aebcb464df1efd5cb5deb4e4441fff65ff24ec5da",
+  "current_batch_id": "CONTINUATION-20261101-BATCH2",
+  "case_ids": [
+    "B2-KC-03",
+    "B2-KC-04",
+    "B2-KC-05",
+    "B2-N-01",
+    "B2-N-02",
+    "B2-N-03",
+    "B2-N-04",
+    "B2-N-05",
+    "B2-N-06",
+    "B2-W-01",
+    "B2-W-02",
+    "B2-W-03",
+    "B2-W-04",
+    "B2-W-05",
+    "B2-W-06",
+    "CONT-C-01",
+    "CONT-C-02",
+    "CONT-C-03",
+    "CONT-C-04",
+    "CONT-C-05",
+    "CONT-E-01",
+    "CONT-E-02",
+    "CONT-W-01",
+    "CONT-W-02",
+    "CONT-W-03",
+    "CONT-W-04",
+    "V-C06",
+    "meti_kasugai",
+    "mlit_nishikata"
+  ],
+  "current_case_ids": [
+    "B2-KC-03",
+    "B2-KC-04",
+    "B2-KC-05",
+    "B2-N-01",
+    "B2-N-02",
+    "B2-N-03",
+    "B2-N-04",
+    "B2-N-05",
+    "B2-N-06",
+    "B2-W-01",
+    "B2-W-02",
+    "B2-W-03",
+    "B2-W-04",
+    "B2-W-05",
+    "B2-W-06",
+    "V-C06",
+    "meti_kasugai",
+    "mlit_nishikata"
+  ],
+  "updated_case_ids": [
+    "V-C06",
+    "meti_kasugai",
+    "mlit_nishikata"
+  ],
+  "new_case_ids": [
+    "B2-KC-03",
+    "B2-KC-04",
+    "B2-KC-05",
+    "B2-N-01",
+    "B2-N-02",
+    "B2-N-03",
+    "B2-N-04",
+    "B2-N-05",
+    "B2-N-06",
+    "B2-W-01",
+    "B2-W-02",
+    "B2-W-03",
+    "B2-W-04",
+    "B2-W-05",
+    "B2-W-06"
+  ],
+  "expected": {
+    "deep": 101,
+    "claims": 974,
+    "events": 447
+  },
+  "previous_file_hashes": {
+    "data/details/deep/000.json": "f1309ce8a3d31ea10aebda2115b548fe3669a7bd10af6ccc200ac4dd97b49a37",
+    "data/details/deep/001.json": "9b96ef61980fd302cd39ab0d3a9fc75285dd7ebce31ff5b01dd83fed76405698",
+    "data/details/deep/002.json": "9487ec70b82422d9167f5ba9f9ba27e2f0d2a59b8dbfbadeb5fb82ad7b7eeb25",
+    "data/details/deep/003.json": "580899fb9a7847c203158de99f239d53195fef366fece05c079ee3d18ecb57c9",
+    "data/details/legacy/000.json": "b0ae869a3647d8f9bbaa366de42b22dea60681e7b7d86284fe1dedbd0d6251e0",
+    "data/details/legacy/001.json": "9f39b0faafdb2d1201d65de048cbd54a23453b8fd7876dcc650853c8262ddba8",
+    "data/details/legacy/002.json": "841f1a270a03b08d1d8454b3e7276db04e3f79adf67d65cdfd1c255f0777f48c",
+    "data/details/legacy/003.json": "51183fd1e0a0a8a026fe01d77c9a392f2e9bc6dd42eefb9887444496700d0693",
+    "data/details/legacy/004.json": "cede17945e7b31a028bea674ec902ebfe8d4eeb279cf59e95809ddb73dd73fe1"
+  },
+  "metrics": [
+    {
+      "metric_id": "B2-KC-06-MT-01",
+      "value": 69,
+      "unit": "人",
+      "period": "2017-09-02/2017-09-09",
+      "definition": "乗車・アンケート協力モニター人数。年間利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-01",
+      "value": 22558,
+      "unit": "年間延べ利用人",
+      "period": "2016年度",
+      "definition": "あねっこバス年度利用者数。年内ユニークではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-02",
+      "value": 19468,
+      "unit": "年間延べ利用人",
+      "period": "2018年度",
+      "definition": "あねっこバス年度利用者数。年内ユニークではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-03",
+      "value": 18446,
+      "unit": "年間延べ利用人",
+      "period": "2019年度",
+      "definition": "あねっこバス年度利用者数。年内ユニークではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-04",
+      "value": 15347,
+      "unit": "年間延べ利用人",
+      "period": "2020年度",
+      "definition": "あねっこバス年度利用者数。年内ユニークではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-05",
+      "value": 45630,
+      "unit": "千円",
+      "period": "2016年度",
+      "definition": "あねっこバス運営の町支出額。予算ではなく支出推移図",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-05-MT-06",
+      "value": 45684,
+      "unit": "千円",
+      "period": "2018年度",
+      "definition": "同じ支出図のH30。利用者数とは別系列",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-02-MT-01",
+      "value": 141,
+      "unit": "延べ人",
+      "period": "2023-12/2024-08",
+      "definition": "とよふさ運行実績の累計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-02-MT-02",
+      "value": 115,
+      "unit": "日",
+      "period": "2023-12/2024-08",
+      "definition": "実運行日数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-02-MT-03",
+      "value": 70,
+      "unit": "延べ人",
+      "period": "2024-04/2024-08",
+      "definition": "年度途中の期間利用、141人の内数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-02-MT-04",
+      "value": 13,
+      "unit": "人",
+      "period": "2024-04/2024-08",
+      "definition": "実際に利用した人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-02-MT-05",
+      "value": 96,
+      "unit": "人",
+      "period": "2024-08末",
+      "definition": "豊房エリア会員登録。全域登録509人とは分離",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-01",
+      "value": 304,
+      "unit": "運行回",
+      "period": "2020年度",
+      "definition": "原典年度別運行回数。2020/21は実証期間を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-02",
+      "value": 388,
+      "unit": "延べ利用人",
+      "period": "2020年度",
+      "definition": "原典年度別利用者数。乗車ベース、ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-03",
+      "value": 917,
+      "unit": "運行回",
+      "period": "2021年度",
+      "definition": "原典年度別運行回数。2020/21は実証期間を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-04",
+      "value": 1237,
+      "unit": "延べ利用人",
+      "period": "2021年度",
+      "definition": "原典年度別利用者数。乗車ベース、ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-05",
+      "value": 1194,
+      "unit": "運行回",
+      "period": "2022年度",
+      "definition": "原典年度別運行回数。2020/21は実証期間を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-06",
+      "value": 1688,
+      "unit": "延べ利用人",
+      "period": "2022年度",
+      "definition": "原典年度別利用者数。乗車ベース、ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-07",
+      "value": 1239,
+      "unit": "運行回",
+      "period": "2023年度",
+      "definition": "原典年度別運行回数。2020/21は実証期間を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-08",
+      "value": 1769,
+      "unit": "延べ利用人",
+      "period": "2023年度",
+      "definition": "原典年度別利用者数。乗車ベース、ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-09",
+      "value": 929,
+      "unit": "運行回",
+      "period": "2024年度（2025年1月まで）",
+      "definition": "原典年度別運行回数。2020/21は実証期間を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-04-MT-10",
+      "value": 1286,
+      "unit": "延べ利用人",
+      "period": "2024年度（2025年1月まで）",
+      "definition": "原典年度別利用者数。乗車ベース、ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-01",
+      "value": 866,
+      "unit": "延べ人（利用累計）",
+      "period": "2023-12",
+      "definition": "実証期間利用人数。原典は利用者と表記、43.3人/日を併記する累計でユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-02",
+      "value": 27335,
+      "unit": "延べ人",
+      "period": "2024-04-01/2025-03-31",
+      "definition": "年度利用人数合計；原典本文は回、集計表は人と表記",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-03",
+      "value": 75.5,
+      "unit": "人/運行日",
+      "period": "2024年度",
+      "definition": "公表日平均利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-04",
+      "value": 1.52,
+      "unit": "人/停留所間区間",
+      "period": "2024年度",
+      "definition": "停留所間で平均して乗っていた人数（乗合率）。乗合した予約比率ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-05",
+      "value": 56347494,
+      "unit": "円",
+      "period": "2024年度",
+      "definition": "運行費45,886,465＋ガソリン4,560,629＋車両リース5,900,400（保険含む）の支出実績計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-06",
+      "value": 5295300,
+      "unit": "円",
+      "period": "2024年度",
+      "definition": "運賃収入実績",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-07",
+      "value": 1876,
+      "unit": "延べ人",
+      "period": "2024-04",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-08",
+      "value": 2004,
+      "unit": "延べ人",
+      "period": "2024-05",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-09",
+      "value": 2057,
+      "unit": "延べ人",
+      "period": "2024-06",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-10",
+      "value": 2500,
+      "unit": "延べ人",
+      "period": "2024-07",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-11",
+      "value": 2120,
+      "unit": "延べ人",
+      "period": "2024-08",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-12",
+      "value": 2477,
+      "unit": "延べ人",
+      "period": "2024-09",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-13",
+      "value": 2620,
+      "unit": "延べ人",
+      "period": "2024-10",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-14",
+      "value": 2385,
+      "unit": "延べ人",
+      "period": "2024-11",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-15",
+      "value": 2380,
+      "unit": "延べ人",
+      "period": "2024-12",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-16",
+      "value": 2189,
+      "unit": "延べ人",
+      "period": "2025-01",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-17",
+      "value": 2236,
+      "unit": "延べ人",
+      "period": "2025-02",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-04-MT-18",
+      "value": 2491,
+      "unit": "延べ人",
+      "period": "2025-03",
+      "definition": "月別利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-03-MT-01",
+      "value": 14.2,
+      "unit": "%",
+      "period": "2016年度末",
+      "definition": "原典表記の乗合率。算式・分母件数は未記載",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-03-MT-02",
+      "value": 49.1,
+      "unit": "%",
+      "period": "2018年度末",
+      "definition": "同資料の乗合率。利用人数増や交通改善の因果効果とは異なる",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-03-MT-01",
+      "value": 632,
+      "unit": "延べ人",
+      "period": "2024-10-01/2025-01-19",
+      "definition": "累計利用者（2市広域実証全体）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-03-MT-02",
+      "value": 109,
+      "unit": "人",
+      "period": "2024-10-01/2025-01-19",
+      "definition": "利用経験者（実利用人数）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-03-MT-03",
+      "value": 335,
+      "unit": "人",
+      "period": "実証終了時",
+      "definition": "登録者合計。実利用と分離",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-03-MT-04",
+      "value": 158,
+      "unit": "人",
+      "period": "2025-01-15/2025-01-31",
+      "definition": "会員328人対象アンケート回答者",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-01",
+      "value": 3065,
+      "unit": "件",
+      "period": "2019-10-01/2019-12-27",
+      "definition": "予約件数。乗車人数と異なる",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-02",
+      "value": 52.8,
+      "unit": "人/日",
+      "period": "2019-10-01/2019-12-27",
+      "definition": "61運行日の原典平均",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-03",
+      "value": 1563,
+      "unit": "人",
+      "period": "2019-12末",
+      "definition": "登録者",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-04",
+      "value": 488,
+      "unit": "人",
+      "period": "2019-12末",
+      "definition": "1回以上利用経験のある登録者",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-05",
+      "value": 1.63,
+      "unit": "人",
+      "period": "2019-10/2019-12",
+      "definition": "原典表記は乗合率、実際は2台平均乗合人数。%でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-01-MT-06",
+      "value": 10163,
+      "unit": "回",
+      "period": "2023年度",
+      "definition": "年度利用回数。利用者ユニーク数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-05-MT-01",
+      "value": 6762,
+      "unit": "件",
+      "period": "2025-10/2026-03",
+      "definition": "期間累計予約件数。実人数でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-05-MT-02",
+      "value": 3955,
+      "unit": "人",
+      "period": "2026-03末",
+      "definition": "登録者数合計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-05-MT-03",
+      "value": 1418,
+      "unit": "人",
+      "period": "2026-03末",
+      "definition": "利用経験者数合計（過去から累積。半年間ユニークではない）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-05-MT-04",
+      "value": 5792,
+      "unit": "件",
+      "period": "2025-10/2026-03",
+      "definition": "電話予約件数、総予約6762件",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-05-MT-05",
+      "value": 970,
+      "unit": "件",
+      "period": "2025-10/2026-03",
+      "definition": "インターネット予約件数、総予約6762件",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-01-MT-01",
+      "value": 3416,
+      "unit": "km",
+      "period": "2016-05-26/2016-11-25",
+      "definition": "総実車走行距離。人数・配車回数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-01-MT-02",
+      "value": 12241,
+      "unit": "km",
+      "period": "2016-05-26/2018-05-25",
+      "definition": "開始以来の累積走行距離。前段半年値と重複するため合算禁止",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-01-MT-03",
+      "value": 60,
+      "unit": "%",
+      "period": "2018-05-25時点",
+      "definition": "全乗車中の代理配車経由の割合。絶対乗車回数未掲載",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-01-MT-04",
+      "value": 80,
+      "unit": "%",
+      "period": "2018-05-25時点",
+      "definition": "支払い方法中の現金割合。金額ベースではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-01-MT-05",
+      "value": 39,
+      "unit": "人",
+      "period": "2018-05-25時点",
+      "definition": "代理配車サポーター数。利用者数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-01",
+      "value": 252,
+      "unit": "延べ人",
+      "period": "2019-11-01/2019-11-15",
+      "definition": "A地区乗車人数・10運行日",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-02",
+      "value": 396,
+      "unit": "延べ人",
+      "period": "2019-11-18/2019-11-30",
+      "definition": "B地区乗車人数・11運行日",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-03",
+      "value": 172,
+      "unit": "件",
+      "period": "2019-11-01/2019-11-15",
+      "definition": "A地区予約件数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-04",
+      "value": 336,
+      "unit": "件",
+      "period": "2019-11-18/2019-11-30",
+      "definition": "B地区予約件数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-05",
+      "value": 3.3,
+      "unit": "%",
+      "period": "2025年度",
+      "definition": "南部年度NG率。NG275件／（成立予約8152件＋NG275件）=約3.3%。原典表示。 分母式は表の件数との整合確認であり、原典に算式明記はない。",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-04-MT-06",
+      "value": 1.2,
+      "unit": "%",
+      "period": "2026-04/2026-05",
+      "definition": "南部増車後2か月NG率。NG15件／（成立予約1285件＋NG15件）=約1.2%。原典の予約件数は成立分、NGを別掲。 分母式は表の件数との整合確認であり、原典に算式明記はない。",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-01",
+      "value": 581,
+      "unit": "延べ人",
+      "period": "2024-02-02/2024-03-22",
+      "definition": "試験運行の延べ乗車人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-02",
+      "value": 100,
+      "unit": "人",
+      "period": "2024-02-02/2024-03-22",
+      "definition": "実際に利用した登録ID；登録者548人中",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-03",
+      "value": 548,
+      "unit": "人",
+      "period": "2024-02-02/2024-03-22",
+      "definition": "登録ID総数；実利用人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-04",
+      "value": 36,
+      "unit": "運行日",
+      "period": "2024-02-02/2024-03-22",
+      "definition": "期間内実運行日；暦日50日とは区別",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-05",
+      "value": 7973,
+      "unit": "千円",
+      "period": "2023年度実証",
+      "definition": "事業費；恒常運行費と同一ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-06",
+      "value": 16.2,
+      "unit": "人/運行日",
+      "period": "2024-02-02/2024-03-22",
+      "definition": "公表日平均利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-01-MT-07",
+      "value": 100,
+      "unit": "％",
+      "period": "2024-03-06/2024-03-17",
+      "definition": "継続希望；利用経験のあるアンケート回答者22人の意向",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-01",
+      "value": 128,
+      "unit": "回",
+      "period": "2025-10-01/2025-10-31",
+      "definition": "累計運行回数。延べ乗客数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-02",
+      "value": 22,
+      "unit": "日",
+      "period": "2025-10",
+      "definition": "運行日数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-03",
+      "value": 102,
+      "unit": "人",
+      "period": "2025-10-31時点",
+      "definition": "登録者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-04",
+      "value": 30,
+      "unit": "人",
+      "period": "2025-10",
+      "definition": "登録者のうち利用経験あり",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-05",
+      "value": 53.3,
+      "unit": "%",
+      "period": "2025-10",
+      "definition": "2回以上利用した人の割合（利用経験者30人）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-01-MT-06",
+      "value": 4,
+      "unit": "件",
+      "period": "2026-04",
+      "definition": "新病院ポイント利用実績。人数でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-02-MT-01",
+      "value": 119,
+      "unit": "成立ドライブ",
+      "period": "2017-03-12/2018-03-31",
+      "definition": "原典成立ドライブ数。登録333件とは別",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-02-MT-02",
+      "value": 173,
+      "unit": "延べ同乗人",
+      "period": "2017-03-12/2018-03-31",
+      "definition": "相乗り利用実績。月別固有人数合計137を年間ユニークとしない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-02-MT-03",
+      "value": 960,
+      "unit": "延べ同乗人",
+      "period": "2017-03/2024-09末",
+      "definition": "運用開始後累計、173人を含む",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-02-MT-04",
+      "value": 680,
+      "unit": "運行ドライブ件",
+      "period": "2017-03/2024-09末",
+      "definition": "原典運行ドライブ数。p11旧期間119と重複加算不可",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-02-MT-05",
+      "value": 31,
+      "unit": "人",
+      "period": "令和6年度調査時点",
+      "definition": "登録ドライバー。実稼働は3〜4人と別記",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-04-MT-01",
+      "value": 247,
+      "unit": "人",
+      "period": "2026-01実証終了時",
+      "definition": "登録会員",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-04-MT-02",
+      "value": 471,
+      "unit": "件",
+      "period": "2025-09-16/2026-01-30",
+      "definition": "予約件数合計。乗車人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-04-MT-03",
+      "value": 0,
+      "unit": "人",
+      "period": "実証期間",
+      "definition": "小野地区利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-04-MT-04",
+      "value": 0,
+      "unit": "人",
+      "period": "実証期間",
+      "definition": "岩屋地区利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-01-MT-01",
+      "value": 2385,
+      "unit": "利用回",
+      "period": "運用開始〜2023-09末",
+      "definition": "延べ利用回数。人数・ユニーク利用者ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-01-MT-02",
+      "value": 30711.19,
+      "unit": "km",
+      "period": "運用開始〜2023-09末",
+      "definition": "原典の利用距離実績。回数と別単位",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-01-MT-03",
+      "value": 17,
+      "unit": "人",
+      "period": "2023-09末",
+      "definition": "登録町民ドライバー。実稼働数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-01",
+      "value": 10858,
+      "unit": "延べ人",
+      "period": "2022-04-01/2023-03-31",
+      "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-02",
+      "value": 2688840,
+      "unit": "円",
+      "period": "2022-04-01/2023-03-31",
+      "definition": "運賃収入額",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-03",
+      "value": 7855,
+      "unit": "延べ人",
+      "period": "2022-04-01/2023-03-31",
+      "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-04",
+      "value": 3003,
+      "unit": "延べ人",
+      "period": "2022-04-01/2023-03-31",
+      "definition": "大島地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-05",
+      "value": 11037,
+      "unit": "延べ人",
+      "period": "2023-04-01/2024-03-31",
+      "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-06",
+      "value": 2769237,
+      "unit": "円",
+      "period": "2023-04-01/2024-03-31",
+      "definition": "運賃収入額",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-07",
+      "value": 8663,
+      "unit": "延べ人",
+      "period": "2023-04-01/2024-03-31",
+      "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-08",
+      "value": 2374,
+      "unit": "延べ人",
+      "period": "2023-04-01/2024-03-31",
+      "definition": "大島地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-09",
+      "value": 10050,
+      "unit": "延べ人",
+      "period": "2024-04-01/2025-03-31",
+      "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-10",
+      "value": 2475900,
+      "unit": "円",
+      "period": "2024-04-01/2025-03-31",
+      "definition": "運賃収入額",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-11",
+      "value": 8787,
+      "unit": "延べ人",
+      "period": "2024-04-01/2025-03-31",
+      "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-12",
+      "value": 1263,
+      "unit": "延べ人",
+      "period": "2024-04-01/2025-03-31",
+      "definition": "大島地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-13",
+      "value": 10109,
+      "unit": "延べ人",
+      "period": "2025-04-01/2026-03-31",
+      "definition": "運賃収受した利用者数（全地区）。ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-14",
+      "value": 2529880,
+      "unit": "円",
+      "period": "2025-04-01/2026-03-31",
+      "definition": "運賃収入額",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-15",
+      "value": 9381,
+      "unit": "延べ人",
+      "period": "2025-04-01/2026-03-31",
+      "definition": "阿古谷・松尾台地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-03-MT-16",
+      "value": 728,
+      "unit": "延べ人",
+      "period": "2025-04-01/2026-03-31",
+      "definition": "大島地区の運賃収受した利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-01",
+      "value": 220263,
+      "unit": "回",
+      "period": "2016年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-02",
+      "value": 283732,
+      "unit": "回",
+      "period": "2017年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-03",
+      "value": 312184,
+      "unit": "回",
+      "period": "2018年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-04",
+      "value": 316799,
+      "unit": "回",
+      "period": "2019年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-05",
+      "value": 254570,
+      "unit": "回",
+      "period": "2020年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-06",
+      "value": 242163,
+      "unit": "回",
+      "period": "2021年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-07",
+      "value": 211092,
+      "unit": "回",
+      "period": "2022年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-08",
+      "value": 206828,
+      "unit": "回",
+      "period": "2023年度",
+      "definition": "年間延べ利用回数。ユニーク利用者でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-03-MT-09",
+      "value": 30036,
+      "unit": "人",
+      "period": "2023年度",
+      "definition": "登録者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-01",
+      "value": 363,
+      "unit": "延べ人",
+      "period": "2023-01-05/2023-02-28",
+      "definition": "延べ利用者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-02",
+      "value": 102,
+      "unit": "人",
+      "period": "2023-01-05/2023-02-28",
+      "definition": "期間中利用した人；ユニーク利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-03",
+      "value": 391,
+      "unit": "人",
+      "period": "2023-01-05/2023-02-28",
+      "definition": "会員登録者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-04",
+      "value": 334,
+      "unit": "件",
+      "period": "2023-01-05/2023-02-28",
+      "definition": "予約成立件数；人数とは異なる",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-05",
+      "value": 6905,
+      "unit": "千円",
+      "period": "2022年度実証",
+      "definition": "事業費",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-06",
+      "value": 200,
+      "unit": "円/乗車",
+      "period": "2023-01-05/2023-02-28",
+      "definition": "運賃；未就学児無料",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-W-02-MT-07",
+      "value": 347,
+      "unit": "枚",
+      "period": "実証後アンケート",
+      "definition": "回収枚数。登録会員・設置場所・区域ポスティングを対象、利用経験者のみではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-03-MT-01",
+      "value": 1400,
+      "unit": "人",
+      "period": "2016年開始/2022-10報道発表時点",
+      "definition": "累計延べ利用人数は1,400人超。上限不明",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-03-MT-02",
+      "value": 137,
+      "unit": "人",
+      "period": "2022年度",
+      "definition": "宇波地域内輸送の年度利用実績。原表は「人」のみで延べ/実人数を明示しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-03-MT-03",
+      "value": 149,
+      "unit": "人",
+      "period": "2023年度",
+      "definition": "宇波地域内輸送の年度利用実績。原表は「人」のみで延べ/実人数を明示しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-03-MT-04",
+      "value": 149,
+      "unit": "人",
+      "period": "2024年度",
+      "definition": "宇波地域内輸送の年度利用実績。原表は「人」のみで延べ/実人数を明示しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-02-MT-01",
+      "value": 1240,
+      "unit": "人",
+      "period": "2024-04/2025-03",
+      "definition": "原典利用人数。ユニーク未確認",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-02-MT-02",
+      "value": 977,
+      "unit": "回",
+      "period": "2024-04/2025-03",
+      "definition": "運行回数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-02-MT-03",
+      "value": 5.2,
+      "unit": "人/日",
+      "period": "2024-04/2025-03",
+      "definition": "原典平均利用人数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-06-MT-01",
+      "value": 100,
+      "unit": "人",
+      "period": "2018-03-01/2018-03-02",
+      "definition": "試乗者100名超。厳密な実人数/延べ区分は未明示",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-06-MT-02",
+      "value": 120,
+      "unit": "人",
+      "period": "2019-03-28/2019-03-29",
+      "definition": "住民等の試乗者約120人。厳密な実人数/延べ区分は未明示",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-01",
+      "value": 566,
+      "unit": "乗車人",
+      "period": "2022-11-03/2022-11-13",
+      "definition": "実証乗車数。ユニーク人数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-02",
+      "value": 2773,
+      "unit": "乗車人",
+      "period": "2024-05-27/2024-08-31",
+      "definition": "有償実証乗車数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-03",
+      "value": 9543,
+      "unit": "延べ乗車人",
+      "period": "2024-11-25/2025-03-31",
+      "definition": "本格化後の令和6年度部分",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-04",
+      "value": 23186,
+      "unit": "延べ乗車人",
+      "period": "2025-04-01/2025-12-31",
+      "definition": "令和7年度4〜12月の部分集計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-05",
+      "value": 32729,
+      "unit": "延べ乗車人",
+      "period": "2024-11-25/2025-12-31",
+      "definition": "本格化後累計。前2指標と重複加算禁止",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-06",
+      "value": 236,
+      "unit": "件",
+      "period": "2026-01-01集計時点",
+      "definition": "利用者対面・Webアンケート回答",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-E-01-MT-07",
+      "value": 103,
+      "unit": "件",
+      "period": "同調査",
+      "definition": "2回以上利用と回答した人。アンケート236件中",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-01",
+      "value": 52810,
+      "unit": "人/年",
+      "period": "2016-04-01/2017-03-31",
+      "definition": "年度利用者数（乗車人員集計、ユニーク登録者でない）。市2022資料値",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-02",
+      "value": 52840,
+      "unit": "人/年",
+      "period": "2017-04-01/2018-03-31",
+      "definition": "年度利用者数（乗車人員集計、ユニーク登録者でない）。市2022資料値",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-03",
+      "value": 49850,
+      "unit": "人/年",
+      "period": "2018-04-01/2019-03-31",
+      "definition": "年度利用者数（乗車人員集計、ユニーク登録者でない）。市2022資料値",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-04",
+      "value": 45316,
+      "unit": "人/年",
+      "period": "2019-04-01/2020-03-31",
+      "definition": "年度利用者数（乗車人員集計、ユニーク登録者でない）。市2022資料値",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-05",
+      "value": 36417,
+      "unit": "人/年",
+      "period": "2020-04-01/2021-03-31",
+      "definition": "年度利用者数（乗車人員集計、ユニーク登録者でない）。市2022資料値",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-06",
+      "value": 15000,
+      "unit": "人",
+      "period": "2024-12-03答弁時点",
+      "definition": "約15,000人の登録者。年間乗車人員と別",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-04-MT-07",
+      "value": 16,
+      "unit": "台",
+      "period": "2024-12-03答弁時点",
+      "definition": "11エリアを運行する車両数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-01",
+      "value": 437,
+      "unit": "人",
+      "period": "2016年度",
+      "definition": "年度会員数。ユニーク利用経験者数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-02",
+      "value": 712,
+      "unit": "回",
+      "period": "2016年度",
+      "definition": "年度延べ利用回数。乗客延べ人数とは別指標",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-03",
+      "value": 1437,
+      "unit": "人",
+      "period": "2016年度",
+      "definition": "年度延べ利用人数（町内・町外の合計）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-04",
+      "value": 359,
+      "unit": "人",
+      "period": "2017年度",
+      "definition": "年度会員数。ユニーク利用経験者数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-05",
+      "value": 767,
+      "unit": "回",
+      "period": "2017年度",
+      "definition": "年度延べ利用回数。乗客延べ人数とは別指標",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-06",
+      "value": 1442,
+      "unit": "人",
+      "period": "2017年度",
+      "definition": "年度延べ利用人数（町内・町外の合計）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-07",
+      "value": 326,
+      "unit": "人",
+      "period": "2018年度",
+      "definition": "年度会員数。ユニーク利用経験者数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-08",
+      "value": 604,
+      "unit": "回",
+      "period": "2018年度",
+      "definition": "年度延べ利用回数。乗客延べ人数とは別指標",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-09",
+      "value": 1098,
+      "unit": "人",
+      "period": "2018年度",
+      "definition": "年度延べ利用人数（町内・町外の合計）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-10",
+      "value": 337,
+      "unit": "人",
+      "period": "2019年度",
+      "definition": "年度会員数。ユニーク利用経験者数ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-11",
+      "value": 553,
+      "unit": "回",
+      "period": "2019年度",
+      "definition": "年度延べ利用回数。乗客延べ人数とは別指標",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-02-MT-12",
+      "value": 1058,
+      "unit": "人",
+      "period": "2019年度",
+      "definition": "年度延べ利用人数（町内・町外の合計）",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-01",
+      "value": 556,
+      "unit": "人",
+      "period": "2018-12-16/2019-02-01",
+      "definition": "サービス実証登録者。実利用者数でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-02",
+      "value": 1070,
+      "unit": "回",
+      "period": "2018-12-16/2019-02-01",
+      "definition": "サービス実証利用実績総合計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-03",
+      "value": 3277,
+      "unit": "回",
+      "period": "2021-01-12/2021-07-30",
+      "definition": "普通車（自動運転機能なし）によるサービス実証利用実績総合計。技術実証乗客数でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-04",
+      "value": 24.2,
+      "unit": "回/日",
+      "period": "2021-01-12/2021-07-30",
+      "definition": "資料掲載の1日平均利用数。分母運行日数は明記なし",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-05",
+      "value": 61,
+      "unit": "%",
+      "period": "2021-01-12/2021-07-30",
+      "definition": "実証期間全体のアプリ予約割合。会員割合でない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-06",
+      "value": 783,
+      "unit": "人",
+      "period": "2019-12-09/2020-02-07",
+      "definition": "サービス実証登録者。実利用者ではない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-W-05-MT-07",
+      "value": 1574,
+      "unit": "回",
+      "period": "2019-12-09/2020-02-07",
+      "definition": "住宅地内移動サービス利用実績の総合計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-02-MT-01",
+      "value": 597,
+      "unit": "延べ乗車人",
+      "period": "2025-09-28/2025-10-11",
+      "definition": "イベントと公道実証の合計。ユニーク不明",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-02-MT-02",
+      "value": 250,
+      "unit": "延べ乗車人",
+      "period": "2025-09-28",
+      "definition": "記念イベント乗車",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-02-MT-03",
+      "value": 347,
+      "unit": "延べ乗車人",
+      "period": "2025-09-29/2025-10-11",
+      "definition": "公道実証のみ",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-02-MT-04",
+      "value": 31.5,
+      "unit": "人/運行日",
+      "period": "2025-09-29/2025-10-11",
+      "definition": "公道実証11日平均・原典表示",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "CONT-C-02-MT-05",
+      "value": 66,
+      "unit": "件",
+      "period": "実証期間",
+      "definition": "車内QRアンケート有効回答。全乗客代表性未検証",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-05-MT-01",
+      "value": 123,
+      "unit": "人",
+      "period": "2018年度実証",
+      "definition": "登録者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-05-MT-02",
+      "value": 258,
+      "unit": "人",
+      "period": "2019年度実証",
+      "definition": "登録者数",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-05-MT-03",
+      "value": 1904,
+      "unit": "延べ人",
+      "period": "2020-10-11/2020-12-20",
+      "definition": "無償48日・オンデマンド3台合計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-05-MT-04",
+      "value": 477,
+      "unit": "延べ人",
+      "period": "2021-01-10/2021-02-28",
+      "definition": "有償50日・オンデマンド3台合計",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-KC-05-MT-05",
+      "value": 596,
+      "unit": "人",
+      "period": "2020年度実証",
+      "definition": "対象地域登録居住者1608人中サービス利用者",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-01",
+      "value": 32.7,
+      "unit": "人/日",
+      "period": "2022年度（2023年1〜3月のみ）",
+      "definition": "スマモビ日当たり利用人数。分母の運行日数未記載",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-02",
+      "value": 24.3,
+      "unit": "件/日",
+      "period": "2022年度（2023年1〜3月のみ）",
+      "definition": "スマモビ日当たり利用件数。人数と別系列",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-03",
+      "value": 32.9,
+      "unit": "人/日",
+      "period": "2023年度",
+      "definition": "スマモビ日当たり利用人数。分母の運行日数未記載",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-04",
+      "value": 23.6,
+      "unit": "件/日",
+      "period": "2023年度",
+      "definition": "スマモビ日当たり利用件数。人数と別系列",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-05",
+      "value": 34.1,
+      "unit": "人/日",
+      "period": "2024年度",
+      "definition": "スマモビ日当たり利用人数。分母の運行日数未記載",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-06",
+      "value": 23.4,
+      "unit": "件/日",
+      "period": "2024年度",
+      "definition": "スマモビ日当たり利用件数。人数と別系列",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-07",
+      "value": 1084,
+      "unit": "延べ利用人",
+      "period": "2017年度",
+      "definition": "統合前デマンドタクシー町内便。スマモビの利用実績に合算しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-08",
+      "value": 2377,
+      "unit": "延べ利用人",
+      "period": "2018年度",
+      "definition": "統合前デマンドタクシー町内便。スマモビの利用実績に合算しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-09",
+      "value": 3535,
+      "unit": "延べ利用人",
+      "period": "2019年度",
+      "definition": "統合前デマンドタクシー町内便。スマモビの利用実績に合算しない",
+      "phase": "actual",
+      "verification": "verified"
+    },
+    {
+      "metric_id": "B2-N-06-MT-10",
+      "value": 7803,
+      "unit": "延べ利用人",
+      "period": "2024年度",
+      "definition": "統合前デマンドタクシー町内便。スマモビの利用実績に合算しない",
+      "phase": "actual",
+      "verification": "verified"
+    }
+  ],
+  "events": [
+    {
+      "event_id": "CONT-W-04-EV-05",
+      "date_label": "2026-06",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-02-EV-01",
+      "date_label": "2017",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-01-EV-01",
+      "date_label": "2018-07",
+      "phase": "actual",
+      "evidence_conflict": true,
+      "original_phase": "actual_with_source_conflict"
+    },
+    {
+      "event_id": "CONT-W-03-EV-02",
+      "date_label": "2020-11",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-02-EV-01",
+      "date_label": "2023-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-07",
+      "date_label": "2021-07-30",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-04-EV-01",
+      "date_label": "2019-11",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-02",
+      "date_label": "2017-11",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-03-EV-02",
+      "date_label": "2025-01-19",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-06-EV-01",
+      "date_label": "2017-09-09",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-04-EV-02",
+      "date_label": "2026-01-30",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-01",
+      "date_label": "2017-07",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-04-EV-01",
+      "date_label": "2012-10",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-04-EV-04",
+      "date_label": "2026-07-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-02-EV-04",
+      "date_label": "2024-11-30",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-08",
+      "date_label": "2026-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-01",
+      "date_label": "2017-03-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-04-EV-02",
+      "date_label": "2020-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-07",
+      "date_label": "2026-10-09",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-04",
+      "date_label": "2023",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-04-EV-01",
+      "date_label": "2025-09-16",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-05-EV-05",
+      "date_label": "2026-03",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-05-EV-04",
+      "date_label": "2024-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-05-EV-03",
+      "date_label": "2021-02-28",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-04-EV-04",
+      "date_label": "2025-06-26",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-01-EV-01",
+      "date_label": "2016-05-26",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-01-EV-03",
+      "date_label": "2017-04-20",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-05",
+      "date_label": "2022-09",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-01-EV-05",
+      "date_label": "2026-08",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-01",
+      "date_label": "2020-08",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-04-EV-04",
+      "date_label": "2024-12-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-02-EV-02",
+      "date_label": "2024-08-31",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-02",
+      "date_label": "2018-03-31",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-02-EV-05",
+      "date_label": "2025-03-17",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-08",
+      "date_label": "2023-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-01-EV-04",
+      "date_label": "2018-05-25",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-05-EV-01",
+      "date_label": "2016",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-03",
+      "date_label": "2019-08",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-01-EV-03",
+      "date_label": "2019-12-27",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-01-EV-02",
+      "date_label": "2024-03-22",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-06-EV-01",
+      "date_label": "2017",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-03-EV-01",
+      "date_label": "2016",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-02-EV-04",
+      "date_label": "2025-11-14",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-03-EV-03",
+      "date_label": "2025-01-31",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-06",
+      "date_label": "2026-01",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-05",
+      "date_label": "2024-11-25",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-07",
+      "date_label": "2026-08-03",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-02-EV-03",
+      "date_label": "2024-09-18",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-05-EV-02",
+      "date_label": "2018",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-02",
+      "date_label": "2020-10",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-05",
+      "date_label": "2022-04-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-04-EV-03",
+      "date_label": "2026-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-01-EV-05",
+      "date_label": "2026-04-08",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-04-EV-02",
+      "date_label": "2016",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-01-EV-04",
+      "date_label": "2025-07-25",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-03",
+      "date_label": "2019",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-06-EV-02",
+      "date_label": "2020-11",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-05",
+      "date_label": "2024-09",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-05-EV-01",
+      "date_label": "2018-10-29",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-05",
+      "date_label": "2025-01",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-01-EV-02",
+      "date_label": "2016-08-24",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-06-EV-05",
+      "date_label": "2026-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-03-EV-01",
+      "date_label": "2016-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-05-EV-04",
+      "date_label": "2021-07",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-02-EV-01",
+      "date_label": "2025-09-28",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-02-EV-03",
+      "date_label": "2016",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-06-EV-01",
+      "date_label": "2018-03-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-03",
+      "date_label": "2021-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-01-EV-05",
+      "date_label": "2024-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-05-EV-02",
+      "date_label": "2019-11-15",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-06",
+      "date_label": "2022",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-01-EV-02",
+      "date_label": "2019-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-05-EV-04",
+      "date_label": "2026-10-05",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-06-EV-02",
+      "date_label": "2019-03-28",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-01",
+      "date_label": "2020-05-25",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-05-EV-03",
+      "date_label": "2023-10-01",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-05",
+      "date_label": "2020-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-03-EV-03",
+      "date_label": "2025-07",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-01-EV-06",
+      "date_label": "2025-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-01-EV-03",
+      "date_label": "2024-07",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-02-EV-02",
+      "date_label": "2023-02-28",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-02-EV-05",
+      "date_label": "2026-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-05-EV-01",
+      "date_label": "2022-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-04",
+      "date_label": "2021-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-04-EV-02",
+      "date_label": "2024-04-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-03-EV-02",
+      "date_label": "2018-05",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-04-EV-01",
+      "date_label": "2023-12-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-01-EV-03",
+      "date_label": "2016-12-21",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-07",
+      "date_label": "2025-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-06-EV-04",
+      "date_label": "2026-09-15",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-06",
+      "date_label": "2026-04-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-04",
+      "date_label": "2021-07-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-01-EV-01",
+      "date_label": "2024-02-02",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-04",
+      "date_label": "2024-08-31",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-04-EV-03",
+      "date_label": "2024-07",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-03",
+      "date_label": "2024-05-27",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-03-EV-02",
+      "date_label": "2022-11-06",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-01-EV-04",
+      "date_label": "2026-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-02-EV-03",
+      "date_label": "2025-10-11",
+      "phase": "trial_ended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-06",
+      "date_label": "2021-02-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-02-EV-01",
+      "date_label": "2023-01-05",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-02",
+      "date_label": "2022-11-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-01-EV-01",
+      "date_label": "2025-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-01-EV-04",
+      "date_label": "2019-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-06-EV-03",
+      "date_label": "2019",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-03-EV-01",
+      "date_label": "2024-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-05-EV-05",
+      "date_label": "2025-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-01-EV-01",
+      "date_label": "2016-06-20",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-06",
+      "date_label": "2022-10-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-04-EV-03",
+      "date_label": "2020",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-05-EV-02",
+      "date_label": "2023-10",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-01-EV-02",
+      "date_label": "2025-10-31",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-02-EV-01",
+      "date_label": "2003-10-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-01",
+      "date_label": "2016",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-04",
+      "date_label": "2019-12-09",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-02",
+      "date_label": "2017-10",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-03-EV-03",
+      "date_label": "2024",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-04-EV-03",
+      "date_label": "2021-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-04-EV-03",
+      "date_label": "2026-03-31",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-06-EV-03",
+      "date_label": "2023-07",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-06-EV-04",
+      "date_label": "2021-03",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-KC-02-EV-04",
+      "date_label": "2025-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-01-EV-03",
+      "date_label": "2026-04-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-02-EV-02",
+      "date_label": "2006-04-01",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-C-02-EV-02",
+      "date_label": "2025-10-02",
+      "phase": "suspended",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-E-01-EV-01",
+      "date_label": "2022-03-25",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-05-EV-03",
+      "date_label": "2018-12",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-01-EV-05",
+      "date_label": "2023-09",
+      "phase": "interim",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-01-EV-02",
+      "date_label": "2016-09-18",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-02-EV-06",
+      "date_label": "2026-03",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-03-EV-04",
+      "date_label": "2020",
+      "phase": "planned",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "CONT-W-03-EV-07",
+      "date_label": "2024-10",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-N-05-EV-03",
+      "date_label": "2023",
+      "phase": "unknown",
+      "evidence_conflict": false,
+      "original_phase": null
+    },
+    {
+      "event_id": "B2-W-02-EV-04",
+      "date_label": "2020-04",
+      "phase": "actual",
+      "evidence_conflict": false,
+      "original_phase": null
+    }
+  ]
+}

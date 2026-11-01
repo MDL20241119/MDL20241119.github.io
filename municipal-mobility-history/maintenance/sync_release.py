@@ -5,14 +5,17 @@ from pathlib import Path
 
 def sync_release(site):
  site=Path(site);data=site/'data';digest=hashlib.sha256()
- for p in sorted([*data.rglob('*.json'),*(site/'assets').glob('*.js'),*(site/'assets').glob('*.css')]):
-  digest.update(str(p.relative_to(site)).encode()+b'\0'+p.read_bytes()+b'\0')
+ for p in sorted([*data.rglob('*.json'),*(site/'assets').glob('*.js'),*(site/'assets').glob('*.css'),site.parent/'mobility-policy-history/assets/history.js']):
+  digest.update(str(p.relative_to(site.parent)).encode()+b'\0'+p.read_bytes()+b'\0')
  release=digest.hexdigest()[:20]
  p=data/'bootstrap.js';obj=json.loads(p.read_text().split('=',1)[1].strip().rstrip(';'));obj['release']=release
  updates={p:'window.MOBILITY_RESULTS_SUMMARY='+json.dumps(obj,ensure_ascii=False,separators=(',',':'))+';\n'}
  for p in [site/'index.html',site.parent/'mobility-policy-history/index.html']:
   text=p.read_text()
-  for asset in ['data/bootstrap.js','assets/results.js']:
+  text=re.sub(r'\d+案件・\d+自治体の結果と変遷',str(obj['counts']['deep'])+'案件・'+str(obj['counts']['deep_municipalities'])+'自治体の結果と変遷',text)
+  text=re.sub(r'(data-deep-count>)\d+案件',lambda m:m[1]+str(obj['counts']['deep'])+'案件',text)
+  if p.parent.name=='mobility-policy-history':text=re.sub(r'\d+案件の結果詳査',str(obj['counts']['deep'])+'案件の結果詳査',text)
+  for asset in ['data/bootstrap.js','assets/results.js']+(['assets/history.js'] if p.parent.name=='mobility-policy-history' else []):
    pattern=r'(src="[^"]*'+re.escape(asset)+r')(?:\?[^"]*)?(" defer)'
    text,n=re.subn(pattern,lambda m:m[1]+'?v='+release+m[2],text)
    assert n==1,(p,asset,n)

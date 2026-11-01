@@ -220,6 +220,13 @@
               },
               "additionalProperties": false
             }
+          },
+          "evidence_conflict": {
+            "type": "boolean"
+          },
+          "original_phase": {},
+          "raw_event_record": {
+            "type": "object"
           }
         },
         "additionalProperties": false
@@ -396,7 +403,17 @@
       "items": {
         "type": "string"
       }
-    }
+    },
+    "change_type": {},
+    "baseline_case_id": {},
+    "baseline_layer": {},
+    "identity_evidence": {},
+    "update_reason": {},
+    "evidence_conflicts": {},
+    "research_corrections": {},
+    "baseline_event_context": {},
+    "baseline_snapshot_sha256": {},
+    "correction_note": {}
   },
   "additionalProperties": false
 }
