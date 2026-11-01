@@ -1,6 +1,6 @@
 # 自治体のモビリティ　結果と変遷
 
-2026年11月1日の確認用実装。調査基準日は2026年10月31日。本番公開・mainへのマージは保留。
+2026年11月1日の公開対象版。調査基準日は2026年10月31日。特大の見出し・実績数字・単位付きの主要実績表示を追加。利用者から公開承認を受領。
 
 ## 変更範囲
 
@@ -55,7 +55,7 @@ node municipal-mobility-history/verification/acceptance.cjs
 
 - `verification/data-reconciliation.json`：入力→索引→詳細のID・件数。主要7層の欠落・重複0。724記述・313詳査出来事・216公式結果関連出来事を保持。
 - `verification/input-file-verification.json`：PDF94・79・10ページの全ページ抽出、Excel全22シート解析、9組のID照合。PDF全図表の独立目視再監査ではない。
-- `verification/acceptance-results.json`：新規11項目。全72詳細・6,101原票等の画面生成、全ページへの到達、数値訂正、出典参照、分類、個人Drive情報除外。
+- `verification/acceptance-results.json`：新規12項目。全72詳細・6,101原票等の画面生成、全ページへの到達、数値訂正、出典参照、分類、個人Drive情報除外。
 - 既存の `acceptance.cjs` 14項目、`infographics.cjs` 8項目、`status-map.cjs` 9項目も通過。
 - `verification/browser-results.json`：PCと320px・390pxフレームの確認。検索・階層探索・地図・年表・原票・戻る・直リンク・再読込。実機iOS/Safariの確認とは別。
 - `verification/source-links.json`：公開URL1,022件の構文検査、代表12URLのHEAD接続確認（200）。全URLのHTTP再監査・本文再読解ではない。
@@ -72,4 +72,8 @@ python3 municipal-mobility-history/maintenance/build-review.py --output /absolut
 
 全国の全自治体・全年度を調べ終えたわけではない。結果未取得186原票、自治体データ上の未調査998自治体、確認時点後の継続、恒常的な財源、因果効果、同一事業の年度横断名寄せは引き続き調査対象。
 
-本番公開はこの確認版の承認後。公開前に最新mainと対象2フォルダーを再照合し、他のWorkの変更を上書きしない。
+公開時には最新mainと対象2フォルダーを再照合し、他のWorkの変更を上書きしない。2026年11月1日の公開指示を受け、Draft PR #72を更新してmainへの統合と公開反映確認を行う。
+
+## 特大フォントの公開版
+
+`assets/editorial.css` は見出し・件数・事例名・実績数字を拡大する追加スタイル。`results.js` の数値強調は原文の数字と単位を保持し、日付は通常の文字サイズで表示。主要4案件の実績表示は入力の記述からの引用で、達成率などの計算は行わない。

@@ -58,5 +58,10 @@ async function check(name,fn){try{const detail=await fn();results.push({name,res
  await check('Default data requests stay below 100KB and never load raw 24MB JSON',async()=>{
    const ix=fs.statSync(path.join(root,'data/index-deep.json')).size;const boot=fs.statSync(path.join(root,'data/bootstrap.js')).size;assert(ix+boot<100000);const source=fs.readFileSync(path.join(root,'assets/results.js'),'utf8');assert(!source.includes('統合拡張データ_20261101.json'));return {bootstrap_plus_deep_index_bytes:ix+boot};
  });
+ await check('Oversized number emphasis preserves original text, units and dates',async()=>{
+   const values=['予約1,979件、延べ乗車2,190人、乗合284件。','報告書支出計9,724,321円、収支率6.36%。','2024-10-15〜2025-02-11、毎日9:00〜16:30','R4年度115人/日。R5年度26人/日。','2023年実績2,645乗車。2025年目標9,000乗車。','<script> & "quoted" 17.1%'];
+   for(const value of values){const html=ui.numberMarkup(value);const decoded=html.replace(/<[^>]+>/g,'').replace(/&lt;/g,'<').replace(/&gt;/g,'>').replace(/&quot;/g,'"').replace(/&#39;/g,"'").replace(/&amp;/g,'&');assert.equal(decoded,value);}
+   for(const [id,count] of [['NORTH-R-01',3],['central_toyono_ai',3],['central_tottori_torimobi',3],['west-44211-15',1]]){const row=read('index-deep.json').find(r=>r.id===id),c=JSON.parse(fs.readFileSync(path.join(root,row.detail),'utf8'))[id];const html=ui.resultFigures(c,{});assert.equal([...html.matchAll(/class="m-figure-value"/g)].length,count);for(const m of html.matchAll(/class="m-figure-value">([^<]+)/g))assert(c.claims.some(x=>x.statement.includes(m[1])));}
+ });
  const report={passed:results.filter(x=>x.result==='pass').length,failed:results.filter(x=>x.result==='fail').length,checks:results};fs.writeFileSync(path.join(__dirname,'acceptance-results.json'),JSON.stringify(report,null,2)+'\n');console.log(JSON.stringify(report,null,2));if(report.failed)process.exitCode=1;
 })();

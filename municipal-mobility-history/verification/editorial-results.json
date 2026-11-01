@@ -1,0 +1,57 @@
+{
+  "checked_on": "2026-11-01",
+  "release": "oversized-typography-1",
+  "authorized_action": "publish_existing_policy_archive_and_municipal_archive",
+  "design_changes": [
+    "見出し・件数・事例名・実績の数字を特大化",
+    "数字と単位を一緒に強調。日付は通常サイズ",
+    "主要4案件の実績を原記述から引用し、期間と原典を併記",
+    "黒背景、ライム・ピンク・シアンの配色を維持"
+  ],
+  "checks": {
+    "existing": 31,
+    "new": 12,
+    "failed": 0
+  },
+  "responsive_observations": [
+    {
+      "page": "municipal_home_and_result",
+      "css_width": 320,
+      "document_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "page": "municipal_result",
+      "css_width": 390,
+      "document_width": 375,
+      "scroll_width": 375
+    },
+    {
+      "page": "policy_home",
+      "css_width": 320,
+      "document_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "page": "policy_home",
+      "css_width": 390,
+      "document_width": 375,
+      "scroll_width": 375
+    },
+    {
+      "page": "policy_desktop",
+      "document_width": 1348,
+      "scroll_width": 1348
+    }
+  ],
+  "unchanged": [
+    "原JSON・原票・ID・出来事・出典",
+    "数値・単位・対象期間・母数",
+    "計画と実績の区分",
+    "認証・API・DNS・無関係なページ"
+  ],
+  "limits": [
+    "実機iOS/Safariの操作試験は未実施",
+    "全国調査完了を示すものではない"
+  ]
+}

@@ -1,5 +1,5 @@
 {
-  "passed": 11,
+  "passed": 12,
   "failed": 0,
   "checks": [
     {
@@ -68,6 +68,10 @@
       "name": "Default data requests stay below 100KB and never load raw 24MB JSON",
       "result": "pass",
       "bootstrap_plus_deep_index_bytes": 44067
+    },
+    {
+      "name": "Oversized number emphasis preserves original text, units and dates",
+      "result": "pass"
     }
   ]
 }
