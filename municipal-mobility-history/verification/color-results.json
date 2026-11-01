@@ -1,0 +1,64 @@
+{
+  "date": "2026-11-01",
+  "change": "graphite-blue-orange colour design",
+  "automated_checks": {
+    "passed": 43,
+    "failed": 0
+  },
+  "browser": "Chrome",
+  "viewports": [
+    {
+      "css_width": 320,
+      "content_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "css_width": 390,
+      "content_width": 375,
+      "scroll_width": 375
+    }
+  ],
+  "contrast_checks": [
+    {
+      "element": "body",
+      "foreground": "#edf2ff",
+      "background": "#090c12",
+      "contrast": 17.47
+    },
+    {
+      "element": "muted",
+      "foreground": "#abb8cc",
+      "background": "#090c12",
+      "contrast": 9.75
+    },
+    {
+      "element": "blue numbers",
+      "foreground": "#7d9aff",
+      "background": "#101a2c",
+      "contrast": 6.58
+    },
+    {
+      "element": "orange numbers",
+      "foreground": "#ff864d",
+      "background": "#101724",
+      "contrast": 7.49
+    },
+    {
+      "element": "primary button",
+      "foreground": "#ffffff",
+      "background": "#355de0",
+      "contrast": 5.54
+    }
+  ],
+  "data_changes": false,
+  "scope": [
+    "mobility-policy-history",
+    "municipal-mobility-history"
+  ],
+  "visual_checks": [
+    "Both desktop hero sections",
+    "Municipal result detail and units",
+    "Small-screen municipal home"
+  ],
+  "status_map": "Existing six status categories retain their semantic colours."
+}
