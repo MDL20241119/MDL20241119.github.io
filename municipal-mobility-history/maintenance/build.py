@@ -196,4 +196,6 @@ def main():
     dump(checks_path,report)
     print(json.dumps({'counts':summary['counts'],'indexes_bytes':{p.name:p.stat().st_size for p in DATA.glob('index*.json')},'baseline_field_differences':len(fielddiff),'audit':str(checks_path)},ensure_ascii=False,indent=2))
 
-if __name__=='__main__':main()
+if __name__=='__main__':
+    main()
+    __import__('sync_release').sync_release(OUT)

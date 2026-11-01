@@ -35,3 +35,12 @@ summaryの`deep`等は詳査層だけの件数。旧111や採択2120と合算し
 ## 今回の検証
 
 旧72→83詳査、62→75自治体、313→364出来事。新規11案件/13自治体/51出来事/84指標/33出典/62 OBS。旧724＋新62＝786記述。`verification/continuation-schema-check.json`と`continuation-idempotence.json`が検査結果。公開前には既存全UI検査・モバイル表示・戻る/直リンク・全層到達・privacy scanを別途実施する。
+
+## 配信キャッシュの版同期
+`sync_release.py` は公開JSONとUI assetsのpath/bytesから決定的releaseを生成し、bootstrapと政策/自治体両HTMLの読込queryを同期する。`build.py`・`append-continuation.py`末尾から自動実行。同一入力・UIならreleaseもbyteも不変。手動UI修正後も実行する。
+
+```sh
+python3 municipal-mobility-history/maintenance/sync_release.py
+```
+
+UIのJSON読込・scope検証読込は同releaseを使用する。bootstrapと詳査index/summaryの件数が違う場合は内容表示を停止して再読込を案内する。GitHub Pagesのqueryはimmutable snapshotではなく、古いページは配信キャッシュ期限まで残り得る。版queryは新HTMLの依存cache混在を防ぐもので、過去URLの永久再現を保証しない。公開後は通常URLと再読込/戻る、両ページの件数/版を確認する。公開原典URLにはqueryを付加しない。
