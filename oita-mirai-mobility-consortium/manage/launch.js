@@ -7,7 +7,7 @@ function validate(items){if(!Array.isArray(items))throw Error('設立一覧の�
 const api={STATES,TYPES,select,counts,validate};if(typeof module!=='undefined'&&module.exports)module.exports=api;if(!root.document)return;
 const el=(tag,text,cls)=>{const n=document.createElement(tag);if(text!=null)n.textContent=text;if(cls)n.className=cls;return n};
 let query='',status='',type='';const expanded=new Set();
-function link(label,url){const a=el('a',label);if(typeof url==='string'&&(/^(https:\/\/|\/(?!\/))/.test(url))&&!/[\u0000-\u0020\\]/.test(url)){a.href=url;if(url.startsWith('https:')){a.target='_blank';a.rel='noopener noreferrer'}}return a}
+function link(label,url){const a=el('a',label);if(typeof url==='string'&&(/^(https:\/\/|\/(?!\/))/.test(url))&&!/[\u0000-\u0020\\]/.test(url)){a.href=url;if(new URL(url,location.href).origin!==location.origin){a.target='_blank';a.rel='noopener noreferrer'}}return a}
 function render(items,comparisons=[]){const panel=el('section',null,'launch-panel');panel.id='launch-checklist';panel.setAttribute('aria-labelledby','launch-title');panel.append(el('p','設立までの消し込み表','eyebrow'));const title=el('h3','作るもの・決めること');title.id='launch-title';panel.append(title,el('p','2026.11.01整理。現案を確認 → 残作業を整理 → 正式承認の根拠を残す。資料があることと、決定済みは別です。','launch-lead'));
 try{validate(items)}catch(e){panel.append(el('p','設立一覧を表示できません。既存タスク・資料をご確認ください。'));return panel}
 const c=counts(items),stats=el('div',null,'launch-stats');for(const [n,d,label,note] of [[c.drafts,c.documents,'資料のたたき台','最新版リンクあり／承認とは別'],[c.decided,c.decisions,'正式に決めたこと','承認・了承の根拠あり'],[c.processed,c.procedures,'済んだ手続','実施・完了の根拠あり']]){const card=el('div');card.append(el('span',label),el('strong',`${n} / ${d}`),el('small',note));stats.append(card)}panel.append(stats);

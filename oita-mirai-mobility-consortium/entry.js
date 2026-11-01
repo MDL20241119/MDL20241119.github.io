@@ -4,7 +4,23 @@
   const configUrl = base + 'entry-verifier.json';
   const namespace = 'oita-password-entry-v1';
   const url = new URL(location.href);
-  const reset = () => { try { sessionStorage.removeItem(namespace); } catch (_) {} };
+  // Browser-session scope only: no password, persistent expiry, domain widening or URL token.
+  const cookieName = namespace + '-session';
+  const cookieScope = location.protocol === 'https:' && location.pathname.startsWith(base);
+  const readSession = () => {
+    if (!cookieScope) return null;
+    try { const value = document.cookie.split('; ').find(part => part.startsWith(cookieName + '=')); return value ? decodeURIComponent(value.slice(cookieName.length + 1)) : null; } catch (_) { return null; }
+  };
+  const writeSession = value => {
+    if (!cookieScope) return;
+    document.cookie = cookieName + '=' + encodeURIComponent(value) + '; Path=' + base + '; SameSite=Strict; Secure';
+  };
+  const remember = id => { try { sessionStorage.setItem(namespace,id); } catch (_) {} try { writeSession(id); } catch (_) {} };
+  const reset = () => {
+    try { sessionStorage.removeItem(namespace); } catch (_) {}
+    // A session-only tombstone also invalidates older tab-local admission markers.
+    try { writeSession('signed-out'); } catch (_) {}
+  };
   document.querySelectorAll('[data-entry-reset]').forEach(a => a.addEventListener('click', reset));
   if (url.searchParams.get('entry') === '1') {
     reset(); url.searchParams.delete('entry');
@@ -14,7 +30,7 @@
   dialog.className='oita-entry-dialog';
   dialog.setAttribute('aria-labelledby','oita-entry-title');
   dialog.setAttribute('aria-describedby','oita-entry-description');
-  dialog.innerHTML=`<div class="oita-entry-inner"><span class="oita-entry-mark" aria-hidden="true">O.</span><p class="oita-entry-eyebrow">OITA MIRAI MOBILITY CONSORTIUM</p><h1 id="oita-entry-title">関係者向け<br>パスワード入力</h1><p class="oita-entry-copy" id="oita-entry-description">検討用ドラフトです。共有されたパスワードを入力してお進みください。</p><p class="oita-entry-fine">TCO・MDL案。参画・役割・費用負担等は未合意です。簡易な入口のため、本文・PDF・写真は直リンクからも閲覧できます。</p><form autocomplete="off" novalidate><label class="oita-entry-password-label" for="oita-entry-password">パスワード</label><input id="oita-entry-password" class="oita-entry-password" type="password" autocomplete="off" maxlength="128" required aria-describedby="oita-entry-error"><label class="oita-entry-check"><input id="oita-entry-accept" type="checkbox" required><span>検討用ドラフトであることと、取扱いの注意に同意します</span></label><p id="oita-entry-error" class="oita-entry-error" role="status" aria-live="polite">入口を読み込んでいます…</p><button class="oita-entry-submit" type="submit" disabled>同意して閲覧する →</button></form></div>`;
+  dialog.innerHTML=`<div class="oita-entry-inner"><span class="oita-entry-mark" aria-hidden="true">O.</span><p class="oita-entry-eyebrow">OITA MIRAI MOBILITY CONSORTIUM</p><h1 id="oita-entry-title">関係者向け<br>パスワード入力</h1><p class="oita-entry-copy" id="oita-entry-description">検討用ドラフトです。共有されたパスワードを入力してお進みください。同じブラウザーのセッション中は、このコンソーシアム内の資料でも入力を引き継ぎます。</p><p class="oita-entry-fine">TCO・MDL案。参画・役割・費用負担等は未合意です。簡易な入口のため、本文・PDF・写真は直リンクからも閲覧できます。</p><form autocomplete="off" novalidate><label class="oita-entry-password-label" for="oita-entry-password">パスワード</label><input id="oita-entry-password" class="oita-entry-password" type="password" autocomplete="off" maxlength="128" required aria-describedby="oita-entry-error"><label class="oita-entry-check"><input id="oita-entry-accept" type="checkbox" required><span>検討用ドラフトであることと、取扱いの注意に同意します</span></label><p id="oita-entry-error" class="oita-entry-error" role="status" aria-live="polite">入口を読み込んでいます…</p><button class="oita-entry-submit" type="submit" disabled>同意して閲覧する →</button></form></div>`;
   document.body.append(dialog);
   const input=dialog.querySelector('#oita-entry-password'),accept=dialog.querySelector('#oita-entry-accept'),form=dialog.querySelector('form'),button=dialog.querySelector('button'),error=dialog.querySelector('[role="status"]');
   let config=null,busy=false;
@@ -31,7 +47,7 @@
     try {
       const accepted=await OitaEntryCrypto.verify(input.value,config);
       input.value='';
-      if (accepted && accept.checked) {try{sessionStorage.setItem(namespace,config.id);}catch(_){}finish();return;}
+      if (accepted && accept.checked) {remember(config.id);finish();return;}
       error.textContent='パスワードが違います。もう一度入力してください。';input.focus();
     } catch (_) {input.value='';error.textContent='確認できませんでした。ページを再読み込みしてお試しください。';}
     finally {busy=false;accept.disabled=false;button.disabled=!accept.checked;}
@@ -41,7 +57,10 @@
     .then(value=>{
       if(!window.OitaEntryCrypto || !OitaEntryCrypto.valid(value))throw new Error('configuration');
       config=value;
-      let admitted=false;try{admitted=sessionStorage.getItem(namespace)===config.id;}catch(_){}
+      let admitted=false;const shared=readSession();
+      if(shared!==null){admitted=shared===config.id;if(!admitted){try{sessionStorage.removeItem(namespace);}catch(_){}}}
+      else {try{admitted=sessionStorage.getItem(namespace)===config.id;}catch(_){}}
+      if(admitted)remember(config.id);
       if(admitted){finish();return;}
       error.textContent='';button.disabled=!accept.checked;
     }).catch(()=>{error.textContent='入口の設定を読み込めませんでした。ページを再読み込みしてください。';button.disabled=true;});
