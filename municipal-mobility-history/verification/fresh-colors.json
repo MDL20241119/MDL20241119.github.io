@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-01",
+  "change": "Fresh sky blue, soft pink, apricot and lemon",
+  "palette": {
+    "sky_blue": "#7cddf7",
+    "soft_pink": "#ffacd5",
+    "apricot": "#ffbb94",
+    "lemon": "#fff2a8"
+  },
+  "contrast_on_panel": {
+    "sky_blue": 10.92,
+    "soft_pink": 9.77,
+    "apricot": 10.31,
+    "lemon": 14.94
+  },
+  "button_contrast": 10.69,
+  "browser": "Chrome",
+  "visual_checks": [
+    "Policy desktop hero",
+    "Municipal desktop hero and four counters",
+    "Municipal 390px home",
+    "Municipal 320px home",
+    "Policy 320px home"
+  ],
+  "overflow_checks": [
+    {
+      "page": "municipal",
+      "frame_width": 390,
+      "client_width": 375,
+      "scroll_width": 375
+    },
+    {
+      "page": "municipal",
+      "frame_width": 320,
+      "client_width": 305,
+      "scroll_width": 305
+    },
+    {
+      "page": "policy",
+      "frame_width": 320,
+      "client_width": 305,
+      "scroll_width": 305
+    }
+  ],
+  "computed_counter_colors": [
+    "rgb(124, 221, 247)",
+    "rgb(255, 172, 213)",
+    "rgb(255, 242, 168)",
+    "rgb(255, 187, 148)"
+  ],
+  "data_changes": false,
+  "existing_status_map_categories": "Preserved semantic category colours; only all-cases accent changed."
+}
