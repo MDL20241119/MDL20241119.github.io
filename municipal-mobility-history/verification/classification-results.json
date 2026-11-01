@@ -1,0 +1,77 @@
+{
+  "passed": 11,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Initial 101-case view requests only a thin classification shard, never evidence/full ledger",
+      "result": "pass",
+      "initial_data_bytes": 86914,
+      "requests": [
+        {
+          "file": "data/index-deep.json",
+          "bytes": 64964
+        },
+        {
+          "file": "data/classification/deep.json",
+          "bytes": 15424
+        }
+      ]
+    },
+    {
+      "name": "All 6313 IDs and independently fixed classification projection hashes match; raw indexes remain unchanged",
+      "result": "pass",
+      "records": 6313
+    },
+    {
+      "name": "Theme OR and cross-dimension AND match source fields without duplicate layer:id hits",
+      "result": "pass",
+      "queries": 63
+    },
+    {
+      "name": "Unclassified 11 legacy energy cases stay reachable through all-record and decarbonization views; deep candidate stays a candidate",
+      "result": "pass",
+      "unclassified_legacy": 11,
+      "deep_candidate": 1
+    },
+    {
+      "name": "Eight button counts use all theme memberships/candidates rather than primary only; source layer is explicit",
+      "result": "pass",
+      "layers": [
+        "deep",
+        "legacy"
+      ]
+    },
+    {
+      "name": "List, map and timeline share case/record sets and URL state in both supported layers",
+      "result": "pass",
+      "shared_state_queries": 8
+    },
+    {
+      "name": "Geographic clicks retain theme filters; unlocated records stay in list and are not guessed onto the map",
+      "result": "pass",
+      "map_union_queries": 6,
+      "county_sums_not_used": true
+    },
+    {
+      "name": "Legacy location overlay only reuses same-ID published prefectures, with source hashes and no raw changes",
+      "result": "pass",
+      "maas_records": 17,
+      "maas_unplaced": 3,
+      "komono_preserved_source": "三重県"
+    },
+    {
+      "name": "Legacy timeline has only 378 case events; policy 89 remains separate and every link resolves a legacy case",
+      "result": "pass",
+      "case_events": 378,
+      "policy_events_excluded": 89
+    },
+    {
+      "name": "Direct URLs, selected buttons, clear links and source-layer switch retain explicit state",
+      "result": "pass"
+    },
+    {
+      "name": "Public classification evidence is allowlisted, full ledger/internal rules absent, CSS shares release key",
+      "result": "pass"
+    }
+  ]
+}

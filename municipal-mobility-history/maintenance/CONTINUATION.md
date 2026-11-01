@@ -65,3 +65,30 @@ node verification/acceptance.cjs
 - `evidence_conflict=true`のeventは元phase・原eventを保持する一方、確定実績として表示しない。最終確認済み出来事の選出から除外し、詳細と年表で異説表示を優先する。`contradictory_sources`、`correction_note`、`baseline_event_context`を比較できるよう保持する。原典間の相違は確定訂正を意味しない。
 - `coverage_scope`は原claim IDを保持した調査範囲メタデータであり、結果の事実には分類しない。
 - `sync_release.py`は公開JSON・municipal UI資産・旧policyの`history.js`をhash対象にし、両ページのbootstrap/results.jsと旧policy history.jsを同じreleaseに同期する。固定snapshot配信ではなくキャッシュ区別である。
+
+## 8分類metadata：正本・公開投影・次回の更新順序
+
+正本JSONの`mobility_classification_v1`に全分類台帳を保持する。公開repoには全台帳や内部レビュー本文を重複掲載せず、`data/classification/<layer>.json`（主・副・候補・確認度・目的・状態）と`classification-evidence/<layer>.json`（旧テーマ・公開原典URL/title/locator・公開原記録パス）だけをallowlistで導出する。原研究index/detail/ID/旧themesは書き換えない。`layer:id`の完全一致、元indexとrich detailのfingerprint、JSONschemaを検査し、不一致は停止する。
+
+```sh
+python maintenance/import-classification.py --input /secure/latest-drive-outcomes.json --site .
+node verification/classification.cjs
+```
+
+分類確認は施策記述の分類であり、運行・法的許可・成果の確認ではない。`confirmed`以外はprimary/themesを持たせず、候補はcandidatesに分離する。8入口未判定・対象外の記録も全件/目的検索から到達できる。テーマはOR、地域・年・目的・状況はAND。主分類・副分類の重複でlayer:idを二重計上しない。異年度原票を独立事業数として足さない。
+
+### 新規・変更記録がある次回の安全な順序
+
+1. 研究を重複照合してaccepted累積ledgerへmergeする。前公開版と前分類台帳をprivate snapshotとして保持する。
+2. **公開先とは別の一時site**で`append-continuation.py --input /secure/new-outcomes.json --site /secure/staging-site --defer-classification`を実行し、更新indexを作る。このモードは`classification_pending=true`と公開禁止markerを置き、UIを停止する。公開不可。
+3. private研究ZIPに収録した分類CLIを`--data-root /secure/staging-site/data --previous /secure/previous-classification.json --output /secure/next-classification.json`で実行する。同じsource fingerprintは既判定保持、新規/変更は候補・未分類へ戻す。自動確定しない。
+4. 明示レビューと分類QA後、正本JSONの`mobility_classification_v1`を新台帳に置換してPDF/XLSX/JSONを同ledgerで再生成する。全台帳と内部ルール/研究QAはDrive正本とprivate ZIPに保存する。
+5. 最終siteで正本JSONを`append-continuation.py`へ渡す（deferなし）。付属分類は自動的にimportされる。独立importも可能。全ID・fingerprint一致とschemaに合格した場合だけ公開禁止markerを解除する。
+6. 受入検査・分類検査・旧policy検査・公開漏洩検査・同入力2回目差分0・browser確認を実施する。分類欠損/古いfingerprint/公開禁止markerのまま公開しない。Drive同ID更新・readbackを確認後、最新Git baseを再照合して公開する。
+
+### 表示と性能
+
+- 初期は詳査101案件＋8入口。原票6,313件分の根拠を初期取得しない。薄い分類は層別、根拠は詳細画面時に層別遅延取得する。全台帳9MB級の初期取得を禁止する。
+- 詳査と旧代表事例は`layer`をURLに持ち、一覧・地図・年表で同じ絞込集合を使う。旧111事例の年表はcase関連378イベントのみ。政策89は旧政策頁に保全し、自治体出来事へ混入させない。
+- 都道府県の原記載がない記録は地図に推定配置せず、未配置件数を明示して一覧に残す。原票各層は記録単位、詳査は案件単位。候補と結果証拠は別の判定。
+- `verification/classification-controls.json`はaccepted分類入力から独立に固定したhash/count/安全回帰例。公開projectionから期待値を作り直してはならない。新分類版の承認後にのみ更新する。

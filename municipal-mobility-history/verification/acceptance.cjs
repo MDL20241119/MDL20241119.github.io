@@ -86,7 +86,7 @@ async function check(name,fn){try{const detail=await fn();results.push({name,res
    const html=fs.readFileSync(path.join(root,'index.html'),'utf8');assert(!/<script[^>]+src="https?:/i.test(html));assert(!/<iframe|\.map"/.test(html));
  });
  await check('Default data requests stay below 100KB and never load raw 24MB JSON',async()=>{
-   const ix=fs.statSync(path.join(root,'data/index-deep.json')).size;const boot=fs.statSync(path.join(root,'data/bootstrap.js')).size;assert(ix+boot<100000);const source=fs.readFileSync(path.join(root,'assets/results.js'),'utf8');assert(!source.includes('統合拡張データ_20261101.json'));return {bootstrap_plus_deep_index_bytes:ix+boot};
+   const ix=fs.statSync(path.join(root,'data/index-deep.json')).size;const boot=fs.statSync(path.join(root,'data/bootstrap.js')).size;const classification=context.window.MOBILITY_RESULTS_SUMMARY.classification?fs.statSync(path.join(root,'data/classification/deep.json')).size:0;assert(ix+boot+classification<100000);const source=fs.readFileSync(path.join(root,'assets/results.js'),'utf8');assert(!source.includes('統合拡張データ_20261101.json'));return {bootstrap_plus_deep_index_bytes:ix+boot,classification_bytes:classification,total_initial_data_bytes:ix+boot+classification};
  });
  await check('Oversized number emphasis preserves original text, units and dates',async()=>{
    const values=['予約1,979件、延べ乗車2,190人、乗合284件。','報告書支出計9,724,321円、収支率6.36%。','2024-10-15〜2025-02-11、毎日9:00〜16:30','R4年度115人/日。R5年度26人/日。','2023年実績2,645乗車。2025年目標9,000乗車。','<script> & "quoted" 17.1%'];

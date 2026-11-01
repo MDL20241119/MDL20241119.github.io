@@ -15,8 +15,8 @@ def sync_release(site):
   text=re.sub(r'\d+案件・\d+自治体の結果と変遷',str(obj['counts']['deep'])+'案件・'+str(obj['counts']['deep_municipalities'])+'自治体の結果と変遷',text)
   text=re.sub(r'(data-deep-count>)\d+案件',lambda m:m[1]+str(obj['counts']['deep'])+'案件',text)
   if p.parent.name=='mobility-policy-history':text=re.sub(r'\d+案件の結果詳査',str(obj['counts']['deep'])+'案件の結果詳査',text)
-  for asset in ['data/bootstrap.js','assets/results.js']+(['assets/history.js'] if p.parent.name=='mobility-policy-history' else []):
-   pattern=r'(src="[^"]*'+re.escape(asset)+r')(?:\?[^"]*)?(" defer)'
+  for asset,attribute in [('data/bootstrap.js','src'),('assets/results.js','src'),('assets/results.css','href')]+([('assets/history.js','src')] if p.parent.name=='mobility-policy-history' else []):
+   pattern=r'('+attribute+r'="[^"]*'+re.escape(asset)+r')(?:\?[^"]*)?(")'
    text,n=re.subn(pattern,lambda m:m[1]+'?v='+release+m[2],text)
    assert n==1,(p,asset,n)
   updates[p]=text

@@ -25,7 +25,7 @@ def write(p,v):
  b=encode(safe(v));p=Path(p);p.parent.mkdir(parents=True,exist_ok=True)
  if not p.exists() or p.read_bytes()!=b:p.write_bytes(b)
  return sha(b)
-def main(input_path,root):
+def main(input_path,root,defer_classification=False):
  root=Path(root);data=root/'data';incoming=load(input_path);ap=incoming['continuous_update_appendix_v1'];ledger=ap['ledger_sha256'];manifest_path=data/'continuation-manifest.json';prior=load(manifest_path) if manifest_path.exists() else None
  spec=importlib.util.spec_from_file_location('retained_builder',root/'maintenance/build.py');base=importlib.util.module_from_spec(spec);spec.loader.exec_module(base)
  before={str(p.relative_to(data)):sha(p.read_bytes()) for p in data.rglob('*') if p.is_file()};old_index=load(data/'index-deep.json');existing_by_id={x['id']:x for x in old_index};owned=set(prior['case_ids']) if prior else set();baseline_index=[x for x in old_index if x['id'] not in owned]
@@ -121,6 +121,13 @@ def main(input_path,root):
  for name in ['index-deep.json','timeline-index.json','municipalities.json','summary.json','bootstrap.js','provenance.json','sources-continuation.json','continuation-manifest.json',*[f.removeprefix('data/') for f in output_files]]:
   raw=(data/name).read_text();assert not PRIVATE.search(raw) and not SECRET.search(raw) and not CONTACT.search(raw),name
  report={'result':'pass','ledger_sha256':ledger,'counts':summary['counts'],'retained_deep_ids':len(baseline_index),'retained_deep_events':len(old_timeline),'retained_deep_claims':724,'unchanged_protected_files':len(protected),'changed_protected_files':changed_protected,'continuation_case_ids':list(details),'cumulative_observation_count':len(ap['observations']),'current_batch':summary['current_batch'],'source_reference_integrity':'passed','public_privacy_scan':'passed','protected_file_hashes':protected,'privacy_projection_exceptions':{name:{'original_sha256':retained_hashes.get(name),'current_sha256':after.get(name),'reason':'Public QA scope projection only; research data unchanged. Original bytes retained by publishing coordinator.'} for name in sorted(PRIVACY_PROJECTIONS)},'detail_files':manifest['detail_files'],'note':'All pre-existing layers and baseline field-difference support retained. Explicit new detailed views and evidence-backed existing legacy case enrichments only; no locality-based identity merge.'}
- write(root/'verification/continuation-reconciliation.json',report);__import__('sync_release').sync_release(root);print(json.dumps({k:v for k,v in report.items() if k!='protected_file_hashes'},ensure_ascii=False,indent=2));return report
+ write(root/'verification/continuation-reconciliation.json',report)
+ if defer_classification:
+  staged_summary=load(data/'summary.json');staged_summary['classification_pending']=True;write(data/'summary.json',staged_summary)
+  staged_boot=json.loads((data/'bootstrap.js').read_text().split('=',1)[1].strip().rstrip(';'));staged_boot['classification_pending']=True;(data/'bootstrap.js').write_text('window.MOBILITY_RESULTS_SUMMARY='+json.dumps(staged_boot,ensure_ascii=False,separators=(',',':'))+';\n')
+  write(root/'verification/classification-pending.json',{'public_build_blocked':True,'reason':'Temporary index for classification refresh; do not publish.'})
+ elif incoming.get('mobility_classification_v1'):
+  class_spec=importlib.util.spec_from_file_location('classification_importer',root/'maintenance/import-classification.py');class_module=importlib.util.module_from_spec(class_spec);class_spec.loader.exec_module(class_module);class_module.main(input_path,root)
+ __import__('sync_release').sync_release(root);print(json.dumps({k:v for k,v in report.items() if k!='protected_file_hashes'},ensure_ascii=False,indent=2));return report
 if __name__=='__main__':
- p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',required=True);p.add_argument('--site',default=str(Path(__file__).resolve().parents[1]));a=p.parse_args();main(a.input,a.site)
+ p=argparse.ArgumentParser(description=__doc__);p.add_argument('--input',required=True);p.add_argument('--site',default=str(Path(__file__).resolve().parents[1]));p.add_argument('--defer-classification',action='store_true',help='Temporary private staging only; blocks publication until refreshed metadata is imported');a=p.parse_args();main(a.input,a.site,a.defer_classification)

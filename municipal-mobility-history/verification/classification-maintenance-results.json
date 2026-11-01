@@ -1,0 +1,9 @@
+{
+  "result": "pass",
+  "same_input_second_run_changed_files": 0,
+  "managed_files_checked": 303,
+  "defer_classification_marks_nonpublishable": true,
+  "successful_refresh_clears_marker": true,
+  "missing_classification_record_is_blocked": true,
+  "authoritative_input_sha256": "bbfeacc16327755e1b24dd676ca2ed1a9f61f7d32627ca10ed493a54828bf05b"
+}

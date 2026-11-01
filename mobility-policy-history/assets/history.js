@@ -198,7 +198,7 @@
   }
   function missing(label,view) {return `<div class="wrap"><section class="page-head"><h1>${e(label)}が見つかりません。</h1><p>URLのIDを確認してください。旧IDは正本の対応表にある範囲で引き継ぎます。</p><a class="inline-link" href="${path(view)}">一覧に戻る ↗</a></section></div>`;}
   function pageHtml(r) {
-    switch(r.view) {case 'results':case 'records':return window.MOBILITY_RESULTS.shell(r);case 'home':return home();case 'map':return V.mapPage(r.p);case 'cases':return casesPage(r.p);case 'timeline':return timelinePage(r.p);case 'programs':return programsPage(r.p);case 'sources':return sourcesPage(r.p);case 'case':return caseDetail(r.id,r.p);case 'program':return programDetail(r.id,r.p);case 'source':return sourceDetail(r.id,r.p);default:return missing('ページ','home');}
+    switch(r.view) {case 'results':case 'records':return window.MOBILITY_RESULTS.shell(r);case 'home':return home();case 'map':return V.mapPage(r.p)+`<section class="wrap section"><h2>施策の分類から探す。</h2><p>既存の制度・状態別地図は上に保持しています。8分類の地図は別の検索条件で開き、旧代表事例と追加詳査を資料層ごとに確認できます。</p><a class="button secondary" href="../municipal-mobility-history/#prefectures?layer=legacy">8分類の旧代表事例地図へ ↗</a></section>`;case 'cases':return casesPage(r.p);case 'timeline':return timelinePage(r.p);case 'programs':return programsPage(r.p);case 'sources':return sourcesPage(r.p);case 'case':return caseDetail(r.id,r.p);case 'program':return programDetail(r.id,r.p);case 'source':return sourceDetail(r.id,r.p);default:return missing('ページ','home');}
   }
   function saveScroll() {try{history.replaceState({...history.state,scrollY:window.scrollY},'');}catch{}}
   function navigate(hash,keep=false) {

@@ -1,0 +1,44 @@
+{
+  "source_file_sha256": "1a58c06f1cf0ae2eff15820c08422be59ee643844e7df046a77b2bd16af6a33e",
+  "classification_canonical_sha256": "68e59f26569b4cc4a7292cbe537d1f5ec8aa971b0049793eeea0a489371db82d",
+  "records": 6313,
+  "counts": {
+    "confirmed": 200,
+    "candidate": 3412,
+    "unclassified": 2701
+  },
+  "projection_hashes": {
+    "deep": "0c1d2d6f4b6c5a2067ade740809b91bb6f59ab59d818286237a27600b5426042",
+    "legacy": "678ad12a7cac1d426665bc6240d332c0acff874d799528407b76a30f62c6b08f",
+    "selection": "e9b39f0aa927e2d1c2183ec18496234f1403cc5edb30a30f68f9f334c5356802",
+    "reference": "bb4b3f7ef619b41298b3ab8fc7a2649edeac3949167f235d973bb827c4582593",
+    "review": "8283c48eb0cceb91619d517f0f39526691db3a83aec8c7ee15faa8bdcbf2f4a2",
+    "local": "7f93445ef842c8569be0e3258bc75227a8c756537182d007b2a69997d29bdf51",
+    "history": "5cbc71c6ee425b0ea55ee12d734c8c7964e2ad2813e6bdfa38b741f768258708"
+  },
+  "layer_counts": {
+    "deep": 101,
+    "legacy": 111,
+    "selection": 2120,
+    "reference": 497,
+    "review": 343,
+    "local": 100,
+    "history": 3041
+  },
+  "unclassified_legacy_ids": [
+    "ENV-C09",
+    "ENV-C10",
+    "ENV-C12",
+    "ENV-C14",
+    "ENV-C16",
+    "ENV-C17",
+    "ENV-C18",
+    "ENV-C20",
+    "meti_fukushima_gi",
+    "meti_kyushu_v2g",
+    "meti_tepco_v2g"
+  ],
+  "deep_candidate_ids": [
+    "NORTH-R-12"
+  ]
+}

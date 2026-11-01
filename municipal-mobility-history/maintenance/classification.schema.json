@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "categories",
+    "records",
+    "input_manifest"
+  ],
+  "properties": {
+    "schema_version": {
+      "const": "mobility-classification-v1"
+    },
+    "records": {
+      "type": "object",
+      "additionalProperties": {
+        "type": "object",
+        "required": [
+          "primary",
+          "themes",
+          "candidates",
+          "status",
+          "record_id",
+          "layer",
+          "original_themes",
+          "evidence",
+          "scope"
+        ],
+        "properties": {
+          "primary": {
+            "anyOf": [
+              {
+                "type": "null"
+              },
+              {
+                "enum": [
+                  "rideshare",
+                  "ondemand",
+                  "maas",
+                  "automated",
+                  "transit",
+                  "small_shared",
+                  "logistics",
+                  "data_dx"
+                ]
+              }
+            ]
+          },
+          "themes": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "rideshare",
+                "ondemand",
+                "maas",
+                "automated",
+                "transit",
+                "small_shared",
+                "logistics",
+                "data_dx"
+              ]
+            }
+          },
+          "candidates": {
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+              "enum": [
+                "rideshare",
+                "ondemand",
+                "maas",
+                "automated",
+                "transit",
+                "small_shared",
+                "logistics",
+                "data_dx"
+              ]
+            }
+          },
+          "status": {
+            "enum": [
+              "confirmed",
+              "candidate",
+              "unclassified"
+            ]
+          },
+          "layer": {
+            "enum": [
+              "deep",
+              "legacy",
+              "selection",
+              "reference",
+              "review",
+              "local",
+              "history"
+            ]
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,34 @@
+{
+  "result": "pass",
+  "release": "a57213e2341aaecad6a6",
+  "source_classification_file_sha256": "1a58c06f1cf0ae2eff15820c08422be59ee643844e7df046a77b2bd16af6a33e",
+  "data_files_scanned": 300,
+  "private_contact_secret_hits": [],
+  "raw_detail_index_old_policy_changes": [],
+  "checks": {
+    "municipal": {
+      "passed": 17,
+      "failed": 0
+    },
+    "classification": {
+      "passed": 11,
+      "failed": 0
+    },
+    "policy": {
+      "passed": 14,
+      "failed": 0
+    },
+    "infographics": {
+      "passed": 8,
+      "failed": 0
+    },
+    "status_map": {
+      "passed": 9,
+      "failed": 0
+    }
+  },
+  "total_passed": 59,
+  "initial_data_bytes": 86914,
+  "full_classification_public_copy": false,
+  "same_input_second_run_changed_files": 0
+}
