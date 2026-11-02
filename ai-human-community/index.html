@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5fa28">
+  <meta name="description" content="AIができることが増えるほど、人は何を担うのか。世界と日本の起業家・投資家・発信者の顔、経歴、日付付きの発言から、人とコミュニティの未来を考える特集。">
+  <link rel="canonical" href="https://mobilitydlab.com/ai-human-community/">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="AI時代の人とコミュニティ｜HUMAN, AFTER AI.">
+  <meta property="og:description" content="AIができることが増えるほど、人は何を担うのか。人物と発言を読み、6つの問いと4象限で考える。">
+  <title>AI時代の人とコミュニティ｜HUMAN, AFTER AI.</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <header class="masthead">
+    <a class="brand" href="/" aria-label="モビリティデザインラボ ホーム">MOBILITY<br>DESIGN LAB</a>
+    <span class="edition">IDEAS / PEOPLE / CULTURE<br>VOL. 01 — 2026.11.02</span>
+    <a class="menu-link" href="#voices">発言を探す <span aria-hidden="true">↗</span></a>
+  </header>
+  <main id="main">
+    <section class="hero panel" aria-labelledby="feature-title">
+      <div class="section-kicker"><span>THE HUMAN ISSUE</span><span>01</span></div>
+      <div class="hero-grid">
+        <div class="hero-copy">
+          <p class="eyebrow">AI時代の人とコミュニティ</p>
+          <h1 id="feature-title">HUMAN,<br>AFTER<br><span>AI.</span></h1>
+          <p class="hero-question">AIができることが増えるほど、<br>人は、何を担うのか。</p>
+          <p class="hero-description">つくる。選ぶ。共に生きる。<br>世界と日本の発言を、<br>その人の経験と原典から読む。</p>
+          <a class="arrow-link" href="#people">人と発言を読む <span aria-hidden="true">↘</span></a>
+        </div>
+        <div class="hero-portrait" id="hero-portrait" aria-busy="true"></div>
+      </div>
+      <div class="hero-bottom"><span>能力が増えること。生きる意味。つながりの条件。</span><span>SCROLL TO EXPLORE ↓</span></div>
+    </section>
+
+    <nav class="chapter-nav" aria-label="特集の目次">
+      <a href="#people"><span>01</span> 人と発言</a>
+      <a href="#voices"><span>02</span> 発言を探す</a>
+      <a href="#questions"><span>03</span> 6つの問い</a>
+      <a href="#map"><span>04</span> 4象限</a>
+      <a href="#evidence"><span>05</span> 原典・根拠</a>
+    </nav>
+
+    <section class="intro panel cream" id="people" aria-labelledby="intro-title">
+      <div class="section-kicker"><span>READ THE PERSON. THEN THE IDEA.</span><span>02</span></div>
+      <div class="intro-grid">
+        <h2 id="intro-title">その人の<br><em>経験</em>から、<br>言葉を読む。</h2>
+        <div class="intro-body"><p>起業家、投資家、日本の発信者。何をつくり、何を経験してきた人なのか。まず人物と発言を確かめ、共通点と違いをたどります。</p><p>ここにあるのは本人の見解や予測です。知名度は、未来予測の正しさを保証しません。</p><div class="counts" id="feature-counts" aria-label="収録内容"></div></div>
+      </div>
+    </section>
+
+    <section class="recent panel pink" aria-labelledby="recent-title">
+      <div class="section-kicker"><span>RECENT VOICES / 2026 SUMMER–AUTUMN</span><span>03</span></div>
+      <div class="recent-top"><h2 id="recent-title">いま、<br><em>語られていること。</em></h2><p>2026年夏秋の発言から。<br>公開日と収録日を区別し、<br>「注目」の根拠も読む。</p></div>
+      <div id="spotlight" class="spotlight" aria-live="polite"></div>
+      <div id="spotlight-tabs" class="spotlight-tabs" aria-label="最近の注目発言を切り替える"></div>
+      <a class="arrow-link" id="see-recent" href="#voices">夏秋の発言をすべて探す <span aria-hidden="true">↗</span></a>
+    </section>
+
+    <section class="directory panel" id="voices" aria-labelledby="voices-title">
+      <div class="section-kicker"><span>PEOPLE & VOICES</span><span>04</span></div>
+      <div class="directory-title"><h2 id="voices-title">誰が、<br><em>何を語る？</em></h2><p>氏名、会社、キーワードで検索。<br>一人の複数の発言を、<br>同じプロフィールで読み比べる。</p></div>
+      <form class="filters" id="filters" role="search">
+        <label class="search-field"><span>SEARCH</span><input id="search" type="search" placeholder="氏名・会社・キーワード" autocomplete="off"><span class="search-icon" aria-hidden="true">⌕</span></label>
+        <label><span>論点</span><select id="topic-filter"><option value="">すべての論点</option></select></label>
+        <label><span>発言時期</span><select id="date-filter"><option value="">すべての時期</option><option value="october">2026年10月以降</option><option value="recent">2026年5月以降</option><option value="2026">2026年</option><option value="older">2025年以前</option></select></label>
+        <label><span>発信者</span><select id="category-filter"><option value="">すべての属性</option></select></label>
+        <button class="reset-button" type="reset">条件をクリア</button>
+      </form>
+      <div class="result-bar"><p id="result-count" role="status">読み込み中…</p><button id="expand-all" type="button">表示中の発言を開く ＋</button></div>
+      <div id="people-list" class="people-list"></div>
+      <p class="empty-state" id="empty-state" hidden>該当する発言はありません。検索語や絞り込み条件を変えてください。</p>
+    </section>
+
+    <section class="question-banner panel blue" aria-labelledby="question-banner-title">
+      <div class="section-kicker"><span>A QUESTION THAT STAYS.</span><span>05</span></div>
+      <div class="question-banner-grid"><h2 id="question-banner-title">人の価値を、<br><em>仕事だけで</em><br>測れるか。</h2><div id="question-portrait" class="question-portrait"></div></div>
+      <div class="banner-bottom"><p>生産性、所得、尊厳、自由、所属。<br>似た言葉の先に、異なる前提がある。</p><a class="arrow-link" href="#questions">違いを読み解く <span aria-hidden="true">↘</span></a></div>
+    </section>
+
+    <section class="questions panel lavender" id="questions" aria-labelledby="questions-title">
+      <div class="section-kicker"><span>SIX QUESTIONS / COMMON GROUND & TENSIONS</span><span>06</span></div>
+      <div class="section-title-row"><h2 id="questions-title">一致より、<br><em>違いを読む。</em></h2><p>同じ結論に見えても、<br>条件や時間軸は違う。<br>6つの問いから確かめる。</p></div>
+      <div id="topic-comparisons"></div>
+    </section>
+
+    <section class="quadrants panel cream" id="map" aria-labelledby="map-title">
+      <div class="section-kicker"><span>FOUR LENSES / AN EDITORIAL MAP</span><span>07</span></div>
+      <div class="section-title-row"><h2 id="map-title">人の役割を、<br><em>4つの視点で。</em></h2><p>人物の分類ではなく、<br>日付付き発言の力点を配置。<br>発言を選ぶと、本文と原典へ。</p></div>
+      <p class="map-note">編集上の整理です。順位・点数・測定結果ではありません。ひとつの発言が複数の区画にまたがります。</p>
+      <div class="map-axis horizontal-axis"><span>← 仕事・事業の成果</span><span>仕事だけでは測れない価値 →</span></div>
+      <div class="map-layout"><div class="vertical-axis"><span>人との関係・社会の仕組み ↑</span><span>↓ 個人の能力・選択</span></div><div class="quadrant-grid" id="quadrant-grid"></div></div>
+      <p class="map-footnote">コミュニティは、学び、共に実行し、人を迎え、参加を支える場。所得保障・権利・公的制度の代わりにはなりません。</p>
+    </section>
+
+    <section class="evidence panel" id="evidence" aria-labelledby="evidence-title">
+      <div class="section-kicker"><span>SOURCES / CONTEXT / LIMITS</span><span>08</span></div>
+      <div class="section-title-row"><h2 id="evidence-title">原典に、<br><em>立ち返る。</em></h2><p>発言の存在と、<br>予測の実現は別のこと。<br>根拠と限界を一緒に読む。</p></div>
+      <div class="evidence-principles"><div><span>01</span><h3>本人の見解</h3><p>発言本文は日本語による編集要約。見出しのキーワードも編集側の表現であり、逐語引用ではありません。</p></div><div><span>02</span><h3>確認された事実</h3><p>論考の公表、公開イベント、方針発表などの事実を確認。本人の予測を、実証研究の結果に置き換えません。</p></div><div><span>03</span><h3>編集側の解釈</h3><p>6つの問いと4象限は読み解くための整理。発信者の利害、条件、異論、確認できない点を残しています。</p></div></div>
+      <details class="source-details"><summary><span>発言の原典一覧</span><span id="source-count"></span></summary><div id="source-list" class="source-list"></div></details>
+      <details class="source-details"><summary><span>写真の出典・利用条件</span><span id="photo-count"></span></summary><div id="photo-credits" class="photo-credits"></div></details>
+      <details class="source-details"><summary><span>この特集の読み方と限界</span><span>＋</span></summary><div class="editorial-notes"><p>基準日は2026年11月2日です。現在の経歴と発言当時の立場を区別し、発言は原典の公表時点で扱っています。最近の再掲を新しい発言として数えません。</p><p>起業・投資、都市、知識労働の立場に偏った資料です。ケア労働者、地域の非参加者、障害者、低所得者などの経験を代表しません。コミュニティ参加が誰に開かれ、誰が費用やケアを担うかは別に問い続ける必要があります。</p><p>有料記事は確認できた公開部分のみを扱い、本文を推測して補っていません。対談は発言者、共同署名は共著者を区別しています。原典の変更や訂正は、<a href="mailto:info@mobilitydlab.com">info@mobilitydlab.com</a>へお知らせください。</p></div></details>
+    </section>
+
+    <section class="ending panel orange" aria-labelledby="ending-title"><div class="section-kicker"><span>THE NEXT QUESTION IS YOURS.</span><span>09</span></div><h2 id="ending-title">あなたは、<br>誰と、<br><em>何をつくる？</em></h2><div class="ending-links"><a href="#voices">発言を探す <span aria-hidden="true">↗</span></a><a href="#questions">論点を比べる <span aria-hidden="true">↗</span></a><a href="#evidence">原典を読む <span aria-hidden="true">↗</span></a></div></section>
+  </main>
+  <footer><a href="/">MOBILITY DESIGN LAB</a><p>AI時代の人とコミュニティ / 2026.11.02</p><a href="#feature-title">PAGE TOP ↑</a></footer>
+  <noscript><p class="load-error">人物と発言の検索・4象限の表示にはJavaScriptが必要です。ブラウザーで有効にしてください。</p></noscript>
+  <div class="load-error" id="load-error" hidden role="alert">データを読み込めませんでした。ページを再読み込みしてください。</div>
+</body>
+</html>

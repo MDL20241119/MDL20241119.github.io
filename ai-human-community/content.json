@@ -1,0 +1,2784 @@
+{
+  "meta": {
+    "title": "AI時代の人とコミュニティ",
+    "subtitle": "人は何を担い、誰と生きるのか。",
+    "updatedAt": "2026-11-02",
+    "corePeopleCount": 22,
+    "mainPeopleCount": 24,
+    "supportingPeopleCount": 4,
+    "peopleCount": 28,
+    "statementCount": 45,
+    "recentStatementCount": 19,
+    "baseStatementCount": 26,
+    "scope": "主要21名と共同執筆者1名の基礎資料、2026年夏秋の19件、共著・共同対談の補助プロフィール4名を統合。1つの対談原典を話者別に分け、44原典・45発言を掲載。",
+    "summaryNote": "キーワードと本文は編集部の日本語要約です。本人の逐語引用ではありません。",
+    "evidenceNote": "本人の見解・予測・提案と、研究による実証結果は異なります。掲載発言を、社会全体の合意や将来予測の正しさの証明として扱いません。",
+    "selectionNote": "起業・投資・知識労働の立場に偏る選定です。ケア労働者、地域の非参加者、障害者、低所得者などの経験全体を代表しません。",
+    "quadrantNote": "人物の固定分類ではなく、日付付きの発言の力点を配置した編集上の整理です。順位・点数・因果関係を表しません。複数の区画をまたぐ見解もあります。",
+    "dateNote": "日付は原典の公表日を基本とし、取材・収録・初出・再掲の違いが分かる場合は併記します。",
+    "sourceCount": 44
+  },
+  "people": [
+    {
+      "id": "reid-hoffman",
+      "nameJa": "リード・ホフマン",
+      "nameEn": "Reid Hoffman",
+      "category": "海外の起業家・AI経営者",
+      "company": "LinkedIn / Greylock",
+      "bio": "LinkedIn、Inflection AI、Manas AIを共同創業。起業とGreylockでの投資を通じ、人の能力とネットワークが広がる条件を論じてきた。",
+      "bioSources": [
+        "https://www.reidhoffman.org/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r02",
+        "s01"
+      ]
+    },
+    {
+      "id": "sam-altman",
+      "nameJa": "サム・アルトマン",
+      "nameEn": "Sam Altman",
+      "category": "海外の起業家・AI経営者",
+      "company": "OpenAI",
+      "bio": "OpenAI共同創業者・CEO。2014〜2019年にY Combinatorの代表を務め、起業支援とAI開発の両方を経験してきた。",
+      "bioSources": [
+        "https://forum.openai.com/public/videos/event-replay-sam-altman-on-building-the-future-of-ai-2026-04-06",
+        "https://openai.com/index/sam-altman-un-security-council-remarks/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r01",
+        "s03",
+        "s02"
+      ]
+    },
+    {
+      "id": "dario-amodei",
+      "nameJa": "ダリオ・アモデイ",
+      "nameEn": "Dario Amodei",
+      "category": "海外の起業家・AI経営者",
+      "company": "Anthropic",
+      "bio": "Anthropic共同創業者・CEO。OpenAIで研究担当VPとしてGPT-2、GPT-3の開発に携わり、それ以前はGoogle Brainの研究員を務めた。",
+      "bioSources": [
+        "https://darioamodei.com/",
+        "https://www.anthropic.com/company/leadership"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r06",
+        "s04"
+      ]
+    },
+    {
+      "id": "mustafa-suleyman",
+      "nameJa": "ムスタファ・スレイマン",
+      "nameEn": "Mustafa Suleyman",
+      "category": "海外の起業家・AI経営者",
+      "company": "Microsoft AI",
+      "bio": "DeepMindとInflection AIを共同創業。対話AI「Pi」の開発を経てMicrosoft AIを率い、人を支えるAIの設計を論じる。",
+      "bioSources": [
+        "https://mustafa-suleyman.ai/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r05",
+        "s05"
+      ]
+    },
+    {
+      "id": "jensen-huang",
+      "nameJa": "ジェンスン・フアン",
+      "nameEn": "Jensen Huang",
+      "category": "海外の起業家・AI経営者",
+      "company": "NVIDIA",
+      "bio": "1993年にNVIDIAを共同創業し、社長兼CEOとして同社を率いる。AMD、LSI Logicでの勤務を経て、計算・AI基盤の事業を育ててきた。",
+      "bioSources": [
+        "https://www.nvidia.com/en-us/about-nvidia/board-of-directors/jensen-huang/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s06"
+      ]
+    },
+    {
+      "id": "brian-chesky",
+      "nameJa": "ブライアン・チェスキー",
+      "nameEn": "Brian Chesky",
+      "category": "海外の起業家・AI経営者",
+      "company": "Airbnb",
+      "bio": "Airbnb共同創業者・CEO。ロードアイランド・スクール・オブ・デザインで学び、宿泊や体験を通じた人のつながりを事業化してきた。",
+      "bioSources": [
+        "https://news.airbnb.com/en-ca/about-us/leadership/brian-chesky"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r03",
+        "s07"
+      ]
+    },
+    {
+      "id": "vinod-khosla",
+      "nameJa": "ヴィノッド・コースラ",
+      "nameEn": "Vinod Khosla",
+      "category": "投資家",
+      "company": "Khosla Ventures",
+      "bio": "Khosla Ventures創業者。Sun Microsystemsの創業期CEO、Daisy Systems共同創業者として技術事業を立ち上げ、AI企業への投資を行う。",
+      "bioSources": [
+        "https://www.khoslaventures.com/team/vinod-khosla"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r10",
+        "s08"
+      ]
+    },
+    {
+      "id": "marc-andreessen",
+      "nameJa": "マーク・アンドリーセン",
+      "nameEn": "Marc Andreessen",
+      "category": "投資家",
+      "company": "a16z",
+      "bio": "a16z共同創業者。Mosaicブラウザの共同開発者で、NetscapeとLoudcloud／Opswareを共同創業した。技術の普及と新市場を投資の立場から論じる。",
+      "bioSources": [
+        "https://a16z.com/author/marc-andreessen/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r11",
+        "s09"
+      ]
+    },
+    {
+      "id": "howard-marks",
+      "nameJa": "ハワード・マークス",
+      "nameEn": "Howard Marks",
+      "category": "投資家",
+      "company": "Oaktree",
+      "bio": "Oaktree共同創業者・共同会長。TCW、Citicorpで不良債権やハイイールド債を運用。投資家向けのメモを通じ、予測の限界とリスクを論じてきた。",
+      "bioSources": [
+        "https://www.oaktreecapital.com/about/leadership/bio/howard-marks"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s11",
+        "s10"
+      ]
+    },
+    {
+      "id": "sarah-guo",
+      "nameJa": "サラ・グオ",
+      "nameEn": "Sarah Guo",
+      "category": "投資家",
+      "company": "Conviction",
+      "bio": "Greylockでの投資経験を経て、2022年にAI特化VCのConvictionを創業。ポッドキャスト「No Priors」の共同ホストも務める。",
+      "bioSources": [
+        "https://sarahguo.com/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r12",
+        "s12"
+      ]
+    },
+    {
+      "id": "roelof-botha",
+      "nameJa": "ローロフ・ボタ",
+      "nameEn": "Roelof Botha",
+      "category": "投資家",
+      "company": "Sequoia",
+      "bio": "元PayPal CFO。2003年にSequoiaへ参加し、起業家の支援と投資に携わってきた。Jack Dorseyとの共著でAI時代の組織設計を提案した。",
+      "bioSources": [
+        "https://articles.sequoiacap.com/2018-07-11-roelof-botha"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s13"
+      ]
+    },
+    {
+      "id": "jack-dorsey",
+      "nameJa": "ジャック・ドーシー",
+      "nameEn": "Jack Dorsey",
+      "category": "海外の起業家・AI経営者",
+      "company": "Block",
+      "bio": "TwitterとSquare（現Block）の共同創業者。決済・コミュニケーション事業の創業と経営を経験し、Blockでの組織移行を共著で報告する。",
+      "bioSources": [
+        "https://sequoiacap.com/founder/jack-dorsey"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s13"
+      ]
+    },
+    {
+      "id": "david-haber",
+      "nameJa": "デイビッド・ヘイバー",
+      "nameEn": "David Haber",
+      "category": "投資家",
+      "company": "a16z",
+      "bio": "a16zの投資家。中小企業融資のBond Streetを創業し、CEOを務めた。2017年の売却後はGoldman Sachsで戦略に携わった。",
+      "bioSources": [
+        "https://a16z.com/author/david-haber/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s14"
+      ]
+    },
+    {
+      "id": "ben-horowitz",
+      "nameJa": "ベン・ホロウィッツ",
+      "nameEn": "Ben Horowitz",
+      "category": "投資家",
+      "company": "a16z",
+      "bio": "a16z共同創業者。Loudcloud／Opswareを共同創業しCEOを務めた。『The Hard Thing About Hard Things』の著者として経営や組織を論じる。",
+      "bioSources": [
+        "https://a16z.com/author/ben-horowitz/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r07",
+        "r09",
+        "s15"
+      ]
+    },
+    {
+      "id": "yoichi-ochiai",
+      "nameJa": "落合陽一",
+      "nameEn": "Yoichi Ochiai",
+      "category": "日本の発信者",
+      "company": "メディアアーティスト / 研究者",
+      "bio": "計算機自然を主題に研究と作品制作を行うメディアアーティスト・研究者。2025年大阪・関西万博のテーマ事業プロデューサーを務めた。",
+      "bioSources": [
+        "https://yoichiochiai.com/biography"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r14",
+        "s16"
+      ]
+    },
+    {
+      "id": "takahiro-anno",
+      "nameJa": "安野貴博",
+      "nameEn": "Takahiro Anno",
+      "category": "日本の発信者",
+      "company": "チームみらい / 参議院",
+      "bio": "チームみらい党首・参議院議員、AIエンジニア・SF作家。松尾研究室、BCGを経てBEDORE創業、MNTSQ共同創業。2025年に結党し初当選した。",
+      "bioSources": [
+        "https://team-mir.ai/member/sangiin/takahiro-anno"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r13",
+        "s17"
+      ]
+    },
+    {
+      "id": "akihiro-nishino",
+      "nameJa": "西野亮廣",
+      "nameEn": "Akihiro Nishino",
+      "category": "日本の発信者",
+      "company": "CHIMNEY TOWN",
+      "bio": "芸人・童話作家。映画『えんとつ町のプペル』で脚本・製作総指揮を担当。オンラインサロン「西野亮廣エンタメ研究所」を運営する。",
+      "bioSources": [
+        "https://chimney.town/project/akihironishino/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r17",
+        "s19",
+        "s18"
+      ]
+    },
+    {
+      "id": "takafumi-horie",
+      "nameJa": "堀江貴文",
+      "nameEn": "Takafumi Horie",
+      "category": "日本の発信者",
+      "company": "実業家 / HIU",
+      "bio": "実業家。SNS media&consultingを創業し、ロケット開発、アプリ、予防医療などに関わる。オンラインサロンHIUを運営する。",
+      "bioSources": [
+        "https://columbia.jp/artist-info/horiemon/prof.html"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r18",
+        "s20",
+        "s21-horie"
+      ]
+    },
+    {
+      "id": "katsuaki-sato",
+      "nameJa": "佐藤航陽",
+      "nameEn": "Katsuaki Sato",
+      "category": "日本の発信者",
+      "company": "スペースデータ",
+      "bio": "起業家・著作家、スペースデータ代表取締役社長。大学在学中の2007年にIT企業を設立し、2017年にスペースデータを創業。『お金2.0』著者。",
+      "bioSources": [
+        "https://www.shinchosha.co.jp/writer/7666/",
+        "https://spacedata.jp/news/202610_ino-visit"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s21"
+      ]
+    },
+    {
+      "id": "shu-yamaguchi",
+      "nameJa": "山口周",
+      "nameEn": "Shu Yamaguchi",
+      "category": "日本の発信者",
+      "company": "独立研究者 / 著作家",
+      "bio": "独立研究者・著作家・パブリックスピーカー。人文科学と経営科学の交差領域から、組織、働き方、人の判断の価値を論じる。",
+      "bioSources": [
+        "https://www.shinchosha.co.jp/writer/7372/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r19",
+        "s22"
+      ]
+    },
+    {
+      "id": "kazuhiro-obara",
+      "nameJa": "尾原和啓",
+      "nameEn": "Kazuhiro Obara",
+      "category": "日本の発信者",
+      "company": "IT批評家",
+      "bio": "京都大学大学院で人工知能を研究。マッキンゼー、iモード立ち上げ支援、Google、楽天などで事業企画や投資に携わってきたIT批評家。",
+      "bioSources": [
+        "https://obarakazuhiro.jp/profile/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r16",
+        "r15",
+        "s23",
+        "s24"
+      ]
+    },
+    {
+      "id": "yusuke-narita",
+      "nameJa": "成田悠輔",
+      "nameEn": "Yusuke Narita",
+      "category": "日本の発信者",
+      "company": "研究者 / 事業者",
+      "bio": "研究者・事業者・執筆者。東京大学卒業後にMITで博士号を取得。データとアルゴリズムを用い、企業と公共政策の研究に取り組む。",
+      "bioSources": [
+        "https://www.yusuke-narita.com/jpn"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "s25"
+      ]
+    },
+    {
+      "id": "mark-zuckerberg",
+      "nameJa": "マーク・ザッカーバーグ",
+      "nameEn": "Mark Zuckerberg",
+      "category": "海外の起業家・AI経営者",
+      "company": "Meta",
+      "bio": "Meta創業者・会長兼CEO。大規模なインターネットサービスとAI研究組織を率いる。2026年の公開対談で、研究者の能力と資源の配置を語った。",
+      "bioSources": [
+        "https://investor.atmeta.com/leadership-and-governance/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r04"
+      ]
+    },
+    {
+      "id": "chris-dixon",
+      "nameJa": "クリス・ディクソン",
+      "nameEn": "Chris Dixon",
+      "category": "投資家",
+      "company": "a16z Frontier",
+      "bio": "a16z Frontierを率いる投資家。2013年からa16zで投資に携わる。SiteAdvisorとHunchを共同創業し、CEOを務めた。",
+      "bioSources": [
+        "https://a16z.com/a16z-frontier/",
+        "https://a16z.com/author/chris-dixon/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "r08"
+      ]
+    },
+    {
+      "id": "michael-mcguiness",
+      "nameJa": "マイケル・マクギネス",
+      "nameEn": "Michael McGuiness",
+      "category": "共同執筆者・対談者",
+      "company": "a16z / New Media",
+      "bio": "a16zのNew Mediaチームのライター。Ben Horowitzとの共著で、AIへの委任・成果評価や、組織が蓄積する文脈を論じる。",
+      "bioSources": [
+        "https://a16z.com/author/michael-mcguiness/",
+        "https://a16z.com/databricks-the-future-of-the-firm/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": true,
+      "statementIds": [
+        "r07"
+      ]
+    },
+    {
+      "id": "gagan-biyani",
+      "nameJa": "ガガン・ビヤニ",
+      "nameEn": "Gagan Biyani",
+      "category": "共同執筆者・対談者",
+      "company": "The Academy",
+      "bio": "The Academy創業者・CEO。UdemyとMavenの共同創業者として教育事業をつくってきた。作りながら学ぶ学校構想をHorowitzらとの対談で語る。",
+      "bioSources": [
+        "https://www.theacademysf.com/faq",
+        "https://a16z.com/podcast/why-a16z-is-building-a-new-school-for-the-ai-era-ben-horowitz/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": true,
+      "statementIds": [
+        "r09"
+      ]
+    },
+    {
+      "id": "erik-torenberg",
+      "nameJa": "エリック・トーレンバーグ",
+      "nameEn": "Erik Torenberg",
+      "category": "共同執筆者・対談者",
+      "company": "a16z",
+      "bio": "a16zのGPとして投資やエコシステム形成に携わる。On Deck、Turpentine、Village Globalを創業。教育構想の対談と物理世界のAIを扱う共著に参加する。",
+      "bioSources": [
+        "https://a16z.com/author/erik-torenberg/",
+        "https://a16z.com/making-a-billion-intelligent-machines/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": true,
+      "statementIds": [
+        "r09",
+        "r11"
+      ]
+    },
+    {
+      "id": "elena-burger",
+      "nameJa": "エレナ・バーガー",
+      "nameEn": "Elena Burger",
+      "category": "共同執筆者・対談者",
+      "company": "a16z / New Media",
+      "bio": "a16zのNew Mediaチームの編集パートナー。Marc Andreessen、Erik Torenbergとの共著で、機械や車両へ広がるAIと運用責任を扱う。",
+      "bioSources": [
+        "https://a16z.com/author/elena-burger/",
+        "https://a16z.com/making-a-billion-intelligent-machines/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": true,
+      "statementIds": [
+        "r11"
+      ]
+    }
+  ],
+  "statements": [
+    {
+      "id": "s01",
+      "personIds": [
+        "reid-hoffman"
+      ],
+      "authorsLabel": "リード・ホフマン",
+      "coauthors": [],
+      "date": "2024-12-09",
+      "datePrecision": "day",
+      "dateLabel": "2024.12.09",
+      "originalDate": "2024-12-09",
+      "publishedDate": "2024-12-09",
+      "title": "能力拡張の便益を社会へ広げる",
+      "keyword": "能力を、社会へ",
+      "summary": "AIで専門家の能力が高まれば、そのサービスを受ける人にも便益が届き得る。人々の参加と選択を通じてAIの価値を形づくると論じる。",
+      "detail": "医師や整備士などを通じた便益の波及を「superagency」として描く。個人がAIを直接使う利益だけに限定しない構想。",
+      "type": "価値判断・社会的波及の仮説",
+      "caveat": "生産性向上が価格低下や暮らしの改善へ自動的に届くとは限らず、便益の波及を示す対照研究ではない。",
+      "topics": [
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S01"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s02",
+      "personIds": [
+        "sam-altman"
+      ],
+      "authorsLabel": "サム・アルトマン",
+      "coauthors": [],
+      "date": "2024-09-23",
+      "datePrecision": "day",
+      "dateLabel": "2024.09.23",
+      "originalDate": "2024-09-23",
+      "publishedDate": "2024-09-23",
+      "title": "個人のためのAIチームを描く",
+      "keyword": "一人の力を、広げる",
+      "summary": "個人向けのAIチームや個別学習によって、人の能力と創造の範囲が広がる未来を描く。",
+      "detail": "人が困難な問題に取り組み、他者の役に立つ可能性を広げるという予測。技術の能力と社会的利益の分配は分けて読む。",
+      "type": "能力拡張の予測",
+      "caveat": "新しい活動が生まれることは、全員に十分な賃金の仕事が生まれることと同じではない。計算資源へのアクセス格差も課題。",
+      "topics": [
+        1,
+        2,
+        5
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "S02"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s03",
+      "personIds": [
+        "sam-altman"
+      ],
+      "authorsLabel": "サム・アルトマン",
+      "coauthors": [],
+      "date": "2025-02",
+      "datePrecision": "month",
+      "dateLabel": "2025.02（月のみ確認）",
+      "originalDate": "2025-02",
+      "publishedDate": "2025-02",
+      "title": "AIが実行するほど人の主体性を問う",
+      "keyword": "何を、望むか",
+      "summary": "実行能力が広がるほど、人が何を望み、どう決断するかが重要になる。創造や貢献は続く一方、公平な分配は技術だけで保証されないと述べる。",
+      "detail": "資本と労働の力関係が変わる可能性にも触れる。個人の意思と、利益の分配を支える社会の仕組みを同時に考える議論。",
+      "type": "予測・価値判断",
+      "caveat": "主体性を重視するだけでは、交渉力や所得の格差は解決しない。将来社会についての本人の見通し。",
+      "topics": [
+        2,
+        5,
+        6
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S03"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s04",
+      "personIds": [
+        "dario-amodei"
+      ],
+      "authorsLabel": "ダリオ・アモデイ",
+      "coauthors": [],
+      "date": "2024-10",
+      "datePrecision": "month",
+      "dateLabel": "2024.10（月のみ確認）",
+      "originalDate": "2024-10",
+      "publishedDate": "2024-10",
+      "title": "生きる意味と経済的生存を分ける",
+      "keyword": "意味と、生活",
+      "summary": "AIが上手にできることが増えても、人の活動が無意味になるとは限らない。関係やつながりから得られる意味と、生活を支える所得は別の難問だとする。",
+      "detail": "短期の補完関係を認めつつ、高能力で安価なAIが広がれば、労働報酬を中心とする制度の再設計が必要かもしれないと述べる。UBIも一部にとどまり得る。",
+      "type": "条件付き予測・価値判断",
+      "caveat": "高度なAIが望ましい方向へ進む場合の条件付き予測。人間関係が失職による所得・地位・参加の喪失を解決した証拠ではない。",
+      "topics": [
+        1,
+        3,
+        5
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S04"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s05",
+      "personIds": [
+        "mustafa-suleyman"
+      ],
+      "authorsLabel": "ムスタファ・スレイマン",
+      "coauthors": [],
+      "date": "2025-08-19",
+      "datePrecision": "day",
+      "dateLabel": "2025.08.19",
+      "originalDate": "2025-08-19",
+      "publishedDate": "2025-08-19",
+      "title": "人のためにAIをつくる",
+      "keyword": "人を、支える",
+      "summary": "AIを人間の人格や意識を持つ存在のように振る舞わせず、人の主体性や現実のつながりを支えるよう設計すべきだと主張する。",
+      "detail": "便利な伴走者を全面否定する立場ではなく、人格・意識の錯覚や依存を強める設計との境界を示す。",
+      "type": "製品設計原則・リスク予測",
+      "caveat": "擬人化を抑えれば孤独が減ると実証されたわけではない。AI companionを提供する事業側の設計原則として読む。",
+      "topics": [
+        3,
+        4,
+        6
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S05"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s06",
+      "personIds": [
+        "jensen-huang"
+      ],
+      "authorsLabel": "ジェンスン・フアン",
+      "coauthors": [],
+      "date": "2026-01-21",
+      "datePrecision": "day",
+      "dateLabel": "発言 2026.01.21 / 記事 01.23",
+      "originalDate": "2026-01-21",
+      "publishedDate": "2026-01-23",
+      "title": "作業と仕事の目的を分ける",
+      "keyword": "作業より、目的",
+      "summary": "AIによる作業の自動化と、仕事の目的を区別する。医療なら画像を読む作業の先に、人をケアする目的があると説明する。",
+      "detail": "人がAIへ指示し、監督し、評価する技能や、地域の言語・文化・知識をAIへ組み合わせることを重視する。",
+      "type": "仕事再設計の見解・需要拡大予測",
+      "caveat": "本人の事例的な議論であり、全職種の維持や純雇用増の証明ではない。余力を対人サービスと人員削減のどちらに使うかで結果は変わる。",
+      "topics": [
+        1,
+        2
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S06"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s07",
+      "personIds": [
+        "brian-chesky"
+      ],
+      "authorsLabel": "ブライアン・チェスキー",
+      "coauthors": [],
+      "date": "2025-10-24",
+      "datePrecision": "day",
+      "dateLabel": "2025.10.24",
+      "originalDate": "2025-10-24",
+      "publishedDate": "2025-10-24",
+      "title": "現実世界で人がつながる仕組み",
+      "keyword": "会う、という体験",
+      "summary": "AIを人が制御する道具と捉え、人は引き続き人間関係と現実世界の体験を求めると述べる。",
+      "detail": "旅行や体験を購入一回で終わらせず、その前後の人の接続にも関心を示す。擬人化AIとの交流だけで生活が完結するとは考えていない。",
+      "type": "事業観・関係需要の予測",
+      "caveat": "編集済みの直接インタビュー。単発の有料体験が継続的な帰属へ育つことや、旅行が孤独を減らすことを実証した資料ではない。",
+      "topics": [
+        3,
+        4
+      ],
+      "quadrants": [
+        4
+      ],
+      "sourceIds": [
+        "S07"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s08",
+      "personIds": [
+        "vinod-khosla"
+      ],
+      "authorsLabel": "ヴィノッド・コースラ",
+      "coauthors": [],
+      "date": "2024-09-20",
+      "datePrecision": "day",
+      "dateLabel": "2024.09.20",
+      "originalDate": "2024-09-20",
+      "publishedDate": "2024-09-20",
+      "title": "働く必要の低下と豊かさの分配",
+      "keyword": "情熱に、生きる",
+      "summary": "長期には生活のために働く必要が薄れ、情熱・創造・探索へ時間を使えると予測する。豊かさを共有するには民主政治による再分配が必要だとする。",
+      "detail": "専門知識やサービスの低価格化を楽観視する一方、移行期の痛みと富の集中を認める。教育の目的も仕事への適応だけに限定しない。",
+      "type": "長期予測・再分配に関する価値判断",
+      "caveat": "ポスト労働社会は現在の実績ではない。値下がりだけでは住宅や医療へのアクセス、所得分配の改善は保証されない。",
+      "topics": [
+        1,
+        5,
+        6
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S08"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s09",
+      "personIds": [
+        "marc-andreessen"
+      ],
+      "authorsLabel": "マーク・アンドリーセン",
+      "coauthors": [],
+      "date": "2023-06-06",
+      "datePrecision": "day",
+      "dateLabel": "2023.06.06",
+      "originalDate": "2023-06-06",
+      "publishedDate": "2023-06-06",
+      "title": "生産性が新しい需要と仕事を生む",
+      "keyword": "仕事は、増える？",
+      "summary": "仕事の総量は固定されておらず、AIによる生産性向上と値下がりが、新しい需要・産業・仕事を生むと論じる。",
+      "detail": "過去の技術進歩を根拠に、購買力の上昇と需要拡大の連鎖を見込む。恒久的な大量失業より、雇用・賃金の拡大を予想する立場。",
+      "type": "歴史的経験からの経済的推論",
+      "caveat": "新しい需要もAIやロボットで満たされるなら、人の労働需要は十分増えない可能性がある。移行速度、地域差、交渉力も残る。",
+      "topics": [
+        1,
+        5
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S09"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s10",
+      "personIds": [
+        "howard-marks"
+      ],
+      "authorsLabel": "ハワード・マークス",
+      "coauthors": [],
+      "date": "2025-12-09",
+      "datePrecision": "day",
+      "dateLabel": "2025.12.09",
+      "originalDate": "2025-12-09",
+      "publishedDate": "2025-12-09",
+      "title": "仕事が与える尊厳と日々の構造",
+      "keyword": "給料だけか",
+      "summary": "仕事は給料だけでなく、日々の構造、社会的役割、尊厳を与える。失職の喪失を現金給付だけで補えるかと問う。",
+      "detail": "新人が経験を積む仕事を失った後に、熟練者をどう育てるかという育成の問題も提起する。",
+      "type": "将来リスクの検討",
+      "caveat": "懸念と問いを示す投資家メモであり、失業が必ず進むという確定予測ではない。",
+      "topics": [
+        1,
+        2,
+        5
+      ],
+      "quadrants": [
+        2,
+        3
+      ],
+      "sourceIds": [
+        "S10"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s11",
+      "personIds": [
+        "howard-marks"
+      ],
+      "authorsLabel": "ハワード・マークス",
+      "coauthors": [],
+      "date": "2026-02-26",
+      "datePrecision": "day",
+      "dateLabel": "2026.02.26",
+      "originalDate": "2026-02-26",
+      "publishedDate": "2026-02-26",
+      "title": "移行の速度と無目的化を警戒する",
+      "keyword": "移行に、間に合うか",
+      "summary": "AIの導入速度が再訓練を上回ることや、仕事を失った後の無目的化を懸念する。新しい仕事を想像できないことは、生まれない証明ではないとも認める。",
+      "detail": "所得、社会的役割、新人の育成を切り分けて検討する。AIインフラへの自社の投資も開示したうえで論じる。",
+      "type": "懸念・問い・将来リスクの検討",
+      "caveat": "本文にはAI出力の引用がある。その代替率などをMarks本人の独自推計や実証結果として扱わない。",
+      "topics": [
+        1,
+        2,
+        5
+      ],
+      "quadrants": [
+        2,
+        3
+      ],
+      "sourceIds": [
+        "S11"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s12",
+      "personIds": [
+        "sarah-guo"
+      ],
+      "authorsLabel": "サラ・グオ",
+      "coauthors": [],
+      "date": "2022-10-04",
+      "datePrecision": "day",
+      "dateLabel": "2022.10.04",
+      "originalDate": "2022-10-04",
+      "publishedDate": "2022-10-04",
+      "title": "AI起業の実践知を一緒につくる",
+      "keyword": "一緒に、つくる",
+      "summary": "AI企業にも人材・顧客・データ・計算資源へのアクセスや暗黙知が必要だとする。起業家と新しい実践知を共同で形成する方針を示す。",
+      "detail": "既存ソフトウェア企業が蓄積した知識と関係を活用しつつ、AIのためのネットワークをつくるというファンドの支援方針。",
+      "type": "投資戦略・コミュニティ運営方針",
+      "caveat": "参加が成功率を上げると証明した比較研究ではない。機会へのアクセスを広げる仕組みと、内輪へ集中する仕組みの両面がある。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        2
+      ],
+      "sourceIds": [
+        "S12"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s13",
+      "personIds": [
+        "roelof-botha",
+        "jack-dorsey"
+      ],
+      "authorsLabel": "ローロフ・ボタ・ジャック・ドーシー",
+      "coauthors": [
+        "Roelof Botha",
+        "Jack Dorsey"
+      ],
+      "date": "2026-03-31",
+      "datePrecision": "day",
+      "dateLabel": "2026.03.31",
+      "originalDate": "2026-03-31",
+      "publishedDate": "2026-03-31",
+      "title": "情報の階層と人の仕事を分ける",
+      "keyword": "信頼を、担う",
+      "summary": "AIが伝達・調整を担う組織でも、人は顧客、文化、信頼、倫理、高リスク判断など現実との接点を担うと論じる。",
+      "detail": "専門家、成果責任者、実務と育成を兼ねる役割を提案。Blockでの組織移行を踏まえた両名の共同署名である。",
+      "type": "移行初期の自己報告・組織設計仮説",
+      "caveat": "移行初期の自己報告と組織設計の仮説。完成した成功事例でも全社への一般化でもなく、AIができない仕事と任せるべきでない仕事も区別する。",
+      "topics": [
+        2,
+        4,
+        6
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S13"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s14",
+      "personIds": [
+        "david-haber"
+      ],
+      "authorsLabel": "デイビッド・ヘイバー",
+      "coauthors": [],
+      "date": "2025-08-18",
+      "datePrecision": "day",
+      "dateLabel": "2025.08.18",
+      "originalDate": "2025-08-18",
+      "publishedDate": "2025-08-18",
+      "title": "業務文脈と例外判断が信頼を支える",
+      "keyword": "文脈が、ものをいう",
+      "summary": "AI技術だけでは持続的な優位にならず、業務の文脈、例外判断、顧客システムへの組込み、積み重ねた信頼が重要だと主張する。",
+      "detail": "技術者も業務経験者を早く仲間に迎え、どの例外が信頼を壊すかを理解する必要があるという投資仮説。",
+      "type": "投資先観察を含む投資仮説",
+      "caveat": "比較対照を設けた実証研究ではない。例示企業に投資先が含まれ、宣伝と独立評価は分ける必要がある。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S14"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s15",
+      "personIds": [
+        "ben-horowitz"
+      ],
+      "authorsLabel": "ベン・ホロウィッツ",
+      "coauthors": [],
+      "date": "2026-01-09",
+      "datePrecision": "day",
+      "dateLabel": "2026.01.09",
+      "originalDate": "2026-01-09",
+      "publishedDate": "2026-01-09",
+      "title": "挑戦と貢献の機会をつくる",
+      "keyword": "挑む、機会",
+      "summary": "社会は人が挑戦し、貢献し、自分を超える活動へ取り組む機会を与えるべきだと述べる。AIなどを繁栄の基盤として位置づける。",
+      "detail": "米国の技術競争力を重視する投資会社の方針と一体の議論である。",
+      "type": "機会についての価値判断・投資方針",
+      "caveat": "資金調達発表に伴う価値判断と政治的・投資上の立場。人が担う職務を実証的に特定するものではない。",
+      "topics": [
+        2,
+        5,
+        6
+      ],
+      "quadrants": [
+        2,
+        3
+      ],
+      "sourceIds": [
+        "S15"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s16",
+      "personIds": [
+        "yoichi-ochiai"
+      ],
+      "authorsLabel": "落合陽一",
+      "coauthors": [],
+      "date": "2026-05-08",
+      "datePrecision": "day",
+      "dateLabel": "2026.05.08",
+      "originalDate": "2026-05-08",
+      "publishedDate": "2026-05-08",
+      "title": "つくるだけでなく共に味わう",
+      "keyword": "共に、味わう",
+      "summary": "AIを生活環境として捉え、人の価値を他者と味わい、編集し、返礼する営みから考える。対価は信頼と継続性のある場への参加にも向かうと論じる。",
+      "detail": "何を出力するかだけでなく、どう受け取り、共有するかを問い直す哲学的・市場的な見取り図。",
+      "type": "哲学的価値判断・市場仮説",
+      "caveat": "関係の市場価値が上昇したと示す統計ではない。人格的な場にAIキャラクターなども含み得るため、単純な生身の対面優位論にしない。",
+      "topics": [
+        3,
+        4,
+        5
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S16"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s17",
+      "personIds": [
+        "takahiro-anno"
+      ],
+      "authorsLabel": "安野貴博",
+      "coauthors": [
+        "安野貴博",
+        "青山柊太朗"
+      ],
+      "date": "2025-05-13",
+      "datePrecision": "day",
+      "dateLabel": "2024.12.02 取材 / 2025.05.13 公開",
+      "originalDate": "2024-12-02",
+      "publishedDate": "2025-05-13",
+      "title": "AIで参加経路と説明を支える",
+      "keyword": "市民の、声",
+      "summary": "AIを市民に代わる統治者ではなく、多人数の意見交換や提案整理を支える技術と位置づける。参加の経路と判断の説明を重視する。",
+      "detail": "青山柊太朗との共同インタビュー。参加者の偏り、提案を却下する際のフィードバック、プラットフォームへの信頼も課題として挙げる。",
+      "type": "本人報告の試行を踏まえた制度提案",
+      "caveat": "参議院初当選前の発言。将来の大規模参加を実現済みの成功と読まない。意見集約と決定権・説明責任の配分は別問題。",
+      "topics": [
+        4,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "S17"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約",
+      "attributionNote": "安野本人の見解に限定して要約。青山柊太朗の応答を安野へ帰属させない。",
+      "recordedDate": "2024-12-02",
+      "dateKind": "記事公開日（取材日併記）"
+    },
+    {
+      "id": "s18",
+      "personIds": [
+        "akihiro-nishino"
+      ],
+      "authorsLabel": "西野亮廣",
+      "coauthors": [],
+      "date": "2025-10-25",
+      "datePrecision": "day",
+      "dateLabel": "2025.10.25",
+      "originalDate": "2025-10-25",
+      "publishedDate": "2025-10-25",
+      "title": "検索できる情報と話を通せる関係",
+      "keyword": "関係に、入る",
+      "summary": "AIの操作技能だけに偏らず、長く築かれた人の関係や事業継承へ参加する足場を得ることが重要だと述べる。",
+      "detail": "検索できる情報と、人へ話を通せる関係の違いを指摘し、若者が人脈や継承関係へ入る経路を考える。",
+      "type": "経験に基づく意見・助言",
+      "caveat": "本人の事業経験に基づく助言。全員が同じ経路で成功する保証ではなく、関係の蓄積と公共的な開放性・公平性は別である。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "S18"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s19",
+      "personIds": [
+        "akihiro-nishino"
+      ],
+      "authorsLabel": "西野亮廣",
+      "coauthors": [],
+      "date": "2026-08-14",
+      "datePrecision": "day",
+      "dateLabel": "2026.08.14",
+      "originalDate": "2026-08-14",
+      "publishedDate": "2026-08-14",
+      "title": "効率化で関係を持つ人まで減らさない",
+      "keyword": "人を、残す",
+      "summary": "映画業界の紹介関係を例に、人を雇うことを恐れず、関係を持つ人材まで効率化で減らさないよう主張する。",
+      "detail": "本人のいう「癒着」は違法行為ではなく、時間をかけて蓄積された信頼関係を指すという説明。",
+      "type": "本人の経営経験に基づく意見",
+      "caveat": "人的関係が永久にAIで代替できないという科学的証明ではない。サロンや事業を運営する立場の意見として読む。",
+      "topics": [
+        1,
+        2,
+        4
+      ],
+      "quadrants": [
+        2
+      ],
+      "sourceIds": [
+        "S19"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s20",
+      "personIds": [
+        "takafumi-horie"
+      ],
+      "authorsLabel": "堀江貴文",
+      "coauthors": [],
+      "date": "2023-11-14",
+      "datePrecision": "day",
+      "dateLabel": "2023.11.14",
+      "originalDate": "2023-11-14",
+      "publishedDate": "2023-11-14",
+      "title": "不要な仕事を減らして自分の時間へ",
+      "keyword": "自分の、時間",
+      "summary": "ChatGPTで不要なルーチン業務を減らし、自分の時間を増やすことを勧める。空いた時間は起業に使っても、遊びに使ってもよいとする。",
+      "detail": "技術進歩で生活に必要な生産を少数が担える未来を楽観的に描く。人の価値を仕事量だけに結びつけない立場。",
+      "type": "助言・技術社会への予測",
+      "caveat": "本人著書の公開抜粋。生産の余剰と生活費の分配は別で、万人の所得保障が実現したわけではない。仕事を通じた所属を大切にする人もいる。",
+      "topics": [
+        1,
+        2,
+        5
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "S20"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s21",
+      "personIds": [
+        "katsuaki-sato"
+      ],
+      "authorsLabel": "佐藤航陽",
+      "coauthors": [
+        "佐藤航陽",
+        "堀江貴文"
+      ],
+      "date": "2023-06-01",
+      "datePrecision": "day",
+      "dateLabel": "2023.06.01",
+      "originalDate": "2023-06-01",
+      "publishedDate": "2023-06-01",
+      "title": "AI後の人間の価値を問う",
+      "keyword": "人の価値は、どこへ",
+      "summary": "AIの能力が人に近づいた後、社会や人の価値はどうなるのかと問う。生産を極めて少数が担う可能性を、対談の思考実験として取り上げる。",
+      "detail": "堀江貴文との対談。コミュニケーション、遊び、エンターテインメントという当該箇所の応答は堀江の発言であり、佐藤の結論にしない。",
+      "type": "対談中の問い・思考実験",
+      "caveat": "極端な人数比は雇用推計ではない。対人サービスのAI化も話題であり、人間関係の全面的な代替不可能性の証拠や2026年の総合的立場にしない。",
+      "topics": [
+        1,
+        3,
+        5
+      ],
+      "quadrants": [
+        3
+      ],
+      "sourceIds": [
+        "S21"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約",
+      "attributionNote": "このレコードは佐藤の問い。堀江の回答を佐藤の発言として扱わない。"
+    },
+    {
+      "id": "s21-horie",
+      "personIds": [
+        "takafumi-horie"
+      ],
+      "authorsLabel": "堀江貴文",
+      "coauthors": [
+        "佐藤航陽（対談相手）",
+        "堀江貴文（この要約の話者）"
+      ],
+      "date": "2023-06-01",
+      "datePrecision": "day",
+      "dateLabel": "2023.06.01",
+      "originalDate": "2023-06-01",
+      "publishedDate": "2023-06-01",
+      "title": "生産の外に遊びとコミュニケーションを考える",
+      "keyword": "遊ぶ、つながる",
+      "summary": "AIによって生産を極めて少数が担う可能性を話す対談で、人の活動がコミュニケーション、遊び、エンターテインメントへ向かうという応答をする。",
+      "detail": "佐藤航陽がAI後の社会や人間の価値を問い、堀江が応答する箇所。対人サービス自体のAI化も話題であり、すべての関係が人だけに残るとする議論ではない。",
+      "type": "対談中の応答・将来社会の思考実験",
+      "caveat": "対談上の思考実験であり、極端な人数比は実証済みの雇用予測ではない。自由時間や娯楽への移行が、全員の所得保障を意味するわけでもない。",
+      "topics": [
+        1,
+        3,
+        5
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "S21"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約",
+      "attributionNote": "このレコードは堀江の応答。佐藤の問いとは分けて掲載。"
+    },
+    {
+      "id": "s22",
+      "personIds": [
+        "shu-yamaguchi"
+      ],
+      "authorsLabel": "山口周",
+      "coauthors": [],
+      "date": "2026-07-06",
+      "datePrecision": "day",
+      "dateLabel": "2026.07.06",
+      "originalDate": "2026-07-06",
+      "publishedDate": "2026-07-06",
+      "title": "名義上の承認でなく価値ある判断を",
+      "keyword": "判断に、何を足す",
+      "summary": "AI時代には若手だけでなく経営層にも再学習が必要だと述べる。最後に承認して責任を負うことと、判断に価値を加えることを区別する。",
+      "detail": "問い、意味、倫理、文脈を用いて意思決定に何を加えるか、経営者自身の能力と判断の中身を問う。",
+      "type": "組織論・判断価値への規範的議論",
+      "caveat": "人だけが意味や倫理を扱えることの実験的証明ではない。人を最終承認者へ置くだけで品質や安全が保証されるとも述べていない。",
+      "topics": [
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "S22"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s23",
+      "personIds": [
+        "kazuhiro-obara"
+      ],
+      "authorsLabel": "尾原和啓",
+      "coauthors": [],
+      "date": "2024-11-11",
+      "datePrecision": "day",
+      "dateLabel": "2024.11.11",
+      "originalDate": "2024-11-11",
+      "publishedDate": "2024-11-11",
+      "title": "暗黙知を言語化して学びにつなぐ",
+      "keyword": "技能を、見える形に",
+      "summary": "業務をスキルへ分解し、働き手と雇用者の期待の差をAIで可視化して、学習やメンターとの接点につなぐ可能性を論じる。",
+      "detail": "暗黙の職人芸を言葉にしない企業慣行を導入の障壁と捉える。関係や暗黙知を一括してAIの届かない領域とはしない。",
+      "type": "業務・組織の解釈と将来提案",
+      "caveat": "記事中の効率倍率に他社談や想像例が含まれるため、実績数値には採用しない。紹介支援と紹介者が保証する信頼の代替は別。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "S23"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "s24",
+      "personIds": [
+        "kazuhiro-obara"
+      ],
+      "authorsLabel": "尾原和啓",
+      "coauthors": [],
+      "date": "2020-06-01",
+      "datePrecision": "day",
+      "dateLabel": "2020.06.01",
+      "originalDate": "2020-06-01",
+      "publishedDate": "2020-06-01",
+      "title": "同質な集団の外へつながる",
+      "keyword": "遠くの、仲間",
+      "summary": "同質な集団だけでなく、遠方の人とのつながりにも目を向けるネットワーク論。生成AI普及前の背景資料として読む。",
+      "detail": "2024年以降のAI論とは公表時点を分けた補助原典。AIがこの関係を実現したという主張ではない。",
+      "type": "生成AI普及前のネットワーク論",
+      "caveat": "生成AI普及前の発言をAI時代についての新発言として扱わない。",
+      "topics": [
+        4
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "S24"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約",
+      "background": true
+    },
+    {
+      "id": "s25",
+      "personIds": [
+        "yusuke-narita"
+      ],
+      "authorsLabel": "成田悠輔",
+      "coauthors": [],
+      "date": "2023-12-11",
+      "datePrecision": "day",
+      "dateLabel": "2023.12.11",
+      "originalDate": "2023-12-11",
+      "publishedDate": "2023-12-11",
+      "title": "本人性の一部をAIへ委ねてみる",
+      "keyword": "生身を、選ぶ",
+      "summary": "拘束される仕事を減らし、気が向いたことをする余地を守ると話す。自分の声・アバター・AIクローンを用意し、生身で出演しなくてよい方向を試す。",
+      "detail": "本人の自由時間の選好と実践。本人が直接出演・応答することを当然の前提にしない試みである。",
+      "type": "本人の経験・個人的選好",
+      "caveat": "全員が再現できる所得戦略や人類全体の役割の結論ではない。別対談の相手による身体的な集まりの評価を成田へ帰属させない。",
+      "topics": [
+        2,
+        3,
+        5
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "S25"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "r01",
+      "personIds": [
+        "sam-altman"
+      ],
+      "authorsLabel": "サム・アルトマン",
+      "coauthors": [],
+      "date": "2026-10-29",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.29 公開（収録日不明）",
+      "originalDate": null,
+      "publishedDate": "2026-10-29",
+      "title": "人が自分で決める人生",
+      "keyword": "人生を、自分で",
+      "summary": "AIの利益は、人が自分で定義するよりよい人生と有用な活動につながるべきだと述べる。少数の技術企業関係者だけが未来を決める姿を望まないとする。",
+      "detail": "科学知識の公開の利益を認めつつ、研究へ人生を捧げた共同体が感じる喜びや喪失にも言及。基本所得を受け取るだけの受動的な未来との距離を示す。",
+      "type": "本人の価値判断・未来への意向",
+      "caveat": "規範的な立場の表明。能力へのアクセスと決定権・交渉力は同じでなく、研究者の承認や職業生活を守る具体策まで実証したものではない。",
+      "topics": [
+        2,
+        4,
+        5,
+        6
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "R01"
+      ],
+      "recent": true,
+      "attention": "John Collisonとの公開対談。10月31日にTechRadarが科学成果公開をめぐる発言を報道。反響量は未計測。",
+      "summaryKind": "編集部による日本語要約",
+      "recordedDate": null,
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r02",
+      "personIds": [
+        "reid-hoffman"
+      ],
+      "authorsLabel": "リード・ホフマン",
+      "coauthors": [],
+      "date": "2026-10-23",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.23",
+      "originalDate": "2026-10-23",
+      "publishedDate": "2026-10-23",
+      "title": "共同体を開く人の仕事",
+      "keyword": "迎える、仕事",
+      "summary": "人の価値を知的能力だけに置かず、作る・遊ぶ・祝う・贈る・ケアする営みから考える。余暇が増えるだけでは共同体は生まれず、招き、場を用意し、新しい人を迎える役割が必要だと述べる。",
+      "detail": "AIで専門性が揺らぐ人に再訓練だけでなく喪失へ向き合う余地も必要とする。能力拡張の一般論から、歓迎、ケアの負担、帰属へ論点が具体化する。",
+      "type": "哲学的・規範的な見解",
+      "caveat": "哲学的・規範的エッセイであり、AIによる共同体改善の実証ではない。場を開く人の所得と時間を誰が支えるかは別の課題。",
+      "topics": [
+        3,
+        4,
+        5
+      ],
+      "quadrants": [
+        4
+      ],
+      "sourceIds": [
+        "R02"
+      ],
+      "recent": true,
+      "attention": "問いと関連する直近の本人発信。読者の反応はあるが、広範な話題化の規模は未確認。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r03",
+      "personIds": [
+        "brian-chesky"
+      ],
+      "authorsLabel": "ブライアン・チェスキー",
+      "coauthors": [],
+      "date": "2026-10-23",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.23 公開（取材日不明）",
+      "originalDate": null,
+      "publishedDate": "2026-10-23",
+      "title": "実際の人の声を聞く",
+      "keyword": "誰の声を、聞く",
+      "summary": "AIが自分たちのためでなく一方的に降りかかるものと感じられているという見方を示す。経営者は教師や工場労働者など、実際の人の声を聞くべきだとする。",
+      "detail": "技術企業だけの自主規律と、技術理解が十分でない政治だけの規制の双方に限界を見て、企業・政治・一般の人を結ぶ橋渡しを提唱する。",
+      "type": "本人の社会観・統治への提案",
+      "caveat": "橋渡し役を自認しても代表性、決定権、説明責任が保証されるわけではない。編集済みの直接インタビューである。",
+      "topics": [
+        4,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "R03"
+      ],
+      "recent": true,
+      "attention": "Semafor CEO Signalによる本人取材。URLの10月22日でなく本文の公開日10月23日を採用。拡散量は未確認。",
+      "summaryKind": "編集部による日本語要約",
+      "recordedDate": null,
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r04",
+      "personIds": [
+        "mark-zuckerberg"
+      ],
+      "authorsLabel": "マーク・ザッカーバーグ",
+      "coauthors": [
+        "Mark Zuckerberg（要約対象）",
+        "Alexandr Wang（共同出演）"
+      ],
+      "date": "2026-10-12",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.12 公開（収録日不明）",
+      "originalDate": null,
+      "publishedDate": "2026-10-12",
+      "title": "少人数と研究資源の集中",
+      "keyword": "人数より、密度",
+      "summary": "AI研究では単純な人数より、一人ひとりの能力と研究者あたりの計算資源を重視すると説明する。異論を述べられ、自分の仕事へ所有意識を持つ環境を重視する。",
+      "detail": "大企業の資源とスタートアップ的な働き方を両立する組織像。Alexandr Wangとの共同出演だが、この要約はZuckerberg自身の発言に限定する。",
+      "type": "本人の経営観・研究組織の方針",
+      "caveat": "少人数チームの背後には巨大な基盤と支援労働がある。会社全体の小型化、一人企業の優越、成功の因果関係を実証したものではない。",
+      "topics": [
+        1,
+        2
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R04"
+      ],
+      "recent": true,
+      "attention": "MetaのAIモデルと組織戦略を扱う経営陣の長時間公開対談。独立媒体での反響量は未計測。",
+      "summaryKind": "編集部による日本語要約",
+      "recordedDate": null,
+      "attributionNote": "要約はZuckerbergの発言のみ。Wangの発言は統合しない。",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r05",
+      "personIds": [
+        "mustafa-suleyman"
+      ],
+      "authorsLabel": "ムスタファ・スレイマン",
+      "coauthors": [],
+      "date": "2026-09-15",
+      "datePrecision": "day",
+      "dateLabel": "本人解説 2026.09.15 / 草案 09.14",
+      "originalDate": "2026-09-15",
+      "publishedDate": "2026-09-15",
+      "title": "成果より人による制御を優先する",
+      "keyword": "人が、止められる",
+      "summary": "人の安全と制御をAIによる成果達成より上位に置く。停止や訂正への抵抗、明示されない目標の追求、人に読めないエージェント間通信を避ける方針を示す。",
+      "detail": "人の判断力と自律性を支え、関係を補完する理念を規範と公開協議へ具体化。規範草案は9月14日、本人の解説は9月15日。",
+      "type": "設計方針・未実装の規範草案",
+      "caveat": "草案はまだモデル訓練に使っておらず、改訂版を2027年以降の開発に使う予定とする。現行製品の安全性の実証・保証として読まない。",
+      "topics": [
+        2,
+        3,
+        6
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "R05"
+      ],
+      "recent": true,
+      "attention": "公開意見募集を伴う方針草案。理念を具体的な行動規範へ移す提案であり、実装済みという意味ではない。",
+      "summaryKind": "編集部による日本語要約",
+      "draftDate": "2026-09-14",
+      "relatedUrls": [
+        "https://microsoft.ai/code-of-conduct/"
+      ],
+      "dateKind": "本人解説公開日"
+    },
+    {
+      "id": "r06",
+      "personIds": [
+        "dario-amodei"
+      ],
+      "authorsLabel": "ダリオ・アモデイ",
+      "coauthors": [],
+      "date": "2026-09",
+      "datePrecision": "month",
+      "dateLabel": "2026.09 公開（月のみ確認）",
+      "originalDate": "2026-09",
+      "publishedDate": "2026-09",
+      "title": "社会が判断する時間を確保する",
+      "keyword": "進歩に、時間を",
+      "summary": "AI能力の進歩を安全対策が追いつく速度へ調整すべきだと提案。第三者評価者へ継続的なアクセスを与え、安全対策や事故を外部から確認する仕組みを約束する。",
+      "detail": "社会が技術利用を議論する時間も必要とする。便益や意味だけでなく、進歩の速度と第三者監督を具体的な論点にする。",
+      "type": "政策・監督への提案と自社の約束",
+      "caveat": "提案と約束であり実装完了の確認ではない。評価者の独立性、予算、アクセス範囲と公開制限が実効性を左右し、減速が参入障壁になる懸念も残る。",
+      "topics": [
+        5,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "R06"
+      ],
+      "recent": true,
+      "attention": "9月14日の米上院議事録に論考への言及。政策議論で取り上げられた事実と内容への合意は別。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "公開月"
+    },
+    {
+      "id": "r07",
+      "personIds": [
+        "ben-horowitz",
+        "michael-mcguiness"
+      ],
+      "authorsLabel": "ベン・ホロウィッツ・マイケル・マクギネス",
+      "coauthors": [
+        "Ben Horowitz",
+        "Michael McGuiness"
+      ],
+      "date": "2026-10-27",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.27",
+      "originalDate": "2026-10-27",
+      "publishedDate": "2026-10-27",
+      "title": "人が課題設定と委任と評価を担う",
+      "keyword": "任せて、見極める",
+      "summary": "AIが実行を担うほど、人の仕事は課題設定・委任・成果評価へ移ると予想する。組織が学んだ例外、許可、顧客履歴をモデルの交換後も保つことに価値を見いだす。",
+      "detail": "情報伝達の自動化と人の育成を分ける共著。本文で紹介されるDorseyの階層縮小論と、Ghodsiの情報経路と人の組織図を分ける立場にも差がある。",
+      "type": "共著による組織設計の予測・投資論",
+      "caveat": "a16z投資先Databricksの紹介を兼ねる。会社側の業績は独立監査済みの雇用効果ではなく、完全自律企業の到来時期も未確定。",
+      "topics": [
+        1,
+        2,
+        4
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R07"
+      ],
+      "recent": true,
+      "attention": "10月27日の新規共著論考。実務解説・週報での紹介はあるが広範な反響量は未確認。過去引用は新発言に数えない。",
+      "summaryKind": "編集部による日本語要約",
+      "attributionNote": "共著の見解。本文に引用されるDorseyやGhodsiの立場を著者の単独発言へまとめない。",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r08",
+      "personIds": [
+        "chris-dixon"
+      ],
+      "authorsLabel": "クリス・ディクソン",
+      "coauthors": [],
+      "date": "2026-10-22",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.22",
+      "originalDate": "2026-10-22",
+      "publishedDate": "2026-10-22",
+      "title": "人とエージェントのネットワーク",
+      "keyword": "多者で、動く",
+      "summary": "既存作業の効率化を越え、新たな活動と市場が生まれると予測。人とAIエージェントが学び、協調し、生産し、取引するネットワークを投資対象として描く。",
+      "detail": "a16z Cryptoからa16z Frontierへの名称と投資範囲の拡張を発表。単独の道具から、多者間での活動へ関心を広げる。",
+      "type": "投資方針の発表・将来市場の予測",
+      "caveat": "名称変更と方針発表は事実だが、ネットワークが成功した実績ではない。エージェント数や取引量は人の所属感・信頼・交渉力の改善と同義ではない。",
+      "topics": [
+        1,
+        2,
+        4
+      ],
+      "quadrants": [
+        2
+      ],
+      "sourceIds": [
+        "R08"
+      ],
+      "recent": true,
+      "attention": "同日のTechCrunchとFortuneによる報道。具体的な投資領域変更の発表であり、予測が独立に証明されたことを意味しない。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r09",
+      "personIds": [
+        "ben-horowitz",
+        "gagan-biyani",
+        "erik-torenberg"
+      ],
+      "authorsLabel": "ベン・ホロウィッツ・ガガン・ビヤニ・エリック・トーレンバーグ",
+      "coauthors": [
+        "Ben Horowitz",
+        "Gagan Biyani",
+        "Erik Torenberg"
+      ],
+      "date": "2026-09-22",
+      "datePrecision": "day",
+      "dateLabel": "2026.09.22",
+      "originalDate": "2026-09-22",
+      "publishedDate": "2026-09-22",
+      "title": "対面で作りながら学ぶ学校",
+      "keyword": "作って、学ぶ",
+      "summary": "実際に作り、企業や実務家と関わる中で判断力と対人能力を身につける教育を重視する。すべての大学の置換ではなく、作りたい若者へ別の経路を示す。",
+      "detail": "教育起業家Biyani、a16zのTorenbergらとの対談。対面の仲間と困難を越える経験を重視する学校構想を扱う。",
+      "type": "共同対談・教育構想",
+      "caveat": "Founding Class Fellowshipは2027年9月〜2028年8月の予定で、現時点の教育成果はない。評価では選抜効果と教育効果を分ける必要がある。",
+      "topics": [
+        2,
+        3,
+        4
+      ],
+      "quadrants": [
+        1,
+        2,
+        4
+      ],
+      "sourceIds": [
+        "R09"
+      ],
+      "recent": true,
+      "attention": "同日の署名発表と入学募集予定が確認できる。学校の設立自体を対面教育の優越性の証明にしない。",
+      "summaryKind": "編集部による日本語要約",
+      "relatedUrls": [
+        "https://theacademysf.com/admissions"
+      ],
+      "attributionNote": "3名による対談の学校構想。各人の逐語引用ではなく共同議論の要約。",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r10",
+      "personIds": [
+        "vinod-khosla"
+      ],
+      "authorsLabel": "ヴィノッド・コースラ",
+      "coauthors": [],
+      "date": "2026-09-14",
+      "datePrecision": "day",
+      "dateLabel": "2026.09.14 公式掲載（初出日未確認）",
+      "originalDate": null,
+      "publishedDate": "2026-09-14",
+      "title": "人間の来歴や同席への対価",
+      "keyword": "誰が、つくったか",
+      "summary": "小規模事業でも、誰が作ったか、身体的サービス、本人との同席、趣味判断や評判、所属や関係が価値になると予想する。",
+      "detail": "税、移転、資本所有の提案と、人間中心のケア・創作・体験を組み合わせる。2024年の豊かさの一般論から制度と事業へ具体化する。",
+      "type": "人間中心事業の予測・再分配への提案",
+      "caveat": "支払意思は所得に依存し、小規模事業の大量成立を保証しない。AI由来の試算を検証済みの税収・代替率予測として扱わない。初出日は未確認。",
+      "topics": [
+        1,
+        3,
+        4,
+        5,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "R10"
+      ],
+      "recent": true,
+      "attention": "公式本文はThe Informationへの本人寄稿が初出と明記。9月14日は公式サイト掲載日であり、初出発言の日付は未確認。",
+      "summaryKind": "編集部による日本語要約",
+      "republication": true,
+      "dateKind": "公式再掲公開日"
+    },
+    {
+      "id": "r11",
+      "personIds": [
+        "marc-andreessen",
+        "erik-torenberg",
+        "elena-burger"
+      ],
+      "authorsLabel": "マーク・アンドリーセン・エリック・トーレンバーグ・エレナ・バーガー",
+      "coauthors": [
+        "Marc Andreessen",
+        "Erik Torenberg",
+        "Elena Burger"
+      ],
+      "date": "2026-07-21",
+      "datePrecision": "day",
+      "dateLabel": "2026.07.21",
+      "originalDate": "2026-07-21",
+      "publishedDate": "2026-07-21",
+      "title": "物理世界のAIには試験と説明が要る",
+      "keyword": "現実で、責任を",
+      "summary": "AIはデジタル作業だけでなく機械・車両・産業設備へ広がると論じる。物理世界では事故が起こるため、試験、追跡、評価、説明が重要だとする。",
+      "detail": "Applied Intuitionの製品発表に結びつく共著。身体労働をAIの届かない領域とはせず、現実の安全と運用条件を重視する。",
+      "type": "共同署名の事業論・予測",
+      "caveat": "投資先製品の紹介を兼ねる。内部・限定顧客の効果を労働市場全体に一般化せず、保守や安全対応を含む総費用を評価する必要がある。",
+      "topics": [
+        1,
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R11"
+      ],
+      "recent": true,
+      "attention": "Dana提供開始の会社発表と同日の取材報道。製品の開始と労働代替の実績は別。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r12",
+      "personIds": [
+        "sarah-guo"
+      ],
+      "authorsLabel": "サラ・グオ",
+      "coauthors": [],
+      "date": "2026-06-10",
+      "datePrecision": "day",
+      "dateLabel": "2026.06.10",
+      "originalDate": "2026-06-10",
+      "publishedDate": "2026-06-10",
+      "title": "許可と責任と信頼が制約になる",
+      "keyword": "信頼は、取得できるか",
+      "summary": "モデル能力が進歩しても顧客内部の情報、許可、責任、長い関係から得る信頼は自動取得できない。顧客の現実をモデルへ翻訳し、よい結果を定め続ける仕事を重視する。",
+      "detail": "測定可能な仕事はモデルへ吸収され、現在の優位も縮み得ると認める。文脈や関係を永遠の安全地帯とは扱わない。",
+      "type": "投資領域の仮説",
+      "caveat": "投資仮説であり信頼の永続的な自動化不可能性を証明するものではない。モデル企業が許可・契約・顧客接点を得れば、アプリ企業の優位は変わり得る。",
+      "topics": [
+        2,
+        4,
+        6
+      ],
+      "quadrants": [
+        2
+      ],
+      "sourceIds": [
+        "R12"
+      ],
+      "recent": true,
+      "attention": "物流実務家の論評や別言語の紹介。特定実務家の反応を全産業の合意や人気順位へ置き換えない。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r13",
+      "personIds": [
+        "takahiro-anno"
+      ],
+      "authorsLabel": "安野貴博とチームみらい",
+      "coauthors": [
+        "安野貴博",
+        "チームみらい（古川・高山ら）"
+      ],
+      "date": "2026-10-26",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.26",
+      "originalDate": "2026-10-26",
+      "publishedDate": "2026-10-26",
+      "title": "雇用変化への制度的な備え",
+      "keyword": "変化を、支える",
+      "summary": "AIの便益を得ながら雇用変化を測り、訓練・就労支援、安全網、労働者保護を先回りして整えるべきだとする。局所的で急速な変化と若手の経験機会の縮小を警戒する。",
+      "detail": "AI社会実装の制度改革と労働政策を柱とする党の正式提言。安野個人の単著でなく、古川・高山らを含むチームみらいの提言である。",
+      "type": "政党の正式提言・制度設計の提案",
+      "caveat": "日本で大規模なAI失業が既発生だとする断定ではない。将来規模・時期は不確実で、提言提出という行動と政策効果を区別する。",
+      "topics": [
+        1,
+        2,
+        5,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "R13"
+      ],
+      "recent": true,
+      "attention": "同日、官房長官へ正式提出。FNNが提出の事実を報道。政策効果の実証ではない。",
+      "summaryKind": "編集部による日本語要約",
+      "attributionNote": "安野個人の単著ではなく党の提言。",
+      "dateKind": "提言提出日"
+    },
+    {
+      "id": "r14",
+      "personIds": [
+        "yoichi-ochiai"
+      ],
+      "authorsLabel": "落合陽一",
+      "coauthors": [],
+      "date": "2026-10-25",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.25",
+      "originalDate": "2026-10-25",
+      "publishedDate": "2026-10-25",
+      "title": "選び味わい共に経験する",
+      "keyword": "選ぶ、味わう",
+      "summary": "機械と共につくると、人が出力を選び、味わう営みへ重心が移るという文明観を語る。自分で作る楽しさは残るが、効率だけなら人が生産の制約にもなり得ると捉える。",
+      "detail": "鳥取県立美術館の公開対談。土地を歩き、観察を記録する現場の活動も紹介し、5月の共同的に味わう議論を制作や観察へ結びつける。",
+      "type": "公開対談・芸術哲学的な見通し",
+      "caveat": "芸術・哲学的な見通しであり雇用消滅や全員への対面の必要性の証明ではない。入力PDFが記すAI文字起こしとの明記は現在の無料公開部分で再確認できなかった。",
+      "topics": [
+        2,
+        3,
+        4
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "R14"
+      ],
+      "recent": true,
+      "attention": "美術館での公開対談と同日の本人公開。聴衆規模の自己記録を独立した人気計測とは扱わない。",
+      "summaryKind": "編集部による日本語要約",
+      "dateKind": "対談日・本人公開日"
+    },
+    {
+      "id": "r15",
+      "personIds": [
+        "kazuhiro-obara"
+      ],
+      "authorsLabel": "尾原和啓",
+      "coauthors": [],
+      "date": "2026-10-21",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.21",
+      "originalDate": "2026-10-21",
+      "publishedDate": "2026-10-21",
+      "title": "仕事経験をAIへの判断基準に変える",
+      "keyword": "経験を、伝える",
+      "summary": "AI操作だけでなく、顧客の優先順位、現場事情、よい成果の判断基準を伝えることが重要とする。仕事経験をAIへの指示や確認へ変える可能性を論じる。",
+      "detail": "書籍紹介の文脈で作業分解・指示・確認を扱う。紹介書籍の主張と尾原本人の顧客対応の例示は区別する。",
+      "type": "実務の解釈・書籍紹介",
+      "caveat": "無料公開部分の確認に限定。経験が自動的な優位になるわけでなく、AIへ伝わる形への整理と成果の確認が必要。",
+      "topics": [
+        2
+      ],
+      "quadrants": [
+        1
+      ],
+      "sourceIds": [
+        "R15"
+      ],
+      "recent": true,
+      "attention": "本人連載、書籍紹介、会員向けイベントに関連した発信。社会全体の反響量は未確認。",
+      "summaryKind": "編集部による日本語要約",
+      "accessScope": "無料公開部分のみ",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r16",
+      "personIds": [
+        "kazuhiro-obara"
+      ],
+      "authorsLabel": "尾原和啓",
+      "coauthors": [],
+      "date": "2026-10-28",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.28",
+      "originalDate": "2026-10-28",
+      "publishedDate": "2026-10-28",
+      "title": "現在の部署から小さく実践する",
+      "keyword": "今いる、場所で",
+      "summary": "独立や転職を先に選ぶのでなく、今の部署でAIを使い問題を変え、貢献を説明し外部の反応を取り入れる進み方を提示する。",
+      "detail": "誰が困り、誰が確認し、何を自動化するかという業務全体の理解を重視。部署を横断する関係をつくり、今いる場所で選択肢を増やす実践提案。",
+      "type": "本人の実践提案",
+      "caveat": "全職種・全組織での成功を示す研究ではない。確認は無料公開部分に限り、有料部分の内容を補完しない。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R16"
+      ],
+      "recent": true,
+      "attention": "直近の具体的な実践提案。広い反響は独立確認されていない。",
+      "summaryKind": "編集部による日本語要約",
+      "accessScope": "無料公開部分のみ",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r17",
+      "personIds": [
+        "akihiro-nishino"
+      ],
+      "authorsLabel": "西野亮廣",
+      "coauthors": [],
+      "date": "2026-10-16",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.16 公開 / 10.18 公式再掲",
+      "originalDate": null,
+      "publishedDate": "2026-10-16",
+      "title": "仕組み化と市場への接触を両立する",
+      "keyword": "現場に、触れる",
+      "summary": "定型業務を仕組みに任せながら、経営者は顧客の反応に触れ続けるべきだと主張。数字に表れる前の変化を拾い、標準化できない試みに余地を残す。",
+      "detail": "経営者の思いつきや過剰介入が組織を弱める場合も認める。関係資本だけでなく現場へどう関わるかが論点。",
+      "type": "本人の経営観",
+      "caveat": "本人の経営観であり、効果は組織規模、権限委譲、経営者の能力に左右される。見出しの「正解」を唯一の方法の実証と読まない。",
+      "topics": [
+        2,
+        4
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R17"
+      ],
+      "recent": true,
+      "attention": "Voicy発信を編集した本人の雑誌連載と10月18日の公式再掲。再掲を独立した別証拠や新発言には数えない。",
+      "summaryKind": "編集部による日本語要約",
+      "republicationDate": "2026-10-18",
+      "relatedUrls": [
+        "https://chimney.town/20607/"
+      ],
+      "dateKind": "記事公開日（元Voicy収録日不明）"
+    },
+    {
+      "id": "r18",
+      "personIds": [
+        "takafumi-horie"
+      ],
+      "authorsLabel": "堀江貴文",
+      "coauthors": [],
+      "date": "2026-10-13",
+      "datePrecision": "day",
+      "dateLabel": "2026.10.13",
+      "originalDate": "2026-10-13",
+      "publishedDate": "2026-10-13",
+      "title": "現地の体験と直接交流へ",
+      "keyword": "その場に、行く",
+      "summary": "自ら関わるイベントやミュージカルを通じ、生成AI以降には、その場へ行かなければ得られない体験と直接交流が重要になるという見通しを示す。",
+      "detail": "仕事を減らして自分の時間を増やすという従来の発信に加え、その時間を使う具体的な体験の側を語る。",
+      "type": "本人の事業観・需要の見通し",
+      "caveat": "体験事業を運営する立場の見通し。オンラインより必ず高価値、全員が余暇を享受できるという証明ではなく、有料本文は根拠に含めない。",
+      "topics": [
+        3,
+        4,
+        5
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "R18"
+      ],
+      "recent": true,
+      "attention": "主催・出演するイベントに結びつく本人発信。市場全体の需要増を実証するものではない。",
+      "summaryKind": "編集部による日本語要約",
+      "accessScope": "無料公開部分のみ",
+      "dateKind": "公開日"
+    },
+    {
+      "id": "r19",
+      "personIds": [
+        "shu-yamaguchi"
+      ],
+      "authorsLabel": "山口周",
+      "coauthors": [],
+      "date": "2026-09-08",
+      "datePrecision": "day",
+      "dateLabel": "2026.09.08",
+      "originalDate": "2026-09-08",
+      "publishedDate": "2026-09-08",
+      "title": "能力予測と社会実装の時間軸を分ける",
+      "keyword": "できる、と広がる",
+      "summary": "技術者の能力や実現時期の予測を、そのまま社会の未来と同一視しないよう促す。自動運転を例に、社会の文脈や意味は認識・制御能力だけでは扱いきれないと論じる。",
+      "detail": "AIが何をできるかと、制度・現場・生活の中でいつ使われるかを分ける批判的見解。",
+      "type": "技術予測と社会実装への批判的見解",
+      "caveat": "AIが社会文脈を永久に扱えないと技術的に証明するものではない。公開確認部分を越えて内容を推測しない。",
+      "topics": [
+        1,
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "R19"
+      ],
+      "recent": true,
+      "attention": "急速な進歩を前提とする発信と対照になる直近論考。支持の規模は未計測。",
+      "summaryKind": "編集部による日本語要約",
+      "accessScope": "公開確認部分のみ",
+      "dateKind": "公開日"
+    }
+  ],
+  "sources": [
+    {
+      "id": "S12",
+      "url": "https://saranormous.substack.com/p/launching-with-conviction",
+      "pdfPage": 23,
+      "title": "Launching With Conviction",
+      "publisher": "Sarah Guo",
+      "date": "2022-10-04",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S11",
+      "url": "https://www.oaktreecapital.com/insights/memo/ai-hurtles-ahead",
+      "pdfPage": 23,
+      "title": "AI Hurtles Ahead",
+      "publisher": "Oaktree",
+      "date": "2026-02-26",
+      "kind": "本人署名メモ"
+    },
+    {
+      "id": "S10",
+      "url": "https://www.oaktreecapital.com/insights/memo/is-it-a-bubble",
+      "pdfPage": 23,
+      "title": "Is It a Bubble?",
+      "publisher": "Oaktree",
+      "date": "2025-12-09",
+      "kind": "本人署名メモ"
+    },
+    {
+      "id": "S09",
+      "url": "https://a16z.com/ai-will-save-the-world/",
+      "pdfPage": 23,
+      "title": "Why AI Will Save the World",
+      "publisher": "a16z",
+      "date": "2023-06-06",
+      "kind": "本人署名論考"
+    },
+    {
+      "id": "S08",
+      "url": "https://www.khoslaventures.com/posts/ai-dystopia-or-utopia",
+      "pdfPage": 23,
+      "title": "AI: Dystopia or Utopia?",
+      "publisher": "Khosla Ventures",
+      "date": "2024-09-20",
+      "kind": "本人署名論考"
+    },
+    {
+      "id": "S07",
+      "url": "https://abcnews.com/amp/Business/airbnb-ceo-brian-chesky-discusses-importance-human-connection/story?id=126770200",
+      "pdfPage": 23,
+      "title": "Brian Chesky on human connection",
+      "publisher": "ABC News",
+      "date": "2025-10-24",
+      "kind": "本人インタビュー"
+    },
+    {
+      "id": "S06",
+      "url": "https://www.weforum.org/stories/artificial-intelligence/nvidia-ceo-jensen-huang-on-the-future-of-ai",
+      "pdfPage": 23,
+      "title": "Jensen Huang on the future of AI",
+      "publisher": "World Economic Forum",
+      "date": "2026-01-21",
+      "kind": "主催者による発言整理"
+    },
+    {
+      "id": "S05",
+      "url": "https://mustafa-suleyman.ai/seemingly-conscious-ai-is-coming",
+      "pdfPage": 23,
+      "title": "We must build AI for people, not to be a person",
+      "publisher": "Mustafa Suleyman",
+      "date": "2025-08-19",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S04",
+      "url": "https://darioamodei.com/essay/machines-of-loving-grace",
+      "pdfPage": 23,
+      "title": "Machines of Loving Grace",
+      "publisher": "Dario Amodei",
+      "date": "2024-10",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S03",
+      "url": "https://blog.samaltman.com/three-observations",
+      "pdfPage": 23,
+      "title": "Three Observations",
+      "publisher": "Sam Altman",
+      "date": "2025-02",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S02",
+      "url": "https://ia.samaltman.com/",
+      "pdfPage": 23,
+      "title": "The Intelligence Age",
+      "publisher": "Sam Altman",
+      "date": "2024-09-23",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S01",
+      "url": "https://www.reidhoffman.org/ai-society-and-our-world-order/",
+      "pdfPage": 23,
+      "title": "AI, Society, and Our World Order",
+      "publisher": "Reid Hoffman",
+      "date": "2024-12-09",
+      "kind": "本人講演"
+    },
+    {
+      "id": "S25",
+      "url": "https://bunshun.jp/articles/-/67580",
+      "pdfPage": 24,
+      "title": "成田悠輔本人インタビュー",
+      "publisher": "文春オンライン",
+      "date": "2023-12-11",
+      "kind": "本人インタビュー"
+    },
+    {
+      "id": "S24",
+      "url": "https://nhkbook-hiraku.com/n/n5ee3aa1f5383",
+      "pdfPage": 24,
+      "title": "NHK出版による著書冒頭公開",
+      "publisher": "NHK出版",
+      "date": "2020-06-01",
+      "kind": "本人著書抜粋"
+    },
+    {
+      "id": "S23",
+      "url": "https://www.businessinsider.jp/article/296517/",
+      "pdfPage": 24,
+      "title": "AIによる技能の可視化と組織再設計（内容説明）",
+      "publisher": "Business Insider Japan",
+      "date": "2024-11-11",
+      "kind": "本人署名コラム"
+    },
+    {
+      "id": "S22",
+      "url": "https://note.com/shu_yamaguchi/n/nd6b151509ef3",
+      "pdfPage": 24,
+      "title": "経営層の再学習とAI時代の判断（内容説明）",
+      "publisher": "山口周 note",
+      "date": "2026-07-06",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S21",
+      "url": "https://goetheweb.jp/lifestyle/more/20230601-horie-21",
+      "pdfPage": 24,
+      "title": "佐藤航陽と堀江貴文の対談",
+      "publisher": "GOETHE",
+      "date": "2023-06-01",
+      "kind": "本人対談"
+    },
+    {
+      "id": "S20",
+      "url": "https://toyokeizai.net/articles/-/711392?display=b",
+      "pdfPage": 24,
+      "title": "ChatGPTと自分の時間（著書公開抜粋）",
+      "publisher": "東洋経済オンライン",
+      "date": "2023-11-14",
+      "kind": "本人著書抜粋"
+    },
+    {
+      "id": "S19",
+      "url": "https://chimney.town/20055/",
+      "pdfPage": 24,
+      "title": "人を雇うことを恐れちゃダメ",
+      "publisher": "西野亮廣 公式ブログ",
+      "date": "2026-08-14",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S18",
+      "url": "https://chimney.town/17191/",
+      "pdfPage": 24,
+      "title": "AI時代の人的関係と仕事の足場（内容説明）",
+      "publisher": "西野亮廣 公式ブログ",
+      "date": "2025-10-25",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S17",
+      "url": "https://www.hakuhodody-holdings.co.jp/news/topics/2025/05/5430.html",
+      "pdfPage": 24,
+      "title": "安野貴博・青山柊太朗の共同インタビュー",
+      "publisher": "博報堂DYホールディングス",
+      "date": "2025-05-13",
+      "kind": "共同インタビュー"
+    },
+    {
+      "id": "S16",
+      "url": "https://note.com/ochyai/n/n72df0cbdc6ab",
+      "pdfPage": 24,
+      "title": "ホモ・コンヴィヴィウムの計算機自然論",
+      "publisher": "落合陽一 note",
+      "date": "2026-05-08",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S15",
+      "url": "https://www.a16z.news/p/we-raised-15b-why",
+      "pdfPage": 24,
+      "title": "We raised $15B. Why?",
+      "publisher": "a16z",
+      "date": "2026-01-09",
+      "kind": "本人論考"
+    },
+    {
+      "id": "S14",
+      "url": "https://a16z.com/context-is-king/",
+      "pdfPage": 24,
+      "title": "Context is King",
+      "publisher": "a16z",
+      "date": "2025-08-18",
+      "kind": "本人署名論考"
+    },
+    {
+      "id": "S13",
+      "url": "https://sequoiacap.com/article/from-hierarchy-to-intelligence",
+      "pdfPage": 24,
+      "title": "From Hierarchy to Intelligence",
+      "publisher": "Sequoia",
+      "date": "2026-03-31",
+      "kind": "共同署名論考"
+    },
+    {
+      "id": "R01",
+      "title": "Why Sam Altman is against a single superintelligence",
+      "publisher": "Cheeky Pint",
+      "date": "2026-10-29",
+      "kind": "本人公開対談",
+      "url": "https://cheekypint.substack.com/p/why-sam-altman-is-against-a-single",
+      "pdfPage": 13
+    },
+    {
+      "id": "R02",
+      "title": "It’s time to reintroduce ourselves",
+      "publisher": "Reid Hoffman Substack",
+      "date": "2026-10-23",
+      "kind": "本人論考",
+      "url": "https://reidhoffman.substack.com/p/its-time-to-reintroduce-ourselves",
+      "pdfPage": 13
+    },
+    {
+      "id": "R03",
+      "title": "Brian Chesky’s new blueprint for Airbnb — and Silicon Valley",
+      "publisher": "Semafor CEO Signal",
+      "date": "2026-10-23",
+      "kind": "本人インタビュー",
+      "url": "https://www.semafor.com/article/10/22/2026/brian-cheskys-new-blueprint-for-airbnb-and-silicon-valley",
+      "pdfPage": 14
+    },
+    {
+      "id": "R04",
+      "title": "Muse Wonder: Zuckerberg and Wang’s $100B AI",
+      "publisher": "Cheeky Pint",
+      "date": "2026-10-12",
+      "kind": "本人公開対談",
+      "url": "https://cheekypint.substack.com/p/muse-wonder-zuckerberg-and-wangs",
+      "pdfPage": 14
+    },
+    {
+      "id": "R05",
+      "title": "The Humanist AI Code of Conduct",
+      "publisher": "Mustafa Suleyman",
+      "date": "2026-09-15",
+      "kind": "本人解説・公開草案",
+      "url": "https://mustafa-suleyman.ai/the-humanist-ai-code-of-conduct",
+      "pdfPage": 15
+    },
+    {
+      "id": "R06",
+      "title": "We Must Pace the Frontier",
+      "publisher": "Dario Amodei",
+      "date": "2026-09",
+      "kind": "本人論考",
+      "url": "https://darioamodei.com/post/we-must-pace-the-frontier",
+      "pdfPage": 15
+    },
+    {
+      "id": "R07",
+      "title": "Databricks & the Future of the Firm",
+      "publisher": "a16z",
+      "date": "2026-10-27",
+      "kind": "共同署名論考",
+      "url": "https://a16z.com/databricks-the-future-of-the-firm/",
+      "pdfPage": 16
+    },
+    {
+      "id": "R08",
+      "title": "a16z Frontier",
+      "publisher": "a16z",
+      "date": "2026-10-22",
+      "kind": "本人署名発表",
+      "url": "https://a16z.com/a16z-frontier/",
+      "pdfPage": 16
+    },
+    {
+      "id": "R09",
+      "title": "Why a16z is Building a New School for the AI Era | Ben Horowitz",
+      "publisher": "a16z Podcast",
+      "date": "2026-09-22",
+      "kind": "公開対談",
+      "url": "https://a16z.com/podcast/why-a16z-is-building-a-new-school-for-the-ai-era-ben-horowitz/",
+      "pdfPage": 17
+    },
+    {
+      "id": "R10",
+      "title": "Refounding America: The Tax Code Needs to Change in the Age of AI",
+      "publisher": "Khosla Ventures",
+      "date": "2026-09-14",
+      "kind": "本人署名論考の公式掲載",
+      "url": "https://www.khoslaventures.com/posts/refounding-america-the-tax-code-needs-to-change-in-the-age-of-ai",
+      "pdfPage": 17
+    },
+    {
+      "id": "R11",
+      "title": "Making a Billion Intelligent Machines",
+      "publisher": "a16z",
+      "date": "2026-07-21",
+      "kind": "共同署名論考",
+      "url": "https://a16z.com/making-a-billion-intelligent-machines/",
+      "pdfPage": 18
+    },
+    {
+      "id": "R12",
+      "title": "The Untrainable",
+      "publisher": "Sarah Guo Substack",
+      "date": "2026-06-10",
+      "kind": "本人論考",
+      "url": "https://saranormous.substack.com/p/the-untrainable",
+      "pdfPage": 18
+    },
+    {
+      "id": "R13",
+      "title": "AI失業に備える",
+      "publisher": "チームみらい",
+      "date": "2026-10-26",
+      "kind": "党の正式提言",
+      "url": "https://team-mir.ai/lp/ai-shitsugyo/proposal.html",
+      "pdfPage": 19
+    },
+    {
+      "id": "R14",
+      "title": "やっとサピエンスじゃなくなっちゃったんだ，俺たち，と15時15分に答えた",
+      "publisher": "落合陽一 note",
+      "date": "2026-10-25",
+      "kind": "本人公開記録",
+      "url": "https://note.com/ochyai/n/nbbd35f86a74d",
+      "pdfPage": 19
+    },
+    {
+      "id": "R15",
+      "title": "AIを「使う人」から、「育てる人」へ。あなたの仕事経験が、もう一度資産になる",
+      "publisher": "尾原和啓 note",
+      "date": "2026-10-21",
+      "kind": "本人公開文（無料部分）",
+      "url": "https://note.com/kazobara/n/nb68de0acdf00",
+      "pdfPage": 20
+    },
+    {
+      "id": "R16",
+      "title": "会社を辞めずに、選択肢を増やす。AI時代の「始まりの場所」は、いまの部署にある",
+      "publisher": "尾原和啓 note",
+      "date": "2026-10-28",
+      "kind": "本人公開文（無料部分）",
+      "url": "https://note.com/kazobara/n/nc1251fc8d23b",
+      "pdfPage": 20
+    },
+    {
+      "id": "R17",
+      "title": "西野亮廣が、AI時代の経営（社長のあり方）の正解を見つけた！",
+      "publisher": "GOETHE / 西野亮廣",
+      "date": "2026-10-16",
+      "kind": "本人連載・公式再掲",
+      "url": "https://goetheweb.jp/person/article/20261016-nishino-269",
+      "pdfPage": 21
+    },
+    {
+      "id": "R18",
+      "title": "AI以降の時代を見据えた動き方",
+      "publisher": "堀江貴文 note",
+      "date": "2026-10-13",
+      "kind": "本人公開文（無料部分）",
+      "url": "https://note.com/takapon/n/n75cb3520217b",
+      "pdfPage": 21
+    },
+    {
+      "id": "R19",
+      "title": "眉に唾せよ「AI脅威論」",
+      "publisher": "山口周 note",
+      "date": "2026-09-08",
+      "kind": "本人公開文（確認部分）",
+      "url": "https://note.com/shu_yamaguchi/n/n02c92919d012",
+      "pdfPage": 22
+    }
+  ],
+  "topics": [
+    {
+      "id": 1,
+      "title": "人の仕事は増えるのか、減るのか？",
+      "short": "仕事の増減",
+      "description": "自動化された作業、純雇用、移行期の生活を分ける。",
+      "agreement": "新しい活動や仕事の変化が起こり得るという点。",
+      "difference": "Andreessenは生産性と需要拡大から雇用増を見込む。Khoslaは働く必要の低下、Marksは移行速度と経験機会の喪失を問う。",
+      "caveat": "新市場の誕生も作業の削減も、それだけで純雇用の増減を決めない。",
+      "statementIds": [
+        "s02",
+        "s04",
+        "s06",
+        "s08",
+        "s09",
+        "s10",
+        "s11",
+        "s19",
+        "s20",
+        "s21",
+        "r04",
+        "r07",
+        "r08",
+        "r10",
+        "r11",
+        "r13",
+        "r19",
+        "s21-horie"
+      ],
+      "classification": "編集上の比較"
+    },
+    {
+      "id": 2,
+      "title": "AIに任せた後、人は何を担うのか？",
+      "short": "任せた後の役割",
+      "description": "問い、委任、評価、目的、文脈、育成という異なる役割を読む。",
+      "agreement": "出力そのものに加え、よい結果を決め、現場へつなぐ役割を重視する発信がある。",
+      "difference": "Huangは仕事の目的、Horowitzらは委任と評価、HaberとGuoは業務文脈、山口は判断の中身を問う。",
+      "caveat": "今の役割が重要であることは、AIによって永久に代替されない証明ではない。",
+      "statementIds": [
+        "s01",
+        "s02",
+        "s03",
+        "s06",
+        "s10",
+        "s11",
+        "s12",
+        "s13",
+        "s14",
+        "s15",
+        "s18",
+        "s19",
+        "s20",
+        "s22",
+        "s23",
+        "s25",
+        "r01",
+        "r04",
+        "r05",
+        "r07",
+        "r08",
+        "r09",
+        "r11",
+        "r12",
+        "r13",
+        "r14",
+        "r15",
+        "r16",
+        "r17",
+        "r19"
+      ],
+      "classification": "編集上の比較"
+    },
+    {
+      "id": 3,
+      "title": "人がつくること、会うことに価値は残るのか？",
+      "short": "つくる・会う価値",
+      "description": "人の来歴、本人との同席、共に味わう経験、AIへの委任を比べる。",
+      "agreement": "生産物の品質だけでなく、体験、関係、選好も価値になるという見方。",
+      "difference": "Cheskyや堀江は現実の体験を重視。落合はAIも含み得る共体験、成田は生身の出演を選択しAIへ委ねる実践を語る。",
+      "caveat": "対面の価値を全員に一律に当てはめない。移動・費用・時間の制約とオンラインの参加機会も残る。",
+      "statementIds": [
+        "s04",
+        "s05",
+        "s07",
+        "s16",
+        "s21",
+        "s25",
+        "r02",
+        "r05",
+        "r09",
+        "r10",
+        "r14",
+        "r18",
+        "s21-horie"
+      ],
+      "classification": "編集上の比較"
+    },
+    {
+      "id": 4,
+      "title": "コミュニティは何のために必要なのか？",
+      "short": "コミュニティの目的",
+      "description": "実践知、顧客への接続、歓迎、所属、市民参加は同じ機能ではない。",
+      "agreement": "人が関係をつくり、支え合い、活動へ参加するための役割が論じられる。",
+      "difference": "Guoは事業の実践知、Hoffmanは迎えケアする営み、Annoは市民参加、Dixonは人とエージェントの取引ネットワークを語る。",
+      "caveat": "コミュニティという名称だけで公平・開放的にはならない。内輪への集中、ケア負担、非参加者の排除を点検する。",
+      "statementIds": [
+        "s05",
+        "s07",
+        "s12",
+        "s13",
+        "s14",
+        "s16",
+        "s17",
+        "s18",
+        "s19",
+        "s23",
+        "s24",
+        "r01",
+        "r02",
+        "r03",
+        "r07",
+        "r08",
+        "r09",
+        "r10",
+        "r12",
+        "r14",
+        "r16",
+        "r17",
+        "r18"
+      ],
+      "classification": "編集上の比較"
+    },
+    {
+      "id": 5,
+      "title": "生活と生きがいをどう守るのか？",
+      "short": "生活と生きがい",
+      "description": "所得、役割、尊厳、自由時間、関係へのアクセスを別々に確かめる。",
+      "agreement": "生活の安定と、自分の活動を選べる余地の両方が論点になる。",
+      "difference": "Khoslaは分配と探索、Amodeiは経済的生存と意味の区別、Marksは現金で補えない尊厳、HorieとNaritaは自由時間を語る。",
+      "caveat": "余暇や関係があっても生活費の代わりにはならない。個人の成功経験を万人の所得戦略へ一般化しない。",
+      "statementIds": [
+        "s02",
+        "s03",
+        "s04",
+        "s08",
+        "s09",
+        "s10",
+        "s11",
+        "s15",
+        "s16",
+        "s20",
+        "s21",
+        "s25",
+        "r01",
+        "r02",
+        "r06",
+        "r10",
+        "r13",
+        "r18",
+        "s21-horie"
+      ],
+      "classification": "編集上の比較"
+    },
+    {
+      "id": 6,
+      "title": "AIの使い方や社会の未来を誰が決めるのか？",
+      "short": "誰が決めるか",
+      "description": "企業の設計、市民の参加、第三者監督、民主的な分配を比べる。",
+      "agreement": "AIの能力だけでなく、人の選択と責任の配置を問う。",
+      "difference": "Suleymanは人の制御、Amodeiは第三者監督、Annoは参加と説明、Cheskyは声の橋渡し、Altmanは少数者だけの決定を望まないとする。",
+      "caveat": "理念・草案・提言は実施済みの制度や安全性の証明ではない。誰に決定権、異議申立て、評価資源があるかが残る。",
+      "statementIds": [
+        "s01",
+        "s03",
+        "s05",
+        "s08",
+        "s13",
+        "s15",
+        "s17",
+        "s22",
+        "r01",
+        "r03",
+        "r05",
+        "r06",
+        "r10",
+        "r11",
+        "r12",
+        "r13",
+        "r19"
+      ],
+      "classification": "編集上の比較"
+    }
+  ],
+  "quadrants": [
+    {
+      "id": 1,
+      "title": "判断・能力の拡張",
+      "subtitle": "判断と能力を高める",
+      "description": "個人の経験、問い、指示、判断を仕事・事業の成果へつなぐ。",
+      "x": "仕事・事業の成果",
+      "y": "個人の能力・選択",
+      "statementIds": [
+        "r15",
+        "r17",
+        "r07",
+        "s06",
+        "s22"
+      ]
+    },
+    {
+      "id": 2,
+      "title": "共同実行・変化への支援",
+      "subtitle": "仲間と実行し変化を支える",
+      "description": "実践知、信頼、育成や制度で、共同実行と移行を支える。",
+      "x": "仕事・事業の成果",
+      "y": "人との関係・社会の仕組み",
+      "statementIds": [
+        "r12",
+        "r13",
+        "r07",
+        "r09",
+        "r10",
+        "s11"
+      ]
+    },
+    {
+      "id": 3,
+      "title": "主体性・生きる意味",
+      "subtitle": "自分の人生を選び意味を持つ",
+      "description": "成果だけでなく、自律性、選択、自由時間、意味を考える。",
+      "x": "仕事だけでは測れない価値",
+      "y": "個人の能力・選択",
+      "statementIds": [
+        "r01",
+        "r05",
+        "s11",
+        "s25",
+        "s04"
+      ]
+    },
+    {
+      "id": 4,
+      "title": "所属・ケア・社会参加",
+      "subtitle": "居場所・つながり・参加機会",
+      "description": "迎える、ケアする、共に味わう、社会へ参加する営みを考える。",
+      "x": "仕事だけでは測れない価値",
+      "y": "人との関係・社会の仕組み",
+      "statementIds": [
+        "r02",
+        "r14",
+        "r10",
+        "r01",
+        "r13"
+      ]
+    }
+  ],
+  "crossQuadrant": [
+    {
+      "statementId": "r10",
+      "quadrants": [
+        2,
+        4
+      ],
+      "label": "分配と人間中心の小規模事業"
+    },
+    {
+      "statementId": "s11",
+      "quadrants": [
+        2,
+        3
+      ],
+      "label": "所得だけではない仕事の意味"
+    },
+    {
+      "statementId": "r07",
+      "quadrants": [
+        1,
+        2
+      ],
+      "label": "委任・評価と人の育成"
+    },
+    {
+      "statementId": "r01",
+      "quadrants": [
+        3,
+        4
+      ],
+      "label": "主体性と研究共同体への配慮"
+    }
+  ]
+}

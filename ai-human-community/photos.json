@@ -1,0 +1,439 @@
+{
+  "reid-hoffman": {
+    "file": "photos/reid-hoffman.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:2022_Reid_Hoffman_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/8/8e/2022_Reid_Hoffman_%28cropped%29.jpg",
+    "photographer": "Lisa Ferdinando / U.S. Secretary of Defense",
+    "description": "Defense Innovation Board member Reid Hoffman speaks at the board’s fall meeting, with chair Michael R. Bloomberg and member Susan Gordon, the Pentagon, Arlington, VA, Oct. 17, 2022. (DoD photo by Lisa Ferdinando)",
+    "changes": "リサイズ・WebP変換。Commons掲載の切り出し写真を使用。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "width": 960,
+    "height": 1277,
+    "license": "CC BY 2.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "bytes": 198160,
+    "position": "50% 28%",
+    "originalDate": "2022-10-17"
+  },
+  "sam-altman": {
+    "file": "photos/sam-altman.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Sam_Altman_November_2022.jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/32/Sam_Altman_November_2022.jpg",
+    "photographer": "Village Global",
+    "description": "English: The Grove 2022",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      3327,
+      5000
+    ],
+    "width": 1198,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 152622
+  },
+  "dario-amodei": {
+    "file": "photos/dario-amodei.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Dario_Amodei_at_TechCrunch_Disrupt_2023_01_(cropped_2).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/1/17/Dario_Amodei_at_TechCrunch_Disrupt_2023_01_%28cropped_2%29.jpg",
+    "photographer": "Kimberly White / Getty Images for TechCrunch",
+    "description": "English: Dario Amodei at TechCrunch Disrupt 2023",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      1884,
+      2436
+    ],
+    "width": 1392,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 180830
+  },
+  "mustafa-suleyman": {
+    "file": "photos/mustafa-suleyman.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Mustafa_Suleyman_photo_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/2/20/Mustafa_Suleyman_photo_%28cropped%29.jpg",
+    "photographer": "Christopher Wilson",
+    "description": "English: Photo of Mustafa Suleyman",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      1338,
+      1672
+    ],
+    "width": 1338,
+    "height": 1672,
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "license": "CC BY-SA 4.0",
+    "position": "50% 28%",
+    "bytes": 173844
+  },
+  "jensen-huang": {
+    "file": "photos/jensen-huang.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:JensenHuangSC18.jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/0/05/JensenHuangSC18.jpg",
+    "photographer": "Raysonho @ Open Grid Scheduler / Scalable Grid Engine",
+    "description": "English: Jensen Huang at SC18",
+    "changes": "人物を中心にトリミング、リサイズ・WebP変換。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      4928,
+      3264
+    ],
+    "width": 1400,
+    "height": 1797,
+    "licenseURL": "https://creativecommons.org/publicdomain/zero/1.0/",
+    "license": "CC0 1.0",
+    "position": "50% 28%",
+    "bytes": 177018
+  },
+  "brian-chesky": {
+    "file": "photos/brian-chesky.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Brian_Chesky_2025.jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/9/9a/Brian_Chesky_2025.jpg",
+    "photographer": "Celeste Sloman",
+    "description": "English: Portrait of Brian Chesky, 2025",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      2989,
+      4000
+    ],
+    "width": 1345,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "license": "CC BY-SA 4.0",
+    "position": "50% 28%",
+    "bytes": 77454
+  },
+  "vinod-khosla": {
+    "file": "photos/vinod-khosla.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:TechCrunch_Disrupt2024_Vinod_Khosla.jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/6b/TechCrunch_Disrupt2024_Vinod_Khosla.jpg",
+    "photographer": "TechCrunch",
+    "description": "English: Evoto",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      1365,
+      2048
+    ],
+    "width": 1200,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 72976
+  },
+  "marc-andreessen": {
+    "file": "photos/marc-andreessen.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Marc_Andreessen-9_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/5/57/Marc_Andreessen-9_%28cropped%29.jpg",
+    "photographer": "JD Lasica",
+    "description": "English: Marc Andreessen at Pando Monthly with interviewer Sarah Lacy, at Dogpatch Studios in SF on Oct. 3, 2013.",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      842,
+      1073
+    ],
+    "width": 842,
+    "height": 1073,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 58412
+  },
+  "howard-marks": {
+    "file": "photos/howard-marks.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Howard_Marks_2.17.12_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Howard_Marks_2.17.12_%28cropped%29.jpg",
+    "photographer": "kellywritershouse",
+    "description": "English: February 17, 2012 KWH Calendar: writing.upenn.edu/wh/calendar/0212.php#17",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      644,
+      921
+    ],
+    "width": 644,
+    "height": 921,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 65022
+  },
+  "sarah-guo": {
+    "file": "photos/sarah-guo.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Connie_Loizos,_Sarah_Guo,_Elad_Gil_onstage_at_2024_TechCrunch_StrictlyVC_event_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/4/4d/Connie_Loizos%2C_Sarah_Guo%2C_Elad_Gil_onstage_at_2024_TechCrunch_StrictlyVC_event_%28cropped%29.jpg",
+    "photographer": "Nicole Nico Henderson / TechCrunch",
+    "description": "English: Connie Loizos interviewing Sarah Guo, Elad Gil onstage at 2024 TechCrunch StrictlyVC event, all participants seated, with audience in foreground",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      789,
+      901
+    ],
+    "width": 789,
+    "height": 901,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 149856
+  },
+  "roelof-botha": {
+    "file": "photos/roelof-botha.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Roelof_Botha_TechCrunch_Disrupt_2025_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/62/Roelof_Botha_TechCrunch_Disrupt_2025_%28cropped%29.jpg",
+    "photographer": "Kimberly White / Getty Images for TechCrunch",
+    "description": "English: SAN FRANCISCO, CALIFORNIA - OCTOBER 27: Roelof Botha speaks onstage during day one of TechCrunch Disrupt 2025 at Moscone Center on October 27, 2025 in San Francisco, California. (Photo by Kimberly White/Getty Images for TechCrunch)",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      1713,
+      2285
+    ],
+    "width": 1349,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by/4.0/",
+    "license": "CC BY 4.0",
+    "position": "50% 28%",
+    "bytes": 159552
+  },
+  "jack-dorsey": {
+    "file": "photos/jack-dorsey.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Jack_Dorsey_(39576241314).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/39/Jack_Dorsey_%2839576241314%29.jpg",
+    "photographer": "Steve Jurvetson",
+    "description": "Jack Dorsey at the Goldman Sachs Tech Conference 2018",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      2416,
+      2516
+    ],
+    "width": 1400,
+    "height": 1458,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 95312
+  },
+  "ben-horowitz": {
+    "file": "photos/ben-horowitz.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:TechCrunch_Disrupt_San_Francisco_2018_-_day_2_(42713740520)_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/a/a6/TechCrunch_Disrupt_San_Francisco_2018_-_day_2_%2842713740520%29_%28cropped%29.jpg",
+    "photographer": "Steve Jennings / Getty Images for TechCrunch",
+    "description": "SAN FRANCISCO, CA - SEPTEMBER 06: Andreessen Horowitz Co-founder and General Partner Ben Horowitz speaks onstage during Day 2 of TechCrunch Disrupt SF 2018 at Moscone Center on September 6, 2018 in San Francisco, California. (Photo by Steve Jennings/Getty Images for TechCrunch)",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      2051,
+      2203
+    ],
+    "width": 1400,
+    "height": 1504,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 287216
+  },
+  "chris-dixon": {
+    "file": "photos/chris-dixon.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Chris_Dixon_TechCrunch_Disrupt_2022_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/4/44/Chris_Dixon_TechCrunch_Disrupt_2022_%28cropped%29.jpg",
+    "photographer": "Kimberly White / Getty Images for TechCrunch",
+    "description": "English: SAN FRANCISCO, CALIFORNIA - OCTOBER 18: Founder & Managing Partner of a16z crypto Chris Dixon speaks onstage during TechCrunch Disrupt 2022 on October 18, 2022 in San Francisco, California. (Photo by Kimberly White/Getty Images for TechCrunch)",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      1577,
+      1988
+    ],
+    "width": 1400,
+    "height": 1765,
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "license": "CC BY 2.0",
+    "position": "50% 28%",
+    "bytes": 139856
+  },
+  "mark-zuckerberg": {
+    "file": "photos/mark-zuckerberg.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Mark_Zuckerberg_(2025)_(cropped).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/d0/Mark_Zuckerberg_%282025%29_%28cropped%29.jpg",
+    "photographer": "Jeff Sainlar; Social Producer and Editor, Meta",
+    "description": "English: Mark Zuckerberg, co-founder, chairman, CEO, Meta Platforms",
+    "changes": "リサイズ・WebP変換。写真のライセンスは表示の利用条件に従います。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "originalSize": [
+      3180,
+      4247
+    ],
+    "width": 1348,
+    "height": 1800,
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "license": "CC BY-SA 4.0",
+    "position": "50% 28%",
+    "bytes": 170232
+  },
+  "yoichi-ochiai": {
+    "name": "落合陽一",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Yoichi_Ochiai_(Craft_x_Tech_Tohoku_Project_2024)_(cropped).jpg",
+    "photographer": "Craft x Tech",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "originalDate": "2024",
+    "originalDimensions": [
+      1000,
+      1000
+    ],
+    "file": "photos/yoichi-ochiai.webp",
+    "width": 1000,
+    "height": 1000,
+    "bytes": 51818,
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/8/84/Yoichi_Ochiai_%28Craft_x_Tech_Tohoku_Project_2024%29_%28cropped%29.jpg",
+    "changes": "Commonsで切り出し済みの肖像。リサイズ・WebP変換。写真自体はCC BY-SA 4.0。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "position": "50% 28%",
+    "verifiedAt": "2026-11-02"
+  },
+  "takahiro-anno": {
+    "name": "安野貴博",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Takahiro_Anno_2024-7-6(1)_(cropped).jpg",
+    "photographer": "Noukei314",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "originalDate": "2024-07-06",
+    "originalDimensions": [
+      1649,
+      2199
+    ],
+    "file": "photos/takahiro-anno.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 160838,
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/9/96/Takahiro_Anno_2024-7-6%281%29_%28cropped%29.jpg",
+    "changes": "Commonsで切り出し済みの肖像。リサイズ・WebP変換。写真自体はCC BY-SA 4.0。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "position": "50% 28%",
+    "verifiedAt": "2026-11-02"
+  },
+  "akihiro-nishino": {
+    "name": "西野亮廣",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Akihiro_Nishino.png",
+    "photographer": "Joichi Ito",
+    "license": "CC BY 3.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/3.0/",
+    "originalSource": "https://www.youtube.com/watch?v=N4rJC-IxWqE",
+    "originalDate": "2022-09-10",
+    "originalDimensions": [
+      759,
+      948
+    ],
+    "file": "photos/akihiro-nishino.webp",
+    "width": 759,
+    "height": 948,
+    "bytes": 26738,
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/0/0d/Akihiro_Nishino.png",
+    "changes": "CCライセンス動画からの切り出し。WebP変換。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "position": "50% 28%",
+    "verifiedAt": "2026-11-02"
+  },
+  "takafumi-horie": {
+    "name": "堀江貴文",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Takafumi_Horie_58th_Kozukata_Sho.jpg",
+    "photographer": "印度孔雀",
+    "license": "CC BY-SA 4.0",
+    "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+    "originalDate": "2026-09-01",
+    "originalDimensions": [
+      3456,
+      4608
+    ],
+    "file": "photos/takafumi-horie.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 78602,
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/6/66/Takafumi_Horie_58th_Kozukata_Sho.jpg",
+    "changes": "盛岡競馬場での本人写真。リサイズ・WebP変換。写真自体はCC BY-SA 4.0。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "position": "50% 28%",
+    "verifiedAt": "2026-11-02"
+  },
+  "yusuke-narita": {
+    "name": "成田悠輔",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Y%C5%ABsuke_Narita.jpg",
+    "photographer": "広域関東JOBフィールド／経済産業省関東経済産業局",
+    "license": "政府標準利用規約2.0（CC BY 4.0互換）",
+    "licenseURL": "https://www.kanto.meti.go.jp/annai/riyoukiyaku/riyoukiyaku.html",
+    "originalSource": "https://kanto-shigoto.meti.go.jp/wp-content/uploads/2022/09/7164c6a5f17257a610b8af1d30d4e35c.pdf",
+    "originalDimensions": [
+      4827,
+      6436
+    ],
+    "file": "photos/yusuke-narita.webp",
+    "width": 1200,
+    "height": 1600,
+    "bytes": 41040,
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/d/dd/Y%C5%ABsuke_Narita.jpg",
+    "changes": "Commonsで本人・利用条件を確認。リサイズ・WebP変換。撮影日不明。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "position": "50% 28%",
+    "verifiedAt": "2026-11-02"
+  },
+  "katsuaki-sato": {
+    "name": "佐藤航陽",
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+  },
+  "shu-yamaguchi": {
+    "name": "山口周",
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+  },
+  "kazuhiro-obara": {
+    "name": "尾原和啓",
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+  },
+  "david-haber": {
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+  },
+  "michael-mcguiness": {
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+  },
+  "gagan-biyani": {
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+  },
+  "erik-torenberg": {
+    "file": "photos/erik-torenberg.webp",
+    "sourcePage": "https://commons.wikimedia.org/wiki/File:Anne_Dwane_%26_Erik_Torenberg_(47970186796).jpg",
+    "originalURL": "https://upload.wikimedia.org/wikipedia/commons/3/34/Anne_Dwane_%26_Erik_Torenberg_%2847970186796%29.jpg",
+    "photographer": "Christopher Michel",
+    "description": "English: Village Global",
+    "changes": "リサイズ・WebP変換。本人を中心にトリミング。 サイト上ではモノクロ表示し、表示枠に合わせてトリミング。",
+    "verifiedAt": "2026-11-02",
+    "width": 650,
+    "height": 853,
+    "license": "CC BY 2.0",
+    "licenseURL": "https://creativecommons.org/licenses/by/2.0/",
+    "bytes": 65006,
+    "position": "50% 28%",
+    "originalDate": "2019-05-30"
+  },
+  "elena-burger": {
+    "file": null,
+    "status": "unavailable",
+    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+  }
+}
