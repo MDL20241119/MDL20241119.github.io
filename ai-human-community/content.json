@@ -4,13 +4,13 @@
     "subtitle": "人は何を担い、誰と生きるのか。",
     "updatedAt": "2026-11-02",
     "corePeopleCount": 22,
-    "mainPeopleCount": 24,
+    "mainPeopleCount": 31,
     "supportingPeopleCount": 4,
-    "peopleCount": 28,
-    "statementCount": 45,
+    "peopleCount": 35,
+    "statementCount": 54,
     "recentStatementCount": 19,
-    "baseStatementCount": 26,
-    "scope": "主要21名と共同執筆者1名の基礎資料、2026年夏秋の19件、共著・共同対談の補助プロフィール4名を統合。1つの対談原典を話者別に分け、44原典・45発言を掲載。",
+    "baseStatementCount": 35,
+    "scope": "既存の発言と今回の深掘りを統合。35名・54発言・53原典。過去の基礎的な議論と最近の発言、初出と再掲載を区別。",
     "summaryNote": "キーワードと本文は編集部の日本語要約です。本人の逐語引用ではありません。",
     "evidenceNote": "本人の見解・予測・提案と、研究による実証結果は異なります。掲載発言を、社会全体の合意や将来予測の正しさの証明として扱いません。",
     "selectionNote": "起業・投資・知識労働の立場に偏る選定です。ケア労働者、地域の非参加者、障害者、低所得者などの経験全体を代表しません。",
@@ -358,7 +358,8 @@
       "supporting": false,
       "statementIds": [
         "r19",
-        "s22"
+        "s22",
+        "d05"
       ]
     },
     {
@@ -496,6 +497,119 @@
       "supporting": true,
       "statementIds": [
         "r11"
+      ]
+    },
+    {
+      "id": "scott-belsky",
+      "nameJa": "スコット・ベルスキー",
+      "nameEn": "Scott Belsky",
+      "category": "海外の起業家・AI経営者",
+      "company": "Behance / Implications",
+      "bio": "Behance共同創業者、投資家、著述家。創造的な仕事と技術の変化を論じる。",
+      "bioSources": [
+        "https://www.scottbelsky.com/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d01"
+      ]
+    },
+    {
+      "id": "julie-zhuo",
+      "nameJa": "ジュリー・ジュオ",
+      "nameEn": "Julie Zhuo",
+      "category": "海外の起業家・AI経営者",
+      "company": "Sundial / The Looking Glass",
+      "bio": "Sundial創業者。『The Making of a Manager』著者。デザインとマネジメント、AIを論じる。",
+      "bioSources": [
+        "https://www.juliezhuo.com/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d02"
+      ]
+    },
+    {
+      "id": "dominique-chen",
+      "nameJa": "ドミニク・チェン",
+      "nameEn": "Dominique Chen",
+      "category": "日本の発信者",
+      "company": "情報学 / Nukabot",
+      "bio": "情報学研究者。微生物と人の関係を探るNukabotなど、対話を生む技術を研究する。",
+      "bioSources": [
+        "https://www.axismag.jp/posts/2023/03/525714.html"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d03"
+      ]
+    },
+    {
+      "id": "tsunehiro-uno",
+      "nameJa": "宇野常寛",
+      "nameEn": "Tsunehiro Uno",
+      "category": "日本の発信者",
+      "company": "PLANETS",
+      "bio": "批評家、PLANETS編集長。情報社会と文化、個人の生き方を論じる。",
+      "bioSources": [
+        "https://note.com/wakusei2nduno/n/nb2b2004929a7"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d04"
+      ]
+    },
+    {
+      "id": "alex-karp",
+      "nameJa": "アレックス・カープ",
+      "nameEn": "Alex Karp",
+      "category": "海外の起業家・AI経営者",
+      "company": "Palantir",
+      "bio": "Palantir共同創業者・CEO（掲載書簡時点）。技術、国家、安全保障の関係を論じる。",
+      "bioSources": [
+        "https://www.palantir.com/q4-2025-letter/en/"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d06",
+        "d07"
+      ]
+    },
+    {
+      "id": "peter-thiel",
+      "nameJa": "ピーター・ティール",
+      "nameEn": "Peter Thiel",
+      "category": "海外の起業家・AI経営者",
+      "company": "PayPal / Palantir / Founders Fund",
+      "bio": "PayPal、Palantir、Founders Fundの共同創業者。起業・投資と技術進歩について発信する。",
+      "bioSources": [
+        "https://www.harvardsalient.com/p/interview-with-peter-thiel"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d08"
+      ]
+    },
+    {
+      "id": "elon-musk",
+      "nameJa": "イーロン・マスク",
+      "nameEn": "Elon Musk",
+      "category": "海外の起業家・AI経営者",
+      "company": "Tesla / SpaceX",
+      "bio": "Tesla、SpaceXなどの事業を率いる起業家。AI、ロボット、エネルギーと宇宙開発を論じる。",
+      "bioSources": [
+        "https://www.weforum.org/stories/artificial-intelligence/elon-musk-technology-abundant-future-davos-2026"
+      ],
+      "bioVerifiedAt": "2026-11-02",
+      "supporting": false,
+      "statementIds": [
+        "d09"
       ]
     }
   ],
@@ -1439,9 +1553,9 @@
       "title": "共同体を開く人の仕事",
       "keyword": "迎える、仕事",
       "summary": "人の価値を知的能力だけに置かず、作る・遊ぶ・祝う・贈る・ケアする営みから考える。余暇が増えるだけでは共同体は生まれず、招き、場を用意し、新しい人を迎える役割が必要だと述べる。",
-      "detail": "AIで専門性が揺らぐ人に再訓練だけでなく喪失へ向き合う余地も必要とする。能力拡張の一般論から、歓迎、ケアの負担、帰属へ論点が具体化する。",
+      "detail": "AIの方が上手でも、友人とゲームをする意味は失われない。食事や祝い、贈り物など、共に経験する営みを重視する。共同体を開くには、誘い、場を整え、初めての人を迎える実践が必要だと説く。",
       "type": "哲学的・規範的な見解",
-      "caveat": "哲学的・規範的エッセイであり、AIによる共同体改善の実証ではない。場を開く人の所得と時間を誰が支えるかは別の課題。",
+      "caveat": "人の価値についての規範的な論考。歓迎やケアをAIが技術的に代替できないという証明ではない。参加には時間・生活基盤・アクセスも関わる。",
       "topics": [
         3,
         4,
@@ -1473,9 +1587,9 @@
       "title": "実際の人の声を聞く",
       "keyword": "誰の声を、聞く",
       "summary": "AIが自分たちのためでなく一方的に降りかかるものと感じられているという見方を示す。経営者は教師や工場労働者など、実際の人の声を聞くべきだとする。",
-      "detail": "技術企業だけの自主規律と、技術理解が十分でない政治だけの規制の双方に限界を見て、企業・政治・一般の人を結ぶ橋渡しを提唱する。",
+      "detail": "技術企業だけの自主規律と、技術理解が十分でない政治だけの規制の双方に限界を見て、企業・政治・一般の人を結ぶ橋渡しを提唱する。 また、デバイスを通じて人をデバイスの外へ連れ出し、実際の関係や信頼につなぐ方向を語る。",
       "type": "本人の社会観・統治への提案",
-      "caveat": "橋渡し役を自認しても代表性、決定権、説明責任が保証されるわけではない。編集済みの直接インタビューである。",
+      "caveat": "橋渡し役を自認しても代表性、決定権、説明責任が保証されるわけではない。編集済みの直接インタビューである。 孤独が減ったという効果検証ではない。",
       "topics": [
         4,
         6
@@ -1895,7 +2009,7 @@
       "summary": "機械と共につくると、人が出力を選び、味わう営みへ重心が移るという文明観を語る。自分で作る楽しさは残るが、効率だけなら人が生産の制約にもなり得ると捉える。",
       "detail": "鳥取県立美術館の公開対談。土地を歩き、観察を記録する現場の活動も紹介し、5月の共同的に味わう議論を制作や観察へ結びつける。",
       "type": "公開対談・芸術哲学的な見通し",
-      "caveat": "芸術・哲学的な見通しであり雇用消滅や全員への対面の必要性の証明ではない。入力PDFが記すAI文字起こしとの明記は現在の無料公開部分で再確認できなかった。",
+      "caveat": "見出しは本人の逐語引用ではなく編集上の要約。芸術・哲学的な見通しで、雇用消滅や全員に対面交流が必要であることの証明ではない。",
       "topics": [
         2,
         3,
@@ -2090,6 +2204,303 @@
       "summaryKind": "編集部による日本語要約",
       "accessScope": "公開確認部分のみ",
       "dateKind": "公開日"
+    },
+    {
+      "id": "d01",
+      "personIds": [
+        "scott-belsky"
+      ],
+      "authorsLabel": "スコット・ベルスキー",
+      "coauthors": [],
+      "date": "2026-01-19",
+      "datePrecision": "day",
+      "dateLabel": "2026.01.19",
+      "originalDate": "2026-01-19",
+      "publishedDate": "2026-01-19",
+      "title": "つくれる時代に、何を選ぶか",
+      "keyword": "量より、選択",
+      "summary": "AIが制作の能力を広く行き渡らせるほど、何を選び、何を良いと判断するかが重要になると論じる。",
+      "detail": "味覚や審美眼にあたるtasteを、経験や入力、選別の仕方から考える。生産量だけではなく、どのような体験を望むかに目を向ける。",
+      "type": "本人の見解・提案",
+      "caveat": "人のtasteが永続的にAIを上回るという実証ではない。優位性についての本人の見通し。",
+      "topics": [
+        2,
+        3
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "D01"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d02",
+      "personIds": [
+        "julie-zhuo"
+      ],
+      "authorsLabel": "ジュリー・ジュオ",
+      "coauthors": [],
+      "date": "2025-06-24",
+      "datePrecision": "day",
+      "dateLabel": "2025.06.24",
+      "originalDate": "2025-06-24",
+      "publishedDate": "2025-06-24",
+      "title": "AIのtasteが人を上回ったら",
+      "keyword": "選ぶ、その先へ",
+      "summary": "tasteだけを人間の安全地帯と考えず、何を望み、自ら動くかというagencyも問い直す。",
+      "detail": "能力・taste・agencyを分けて考える。NotionのIvan Zhaoとの対話をもとにした本人の論考で、すべてがZhaoの直接発言ではない。",
+      "type": "本人の見解・提案",
+      "caveat": "AIにtasteは持てないという立場ではない。agencyを人だけの能力と証明した研究でもない。",
+      "topics": [
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "D02"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d03",
+      "personIds": [
+        "dominique-chen"
+      ],
+      "authorsLabel": "ドミニク・チェン",
+      "coauthors": [],
+      "date": "2023-03-06",
+      "datePrecision": "day",
+      "dateLabel": "2023.03.06",
+      "originalDate": "2023-03-06",
+      "publishedDate": "2023-03-06",
+      "title": "AIとの会話から、生き物との関係へ",
+      "keyword": "画面の、外へ",
+      "summary": "Nukabotの狙いはAIとの会話自体ではなく、ぬか床の微生物や発酵への関心を育てることだと説明する。",
+      "detail": "AIと話すだけで発酵に関心が向かなければ、意図したデザインとは違う。技術を、身近な変化に気づき、味わうための媒介として捉える。",
+      "type": "本人の見解・提案",
+      "caveat": "デザインの意図を語るインタビュー。効果を一般化する比較実験ではない。2023年の基礎的な事例。",
+      "topics": [
+        3,
+        4
+      ],
+      "quadrants": [
+        3,
+        4
+      ],
+      "sourceIds": [
+        "D03"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d04",
+      "personIds": [
+        "tsunehiro-uno"
+      ],
+      "authorsLabel": "宇野常寛",
+      "coauthors": [],
+      "date": "2025-01-30",
+      "datePrecision": "day",
+      "dateLabel": "2025.01.30",
+      "originalDate": "2025-01-30",
+      "publishedDate": "2025-01-30",
+      "title": "評価よりも、世界に触れる実感",
+      "keyword": "つくる、手応え",
+      "summary": "市場での価値や共同体からの承認だけでなく、つくることを通じて世界に触れる喜びに目を向ける。",
+      "detail": "人とつながることだけを唯一の答えにせず、一人で何かをつくる経験にも価値を見いだす視点。",
+      "type": "本人の見解・提案",
+      "caveat": "公開部分に基づく要約。有料部分の内容は扱わない。共同体の否定や、AIに関する実証研究ではない。",
+      "topics": [
+        3,
+        5
+      ],
+      "quadrants": [
+        3
+      ],
+      "sourceIds": [
+        "D04"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d05",
+      "personIds": [
+        "shu-yamaguchi"
+      ],
+      "authorsLabel": "山口周",
+      "coauthors": [],
+      "date": "2018-07-23",
+      "datePrecision": "day",
+      "dateLabel": "2018.07.23",
+      "originalDate": "2018-07-23",
+      "publishedDate": "2018-07-23",
+      "title": "論理だけでなく、美意識を判断へ",
+      "keyword": "正解より、美意識",
+      "summary": "経営の判断に、分析だけでなくアート・サイエンス・クラフトの釣り合いが必要だと語る。",
+      "detail": "AI時代の最新予測ではなく、何を良いとするかを自分たちで考えるための基礎的な議論として読む。",
+      "type": "本人の見解・提案",
+      "caveat": "2018年の対談。美意識が収益やAIに対する優位性を必ず生むという証明ではない。",
+      "topics": [
+        2,
+        6
+      ],
+      "quadrants": [
+        1,
+        3
+      ],
+      "sourceIds": [
+        "D05"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d06",
+      "personIds": [
+        "alex-karp"
+      ],
+      "authorsLabel": "アレックス・カープ",
+      "coauthors": [],
+      "date": "2026-02-02",
+      "datePrecision": "day",
+      "dateLabel": "2026.02.02",
+      "originalDate": "2026-02-02",
+      "publishedDate": "2026-02-02",
+      "title": "共同体は何を共有するのか",
+      "keyword": "何へ、属するか",
+      "summary": "国家を単なる経済の場と捉えず、共有する価値や責任が必要だと論じる。包摂するときにも、何に参加するのかを問う。",
+      "detail": "共同体の結束を重視する一方、社内の異論や相手の人間性への認識にも言及する。ホフマンの迎え入れの実践とは、国家観を含む点で異なる。",
+      "type": "本人の見解・提案",
+      "caveat": "企業経営者の政治的・規範的な主張。社会全体の合意でも、共同体の効果の検証でもない。",
+      "topics": [
+        4,
+        6
+      ],
+      "quadrants": [
+        2,
+        4
+      ],
+      "sourceIds": [
+        "D06"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d07",
+      "personIds": [
+        "alex-karp"
+      ],
+      "authorsLabel": "アレックス・カープ・ニコラス・W・ザミスカ",
+      "coauthors": [
+        "ニコラス・W・ザミスカ"
+      ],
+      "date": "2026-04-20",
+      "datePrecision": "day",
+      "dateLabel": "2026.04.20 抜粋公開／2025年刊",
+      "originalDate": null,
+      "publishedDate": "2026-04-20",
+      "title": "技術を国家と安全保障の目的へ",
+      "keyword": "技術と、責任",
+      "summary": "技術者や企業には国家の防衛と公共的な目的に関わる責任があると主張する。",
+      "detail": "ソフトウェアやAIを、国家の力と抑止にも結びつける立場。日常の交流やケアを中心にした共同体論とは区別して読む。",
+      "type": "本人の見解・提案",
+      "caveat": "2025年刊の共著から2026年4月に公開された抜粋。4月の新規発言ではない。安全保障についての規範的主張・予測。",
+      "topics": [
+        6
+      ],
+      "quadrants": [
+        2
+      ],
+      "sourceIds": [
+        "D07"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約",
+      "republication": true
+    },
+    {
+      "id": "d08",
+      "personIds": [
+        "peter-thiel"
+      ],
+      "authorsLabel": "ピーター・ティール",
+      "coauthors": [],
+      "date": "2026-03-25",
+      "datePrecision": "day",
+      "dateLabel": "2026.03.25",
+      "originalDate": "2026-03-25",
+      "publishedDate": "2026-03-25",
+      "title": "人間的な豊かさにも、物質的な進歩を",
+      "keyword": "成長を、止めない",
+      "summary": "技術や経済の進歩と、人間関係・共同体の健全さを対立させる見方に異議を唱える。",
+      "detail": "科学の官僚化や同調圧力を問題視し、独自の研究と物質的な前進を重視する。共同体を重視する議論とも、成長をどう扱うかで違いがある。",
+      "type": "本人の見解・提案",
+      "caveat": "成長と共同体の関係についての本人の解釈。相関や因果が証明されたという意味ではない。",
+      "topics": [
+        5,
+        6
+      ],
+      "quadrants": [
+        1,
+        2
+      ],
+      "sourceIds": [
+        "D08"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
+    },
+    {
+      "id": "d09",
+      "personIds": [
+        "elon-musk"
+      ],
+      "authorsLabel": "イーロン・マスク",
+      "coauthors": [],
+      "date": "2026-01-24",
+      "datePrecision": "day",
+      "dateLabel": "2026.01.22 対談／01.24記事公開",
+      "originalDate": "2026-01-22",
+      "publishedDate": "2026-01-24",
+      "title": "AIとロボットで豊かさを広げる",
+      "keyword": "豊かさ、その先",
+      "summary": "AI、ロボット、エネルギーによって財やサービスを豊かにできると見通す。",
+      "detail": "2026年1月22日のDavos対談。働く必要が薄れる社会の目的については司会のLarry Finkが問い、Muskは豊かさと希少性の関係を論じた。",
+      "type": "本人の見解・提案",
+      "caveat": "主催者の1月24日公開記事に基づく要約。豊かさの分配や、生きがいが自動的に実現することを示す実証ではない。",
+      "topics": [
+        1,
+        5
+      ],
+      "quadrants": [
+        2,
+        3
+      ],
+      "sourceIds": [
+        "D09"
+      ],
+      "recent": false,
+      "attention": "",
+      "summaryKind": "編集部による日本語要約"
     }
   ],
   "sources": [
@@ -2488,6 +2899,78 @@
       "kind": "本人公開文（確認部分）",
       "url": "https://note.com/shu_yamaguchi/n/n02c92919d012",
       "pdfPage": 22
+    },
+    {
+      "id": "D01",
+      "url": "https://www.implications.com/p/what-are-we-gonna-do-now-winning",
+      "title": "つくれる時代に、何を選ぶか",
+      "publisher": "Scott Belsky / Implications",
+      "date": "2026-01-19",
+      "kind": "本人論考"
+    },
+    {
+      "id": "D02",
+      "url": "https://lg.substack.com/p/when-ai-has-better-taste-than-you",
+      "title": "AIのtasteが人を上回ったら",
+      "publisher": "Julie Zhuo / The Looking Glass",
+      "date": "2025-06-24",
+      "kind": "本人論考"
+    },
+    {
+      "id": "D03",
+      "url": "https://www.axismag.jp/posts/2023/03/525714.html",
+      "title": "AIとの会話から、生き物との関係へ",
+      "publisher": "AXIS",
+      "date": "2023-03-06",
+      "kind": "本人インタビュー"
+    },
+    {
+      "id": "D04",
+      "url": "https://note.com/wakusei2nduno/n/nb2b2004929a7",
+      "title": "評価よりも、世界に触れる実感",
+      "publisher": "宇野常寛 / note",
+      "date": "2025-01-30",
+      "kind": "本人論考・無料公開部分"
+    },
+    {
+      "id": "D05",
+      "url": "https://www.kayac.com/news/2018/07/yanasawa_blog_vol43",
+      "title": "論理だけでなく、美意識を判断へ",
+      "publisher": "面白法人カヤック",
+      "date": "2018-07-23",
+      "kind": "本人対談"
+    },
+    {
+      "id": "D06",
+      "url": "https://www.palantir.com/q4-2025-letter/en/",
+      "title": "共同体は何を共有するのか",
+      "publisher": "Palantir / Alex Karp",
+      "date": "2026-02-02",
+      "kind": "CEO書簡"
+    },
+    {
+      "id": "D07",
+      "url": "https://therepublicjournal.com/essays/the-technological-republic-excerpts/",
+      "title": "技術を国家と安全保障の目的へ",
+      "publisher": "The Republic / Palantir Foundation",
+      "date": "2026-04-20",
+      "kind": "共著書からの抜粋"
+    },
+    {
+      "id": "D08",
+      "url": "https://www.harvardsalient.com/p/interview-with-peter-thiel",
+      "title": "人間的な豊かさにも、物質的な進歩を",
+      "publisher": "The Harvard Salient",
+      "date": "2026-03-25",
+      "kind": "本人インタビュー"
+    },
+    {
+      "id": "D09",
+      "url": "https://www.weforum.org/stories/artificial-intelligence/elon-musk-technology-abundant-future-davos-2026",
+      "title": "AIとロボットで豊かさを広げる",
+      "publisher": "World Economic Forum",
+      "date": "2026-01-24",
+      "kind": "主催者による本人対談の紹介"
     }
   ],
   "topics": [
@@ -2517,7 +3000,8 @@
         "r11",
         "r13",
         "r19",
-        "s21-horie"
+        "s21-horie",
+        "d09"
       ],
       "classification": "編集上の比較"
     },
@@ -2559,7 +3043,10 @@
         "r15",
         "r16",
         "r17",
-        "r19"
+        "r19",
+        "d01",
+        "d02",
+        "d05"
       ],
       "classification": "編集上の比較"
     },
@@ -2584,7 +3071,10 @@
         "r10",
         "r14",
         "r18",
-        "s21-horie"
+        "s21-horie",
+        "d01",
+        "d03",
+        "d04"
       ],
       "classification": "編集上の比較"
     },
@@ -2619,7 +3109,9 @@
         "r14",
         "r16",
         "r17",
-        "r18"
+        "r18",
+        "d03",
+        "d06"
       ],
       "classification": "編集上の比較"
     },
@@ -2650,7 +3142,10 @@
         "r10",
         "r13",
         "r18",
-        "s21-horie"
+        "s21-horie",
+        "d04",
+        "d08",
+        "d09"
       ],
       "classification": "編集上の比較"
     },
@@ -2679,7 +3174,12 @@
         "r11",
         "r12",
         "r13",
-        "r19"
+        "r19",
+        "d02",
+        "d05",
+        "d06",
+        "d07",
+        "d08"
       ],
       "classification": "編集上の比較"
     }
@@ -2697,7 +3197,11 @@
         "r17",
         "r07",
         "s06",
-        "s22"
+        "s22",
+        "d01",
+        "d02",
+        "d05",
+        "d08"
       ]
     },
     {
@@ -2713,7 +3217,11 @@
         "r07",
         "r09",
         "r10",
-        "s11"
+        "s11",
+        "d06",
+        "d07",
+        "d08",
+        "d09"
       ]
     },
     {
@@ -2728,7 +3236,13 @@
         "r05",
         "s11",
         "s25",
-        "s04"
+        "s04",
+        "d01",
+        "d02",
+        "d03",
+        "d04",
+        "d05",
+        "d09"
       ]
     },
     {
@@ -2743,7 +3257,9 @@
         "r14",
         "r10",
         "r01",
-        "r13"
+        "r13",
+        "d03",
+        "d06"
       ]
     }
   ],
@@ -2780,5 +3296,57 @@
       ],
       "label": "主体性と研究共同体への配慮"
     }
-  ]
+  ],
+  "focus": {
+    "title": "選び、味わい、\n共に経験する。",
+    "lead": "AIにできないことを探すだけでなく、AIが上手でも、自分たちで経験したいことは何か。",
+    "note": "この見出しと比較は編集上の整理です。各人の逐語引用や、全員の共通見解ではありません。",
+    "groups": [
+      {
+        "title": "選ぶ・味わう",
+        "body": "何を良いとするか。制作量だけでは測れない経験に目を向ける。ただしtasteもAIから守られた能力とは限らない。",
+        "ids": [
+          "r14",
+          "d01",
+          "d02",
+          "d05"
+        ]
+      },
+      {
+        "title": "誘う・迎える・育てる",
+        "body": "自由時間だけでは共同体は生まれない。誘い、場を整え、初めての人を迎える役割を、実際に誰が担うか。",
+        "ids": [
+          "r02",
+          "r03",
+          "d03",
+          "r10"
+        ]
+      },
+      {
+        "title": "同じではない、豊かさの見方",
+        "body": "一人でつくる手応え、国家への責任、技術と経済の成長、物質的な豊かさ。同じ「人の未来」でも重心は異なる。",
+        "ids": [
+          "d04",
+          "d06",
+          "d07",
+          "d08",
+          "d09"
+        ]
+      }
+    ],
+    "practice": [
+      {
+        "title": "何を共に経験する？",
+        "body": "鑑賞・食事・制作・歌うこと。AIの性能比較より、参加者が実際に何を感じたいかから考える。"
+      },
+      {
+        "title": "初めての人を誰が迎える？",
+        "body": "招待、紹介、会話のきっかけ、次の約束まで。主催者の時間と費用も計画に入れる。"
+      },
+      {
+        "title": "参加しない自由もある？",
+        "body": "一人で味わう、途中で離れる、異なる意見でいる選択も残す。共同体を生活保障の代わりにはしない。"
+      }
+    ]
+  }
 }

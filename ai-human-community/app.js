@@ -26,7 +26,7 @@
       sById = new Map(statements.map(s => [s.id, s]));
       sources = new Map((data.sources || []).map(s => [s.id, s]));
       topicById = new Map((data.topics || []).map(t => [Number(t.id), t]));
-      renderIntro(); renderHero(); renderQuestionPortrait(); renderSpotlights(); renderFilterOptions(); renderPeople(); renderComparisons(); renderQuadrants(); renderSources(); renderCredits(); bindEvents();
+      renderFocus(); renderIntro(); renderHero(); renderQuestionPortrait(); renderSpotlights(); renderFilterOptions(); renderPeople(); renderComparisons(); renderQuadrants(); renderSources(); renderCredits(); bindEvents();
       $('#hero-portrait').setAttribute('aria-busy', 'false');
       if (location.hash.startsWith('#statement-') || location.hash.startsWith('#person-')) requestAnimationFrame(() => openHash(location.hash));
     } catch (error) {
@@ -54,6 +54,11 @@
     if (isIllustration) return `${image}<span class="illustration-badge">AI生成イラスト</span><div class="photo-short-credit illustration-credit">AI生成似顔絵・写真ではありません${photo.referencePage ? `<br>${external(photo.referencePage, '容姿の参考：公式プロフィール')}` : ''}</div>`;
     const credit = `${photo.photographer || photo.author || '撮影者は出典参照'} / ${photo.license || '利用条件は出典参照'}`;
     return `${image}${opts.credit === false ? '' : `<div class="photo-short-credit">${external(photo.sourcePage || photo.sourceURL || photo.originalURL, credit)}</div>`}`;
+  }
+  function renderFocus() {
+    const f = data.focus;
+    if (!f) return;
+    $('#focus-content').innerHTML = `<h2 id="focus-title">${esc(f.title).replace(/\n/g, '<br>')}</h2><p class="focus-lead">${esc(f.lead)}</p><p class="focus-note">${esc(f.note)}</p><div class="focus-groups">${f.groups.map((g,i) => `<article><span class="focus-number">0${i+1}</span><h3>${esc(g.title)}</h3><p>${esc(g.body)}</p><ul>${g.ids.map(id => { const s=sById.get(id); return s ? `<li><a href="#statement-${esc(id)}"><strong>${esc(personLabel(s))}</strong><span>${esc(s.keyword)} ↗</span></a></li>` : ''; }).join('')}</ul></article>`).join('')}</div><details class="focus-practice"><summary>場づくりへつなげる、3つの問い <span>＋</span></summary><p class="focus-note">以下は発言を踏まえた編集上の提案です。</p><div>${f.practice.map(p => `<article><h3>${esc(p.title)}</h3><p>${esc(p.body)}</p></article>`).join('')}</div></details>`;
   }
   function renderIntro() {
     const mainPeople = people.filter(p => !p.supporting).length;
@@ -207,3 +212,4 @@
   }
   init();
 })();
+
