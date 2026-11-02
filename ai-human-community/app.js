@@ -46,28 +46,32 @@
   }
   function portrait(person, opts = {}) {
     const photo = photoOf(person);
-    if (!photo) return `<div class="portrait-unavailable"><span>THE PERSON / ${esc(person?.nameEn || '')}</span><strong>${esc(person?.nameJa || '')}</strong><span>写真は利用条件を確認中。<br>経歴と発言は、本人の原典から読む。</span></div>`;
+    if (!photo) return `<div class="portrait-unavailable"><span>THE PERSON / ${esc(person?.nameEn || '')}</span><strong>${esc(person?.nameJa || '')}</strong><span>経歴と発言を、<br>本人の原典から読む。</span></div>`;
     const imagePath = photo.file || photo.path || photo.src;
     const src = imagePath.startsWith('photos/') || imagePath.startsWith('assets/') ? imagePath : `photos/${imagePath.split('/').pop()}`;
+    const isIllustration = photo.kind === 'illustration';
+    const image = `<img src="${esc(src)}"${isIllustration ? ' class="ai-illustration portrait-illustration"' : ''} alt="${esc(person.nameJa)}${isIllustration ? 'のAI生成似顔絵（写真ではありません）' : `（${esc(person.nameEn)}）の本人写真`}" width="${Number(photo.width) || 900}" height="${Number(photo.height) || 1100}" ${opts.eager ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} decoding="async"${photo.objectPosition || photo.position ? ` style="object-position:${esc(photo.objectPosition || photo.position)}"` : ''}>`;
+    if (isIllustration) return `${image}<span class="illustration-badge">AI生成イラスト</span><div class="photo-short-credit illustration-credit">AI生成似顔絵・写真ではありません${photo.referencePage ? `<br>${external(photo.referencePage, '容姿の参考：公式プロフィール')}` : ''}</div>`;
     const credit = `${photo.photographer || photo.author || '撮影者は出典参照'} / ${photo.license || '利用条件は出典参照'}`;
-    return `<img src="${esc(src)}" alt="${esc(person.nameJa)}（${esc(person.nameEn)}）の本人写真" width="${Number(photo.width) || 900}" height="${Number(photo.height) || 1100}" ${opts.eager ? 'fetchpriority="high" loading="eager"' : 'loading="lazy"'} decoding="async"${photo.objectPosition || photo.position ? ` style="object-position:${esc(photo.objectPosition || photo.position)}"` : ''}>${opts.credit === false ? '' : `<div class="photo-short-credit">${external(photo.sourcePage || photo.sourceURL || photo.originalURL, credit)}</div>`}`;
+    return `${image}${opts.credit === false ? '' : `<div class="photo-short-credit">${external(photo.sourcePage || photo.sourceURL || photo.originalURL, credit)}</div>`}`;
   }
   function renderIntro() {
     const mainPeople = people.filter(p => !p.supporting).length;
-    const photoCount = people.filter(p => photoOf(p)).length;
-    $('#feature-counts').innerHTML = `<div class="count-item"><strong>${mainPeople}</strong><span>主要プロフィール</span></div><div class="count-item"><strong>${statements.length}</strong><span>日付付きの発言</span></div><div class="count-item"><strong>${photoCount}</strong><span>本人写真</span></div>`;
+    const photoCount = people.filter(p => photoOf(p) && photoOf(p).kind !== 'illustration').length;
+    const illustrationCount = people.filter(p => photoOf(p)?.kind === 'illustration').length;
+    $('#feature-counts').innerHTML = `<div class="count-item"><strong>${mainPeople}</strong><span>主要プロフィール</span></div><div class="count-item"><strong>${statements.length}</strong><span>日付付きの発言</span></div><div class="count-item"><strong>${photoCount + illustrationCount}</strong><span>ポートレート<br>写真${photoCount}・AIイラスト${illustrationCount}</span></div>`;
   }
   function renderHero() {
-    let person = people.find(p => p.id === 'reid-hoffman');
-    if (!photoOf(person)) person = people.find(p => p.id === 'sam-altman' && photoOf(p)) || people.find(p => photoOf(p)) || person || people[0];
+    let person = people.find(p => p.id === 'sam-altman');
+    if (!photoOf(person)) person = people.find(p => p.id === 'reid-hoffman' && photoOf(p)) || people.find(p => photoOf(p)) || person || people[0];
     if (!person) return;
     const statement = personStatements(person).find(s => s.recent) || personStatements(person)[0];
     $('#hero-portrait').innerHTML = `${portrait(person, {eager: true, credit: false})}<div class="hero-caption"><p class="portrait-kicker">IN THIS ISSUE / ${esc(statement?.dateLabel || statement?.date)}</p><h2>${esc(person.nameJa)}</h2><p class="portrait-en">${esc(person.nameEn)}</p><p>${esc(statement?.summary || person.bio)}</p></div>`;
     const photo = photoOf(person);
-    if (photo) $('#hero-portrait').insertAdjacentHTML('beforeend', `<a class="hero-photo-source" href="${safeURL(photo.sourcePage || photo.sourceURL)}" target="_blank" rel="noopener noreferrer">写真出典 ↗</a>`);
+    if (photo && photo.kind !== 'illustration') $('#hero-portrait').insertAdjacentHTML('beforeend', `<a class="hero-photo-source" href="${safeURL(photo.sourcePage || photo.sourceURL)}" target="_blank" rel="noopener noreferrer">写真出典 ↗</a>`);
   }
   function spotlightStatements() {
-    const desired = ['reid-hoffman', 'sam-altman', 'takahiro-anno'];
+    const desired = ['takahiro-anno', 'sam-altman', 'reid-hoffman'];
     const chosen = desired.map(id => statements.find(s => s.recent && s.personIds.includes(id))).filter(Boolean);
     for (const s of statements.filter(s => s.recent)) if (chosen.length < 3 && !chosen.includes(s)) chosen.push(s);
     return chosen;
@@ -149,13 +153,16 @@
     $('#source-list').innerHTML = [...sources.values()].map(src => `<div class="source-entry" id="source-${esc(src.id)}"><span class="source-id">${esc(src.id)}</span><div>${external(src.url, src.title)}<p class="source-meta">${esc(src.publisher)} / ${esc(src.date || '')}<br>${esc(src.kind || '')}</p></div></div>`).join('');
   }
   function renderCredits() {
-    const withPhotos = people.filter(p => photoOf(p));
+    const withPortraits = people.filter(p => photoOf(p));
     const missing = people.filter(p => !photoOf(p));
-    $('#photo-count').textContent = `${withPhotos.length}人 ＋`;
-    $('#photo-credits').innerHTML = withPhotos.map(person => {
+    const photoCount = withPortraits.filter(p => photoOf(p).kind !== 'illustration').length;
+    const illustrationCount = withPortraits.length - photoCount;
+    $('#photo-count').textContent = `${withPortraits.length}人 / 写真${photoCount}・イラスト${illustrationCount} ＋`;
+    $('#photo-credits').innerHTML = withPortraits.map(person => {
       const p = photoOf(person);
+      if (p.kind === 'illustration') return `<div class="photo-credit-entry illustration-credit-entry"><h3>${esc(person.nameJa)} / ${esc(person.nameEn)}</h3><p><strong>AI生成似顔絵 / 写真ではありません</strong><br>制作：${esc(p.creator || 'AI生成')}${p.generatedAt ? ` / ${esc(p.generatedAt)}` : ''}<br>${p.referencePage ? external(p.referencePage, '容姿の参考：公式プロフィール') : ''}<br>加工・描画：${esc(p.changes || '容姿を参考にした新たな構図のイラスト')}</p></div>`;
       return `<div class="photo-credit-entry"><h3>${esc(person.nameJa)} / ${esc(person.nameEn)}</h3><p>撮影・提供：${esc(p.photographer || p.author || '出典参照')}<br>利用条件：${p.licenseURL ? external(p.licenseURL, p.license) : esc(p.license)}<br>${external(p.sourcePage || p.sourceURL || p.originalURL, '写真の出典・本人確認')}<br>加工：${esc(p.changes || 'WebP形式への変換・レイアウトに合わせたトリミング')}</p></div>`;
-    }).join('') + (missing.length ? `<p class="photo-missing-list"><strong>利用条件を確認できる本人写真を収集できなかった人物</strong><br>${missing.map(p => esc(p.nameJa)).join('、')}。無断転載や生成肖像は使用していません。</p>` : '');
+    }).join('') + (missing.length ? `<p class="photo-missing-list"><strong>肖像を掲載していない人物</strong><br>${missing.map(p => esc(p.nameJa)).join('、')}。</p>` : '');
   }
   function bindEvents() {
     $('#filters').addEventListener('submit', e => e.preventDefault());

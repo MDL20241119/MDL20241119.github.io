@@ -14,3 +14,7 @@
 
 /* Narrow layouts keep whole words and readable supporting text. */
 @media(max-width:700px){.hero h1 br:last-of-type{display:initial}.hero h1 span{margin-left:0}.person-bio,.person-latest-summary{font-size:14px}.person-bio a{font-size:11px}.statement-body>p{font-size:14px}.statement .statement-caveat,.attention{font-size:13px}.topic-text-grid p,.topic-content>.topic-caveat{font-size:13px}.section-intro>p,.evidence-principles p,.editorial-notes p{font-size:13px}}
+.illustration-badge{position:absolute;top:14px;right:14px;z-index:4;padding:8px 10px;background:var(--ink);color:var(--yellow);border:1px solid var(--yellow);font-size:10px;font-weight:850;line-height:1.4;letter-spacing:.03em}.person-image img.ai-illustration,.spotlight-image img.ai-illustration,.hero-portrait img.ai-illustration,.question-portrait img.ai-illustration{filter:grayscale(1);mix-blend-mode:normal}.illustration-credit{font-size:10px;line-height:1.7}.portrait-method-note{font-size:12px;line-height:1.9;max-width:850px;margin:0 0 22px}.illustration-credit-entry strong{font-weight:850}.count-item>span{line-height:1.6}
+@media(max-width:700px){.illustration-badge{top:12px;right:12px;font-size:9px;padding:7px 9px}.illustration-credit{font-size:9px}.portrait-method-note{font-size:11px;margin-bottom:18px}}
+
+.person-image:has(.portrait-illustration){background:#000}

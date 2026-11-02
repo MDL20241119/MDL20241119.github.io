@@ -383,37 +383,70 @@
     "verifiedAt": "2026-11-02"
   },
   "katsuaki-sato": {
-    "name": "佐藤航陽",
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+    "kind": "illustration",
+    "file": "photos/katsuaki-sato-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://sushitech-global.metro.tokyo.lg.jp/startups/39",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "shu-yamaguchi": {
-    "name": "山口周",
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+    "kind": "illustration",
+    "file": "photos/shu-yamaguchi-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://note.com/shu_yamaguchi",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "kazuhiro-obara": {
-    "name": "尾原和啓",
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を見つけられなかった。公式・出版社の掲載写真は転載許諾とみなしていない。"
+    "kind": "illustration",
+    "file": "photos/kazuhiro-obara-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://obarakazuhiro.jp/profile/",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "david-haber": {
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+    "kind": "illustration",
+    "file": "photos/david-haber-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://a16z.com/author/david-haber/",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "michael-mcguiness": {
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+    "kind": "illustration",
+    "file": "photos/michael-mcguiness-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://a16z.com/author/michael-mcguiness/",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "gagan-biyani": {
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+    "kind": "illustration",
+    "file": "photos/gagan-biyani-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://www.theacademysf.com/about",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   },
   "erik-torenberg": {
     "file": "photos/erik-torenberg.webp",
@@ -432,8 +465,14 @@
     "originalDate": "2019-05-30"
   },
   "elena-burger": {
-    "file": null,
-    "status": "unavailable",
-    "reason": "公開転載を許諾する条件が確認できる本人写真を確保できなかった。公式の掲載写真を転載許諾とはみなしていない。"
+    "kind": "illustration",
+    "file": "photos/elena-burger-illustration.webp",
+    "creator": "AI生成",
+    "generatedAt": "2026-11-02",
+    "referencePage": "https://a16z.com/author/elena-burger/",
+    "width": 1122,
+    "height": 1402,
+    "position": "50% 0%",
+    "changes": "容貌を参照してAI生成した黒背景の白黒似顔絵。WebP形式へ圧縮。"
   }
 }
