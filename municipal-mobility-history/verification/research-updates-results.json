@@ -1,0 +1,26 @@
+{
+  "passed": 5,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "260 canonical IDs and all frozen event/claim/source records are preserved",
+      "result": "pass"
+    },
+    {
+      "name": "Four additions appear with source links and retain baseline evidence IDs",
+      "result": "pass"
+    },
+    {
+      "name": "Only verified status changes affect filters; technical trials and date disputes keep prior categories",
+      "result": "pass"
+    },
+    {
+      "name": "Independent supplement preserves distinctions, limitations and legal chronology",
+      "result": "pass"
+    },
+    {
+      "name": "Release and stale canonical guard remain effective",
+      "result": "pass"
+    }
+  ]
+}

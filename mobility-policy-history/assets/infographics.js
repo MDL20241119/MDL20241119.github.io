@@ -39,7 +39,7 @@
     }
     function statusAssessment(c) {
       const record=statusOf(c),g=group(record.category);
-      return `<div class="case-assessment" data-life="${g.id}">${statusBadge(c)}<p class="assessment-scope">${e(record.scope)}</p><p>${e(record.reason)}</p><p class="assessment-date">根拠時点 ${e(record.evidence_as_of)}</p></div>`;
+      return `<div class="case-assessment" data-life="${g.id}">${statusBadge(c)}<p class="assessment-scope">${e(record.scope)}</p><p>${e(record.reason)}</p><p class="assessment-date">根拠時点 ${e(record.evidence_as_of)}</p>${record.supplement_note?`<div class="assessment-update"><p><b>追加確認 ${e(record.update_checked_at)}</b></p>${record.reason!==record.supplement_note?`<p>${e(record.supplement_note)}</p>`:""}<p><a href="${e(record.supplement_url)}">新しい根拠と原記録の照合を見る ↗</a></p>${record.update_sources.map(s=>`<p class="small"><a href="${e(s.url)}" target="_blank" rel="noopener noreferrer">${e(s.title)} ↗</a> ／ ${e(s.document_date)} ／ ${e(s.locator)}</p>`).join("")}</div>`:""}</div>`;
     }
     function statusChoices(cs,p={}) {
       return `<nav class="life-choices" aria-label="確認状況で絞り込む"><a class="life-all${!p.status?' selected':''}" href="${e(href(p,{status:''}))}"${!p.status?' aria-current="true"':''}><span>全体</span><strong>${cs.length}</strong></a>${statusGroups.map(g=>`<a class="life-choice${p.status===g.id?' selected':''}" data-life="${g.id}" href="${e(href(p,{status:g.id}))}"${p.status===g.id?' aria-current="true"':''}><span class="life-choice-label"><i aria-hidden="true">${g.symbol}</i>${g.label}</span><strong>${cs.filter(c=>statusOf(c).category===g.id).length}</strong></a>`).join('')}</nav>`;

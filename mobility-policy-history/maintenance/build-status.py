@@ -127,7 +127,18 @@ for c in data['cases']:
     by_case[c['id']] = dict(category=category,scope=scope,reason=reason,
         evidence_as_of=c.get('status_as_of') or '根拠時点未確認',
         raw_status=c['status'],event_ids=[ev['event_id'] for ev in c['events']],source_ids=c['source_ids'])
-result = dict(as_of=data['as_of'],basis='既存の正本と出典付き表示データを個別に確認した表示用分類。新たなリアルタイム稼働調査ではない。',
+# Independently sourced later observations; frozen source data stays unchanged.
+updates = json.loads((ROOT.parent/'municipal-mobility-history/data/research-updates.json').read_text())
+for canonical_id, update in updates['cases'].items():
+    record = by_case[update['legacy_id']]
+    record['supplement_note'] = update['current_observation']
+    record['supplement_url'] = 'updates/2026-11/#' + update['slug']
+    record['update_sources'] = update['sources']
+    record['update_checked_at'] = updates['checked_at']
+    if update.get('category'):
+        record['baseline_evidence_as_of'] = record['evidence_as_of']
+        record.update(category=update['category'],scope=update['scope'],reason=update['current_observation'],evidence_as_of=update['evidence_as_of'])
+result = dict(as_of=updates['checked_at'],basis='基礎資料と日付付き追加調査に基づく表示用分類。各事例の根拠時点を示し、リアルタイム稼働は推定しない。',
     continuation_rule='2026年の運行・提供記録、現行案内、現在を含む契約等で継続を確認。過年度実績だけの場合は現状未確認。',
     canonical_sha256=hashlib.sha256((ROOT/'data/mobility_history_data.json').read_bytes()).hexdigest(),
     groups=GROUPS,by_case=by_case)

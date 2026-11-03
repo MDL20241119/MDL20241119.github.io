@@ -9,10 +9,10 @@ check('111 classifications retain original states, date provenance and valid sou
  assert.equal(Object.keys(S.by_case).length,111);
  assert.equal(S.canonical_sha256,crypto.createHash('sha256').update(fs.readFileSync(root+'/data/mobility_history_data.json')).digest('hex'));
  const sources=new Set(D.sources.map(s=>s.source_id)),events=new Set(U.findEvents().map(ev=>ev.event_id));
- for(const c of D.cases){const s=S.by_case[c.id];assert(s);assert.equal(s.raw_status,c.status);assert.equal(s.evidence_as_of,c.status_as_of||'根拠時点未確認');assert(s.scope&&s.reason);assert(S.groups.some(g=>g.id===s.category));for(const id of s.source_ids)assert(sources.has(id));for(const id of s.event_ids)assert(events.has(id));}
+ for(const c of D.cases){const s=S.by_case[c.id];assert(s);assert.equal(s.raw_status,c.status);assert.equal(s.baseline_evidence_as_of||s.evidence_as_of,c.status_as_of||'根拠時点未確認');assert(s.scope&&s.reason);assert(S.groups.some(g=>g.id===s.category));for(const id of s.source_ids)assert(sources.has(id));for(const id of s.event_ids)assert(events.has(id));}
 });
 check('Six exclusive groups cover all cases with reviewed counts',()=>{
- const expected={continuing:17,ended:3,paused:4,testing:16,completed:17,unconfirmed:54};
+ const expected={continuing:17,ended:3,paused:5,testing:16,completed:17,unconfirmed:53};
  for(const [id,n] of Object.entries(expected))assert.equal(U.findCases({status:id}).length,n);
  assert.equal(Object.values(expected).reduce((a,b)=>a+b,0),111);
 });
@@ -28,9 +28,9 @@ check('Mixed technology/service states and negated or planned endings are handle
  assert.equal(S.by_case['V-C03'].category,'paused');assert(S.by_case['V-C03'].reason.includes('別系統'));
 });
 check('Older operating records and republished results do not become current operation confirmations',()=>{
- for(const id of ['mlit_kamikoani','mlit_okueigenji','mlit_fukuyama','mlit_gunma','ENV-C07','OTHER-C04','OTHER-C05','V-C12'])assert.equal(S.by_case[id].category,'unconfirmed');
+ for(const id of ['mlit_kamikoani','mlit_okueigenji','mlit_fukuyama','ENV-C07','OTHER-C04','OTHER-C05','V-C12'])assert.equal(S.by_case[id].category,'unconfirmed');
  assert.equal(S.by_case['DIG-C15'].category,'unconfirmed');
- for(const c of U.findCases({status:'continuing'}))assert(/2026/.test(c.status_as_of),'Missing 2026 evidence context '+c.id);
+ for(const c of U.findCases({status:'continuing'}))assert(/2026/.test(S.by_case[c.id].evidence_as_of),'Missing 2026 evidence context '+c.id);
 });
 check('One map defaults to all cases; each category can be selected independently',()=>{
  const html=V.mapPage({});assert.equal([...html.matchAll(/class="japan-map"/g)].length,1);assert(html.includes('map-grid-all'));assert(!html.includes('すべて・比較'));assert(html.includes('>全体</span>'));assert(html.includes('111<small>事例</small>'));
