@@ -31,3 +31,21 @@
   dialog.addEventListener('click',e=>{if(e.target===dialog){const r=dialog.getBoundingClientRect();if(e.clientX<r.left||e.clientX>r.right||e.clientY<r.top||e.clientY>r.bottom)closePhoto();}});
   dialog.querySelector('a').addEventListener('click',()=>dialog.close());
 })();
+
+(() => {
+  const presets = document.querySelector('#journey-presets');
+  const result = document.querySelector('#journey-remaining');
+  const equation = document.querySelector('#journey-equation');
+  if (!presets || !result || !equation) return;
+  function update() {
+    const selected = presets.querySelector('input:checked');
+    if (!selected) return;
+    const minutes = Number(selected.value);
+    const unit = document.createElement('span');
+    unit.textContent = '分';
+    result.replaceChildren(`${minutes - 60}〜${minutes - 50}`, unit);
+    equation.textContent = `${minutes}分 − 往復徒歩50〜60分`;
+  }
+  presets.addEventListener('change', update);
+  update();
+})();
