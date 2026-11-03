@@ -183,3 +183,7 @@
 .report-downloads b {display:block;color:var(--blue);font-size:15px;}
 @media(max-width:900px){.route-grid {grid-template-columns:repeat(2,minmax(0,1fr));}}
 @media(max-width:700px){.chapter-nav {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));padding-inline:3%;}.chapter-nav a:last-child{grid-column:auto;}.chapter-nav a{min-height:35px;padding:6px 2px;font-size:12px;}.route-grid,.report-downloads{grid-template-columns:1fr;}.route-grid{gap:8px;}.route-grid article{padding:16px;}.report-downloads a{padding:12px 16px;}.market-section,section[id]{scroll-margin-top:82px;}}
+
+@media (min-width:701px) {
+  .hero-en {font-size:clamp(100px,20vw,310px);white-space:nowrap}
+}
