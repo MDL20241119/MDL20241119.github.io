@@ -1,0 +1,1080 @@
+{
+  "title": "湯布院の移動・宿泊に関する追加調査",
+  "as_of": "2026-11-04",
+  "geographic_scope": "各記録のpopulationとperiodを参照",
+  "records": [
+    {
+      "id": "01",
+      "topic": "訪問を見送った理由",
+      "indicator": "混雑してゆっくりできない",
+      "value": 26.6,
+      "unit": "%",
+      "period": "2019年度",
+      "population": "由布院未訪問者184人",
+      "source_location": "市観光基本計画 本文21頁・Web意識調査",
+      "interpretation": "未訪問時の認識。複数項目可。現地のルート断念率は未計測。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf#page=22"
+    },
+    {
+      "id": "02",
+      "topic": "訪問を見送った理由",
+      "indicator": "他の観光地を訪れたい",
+      "value": 21.7,
+      "unit": "%",
+      "period": "2019年度",
+      "population": "由布院未訪問者184人",
+      "source_location": "市観光基本計画 本文21頁・Web意識調査",
+      "interpretation": "未訪問時の認識。複数項目可。現地のルート断念率は未計測。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf#page=22"
+    },
+    {
+      "id": "03",
+      "topic": "訪問を見送った理由",
+      "indicator": "宿泊・食事・移動費が高い",
+      "value": 16.3,
+      "unit": "%",
+      "period": "2019年度",
+      "population": "由布院未訪問者184人",
+      "source_location": "市観光基本計画 本文21頁・Web意識調査",
+      "interpretation": "未訪問時の認識。複数項目可。現地のルート断念率は未計測。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf#page=22"
+    },
+    {
+      "id": "04",
+      "topic": "訪問を見送った理由",
+      "indicator": "アクセスが悪く移動が不便",
+      "value": 7.6,
+      "unit": "%",
+      "period": "2019年度",
+      "population": "由布院未訪問者184人",
+      "source_location": "市観光基本計画 本文21頁・Web意識調査",
+      "interpretation": "未訪問時の認識。複数項目可。現地のルート断念率は未計測。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf#page=22"
+    },
+    {
+      "id": "05",
+      "topic": "訪問を見送った理由",
+      "indicator": "特にない",
+      "value": 33.7,
+      "unit": "%",
+      "period": "2019年度",
+      "population": "由布院未訪問者184人",
+      "source_location": "市観光基本計画 本文21頁・Web意識調査",
+      "interpretation": "未訪問時の認識。複数項目可。現地のルート断念率は未計測。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf#page=22"
+    },
+    {
+      "id": "06",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・来訪者回答",
+      "value": 49,
+      "unit": "票",
+      "period": "2023年12月～2024年1月",
+      "population": "由布市民・来訪者",
+      "source_location": "市のWebプレ調査、概要・別紙③",
+      "interpretation": "自由記述に混雑・夜間営業・別府発バス・散策評価。頻度を代表しない。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2024/03/r6yufushikankoutyousakekka.pdf"
+    },
+    {
+      "id": "07",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・市民回答",
+      "value": 179,
+      "unit": "票",
+      "period": "2023年12月～2024年1月",
+      "population": "由布市民・来訪者",
+      "source_location": "市のWebプレ調査、概要・別紙③",
+      "interpretation": "自由記述に混雑・夜間営業・別府発バス・散策評価。頻度を代表しない。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2024/03/r6yufushikankoutyousakekka.pdf"
+    },
+    {
+      "id": "08",
+      "topic": "団体の調査漏れ",
+      "indicator": "回答者に占める団体",
+      "value": 16.0,
+      "unit": "%",
+      "period": "2023年度",
+      "population": "由布院駅周辺の外国人400人調査",
+      "source_location": "九州運輸局 設問⑤",
+      "interpretation": "短時間滞在の団体を捕捉しにくい。全来訪者の団体比率には使えない。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000321821.pdf"
+    },
+    {
+      "id": "09",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・宿泊",
+      "value": 204,
+      "unit": "人",
+      "period": "2023年度",
+      "population": "駅周辺で回答した外国人400人",
+      "source_location": "調査設問④・⑤",
+      "interpretation": "市の年間外国人宿泊率と異なる標本。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000321821.pdf"
+    },
+    {
+      "id": "10",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・日帰り",
+      "value": 196,
+      "unit": "人",
+      "period": "2023年度",
+      "population": "駅周辺で回答した外国人400人",
+      "source_location": "調査設問④・⑤",
+      "interpretation": "市の年間外国人日帰り率と異なる標本。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000321821.pdf"
+    },
+    {
+      "id": "11",
+      "topic": "誰が時間を決めるか",
+      "indicator": "韓国の旅行会社聞き取り",
+      "value": 5,
+      "unit": "社",
+      "period": "2023年11月・2024年2月",
+      "population": "九州への送客実績がある旅行会社",
+      "source_location": "九州運輸局 報告書24頁",
+      "interpretation": "食、街並み、知名度、世代の広さ等がコース選択理由。各社の自由時間平均は未公表。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000325204.pdf"
+    },
+    {
+      "id": "12",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の2地点間でバス利用",
+      "value": 61,
+      "unit": "回答",
+      "period": "2017年秋・2018年2月",
+      "population": "福岡空港で回答した、北九州・下関未訪問の韓国個人客。対象設問76回答",
+      "source_location": "北九州市公表PDFの検索収録本文・図表3-2(20),(26)。配布URLの直接アクセスは404の場合あり。",
+      "interpretation": "歴史資料。宿泊の3行は両地域のみ訪れた39回答。方向・乗車時刻は不明。",
+      "source_url": "https://www.city.kitakyushu.lg.jp/files/000803199.pdf",
+      "source_status": "2026年11月4日現在、元の配布URLは404。旧URLを出典の記録として保存。"
+    },
+    {
+      "id": "13",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の両地域に宿泊",
+      "value": 31,
+      "unit": "回答",
+      "period": "2017年秋・2018年2月",
+      "population": "福岡空港で回答した、北九州・下関未訪問の韓国個人客。対象設問39回答",
+      "source_location": "北九州市公表PDFの検索収録本文・図表3-2(20),(26)。配布URLの直接アクセスは404の場合あり。",
+      "interpretation": "歴史資料。宿泊の3行は両地域のみ訪れた39回答。方向・乗車時刻は不明。",
+      "source_url": "https://www.city.kitakyushu.lg.jp/files/000803199.pdf",
+      "source_status": "2026年11月4日現在、元の配布URLは404。旧URLを出典の記録として保存。"
+    },
+    {
+      "id": "14",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部のみに宿泊",
+      "value": 7,
+      "unit": "回答",
+      "period": "2017年秋・2018年2月",
+      "population": "福岡空港で回答した、北九州・下関未訪問の韓国個人客。対象設問39回答",
+      "source_location": "北九州市公表PDFの検索収録本文・図表3-2(20),(26)。配布URLの直接アクセスは404の場合あり。",
+      "interpretation": "歴史資料。宿泊の3行は両地域のみ訪れた39回答。方向・乗車時刻は不明。",
+      "source_url": "https://www.city.kitakyushu.lg.jp/files/000803199.pdf",
+      "source_status": "2026年11月4日現在、元の配布URLは404。旧URLを出典の記録として保存。"
+    },
+    {
+      "id": "15",
+      "topic": "旅行の組み合わせ",
+      "indicator": "由布院のみに宿泊",
+      "value": 1,
+      "unit": "回答",
+      "period": "2017年秋・2018年2月",
+      "population": "福岡空港で回答した、北九州・下関未訪問の韓国個人客。対象設問39回答",
+      "source_location": "北九州市公表PDFの検索収録本文・図表3-2(20),(26)。配布URLの直接アクセスは404の場合あり。",
+      "interpretation": "歴史資料。宿泊の3行は両地域のみ訪れた39回答。方向・乗車時刻は不明。",
+      "source_url": "https://www.city.kitakyushu.lg.jp/files/000803199.pdf",
+      "source_status": "2026年11月4日現在、元の配布URLは404。旧URLを出典の記録として保存。"
+    },
+    {
+      "id": "16",
+      "topic": "貸切行程",
+      "indicator": "列車到着後の自由散策予定",
+      "value": 90,
+      "unit": "分",
+      "period": "2026年の掲載商品",
+      "population": "西鉄旅行 博多→由布院→阿蘇日帰り",
+      "source_location": "公開商品行程",
+      "interpretation": "催行日の実績や平均と異なる。湯布院から貸切バスで出発。",
+      "source_url": "https://yoyaku.nishitetsutravel.jp/TourDetail.aspx?tc=MKGDGLG11306"
+    },
+    {
+      "id": "17",
+      "topic": "貸切行程",
+      "indicator": "別府経由商品での湯布院滞在予定",
+      "value": 140,
+      "unit": "分",
+      "period": "掲載商品（2026年11月確認）",
+      "population": "太宰府→別府ロープウェイ→由布院→博多",
+      "source_location": "販売行程。由布院14:10着予定",
+      "interpretation": "道路や天候で変更される。乗車・支出実績は不明。",
+      "source_url": "https://enjoy-kyushu.com/ja/column/oita%E3%80%80/daytripbustour/3410.html"
+    },
+    {
+      "id": "18",
+      "topic": "地域間回遊",
+      "indicator": "金鱗湖・湯の坪周辺の来街者",
+      "value": 723149,
+      "unit": "推計人",
+      "period": "2021年",
+      "population": "KDDI位置情報・来街者",
+      "source_location": "北部地域実証報告 表3、地域定義による推計",
+      "interpretation": "コロナ期の位置情報推計。住民・勤務者を別区分。",
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/soukou/content/001489855.pdf#page=22"
+    },
+    {
+      "id": "19",
+      "topic": "地域間回遊",
+      "indicator": "同日に宇佐神宮も訪問",
+      "value": 8001,
+      "unit": "推計人",
+      "period": "2021年",
+      "population": "同日に金鱗湖・湯の坪街道周辺へ来街した層723,149（推計）",
+      "source_location": "北部地域実証報告 表3",
+      "interpretation": "先後順・滞在時刻・手段不明。対象地間の値。重複加算不可。",
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/soukou/content/001489855.pdf#page=22"
+    },
+    {
+      "id": "20",
+      "topic": "地域間回遊",
+      "indicator": "同日に深耶馬渓も訪問",
+      "value": 5098,
+      "unit": "推計人",
+      "period": "2021年",
+      "population": "同日に金鱗湖・湯の坪街道周辺へ来街した層723,149（推計）",
+      "source_location": "北部地域実証報告 表3",
+      "interpretation": "先後順・滞在時刻・手段不明。対象地間の値。重複加算不可。",
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/soukou/content/001489855.pdf#page=22"
+    },
+    {
+      "id": "21",
+      "topic": "地域間回遊",
+      "indicator": "同日に昭和の町も訪問",
+      "value": 2673,
+      "unit": "推計人",
+      "period": "2021年",
+      "population": "同日に金鱗湖・湯の坪街道周辺へ来街した層723,149（推計）",
+      "source_location": "北部地域実証報告 表3",
+      "interpretation": "先後順・滞在時刻・手段不明。対象地間の値。重複加算不可。",
+      "source_url": "https://www.mlit.go.jp/sogoseisaku/soukou/content/001489855.pdf#page=22"
+    },
+    {
+      "id": "22",
+      "topic": "既存の受け皿",
+      "indicator": "大型専用駐車場の収容台数",
+      "value": 9,
+      "unit": "台",
+      "period": "2026年11月確認",
+      "population": "ゆふいん旬彩浪漫の1施設",
+      "source_location": "施設の利用案内",
+      "interpretation": "予約制、乗降のみ不可。地域の総収容力・日ごとの来台数は不明。",
+      "source_url": "https://yufuin-resort.co.jp/parking/"
+    },
+    {
+      "id": "23",
+      "topic": "ツアー実績の取り寄せ",
+      "indicator": "助成ツアーに必要な参加者数下限",
+      "value": 10,
+      "unit": "人／催行",
+      "period": "2026年度",
+      "population": "国内登録旅行会社、添乗員と運転者を除外",
+      "source_location": "市事業の要件。3地域以上の訪問",
+      "interpretation": "助成利用ツアーに偏る。全団体への換算不可。",
+      "source_url": "https://www.city.yufu.oita.jp/kankou/article_83442"
+    },
+    {
+      "id": "24",
+      "topic": "消費の測り方",
+      "indicator": "助成調査票の買物総額の階級",
+      "value": 4,
+      "unit": "階級",
+      "period": "2026年度",
+      "population": "市助成ツアー参加者",
+      "source_location": "公式調査票 Q7–11、初訪問先と買物帯",
+      "interpretation": "最上位は上限なし、5,000円境界が重複。食事等を含む地区別実額は不明。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2026/04/bustour-annke-toyousiki.docx"
+    },
+    {
+      "id": "25",
+      "topic": "訪日客の市内支出",
+      "indicator": "訪問1人当たり",
+      "value": 14448,
+      "unit": "円",
+      "period": "2025年",
+      "population": "訪日客の支出回答1,303件、由布市内",
+      "source_location": "観光庁調査をアンド・ディが市別に独自集計",
+      "interpretation": "日帰り・宿泊混在。パック代、訪問地間交通費を除く。",
+      "source_url": "https://inbound-data.and-d.co.jp/p/2025/muni/4410013/"
+    },
+    {
+      "id": "26",
+      "topic": "住民への影響",
+      "indicator": "郊外駐車場からのグリスロ利用・下限",
+      "value": 500,
+      "unit": "延べ人以上",
+      "period": "2022年GW実証",
+      "population": "由布院宮尻駐車場など、実験期間",
+      "source_location": "由布市実施報告 本文5頁",
+      "interpretation": "無料実証。待ち時間で徒歩へ替えた人がいた。人数と現在の有料需要は不明。",
+      "source_url": "https://www.hido.or.jp/14gyousei_backnumber/2022data/2208/2208jikken_kotsu_yufu_city.pdf"
+    },
+    {
+      "id": "27",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の利用者数",
+      "value": 20496,
+      "unit": "人",
+      "period": "2025年度",
+      "population": "由布市全域の地域公共交通事業",
+      "source_location": "市事務事業評価 冊子11～12頁。目標45,000人",
+      "interpretation": "平日中心の生活交通。観光車ノルクとは別事業。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2026/09/r7zimuzigyouhyoukasyo.pdf#page=14"
+    },
+    {
+      "id": "28",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の事業費",
+      "value": 63479,
+      "unit": "千円",
+      "period": "2025年度",
+      "population": "由布市全域の地域公共交通事業",
+      "source_location": "同評価 冊子11頁",
+      "interpretation": "委託費は内数。二次評価B、見直して実施。ノルク事業との合算は避ける。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2026/09/r7zimuzigyouhyoukasyo.pdf#page=14"
+    },
+    {
+      "id": "29",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の運行業務委託",
+      "value": 61912,
+      "unit": "千円",
+      "period": "2025年度",
+      "population": "由布市全域の地域公共交通事業",
+      "source_location": "同評価 冊子11頁",
+      "interpretation": "事業費の内数。由布院中心部のタクシー・宿送迎の原価ではない。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2026/09/r7zimuzigyouhyoukasyo.pdf#page=14"
+    },
+    {
+      "id": "30",
+      "topic": "住民の交通供給",
+      "indicator": "計画の対象期間",
+      "value": null,
+      "unit": "期間",
+      "period": "2024年4月～2029年9月",
+      "population": "由布市地域公共交通計画",
+      "source_location": "市の計画と本文・資料編",
+      "interpretation": "計画目標・将来時点のスケジュールと、現在の実績を分ける。",
+      "source_url": "https://www.city.yufu.oita.jp/cate_1/article_82084"
+    },
+    {
+      "id": "31",
+      "topic": "既存観光便",
+      "indicator": "ノルク所要時間",
+      "value": 50,
+      "unit": "予定分",
+      "period": "2026年運行案内",
+      "population": "由布院駅発着のガイド付き周遊運行",
+      "source_location": "観光局の4月の運行開始告知、4月3日開始",
+      "interpretation": "回遊ツアーの所要時間。金鱗湖から駅へ戻る片道移動サービスとは異なる。",
+      "source_url": "https://yufuin.gr.jp/news/news-5769/"
+    },
+    {
+      "id": "32",
+      "topic": "荷物と乗継",
+      "indicator": "一時預かりの終了時刻",
+      "value": 17,
+      "unit": "時",
+      "period": "2026年11月4日確認",
+      "population": "駅の手荷物預かり・コインロッカー",
+      "source_location": "観光局の案内。宿配送の締切は15時",
+      "interpretation": "預かり・宿配送は別。配送は所定の対象宿に限る。",
+      "source_url": "https://yufuin.gr.jp/spot/spot-2295/"
+    },
+    {
+      "id": "33",
+      "topic": "支出と泊数",
+      "indicator": "分析用の調査個票",
+      "value": null,
+      "unit": "要申請",
+      "period": "2025年確報等",
+      "population": "観光庁インバウンド消費動向調査",
+      "source_location": "個票利用案内。許諾条件と標本設計を確認",
+      "interpretation": "由布市訪問者の0泊・1泊・2泊以上×費目は申請後の集計候補。分単位の滞在との結合は不可。",
+      "source_url": "https://www.mlit.go.jp/kankocho/tokei_hakusyo/gaikokujinshohidoko.html"
+    },
+    {
+      "id": "34",
+      "topic": "交通供給",
+      "indicator": "タクシー期末車両",
+      "value": 64,
+      "unit": "台",
+      "period": "2024年度",
+      "population": "営業区域・由布市（市内全域）",
+      "source_location": "九州運輸局 輸送実績集計表 大分県",
+      "interpretation": "夕方の由布院駅前で即時配車できる台数ではない。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000363303.pdf"
+    },
+    {
+      "id": "35",
+      "topic": "交通供給",
+      "indicator": "タクシー実働率",
+      "value": 53.21,
+      "unit": "%",
+      "period": "2024年度",
+      "population": "営業区域・由布市の延実働12,831台日÷延実在24,112台日",
+      "source_location": "九州運輸局 輸送実績集計表 大分県",
+      "interpretation": "日単位の帳簿集計。曜日・時刻別に雇えた運転者数、待機車・積み残しは不明。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000363303.pdf"
+    },
+    {
+      "id": "36",
+      "topic": "交通供給",
+      "indicator": "タクシー輸送人員",
+      "value": 402118,
+      "unit": "人",
+      "period": "2024年度",
+      "population": "営業区域・由布市",
+      "source_location": "九州運輸局 輸送実績集計表 大分県",
+      "interpretation": "観光客・住民別、湯布院営業所別の実績は不明。",
+      "source_url": "https://wwwtb.mlit.go.jp/kyushu/content/000363303.pdf"
+    },
+    {
+      "id": "37",
+      "topic": "荷物と乗継",
+      "indicator": "軽貨物車",
+      "value": 1,
+      "unit": "台",
+      "period": "観光局事例報告時点",
+      "population": "由布院温泉・手荷物サービス",
+      "source_location": "『手ぶら観光の取り組み事例紹介』4頁。配送エリア約5km四方",
+      "interpretation": "当該事例説明時の体制。現在の時間帯別の容量・荷物件数は不明。",
+      "source_url": "https://www.mlit.go.jp/kankocho/content/001996313.pdf"
+    },
+    {
+      "id": "38",
+      "topic": "荷物と乗継",
+      "indicator": "配送対象宿の規模",
+      "value": 100,
+      "unit": "軒程度",
+      "period": "観光局事例報告時点",
+      "population": "由布院温泉・手荷物サービス",
+      "source_location": "同報告4頁。加盟旅館等の目安",
+      "interpretation": "現在対応できる宿は最新の対象旅館一覧と当日の窓口で確認。",
+      "source_url": "https://www.mlit.go.jp/kankocho/content/001996313.pdf"
+    },
+    {
+      "id": "39",
+      "topic": "荷物と乗継",
+      "indicator": "配送・回収対象宿の一覧掲載数",
+      "value": 93,
+      "unit": "施設",
+      "period": "2025/11/23現在の一覧",
+      "population": "由布院温泉の配送・回収対象宿リスト掲載施設",
+      "source_location": "観光局公式ページのPDFを集計。1頁左37＋右38、2頁左右各9",
+      "interpretation": "現在の実稼働宿数、受注数、当日の配送可否は別に確認する。",
+      "source_url": "https://yufuin.gr.jp/spot/spot-2295/"
+    },
+    {
+      "id": "40",
+      "topic": "住民の移動",
+      "indicator": "コミュニティバス利用",
+      "value": 2549,
+      "unit": "人",
+      "period": "2021年10月〜2022年9月",
+      "population": "湯布院地域の輸送実績",
+      "source_location": "由布市地域公共交通計画 資料編・図48",
+      "interpretation": "全市統計とは別の地理的範囲。観光客だけの利用実績ではない。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2024/03/r6yufushichiikikoukyoukoutsukeikaku.pdf#page=64"
+    },
+    {
+      "id": "41",
+      "topic": "住民の移動",
+      "indicator": "スクールバス利用",
+      "value": 6066,
+      "unit": "人",
+      "period": "2021年10月〜2022年9月",
+      "population": "湯布院地域の輸送実績",
+      "source_location": "由布市地域公共交通計画 資料編・図48",
+      "interpretation": "全市統計とは別の地理的範囲。観光客だけの利用実績ではない。",
+      "source_url": "https://www.city.yufu.oita.jp/uploads/files/2024/03/r6yufushichiikikoukyoukoutsukeikaku.pdf#page=64"
+    },
+    {
+      "id": "42",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市博多区",
+      "value": 155,
+      "unit": "人",
+      "period": "2018年4月～2019年3月",
+      "population": "由布市泊と判定した韓国のアプリ利用者で翌日最初の滞在先が分かる333人",
+      "source_location": "大分県インバウンド観光動態調査 本文157～158頁",
+      "interpretation": "同意アプリ標本。1kmメッシュ30分以上の連続測位に基づく。出発直後の下車地・現在の比率ではない。",
+      "source_url": "https://marketing.oita.jp/wp/wp-content/uploads/2020/03/ba13a578d5d0301d8c2595c9d7df8da9.pdf#page=159",
+      "source_status": "原表の配布先はアクセス時に認証を求める場合がある。要点は調査ノート9頁に収録。"
+    },
+    {
+      "id": "43",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市中央区",
+      "value": 58,
+      "unit": "人",
+      "period": "2018年4月～2019年3月",
+      "population": "由布市泊と判定した韓国のアプリ利用者で翌日最初の滞在先が分かる333人",
+      "source_location": "大分県インバウンド観光動態調査 本文157～158頁",
+      "interpretation": "同意アプリ標本。1kmメッシュ30分以上の連続測位に基づく。出発直後の下車地・現在の比率ではない。",
+      "source_url": "https://marketing.oita.jp/wp/wp-content/uploads/2020/03/ba13a578d5d0301d8c2595c9d7df8da9.pdf#page=159",
+      "source_status": "原表の配布先はアクセス時に認証を求める場合がある。要点は調査ノート9頁に収録。"
+    },
+    {
+      "id": "44",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：別府市",
+      "value": 54,
+      "unit": "人",
+      "period": "2018年4月～2019年3月",
+      "population": "由布市泊と判定した韓国のアプリ利用者で翌日最初の滞在先が分かる333人",
+      "source_location": "大分県インバウンド観光動態調査 本文157～158頁",
+      "interpretation": "同意アプリ標本。1kmメッシュ30分以上の連続測位に基づく。出発直後の下車地・現在の比率ではない。",
+      "source_url": "https://marketing.oita.jp/wp/wp-content/uploads/2020/03/ba13a578d5d0301d8c2595c9d7df8da9.pdf#page=159",
+      "source_status": "原表の配布先はアクセス時に認証を求める場合がある。要点は調査ノート9頁に収録。"
+    },
+    {
+      "id": "45",
+      "topic": "宿泊施設の供給",
+      "indicator": "参考第12表で由布市の行を確認できない月",
+      "value": 8,
+      "unit": "か月",
+      "period": "2026年1～8月",
+      "population": "観光庁 各月第2次速報。客室数区分に変更",
+      "source_location": "参考第12表の各月を確認",
+      "interpretation": "未掲載月にゼロを入れない。2025年は従業者規模で抽出。",
+      "source_url": "https://www.mlit.go.jp/kankocho/tokei_hakusyo/shukuhakutokei.html"
+    },
+    {
+      "id": "46",
+      "topic": "無料デマンド実験",
+      "indicator": "運行日数",
+      "value": 22,
+      "unit": "日",
+      "period": "2020/2/5～2/29",
+      "population": "当該実験の営業期間",
+      "source_location": "環境省掲載 由布市実証報告 PDF164頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=164"
+    },
+    {
+      "id": "47",
+      "topic": "無料デマンド実験",
+      "indicator": "延べ乗客数",
+      "value": 141,
+      "unit": "人",
+      "period": "2020/2/5～2/29",
+      "population": "22運行日",
+      "source_location": "環境省掲載 由布市実証報告 PDF164頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=164"
+    },
+    {
+      "id": "48",
+      "topic": "無料デマンド実験",
+      "indicator": "1日平均乗客数",
+      "value": 6.4,
+      "unit": "人／日",
+      "period": "2020/2/5～2/29",
+      "population": "22運行日",
+      "source_location": "環境省掲載 由布市実証報告 PDF164頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=164"
+    },
+    {
+      "id": "49",
+      "topic": "無料デマンド実験",
+      "indicator": "1回の運行当たり平均乗車人数",
+      "value": 1.6,
+      "unit": "人／運行",
+      "period": "2020/2/5～2/29",
+      "population": "無料デマンド実験の実運行",
+      "source_location": "環境省掲載 由布市実証報告 PDF164頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=164"
+    },
+    {
+      "id": "50",
+      "topic": "無料デマンド実験",
+      "indicator": "由布院駅→宇奈岐日女神社",
+      "value": 17,
+      "unit": "人",
+      "period": "2020/2/5～2/29",
+      "population": "全141人の方向別乗降実績",
+      "source_location": "環境省掲載 由布市実証報告 PDF166頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=166"
+    },
+    {
+      "id": "51",
+      "topic": "無料デマンド実験",
+      "indicator": "宇奈岐日女神社→由布院駅",
+      "value": 6,
+      "unit": "人",
+      "period": "2020/2/5～2/29",
+      "population": "全141人の方向別乗降実績",
+      "source_location": "環境省掲載 由布市実証報告 PDF166頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=166"
+    },
+    {
+      "id": "52",
+      "topic": "無料デマンド実験",
+      "indicator": "利用者調査の回収",
+      "value": 9,
+      "unit": "票",
+      "period": "2020/2/5～2/29",
+      "population": "87部配布、当該実験利用者",
+      "source_location": "環境省掲載 由布市実証報告 PDF168頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=168"
+    },
+    {
+      "id": "53",
+      "topic": "無料デマンド実験",
+      "indicator": "回答者のうち由布市内（湯布院町）居住",
+      "value": 6,
+      "unit": "人",
+      "period": "2020/2/5～2/29",
+      "population": "調査回答者9",
+      "source_location": "環境省掲載 由布市実証報告 PDF211頁",
+      "interpretation": "過去の運行実績。現在の観光周遊便・駅と金鱗湖間の方向別需要とは異なる。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=211"
+    },
+    {
+      "id": "54",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければ徒歩と回答",
+      "value": 7,
+      "unit": "回答",
+      "period": "2020/2/5～2/29",
+      "population": "代替手段の有効回答8、複数回答",
+      "source_location": "環境省掲載 由布市実証報告 PDF217頁",
+      "interpretation": "少数の利用者の意見・想定。実際の代替行動や有料利用を測定していない。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=217"
+    },
+    {
+      "id": "55",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければタクシーと回答",
+      "value": 4,
+      "unit": "回答",
+      "period": "2020/2/5～2/29",
+      "population": "代替手段の有効回答8、複数回答",
+      "source_location": "環境省掲載 由布市実証報告 PDF217頁",
+      "interpretation": "少数の利用者の意見・想定。実際の代替行動や有料利用を測定していない。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=217"
+    },
+    {
+      "id": "56",
+      "topic": "無料デマンド実験",
+      "indicator": "乗車区間の適切な運賃を100円と回答",
+      "value": 7,
+      "unit": "回答",
+      "period": "2020/2/5～2/29",
+      "population": "運賃設問の有効回答9",
+      "source_location": "環境省掲載 由布市実証報告 PDF219頁",
+      "interpretation": "少数の利用者の意見・想定。実際の代替行動や有料利用を測定していない。",
+      "source_url": "https://www.env.go.jp/earth/earth/ondanka/green_slow_mobility/mat07_yufu.pdf#page=219"
+    }
+  ],
+  "stay": {
+    "as_of": "2026-11-04",
+    "occupancy": {
+      "year": 2025,
+      "region": "由布市",
+      "size_class": "従業者10人以上",
+      "target_facilities": 46,
+      "source_url": "https://www.mlit.go.jp/kankocho/page02_00022.html",
+      "source": "観光庁「宿泊旅行統計調査」各月第2次速報。参考第12表の客室稼働率、参考第5表の調査対象・回収施設、参考第11表の利用客室数。",
+      "months": [
+        {
+          "month": 1,
+          "occupancy_percent": 73.8,
+          "responding_facilities": 20,
+          "occupied_room_nights": 9193,
+          "source_row": 205,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996835.xlsx"
+        },
+        {
+          "month": 2,
+          "occupancy_percent": 75.1,
+          "responding_facilities": 15,
+          "occupied_room_nights": 6600,
+          "source_row": 194,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996833.xlsx"
+        },
+        {
+          "month": 3,
+          "occupancy_percent": 76,
+          "responding_facilities": 18,
+          "occupied_room_nights": 8386,
+          "source_row": 192,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996831.xlsx"
+        },
+        {
+          "month": 4,
+          "occupancy_percent": 69.9,
+          "responding_facilities": 20,
+          "occupied_room_nights": 8287,
+          "source_row": 197,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996829.xlsx"
+        },
+        {
+          "month": 5,
+          "occupancy_percent": 67,
+          "responding_facilities": 19,
+          "occupied_room_nights": 8208,
+          "source_row": 194,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996823.xlsx"
+        },
+        {
+          "month": 6,
+          "occupancy_percent": 48.3,
+          "responding_facilities": 19,
+          "occupied_room_nights": 5518,
+          "source_row": 190,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996821.xlsx"
+        },
+        {
+          "month": 7,
+          "occupancy_percent": 41.7,
+          "responding_facilities": 20,
+          "occupied_room_nights": 5054,
+          "source_row": 193,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996815.xlsx"
+        },
+        {
+          "month": 8,
+          "occupancy_percent": 57.4,
+          "responding_facilities": 17,
+          "occupied_room_nights": 6411,
+          "source_row": 189,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996813.xlsx"
+        },
+        {
+          "month": 9,
+          "occupancy_percent": 58.1,
+          "responding_facilities": 16,
+          "occupied_room_nights": 5556,
+          "source_row": 182,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996810.xlsx"
+        },
+        {
+          "month": 10,
+          "occupancy_percent": 69.9,
+          "responding_facilities": 18,
+          "occupied_room_nights": 8386,
+          "source_row": 189,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996807.xlsx"
+        },
+        {
+          "month": 11,
+          "occupancy_percent": 73.9,
+          "responding_facilities": 18,
+          "occupied_room_nights": 7386,
+          "source_row": 182,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996805.xlsx"
+        },
+        {
+          "month": 12,
+          "occupancy_percent": 75.1,
+          "responding_facilities": 17,
+          "occupied_room_nights": 8617,
+          "source_row": 185,
+          "source_url": "https://www.mlit.go.jp/kankocho/content/001996803.xlsx"
+        }
+      ]
+    },
+    "tours": [
+      {
+        "label": "由布院から阿蘇へ",
+        "minutes": 90,
+        "schedule": "11:31に由布院駅へ列車で到着。自由散策の後、貸切バスで阿蘇へ向かう。",
+        "source": "西鉄旅行の行程表",
+        "url": "https://yoyaku.nishitetsutravel.jp/TourDetail.aspx?intflg=0&knk=872&op=2&tc=MKGDGLG11306&via=TourList.aspx"
+      },
+      {
+        "label": "別府から由布院へ",
+        "minutes": 140,
+        "schedule": "太宰府・別府を回った後、14:10から湯布院を散策。18:20に博多駅で解散する予定。",
+        "source": "Enjoy! Kyushuの行程表",
+        "url": "https://enjoy-kyushu.com/ja/column/oita%E3%80%80/daytripbustour/3410.html"
+      }
+    ],
+    "survey": {
+      "source": "由布市のバスツアー助成・参加者アンケート",
+      "url": "https://www.city.yufu.oita.jp/kankou/article_83442"
+    },
+    "next_visit": {
+      "period": "2018年4月～2019年3月",
+      "sample": "アプリの位置情報利用に同意し、由布市に泊まったと判定された韓国人旅行者",
+      "n_lodgers": 429,
+      "n_next_place": 333,
+      "top_places": [
+        {
+          "place": "福岡市博多区",
+          "people": 155
+        },
+        {
+          "place": "福岡市中央区",
+          "people": 58
+        },
+        {
+          "place": "別府市",
+          "people": 54
+        }
+      ],
+      "source": "大分県インバウンド観光動態調査 158頁",
+      "url": "https://marketing.oita.jp/wp/wp-content/uploads/2020/03/ba13a578d5d0301d8c2595c9d7df8da9.pdf#page=159"
+    }
+  },
+  "connections": {
+    "as_of": "2026-11-04",
+    "arrival_area": "由布院駅前",
+    "baggage": {
+      "operator": "ゆふいんチッキ",
+      "station_to_inn": [
+        "09:00",
+        "15:00"
+      ],
+      "inn_to_station": [
+        "09:00",
+        "11:30"
+      ],
+      "temporary_storage": [
+        "09:00",
+        "17:00"
+      ],
+      "eligible_properties": 93,
+      "list_as_of": "2025-11-23",
+      "eligibility_basis": "公式一覧2頁の掲載名を集計",
+      "source": "https://yufuin.gr.jp/spot/spot-2295/",
+      "list_source": "https://yufuin.gr.jp/wp-content/uploads/2024/12/%E9%85%8D%E9%81%94%E5%AF%BE%E8%B1%A1%E5%AE%BF%E4%B8%80%E8%A6%A7_20251123.pdf"
+    },
+    "routes": [
+      {
+        "name": "大分空港から",
+        "date_note": "2026年10月25日〜11月30日のダイヤ",
+        "source_label": "大分交通・空港バス時刻表",
+        "source": "https://www.oitakotsu.co.jp/bus/airport/disp.php?period=20261025_20261130&rosen=03&shubetu=2",
+        "columns": [
+          "大分空港発",
+          "由布院駅前着"
+        ],
+        "trips": [
+          [
+            "10:00",
+            "10:55"
+          ],
+          [
+            "11:45",
+            "12:40"
+          ],
+          [
+            "14:05",
+            "15:00"
+          ],
+          [
+            "16:05",
+            "17:00"
+          ],
+          [
+            "17:35",
+            "18:30"
+          ]
+        ]
+      },
+      {
+        "name": "福岡から",
+        "date_note": "高速バス「ゆふいん号」通年ダイヤ・全便予約制",
+        "source_label": "日田バス・ゆふいん号時刻表",
+        "source": "https://hitabus.com/highways/2468",
+        "columns": [
+          "天神発",
+          "博多発",
+          "由布院駅前着"
+        ],
+        "trips": [
+          [
+            "08:25",
+            "08:48",
+            "10:59"
+          ],
+          [
+            "08:55",
+            "09:18",
+            "11:17"
+          ],
+          [
+            "09:25",
+            "09:48",
+            "11:47"
+          ],
+          [
+            "09:55",
+            "10:18",
+            "12:17"
+          ],
+          [
+            "10:25",
+            "10:48",
+            "12:59"
+          ],
+          [
+            "10:55",
+            "11:18",
+            "13:17"
+          ],
+          [
+            "11:25",
+            "11:48",
+            "13:47"
+          ],
+          [
+            "11:55",
+            "12:18",
+            "14:17"
+          ],
+          [
+            "12:25",
+            "12:48",
+            "14:59"
+          ],
+          [
+            "13:25",
+            "13:48",
+            "15:47"
+          ],
+          [
+            "14:25",
+            "14:48",
+            "16:59"
+          ],
+          [
+            "14:55",
+            "15:18",
+            "17:17"
+          ],
+          [
+            "15:25",
+            "15:48",
+            "17:47"
+          ],
+          [
+            "16:25",
+            "16:48",
+            "18:59"
+          ]
+        ]
+      }
+    ],
+    "shuttles": [
+      {
+        "property": "里山茶風",
+        "station_pickup": "15:00〜17:00、30分ごと",
+        "booking": "宿泊前日15時まで。定員に達し次第受付終了。",
+        "sources": [
+          [
+            "送迎案内",
+            "https://www.satoyamasafu.jp/news/1055"
+          ]
+        ]
+      },
+      {
+        "property": "由布院別邸 風の森",
+        "station_pickup": "15:00〜17:00、30分ごと",
+        "booking": "宿泊前日15時まで。予約の入った便を運行。",
+        "sources": [
+          [
+            "送迎案内",
+            "https://www.e-kazenomori.com/1255"
+          ]
+        ]
+      },
+      {
+        "property": "ゆふいん花由",
+        "station_pickup": "15:00〜17:00の指定時刻",
+        "booking": "宿泊予約時に迎えの時刻も予約。",
+        "sources": [
+          [
+            "送迎案内",
+            "https://www.hanayoshi.co.jp/access/"
+          ]
+        ]
+      },
+      {
+        "property": "湯布院 星の里",
+        "station_pickup": "16:30・17:30・18:30・19:30",
+        "booking": "宿泊前日23:59まで。希望時刻と人数をメールで連絡。",
+        "sources": [
+          [
+            "宿の公式案内",
+            "https://yufuin-hoshinosato.jp/"
+          ]
+        ]
+      },
+      {
+        "property": "旅館ゆふもみじ",
+        "station_pickup": "15:00〜20:00、30分ごと",
+        "booking": "前日までの予約制、各便先着9人。12月以降の条件は宿に確認。",
+        "sources": [
+          [
+            "送迎案内",
+            "https://yufumomiji.com/access/"
+          ],
+          [
+            "予約条件",
+            "https://yufumomiji.com/faq/"
+          ]
+        ]
+      }
+    ]
+  },
+  "municipal_performance": {
+    "indicator": "1便当たりの平均利用者数（観光特化型）",
+    "unit": "人／便",
+    "source": "https://www.city.yufu.oita.jp/uploads/files/2026/09/r7zimuzigyouhyoukasyo.pdf#page=16",
+    "source_location": "由布市・令和7年度実施事業の事後評価「次世代交通実験事業」本文13頁 指標②",
+    "years": [
+      {
+        "fiscal_year": 2021,
+        "target": 5.4,
+        "actual": 4.4,
+        "attainment_percent": 81.5
+      },
+      {
+        "fiscal_year": 2022,
+        "target": 5.4,
+        "actual": 3.9,
+        "attainment_percent": 72.2
+      },
+      {
+        "fiscal_year": 2023,
+        "target": 4.2,
+        "actual": 4.3,
+        "attainment_percent": 102.4
+      },
+      {
+        "fiscal_year": 2024,
+        "target": 4.2,
+        "actual": 3.7,
+        "attainment_percent": 88.1
+      },
+      {
+        "fiscal_year": 2025,
+        "target": 4.2,
+        "actual": 3.2,
+        "attainment_percent": 76.2
+      }
+    ],
+    "fy2025_city_subsidy_yen": 304000,
+    "cost_scope": "共同企業体への補助金。車両全体の運行原価はこの評価表では把握できない。"
+  },
+  "od_file": "Yufuin-Nolc-OD-2020.json"
+}

@@ -1,5 +1,9 @@
 from pathlib import Path
 import json,html
+from stay_section import render as render_stay
+from connections_section import render as render_connections
+from od_section import render as render_od
+from field_sources import render as render_field
 P=Path(__file__).resolve().parent
 photos=json.loads((P/'photos.json').read_text())
 e=html.escape
@@ -20,8 +24,15 @@ def circles(values,cls=''):
 
 credits=''.join(f'<li><a href="{p["source"]}">{p["title"]}</a>：{p["captured"][:4]+"年（元画像の日時情報）" if p["captured"][0].isdigit() else "撮影時点未確認"}。</li>' for p in photos)
 sourcecards=''.join(f'<article id="source-{s["id"]}"><p class="eyebrow">SOURCE 0{i+1}</p><h3>{s["title"]}</h3><dl><dt>時期</dt><dd>{s["period"]}</dd><dt>対象</dt><dd>{s["area"]}／{s["sample"]}</dd><dt>掲載指標</dt><dd>{s["question"]}。{s["multiple"]}。</dd><dt>掲載箇所</dt><dd>{s["page"]}</dd></dl><p>{s["limit"]}</p><a class="source-link" href="{s["source"]}" target="_blank" rel="noopener">原典のPDFを読む ↗</a></article>' for i,s in enumerate(S))
-page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b0c"><title>湯布院の観光と交通｜MOBILITY DESIGN LAB</title><meta name="description" content="湯布院へどう来て、何にいくら使い、何泊して、どこで過ごすのか。由布市の観光統計と現地調査を、図と実測データで読み解きます。"><link rel="canonical" href="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/"><meta property="og:type" content="article"><meta property="og:title" content="湯布院の観光と交通"><meta property="og:description" content="湯布院へどう来て、何にいくら使い、何泊して、どこで過ごすのか。由布市の観光統計と現地調査を、図と実測データで読み解きます。"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/assets/street.webp"><meta property="og:url" content="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/"><link rel="preload" href="../assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css?v=20261103-2"><link rel="stylesheet" href="research.css?v=20261103-3"><script defer src="app.js?v=20261103-3"></script></head><body><a class="skip" href="#main">本文へスキップ</a><div class="reading-progress" aria-hidden="true"></div><header class="masthead"><a class="wordmark" href="/#data-design">MDL.<span>MOBILITY DESIGN LAB</span></a><span class="issue">MOBILITY ANALYSIS / 01</span><button id="motion-toggle" type="button" aria-pressed="false">動きを止める</button></header><main id="main"><section class="hero" id="top"><div class="hero-kicker"><span>大分・湯布院</span><span>DATA STORY / 2026.11.03</span></div><h1><span class="hero-en">YUFUIN.</span><span class="hero-ja">湯布院の<br><em>観光と交通。</em></span></h1><div class="hero-photo">__HERO__<div class="photo-tag">BEYOND THE NUMBERS.</div></div><div class="hero-bottom"><p class="lead">どこから来て、<br><strong>町でどう過ごす？</strong></p><p>由布市の観光統計から宿泊と消費を、由布院の現地調査から交通手段と町歩きの時間を読み解きます。</p><a class="round-link" href="#visitors" aria-label="観光客の内訳を見る">↓</a></div></section>
+page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#090b0c"><title>湯布院の観光と交通｜MOBILITY DESIGN LAB</title><meta name="description" content="湯布院へどう来て、何にいくら使い、何泊して、どこで過ごすのか。由布市の観光統計と現地調査を、図と実測データで読み解きます。"><link rel="canonical" href="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/"><meta property="og:type" content="article"><meta property="og:title" content="湯布院の観光と交通"><meta property="og:description" content="湯布院へどう来て、何にいくら使い、何泊して、どこで過ごすのか。由布市の観光統計と現地調査を、図と実測データで読み解きます。"><meta property="og:image" content="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/assets/street.webp"><meta property="og:url" content="https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/"><link rel="preload" href="../assets/display.woff2" as="font" type="font/woff2" crossorigin><link rel="stylesheet" href="style.css?v=20261103-2"><link rel="stylesheet" href="research.css?v=20261104-1"><script defer src="app.js?v=20261104-1"></script></head><body><a class="skip" href="#main">本文へスキップ</a><div class="reading-progress" aria-hidden="true"></div><header class="masthead"><a class="wordmark" href="/#data-design">MDL.<span>MOBILITY DESIGN LAB</span></a><span class="issue">MOBILITY ANALYSIS / 01</span><button id="motion-toggle" type="button" aria-pressed="false">動きを止める</button></header><main id="main"><section class="hero" id="top"><div class="hero-kicker"><span>大分・湯布院</span><span>DATA STORY / 2026.11.04</span></div><h1><span class="hero-en">YUFUIN.</span><span class="hero-ja">湯布院の<br><em>観光と交通。</em></span></h1><div class="hero-photo">__HERO__<div class="photo-tag">BEYOND THE NUMBERS.</div></div><div class="hero-bottom"><p class="lead">どこから来て、<br><strong>町でどう過ごす？</strong></p><p>由布市の観光統計から宿泊と消費を、由布院の現地調査から交通手段と町歩きの時間を読み解きます。</p><a class="round-link" href="#visitors" aria-label="観光客の内訳を見る">↓</a></div></section>
 <nav class="chapter-nav" aria-label="特集の目次"><a href="#visitors">観光客</a><a href="#spending">消費額</a><a href="#nights">宿泊日数</a><a href="#access">交通手段</a><a href="#bus-history">観光バス</a><a href="#journey">町歩き</a><a href="#traffic-now">混雑</a><a href="#sources">資料</a></nav>
+<nav class="field-jumps" aria-label="追加調査の目次">
+  <p>追加調査 <span>2026.11.04</span></p>
+  <div><a href="#stay-patterns"><small>01　泊まる</small>月別の客室稼働率 <b>↓</b></a>
+  <a href="#connections"><small>02　乗り継ぐ</small>荷物と宿の迎え <b>↓</b></a>
+  <a href="#nolc-data"><small>03　巡る</small>ノルク17地点の乗降 <b>↓</b></a>
+  <a href="#field-data"><small>04　調べる</small>調査データ56項目 <b>↓</b></a></div>
+</nav>
 <section class="market-section" id="visitors" aria-labelledby="market-visitors-title">
   <header class="market-head">
     <p class="market-kicker">VISITORS <span>/</span> 2025</p>
@@ -101,6 +112,7 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
   <p class="market-sources"><a href="https://www.mlit.go.jp/kankocho/page02_00022.html">観光庁・2025年月次宿泊統計 参考第5〜9表 ↗</a><a href="https://inbound-data.and-d.co.jp/p/2025/muni/4410013/">アンド・ディ・市内での泊数 ↗</a></p>
 </section>
 
+__STAY_PATTERNS__
 <section class="wrap route-guide" id="access" aria-labelledby="route-heading"><p class="eyebrow blue-text">ACCESS / 2026年11月3日時点</p>
 <h2 id="route-heading">由布院へ、<br><em class="blue-text">どう来る？</em></h2>
 <p class="route-lead">福岡方面からは列車と高速バス、大分空港からは駅前までの直行バスがあります。</p>
@@ -111,6 +123,7 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
 <article><h3>別府駅から</h3><b>36番</b><p>西口から湯布院線へ。観光快速「ゆふりん」は10月17日から当面全便運休です。</p><a href="https://kamenoibus.com/archive/3724.html">亀の井バスの運行案内 ↗</a></article>
 </div><p class="route-stat">JR由布院駅の乗車人員は<strong>1日平均1,363人</strong>（2025年度）。通勤・通学などの利用も含む、乗車のみの実績です。 <a href="https://www.jrkyushu.co.jp/company/info/data/pdf/2025ekibetsu.pdf">JR九州・駅別乗車人員 ↗</a></p>
 <a class="source-chip" href="#arrival">来訪者が実際に使った交通手段を見る ↓</a></section>
+__CONNECTIONS__
 <section class="study wrap" id="arrival"><div class="section-top"><span class="section-no pink-text">01</span><div><p class="eyebrow">YUFUIN / SUMMER 2022</p><h2>旅の入口は、<br><em class="pink-text">自家用車が51％。</em></h2></div><a class="source-chip" href="#source-summer">調査の条件・出典 ↗</a></div><p class="context">2022年8月11日〜9月17日／由布院地域の現地調査</p>__SUMMERCIRCLES__<p class="circle-note"><b>それぞれの円が100％の目盛です。</b>色は各項目の掲載割合。灰色は100％までの目盛で、残りの交通手段の内訳や人数を示していません。選択方式が確認できないため、３項目を一つの円にまとめていません。</p><div class="sample circle-sample"><p>調査全体</p><div><b>1,023</b>組 <span>/</span> <b>2,565</b>人</div><p>交通手段の有効回答数は、掲載段落に記載がありません。</p></div><p class="important"><span>CHECK</span>上位３項目の抜粋です。<strong>残り14％を「観光バス」とは扱えません。</strong>2026年現在の全来訪者の構成比を示す数字でもありません。</p><div class="photo-pair">__TRAIN____LIFE__</div><div class="editor-note"><span>MDLの視点</span><p><strong>駐車場から歩く人と、駅から歩く人。</strong><br>到着手段の違いを、到着後の動線・荷物・案内の設計へつなぐことが次の問いです。</p></div></section>
 <section class="comparison wrap" id="comparison"><div class="section-top"><span class="section-no lime-text">02</span><div><p class="eyebrow">SAME PLACE, DIFFERENT SURVEY</p><h2>51と86.1。<br><em class="lime-text">違いにも、理由がある。</em></h2></div></div><div class="compare-statement"><p>由布市の観光基本計画には、<br>自家用車<strong class="lime-text">86.1<small>%</small></strong></p><div><p class="eyebrow">由布院までの移動手段 / 962回答</p><p>2022年2月公表の計画に掲載された、別の調査です。前の51％との差を、そのまま「車利用が減った」と読むことはできません。</p><p class="micro">交通手段の調査実施時期・詳細な抽出条件は未確認。計画の公表年と、現地調査の実施年は別です。</p><a class="source-link" href="#source-plan">条件と原典を見る ↗</a></div></div>__PLANCIRCLES__<p class="circle-note"><b>４つの独立した円で、掲載割合を表示。</b>各円は100％の目盛です。原票の選択方式が未確認のため、一つの構成比円グラフにはまとめていません。掲載値の合計は丸めにより100.1％。レンタカー・貸切観光バスの独立項目はありません。</p><div class="compare-rule"><p class="eyebrow">DON'T MIX THE DENOMINATORS</p><h3>場所。時期。対象。設問。</h3><p>この４つがそろわなければ、<strong>数字の差を「変化」にしない。</strong></p></div></section>
 <section class="photo-interlude">__MIST__<div><p class="eyebrow">LOOK BEYOND THE DESTINATION</p><h2>湯布院へ来る。<br>大分を巡る。<br><em>それは、別の問い。</em></h2></div></section>
@@ -141,7 +154,7 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
   <p class="journey-sources">徒歩の目安　<a href="https://www.michinoekiyufuin.com/gallery/1464/">道の駅ゆふいん</a> ／ <a href="https://yufuin.gr.jp/feature/feature-1981/">由布市公式旅ガイド</a></p>
   <div class="journey-practice">
     <h3>荷物を持ったまま歩く？</h3>
-    <p>駅に隣接する「ゆふいんチッキ」で、手荷物を9〜17時に預けられます。対象の宿に泊まる方は、駅から宿への配送も9〜15時に受け付けています。 <a href="https://yufuin.gr.jp/spot/spot-2295/">料金・対象の宿 ↗</a></p>
+    <p>駅から宿へ送る荷物は15時まで、駅での一時預かりは17時まで。 <a href="#connections">到着する便と荷物の受付、宿の迎えを照らし合わせる ↓</a></p>
   </div>
   <div class="journey-evidence">
     <div class="journey-evidence-title">
@@ -170,6 +183,7 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
     <a href="https://www.jstage.jst.go.jp/article/journalip1984/21/0/21_0_885/_pdf/-char/ja#page=5">交通社会実験の原表・表3 ↗</a></div>
   </aside>
 </section>
+__NOLC__
 <section class="wrap journey-section journey-traffic" id="traffic-now" aria-labelledby="journey-traffic-title">
   <p class="eyebrow orange-text">TRAFFIC / 到着・出発の時間帯</p>
   <h2 id="journey-traffic-title">駅前と大型バス駐車場。<br><em class="orange-text">混む時間が違う。</em></h2>
@@ -187,8 +201,30 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
   </div>
 </section>
 
-<section class="wrap next" id="next"><div class="section-top"><span class="section-no pink-text">05</span><div><p class="eyebrow">FROM DATA TO A BETTER JOURNEY</p><h2>「来る」を、<br><em class="pink-text">「過ごす」へ。</em></h2></div></div><p class="body-lead">ここからはMDLの分析・提案です。交通量の観測や施策の効果を確認した結果ではありません。</p><ol class="journey"><li><span>01</span><h3>来る</h3><p>出発地・交通手段・<br>到着時刻を記録</p></li><li><span>02</span><h3>降りる</h3><p>駅・駐車場・乗降場の<br>集中と待ち時間を確認</p></li><li><span>03</span><h3>巡る</h3><p>歩行・立寄り・荷物の<br>困りごとを把握</p></li><li><span>04</span><h3>戻る</h3><p>帰路・乗継ぎ・再乗車の<br>安心を確かめる</p></li></ol><div class="research-list"><article><b>01 / COUNT</b><h3>同じ日に、数える。</h3><p>平日・休日、季節、時間帯をそろえ、駐車場の入出庫、バス台数、乗降人数を把握する。</p></article><article><b>02 / CONNECT</b><h3>移動の前後をつなぐ。</h3><p>出発地・次の目的地、宿泊／日帰り、滞在時間を同じ調査票で聞く。個人を特定しない集計にする。</p></article><article><b>03 / TEST</b><h3>小さく試し、比べる。</h3><p>駐車・乗換え案内や荷物対応を試し、歩きやすさ・待ち時間・店舗への回遊を実測する。</p></article></div><div class="closing-photos">__SPRING____PATH__</div></section>
-<section class="sources wrap" id="sources"><p class="eyebrow">EVIDENCE / OPEN THE ORIGINAL</p><h2>調査資料と出典</h2><div class="report-downloads"><a href="downloads/Yufuin-Research.pdf">図表で読む調査レポート <b>PDF · 6ページ ↗</b></a><a href="downloads/Yufuin-Atlas-Data.xlsx" download>出典と計算式を見る <b>Excel · 11シート ↓</b></a><a href="downloads/Yufuin-Atlas-Research.json" download>全調査データを使う <b>JSON ↓</b></a></div><p>確認・更新日：2026年11月3日。調査の対象年はそれぞれ異なります。観光バスの歴史資料は各数値の直下に掲載しています。公式・原著の記述と、MDLの分析・提案を分けています。</p><div class="source-grid">__SOURCES__</div><details id="photo-credits"><summary>写真８点の出典・撮影時点・利用条件</summary><p>全８点は由布市フォトアルバムの実景写真です。地域の風景を伝えるもので、交通調査日の記録や現在の混雑・運行状況を示すものではありません。</p><p><a href="https://www.city.yufu.oita.jp/kankou/photomovie" target="_blank" rel="noopener">由布市の写真配布ページ・利用条件 ↗</a>：営利・非営利を問わず無償利用可能、データ自体の販売は禁止。写真提供：由布市フォトアルバム。撮影者の個人名は配布ページに記載なし。</p><ul>__CREDITS__</ul><p>縮小・WebP変換、表示枠に応じたトリミングを実施。拡大時は写真全体を表示します。日時は元画像に記録された情報であり、独立した撮影日の確認ではありません。生成画像は使用していません。</p><a href="photos.json">画像ごとの出典台帳（JSON）</a></details><div class="data-links"><a href="data.json" download>来訪手段3調査・観光バスの歴史資料（JSON） ↓</a><a href="/#data-design">データ分析のトップへ戻る ↗</a></div></section></main><footer><div class="footer-word">YUFUIN.<em>MOVE BETTER.</em></div><p>MOBILITY DESIGN LAB · MOBILITY ANALYSIS<br>モビリティ分析 / 2026.11.03</p><a href="#top">ページの先頭へ ↑</a></footer><dialog id="photo-dialog" aria-label="地域写真の拡大"><button class="dialog-close" type="button" aria-label="写真を閉じる">閉じる ×</button><img alt=""><p></p><a href="#photo-credits">出典・利用条件</a></dialog></body></html>'''
+__FIELD_DATA__
+<section class="wrap next" id="next"><div class="section-top"><span class="section-no pink-text">05</span><div><p class="eyebrow">FROM DATA TO A BETTER JOURNEY</p><h2>「来る」を、<br><em class="pink-text">「過ごす」へ。</em></h2></div></div><p class="body-lead">ここからはMDLの分析・提案です。交通量の観測や施策の効果を確認した結果ではありません。</p><ol class="journey"><li><span>01</span><h3>来る</h3><p>出発地・交通手段・<br>到着時刻を記録</p></li><li><span>02</span><h3>降りる</h3><p>駅・駐車場・乗降場の<br>集中と待ち時間を確認</p></li><li><span>03</span><h3>巡る</h3><p>歩行・立寄り・荷物の<br>困りごとを把握</p></li><li><span>04</span><h3>戻る</h3><p>帰路・乗継ぎ・再乗車の<br>安心を確かめる</p></li></ol><div class="research-list"><article><b>01 / COUNT</b><h3>同じ日に、数える。</h3><p>平日・休日、季節、時間帯をそろえ、駐車場の入出庫、バス台数、乗降人数を把握する。</p></article><article><b>02 / CONNECT</b><h3>移動の前後をつなぐ。</h3><p>出発地・次の目的地、宿泊／日帰り、滞在時間を同じ調査票で聞く。個人を特定しない集計にする。</p></article><article><b>03 / TEST</b><h3>小さく試し、比べる。</h3><p>駅・湯の坪街道・金鱗湖で、徒歩に困った区間と帰路の待ち時間を記録する。滞在が30分長い旅行組の追加支出や、同じ時間帯の住民の配車待ちも確かめる。</p></article></div><div class="closing-photos">__SPRING____PATH__</div></section>
+<section class="sources wrap" id="sources"><p class="eyebrow">EVIDENCE / OPEN THE ORIGINAL</p><h2>調査資料と出典</h2><div class="field-originals" id="originals">
+<h3>原典を読む</h3><div class="field-source-grid">
+<a href="https://www.city.yufu.oita.jp/cate_1/article_82084"><b>由布市地域公共交通計画 ↗</b><span>由布市、2024年4月1日更新。概要版で計画期間、市内の路線と交通体系を確認。</span></a>
+<a href="https://yufuin.gr.jp/news/news-5769/"><b>ノルク・2026年の運行案内 ↗</b><span>由布市まちづくり観光局、2026年4月2日更新。運行日、発車時刻、寺社を巡るコースと予約方法。</span></a>
+<a href="https://yufuin.gr.jp/spot/spot-2295/"><b>ゆふいんチッキの利用案内 ↗</b><span>公式旅ガイド。荷物を送れる宿の一覧、配送・回収・一時預かりの受付時間と料金。</span></a>
+<a href="https://www.city.yufu.oita.jp/uploads/files/2026/09/r7zimuzigyouhyoukasyo.pdf#page=14"><b>令和7年度実施事業の事後評価（PDF）↗</b><span>由布市。本文11〜12頁に地域公共交通事業、13頁に次世代交通実験事業の実績・目標・事業費。</span></a>
+</div></div>
+<h3 class="field-files-title">追加調査をダウンロード</h3><div class="report-downloads">
+<a href="downloads/Yufuin-Mobility-Research.pdf">湯布院の移動・宿泊の調査ノート <b>PDF · 13ページ ↗</b></a>
+<a href="downloads/Yufuin-Research-Data.xlsx" download>数値・出典・調査設計 <b>Excel · 8シート ↓</b></a>
+<a href="downloads/Yufuin-Nolc-OD-2020.json" download>ノルク17地点の乗降表 <b>JSON · 2020年2月 ↓</b></a>
+<a href="downloads/Yufuin-Field-Evidence.json" download>56項目・月別宿泊・到着便と送迎 <b>JSON · 追加調査データ ↓</b></a></div>
+<details class="field-baseline"><summary>観光客・消費額・宿泊日数の基礎資料（11月3日版）</summary><div class="report-downloads"><a href="downloads/Yufuin-Research.pdf">観光と交通の基礎レポート <b>PDF · 6ページ ↗</b></a><a href="downloads/Yufuin-Atlas-Data.xlsx" download>出典と計算式 <b>Excel · 11シート ↓</b></a><a href="downloads/Yufuin-Atlas-Research.json" download>観光と交通の基礎データ <b>JSON ↓</b></a></div></details>
+<p>2026年11月4日更新。調査の対象時期・範囲は数値ごとに記載しています。</p><div class="source-grid">__SOURCES__</div><details id="photo-credits"><summary>写真８点の出典・撮影時点・利用条件</summary><p>全８点は由布市フォトアルバムの実景写真です。地域の風景を伝えるもので、交通調査日の記録や現在の混雑・運行状況を示すものではありません。</p><p><a href="https://www.city.yufu.oita.jp/kankou/photomovie" target="_blank" rel="noopener">由布市の写真配布ページ・利用条件 ↗</a>：営利・非営利を問わず無償利用可能、データ自体の販売は禁止。写真提供：由布市フォトアルバム。撮影者の個人名は配布ページに記載なし。</p><ul>__CREDITS__</ul><p>縮小・WebP変換、表示枠に応じたトリミングを実施。拡大時は写真全体を表示します。日時は元画像に記録された情報であり、独立した撮影日の確認ではありません。生成画像は使用していません。</p><a href="photos.json">画像ごとの出典台帳（JSON）</a></details><div class="data-links"><a href="data.json" download>来訪手段3調査・観光バスの歴史資料（JSON） ↓</a><a href="/#data-design">データ分析のトップへ戻る ↗</a></div></section></main><footer><div class="footer-word">YUFUIN.<em>MOVE BETTER.</em></div><p>MOBILITY DESIGN LAB · MOBILITY ANALYSIS<br>モビリティ分析 / 2026.11.04</p><a href="#top">ページの先頭へ ↑</a></footer><dialog id="photo-dialog" aria-label="地域写真の拡大"><button class="dialog-close" type="button" aria-label="写真を閉じる">閉じる ×</button><img alt=""><p></p><a href="#photo-credits">出典・利用条件</a></dialog></body></html>'''
 replacements={'HERO':photo('street',eager=True),'DOTS':''.join('<i class="'+('on' if i<51 else '')+'"></i>' for i in range(100)),'TRAIN':photo('train'),'LIFE':photo('street-life'),'SUMMERCIRCLES':circles(S[0]['values']),'PLANCIRCLES':circles(S[1]['values'],'circle-grid--four'),'MIST':photo('mist'),'CARRIAGE':photo('carriage'),'LAKE':photo('lake'),'SPRING':photo('spring'),'PATH':photo('path'),'SOURCES':sourcecards,'CREDITS':credits,'FOREIGN':''.join(f'<article class="foreign-card {c}"><span class="transport-no">0{i+1}</span><h3>{v["label"]}</h3><div class="foreign-value">{v["value"]}<small>%</small></div><div class="bar-track" aria-hidden="true"><span style="--value:{v["value"]}%"></span></div></article>' for i,(v,c) in enumerate(zip(S[2]['values'],['pink','blue','lime','orange'])))}
+field_evidence=json.loads((P/'downloads/Yufuin-Field-Evidence.json').read_text())
+od_matrix=json.loads((P/'downloads/Yufuin-Nolc-OD-2020.json').read_text())
+replacements.update({
+    'STAY_PATTERNS':render_stay(field_evidence['stay']),
+    'CONNECTIONS':render_connections(field_evidence['connections']),
+    'NOLC':render_od(od_matrix,field_evidence['municipal_performance']),
+    'FIELD_DATA':render_field(field_evidence['records']),
+})
 for k,v in replacements.items(): page=page.replace('__'+k+'__',v)
 (P/'index.html').write_text(page)

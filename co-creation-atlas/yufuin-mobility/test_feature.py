@@ -56,3 +56,33 @@ assert 'id="mobility-analysis"' not in (P.parent/'index.html').read_text()
 assert 'モビリティ分析｜湯布院' not in (P.parent/'navigation.py').read_text()
 assert not (P.parent/'mobility_feature.py').exists()
 print('PASS: three independent datasets, 8 licensed image records, assets, anchors, source caveats, reduced motion, modal focus and MDL homepage entry and historical bus evidence.')
+
+
+# Additional field evidence is available in the HTML as well as in its source files.
+field=json.loads((P/'downloads/Yufuin-Field-Evidence.json').read_text())
+records=field['records']
+assert len(records)==56
+assert sorted(i for i in page.ids if i.startswith('fd-record-'))==sorted('fd-record-'+r['id'] for r in records)
+for anchor in ('stay-patterns','nolc-data','connections','field-data','originals'):
+ assert anchor in page.ids
+assert not re.search(r'__[A-Z_]+__',s)
+months=field['stay']['occupancy']['months']
+assert [m['month'] for m in months]==list(range(1,13))
+assert min(m['occupancy_percent'] for m in months)==41.7 and max(m['occupancy_percent'] for m in months)==76.0
+assert all(m['source_url'] in page.links for m in months)
+connections=field['connections']
+assert [len(r['trips']) for r in connections['routes']]==[5,14]
+assert len(connections['shuttles'])==5 and connections['baggage']['eligible_properties']==93
+od=json.loads((P/'downloads'/field['od_file']).read_text())
+matrix=od['matrix']
+assert len(od['stops'])==len(matrix)==17 and all(len(row)==17 for row in matrix)
+assert [sum(row) for row in matrix]==od['origin_totals']
+assert [sum(col) for col in zip(*matrix)]==od['destination_totals']
+assert sum(od['origin_totals'])==od['total']==141
+assert sum(n>0 for row in matrix for n in row)==35
+inline=json.loads(re.search(r'<script type="application/json" id="od-matrix">(.+?)</script>',s)[1])
+assert inline=={'stops':od['stops'],'matrix':matrix}
+assert not any('kitakyushu.lg.jp/files/000803199.pdf' in url for url in page.links)
+assert all(phrase in s for phrase in ('2025年度の実績','3.2<small>人／便','30.4万円','2026年の運行案内','20,496人'))
+assert not any(phrase in s for phrase in ('3,266人','371.8万円'))
+print('PASS: 56 records, monthly occupancy, 19 arrivals, 5 shuttles, 17-stop matrix, source links and corrected municipal indicators.')

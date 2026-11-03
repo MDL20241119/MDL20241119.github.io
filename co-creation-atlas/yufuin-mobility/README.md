@@ -26,3 +26,7 @@ The entry moved from Atlas to the MDL homepage's data-analysis section. Only the
 Neither the 2022 summer paper nor the city plan establishes exclusive single-answer transport shares in the accessible sources. Their percentages therefore use separate 100%-scale rings, not one composition pie. Grey is scale remainder, not an inferred transport category. The prefecture's multiple-answer chart remains separate and is not normalized.
 
 Historical bus evidence distinguishes: 60–100 parked tourist buses per day reported in the June 2017 council meeting; approximately 100 buses entering the centre daily in a 2017 proposal reproduced in the March 2018 tourism plan; and approximately 480,000 annual users of the Yufuin-go highway route in FY2017. These are not current measurements and must not be summed.
+
+## November 4 field research
+
+The build reads `downloads/Yufuin-Field-Evidence.json` (56 source records, monthly lodging and transport connections) and `downloads/Yufuin-Nolc-OD-2020.json` (directional boardings in the 2020 trial). Dedicated Python renderers generate the sections. Run the same offline checks after rebuilding. The first three routes for Yufuin Station, the monthly values, and all source notes are available without JavaScript.

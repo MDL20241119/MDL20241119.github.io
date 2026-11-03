@@ -49,3 +49,35 @@
   presets.addEventListener('change', update);
   update();
 })();
+
+(() => {
+  const section = document.getElementById('nolc-data');
+  if (!section) return;
+  const { stops, matrix } = JSON.parse(section.querySelector('#od-matrix').textContent);
+  const picker = section.querySelector('#od-stop');
+  const rows = Array.from(section.querySelectorAll('.od-table tbody tr'));
+
+  function update() {
+    const point = Number(picker.value);
+    const routes = stops.map((stop, i) => ({
+      stop, index: i, out: matrix[point][i], inbound: matrix[i][point],
+    })).filter(route => route.index !== point)
+      .sort((a, b) => (b.out + b.inbound) - (a.out + a.inbound) || a.index - b.index);
+    rows.forEach((row, i) => {
+      const route = routes[i];
+      row.cells[0].textContent = route.stop;
+      [route.out, route.inbound].forEach((count, j) => {
+        const cell = row.cells[j + 1];
+        cell.querySelector('b').textContent = count;
+        cell.querySelector('progress').value = count;
+      });
+    });
+    section.querySelector('[data-od-active]').textContent = stops[point];
+    section.querySelector('[data-od-out]').textContent = matrix[point].reduce((sum, n) => sum + n, 0);
+    section.querySelector('[data-od-in]').textContent = matrix.reduce((sum, row) => sum + row[point], 0);
+  }
+
+  picker.addEventListener('change', update);
+  update();
+  section.querySelector('.od-picker').hidden = false;
+})();
