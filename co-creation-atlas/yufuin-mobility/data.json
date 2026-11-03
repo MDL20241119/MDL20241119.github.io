@@ -1,0 +1,91 @@
+{
+  "updated": "2026-11-03",
+  "studies": [
+    {
+      "id": "summer",
+      "title": "由布院・夏の現地調査",
+      "period": "2022年8月11日〜9月17日",
+      "area": "由布院地域",
+      "sample": "調査全体：1,023組・2,565人。交通手段の有効回答数は掲載段落に記載なし。",
+      "question": "由布院を訪れる際の利用交通機関",
+      "multiple": "選択方式は当該段落では未確認",
+      "values": [
+        {
+          "label": "自家用車",
+          "value": 51
+        },
+        {
+          "label": "JR",
+          "value": 21
+        },
+        {
+          "label": "レンタカー",
+          "value": 14
+        }
+      ],
+      "source": "https://reposit.sun.ac.jp/dspace/bitstream/10561/2044/1/v57n4p89_takeda.pdf",
+      "page": "本文96頁（調査概要）、99頁（交通手段）／PDF 8、11頁",
+      "limit": "上位3項目の抜粋。残り14％を観光バスとみなさない。現在の全来訪者の構成比ではない。"
+    },
+    {
+      "id": "plan",
+      "title": "由布市の観光基本計画",
+      "period": "2022年2月公表の計画に掲載。交通手段の調査実施時期は未確認。",
+      "area": "由布院への来訪",
+      "sample": "交通手段の図：962回答",
+      "question": "由布院までの移動手段",
+      "multiple": "設問の選択方式は原票未確認",
+      "values": [
+        {
+          "label": "自家用車",
+          "value": 86.1
+        },
+        {
+          "label": "電車",
+          "value": 8.2
+        },
+        {
+          "label": "高速バス",
+          "value": 4.3
+        },
+        {
+          "label": "その他",
+          "value": 1.5
+        }
+      ],
+      "source": "https://www.city.yufu.oita.jp/uploads/files/2022/07/r4kankoukihonkeikaku.pdf",
+      "page": "本文20頁（PDF 21頁）",
+      "limit": "レンタカー・貸切観光バスの独立項目なし。丸めにより合計100.1％。2022年夏調査との増減比較には使わない。"
+    },
+    {
+      "id": "foreign",
+      "title": "大分県・海外居住者の調査",
+      "period": "2025年度（2025年5月〜2026年2月の指定日）。2026年3月公表",
+      "area": "大分県全域",
+      "sample": "海外居住者200人（国籍ではなく居住地による区分）",
+      "question": "大分県内で利用した交通手段",
+      "multiple": "複数回答",
+      "values": [
+        {
+          "label": "レンタカー",
+          "value": 25.5
+        },
+        {
+          "label": "JR在来線",
+          "value": 23.5
+        },
+        {
+          "label": "貸切・観光バス",
+          "value": 20.5
+        },
+        {
+          "label": "高速バス",
+          "value": 20.5
+        }
+      ],
+      "source": "https://www.pref.oita.jp/uploaded/attachment/2268519.pdf",
+      "page": "本文23〜24頁（PDF 24〜25頁）。調査概要：本文1〜2頁",
+      "limit": "湯布院への来訪手段ではない。同じ人が複数の交通機関を利用。上位項目の抜粋で、合計100％にはならない。"
+    }
+  ]
+}
