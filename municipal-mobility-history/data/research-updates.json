@@ -217,5 +217,30 @@
       "source": 2,
       "locator": "p1・p8・別紙1"
     }
-  ]
+  ],
+  "records": {
+    "municipal_osaka-3": {
+      "layers": [
+        "local",
+        "history"
+      ],
+      "title": "開催日と予定／実績の再照合",
+      "state": "planned",
+      "state_label": "2025/3/27協議で4月以降の継続予定を説明",
+      "summary": "元PDFの開催日は2025年3月27日。4月以降のMetro継続予定を説明しており、6月10日の運行実績確認ではない。6月10日はファイル名からしか確認できず、公表日は未確定。元の記録を残して区別する。",
+      "url": "../mobility-policy-history/updates/2026-11-outcomes/#osaka-ondemand",
+      "source_url": "https://www.city.osaka.lg.jp/templates/dantaikyogi/cmsfiles/contents/0000639/639092/20250610.pdf",
+      "locator": "PDF1 開催日／PDF4(7) 継続予定の説明"
+    },
+    "mlit_transport_gap-2025-92fddde2c374": {
+      "layers": [
+        "selection"
+      ],
+      "title": "同一実証の結果と後継移行を追加確認",
+      "summary": "市と国の結果資料で2025年2回のチョイソコさんだ実証を確認。2026年4月の本格運行に接続する。同じ採択を別事業として加算しない。",
+      "url": "../mobility-policy-history/updates/2026-11-outcomes/#sanda-transition",
+      "source_url": "https://kotsu-kuhaku.jp/adopter_7/kotsu/detail.php?CN=426465",
+      "locator": "三田市AIオンデマンド乗合タクシーの実証運行・実績"
+    }
+  }
 }

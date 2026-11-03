@@ -1,0 +1,34 @@
+{
+  "passed": 7,
+  "failed": 0,
+  "checks": [
+    {
+      "name": "Prior 76 result records and 150 observation events remain field-identical",
+      "result": "pass"
+    },
+    {
+      "name": "260 canonical projects, adoptions and original detail shards remain unchanged",
+      "result": "pass"
+    },
+    {
+      "name": "Four source-result records and 32 events are counted separately from transport projects",
+      "result": "pass"
+    },
+    {
+      "name": "New result records are searchable and retain all metric/event/source references",
+      "result": "pass"
+    },
+    {
+      "name": "Old Osaka date is identified as a planned-operation explanation and original record remains accessible",
+      "result": "pass"
+    },
+    {
+      "name": "Existing Sanda adoption links to outcomes without adding an adoption",
+      "result": "pass"
+    },
+    {
+      "name": "Policy denominators, decision/payment distinction and document conflicts are explicit",
+      "result": "pass"
+    }
+  ]
+}
