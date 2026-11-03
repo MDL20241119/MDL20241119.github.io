@@ -2,13 +2,12 @@
 
 Published at https://mobilitydlab.com/co-creation-atlas/yufuin-mobility/ .
 
-A standalone static feature within WORLD CO-CREATION ATLAS. No tracking, third-party script dependencies or form submission. Local images and fonts work without third-party content requests.
+A standalone static feature linked from the MDL homepage data-analysis section, retaining its original URL. No tracking, third-party script dependencies or form submission. Local images and fonts work without third-party content requests.
 
 ## Rebuild and check
 
 - `python3 co-creation-atlas/yufuin-mobility/build.py` regenerates the feature HTML and data JSON.
-- `python3 co-creation-atlas/mobility_feature.py` idempotently refreshes only the homepage entrance/header and adds this feature to the Atlas sitemap. The full Atlas build also calls it.
-- `python3 co-creation-atlas/yufuin-mobility/test_feature.py` checks independent datasets, images, source caveats, links and entry idempotence.
+- `python3 co-creation-atlas/yufuin-mobility/test_feature.py` checks independent datasets, images, source caveats, links, independent percentage rings, historical bus evidence and the MDL homepage entry.
 - `node --check co-creation-atlas/yufuin-mobility/app.js`
 - The shared Atlas display font is Barlow Condensed Black; its license is in `../assets/display-font-license.txt`. Japanese font subsets derive from Noto Sans CJK JP. Its distribution license is included in `assets/noto-font-license.txt`.
 
@@ -19,3 +18,11 @@ The three studies are not pooled or treated as a time series. Overall survey cou
 `data.json` records source URLs, study conditions, values and limitations. `photos.json` records the eight Yufu City photographs, usage terms, original-image hashes, reported image dates and transformations. Dates embedded in source images are not independently verified. Photos illustrate regional scenery rather than current traffic or survey-day conditions.
 
 All animation has reduced-motion support and a manual stop control. Values remain present without JavaScript. Photo dialogs support Escape and restore keyboard focus.
+
+## November 3 revision
+
+The entry moved from Atlas to the MDL homepage's data-analysis section. Only the previously added Atlas entrance, menu item and insertion helper were removed. The feature URL is unchanged.
+
+Neither the 2022 summer paper nor the city plan establishes exclusive single-answer transport shares in the accessible sources. Their percentages therefore use separate 100%-scale rings, not one composition pie. Grey is scale remainder, not an inferred transport category. The prefecture's multiple-answer chart remains separate and is not normalized.
+
+Historical bus evidence distinguishes: 60–100 parked tourist buses per day reported in the June 2017 council meeting; approximately 100 buses entering the centre daily in a 2017 proposal reproduced in the March 2018 tourism plan; and approximately 480,000 annual users of the Yufuin-go highway route in FY2017. These are not current measurements and must not be summed.

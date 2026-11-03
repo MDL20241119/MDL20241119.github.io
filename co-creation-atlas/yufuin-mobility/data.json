@@ -87,5 +87,50 @@
       "page": "本文23〜24頁（PDF 24〜25頁）。調査概要：本文1〜2頁",
       "limit": "湯布院への来訪手段ではない。同じ人が複数の交通機関を利用。上位項目の抜粋で、合計100％にはならない。"
     }
-  ]
+  ],
+  "historicalBusRecords": [
+    {
+      "id": "council-2017",
+      "label": "地域内に駐車する観光バス",
+      "range": [
+        60,
+        100
+      ],
+      "unit": "台／日",
+      "period": "2017年6月16日の議会発言",
+      "area": "湯布院地域。発言の文脈は温湯・金鱗湖付近",
+      "evidenceType": "議員による当時の現場状況の報告",
+      "speaker": "野上安一議員",
+      "source": "https://www.city.yufu.oita.jp/wp-content/uploads/2017/09/6.16.pdf#page=17",
+      "page": "印刷119頁／PDF17頁",
+      "limits": "調査日・数え方・平休日の区別は未記載。市全域の観測統計、外国人専用台数、現在値ではない。"
+    },
+    {
+      "id": "plan-2018",
+      "label": "由布院中心部へ流入する観光バス",
+      "value": 100,
+      "approximate": true,
+      "unit": "台／日",
+      "period": "2017年の提案を2018年3月の計画に掲載",
+      "area": "由布院中心部",
+      "evidenceType": "計画のマスタープラン図に掲載された歴史的数値",
+      "source": "https://www.city.yufu.oita.jp/wp-content/uploads/2018/07/sinyufuinonsenkankokihonkeikaku.pdf#page=39",
+      "page": "39頁",
+      "limits": "2017年経済産業省事業による提案図。調査日・方法は未記載。2018年の新規実測値や現在値とは断定できない。議会発言の60〜100台と合算・増減比較しない。"
+    },
+    {
+      "id": "yufuin-go-2017",
+      "label": "高速路線バス「ゆふいん号」の利用者数",
+      "value": 480000,
+      "approximate": true,
+      "unit": "人／年度",
+      "period": "2017年度。2018年5月31日事業者発表",
+      "area": "福岡〜湯布院の路線全体",
+      "evidenceType": "事業者発表の年間路線利用者数",
+      "source": "https://hitabus.com/wp-content/uploads/2018/05/8b7623dad400e1de970498d591cd4e20.pdf#page=1",
+      "page": "1頁",
+      "limits": "貸切観光バスとは別。湯布院への到着人数、固有の来訪者数、外国人客数には置き換えない。"
+    }
+  ],
+  "chartMethod": "選択方式未確認の割合は100％目盛の独立した円で表示し、構成比として合算しない。複数回答の県調査は比較バーで表示。"
 }

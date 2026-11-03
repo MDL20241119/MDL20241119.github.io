@@ -9,7 +9,7 @@
   motion.addEventListener('click', () => { manual = true; setMotion(document.body.dataset.motion !== 'off'); });
   if ('IntersectionObserver' in window) {
     const io = new IntersectionObserver(entries => entries.forEach(entry => { if (entry.isIntersecting) { entry.target.classList.add('in-view'); io.unobserve(entry.target); } }), {threshold:.12});
-    document.querySelectorAll('.primary-grid,.bars,.foreign-grid').forEach(node => io.observe(node));
+    document.querySelectorAll('.primary-grid,.bars,.foreign-grid,.circle-grid').forEach(node => io.observe(node));
   }
   let ticking = false;
   function progress() { const max = document.documentElement.scrollHeight - innerHeight; document.querySelector('.reading-progress').style.width = (max > 0 ? Math.max(0,Math.min(100,scrollY/max*100)) : 0) + '%'; ticking = false; }

@@ -16,7 +16,6 @@ GROUPS = [
         ('まちづくりの事例を探す', BASE+'?lens=place#explore', 'まちづくり・地域運営'),
         ('まちづくりの事例を比較する', BASE+'learn/choose/?lens=place', '対象地域・担い手・維持管理・変化'),
         ('まちづくりの基礎を学ぶ', BASE+'learn/#town', '暮らしと地域から考える'),
-        ('モビリティ分析｜湯布院', BASE+'yufuin-mobility/', '交通の数字から、まちへの入口を読む'),
     ]),
     ('都市の成長を読む', [
         ('福岡市と世界10都市を読む', '/research/fukuoka-startup-policy/', '仕事・所得・住まいの変化'),
