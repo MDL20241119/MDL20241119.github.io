@@ -1076,5 +1076,84 @@
     "fy2025_city_subsidy_yen": 304000,
     "cost_scope": "共同企業体への補助金。車両全体の運行原価はこの評価表では把握できない。"
   },
-  "od_file": "Yufuin-Nolc-OD-2020.json"
+  "od_file": "Yufuin-Nolc-OD-2020.json",
+  "visitor_spending_rolling_year": {
+    "area": "由布市",
+    "period": "2025年7月〜2026年6月",
+    "checked": "2026-11-04",
+    "publisher": "株式会社アンド・ディ",
+    "survey": "観光庁「インバウンド消費動向調査」B1地域調査",
+    "source_url": "https://inbound-data.and-d.co.jp/muni/4410013/",
+    "method_url": "https://inbound-data.and-d.co.jp/about/",
+    "respondents": 1185,
+    "spend_yen": 13321,
+    "mean_nights": 0.4,
+    "overnight_pct": 35.3,
+    "spending": [
+      [
+        "宿泊費",
+        8192,
+        61.5
+      ],
+      [
+        "飲食費",
+        3606,
+        27.1
+      ],
+      [
+        "都道府県内交通費",
+        94,
+        0.7
+      ],
+      [
+        "娯楽等サービス費",
+        217,
+        1.6
+      ],
+      [
+        "買物代",
+        1204,
+        9.0
+      ],
+      [
+        "その他",
+        9,
+        0.1
+      ]
+    ],
+    "quarters": [
+      {
+        "period": "2025年7〜9月",
+        "n": 214,
+        "spend_yen": 9337,
+        "mean_nights": 0.3,
+        "overnight_pct": 26.9,
+        "url": "https://inbound-data.and-d.co.jp/p/2025q3/muni/4410013/"
+      },
+      {
+        "period": "2025年10〜12月",
+        "n": 361,
+        "spend_yen": 13958,
+        "mean_nights": 0.5,
+        "overnight_pct": 38.2,
+        "url": "https://inbound-data.and-d.co.jp/p/2025q4/muni/4410013/"
+      },
+      {
+        "period": "2026年1〜3月",
+        "n": 351,
+        "spend_yen": 15057,
+        "mean_nights": 0.5,
+        "overnight_pct": 36.5,
+        "url": "https://inbound-data.and-d.co.jp/p/2026q1/muni/4410013/"
+      },
+      {
+        "period": "2026年4〜6月",
+        "n": 259,
+        "spend_yen": 12781,
+        "mean_nights": 0.4,
+        "overnight_pct": 35.4,
+        "url": "https://inbound-data.and-d.co.jp/p/2026q2/muni/4410013/"
+      }
+    ]
+  }
 }

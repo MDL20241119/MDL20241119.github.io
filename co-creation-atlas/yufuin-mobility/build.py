@@ -3,6 +3,7 @@ import json,html
 from stay_section import render as render_stay
 from connections_section import render as render_connections
 from od_section import render as render_od
+from rolling_market import render as render_rolling
 from field_sources import render as render_field
 P=Path(__file__).resolve().parent
 photos=json.loads((P/'photos.json').read_text())
@@ -97,6 +98,7 @@ page='''<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="v
     </div>
   </div>
   <p class="market-sources"><a href="https://www.city.yufu.oita.jp/uploads/files/2026/06/R7-kankoudautaityousakekka.pdf#page=2">由布市・発地別観光客数と消費額 ↗</a><a href="https://inbound-data.and-d.co.jp/p/2025/muni/4410013/">アンド・ディ・2025年の由布市集計 ↗</a></p>
+__ROLLING_SURVEY__
 </section>
 <section class="market-section" id="nights" aria-labelledby="market-nights-title">
   <header class="market-head"><p class="market-kicker">STAY <span>/</span> 2025</p><h2 id="market-nights-title">由布市に、<br><em>何泊する？</em></h2></header>
@@ -224,6 +226,7 @@ replacements.update({
     'STAY_PATTERNS':render_stay(field_evidence['stay']),
     'CONNECTIONS':render_connections(field_evidence['connections']),
     'NOLC':render_od(od_matrix,field_evidence['municipal_performance']),
+    'ROLLING_SURVEY':render_rolling(field_evidence['visitor_spending_rolling_year']),
     'FIELD_DATA':render_field(field_evidence['records']),
 })
 for k,v in replacements.items(): page=page.replace('__'+k+'__',v)

@@ -86,3 +86,6 @@ assert not any('kitakyushu.lg.jp/files/000803199.pdf' in url for url in page.lin
 assert all(phrase in s for phrase in ('2025年度の実績','3.2<small>人／便','30.4万円','2026年の運行案内','20,496人'))
 assert not any(phrase in s for phrase in ('3,266人','371.8万円'))
 print('PASS: 56 records, monthly occupancy, 19 arrivals, 5 shuttles, 17-stop matrix, source links and corrected municipal indicators.')
+
+assert 'visitor_spending_rolling_year' in field
+assert all(phrase in s for phrase in ('13,321','35.3','1,185','0.4'))
