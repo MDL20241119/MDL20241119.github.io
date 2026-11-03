@@ -1,0 +1,574 @@
+{
+  "as_of": "2026-11-04",
+  "scope": "Beppu research coverage, not equivalence of measurements",
+  "main_topics": [
+    {
+      "topic": "観光客総数・日帰り・宿泊",
+      "status": "市公表値",
+      "scope": "2019〜2025年、2025四半期。月別は宿泊のみ。",
+      "anchor": "#visitors"
+    },
+    {
+      "topic": "国内・外国、外国人国/地域",
+      "status": "市公表推計",
+      "scope": "2024/2025改訂版、2025外国人22区分。旧推計との長期比較不可。",
+      "anchor": "#stay"
+    },
+    {
+      "topic": "国内の発地",
+      "status": "市宿泊の地域構成",
+      "scope": "外国を含む全宿泊の構成。全来訪者の国内発地ではない。",
+      "anchor": "#stay-detail"
+    },
+    {
+      "topic": "訪問理由・未訪問理由・同行者",
+      "status": "市単独未確認",
+      "scope": "県の訪問理由と改善希望は掲載。別府回答だけの集計には代用しない。",
+      "anchor": "#stay-detail"
+    },
+    {
+      "topic": "月別季節性",
+      "status": "宿泊/施設入込を区別",
+      "scope": "2024/2025市宿泊、2025外国人宿泊、19施設入込。",
+      "anchor": "#visitors"
+    },
+    {
+      "topic": "地区別に泊まる場所",
+      "status": "市公表値",
+      "scope": "北浜中央/鉄輪明礬/堀田観海寺/その他の2024/2025。",
+      "anchor": "#stay"
+    },
+    {
+      "topic": "市の観光消費総額・単価",
+      "status": "県単価×市人数",
+      "scope": "2025年4区分、改訂後2024比較。市直接支出調査ではない。",
+      "anchor": "#stay"
+    },
+    {
+      "topic": "訪日客の費目別消費",
+      "status": "市単独未確認・県参考",
+      "scope": "観光庁公式県別2025費目。別府の支出/移動費に読み換えない。",
+      "anchor": "#stay-detail"
+    },
+    {
+      "topic": "訪日客の直近4四半期支出",
+      "status": "市単独未確認",
+      "scope": "湯布院の民間個票再集計に相当する別府市値は今回未確認。",
+      "anchor": "#coverage"
+    },
+    {
+      "topic": "平均泊数・宿泊日数",
+      "status": "別定義を併記",
+      "scope": "市KPI1.106泊/2025回答施設1.103泊/県質問紙泊数。",
+      "anchor": "#stay-detail"
+    },
+    {
+      "topic": "客室稼働率・施設数",
+      "status": "国の市別回答施設",
+      "scope": "2025従業者10人以上と2026客室20室以上を分離。",
+      "anchor": "#stay-detail"
+    },
+    {
+      "topic": "時間単位の市内滞在",
+      "status": "市全体未確認",
+      "scope": "宿泊日数、定期観光3時間、駐車容量では代用しない。",
+      "anchor": "#coverage"
+    },
+    {
+      "topic": "観光客の交通手段",
+      "status": "市単独未確認",
+      "scope": "県4,942人・海外居住200人の複数回答を別枠表示。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "住民の交通手段・困りごと",
+      "status": "市/中部圏を区別",
+      "scope": "2021市民853人。2026計画中部圏1,142人は別府単独ではない。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "観光バス台数・乗客数",
+      "status": "市全体未確認",
+      "scope": "県貸切バス事業実績・調査回答・定員・駐車容量を分離。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "観光/高速バス便・運賃",
+      "status": "事業者の現行案内",
+      "scope": "定期地獄めぐり、秋限定オープントップ、フリー券、運休。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "鉄道・空港・港のアクセス",
+      "status": "公式案内と年度実績",
+      "scope": "JR3駅、2024港/空港、空港バス、船の公式時刻。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "GWの交通・観光",
+      "status": "2026期間限定速報",
+      "scope": "8日間の高速乗降車/船舶降客降車/13施設/34宿泊施設。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "駅の荷物保管・宿配送",
+      "status": "提供者案内",
+      "scope": "ヤマト/WANDER COMPASS/特定3ホテル。空港配送は中止中。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "宿の送迎・最終到着便接続",
+      "status": "市横断値未確認",
+      "scope": "対象宿の車両・時間別稼働・利用件数・費用は未確認。",
+      "anchor": "#coverage"
+    },
+    {
+      "topic": "地域間回遊・訪問順序",
+      "status": "圏域人流/市単独未確認",
+      "scope": "2024年10月中部圏人流。別府翌日最初の立寄り先は未確認。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "地点別乗降OD",
+      "status": "GLOBAL標本あり",
+      "scope": "聞き取り2,171件の起終点区分。全実車5,187件と別母数。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "コミュニティ交通実証",
+      "status": "計画・議事・現行条件",
+      "scope": "延長期間/南部循環線。全サービス年間収支の一覧は未確認。",
+      "anchor": "#plans"
+    },
+    {
+      "topic": "タクシー車両・人員・実績",
+      "status": "国の営業区域集計",
+      "scope": "2024年度別府市営業区域。稼働率を現在の空車率にしない。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "公共交通費・委託費・収支",
+      "status": "計画KPI/一部未確認",
+      "scope": "市行政負担KPI、県財政負担目標。全実証の確定費用一覧は未確認。",
+      "anchor": "#plans"
+    },
+    {
+      "topic": "渋滞・待ち時間・駐車",
+      "status": "地点/時期限定",
+      "scope": "駅前本町の解除候補、寄港時待ち列、大型駐車6台。通年待ち時間未確認。",
+      "anchor": "#mobility"
+    },
+    {
+      "topic": "夜の外出・移動断念・消費効果",
+      "status": "市単独未確認",
+      "scope": "県夜間観光改善希望は意見。帰りの不成立人数や因果効果ではない。",
+      "anchor": "#coverage"
+    },
+    {
+      "topic": "国・県・市の交通計画",
+      "status": "現行原典確認",
+      "scope": "第3次国計画、県2026ビジョン、市2027/9終期、九州広域計画。",
+      "anchor": "#plans"
+    },
+    {
+      "topic": "国・県・市の観光計画",
+      "status": "現行原典確認",
+      "scope": "国2026〜2030、県2025〜2027、市2025〜2029。市DX計画2030も併記。",
+      "anchor": "#plans"
+    }
+  ],
+  "field_records": [
+    {
+      "yufuin_record": "01",
+      "topic": "訪問を見送った理由",
+      "indicator": "混雑してゆっくりできない",
+      "beppu_status": "別府市単独の同等調査は未確認。県の不満・希望は、未訪問理由ではない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "02",
+      "topic": "訪問を見送った理由",
+      "indicator": "他の観光地を訪れたい",
+      "beppu_status": "別府市単独の同等調査は未確認。県の不満・希望は、未訪問理由ではない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "03",
+      "topic": "訪問を見送った理由",
+      "indicator": "宿泊・食事・移動費が高い",
+      "beppu_status": "別府市単独の同等調査は未確認。県の不満・希望は、未訪問理由ではない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "04",
+      "topic": "訪問を見送った理由",
+      "indicator": "アクセスが悪く移動が不便",
+      "beppu_status": "別府市単独の同等調査は未確認。県の不満・希望は、未訪問理由ではない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "05",
+      "topic": "訪問を見送った理由",
+      "indicator": "特にない",
+      "beppu_status": "別府市単独の同等調査は未確認。県の不満・希望は、未訪問理由ではない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "06",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・来訪者回答",
+      "beppu_status": "市2021住民アンケート、県中部圏アンケート、2026協議会議事。来訪者と住民を分ける。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "07",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・市民回答",
+      "beppu_status": "市2021住民アンケート、県中部圏アンケート、2026協議会議事。来訪者と住民を分ける。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "08",
+      "topic": "団体の調査漏れ",
+      "indicator": "回答者に占める団体",
+      "beppu_status": "別府単独の団体抽出・未回答率は未確認。県の観光バス複数回答を団体比率にしない。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "09",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・宿泊",
+      "beppu_status": "市2025入込統計と外国人改訂推計あり。駅周辺の同じ400人調査ではない。",
+      "page_anchor": "#visitors"
+    },
+    {
+      "yufuin_record": "10",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・日帰り",
+      "beppu_status": "市2025入込統計と外国人改訂推計あり。駅周辺の同じ400人調査ではない。",
+      "page_anchor": "#visitors"
+    },
+    {
+      "yufuin_record": "11",
+      "topic": "誰が時間を決めるか",
+      "indicator": "韓国の旅行会社聞き取り",
+      "beppu_status": "別府について旅行会社が決める滞在枠・実滞在の聞取り公表値は未確認。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "12",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の2地点間でバス利用",
+      "beppu_status": "中部圏携帯人流はあるが、別府と福岡の旅行者別宿泊組合せは未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "13",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の両地域に宿泊",
+      "beppu_status": "中部圏携帯人流はあるが、別府と福岡の旅行者別宿泊組合せは未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "14",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部のみに宿泊",
+      "beppu_status": "中部圏携帯人流はあるが、別府と福岡の旅行者別宿泊組合せは未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "15",
+      "topic": "旅行の組み合わせ",
+      "indicator": "由布院のみに宿泊",
+      "beppu_status": "中部圏携帯人流はあるが、別府と福岡の旅行者別宿泊組合せは未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "16",
+      "topic": "貸切行程",
+      "indicator": "列車到着後の自由散策予定",
+      "beppu_status": "地獄めぐり約3時間、秋別府〜由布院約65分の予定仕様。平均実滞在ではない。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "17",
+      "topic": "貸切行程",
+      "indicator": "別府経由商品での湯布院滞在予定",
+      "beppu_status": "地獄めぐり約3時間、秋別府〜由布院約65分の予定仕様。平均実滞在ではない。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "18",
+      "topic": "地域間回遊",
+      "indicator": "金鱗湖・湯の坪周辺の来街者",
+      "beppu_status": "2024年10月中部圏ODあり。別府観光客の同日周遊先・順序の同等表は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "19",
+      "topic": "地域間回遊",
+      "indicator": "同日に宇佐神宮も訪問",
+      "beppu_status": "2024年10月中部圏ODあり。別府観光客の同日周遊先・順序の同等表は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "20",
+      "topic": "地域間回遊",
+      "indicator": "同日に深耶馬渓も訪問",
+      "beppu_status": "2024年10月中部圏ODあり。別府観光客の同日周遊先・順序の同等表は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "21",
+      "topic": "地域間回遊",
+      "indicator": "同日に昭和の町も訪問",
+      "beppu_status": "2024年10月中部圏ODあり。別府観光客の同日周遊先・順序の同等表は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "22",
+      "topic": "既存の受け皿",
+      "indicator": "大型専用駐車場の収容台数",
+      "beppu_status": "鉄輪地獄地帯公園小倉地区・大型6台を確認。稼働率は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "23",
+      "topic": "ツアー実績の取り寄せ",
+      "indicator": "助成ツアーに必要な参加者数下限",
+      "beppu_status": "別府で同一要件のツアー助成実績・参加者数は今回未確認。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "24",
+      "topic": "消費の測り方",
+      "indicator": "助成調査票の買物総額の階級",
+      "beppu_status": "市は県単価×人数。県公式費目を別枠掲載。ツアー別買物実額は未確認。",
+      "page_anchor": "#stay"
+    },
+    {
+      "yufuin_record": "25",
+      "topic": "訪日客の市内支出",
+      "indicator": "訪問1人当たり",
+      "beppu_status": "別府市内の訪日客費目別単価は未確認。県公式単価を別府値にはしない。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "26",
+      "topic": "住民への影響",
+      "indicator": "郊外駐車場からのグリスロ利用・下限",
+      "beppu_status": "市民モード/中部圏調査、寄港時列を確認。新交通による住民負担の因果測定は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "27",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の利用者数",
+      "beppu_status": "市計画/実証延長/南部循環仕様あり。最新全実証の年間輸送・委託費は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "28",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の事業費",
+      "beppu_status": "市計画/実証延長/南部循環仕様あり。最新全実証の年間輸送・委託費は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "29",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の運行業務委託",
+      "beppu_status": "市計画/実証延長/南部循環仕様あり。最新全実証の年間輸送・委託費は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "30",
+      "topic": "住民の交通供給",
+      "indicator": "計画の対象期間",
+      "beppu_status": "市計画/実証延長/南部循環仕様あり。最新全実証の年間輸送・委託費は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "31",
+      "topic": "既存観光便",
+      "indicator": "ノルク所要時間",
+      "beppu_status": "別府地獄めぐり・オープントップの仕様。実利用/便・収支は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "32",
+      "topic": "荷物と乗継",
+      "indicator": "一時預かりの終了時刻",
+      "beppu_status": "駅の預かり・配送と特定宿サービス。地域全体の車両/対象宿数・実績は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "33",
+      "topic": "支出と泊数",
+      "indicator": "分析用の調査個票",
+      "beppu_status": "国2025県訪日費目と別府市回答施設の延べ/実人数を確認。市訪日個票同等集計は未確認。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "34",
+      "topic": "交通供給",
+      "indicator": "タクシー期末車両",
+      "beppu_status": "2024年度別府営業区域351両、実働44.91%、輸送1,372,853人。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "35",
+      "topic": "交通供給",
+      "indicator": "タクシー実働率",
+      "beppu_status": "2024年度別府営業区域351両、実働44.91%、輸送1,372,853人。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "36",
+      "topic": "交通供給",
+      "indicator": "タクシー輸送人員",
+      "beppu_status": "2024年度別府営業区域351両、実働44.91%、輸送1,372,853人。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "37",
+      "topic": "荷物と乗継",
+      "indicator": "軽貨物車",
+      "beppu_status": "駅の預かり・配送と特定宿サービス。地域全体の車両/対象宿数・実績は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "38",
+      "topic": "荷物と乗継",
+      "indicator": "配送対象宿の規模",
+      "beppu_status": "駅の預かり・配送と特定宿サービス。地域全体の車両/対象宿数・実績は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "39",
+      "topic": "荷物と乗継",
+      "indicator": "配送・回収対象宿の一覧掲載数",
+      "beppu_status": "駅の預かり・配送と特定宿サービス。地域全体の車両/対象宿数・実績は未確認。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "40",
+      "topic": "住民の移動",
+      "indicator": "コミュニティバス利用",
+      "beppu_status": "南部循環・生活路線を分離。最新スクールバス/コミュニティ年間人数の同等表は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "41",
+      "topic": "住民の移動",
+      "indicator": "スクールバス利用",
+      "beppu_status": "南部循環・生活路線を分離。最新スクールバス/コミュニティ年間人数の同等表は未確認。",
+      "page_anchor": "#plans"
+    },
+    {
+      "yufuin_record": "42",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市博多区",
+      "beppu_status": "別府宿泊後の翌日最初の立寄り先の同等公開表は未確認。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "43",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市中央区",
+      "beppu_status": "別府宿泊後の翌日最初の立寄り先の同等公開表は未確認。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "44",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：別府市",
+      "beppu_status": "別府宿泊後の翌日最初の立寄り先の同等公開表は未確認。",
+      "page_anchor": "#coverage"
+    },
+    {
+      "yufuin_record": "45",
+      "topic": "宿泊施設の供給",
+      "indicator": "参考第12表で由布市の行を確認できない月",
+      "beppu_status": "国の2025/2026市別参考表で回収数・稼働率・延べ/実人数を確認。",
+      "page_anchor": "#stay-detail"
+    },
+    {
+      "yufuin_record": "46",
+      "topic": "無料デマンド実験",
+      "indicator": "運行日数",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "47",
+      "topic": "無料デマンド実験",
+      "indicator": "延べ乗客数",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "48",
+      "topic": "無料デマンド実験",
+      "indicator": "1日平均乗客数",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "49",
+      "topic": "無料デマンド実験",
+      "indicator": "1回の運行当たり平均乗車人数",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "50",
+      "topic": "無料デマンド実験",
+      "indicator": "由布院駅→宇奈岐日女神社",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "51",
+      "topic": "無料デマンド実験",
+      "indicator": "宇奈岐日女神社→由布院駅",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "52",
+      "topic": "無料デマンド実験",
+      "indicator": "利用者調査の回収",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "53",
+      "topic": "無料デマンド実験",
+      "indicator": "回答者のうち由布市内（湯布院町）居住",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "54",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければ徒歩と回答",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "55",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければタクシーと回答",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    },
+    {
+      "yufuin_record": "56",
+      "topic": "無料デマンド実験",
+      "indicator": "乗車区間の適切な運賃を100円と回答",
+      "beppu_status": "湯布院の2020無料実験に同条件で対応する別府実験は未確認。GLOBALは別制度・別標本。",
+      "page_anchor": "#mobility"
+    }
+  ]
+}

@@ -1,0 +1,110 @@
+{
+  "verified_on": "2026-11-04",
+  "photos": [
+    {
+      "key": "hills",
+      "title": "鳥越大橋からの景色",
+      "creator": "別府市／別府たび",
+      "source_url": "https://beppu-tourism.com/photo/4411/",
+      "license_url": "https://beppu-tourism.com/terms/",
+      "rights": "作品を構成する素材として使用。画像素材の二次配布不可。",
+      "photographed_year": null,
+      "changes": "縮小、WebP変換、表示枠によるトリミング",
+      "use": "地域の参考風景。現在の混雑や運行を示すものではない。",
+      "files": [
+        {
+          "path": "assets/hills.webp",
+          "sha256": "fb1236e502cbade5a2e342fb7dc9c1a564dfc5402f70f97c39ae4feea1339d5d"
+        },
+        {
+          "path": "assets/hills-small.webp",
+          "sha256": "ab5cb5562c19a2ac19318d837649a91e16c10d5bd6f7d6d8d23609c4fc472928"
+        }
+      ]
+    },
+    {
+      "key": "steam",
+      "title": "湯けむり展望台",
+      "creator": "別府市／別府たび",
+      "source_url": "https://beppu-tourism.com/photo/616/",
+      "license_url": "https://beppu-tourism.com/terms/",
+      "rights": "作品を構成する素材として使用。画像素材の二次配布不可。",
+      "photographed_year": null,
+      "changes": "縮小、WebP変換、表示枠によるトリミング",
+      "use": "地域の参考風景。現在の混雑や運行を示すものではない。",
+      "files": [
+        {
+          "path": "assets/steam.webp",
+          "sha256": "6b7ec086ae9f9773caf3da127e678bc4458031538a4c8cb1f07d7c7e1f8bcde3"
+        },
+        {
+          "path": "assets/steam-small.webp",
+          "sha256": "411dfa982087395c964c75cba53063405793ad19d1e760c7692bc197d4ed5654"
+        }
+      ]
+    },
+    {
+      "key": "bay",
+      "title": "Beppu City and Beppu Bay",
+      "creator": "Project Kei",
+      "source_url": "https://commons.wikimedia.org/wiki/File:Beppu_City_and_Beppu_Bay.jpg",
+      "license_url": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "rights": "CC BY-SA 4.0。加工画像も同ライセンス。",
+      "photographed_year": 2021,
+      "changes": "縮小、WebP変換、表示枠によるトリミング",
+      "use": "地域の参考風景。現在の混雑や運行を示すものではない。",
+      "files": [
+        {
+          "path": "assets/bay.webp",
+          "sha256": "624e6cd95f9de9196cadb49520fa22b3b1eb88c4cd090268195e94ab3581eb1e"
+        },
+        {
+          "path": "assets/bay-small.webp",
+          "sha256": "357a3305bb3a403572bffa2aa03cd557a3fc70d60b6868a641208ef1706fdd16"
+        }
+      ]
+    },
+    {
+      "key": "umijigoku",
+      "title": "海地獄",
+      "creator": "TANAKA Juuyoh (田中十洋)",
+      "source_url": "https://www.flickr.com/photos/tanaka_juuyoh/3536167065",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "rights": "CC BY 2.0",
+      "photographed_year": 2009,
+      "changes": "縮小、WebP変換、表示枠によるトリミング",
+      "use": "地域の参考風景。現在の混雑や運行を示すものではない。",
+      "files": [
+        {
+          "path": "assets/umijigoku.webp",
+          "sha256": "70f5e0f93ac0ccb8d26c9e464a155995078e8897d487649ded7f10fd9b372d9b"
+        },
+        {
+          "path": "assets/umijigoku-small.webp",
+          "sha256": "f5f07a0284546e3a315379dd32f2818a6a915fbceb0047d626940ca1be92bb96"
+        }
+      ]
+    },
+    {
+      "key": "takegawara",
+      "title": "Takegawara Onsen Beppu / 別府 竹瓦温泉",
+      "creator": "Yusuke Kawasaki",
+      "source_url": "https://www.flickr.com/photos/u-suke/3354137062/",
+      "license_url": "https://creativecommons.org/licenses/by/2.0/",
+      "rights": "CC BY 2.0",
+      "photographed_year": 2009,
+      "changes": "縮小、WebP変換、表示枠によるトリミング",
+      "use": "地域の参考風景。現在の混雑や運行を示すものではない。",
+      "files": [
+        {
+          "path": "assets/takegawara-small.webp",
+          "sha256": "9b9d4e46440949a05db9ad84d6f77fce6bdbcad123e19032eb4ad29be3be3119"
+        },
+        {
+          "path": "assets/takegawara.webp",
+          "sha256": "7527df2150ca1640abb1953e4852cb3c668739f938c93c91d01fa1552d4bebb5"
+        }
+      ]
+    }
+  ]
+}

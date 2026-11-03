@@ -1,0 +1,343 @@
+{
+  "as_of": "2026-11-04",
+  "tourism_plans": [
+    {
+      "level": "市",
+      "title": "第3期別府市総合戦略",
+      "period": "2025～2029年度",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sisei/kakusyukeikaku/sousei/3ki/honpen.pdf",
+      "index_url": "https://www.city.beppu.oita.jp/sisei/kakusyukeikaku/detail12.html",
+      "status": "確定版。画像PDFを実読。",
+      "printed_pages": [
+        1,
+        16,
+        17,
+        18
+      ],
+      "pdf_pages": [
+        4,
+        21,
+        22,
+        23
+      ],
+      "baseline_year": 2023,
+      "target_year": 2029,
+      "targets": [
+        {
+          "indicator": "観光消費額",
+          "baseline": 925,
+          "target": 1000,
+          "unit": "億円"
+        },
+        {
+          "indicator": "宿泊者数",
+          "baseline": 2388,
+          "target": 2720,
+          "unit": "千人"
+        },
+        {
+          "indicator": "外国人観光客数",
+          "baseline": 281564,
+          "target": 622000,
+          "unit": "人"
+        },
+        {
+          "indicator": "バリアフリーツアー相談対応",
+          "baseline": 124,
+          "target": 180,
+          "unit": "件"
+        },
+        {
+          "indicator": "WANDER COMPASS BEPPU外国人来訪",
+          "baseline": 59560,
+          "target": 65520,
+          "unit": "人"
+        }
+      ],
+      "orientation": "滞在時間伸長、観光DX、ユニバーサルツーリズム、健康、食。扇状地の坂道と別府駅起点バス/タクシー充実を課題化。",
+      "evaluation_caution": "2025市宿泊2,752,193は目標2,720,000を数値上上回る。消費の県単価移植・定義改訂を考慮。外国人KPIは旧推計基準なので改訂後2025と単純達成率不可。計画は現状分析/政策方針であり効果検証結果ではない。",
+      "target_label": "目標2029（R11）",
+      "baseline_label": "現状2023（R5）",
+      "time_basis": "原表の現状値（R5）・目標値（R11）に合わせた表示。"
+    },
+    {
+      "level": "県",
+      "title": "日本一のおんせん県おおいたツーリズム戦略 第5期",
+      "period": "2025～2027年度",
+      "source_url": "https://www.pref.oita.jp/uploaded/attachment/2237952.pdf",
+      "index_url": "https://www.pref.oita.jp/soshiki/14180/tu-rizumusenryaku2025.html",
+      "published": "2025-03",
+      "printed_pages": [
+        6,
+        7,
+        11,
+        16
+      ],
+      "pdf_pages": [
+        10,
+        11,
+        15,
+        20
+      ],
+      "target_year": 2027,
+      "targets": [
+        {
+          "indicator": "観光消費額",
+          "target": 2982,
+          "unit": "億円"
+        },
+        {
+          "indicator": "住民満足度",
+          "target": 80,
+          "unit": "%"
+        },
+        {
+          "indicator": "再来訪意向",
+          "target": 90,
+          "unit": "%"
+        },
+        {
+          "indicator": "県内宿泊客数",
+          "target": 8515,
+          "unit": "千人（原文表記）"
+        },
+        {
+          "indicator": "外国人宿泊客数",
+          "target": 1484,
+          "unit": "千人（原文表記）"
+        }
+      ],
+      "orientation": "データマーケティング、住民/事業者/来訪者満足、需要分散、交通接続・二次交通・自動運転等の検討。",
+      "evaluation_caution": "県独自従業員10人以上192施設5,311,433人泊と宿泊KPIを直結しない。前期指標は観光庁宿泊旅行統計（広い母集団）と明示。消費も国調査を使う別系列で、市観光動態要覧とは異なる。",
+      "target_label": "目標2027年",
+      "time_basis": "原表は令和9年（2027年）。計画期間の年度と区別。"
+    },
+    {
+      "level": "国",
+      "title": "観光立国推進基本計画 第5次",
+      "adopted": "2026-03-27",
+      "period": "2026～2030年度",
+      "source_url": "https://www.mlit.go.jp/kankocho/content/001991694.pdf",
+      "summary_url": "https://www.mlit.go.jp/kankocho/content/002019550.pdf",
+      "index_url": "https://www.mlit.go.jp/kankocho/seisaku_seido/kihonkeikaku.html",
+      "target_year": 2030,
+      "summary_pdf_page": 4,
+      "targets": [
+        {
+          "indicator": "訪日外国人旅行者",
+          "target": 6000,
+          "unit": "万人"
+        },
+        {
+          "indicator": "うちリピーター",
+          "target": 4000,
+          "unit": "万人"
+        },
+        {
+          "indicator": "訪日消費",
+          "target": 15,
+          "unit": "兆円"
+        },
+        {
+          "indicator": "訪日1人単価",
+          "target": 25,
+          "unit": "万円"
+        },
+        {
+          "indicator": "外国人地方延べ宿泊",
+          "target": 1.3,
+          "unit": "億人泊"
+        },
+        {
+          "indicator": "日本人地方延べ宿泊",
+          "target": 3.2,
+          "unit": "億人泊"
+        },
+        {
+          "indicator": "国内旅行消費",
+          "target": 30,
+          "unit": "兆円"
+        },
+        {
+          "indicator": "誘客と住民生活の質を両立する地域",
+          "target": 100,
+          "unit": "地域"
+        },
+        {
+          "indicator": "宿泊業付加価値",
+          "target": 6.8,
+          "unit": "兆円"
+        }
+      ],
+      "orientation": "観光と交通・まちづくり連携、住民生活と誘客の両立、地方分散、休暇分散、手ぶら観光、施設送迎車両等既存輸送資源活用。",
+      "definitions": "地方部は埼玉・千葉・東京・神奈川・愛知・京都・大阪・兵庫の8都府県以外。全国KPIは別府の需要予測でない。",
+      "expired_target_warning": "旧2023～2025計画の地方宿泊2泊は現行目標として示さない。旧目標実績2025は1.4泊（暫定/速報）と新計画本文p11/PDF15に評価。新計画の表には2025速報実績も含まれ、最新確定値と必ずしも一致しない。",
+      "target_label": "目標値",
+      "time_basis": "2030年まで。ただし宿泊業付加価値額は2030年度まで。"
+    },
+    {
+      "level": "市",
+      "title": "デジタルガバメント推進計画",
+      "adopted": "2025-12",
+      "period": "2026～2030年度",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sisei/df/keikaku/keikaku/plan.pdf",
+      "index_url": "https://www.city.beppu.oita.jp/sisei/df/keikaku/digital_first2.html",
+      "printed_pages": [
+        10,
+        35
+      ],
+      "pdf_pages": [
+        10,
+        35
+      ],
+      "targets": [
+        {
+          "indicator": "地域ポータルアプリの観光客利用者数",
+          "target": 1000,
+          "unit": "人以上",
+          "year": 2030
+        }
+      ],
+      "orientation": "観光情報一元化、観光MaaS、地域通貨と行動データ、バリアフリー/多言語対応。",
+      "evaluation_caution": "達成実績ではなく最終年度目標。利用者の重複排除や観光客判定、基準値は当該ページ未記載。",
+      "target_label": "目標2030年度",
+      "time_basis": "ロードマップの最終年度目標。"
+    }
+  ],
+  "transport_plans": [
+    {
+      "level": "国",
+      "title": "第3次交通政策基本計画",
+      "period": "2025〜2030年度 / 2026.1.16閣議決定",
+      "description": "地域に合う交通、交通ネットワーク、持続可能性・安全、デジタル・新技術。全国の政策方針であり、別府の需要予測や車両導入決定ではありません。",
+      "source": "https://www.mlit.go.jp/sogoseisaku/transport/sosei_transport_tk_000257.html"
+    },
+    {
+      "level": "県",
+      "title": "おおいた地域交通ビジョン2026",
+      "period": "2026.10〜2031.9 / 2026.9策定",
+      "description": "県全域の地域公共交通計画。旧6圏域計画は2026年9月まで。別府は大分・由布と同じ中部圏。運転手、輸送資源、乗継ぎ、空白を一体で扱います。",
+      "source": "https://www.pref.oita.jp/soshiki/10540/chiikikotsuvision.html"
+    },
+    {
+      "level": "市",
+      "title": "別府市地域公共交通計画",
+      "period": "2022.6〜2027.9 / 掲載PDF本文",
+      "description": "市紹介HTMLの旧期間表記ではなくPDFを優先。2026年協議会では次期計画に向け、距離・時間帯・質のアクセシビリティをタクシー込みで可視化する方針。",
+      "source": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/kassei_kyougikai.html"
+    }
+  ],
+  "prefecture_transport_kpis": [
+    [
+      "交通空白地区",
+      "33地区（2025年度表示）",
+      "13地区",
+      "0地区"
+    ],
+    [
+      "路線バス平均乗車密度",
+      "7.4人（2024年度）",
+      "9.0人",
+      "10人以上"
+    ],
+    [
+      "人口1人当たり財政負担",
+      "1,298円（2024年度）",
+      "1,685円以内",
+      "1,943円以内"
+    ],
+    [
+      "キャッシュレス路線バス事業者",
+      "5社（2025年度）",
+      "8社",
+      "10社"
+    ],
+    [
+      "キャッシュレスタクシー",
+      "89.3%（2025年度）",
+      "95.7%",
+      "100%"
+    ],
+    [
+      "乗合バス運転士",
+      "588人（2025年度・県9社）",
+      "588人",
+      "588人"
+    ],
+    [
+      "タクシー運転手",
+      "1,653人（2025年度）",
+      "1,653人",
+      "1,653人"
+    ],
+    [
+      "人口1人当たりバス等利用",
+      "14.25回（2025年度）",
+      "15.79回",
+      "16.82回"
+    ]
+  ],
+  "city_transport_kpis": [
+    [
+      "一般路線バス年間輸送",
+      "393万人/年",
+      "530万人/年"
+    ],
+    [
+      "1便5人以上の路線",
+      "46路線中43",
+      "全路線"
+    ],
+    [
+      "タクシー年間輸送",
+      "116万人/年",
+      "190万人/年（別府都市圏）"
+    ],
+    [
+      "コミュニティ交通の行政負担",
+      "4,660円/人",
+      "3,000円/人"
+    ],
+    [
+      "列車接続を確保したバス便",
+      "東口82.5%・西口72.9%",
+      "維持（乗継5〜15分程度）"
+    ],
+    [
+      "交通結節点整備",
+      "―",
+      "4箇所"
+    ],
+    [
+      "地域・観光主要拠点整備",
+      "―",
+      "12箇所"
+    ],
+    [
+      "主要3駅乗車",
+      "7,075人/日",
+      "8,500人/日"
+    ],
+    [
+      "フェリー年間輸送",
+      "17万人/年",
+      "38.5万人/年"
+    ],
+    [
+      "地域間幹線7路線輸送",
+      "65万人/年",
+      "95万人/年"
+    ],
+    [
+      "市民の主な公共交通利用",
+      "14.4%",
+      "20%"
+    ],
+    [
+      "利用促進協力団体・施設",
+      "―",
+      "10団体"
+    ]
+  ],
+  "comparison_warning": "Targets differ in scope, period and measurement. Foreign visitor estimates revised July 2026 cannot be directly compared with the old city strategy baseline."
+}

@@ -1,0 +1,2959 @@
+{
+  "as_of": "2026-11-04 JST",
+  "primary_source": {
+    "publisher": "別府市観光・産業部観光課",
+    "title": "2025年別府市観光動態要覧",
+    "published": "2026-10",
+    "index_updated": "2026-10-28",
+    "index_url": "https://www.city.beppu.oita.jp/sangyou/kankou/sokuhou_01.html",
+    "pdf": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.pdf",
+    "xlsx": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx"
+  },
+  "definitions": {
+    "city_total": "観光庁共通基準に該当する観光地点への延べ入込人数を用いて算出。年間ユニーク人数と断定不可。資料には平均訪問地点数等の全計算式・標本数なし。",
+    "city_overnight": "入湯税申告データにより算出。入湯税課税対象とならない施設は計上されない。単位は原資料の人を維持し、実宿泊者数/人泊に勝手に置換しない。",
+    "city_day": "総観光客数－宿泊客数による残差。独立した全数調査ではない。",
+    "city_foreign": "宿泊は観光予報プラットフォームの拡大推計、日帰りはB-biz LINK BIP事業部・大分県国際観光船誘致促進協議会提供資料。市の入湯税母集団と異なるため比率は公表推計値同士の構成比。",
+    "foreign_revision": "2026-07-10の拡大推計方法/居住国別集計表示方法変更で2024・2025を遡及改訂。2024は最新版2025PDFの918108人（宿泊）/1034716人（外国人総数）を使う。旧2024PDF/XLSXの335286/451894は改訂前。2019～2023と2024以降の外国人の長期増減を単純計算しない。",
+    "attractions": "別府市周辺19観光施設の入込合計。市外施設含む、施設間重複あり。市への実来訪人数/全観光客数ではない。2024版18施設に対し2025版19施設、別府市美術館が追加。固定パネルの純増とは断定不可。",
+    "consumption": "県の共通基準観光消費単価×市推計客数。市内直接観測消費ではない。日本人単価は県の観光目的・県外客欄に一致。2025総額129076220千円、2024改訂後比較基準138949228千円。",
+    "missing": "月別総観光客・日帰り客、改訂後2024外国人月別は公開資料で未確認。時間帯OD、現行交通乗車、交通弱者需要は本統計から識別不能。"
+  },
+  "annual_visitors": [
+    {
+      "year": 2019,
+      "total": 8335773,
+      "day": 5890488,
+      "overnight": 2445285,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r01toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2020,
+      "total": 4427103,
+      "day": 3069553,
+      "overnight": 1357550,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r02toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2021,
+      "total": 3722365,
+      "day": 2539779,
+      "overnight": 1182586,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r03toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2022,
+      "total": 5379303,
+      "day": 3440448,
+      "overnight": 1938855,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r04toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2023,
+      "total": 6800812,
+      "day": 4413381,
+      "overnight": 2387431,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r05toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2024,
+      "total": 7076489,
+      "day": 4511804,
+      "overnight": 2564685,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    },
+    {
+      "year": 2025,
+      "total": 7330300,
+      "day": 4578107,
+      "overnight": 2752193,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.pdf",
+      "printed_page": 4,
+      "pdf_page": 7
+    }
+  ],
+  "monthly": [
+    {
+      "year": 2024,
+      "month": 1,
+      "kitahama_chuo": 110172,
+      "kannawa_myouban": 42822,
+      "horita_kankaiji": 41171,
+      "other": 10950,
+      "overnight_city": 205115,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 356548,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 2,
+      "kitahama_chuo": 115641,
+      "kannawa_myouban": 44633,
+      "horita_kankaiji": 51187,
+      "other": 12076,
+      "overnight_city": 223537,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 346764,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 3,
+      "kitahama_chuo": 133621,
+      "kannawa_myouban": 50144,
+      "horita_kankaiji": 59563,
+      "other": 15735,
+      "overnight_city": 259063,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 492077,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 4,
+      "kitahama_chuo": 100736,
+      "kannawa_myouban": 35499,
+      "horita_kankaiji": 47865,
+      "other": 12597,
+      "overnight_city": 196697,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 419697,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 5,
+      "kitahama_chuo": 102054,
+      "kannawa_myouban": 33495,
+      "horita_kankaiji": 48801,
+      "other": 13066,
+      "overnight_city": 197416,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 475724,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 6,
+      "kitahama_chuo": 90499,
+      "kannawa_myouban": 24311,
+      "horita_kankaiji": 47994,
+      "other": 8988,
+      "overnight_city": 171792,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 294290,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 7,
+      "kitahama_chuo": 104873,
+      "kannawa_myouban": 27613,
+      "horita_kankaiji": 55861,
+      "other": 11864,
+      "overnight_city": 200211,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 331438,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 8,
+      "kitahama_chuo": 126260,
+      "kannawa_myouban": 35217,
+      "horita_kankaiji": 64406,
+      "other": 14565,
+      "overnight_city": 240448,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 562352,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 9,
+      "kitahama_chuo": 102005,
+      "kannawa_myouban": 28771,
+      "horita_kankaiji": 55079,
+      "other": 10762,
+      "overnight_city": 196617,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 364996,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 10,
+      "kitahama_chuo": 113967,
+      "kannawa_myouban": 34382,
+      "horita_kankaiji": 52481,
+      "other": 14005,
+      "overnight_city": 214835,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 389339,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 11,
+      "kitahama_chuo": 123881,
+      "kannawa_myouban": 39984,
+      "horita_kankaiji": 52840,
+      "other": 14425,
+      "overnight_city": 231130,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 417564,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2024,
+      "month": 12,
+      "kitahama_chuo": 121328,
+      "kannawa_myouban": 39638,
+      "horita_kankaiji": 53555,
+      "other": 13303,
+      "overnight_city": 227824,
+      "foreign_overnight": null,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 368129,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r06toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 1,
+      "kitahama_chuo": 117241,
+      "kannawa_myouban": 39141,
+      "horita_kankaiji": 45907,
+      "other": 11501,
+      "overnight_city": 213790,
+      "foreign_overnight": 87321,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 399377,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 2,
+      "kitahama_chuo": 112960,
+      "kannawa_myouban": 36004,
+      "horita_kankaiji": 64270,
+      "other": 10182,
+      "overnight_city": 223416,
+      "foreign_overnight": 92575,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 350307,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 3,
+      "kitahama_chuo": 138052,
+      "kannawa_myouban": 45969,
+      "horita_kankaiji": 79690,
+      "other": 14451,
+      "overnight_city": 278162,
+      "foreign_overnight": 84756,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 510830,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 4,
+      "kitahama_chuo": 109047,
+      "kannawa_myouban": 36793,
+      "horita_kankaiji": 61922,
+      "other": 12443,
+      "overnight_city": 220205,
+      "foreign_overnight": 94940,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 449837,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 5,
+      "kitahama_chuo": 111209,
+      "kannawa_myouban": 31713,
+      "horita_kankaiji": 64405,
+      "other": 12411,
+      "overnight_city": 219738,
+      "foreign_overnight": 78140,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 474330,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 6,
+      "kitahama_chuo": 87269,
+      "kannawa_myouban": 21874,
+      "horita_kankaiji": 61611,
+      "other": 7888,
+      "overnight_city": 178642,
+      "foreign_overnight": 68022,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 285058,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 7,
+      "kitahama_chuo": 95876,
+      "kannawa_myouban": 22299,
+      "horita_kankaiji": 71280,
+      "other": 9790,
+      "overnight_city": 199245,
+      "foreign_overnight": 63955,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 290567,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 8,
+      "kitahama_chuo": 130795,
+      "kannawa_myouban": 32790,
+      "horita_kankaiji": 88316,
+      "other": 14921,
+      "overnight_city": 266822,
+      "foreign_overnight": 58934,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 527865,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 9,
+      "kitahama_chuo": 103101,
+      "kannawa_myouban": 25967,
+      "horita_kankaiji": 68978,
+      "other": 10776,
+      "overnight_city": 208822,
+      "foreign_overnight": 53708,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 337692,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 10,
+      "kitahama_chuo": 126271,
+      "kannawa_myouban": 35051,
+      "horita_kankaiji": 67213,
+      "other": 13471,
+      "overnight_city": 242006,
+      "foreign_overnight": 100712,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 387451,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 11,
+      "kitahama_chuo": 131071,
+      "kannawa_myouban": 39520,
+      "horita_kankaiji": 68296,
+      "other": 14038,
+      "overnight_city": 252925,
+      "foreign_overnight": 84101,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 467997,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    },
+    {
+      "year": 2025,
+      "month": 12,
+      "kitahama_chuo": 128158,
+      "kannawa_myouban": 37441,
+      "horita_kankaiji": 70151,
+      "other": 12670,
+      "overnight_city": 248420,
+      "foreign_overnight": 95066,
+      "foreign_note": "2025 is revised platform estimate; 2024 old workbook remains unrevised, so omit monthly foreign comparison",
+      "attraction_entries": 379648,
+      "unit": "人（市公表値）",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.xlsx",
+      "sheet": "表3 宿泊客数 C5:N10 / 表4 C5:N5"
+    }
+  ],
+  "quarterly_2025": [
+    {
+      "quarter": 1,
+      "year": 2025,
+      "day": 1277380,
+      "overnight": 715368,
+      "total": 1992748
+    },
+    {
+      "quarter": 2,
+      "year": 2025,
+      "day": 1146815,
+      "overnight": 618585,
+      "total": 1765400
+    },
+    {
+      "quarter": 3,
+      "year": 2025,
+      "day": 947512,
+      "overnight": 674889,
+      "total": 1622401
+    },
+    {
+      "quarter": 4,
+      "year": 2025,
+      "day": 1206400,
+      "overnight": 743351,
+      "total": 1949751
+    }
+  ],
+  "districts": [
+    {
+      "district": "北浜・中央",
+      "2024": 1345037,
+      "2025": 1391050,
+      "share_2025_percent": 50.5
+    },
+    {
+      "district": "鉄輪・明礬",
+      "2024": 436509,
+      "2025": 404562,
+      "share_2025_percent": 14.7
+    },
+    {
+      "district": "堀田・観海寺",
+      "2024": 630803,
+      "2025": 812039,
+      "share_2025_percent": 29.5
+    },
+    {
+      "district": "その他",
+      "2024": 152336,
+      "2025": 144542,
+      "share_2025_percent": 5.3
+    }
+  ],
+  "foreign_annual_revised": [
+    {
+      "year": 2024,
+      "total": 1034716,
+      "day": 116608,
+      "overnight": 918108
+    },
+    {
+      "year": 2025,
+      "total": 1099582,
+      "day": 137352,
+      "overnight": 962230
+    }
+  ],
+  "foreign_markets_2025": [
+    {
+      "market": "韓国",
+      "total": 432228,
+      "day": 16196,
+      "overnight": 416032
+    },
+    {
+      "market": "台湾",
+      "total": 238690,
+      "day": 6600,
+      "overnight": 232090
+    },
+    {
+      "market": "香港",
+      "total": 95712,
+      "day": 5741,
+      "overnight": 89971
+    },
+    {
+      "market": "中国",
+      "total": 133377,
+      "day": 34722,
+      "overnight": 98655
+    },
+    {
+      "market": "タイ",
+      "total": 22329,
+      "day": 4105,
+      "overnight": 18224
+    },
+    {
+      "market": "シンガポール",
+      "total": 24728,
+      "day": 2377,
+      "overnight": 22351
+    },
+    {
+      "market": "フィリピン",
+      "total": 10146,
+      "day": 8880,
+      "overnight": 1266
+    },
+    {
+      "market": "マレーシア",
+      "total": 3659,
+      "day": 967,
+      "overnight": 2692
+    },
+    {
+      "market": "インドネシア",
+      "total": 3927,
+      "day": 3376,
+      "overnight": 551
+    },
+    {
+      "market": "ベトナム",
+      "total": 228,
+      "day": 228,
+      "overnight": 0
+    },
+    {
+      "market": "インド",
+      "total": 1932,
+      "day": 1932,
+      "overnight": 0
+    },
+    {
+      "market": "アメリカ",
+      "total": 46656,
+      "day": 19844,
+      "overnight": 26812
+    },
+    {
+      "market": "カナダ",
+      "total": 3991,
+      "day": 3589,
+      "overnight": 402
+    },
+    {
+      "market": "イギリス",
+      "total": 5509,
+      "day": 4166,
+      "overnight": 1343
+    },
+    {
+      "market": "ドイツ",
+      "total": 7575,
+      "day": 3748,
+      "overnight": 3827
+    },
+    {
+      "market": "フランス",
+      "total": 4153,
+      "day": 2645,
+      "overnight": 1508
+    },
+    {
+      "market": "ロシア",
+      "total": 508,
+      "day": 508,
+      "overnight": 0
+    },
+    {
+      "market": "イタリア",
+      "total": 1041,
+      "day": 1041,
+      "overnight": 0
+    },
+    {
+      "market": "スペイン",
+      "total": 662,
+      "day": 596,
+      "overnight": 66
+    },
+    {
+      "market": "オーストラリア",
+      "total": 16974,
+      "day": 5682,
+      "overnight": 11292
+    },
+    {
+      "market": "ニュージーランド",
+      "total": 3238,
+      "day": 710,
+      "overnight": 2528
+    },
+    {
+      "market": "その他",
+      "total": 42319,
+      "day": 9699,
+      "overnight": 32620
+    }
+  ],
+  "foreign_market_source": {
+    "pdf_printed_page": 7,
+    "pdf_page": 10,
+    "xlsx_sheet": "表2 国籍別外国人観光客数 B6:E28"
+  },
+  "consumption_segments_2025": [
+    {
+      "segment": "日本人宿泊",
+      "visitors": 1789963,
+      "unit_spend_yen_per_person_trip": 32248,
+      "consumption_thousand_yen": 57722727
+    },
+    {
+      "segment": "日本人日帰り",
+      "visitors": 4440755,
+      "unit_spend_yen_per_person_trip": 8255,
+      "consumption_thousand_yen": 36658433
+    },
+    {
+      "segment": "外国人宿泊",
+      "visitors": 962230,
+      "unit_spend_yen_per_person_trip": 35253,
+      "consumption_thousand_yen": 33921494
+    },
+    {
+      "segment": "外国人日帰り",
+      "visitors": 137352,
+      "unit_spend_yen_per_person_trip": 5632,
+      "consumption_thousand_yen": 773566
+    }
+  ],
+  "consumption_total_2025_thousand_yen": 129076220,
+  "consumption_overnight_2025_thousand_yen": 91644221,
+  "consumption_day_2025_thousand_yen": 37431999,
+  "consumption_total_2024_revised_thousand_yen": 138949228,
+  "consumption_source": {
+    "pdf_printed_page": 10,
+    "pdf_page": 13,
+    "xlsx_sheet": "表５ 観光消費額 C7:E23"
+  },
+  "kpi_avg_stay": {
+    "value": 1.106,
+    "unit": "泊",
+    "label": "令和6年度事業評価の実績値",
+    "source_url": "https://www.city.beppu.oita.jp/doc/sisei/kakusyukeikaku/sousei/hyouka_r06.pdf",
+    "pdf_page": 1,
+    "locator": "事業2 指標①",
+    "warning": "評価表に調査期間・標本・延べ/実人数の分子分母未記載。2025年の平均泊数とは表示しない。2026市長発信の約1.09泊は調査年・母集団不明で参考扱い。"
+  },
+  "mobility_implications": [
+    {
+      "type": "inference",
+      "statement": "2025総数は2019比87.94%、宿泊112.55%、日帰り77.72%。回復の形は宿泊側に偏る。"
+    },
+    {
+      "type": "inference",
+      "statement": "宿泊37.55%で推計消費71.00%。ただし金額は県単価を掛けた推計で因果効果は未検証。"
+    },
+    {
+      "type": "inference",
+      "statement": "2024→2025宿泊純増187508人のうち堀田・観海寺増181236人（96.66%）。宿泊地区別の移動調査を優先する根拠になるが、交通需要実証にはならない。"
+    }
+  ],
+  "jta_municipality_monthly": {
+    "source_index_2025": "https://www.mlit.go.jp/kankocho/page02_00022.html",
+    "source_index_2026": "https://www.mlit.go.jp/kankocho/tokei_hakusyo/shukuhakutokei.html",
+    "values": [
+      {
+        "year": 2025,
+        "month": 1,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996835.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          37,
+          null
+        ],
+        "row": 202,
+        "person_nights": [
+          134487,
+          1216,
+          "-",
+          133271
+        ],
+        "checkins": [
+          120222,
+          551,
+          "-",
+          119671
+        ],
+        "foreign_person_nights": [
+          43471,
+          364,
+          "-",
+          43107
+        ],
+        "foreign_checkins": [
+          37854,
+          217,
+          "-",
+          37637,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          41.5,
+          21.9,
+          "-",
+          41.9,
+          null
+        ],
+        "occupied_rooms": [
+          58582,
+          466,
+          "-",
+          58116,
+          null
+        ],
+        "room_occupancy_pct": [
+          54.9,
+          31.3,
+          "-",
+          55.3,
+          null
+        ],
+        "avg_stay_all": 1.1186554873484054,
+        "avg_stay_foreign": 1.1483859037354045,
+        "avg_stay_domestic": 1.10499222999223,
+        "large_facility_population": 70,
+        "large_facility_respondents": 37,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 133271,
+        "checkins_large": 119671,
+        "foreign_person_nights_large": 43107,
+        "foreign_checkins_large": 37637,
+        "capacity_occupancy_pct_large": 41.9,
+        "occupied_rooms_large": 58116,
+        "room_occupancy_pct_large": 55.3,
+        "avg_stay_large": 1.1136449097943528,
+        "avg_stay_foreign_large": 1.1453357068841832,
+        "avg_stay_domestic_large": 1.0991052490430797
+      },
+      {
+        "year": 2025,
+        "month": 2,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996833.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          35,
+          null
+        ],
+        "row": 192,
+        "person_nights": [
+          144373,
+          1371,
+          "-",
+          143002
+        ],
+        "checkins": [
+          129644,
+          859,
+          "-",
+          128785
+        ],
+        "foreign_person_nights": [
+          40667,
+          411,
+          "-",
+          40256
+        ],
+        "foreign_checkins": [
+          34940,
+          299,
+          "-",
+          34641,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          49.7,
+          19.8,
+          "-",
+          50.4,
+          null
+        ],
+        "occupied_rooms": [
+          58657,
+          590,
+          "-",
+          58067,
+          null
+        ],
+        "room_occupancy_pct": [
+          62.3,
+          26.3,
+          "-",
+          63.2,
+          null
+        ],
+        "avg_stay_all": 1.1136111196815897,
+        "avg_stay_foreign": 1.163909559244419,
+        "avg_stay_domestic": 1.095054063186349,
+        "large_facility_population": 70,
+        "large_facility_respondents": 35,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 143002,
+        "checkins_large": 128785,
+        "foreign_person_nights_large": 40256,
+        "foreign_checkins_large": 34641,
+        "capacity_occupancy_pct_large": 50.4,
+        "occupied_rooms_large": 58067,
+        "room_occupancy_pct_large": 63.2,
+        "avg_stay_large": 1.110393291144155,
+        "avg_stay_foreign_large": 1.1620911636500102,
+        "avg_stay_domestic_large": 1.0913706662134601
+      },
+      {
+        "year": 2025,
+        "month": 3,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996831.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          34,
+          null
+        ],
+        "row": 190,
+        "person_nights": [
+          187564,
+          2106,
+          "-",
+          185458
+        ],
+        "checkins": [
+          169643,
+          1398,
+          "-",
+          168245
+        ],
+        "foreign_person_nights": [
+          38188,
+          658,
+          "-",
+          37530
+        ],
+        "foreign_checkins": [
+          32762,
+          468,
+          "-",
+          32294,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          58.4,
+          26.2,
+          "-",
+          59.3,
+          null
+        ],
+        "occupied_rooms": [
+          68897,
+          594,
+          "-",
+          68303,
+          null
+        ],
+        "room_occupancy_pct": [
+          66.6,
+          23.1,
+          "-",
+          67.7,
+          null
+        ],
+        "avg_stay_all": 1.105639489987798,
+        "avg_stay_foreign": 1.165618704596789,
+        "avg_stay_domestic": 1.0912836697569421,
+        "large_facility_population": 70,
+        "large_facility_respondents": 34,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 185458,
+        "checkins_large": 168245,
+        "foreign_person_nights_large": 37530,
+        "foreign_checkins_large": 32294,
+        "capacity_occupancy_pct_large": 59.3,
+        "occupied_rooms_large": 68303,
+        "room_occupancy_pct_large": 67.7,
+        "avg_stay_large": 1.1023091325150822,
+        "avg_stay_foreign_large": 1.1621353811853594,
+        "avg_stay_domestic_large": 1.088097917632088
+      },
+      {
+        "year": 2025,
+        "month": 4,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996829.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          35,
+          null
+        ],
+        "row": 195,
+        "person_nights": [
+          144351,
+          1635,
+          "-",
+          142716
+        ],
+        "checkins": [
+          128406,
+          791,
+          "-",
+          127615
+        ],
+        "foreign_person_nights": [
+          39453,
+          815,
+          "-",
+          38638
+        ],
+        "foreign_checkins": [
+          33012,
+          413,
+          "-",
+          32599,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          47.6,
+          28.1,
+          "-",
+          48,
+          null
+        ],
+        "occupied_rooms": [
+          57432,
+          648,
+          "-",
+          56784,
+          null
+        ],
+        "room_occupancy_pct": [
+          58.1,
+          33.8,
+          "-",
+          58.6,
+          null
+        ],
+        "avg_stay_all": 1.1241764403532546,
+        "avg_stay_foreign": 1.195110868774991,
+        "avg_stay_domestic": 1.0996289074784578,
+        "large_facility_population": 70,
+        "large_facility_respondents": 35,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 142716,
+        "checkins_large": 127615,
+        "foreign_person_nights_large": 38638,
+        "foreign_checkins_large": 32599,
+        "capacity_occupancy_pct_large": 48,
+        "occupied_rooms_large": 56784,
+        "room_occupancy_pct_large": 58.6,
+        "avg_stay_large": 1.118332484425812,
+        "avg_stay_foreign_large": 1.185251081321513,
+        "avg_stay_domestic_large": 1.0953734107939714
+      },
+      {
+        "year": 2025,
+        "month": 5,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996823.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          36,
+          null
+        ],
+        "row": 191,
+        "person_nights": [
+          148033,
+          1623,
+          "-",
+          146410
+        ],
+        "checkins": [
+          132819,
+          793,
+          "-",
+          132026
+        ],
+        "foreign_person_nights": [
+          36524,
+          789,
+          "-",
+          35735
+        ],
+        "foreign_checkins": [
+          30784,
+          329,
+          "-",
+          30455,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          46.5,
+          28.8,
+          "-",
+          46.9,
+          null
+        ],
+        "occupied_rooms": [
+          60804,
+          667,
+          "-",
+          60137,
+          null
+        ],
+        "room_occupancy_pct": [
+          58.9,
+          35.3,
+          "-",
+          59.4,
+          null
+        ],
+        "avg_stay_all": 1.1145468645299241,
+        "avg_stay_foreign": 1.186460498960499,
+        "avg_stay_domestic": 1.0928504924780713,
+        "large_facility_population": 70,
+        "large_facility_respondents": 36,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 146410,
+        "checkins_large": 132026,
+        "foreign_person_nights_large": 35735,
+        "foreign_checkins_large": 30455,
+        "capacity_occupancy_pct_large": 46.9,
+        "occupied_rooms_large": 60137,
+        "room_occupancy_pct_large": 59.4,
+        "avg_stay_large": 1.1089482374683775,
+        "avg_stay_foreign_large": 1.173370546708258,
+        "avg_stay_domestic_large": 1.0896318831162437
+      },
+      {
+        "year": 2025,
+        "month": 6,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996821.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          33,
+          null
+        ],
+        "row": 187,
+        "person_nights": [
+          120684,
+          1207,
+          "-",
+          119477
+        ],
+        "checkins": [
+          108754,
+          487,
+          "-",
+          108267
+        ],
+        "foreign_person_nights": [
+          28963,
+          420,
+          "-",
+          28543
+        ],
+        "foreign_checkins": [
+          24638,
+          216,
+          "-",
+          24422,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          40.4,
+          15.5,
+          "-",
+          41.1,
+          null
+        ],
+        "occupied_rooms": [
+          49545,
+          530,
+          "-",
+          49015,
+          null
+        ],
+        "room_occupancy_pct": [
+          51,
+          20.8,
+          "-",
+          51.9,
+          null
+        ],
+        "avg_stay_all": 1.1096971145888888,
+        "avg_stay_foreign": 1.1755418459290528,
+        "avg_stay_domestic": 1.0904108611916876,
+        "large_facility_population": 70,
+        "large_facility_respondents": 33,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 119477,
+        "checkins_large": 108267,
+        "foreign_person_nights_large": 28543,
+        "foreign_checkins_large": 24422,
+        "capacity_occupancy_pct_large": 41.1,
+        "occupied_rooms_large": 49015,
+        "room_occupancy_pct_large": 51.9,
+        "avg_stay_large": 1.1035403216123103,
+        "avg_stay_foreign_large": 1.1687412988289247,
+        "avg_stay_domestic_large": 1.0845488699385772
+      },
+      {
+        "year": 2025,
+        "month": 7,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996815.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          34,
+          null
+        ],
+        "row": 190,
+        "person_nights": [
+          135663,
+          1025,
+          "-",
+          134638
+        ],
+        "checkins": [
+          126016,
+          491,
+          "-",
+          125525
+        ],
+        "foreign_person_nights": [
+          24645,
+          615,
+          "-",
+          24030
+        ],
+        "foreign_checkins": [
+          20753,
+          260,
+          "-",
+          20493,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          44.4,
+          12.4,
+          "-",
+          45.3,
+          null
+        ],
+        "occupied_rooms": [
+          49780,
+          587,
+          "-",
+          49193,
+          null
+        ],
+        "room_occupancy_pct": [
+          52,
+          20.4,
+          "-",
+          53,
+          null
+        ],
+        "avg_stay_all": 1.0765537709497206,
+        "avg_stay_foreign": 1.1875391509661253,
+        "avg_stay_domestic": 1.054672582008873,
+        "large_facility_population": 70,
+        "large_facility_respondents": 34,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 134638,
+        "checkins_large": 125525,
+        "foreign_person_nights_large": 24030,
+        "foreign_checkins_large": 20493,
+        "capacity_occupancy_pct_large": 45.3,
+        "occupied_rooms_large": 49193,
+        "room_occupancy_pct_large": 53,
+        "avg_stay_large": 1.072599083847839,
+        "avg_stay_foreign_large": 1.1725955204216074,
+        "avg_stay_domestic_large": 1.0530885825272298
+      },
+      {
+        "year": 2025,
+        "month": 8,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996813.xlsx",
+        "respondents": [
+          183,
+          11,
+          37,
+          "-",
+          70,
+          33,
+          null
+        ],
+        "row": 186,
+        "person_nights": [
+          182822,
+          1260,
+          "-",
+          181562
+        ],
+        "checkins": [
+          166706,
+          625,
+          "-",
+          166081
+        ],
+        "foreign_person_nights": [
+          20596,
+          729,
+          "-",
+          19867
+        ],
+        "foreign_checkins": [
+          16700,
+          285,
+          "-",
+          16415,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          60.3,
+          17.3,
+          "-",
+          61.3,
+          null
+        ],
+        "occupied_rooms": [
+          64584,
+          545,
+          "-",
+          64039,
+          null
+        ],
+        "room_occupancy_pct": [
+          65.6,
+          20.2,
+          "-",
+          66.9,
+          null
+        ],
+        "avg_stay_all": 1.0966731851283098,
+        "avg_stay_foreign": 1.2332934131736526,
+        "avg_stay_domestic": 1.0814634081303414,
+        "large_facility_population": 70,
+        "large_facility_respondents": 33,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 181562,
+        "checkins_large": 166081,
+        "foreign_person_nights_large": 19867,
+        "foreign_checkins_large": 16415,
+        "capacity_occupancy_pct_large": 61.3,
+        "occupied_rooms_large": 64039,
+        "room_occupancy_pct_large": 66.9,
+        "avg_stay_large": 1.0932135524232152,
+        "avg_stay_foreign_large": 1.2102954614681694,
+        "avg_stay_domestic_large": 1.0803722956449695
+      },
+      {
+        "year": 2025,
+        "month": 9,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996810.xlsx",
+        "respondents": [
+          183,
+          10,
+          37,
+          "-",
+          70,
+          32,
+          null
+        ],
+        "row": 179,
+        "person_nights": [
+          134142,
+          669,
+          "-",
+          133473
+        ],
+        "checkins": [
+          121197,
+          352,
+          "-",
+          120845
+        ],
+        "foreign_person_nights": [
+          23530,
+          335,
+          "-",
+          23195
+        ],
+        "foreign_checkins": [
+          19457,
+          153,
+          "-",
+          19304,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          46.1,
+          9.1,
+          "-",
+          47.1,
+          null
+        ],
+        "occupied_rooms": [
+          52044,
+          329,
+          "-",
+          51715,
+          null
+        ],
+        "room_occupancy_pct": [
+          55.7,
+          13.5,
+          "-",
+          56.8,
+          null
+        ],
+        "avg_stay_all": 1.1068095744944182,
+        "avg_stay_foreign": 1.2093334018605129,
+        "avg_stay_domestic": 1.0872026734814233,
+        "large_facility_population": 70,
+        "large_facility_respondents": 32,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 133473,
+        "checkins_large": 120845,
+        "foreign_person_nights_large": 23195,
+        "foreign_checkins_large": 19304,
+        "capacity_occupancy_pct_large": 47.1,
+        "occupied_rooms_large": 51715,
+        "room_occupancy_pct_large": 56.8,
+        "avg_stay_large": 1.1044974967934131,
+        "avg_stay_foreign_large": 1.2015644426025693,
+        "avg_stay_domestic_large": 1.0860440610196866
+      },
+      {
+        "year": 2025,
+        "month": 10,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996807.xlsx",
+        "respondents": [
+          183,
+          10,
+          37,
+          "-",
+          70,
+          34,
+          null
+        ],
+        "row": 186,
+        "person_nights": [
+          145963,
+          1814,
+          "-",
+          144149
+        ],
+        "checkins": [
+          132881,
+          1064,
+          "-",
+          131817
+        ],
+        "foreign_person_nights": [
+          49097,
+          771,
+          "-",
+          48326
+        ],
+        "foreign_checkins": [
+          42732,
+          449,
+          "-",
+          42283,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          47.6,
+          22.9,
+          "-",
+          48.3,
+          null
+        ],
+        "occupied_rooms": [
+          61579,
+          746,
+          "-",
+          60833,
+          null
+        ],
+        "room_occupancy_pct": [
+          61.9,
+          28.3,
+          "-",
+          62.9,
+          null
+        ],
+        "avg_stay_all": 1.0984489881924429,
+        "avg_stay_foreign": 1.1489516053543012,
+        "avg_stay_domestic": 1.0745099779254346,
+        "large_facility_population": 70,
+        "large_facility_respondents": 34,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 144149,
+        "checkins_large": 131817,
+        "foreign_person_nights_large": 48326,
+        "foreign_checkins_large": 42283,
+        "capacity_occupancy_pct_large": 48.3,
+        "occupied_rooms_large": 60833,
+        "room_occupancy_pct_large": 62.9,
+        "avg_stay_large": 1.0935539422077578,
+        "avg_stay_foreign_large": 1.1429179575716009,
+        "avg_stay_domestic_large": 1.0702414725132352
+      },
+      {
+        "year": 2025,
+        "month": 11,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996805.xlsx",
+        "respondents": [
+          183,
+          "-",
+          37,
+          "-",
+          70,
+          33,
+          null
+        ],
+        "row": 179,
+        "person_nights": [
+          148072,
+          "-",
+          "-",
+          148072
+        ],
+        "checkins": [
+          132879,
+          "-",
+          "-",
+          132879
+        ],
+        "foreign_person_nights": [
+          40053,
+          "-",
+          "-",
+          40053
+        ],
+        "foreign_checkins": [
+          34484,
+          "-",
+          "-",
+          34484,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          53.7,
+          "-",
+          "-",
+          53.7,
+          null
+        ],
+        "occupied_rooms": [
+          61729,
+          "-",
+          "-",
+          61729,
+          null
+        ],
+        "room_occupancy_pct": [
+          68.7,
+          "-",
+          "-",
+          68.7,
+          null
+        ],
+        "avg_stay_all": 1.1143371036807923,
+        "avg_stay_foreign": 1.1614951861732978,
+        "avg_stay_domestic": 1.0978098480613852,
+        "large_facility_population": 70,
+        "large_facility_respondents": 33,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 148072,
+        "checkins_large": 132879,
+        "foreign_person_nights_large": 40053,
+        "foreign_checkins_large": 34484,
+        "capacity_occupancy_pct_large": 53.7,
+        "occupied_rooms_large": 61729,
+        "room_occupancy_pct_large": 68.7,
+        "avg_stay_large": 1.1143371036807923,
+        "avg_stay_foreign_large": 1.1614951861732978,
+        "avg_stay_domestic_large": 1.0978098480613852
+      },
+      {
+        "year": 2025,
+        "month": 12,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/001996803.xlsx",
+        "respondents": [
+          183,
+          "-",
+          37,
+          "-",
+          70,
+          30,
+          null
+        ],
+        "row": 183,
+        "person_nights": [
+          140363,
+          "-",
+          "-",
+          140363
+        ],
+        "checkins": [
+          127893,
+          "-",
+          "-",
+          127893
+        ],
+        "foreign_person_nights": [
+          40194,
+          "-",
+          "-",
+          40194
+        ],
+        "foreign_checkins": [
+          35050,
+          "-",
+          "-",
+          35050,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          49.4,
+          "-",
+          "-",
+          49.4,
+          null
+        ],
+        "occupied_rooms": [
+          56458,
+          "-",
+          "-",
+          56458,
+          null
+        ],
+        "room_occupancy_pct": [
+          62.2,
+          "-",
+          "-",
+          62.2,
+          null
+        ],
+        "avg_stay_all": 1.0975033817331676,
+        "avg_stay_foreign": 1.1467617689015692,
+        "avg_stay_domestic": 1.078907402819814,
+        "large_facility_population": 70,
+        "large_facility_respondents": 30,
+        "large_facility_threshold": "従業者10人以上",
+        "person_nights_large": 140363,
+        "checkins_large": 127893,
+        "foreign_person_nights_large": 40194,
+        "foreign_checkins_large": 35050,
+        "capacity_occupancy_pct_large": 49.4,
+        "occupied_rooms_large": 56458,
+        "room_occupancy_pct_large": 62.2,
+        "avg_stay_large": 1.0975033817331676,
+        "avg_stay_foreign_large": 1.1467617689015692,
+        "avg_stay_domestic_large": 1.078907402819814
+      },
+      {
+        "year": 2026,
+        "month": 1,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026744.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          33,
+          null
+        ],
+        "row": 180,
+        "person_nights": [
+          135117,
+          "-",
+          "-",
+          135117
+        ],
+        "checkins": [
+          115645,
+          "-",
+          "-",
+          115645
+        ],
+        "foreign_person_nights": [
+          45849,
+          "-",
+          "-",
+          45849
+        ],
+        "foreign_checkins": [
+          39021,
+          "-",
+          "-",
+          39021,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          42.5,
+          "-",
+          "-",
+          42.5,
+          null
+        ],
+        "occupied_rooms": [
+          59221,
+          "-",
+          "-",
+          59221,
+          null
+        ],
+        "room_occupancy_pct": [
+          53.9,
+          "-",
+          "-",
+          53.9,
+          null
+        ],
+        "avg_stay_all": 1.1683773617536426,
+        "avg_stay_foreign": 1.1749827016222034,
+        "avg_stay_domestic": 1.1650135727709334,
+        "large_facility_population": 62,
+        "large_facility_respondents": 33,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 135117,
+        "checkins_large": 115645,
+        "foreign_person_nights_large": 45849,
+        "foreign_checkins_large": 39021,
+        "capacity_occupancy_pct_large": 42.5,
+        "occupied_rooms_large": 59221,
+        "room_occupancy_pct_large": 53.9,
+        "avg_stay_large": 1.1683773617536426,
+        "avg_stay_foreign_large": 1.1749827016222034,
+        "avg_stay_domestic_large": 1.1650135727709334
+      },
+      {
+        "year": 2026,
+        "month": 2,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026742.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          32,
+          null
+        ],
+        "row": 173,
+        "person_nights": [
+          127452,
+          "-",
+          "-",
+          127452
+        ],
+        "checkins": [
+          110855,
+          "-",
+          "-",
+          110855
+        ],
+        "foreign_person_nights": [
+          53279,
+          "-",
+          "-",
+          53279
+        ],
+        "foreign_checkins": [
+          40991,
+          "-",
+          "-",
+          40991,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          46.9,
+          "-",
+          "-",
+          46.9,
+          null
+        ],
+        "occupied_rooms": [
+          58585,
+          "-",
+          "-",
+          58585,
+          null
+        ],
+        "room_occupancy_pct": [
+          63.4,
+          "-",
+          "-",
+          63.4,
+          null
+        ],
+        "avg_stay_all": 1.1497181002210095,
+        "avg_stay_foreign": 1.2997731209289844,
+        "avg_stay_domestic": 1.0616769724035269,
+        "large_facility_population": 62,
+        "large_facility_respondents": 32,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 127452,
+        "checkins_large": 110855,
+        "foreign_person_nights_large": 53279,
+        "foreign_checkins_large": 40991,
+        "capacity_occupancy_pct_large": 46.9,
+        "occupied_rooms_large": 58585,
+        "room_occupancy_pct_large": 63.4,
+        "avg_stay_large": 1.1497181002210095,
+        "avg_stay_foreign_large": 1.2997731209289844,
+        "avg_stay_domestic_large": 1.0616769724035269
+      },
+      {
+        "year": 2026,
+        "month": 3,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026740.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          32,
+          null
+        ],
+        "row": 175,
+        "person_nights": [
+          149241,
+          "-",
+          "-",
+          149241
+        ],
+        "checkins": [
+          127935,
+          "-",
+          "-",
+          127935
+        ],
+        "foreign_person_nights": [
+          31789,
+          "-",
+          "-",
+          31789
+        ],
+        "foreign_checkins": [
+          26785,
+          "-",
+          "-",
+          26785,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          54.2,
+          "-",
+          "-",
+          54.2,
+          null
+        ],
+        "occupied_rooms": [
+          57953,
+          "-",
+          "-",
+          57953,
+          null
+        ],
+        "room_occupancy_pct": [
+          61.5,
+          "-",
+          "-",
+          61.5,
+          null
+        ],
+        "avg_stay_all": 1.1665376949232031,
+        "avg_stay_foreign": 1.1868209818928506,
+        "avg_stay_domestic": 1.1611665842807712,
+        "large_facility_population": 62,
+        "large_facility_respondents": 32,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 149241,
+        "checkins_large": 127935,
+        "foreign_person_nights_large": 31789,
+        "foreign_checkins_large": 26785,
+        "capacity_occupancy_pct_large": 54.2,
+        "occupied_rooms_large": 57953,
+        "room_occupancy_pct_large": 61.5,
+        "avg_stay_large": 1.1665376949232031,
+        "avg_stay_foreign_large": 1.1868209818928506,
+        "avg_stay_domestic_large": 1.1611665842807712
+      },
+      {
+        "year": 2026,
+        "month": 4,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026733.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          34,
+          null
+        ],
+        "row": 167,
+        "person_nights": [
+          144263,
+          "-",
+          "-",
+          144263
+        ],
+        "checkins": [
+          128750,
+          "-",
+          "-",
+          128750
+        ],
+        "foreign_person_nights": [
+          52372,
+          "-",
+          "-",
+          52372
+        ],
+        "foreign_checkins": [
+          44866,
+          "-",
+          "-",
+          44866,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          47.4,
+          "-",
+          "-",
+          47.4,
+          null
+        ],
+        "occupied_rooms": [
+          61041,
+          "-",
+          "-",
+          61041,
+          null
+        ],
+        "room_occupancy_pct": [
+          58.4,
+          "-",
+          "-",
+          58.4,
+          null
+        ],
+        "avg_stay_all": 1.1204893203883495,
+        "avg_stay_foreign": 1.1672981767931172,
+        "avg_stay_domestic": 1.095453244957322,
+        "large_facility_population": 62,
+        "large_facility_respondents": 34,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 144263,
+        "checkins_large": 128750,
+        "foreign_person_nights_large": 52372,
+        "foreign_checkins_large": 44866,
+        "capacity_occupancy_pct_large": 47.4,
+        "occupied_rooms_large": 61041,
+        "room_occupancy_pct_large": 58.4,
+        "avg_stay_large": 1.1204893203883495,
+        "avg_stay_foreign_large": 1.1672981767931172,
+        "avg_stay_domestic_large": 1.095453244957322
+      },
+      {
+        "year": 2026,
+        "month": 5,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026728.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          35,
+          null
+        ],
+        "row": 171,
+        "person_nights": [
+          153864,
+          "-",
+          "-",
+          153864
+        ],
+        "checkins": [
+          134082,
+          "-",
+          "-",
+          134082
+        ],
+        "foreign_person_nights": [
+          48179,
+          "-",
+          "-",
+          48179
+        ],
+        "foreign_checkins": [
+          39903,
+          "-",
+          "-",
+          39903,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          48.2,
+          "-",
+          "-",
+          48.2,
+          null
+        ],
+        "occupied_rooms": [
+          78674,
+          "-",
+          "-",
+          78674,
+          null
+        ],
+        "room_occupancy_pct": [
+          70.9,
+          "-",
+          "-",
+          70.9,
+          null
+        ],
+        "avg_stay_all": 1.147536582091556,
+        "avg_stay_foreign": 1.2074029521589855,
+        "avg_stay_domestic": 1.1221716093821341,
+        "large_facility_population": 62,
+        "large_facility_respondents": 35,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 153864,
+        "checkins_large": 134082,
+        "foreign_person_nights_large": 48179,
+        "foreign_checkins_large": 39903,
+        "capacity_occupancy_pct_large": 48.2,
+        "occupied_rooms_large": 78674,
+        "room_occupancy_pct_large": 70.9,
+        "avg_stay_large": 1.147536582091556,
+        "avg_stay_foreign_large": 1.2074029521589855,
+        "avg_stay_domestic_large": 1.1221716093821341
+      },
+      {
+        "year": 2026,
+        "month": 6,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002026747.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          36,
+          null
+        ],
+        "row": 170,
+        "person_nights": [
+          128290,
+          "-",
+          "-",
+          128290
+        ],
+        "checkins": [
+          117168,
+          "-",
+          "-",
+          117168
+        ],
+        "foreign_person_nights": [
+          33254,
+          "-",
+          "-",
+          33254
+        ],
+        "foreign_checkins": [
+          28031,
+          "-",
+          "-",
+          28031,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          40.3,
+          "-",
+          "-",
+          40.3,
+          null
+        ],
+        "occupied_rooms": [
+          63592,
+          "-",
+          "-",
+          63592,
+          null
+        ],
+        "room_occupancy_pct": [
+          57.9,
+          "-",
+          "-",
+          57.9,
+          null
+        ],
+        "avg_stay_all": 1.0949235286084937,
+        "avg_stay_foreign": 1.1863294209981805,
+        "avg_stay_domestic": 1.066179027788685,
+        "large_facility_population": 62,
+        "large_facility_respondents": 36,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 128290,
+        "checkins_large": 117168,
+        "foreign_person_nights_large": 33254,
+        "foreign_checkins_large": 28031,
+        "capacity_occupancy_pct_large": 40.3,
+        "occupied_rooms_large": 63592,
+        "room_occupancy_pct_large": 57.9,
+        "avg_stay_large": 1.0949235286084937,
+        "avg_stay_foreign_large": 1.1863294209981805,
+        "avg_stay_domestic_large": 1.066179027788685
+      },
+      {
+        "year": 2026,
+        "month": 7,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002028777.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          35,
+          null
+        ],
+        "row": 182,
+        "person_nights": [
+          150213,
+          "-",
+          "-",
+          150213
+        ],
+        "checkins": [
+          139098,
+          "-",
+          "-",
+          139098
+        ],
+        "foreign_person_nights": [
+          30168,
+          "-",
+          "-",
+          30168
+        ],
+        "foreign_checkins": [
+          25720,
+          "-",
+          "-",
+          25720,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          49.1,
+          "-",
+          "-",
+          49.1,
+          null
+        ],
+        "occupied_rooms": [
+          63234,
+          "-",
+          "-",
+          63234,
+          null
+        ],
+        "room_occupancy_pct": [
+          63.5,
+          "-",
+          "-",
+          63.5,
+          null
+        ],
+        "avg_stay_all": 1.07990769098046,
+        "avg_stay_foreign": 1.1729393468118197,
+        "avg_stay_domestic": 1.0588032951719029,
+        "large_facility_population": 62,
+        "large_facility_respondents": 35,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 150213,
+        "checkins_large": 139098,
+        "foreign_person_nights_large": 30168,
+        "foreign_checkins_large": 25720,
+        "capacity_occupancy_pct_large": 49.1,
+        "occupied_rooms_large": 63234,
+        "room_occupancy_pct_large": 63.5,
+        "avg_stay_large": 1.07990769098046,
+        "avg_stay_foreign_large": 1.1729393468118197,
+        "avg_stay_domestic_large": 1.0588032951719029
+      },
+      {
+        "year": 2026,
+        "month": 8,
+        "source_url": "https://www.mlit.go.jp/kankocho/content/002028775.xlsx",
+        "respondents": [
+          192,
+          "-",
+          40,
+          "-",
+          62,
+          34,
+          null
+        ],
+        "row": 178,
+        "person_nights": [
+          197544,
+          "-",
+          "-",
+          197544
+        ],
+        "checkins": [
+          181508,
+          "-",
+          "-",
+          181508
+        ],
+        "foreign_person_nights": [
+          27036,
+          "-",
+          "-",
+          27036
+        ],
+        "foreign_checkins": [
+          22112,
+          "-",
+          "-",
+          22112,
+          null
+        ],
+        "capacity_occupancy_pct": [
+          62,
+          "-",
+          "-",
+          62,
+          null
+        ],
+        "occupied_rooms": [
+          77718,
+          "-",
+          "-",
+          77718,
+          null
+        ],
+        "room_occupancy_pct": [
+          70.2,
+          "-",
+          "-",
+          70.2,
+          null
+        ],
+        "avg_stay_all": 1.0883487229213038,
+        "avg_stay_foreign": 1.2226845151953691,
+        "avg_stay_domestic": 1.0697131672062035,
+        "large_facility_population": 62,
+        "large_facility_respondents": 34,
+        "large_facility_threshold": "客室20室以上",
+        "person_nights_large": 197544,
+        "checkins_large": 181508,
+        "foreign_person_nights_large": 27036,
+        "foreign_checkins_large": 22112,
+        "capacity_occupancy_pct_large": 62,
+        "occupied_rooms_large": 77718,
+        "room_occupancy_pct_large": 70.2,
+        "avg_stay_large": 1.0883487229213038,
+        "avg_stay_foreign_large": 1.2226845151953691,
+        "avg_stay_domestic_large": 1.0697131672062035
+      }
+    ],
+    "tables": "参考第5表=母集団/回収数、6=延べ、7=実、8=外国人延べ、9=外国人実、10=定員稼働、11=利用客室、12=客室稼働。各行のrowとsource_urlを収録。",
+    "array_columns": "respondentsは小規模母集団/小規模回収/中規模母集団/中規模回収/大規模母集団/大規模回収。ほかは表章合計/小規模/中規模/大規模。末尾Noneは空列。",
+    "definition": "市区町村×規模別に10施設以上回収した区分のみ公表する回収施設実数。未回収補完なし。実人数はチェックイン単位で、年間ユニーク人数でない。月境の連泊でも月ごとに実人数に入る。人泊÷実人数はこの回答集合の平均泊数。",
+    "break": "2025は従業者0～4人/5～9人/10人以上、2026は客室1～9室/10～19室/20室以上へ層化変更。別府2025大規模回収30～37施設/母集団70、2026は32～36/62。前年比や前後差を政策効果としない。2025はlarge列で年間比較するのが推奨。2026は別系列。",
+    "status": "第2次速報。年確定Excelの市単独表は未確認。県や広域市町村130区分の確定値と置換しない。",
+    "annual_2025_large_sum": {
+      "person_nights": 1752591,
+      "checkins": 1589649,
+      "avg_stay": 1.1025018730549951,
+      "note": "月次の異なる回収集合を合算した参考比率。市全体年間平均泊数ではない。",
+      "foreign_person_nights": 419474,
+      "foreign_checkins": 360077,
+      "foreign_avg_stay": 1.1649563843289075,
+      "domestic_person_nights": 1333117,
+      "domestic_checkins": 1229572,
+      "domestic_avg_stay": 1.0842122299466805
+    }
+  },
+  "oita_inbound_spending_2025": {
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002020056.xlsx",
+    "publisher": "観光庁",
+    "scope": "大分県、2025暦年、訪日外国人。別府市ではない。",
+    "segments": [
+      {
+        "purpose": "全目的",
+        "visitor_sample_n": 2442,
+        "spending_sample_n": 2391,
+        "visit_rate_pct": 3.3603,
+        "visitors": 1382264.0000000002,
+        "total_unit_yen": 32067,
+        "total_100million_yen": 443.25376435,
+        "fees": [
+          {
+            "fee": "団体・パック参加費",
+            "yen_per_visitor": 4697,
+            "amount_100million_yen": 64.92071898
+          },
+          {
+            "fee": "宿泊費",
+            "yen_per_visitor": 13155,
+            "amount_100million_yen": 181.84179029
+          },
+          {
+            "fee": "飲食費",
+            "yen_per_visitor": 7424,
+            "amount_100million_yen": 102.61293664
+          },
+          {
+            "fee": "県内交通費",
+            "yen_per_visitor": 581,
+            "amount_100million_yen": 8.03385691
+          },
+          {
+            "fee": "娯楽等サービス費",
+            "yen_per_visitor": 2304,
+            "amount_100million_yen": 31.84893139
+          },
+          {
+            "fee": "買物代",
+            "yen_per_visitor": 3777,
+            "amount_100million_yen": 52.20308404
+          },
+          {
+            "fee": "その他",
+            "yen_per_visitor": 130,
+            "amount_100million_yen": 1.7924461
+          }
+        ],
+        "source_tables": [
+          "表1-1",
+          "表1-2",
+          "表1-3"
+        ],
+        "source_row": 52
+      },
+      {
+        "purpose": "観光・レジャー目的",
+        "visitor_sample_n": 2357,
+        "spending_sample_n": 2310,
+        "visit_rate_pct": 3.7725,
+        "visitors": 1332398.0,
+        "total_unit_yen": 28699,
+        "total_100million_yen": 382.38853722,
+        "fees": [
+          {
+            "fee": "団体・パック参加費",
+            "yen_per_visitor": 4753,
+            "amount_100million_yen": 63.32574535
+          },
+          {
+            "fee": "宿泊費",
+            "yen_per_visitor": 12311,
+            "amount_100million_yen": 164.02650218
+          },
+          {
+            "fee": "飲食費",
+            "yen_per_visitor": 6313,
+            "amount_100million_yen": 84.11058826
+          },
+          {
+            "fee": "県内交通費",
+            "yen_per_visitor": 453,
+            "amount_100million_yen": 6.03063448
+          },
+          {
+            "fee": "娯楽等サービス費",
+            "yen_per_visitor": 1690,
+            "amount_100million_yen": 22.51437099
+          },
+          {
+            "fee": "買物代",
+            "yen_per_visitor": 3047,
+            "amount_100million_yen": 40.59525816
+          },
+          {
+            "fee": "その他",
+            "yen_per_visitor": 134,
+            "amount_100million_yen": 1.78543779
+          }
+        ],
+        "source_tables": [
+          "表2-1",
+          "表2-2",
+          "表2-3"
+        ],
+        "source_row": 52
+      }
+    ],
+    "definition": "県内消費。団体・パック参加費の訪問地収入分を含み、都道府県間交通費を含まない。費目別は支出ゼロの訪問者も含む旅行者あたり平均。宿泊単価は日帰り等ゼロを含むため宿泊者だけの宿泊費とは違う。",
+    "private_retabulation_warning": "民間個票再集計の27,371円は団体・パック参加費除外の別定義。公式32,067円と混ぜない。公式掲載費目丸め合計32,068円と総額32,067円の1円差は丸め。",
+    "status": "観光庁公式集計の直接取得。民間による個票二次集計ではない。2026-10-08一部表修正の案内あり、現在リンクを採用。"
+  },
+  "oita_questionnaire_2025fy": {
+    "url": "https://www.pref.oita.jp/uploaded/attachment/2268519.pdf",
+    "title": "令和7年度 大分県観光実態調査",
+    "published": "2026-03",
+    "scope": "大分県20観光地点の来訪者、休日12日、調査員配布・自記式。確率抽出の市代表サンプルではない。",
+    "sample_n": 4942,
+    "foreign_resident_n": 200,
+    "survey_dates": [
+      "2025-05-25",
+      "2025-05-31",
+      "2025-06-01",
+      "2025-08-30",
+      "2025-08-31",
+      "2025-09-06",
+      "2025-11-01",
+      "2025-11-02",
+      "2025-11-08",
+      "2026-01-31",
+      "2026-02-01",
+      "2026-02-07"
+    ],
+    "beppu_collection_sites": [
+      {
+        "site": "地獄めぐり",
+        "n": 265
+      },
+      {
+        "site": "別府ロープウェイ",
+        "n": 266
+      }
+    ],
+    "sample_caveat": "概要の14,984は回答数×同行者数。実回答者4,942と区別。由布市TICは8/9月から追加。前年来訪規模から1日60回答以上を得られる地点を選定。20地点のうち別府2地点531回答、別府市単独クロス集計ではない。",
+    "method_printed_page": 2,
+    "method_pdf_page": 3,
+    "prefecture_choice_reasons": {
+      "scope": "県外・海外居住者、複数回答。別府を選んだ理由でない。",
+      "n": 3120,
+      "foreign_n": 200,
+      "printed_page": 9,
+      "pdf_page": 10,
+      "items": [
+        {
+          "reason": "温泉",
+          "all_count": 1068,
+          "all_pct": 34.2,
+          "foreign_count": 110,
+          "foreign_pct": 55.0
+        },
+        {
+          "reason": "自然",
+          "all_count": 883,
+          "all_pct": 28.3,
+          "foreign_count": 121,
+          "foreign_pct": 60.5
+        },
+        {
+          "reason": "食",
+          "all_count": 658,
+          "all_pct": 21.1,
+          "foreign_count": 81,
+          "foreign_pct": 40.5
+        },
+        {
+          "reason": "再訪",
+          "all_count": 478,
+          "all_pct": 15.3,
+          "foreign_count": 16,
+          "foreign_pct": 8.0
+        },
+        {
+          "reason": "名所旧跡",
+          "all_count": 466,
+          "all_pct": 14.9,
+          "foreign_count": 48,
+          "foreign_pct": 24.0
+        },
+        {
+          "reason": "近い",
+          "all_count": 426,
+          "all_pct": 13.7,
+          "foreign_count": 11,
+          "foreign_pct": 5.5
+        },
+        {
+          "reason": "宿泊施設",
+          "all_count": 202,
+          "all_pct": 6.5,
+          "foreign_count": 21,
+          "foreign_pct": 10.5
+        },
+        {
+          "reason": "親族友人の勧め",
+          "all_count": 190,
+          "all_pct": 6.1,
+          "foreign_count": 24,
+          "foreign_pct": 12.0
+        },
+        {
+          "reason": "初訪問",
+          "all_count": 170,
+          "all_pct": 5.4,
+          "foreign_count": 19,
+          "foreign_pct": 9.5
+        },
+        {
+          "reason": "メディアネットで話題",
+          "all_count": 132,
+          "all_pct": 4.2,
+          "foreign_count": 24,
+          "foreign_pct": 12.0
+        },
+        {
+          "reason": "街の雰囲気",
+          "all_count": 101,
+          "all_pct": 3.2,
+          "foreign_count": 31,
+          "foreign_pct": 15.5
+        },
+        {
+          "reason": "特産土産",
+          "all_count": 76,
+          "all_pct": 2.4,
+          "foreign_count": 13,
+          "foreign_pct": 6.5
+        },
+        {
+          "reason": "理由なし",
+          "all_count": 106,
+          "all_pct": 3.4,
+          "foreign_count": 2,
+          "foreign_pct": 1.0
+        },
+        {
+          "reason": "その他",
+          "all_count": 1003,
+          "all_pct": 32.1,
+          "foreign_count": 13,
+          "foreign_pct": 6.5
+        },
+        {
+          "reason": "不明",
+          "all_count": 21,
+          "all_pct": 0.7,
+          "foreign_count": 4,
+          "foreign_pct": 2.0
+        }
+      ]
+    },
+    "nights_in_prefecture": {
+      "n": 2178,
+      "scope": "宿泊旅行者の県内宿泊数。県外泊だけの0泊を含む。",
+      "printed_page": 25,
+      "pdf_page": 26,
+      "categories": [
+        {
+          "nights": "0泊",
+          "pct": 11.4
+        },
+        {
+          "nights": "1泊",
+          "pct": 61.7
+        },
+        {
+          "nights": "2泊",
+          "pct": 19.6
+        },
+        {
+          "nights": "3泊以上",
+          "pct": 7.3
+        }
+      ],
+      "warning": "3泊以上が上限開放。正確な平均泊数を算出不可。"
+    },
+    "beppu_stay_share": {
+      "n": 1964,
+      "beppu_count": 1026,
+      "beppu_pct": 52.2,
+      "foreign_n": 163,
+      "foreign_beppu_count": 88,
+      "foreign_beppu_pct": 54.0,
+      "printed_page": 27,
+      "pdf_page": 28,
+      "warning": "県内宿泊市町村の複数回答。別府市内調査531回答とは別分母。"
+    },
+    "costs": {
+      "scope": "旅行全体の1人あたり費用、県内消費だけとは限らない。",
+      "printed_pages": [
+        30,
+        31
+      ],
+      "pdf_pages": [
+        31,
+        32
+      ],
+      "unit": "円/人",
+      "items": [
+        {
+          "segment": "全体",
+          "n": 4942,
+          "total": 30411,
+          "transport": 10880,
+          "lodging": 40520,
+          "souvenir": 7106,
+          "food": 5919,
+          "admission": 3325,
+          "other": 3194
+        },
+        {
+          "segment": "日帰り",
+          "n": 2763,
+          "total": 6588,
+          "transport": 2943,
+          "lodging": null,
+          "souvenir": 3620,
+          "food": 2955,
+          "admission": 2095,
+          "other": 1251
+        },
+        {
+          "segment": "宿泊",
+          "n": 2178,
+          "total": 60874,
+          "transport": 15777,
+          "lodging": 40488,
+          "souvenir": 10639,
+          "food": 9211,
+          "admission": 4199,
+          "other": 6516
+        },
+        {
+          "segment": "県内居住",
+          "n": 1822,
+          "total": 6043,
+          "transport": 2481,
+          "lodging": 25580,
+          "souvenir": 3247,
+          "food": 2757,
+          "admission": 1818,
+          "other": 1130
+        },
+        {
+          "segment": "県外海外居住",
+          "n": 3120,
+          "total": 44534,
+          "transport": 12734,
+          "lodging": 41106,
+          "souvenir": 8787,
+          "food": 7411,
+          "admission": 3765,
+          "other": 4718
+        }
+      ],
+      "warning": "費目別分母非公表。項目平均を足して総額にしない。100%積上げ・円グラフ禁止。旅行形態n合計は4,941で1件不明。"
+    },
+    "improvements": {
+      "n": 4942,
+      "foreign_n": 200,
+      "printed_page": 35,
+      "pdf_page": 36,
+      "multiple_response": true,
+      "items": [
+        {
+          "issue": "交通渋滞・駐車場",
+          "all_n": 422,
+          "all_pct": 8.5,
+          "foreign_n": 20,
+          "foreign_pct": 10
+        },
+        {
+          "issue": "観光地までの移動手段",
+          "all_n": 227,
+          "all_pct": 4.6,
+          "foreign_n": 32,
+          "foreign_pct": 16
+        },
+        {
+          "issue": "夜間観光",
+          "all_n": 107,
+          "all_pct": 2.2,
+          "foreign_n": 19,
+          "foreign_pct": 9.5
+        },
+        {
+          "issue": "特になし",
+          "all_n": 2402,
+          "all_pct": 48.6,
+          "foreign_n": 25,
+          "foreign_pct": 12.5
+        },
+        {
+          "issue": "無回答",
+          "all_n": 152,
+          "all_pct": 3.1,
+          "foreign_n": 29,
+          "foreign_pct": 14.5
+        }
+      ],
+      "warning": "海外居住者200人の県全体意見。別府外国人全体の不満率ではない。"
+    },
+    "revisit_intent": {
+      "n": 4942,
+      "pct": 94.1,
+      "printed_page": 33,
+      "pdf_page": 34,
+      "warning": "同一来訪者標本の再来訪意向。実際の再訪率ではない。"
+    }
+  },
+  "city_overnight_origin_2025": {
+    "scope": "市全宿泊推計の地域構成。外国を含むため国内客だけの分母ではない。",
+    "source_url": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/toukei_r07toukei.pdf",
+    "printed_page": 4,
+    "pdf_page": 7,
+    "data": [
+      {
+        "origin": "北海道・東北",
+        "pct": 1.2
+      },
+      {
+        "origin": "関東",
+        "pct": 11.1
+      },
+      {
+        "origin": "中部",
+        "pct": 2.9
+      },
+      {
+        "origin": "近畿",
+        "pct": 6.2
+      },
+      {
+        "origin": "中国・四国",
+        "pct": 6.9
+      },
+      {
+        "origin": "福岡",
+        "pct": 17.4
+      },
+      {
+        "origin": "大分",
+        "pct": 8.0
+      },
+      {
+        "origin": "九州その他",
+        "pct": 11.3
+      },
+      {
+        "origin": "韓国",
+        "pct": 15.1
+      },
+      {
+        "origin": "外国その他",
+        "pct": 19.8
+      }
+    ]
+  },
+  "policy_plans": [
+    {
+      "level": "市",
+      "title": "第3期別府市総合戦略",
+      "period": "2025～2029年度",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sisei/kakusyukeikaku/sousei/3ki/honpen.pdf",
+      "index_url": "https://www.city.beppu.oita.jp/sisei/kakusyukeikaku/detail12.html",
+      "status": "確定版。画像PDFを実読。",
+      "printed_pages": [
+        1,
+        16,
+        17,
+        18
+      ],
+      "pdf_pages": [
+        4,
+        21,
+        22,
+        23
+      ],
+      "baseline_year": 2023,
+      "target_year": 2029,
+      "targets": [
+        {
+          "indicator": "観光消費額",
+          "baseline": 925,
+          "target": 1000,
+          "unit": "億円"
+        },
+        {
+          "indicator": "宿泊者数",
+          "baseline": 2388,
+          "target": 2720,
+          "unit": "千人"
+        },
+        {
+          "indicator": "外国人観光客数",
+          "baseline": 281564,
+          "target": 622000,
+          "unit": "人"
+        },
+        {
+          "indicator": "バリアフリーツアー相談対応",
+          "baseline": 124,
+          "target": 180,
+          "unit": "件"
+        },
+        {
+          "indicator": "WANDER COMPASS BEPPU外国人来訪",
+          "baseline": 59560,
+          "target": 65520,
+          "unit": "人"
+        }
+      ],
+      "orientation": "滞在時間伸長、観光DX、ユニバーサルツーリズム、健康、食。扇状地の坂道と別府駅起点バス/タクシー充実を課題化。",
+      "evaluation_caution": "2025市宿泊2,752,193は目標2,720,000を数値上上回る。消費の県単価移植・定義改訂を考慮。外国人KPIは旧推計基準なので改訂後2025と単純達成率不可。計画は現状分析/政策方針であり効果検証結果ではない。"
+    },
+    {
+      "level": "県",
+      "title": "日本一のおんせん県おおいたツーリズム戦略 第5期",
+      "period": "2025～2027年度",
+      "source_url": "https://www.pref.oita.jp/uploaded/attachment/2237952.pdf",
+      "index_url": "https://www.pref.oita.jp/soshiki/14180/tu-rizumusenryaku2025.html",
+      "published": "2025-03",
+      "printed_pages": [
+        6,
+        7,
+        11,
+        16
+      ],
+      "pdf_pages": [
+        10,
+        11,
+        15,
+        20
+      ],
+      "target_year": 2027,
+      "targets": [
+        {
+          "indicator": "観光消費額",
+          "target": 2982,
+          "unit": "億円"
+        },
+        {
+          "indicator": "住民満足度",
+          "target": 80,
+          "unit": "%"
+        },
+        {
+          "indicator": "再来訪意向",
+          "target": 90,
+          "unit": "%"
+        },
+        {
+          "indicator": "県内宿泊客数",
+          "target": 8515,
+          "unit": "千人（原文表記）"
+        },
+        {
+          "indicator": "外国人宿泊客数",
+          "target": 1484,
+          "unit": "千人（原文表記）"
+        }
+      ],
+      "orientation": "データマーケティング、住民/事業者/来訪者満足、需要分散、交通接続・二次交通・自動運転等の検討。",
+      "evaluation_caution": "県独自従業員10人以上192施設5,311,433人泊と宿泊KPIを直結しない。前期指標は観光庁宿泊旅行統計（広い母集団）と明示。消費も国調査を使う別系列で、市観光動態要覧とは異なる。"
+    },
+    {
+      "level": "国",
+      "title": "観光立国推進基本計画 第5次",
+      "adopted": "2026-03-27",
+      "period": "2026～2030年度",
+      "source_url": "https://www.mlit.go.jp/kankocho/content/001991694.pdf",
+      "summary_url": "https://www.mlit.go.jp/kankocho/content/002019550.pdf",
+      "index_url": "https://www.mlit.go.jp/kankocho/seisaku_seido/kihonkeikaku.html",
+      "target_year": 2030,
+      "summary_pdf_page": 4,
+      "targets": [
+        {
+          "indicator": "訪日外国人旅行者",
+          "target": 6000,
+          "unit": "万人"
+        },
+        {
+          "indicator": "うちリピーター",
+          "target": 4000,
+          "unit": "万人"
+        },
+        {
+          "indicator": "訪日消費",
+          "target": 15,
+          "unit": "兆円"
+        },
+        {
+          "indicator": "訪日1人単価",
+          "target": 25,
+          "unit": "万円"
+        },
+        {
+          "indicator": "外国人地方延べ宿泊",
+          "target": 1.3,
+          "unit": "億人泊"
+        },
+        {
+          "indicator": "日本人地方延べ宿泊",
+          "target": 3.2,
+          "unit": "億人泊"
+        },
+        {
+          "indicator": "国内旅行消費",
+          "target": 30,
+          "unit": "兆円"
+        },
+        {
+          "indicator": "誘客と住民生活の質を両立する地域",
+          "target": 100,
+          "unit": "地域"
+        },
+        {
+          "indicator": "宿泊業付加価値",
+          "target": 6.8,
+          "unit": "兆円"
+        }
+      ],
+      "orientation": "観光と交通・まちづくり連携、住民生活と誘客の両立、地方分散、休暇分散、手ぶら観光、施設送迎車両等既存輸送資源活用。",
+      "definitions": "地方部は埼玉・千葉・東京・神奈川・愛知・京都・大阪・兵庫の8都府県以外。全国KPIは別府の需要予測でない。",
+      "expired_target_warning": "旧2023～2025計画の地方宿泊2泊は現行目標として示さない。旧目標実績2025は1.4泊（暫定/速報）と新計画本文p11/PDF15に評価。新計画の表には2025速報実績も含まれ、最新確定値と必ずしも一致しない。"
+    },
+    {
+      "level": "市",
+      "title": "デジタルガバメント推進計画",
+      "adopted": "2025-12",
+      "period": "2026～2030年度",
+      "source_url": "https://www.city.beppu.oita.jp/doc/sisei/df/keikaku/keikaku/plan.pdf",
+      "index_url": "https://www.city.beppu.oita.jp/sisei/df/keikaku/digital_first2.html",
+      "printed_pages": [
+        10,
+        35
+      ],
+      "pdf_pages": [
+        10,
+        35
+      ],
+      "targets": [
+        {
+          "indicator": "地域ポータルアプリの観光客利用者数",
+          "target": 1000,
+          "unit": "人以上",
+          "year": 2030
+        }
+      ],
+      "orientation": "観光情報一元化、観光MaaS、地域通貨と行動データ、バリアフリー/多言語対応。",
+      "evaluation_caution": "達成実績ではなく最終年度目標。利用者の重複排除や観光客判定、基準値は当該ページ未記載。"
+    }
+  ],
+  "remaining_gaps": [
+    "別府市単独・全宿泊施設を網羅する年間ユニーク実人数と平均泊数は未確認。市1.106泊KPIと観光庁回収施設比率は別物。",
+    "別府市内の時間単位の滞在時間分布、夜間回遊、宿送迎/荷物サービス利用件数・収支は一次統計未確認。",
+    "市観光客調査の訪問理由・交通手段クロスは未確認。県全体調査を別府に外挿しない。",
+    "市外国人費目別消費は未確認。県の公式費目別のみ取得。",
+    "市月別全観光/日帰りは未確認。宿泊と19施設入込を代理として用いる場合はラベルを分ける。",
+    "県観光データカタログの2025宿泊表示8,232千人・外国人1,505千人は、現行観光庁確定Excelの延べ8,128,890・外国人1,491,590と不一致。更新時点差を疑い、比較は直接統計の現行版へ揃える。",
+    "国内発地は市全宿泊推計の地域構成を取得済み。ただし外国を含む全宿泊分母、国内だけの実人数ではない。市単独の訪問理由/未訪問理由/旅行同行構成は要覧・現行総合戦略・県観光実態調査の公開範囲で未確認。未訪問理由は来訪者調査では把握できない。"
+  ]
+}

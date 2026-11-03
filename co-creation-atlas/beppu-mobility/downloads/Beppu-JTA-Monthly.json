@@ -1,0 +1,1542 @@
+[
+  {
+    "year": 2025,
+    "month": 1,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996835.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      37,
+      null
+    ],
+    "row": 202,
+    "person_nights": [
+      134487,
+      1216,
+      "-",
+      133271
+    ],
+    "checkins": [
+      120222,
+      551,
+      "-",
+      119671
+    ],
+    "foreign_person_nights": [
+      43471,
+      364,
+      "-",
+      43107
+    ],
+    "foreign_checkins": [
+      37854,
+      217,
+      "-",
+      37637,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      41.5,
+      21.9,
+      "-",
+      41.9,
+      null
+    ],
+    "occupied_rooms": [
+      58582,
+      466,
+      "-",
+      58116,
+      null
+    ],
+    "room_occupancy_pct": [
+      54.9,
+      31.3,
+      "-",
+      55.3,
+      null
+    ],
+    "avg_stay_all": 1.1186554873484054,
+    "avg_stay_foreign": 1.1483859037354045,
+    "avg_stay_domestic": 1.10499222999223,
+    "large_facility_population": 70,
+    "large_facility_respondents": 37,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 133271,
+    "checkins_large": 119671,
+    "foreign_person_nights_large": 43107,
+    "foreign_checkins_large": 37637,
+    "capacity_occupancy_pct_large": 41.9,
+    "occupied_rooms_large": 58116,
+    "room_occupancy_pct_large": 55.3,
+    "avg_stay_large": 1.1136449097943528,
+    "avg_stay_foreign_large": 1.1453357068841832,
+    "avg_stay_domestic_large": 1.0991052490430797
+  },
+  {
+    "year": 2025,
+    "month": 2,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996833.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      35,
+      null
+    ],
+    "row": 192,
+    "person_nights": [
+      144373,
+      1371,
+      "-",
+      143002
+    ],
+    "checkins": [
+      129644,
+      859,
+      "-",
+      128785
+    ],
+    "foreign_person_nights": [
+      40667,
+      411,
+      "-",
+      40256
+    ],
+    "foreign_checkins": [
+      34940,
+      299,
+      "-",
+      34641,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      49.7,
+      19.8,
+      "-",
+      50.4,
+      null
+    ],
+    "occupied_rooms": [
+      58657,
+      590,
+      "-",
+      58067,
+      null
+    ],
+    "room_occupancy_pct": [
+      62.3,
+      26.3,
+      "-",
+      63.2,
+      null
+    ],
+    "avg_stay_all": 1.1136111196815897,
+    "avg_stay_foreign": 1.163909559244419,
+    "avg_stay_domestic": 1.095054063186349,
+    "large_facility_population": 70,
+    "large_facility_respondents": 35,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 143002,
+    "checkins_large": 128785,
+    "foreign_person_nights_large": 40256,
+    "foreign_checkins_large": 34641,
+    "capacity_occupancy_pct_large": 50.4,
+    "occupied_rooms_large": 58067,
+    "room_occupancy_pct_large": 63.2,
+    "avg_stay_large": 1.110393291144155,
+    "avg_stay_foreign_large": 1.1620911636500102,
+    "avg_stay_domestic_large": 1.0913706662134601
+  },
+  {
+    "year": 2025,
+    "month": 3,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996831.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      34,
+      null
+    ],
+    "row": 190,
+    "person_nights": [
+      187564,
+      2106,
+      "-",
+      185458
+    ],
+    "checkins": [
+      169643,
+      1398,
+      "-",
+      168245
+    ],
+    "foreign_person_nights": [
+      38188,
+      658,
+      "-",
+      37530
+    ],
+    "foreign_checkins": [
+      32762,
+      468,
+      "-",
+      32294,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      58.4,
+      26.2,
+      "-",
+      59.3,
+      null
+    ],
+    "occupied_rooms": [
+      68897,
+      594,
+      "-",
+      68303,
+      null
+    ],
+    "room_occupancy_pct": [
+      66.6,
+      23.1,
+      "-",
+      67.7,
+      null
+    ],
+    "avg_stay_all": 1.105639489987798,
+    "avg_stay_foreign": 1.165618704596789,
+    "avg_stay_domestic": 1.0912836697569421,
+    "large_facility_population": 70,
+    "large_facility_respondents": 34,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 185458,
+    "checkins_large": 168245,
+    "foreign_person_nights_large": 37530,
+    "foreign_checkins_large": 32294,
+    "capacity_occupancy_pct_large": 59.3,
+    "occupied_rooms_large": 68303,
+    "room_occupancy_pct_large": 67.7,
+    "avg_stay_large": 1.1023091325150822,
+    "avg_stay_foreign_large": 1.1621353811853594,
+    "avg_stay_domestic_large": 1.088097917632088
+  },
+  {
+    "year": 2025,
+    "month": 4,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996829.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      35,
+      null
+    ],
+    "row": 195,
+    "person_nights": [
+      144351,
+      1635,
+      "-",
+      142716
+    ],
+    "checkins": [
+      128406,
+      791,
+      "-",
+      127615
+    ],
+    "foreign_person_nights": [
+      39453,
+      815,
+      "-",
+      38638
+    ],
+    "foreign_checkins": [
+      33012,
+      413,
+      "-",
+      32599,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      47.6,
+      28.1,
+      "-",
+      48,
+      null
+    ],
+    "occupied_rooms": [
+      57432,
+      648,
+      "-",
+      56784,
+      null
+    ],
+    "room_occupancy_pct": [
+      58.1,
+      33.8,
+      "-",
+      58.6,
+      null
+    ],
+    "avg_stay_all": 1.1241764403532546,
+    "avg_stay_foreign": 1.195110868774991,
+    "avg_stay_domestic": 1.0996289074784578,
+    "large_facility_population": 70,
+    "large_facility_respondents": 35,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 142716,
+    "checkins_large": 127615,
+    "foreign_person_nights_large": 38638,
+    "foreign_checkins_large": 32599,
+    "capacity_occupancy_pct_large": 48,
+    "occupied_rooms_large": 56784,
+    "room_occupancy_pct_large": 58.6,
+    "avg_stay_large": 1.118332484425812,
+    "avg_stay_foreign_large": 1.185251081321513,
+    "avg_stay_domestic_large": 1.0953734107939714
+  },
+  {
+    "year": 2025,
+    "month": 5,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996823.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      36,
+      null
+    ],
+    "row": 191,
+    "person_nights": [
+      148033,
+      1623,
+      "-",
+      146410
+    ],
+    "checkins": [
+      132819,
+      793,
+      "-",
+      132026
+    ],
+    "foreign_person_nights": [
+      36524,
+      789,
+      "-",
+      35735
+    ],
+    "foreign_checkins": [
+      30784,
+      329,
+      "-",
+      30455,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      46.5,
+      28.8,
+      "-",
+      46.9,
+      null
+    ],
+    "occupied_rooms": [
+      60804,
+      667,
+      "-",
+      60137,
+      null
+    ],
+    "room_occupancy_pct": [
+      58.9,
+      35.3,
+      "-",
+      59.4,
+      null
+    ],
+    "avg_stay_all": 1.1145468645299241,
+    "avg_stay_foreign": 1.186460498960499,
+    "avg_stay_domestic": 1.0928504924780713,
+    "large_facility_population": 70,
+    "large_facility_respondents": 36,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 146410,
+    "checkins_large": 132026,
+    "foreign_person_nights_large": 35735,
+    "foreign_checkins_large": 30455,
+    "capacity_occupancy_pct_large": 46.9,
+    "occupied_rooms_large": 60137,
+    "room_occupancy_pct_large": 59.4,
+    "avg_stay_large": 1.1089482374683775,
+    "avg_stay_foreign_large": 1.173370546708258,
+    "avg_stay_domestic_large": 1.0896318831162437
+  },
+  {
+    "year": 2025,
+    "month": 6,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996821.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      33,
+      null
+    ],
+    "row": 187,
+    "person_nights": [
+      120684,
+      1207,
+      "-",
+      119477
+    ],
+    "checkins": [
+      108754,
+      487,
+      "-",
+      108267
+    ],
+    "foreign_person_nights": [
+      28963,
+      420,
+      "-",
+      28543
+    ],
+    "foreign_checkins": [
+      24638,
+      216,
+      "-",
+      24422,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      40.4,
+      15.5,
+      "-",
+      41.1,
+      null
+    ],
+    "occupied_rooms": [
+      49545,
+      530,
+      "-",
+      49015,
+      null
+    ],
+    "room_occupancy_pct": [
+      51,
+      20.8,
+      "-",
+      51.9,
+      null
+    ],
+    "avg_stay_all": 1.1096971145888888,
+    "avg_stay_foreign": 1.1755418459290528,
+    "avg_stay_domestic": 1.0904108611916876,
+    "large_facility_population": 70,
+    "large_facility_respondents": 33,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 119477,
+    "checkins_large": 108267,
+    "foreign_person_nights_large": 28543,
+    "foreign_checkins_large": 24422,
+    "capacity_occupancy_pct_large": 41.1,
+    "occupied_rooms_large": 49015,
+    "room_occupancy_pct_large": 51.9,
+    "avg_stay_large": 1.1035403216123103,
+    "avg_stay_foreign_large": 1.1687412988289247,
+    "avg_stay_domestic_large": 1.0845488699385772
+  },
+  {
+    "year": 2025,
+    "month": 7,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996815.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      34,
+      null
+    ],
+    "row": 190,
+    "person_nights": [
+      135663,
+      1025,
+      "-",
+      134638
+    ],
+    "checkins": [
+      126016,
+      491,
+      "-",
+      125525
+    ],
+    "foreign_person_nights": [
+      24645,
+      615,
+      "-",
+      24030
+    ],
+    "foreign_checkins": [
+      20753,
+      260,
+      "-",
+      20493,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      44.4,
+      12.4,
+      "-",
+      45.3,
+      null
+    ],
+    "occupied_rooms": [
+      49780,
+      587,
+      "-",
+      49193,
+      null
+    ],
+    "room_occupancy_pct": [
+      52,
+      20.4,
+      "-",
+      53,
+      null
+    ],
+    "avg_stay_all": 1.0765537709497206,
+    "avg_stay_foreign": 1.1875391509661253,
+    "avg_stay_domestic": 1.054672582008873,
+    "large_facility_population": 70,
+    "large_facility_respondents": 34,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 134638,
+    "checkins_large": 125525,
+    "foreign_person_nights_large": 24030,
+    "foreign_checkins_large": 20493,
+    "capacity_occupancy_pct_large": 45.3,
+    "occupied_rooms_large": 49193,
+    "room_occupancy_pct_large": 53,
+    "avg_stay_large": 1.072599083847839,
+    "avg_stay_foreign_large": 1.1725955204216074,
+    "avg_stay_domestic_large": 1.0530885825272298
+  },
+  {
+    "year": 2025,
+    "month": 8,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996813.xlsx",
+    "respondents": [
+      183,
+      11,
+      37,
+      "-",
+      70,
+      33,
+      null
+    ],
+    "row": 186,
+    "person_nights": [
+      182822,
+      1260,
+      "-",
+      181562
+    ],
+    "checkins": [
+      166706,
+      625,
+      "-",
+      166081
+    ],
+    "foreign_person_nights": [
+      20596,
+      729,
+      "-",
+      19867
+    ],
+    "foreign_checkins": [
+      16700,
+      285,
+      "-",
+      16415,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      60.3,
+      17.3,
+      "-",
+      61.3,
+      null
+    ],
+    "occupied_rooms": [
+      64584,
+      545,
+      "-",
+      64039,
+      null
+    ],
+    "room_occupancy_pct": [
+      65.6,
+      20.2,
+      "-",
+      66.9,
+      null
+    ],
+    "avg_stay_all": 1.0966731851283098,
+    "avg_stay_foreign": 1.2332934131736526,
+    "avg_stay_domestic": 1.0814634081303414,
+    "large_facility_population": 70,
+    "large_facility_respondents": 33,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 181562,
+    "checkins_large": 166081,
+    "foreign_person_nights_large": 19867,
+    "foreign_checkins_large": 16415,
+    "capacity_occupancy_pct_large": 61.3,
+    "occupied_rooms_large": 64039,
+    "room_occupancy_pct_large": 66.9,
+    "avg_stay_large": 1.0932135524232152,
+    "avg_stay_foreign_large": 1.2102954614681694,
+    "avg_stay_domestic_large": 1.0803722956449695
+  },
+  {
+    "year": 2025,
+    "month": 9,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996810.xlsx",
+    "respondents": [
+      183,
+      10,
+      37,
+      "-",
+      70,
+      32,
+      null
+    ],
+    "row": 179,
+    "person_nights": [
+      134142,
+      669,
+      "-",
+      133473
+    ],
+    "checkins": [
+      121197,
+      352,
+      "-",
+      120845
+    ],
+    "foreign_person_nights": [
+      23530,
+      335,
+      "-",
+      23195
+    ],
+    "foreign_checkins": [
+      19457,
+      153,
+      "-",
+      19304,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      46.1,
+      9.1,
+      "-",
+      47.1,
+      null
+    ],
+    "occupied_rooms": [
+      52044,
+      329,
+      "-",
+      51715,
+      null
+    ],
+    "room_occupancy_pct": [
+      55.7,
+      13.5,
+      "-",
+      56.8,
+      null
+    ],
+    "avg_stay_all": 1.1068095744944182,
+    "avg_stay_foreign": 1.2093334018605129,
+    "avg_stay_domestic": 1.0872026734814233,
+    "large_facility_population": 70,
+    "large_facility_respondents": 32,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 133473,
+    "checkins_large": 120845,
+    "foreign_person_nights_large": 23195,
+    "foreign_checkins_large": 19304,
+    "capacity_occupancy_pct_large": 47.1,
+    "occupied_rooms_large": 51715,
+    "room_occupancy_pct_large": 56.8,
+    "avg_stay_large": 1.1044974967934131,
+    "avg_stay_foreign_large": 1.2015644426025693,
+    "avg_stay_domestic_large": 1.0860440610196866
+  },
+  {
+    "year": 2025,
+    "month": 10,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996807.xlsx",
+    "respondents": [
+      183,
+      10,
+      37,
+      "-",
+      70,
+      34,
+      null
+    ],
+    "row": 186,
+    "person_nights": [
+      145963,
+      1814,
+      "-",
+      144149
+    ],
+    "checkins": [
+      132881,
+      1064,
+      "-",
+      131817
+    ],
+    "foreign_person_nights": [
+      49097,
+      771,
+      "-",
+      48326
+    ],
+    "foreign_checkins": [
+      42732,
+      449,
+      "-",
+      42283,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      47.6,
+      22.9,
+      "-",
+      48.3,
+      null
+    ],
+    "occupied_rooms": [
+      61579,
+      746,
+      "-",
+      60833,
+      null
+    ],
+    "room_occupancy_pct": [
+      61.9,
+      28.3,
+      "-",
+      62.9,
+      null
+    ],
+    "avg_stay_all": 1.0984489881924429,
+    "avg_stay_foreign": 1.1489516053543012,
+    "avg_stay_domestic": 1.0745099779254346,
+    "large_facility_population": 70,
+    "large_facility_respondents": 34,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 144149,
+    "checkins_large": 131817,
+    "foreign_person_nights_large": 48326,
+    "foreign_checkins_large": 42283,
+    "capacity_occupancy_pct_large": 48.3,
+    "occupied_rooms_large": 60833,
+    "room_occupancy_pct_large": 62.9,
+    "avg_stay_large": 1.0935539422077578,
+    "avg_stay_foreign_large": 1.1429179575716009,
+    "avg_stay_domestic_large": 1.0702414725132352
+  },
+  {
+    "year": 2025,
+    "month": 11,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996805.xlsx",
+    "respondents": [
+      183,
+      "-",
+      37,
+      "-",
+      70,
+      33,
+      null
+    ],
+    "row": 179,
+    "person_nights": [
+      148072,
+      "-",
+      "-",
+      148072
+    ],
+    "checkins": [
+      132879,
+      "-",
+      "-",
+      132879
+    ],
+    "foreign_person_nights": [
+      40053,
+      "-",
+      "-",
+      40053
+    ],
+    "foreign_checkins": [
+      34484,
+      "-",
+      "-",
+      34484,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      53.7,
+      "-",
+      "-",
+      53.7,
+      null
+    ],
+    "occupied_rooms": [
+      61729,
+      "-",
+      "-",
+      61729,
+      null
+    ],
+    "room_occupancy_pct": [
+      68.7,
+      "-",
+      "-",
+      68.7,
+      null
+    ],
+    "avg_stay_all": 1.1143371036807923,
+    "avg_stay_foreign": 1.1614951861732978,
+    "avg_stay_domestic": 1.0978098480613852,
+    "large_facility_population": 70,
+    "large_facility_respondents": 33,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 148072,
+    "checkins_large": 132879,
+    "foreign_person_nights_large": 40053,
+    "foreign_checkins_large": 34484,
+    "capacity_occupancy_pct_large": 53.7,
+    "occupied_rooms_large": 61729,
+    "room_occupancy_pct_large": 68.7,
+    "avg_stay_large": 1.1143371036807923,
+    "avg_stay_foreign_large": 1.1614951861732978,
+    "avg_stay_domestic_large": 1.0978098480613852
+  },
+  {
+    "year": 2025,
+    "month": 12,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/001996803.xlsx",
+    "respondents": [
+      183,
+      "-",
+      37,
+      "-",
+      70,
+      30,
+      null
+    ],
+    "row": 183,
+    "person_nights": [
+      140363,
+      "-",
+      "-",
+      140363
+    ],
+    "checkins": [
+      127893,
+      "-",
+      "-",
+      127893
+    ],
+    "foreign_person_nights": [
+      40194,
+      "-",
+      "-",
+      40194
+    ],
+    "foreign_checkins": [
+      35050,
+      "-",
+      "-",
+      35050,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      49.4,
+      "-",
+      "-",
+      49.4,
+      null
+    ],
+    "occupied_rooms": [
+      56458,
+      "-",
+      "-",
+      56458,
+      null
+    ],
+    "room_occupancy_pct": [
+      62.2,
+      "-",
+      "-",
+      62.2,
+      null
+    ],
+    "avg_stay_all": 1.0975033817331676,
+    "avg_stay_foreign": 1.1467617689015692,
+    "avg_stay_domestic": 1.078907402819814,
+    "large_facility_population": 70,
+    "large_facility_respondents": 30,
+    "large_facility_threshold": "従業者10人以上",
+    "person_nights_large": 140363,
+    "checkins_large": 127893,
+    "foreign_person_nights_large": 40194,
+    "foreign_checkins_large": 35050,
+    "capacity_occupancy_pct_large": 49.4,
+    "occupied_rooms_large": 56458,
+    "room_occupancy_pct_large": 62.2,
+    "avg_stay_large": 1.0975033817331676,
+    "avg_stay_foreign_large": 1.1467617689015692,
+    "avg_stay_domestic_large": 1.078907402819814
+  },
+  {
+    "year": 2026,
+    "month": 1,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026744.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      33,
+      null
+    ],
+    "row": 180,
+    "person_nights": [
+      135117,
+      "-",
+      "-",
+      135117
+    ],
+    "checkins": [
+      115645,
+      "-",
+      "-",
+      115645
+    ],
+    "foreign_person_nights": [
+      45849,
+      "-",
+      "-",
+      45849
+    ],
+    "foreign_checkins": [
+      39021,
+      "-",
+      "-",
+      39021,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      42.5,
+      "-",
+      "-",
+      42.5,
+      null
+    ],
+    "occupied_rooms": [
+      59221,
+      "-",
+      "-",
+      59221,
+      null
+    ],
+    "room_occupancy_pct": [
+      53.9,
+      "-",
+      "-",
+      53.9,
+      null
+    ],
+    "avg_stay_all": 1.1683773617536426,
+    "avg_stay_foreign": 1.1749827016222034,
+    "avg_stay_domestic": 1.1650135727709334,
+    "large_facility_population": 62,
+    "large_facility_respondents": 33,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 135117,
+    "checkins_large": 115645,
+    "foreign_person_nights_large": 45849,
+    "foreign_checkins_large": 39021,
+    "capacity_occupancy_pct_large": 42.5,
+    "occupied_rooms_large": 59221,
+    "room_occupancy_pct_large": 53.9,
+    "avg_stay_large": 1.1683773617536426,
+    "avg_stay_foreign_large": 1.1749827016222034,
+    "avg_stay_domestic_large": 1.1650135727709334
+  },
+  {
+    "year": 2026,
+    "month": 2,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026742.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      32,
+      null
+    ],
+    "row": 173,
+    "person_nights": [
+      127452,
+      "-",
+      "-",
+      127452
+    ],
+    "checkins": [
+      110855,
+      "-",
+      "-",
+      110855
+    ],
+    "foreign_person_nights": [
+      53279,
+      "-",
+      "-",
+      53279
+    ],
+    "foreign_checkins": [
+      40991,
+      "-",
+      "-",
+      40991,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      46.9,
+      "-",
+      "-",
+      46.9,
+      null
+    ],
+    "occupied_rooms": [
+      58585,
+      "-",
+      "-",
+      58585,
+      null
+    ],
+    "room_occupancy_pct": [
+      63.4,
+      "-",
+      "-",
+      63.4,
+      null
+    ],
+    "avg_stay_all": 1.1497181002210095,
+    "avg_stay_foreign": 1.2997731209289844,
+    "avg_stay_domestic": 1.0616769724035269,
+    "large_facility_population": 62,
+    "large_facility_respondents": 32,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 127452,
+    "checkins_large": 110855,
+    "foreign_person_nights_large": 53279,
+    "foreign_checkins_large": 40991,
+    "capacity_occupancy_pct_large": 46.9,
+    "occupied_rooms_large": 58585,
+    "room_occupancy_pct_large": 63.4,
+    "avg_stay_large": 1.1497181002210095,
+    "avg_stay_foreign_large": 1.2997731209289844,
+    "avg_stay_domestic_large": 1.0616769724035269
+  },
+  {
+    "year": 2026,
+    "month": 3,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026740.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      32,
+      null
+    ],
+    "row": 175,
+    "person_nights": [
+      149241,
+      "-",
+      "-",
+      149241
+    ],
+    "checkins": [
+      127935,
+      "-",
+      "-",
+      127935
+    ],
+    "foreign_person_nights": [
+      31789,
+      "-",
+      "-",
+      31789
+    ],
+    "foreign_checkins": [
+      26785,
+      "-",
+      "-",
+      26785,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      54.2,
+      "-",
+      "-",
+      54.2,
+      null
+    ],
+    "occupied_rooms": [
+      57953,
+      "-",
+      "-",
+      57953,
+      null
+    ],
+    "room_occupancy_pct": [
+      61.5,
+      "-",
+      "-",
+      61.5,
+      null
+    ],
+    "avg_stay_all": 1.1665376949232031,
+    "avg_stay_foreign": 1.1868209818928506,
+    "avg_stay_domestic": 1.1611665842807712,
+    "large_facility_population": 62,
+    "large_facility_respondents": 32,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 149241,
+    "checkins_large": 127935,
+    "foreign_person_nights_large": 31789,
+    "foreign_checkins_large": 26785,
+    "capacity_occupancy_pct_large": 54.2,
+    "occupied_rooms_large": 57953,
+    "room_occupancy_pct_large": 61.5,
+    "avg_stay_large": 1.1665376949232031,
+    "avg_stay_foreign_large": 1.1868209818928506,
+    "avg_stay_domestic_large": 1.1611665842807712
+  },
+  {
+    "year": 2026,
+    "month": 4,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026733.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      34,
+      null
+    ],
+    "row": 167,
+    "person_nights": [
+      144263,
+      "-",
+      "-",
+      144263
+    ],
+    "checkins": [
+      128750,
+      "-",
+      "-",
+      128750
+    ],
+    "foreign_person_nights": [
+      52372,
+      "-",
+      "-",
+      52372
+    ],
+    "foreign_checkins": [
+      44866,
+      "-",
+      "-",
+      44866,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      47.4,
+      "-",
+      "-",
+      47.4,
+      null
+    ],
+    "occupied_rooms": [
+      61041,
+      "-",
+      "-",
+      61041,
+      null
+    ],
+    "room_occupancy_pct": [
+      58.4,
+      "-",
+      "-",
+      58.4,
+      null
+    ],
+    "avg_stay_all": 1.1204893203883495,
+    "avg_stay_foreign": 1.1672981767931172,
+    "avg_stay_domestic": 1.095453244957322,
+    "large_facility_population": 62,
+    "large_facility_respondents": 34,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 144263,
+    "checkins_large": 128750,
+    "foreign_person_nights_large": 52372,
+    "foreign_checkins_large": 44866,
+    "capacity_occupancy_pct_large": 47.4,
+    "occupied_rooms_large": 61041,
+    "room_occupancy_pct_large": 58.4,
+    "avg_stay_large": 1.1204893203883495,
+    "avg_stay_foreign_large": 1.1672981767931172,
+    "avg_stay_domestic_large": 1.095453244957322
+  },
+  {
+    "year": 2026,
+    "month": 5,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026728.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      35,
+      null
+    ],
+    "row": 171,
+    "person_nights": [
+      153864,
+      "-",
+      "-",
+      153864
+    ],
+    "checkins": [
+      134082,
+      "-",
+      "-",
+      134082
+    ],
+    "foreign_person_nights": [
+      48179,
+      "-",
+      "-",
+      48179
+    ],
+    "foreign_checkins": [
+      39903,
+      "-",
+      "-",
+      39903,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      48.2,
+      "-",
+      "-",
+      48.2,
+      null
+    ],
+    "occupied_rooms": [
+      78674,
+      "-",
+      "-",
+      78674,
+      null
+    ],
+    "room_occupancy_pct": [
+      70.9,
+      "-",
+      "-",
+      70.9,
+      null
+    ],
+    "avg_stay_all": 1.147536582091556,
+    "avg_stay_foreign": 1.2074029521589855,
+    "avg_stay_domestic": 1.1221716093821341,
+    "large_facility_population": 62,
+    "large_facility_respondents": 35,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 153864,
+    "checkins_large": 134082,
+    "foreign_person_nights_large": 48179,
+    "foreign_checkins_large": 39903,
+    "capacity_occupancy_pct_large": 48.2,
+    "occupied_rooms_large": 78674,
+    "room_occupancy_pct_large": 70.9,
+    "avg_stay_large": 1.147536582091556,
+    "avg_stay_foreign_large": 1.2074029521589855,
+    "avg_stay_domestic_large": 1.1221716093821341
+  },
+  {
+    "year": 2026,
+    "month": 6,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002026747.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      36,
+      null
+    ],
+    "row": 170,
+    "person_nights": [
+      128290,
+      "-",
+      "-",
+      128290
+    ],
+    "checkins": [
+      117168,
+      "-",
+      "-",
+      117168
+    ],
+    "foreign_person_nights": [
+      33254,
+      "-",
+      "-",
+      33254
+    ],
+    "foreign_checkins": [
+      28031,
+      "-",
+      "-",
+      28031,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      40.3,
+      "-",
+      "-",
+      40.3,
+      null
+    ],
+    "occupied_rooms": [
+      63592,
+      "-",
+      "-",
+      63592,
+      null
+    ],
+    "room_occupancy_pct": [
+      57.9,
+      "-",
+      "-",
+      57.9,
+      null
+    ],
+    "avg_stay_all": 1.0949235286084937,
+    "avg_stay_foreign": 1.1863294209981805,
+    "avg_stay_domestic": 1.066179027788685,
+    "large_facility_population": 62,
+    "large_facility_respondents": 36,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 128290,
+    "checkins_large": 117168,
+    "foreign_person_nights_large": 33254,
+    "foreign_checkins_large": 28031,
+    "capacity_occupancy_pct_large": 40.3,
+    "occupied_rooms_large": 63592,
+    "room_occupancy_pct_large": 57.9,
+    "avg_stay_large": 1.0949235286084937,
+    "avg_stay_foreign_large": 1.1863294209981805,
+    "avg_stay_domestic_large": 1.066179027788685
+  },
+  {
+    "year": 2026,
+    "month": 7,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002028777.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      35,
+      null
+    ],
+    "row": 182,
+    "person_nights": [
+      150213,
+      "-",
+      "-",
+      150213
+    ],
+    "checkins": [
+      139098,
+      "-",
+      "-",
+      139098
+    ],
+    "foreign_person_nights": [
+      30168,
+      "-",
+      "-",
+      30168
+    ],
+    "foreign_checkins": [
+      25720,
+      "-",
+      "-",
+      25720,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      49.1,
+      "-",
+      "-",
+      49.1,
+      null
+    ],
+    "occupied_rooms": [
+      63234,
+      "-",
+      "-",
+      63234,
+      null
+    ],
+    "room_occupancy_pct": [
+      63.5,
+      "-",
+      "-",
+      63.5,
+      null
+    ],
+    "avg_stay_all": 1.07990769098046,
+    "avg_stay_foreign": 1.1729393468118197,
+    "avg_stay_domestic": 1.0588032951719029,
+    "large_facility_population": 62,
+    "large_facility_respondents": 35,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 150213,
+    "checkins_large": 139098,
+    "foreign_person_nights_large": 30168,
+    "foreign_checkins_large": 25720,
+    "capacity_occupancy_pct_large": 49.1,
+    "occupied_rooms_large": 63234,
+    "room_occupancy_pct_large": 63.5,
+    "avg_stay_large": 1.07990769098046,
+    "avg_stay_foreign_large": 1.1729393468118197,
+    "avg_stay_domestic_large": 1.0588032951719029
+  },
+  {
+    "year": 2026,
+    "month": 8,
+    "source_url": "https://www.mlit.go.jp/kankocho/content/002028775.xlsx",
+    "respondents": [
+      192,
+      "-",
+      40,
+      "-",
+      62,
+      34,
+      null
+    ],
+    "row": 178,
+    "person_nights": [
+      197544,
+      "-",
+      "-",
+      197544
+    ],
+    "checkins": [
+      181508,
+      "-",
+      "-",
+      181508
+    ],
+    "foreign_person_nights": [
+      27036,
+      "-",
+      "-",
+      27036
+    ],
+    "foreign_checkins": [
+      22112,
+      "-",
+      "-",
+      22112,
+      null
+    ],
+    "capacity_occupancy_pct": [
+      62,
+      "-",
+      "-",
+      62,
+      null
+    ],
+    "occupied_rooms": [
+      77718,
+      "-",
+      "-",
+      77718,
+      null
+    ],
+    "room_occupancy_pct": [
+      70.2,
+      "-",
+      "-",
+      70.2,
+      null
+    ],
+    "avg_stay_all": 1.0883487229213038,
+    "avg_stay_foreign": 1.2226845151953691,
+    "avg_stay_domestic": 1.0697131672062035,
+    "large_facility_population": 62,
+    "large_facility_respondents": 34,
+    "large_facility_threshold": "客室20室以上",
+    "person_nights_large": 197544,
+    "checkins_large": 181508,
+    "foreign_person_nights_large": 27036,
+    "foreign_checkins_large": 22112,
+    "capacity_occupancy_pct_large": 62,
+    "occupied_rooms_large": 77718,
+    "room_occupancy_pct_large": 70.2,
+    "avg_stay_large": 1.0883487229213038,
+    "avg_stay_foreign_large": 1.2226845151953691,
+    "avg_stay_domestic_large": 1.0697131672062035
+  }
+]

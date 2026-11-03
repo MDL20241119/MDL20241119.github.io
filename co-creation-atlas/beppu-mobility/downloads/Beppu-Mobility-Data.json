@@ -1,0 +1,135 @@
+{
+  "as_of": "2026-11-04 JST",
+  "sources": {
+    "survey": "https://www.pref.oita.jp/uploaded/attachment/2268519.pdf",
+    "plan": "https://www.city.beppu.oita.jp/doc/seikatu/bouhan_anzen/koukyou_koutuu/koukyou_kassei/plan.pdf",
+    "vision": "https://www.pref.oita.jp/uploaded/attachment/2277930.pdf",
+    "vision_data": "https://www.pref.oita.jp/uploaded/attachment/2276664.pdf",
+    "stats": "https://www.city.beppu.oita.jp/doc/sisei/toukei_housei/toukei/toukeisho/r07/10.pdf",
+    "global_report": "https://www.mlit.go.jp/policy/shingikai/content/001912856.pdf",
+    "global_now": "https://www.city.beppu.oita.jp/seikatu/bouhan_anzen/koukyou_koutuu/rideshare4.html",
+    "jr": "https://www.jrkyushu.co.jp/company/info/data/pdf/2025ekibetsu.pdf",
+    "gw": "https://www.city.beppu.oita.jp/doc/sangyou/kankou/sokuhou_r08gw.pdf",
+    "congestion": "https://www.qsr.mlit.go.jp/oita/site_files/file/road_info/jutai_kyogikai/r07/R7_1_kaigisiryou.pdf"
+  },
+  "prefecture_modes": {
+    "period": "FY2025",
+    "scope": "Oita prefecture, 20 tourist sites",
+    "question": "Used transport within Oita",
+    "multiple_response": true,
+    "respondents": 4942,
+    "overseas_residents": 200,
+    "fields": [
+      "mode",
+      "all_count",
+      "all_pct",
+      "overseas_count",
+      "overseas_pct"
+    ],
+    "rows": [
+      [
+        "自家用車・社用車・公用車",
+        3797,
+        76.8,
+        5,
+        2.5
+      ],
+      [
+        "レンタカー",
+        420,
+        8.5,
+        51,
+        25.5
+      ],
+      [
+        "JR在来線",
+        203,
+        4.1,
+        47,
+        23.5
+      ],
+      [
+        "貸切・観光バス",
+        184,
+        3.7,
+        41,
+        20.5
+      ],
+      [
+        "市内バス",
+        174,
+        3.5,
+        31,
+        15.5
+      ],
+      [
+        "高速バス",
+        82,
+        1.7,
+        41,
+        20.5
+      ],
+      [
+        "タクシー・ハイヤー",
+        59,
+        1.2,
+        17,
+        8.5
+      ],
+      [
+        "バイク",
+        128,
+        2.6,
+        1,
+        0.5
+      ],
+      [
+        "その他",
+        125,
+        2.5,
+        17,
+        8.5
+      ],
+      [
+        "無回答",
+        57,
+        1.2,
+        27,
+        13.5
+      ]
+    ]
+  },
+  "global_od": {
+    "period": "2025-05-03/2025-09-15",
+    "sample_trips": 2171,
+    "origin": [
+      603,
+      369,
+      482,
+      291,
+      426
+    ],
+    "destination": [
+      580,
+      487,
+      316,
+      543,
+      245
+    ],
+    "labels": [
+      "観光施設・温泉",
+      "宿泊施設",
+      "飲食・買物",
+      "交通結節点",
+      "その他（差分計算）"
+    ],
+    "source": "https://www.mlit.go.jp/policy/shingikai/content/001912856.pdf",
+    "limitation": "Driver interview OD subset, not total 5,187 trips or passengers"
+  },
+  "missing": [
+    "Beppu tourist-only modal split",
+    "Annual city-wide tourist bus arrivals/passengers",
+    "City-wide visit hours and night circulation",
+    "City-wide hotel shuttle actual usage and cost"
+  ]
+}
