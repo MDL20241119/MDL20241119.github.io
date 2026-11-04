@@ -1,0 +1,59 @@
+﻿id,label,value,period,type,definition,source,url,page,caution
+kitsuki_001,高齢化率,39%,2020年実績,実績,国勢調査。2025以降は社人研推計,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p3,国勢調査。2025以降は社人研推計
+kitsuki_002,路線バス利用者,"248,576人/年",2021年度基準実績,計画基準値,鉄道・一般タクシーを含めない,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p97,鉄道・一般タクシーを含めない
+kitsuki_003,コミュニティバス利用者,"17,582人/年",2021年度基準実績,計画基準値,同上,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p97,同上
+kitsuki_004,乗合タクシー利用者,"3,530人/年",2021年度基準実績,計画基準値,同上,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p97,同上
+kitsuki_005,上記3モード計,"269,688人/年",2021年度基準実績,計画基準値,"2028年度目標269,600人。人口減少下で維持する計画",杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97","2028年度目標269,600人。人口減少下で維持する計画"
+kitsuki_006,JR杵築駅乗車人員,683人/日,2021年度基準実績,計画基準値,年間人数とは別。2028目標680人/日,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,98",年間人数とは別。2028目標680人/日
+kitsuki_007,一般タクシー利用者数,"61,954人/年",2021年度基準実績,計画基準値,"2028目標61,900人",杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p95,"2028目標61,900人"
+kitsuki_008,城入口・酢屋の坂バス停利用,2人/日,2021年度基準実績,計画基準値,1日合計乗降者数の平均。2028目標3.75人/日,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,98",1日合計乗降者数の平均。2028目標3.75人/日
+kitsuki_009,コミバス循環コース平均乗車,5.3人/便,2021年度基準実績,計画基準値,2018年度9.4人。目標5.3人。原本の掲載値は5.3人／便,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97",2018年度9.4人。目標5.3人。原本の掲載値は5.3人／便
+kitsuki_010,乗合タクシー平均乗車,2.2人/便,2021年度基準実績,計画基準値,2018年度2.6人、2028年度目標2.2人,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97",2018年度2.6人、2028年度目標2.2人
+kitsuki_011,交通財政負担,229円/市民1人・月,2021年度基準実績,計画基準値,"路線バス・コミバス・乗合タクシー。2028目標230円。年額換算2,748円は独自算出",杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p96,"路線バス・コミバス・乗合タクシー。2028目標230円。年額換算2,748円は独自算出"
+kitsuki_012,コミバス+乗合タクシー収支率,8.6%,2021年度基準実績,計画基準値,路線バスを含まない。2028目標8.6%,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp96,100",路線バスを含まない。2028目標8.6%
+kitsuki_013,市民アンケート,"953回答/2,000抽出、48%",2022年10月21～11月11日,調査標本,19歳以上住基無作為、郵送+WEB,杵築市地域公共交通計画第4章,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku_dai4syou.pdf,p33,19歳以上住基無作為、郵送+WEB
+kitsuki_014,日常的に運転,754人/806免許所持者、94%,2022年10月21日～11月11日,調査結果,全市民の94%ではない,杵築市地域公共交通計画第4章,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku_dai4syou.pdf,p35,全市民の94%ではない
+kitsuki_015,80歳以上の免許所持,約53%,2022年10月21日～11月11日,調査結果,80歳以上回答者154人,杵築市地域公共交通計画第4章,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku_dai4syou.pdf,p35,80歳以上回答者154人
+kitsuki_016,観光入込総数,785千人,2023年図表値,実績,日帰り755千人+宿泊30千人。市観光動向調査、暦年表記,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20（PDF22頁）,"日帰り755千人+宿泊30千人。市観光動向調査、暦年表記 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_017,同・2019年,976千人,実績図表値,実績,日帰り928千人+宿泊48千人,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20,日帰り928千人+宿泊48千人
+kitsuki_018,同・2020/2021/2022年,601/742/646千人,実績図表値,実績,宿泊21/26/24千人、日帰り580/716/622千人,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20,宿泊21/26/24千人、日帰り580/716/622千人
+kitsuki_019,外国人観光客,33千人,2023年図表値,実績,全観光客の内数。2022年6千人、2019年53千人,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20,"全観光客の内数。2022年6千人、2019年53千人 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_020,日帰り構成,約95%,計画本文の概数,実績,単年の厳密比率ではない。2023図表計算は755/785=96.18%,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20,"単年の厳密比率ではない。2023図表計算は755/785=96.18% 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_021,観光KPI現状値,"758,312人",R5の計画基準値,計画基準値,p20の785千人と異なる。暦年/年度差・定義差・誤植のどれか未確定。統合しない,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p73（PDF75頁）,"p20の785千人と異なる。暦年/年度差・定義差・誤植のどれか未確定。統合しない 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_022,観光客KPI目標,"1,000,000人",R11目標,目標,"現状値758,312とセット",第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p73,"現状値758,312とセット 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_023,市内観光消費額,"1,185,242千円",R5基準値,計画基準値,"目標R11=2,000,000千円。推計手法・分母は同表に明記なし",第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p73,"目標R11=2,000,000千円。推計手法・分母は同表に明記なし 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_024,コミバス/乗合タクシー乗車,5.3/2.2人/便,R5基準値,計画基準値,総合計画ではR5と表記、交通計画では同値をR3としている。単一時系列に黙って接続しない,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p81,総合計画ではR5と表記、交通計画では同値をR3としている。単一時系列に黙って接続しない
+kitsuki_025,市民1人当たり交通財政負担年額換算,"2,748円/人・年",2021年度,独自計算,229円/人・月×12,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p96,国東との比較は対象モード・補助制度の差が残る。
+kitsuki_026,日帰り観光客構成比,96.18%,2023年,独自計算,755千人/785千人,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"p73の758,312人は別系列。本文約95%は単年の厳密値ではない。 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_027,観光戦略策定状態,案・本文PDF未取得,2026年8月19日更新／8月19日～9月18日意見募集,計画案,稼げる観光・観光まちづくり、立寄型観光推進,杵築市観光戦略案意見募集,https://www.city.kitsuki.lg.jp/boshu/12437.html,HTML本文,"正式策定と断定しない。group/13/kankousenryaku.pdf及びkankousenryaku_gaiyou.pdfはweb/HTTPとも404。本文KPIを作らない。 市総合計画 p20の2023年785千人とp73のR5基準758,312人は不一致。年・年度/定義/誤植の原因未確定、統合不可。"
+kitsuki_028,県地域交通計画の更新,おおいた地域交通ビジョン2026,2026年10月～2031年9月,計画期間,全県計画。旧東部圏計画は2026年9月まで,大分県公式ページ,https://www.pref.oita.jp/soshiki/10540/chiikikotsuvision.html,HTML,市町交通計画とは別計画。
+kitsuki_029,県宿泊統計の対象,従業員10人以上施設,2025年確報・2026年8月公表,定義注記,市町の観光入込・宿泊・主要施設指標と別系列,大分県観光統計,https://www.pref.oita.jp/soshiki/14180/kankoutoukei.html,HTML,市町値と無条件に足し合わせない。
+kitsuki_030,3モード年間利用,"269,600人/年",2028年度,目標,路線バス＋コミバス＋乗合タクシー,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_031,JR杵築駅乗車,680人/日,2028年度,目標,日平均,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,98",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_032,一般タクシー利用,"61,900人/年",2028年度,目標,年間利用,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p95,交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_033,城入口・酢屋の坂バス停利用,3.75人/日,2028年度,目標,2停留所合計の乗降日平均,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,98",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_034,コミバス循環平均乗車,5.3人/便,2028年度,目標,循環コース,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_035,乗合タクシー平均乗車,2.2人/便,2028年度,目標,便平均,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp95,97",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_036,交通財政負担,230円/人・月,2028年度,目標,路線バス＋コミバス＋乗合タクシー,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,p96,交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_037,コミバス＋乗合タクシー収支率,8.6%,2028年度,目標,路線バスを含まない,杵築市地域公共交通計画,https://www.city.kitsuki.lg.jp/material/files/group/7/koutuukeikaku.pdf,"pp96,100",交通計画基準年2021年度。2026年時点の実績ではない。
+kitsuki_038,観光入込総数,976千人,2019年,実績図表値,市観光動向調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_039,日帰り観光客,928千人,2019年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_040,宿泊観光客,48千人,2019年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_041,外国人観光客,53千人,2019年,実績図表値,全観光客の内数,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_042,観光入込総数,601千人,2020年,実績図表値,市観光動向調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_043,日帰り観光客,580千人,2020年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_044,宿泊観光客,21千人,2020年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_045,外国人観光客,4千人,2020年,実績図表値,全観光客の内数,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_046,観光入込総数,742千人,2021年,実績図表値,市観光動向調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_047,日帰り観光客,716千人,2021年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_048,宿泊観光客,26千人,2021年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_049,外国人観光客,0千人,2021年,実績図表値,全観光客の内数,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_050,観光入込総数,646千人,2022年,実績図表値,市観光動向調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_051,日帰り観光客,622千人,2022年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_052,宿泊観光客,24千人,2022年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_053,外国人観光客,6千人,2022年,実績図表値,全観光客の内数,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_054,観光入込総数,785千人,2023年,実績図表値,市観光動向調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_055,日帰り観光客,755千人,2023年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_056,宿泊観光客,30千人,2023年,実績図表値,同調査,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_057,外国人観光客,33千人,2023年,実績図表値,全観光客の内数,第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p20/PDF22,"暦年表記。2023図785千人はp73のR5基準758,312人と不一致。統合しない。"
+kitsuki_058,市内観光消費額,"2,000,000千円",2029年度（R11）,目標,"R5基準1,185,242千円に対応",第3次杵築市総合計画,https://www.city.kitsuki.lg.jp/material/files/group/45/sougou.pdf,p73/PDF75,推計手法・分母同表に明記なし。
