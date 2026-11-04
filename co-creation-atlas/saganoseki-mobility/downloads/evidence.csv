@@ -1,0 +1,76 @@
+﻿id,label,value,period,type,definition,source,url,page,caution
+SG001,佐賀関地区人口,"6,937人",2025年10月末,実績,旧佐賀関町区域の住民基本台帳。高齢化率は65歳以上/地区人口,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,PDF/冊子p3 表3.1,2025年11月火災前。市全域・田中地区・国勢調査と混同しない
+SG002,佐賀関地区世帯数,"4,067世帯",2025年10月末,実績,旧佐賀関町区域の住民基本台帳。高齢化率は65歳以上/地区人口,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,PDF/冊子p3 表3.1,2025年11月火災前。市全域・田中地区・国勢調査と混同しない
+SG003,佐賀関地区高齢化率,58.2%,2025年10月末,実績,旧佐賀関町区域の住民基本台帳。高齢化率は65歳以上/地区人口,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,PDF/冊子p3 表3.1,2025年11月火災前。市全域・田中地区・国勢調査と混同しない
+SG004,佐賀関人口推移,"2005年12,384 / 2010年11,004 / 2015年9,453 / 2020年8,060 / 2025年6,937人",各年10月末,実績,旧佐賀関町区域、住民基本台帳,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,p3,国勢調査と混ぜない
+SG005,佐賀関人口減少率,2005→2025約44.0%減、2020→2025約13.9%減,2005～2025年10月末,算出,台帳の同一区域人口から筆者計算,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,p3,公表値そのものではない。将来推計でない
+SG006,佐賀関高齢化率推移,2005年35.1 / 2010年40.5 / 2015年49.6 / 2020年56.5 / 2025年58.2%,各年10月末,実績,65歳以上/旧佐賀関町区域人口,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,p3,市全域の率でない
+SG007,田中一～三地区人口・世帯・高齢化,194人、138世帯、72.2%,2025年10月末,実績,佐賀関内の田中一～三、住民基本台帳,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,p3,佐賀関全体でない。火災前
+SG008,佐賀関グリスロ利用,"9,260人",R6年度通期,実績,佐賀関単独の事業利用人数,大分市 計画に関連する取り組みの進捗状況（令和7年度実績）,https://www.city.oita.oita.jp/o073/kenko/fukushi/documents/r7shiryou1.pdf,PDF/冊子p32 事業141,ユニーク人数ではない。市合計でない
+SG009,佐賀関グリスロ途中利用,"6,696人",R7年度・原則12月末時点,途中実績,佐賀関単独の事業利用人数,大分市 計画に関連する取り組みの進捗状況（令和7年度実績）,https://www.city.oita.oita.jp/o073/kenko/fukushi/documents/r7shiryou1.pdf,p32,通期でない。R6通年との前年比不可
+SG010,臼関線佐賀関～臼杵駅利用,"1,270人",R7補助年度（前年10月～9月）,実績,佐賀関関連補助系統の市内対象区間,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7/冊子p6,大分市内分のみ。臼杵市域補助対象外。観光客限定ではない
+SG011,臼関線佐賀関～下浦利用,"4,121人",R7補助年度（前年10月～9月）,実績,佐賀関関連補助系統の市内対象区間,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp3/冊子p2,臼杵駅系統と別
+SG012,臼関線臼杵駅系統経常費用,"3,135千円",R7補助年度（前年10月～9月）,実績,佐賀関関連補助系統の市内対象区間,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7/冊子p6,この系統の費用。市全体でない
+SG013,臼関線臼杵駅系統経常収益,429千円,R7補助年度（前年10月～9月）,実績,佐賀関関連補助系統の市内対象区間,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7/冊子p6,市負担額ではない
+SG014,臼関線臼杵駅系統利用目標,"1,305人/年",R9年度,目標,佐賀関関連補助系統の年間利用者,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7/冊子p6,大分市内分のみ。実績でない
+SG015,臼関線下浦系統利用目標,"5,712人/年",R9年度,目標,佐賀関関連補助系統の年間利用者,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp3/冊子p2,臼杵駅系統と別。実績でない
+SG016,臼関線2系統利用合計,"5,391人",R7補助年度,算出,"1,270+4,121の筆者合算",R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp3・7,佐賀関全交通利用ではない。観光客限定でない
+SG017,臼関線臼杵駅系統費用収益差,"2,706千円",R7補助年度,算出,"3,135−429。国庫補助差引前",R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7,市負担額と断定しない。市負担はさらに国庫補助を差引
+SG018,臼関線臼杵駅系統収支率,約13.7%,R7補助年度,算出,"429÷3,135×100、筆者計算",R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp7,この1系統のみ。2系統目標35%や市内線収支率とは別
+SG019,佐賀関特定バス停乗降,158人/日,R2現況,実績,計画で特定する佐賀関バス停の1日乗降客,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関全域の全交通利用者でない
+SG020,佐賀関特定バス停乗降,160人/日,R9年度,目標,計画で特定する佐賀関バス停の1日乗降客,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関全域の全交通利用者でない
+SG021,関崎海星館利用者,"50,899人（R5 47,595人）",R6年度（比較R5）,実績,佐賀関所在の施設全体入館,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,PDFp20/冊子p19,"入館無料。地域全体入込でない。別会議録R5 47,565と差異あり本評価表採用"
+SG022,関崎海星館利用目標,"41,000人",R6年度,目標,施設全体利用者目標,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,p19,"実績50,899人と分ける"
+SG023,関崎海星館目標達成率,124%,R6年度,実績,利用者実績/目標、公式表,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,p19,施設単独の達成度
+SG024,海星館有料利用収入,"4,231,160円、前年より1,243,250円減",R6年度,実績,天体観測・プラネタリウム収入,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,p19,来館者増と有料収入減が併存。地域観光消費ではない
+SG025,海星館管理運営経費,"36,500千円（R5 39,000千円）",R6年度（比較R5）,実績,施設管理運営経費,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,p19,交通費でない
+SG026,海星館利用者満足度,満足71%、やや満足27%,R6年度評価,標本,館内無料スペースの任意アンケート,R7年度大分市行政評価意見書 関崎海星館R6評価,https://www.city.oita.oita.jp/o011/shisejoho/kekakuzaise/documents/r7ikensho.pdf,p19,回答数未掲載。地域住民全体の満足度でない
+SG027,佐賀関港乗込・上陸,"310,047人 / 306,844人",2023暦年,実績,港湾統計の乗込人員と上陸人員,大分県統計年鑑 表130 港別船舶乗降人員（港湾統計年報）,https://mobile.pref.oita.jp/uploaded/attachment/2237349.pdf,冊子p197 表130,実旅行者数・観光入込でない。最新公表年か未確定
+SG028,佐賀関港乗降合計,"616,891人",2023暦年,算出,"310,047+306,844、筆者合計",大分県統計年鑑 表130 港別船舶乗降人員（港湾統計年報）,https://mobile.pref.oita.jp/uploaded/attachment/2237349.pdf,p197,往復等が重複する延べ乗降。実人数でない
+SG029,佐賀関港乗込/上陸系列,"2019 265,228/301,721、2020 167,637/163,988、2021 166,713/164,571、2022 243,153/237,363人",2019～2022暦年,実績,港湾統計年報の港別乗込/上陸,大分県統計年鑑 表130 港別船舶乗降人員（港湾統計年報）,https://mobile.pref.oita.jp/uploaded/attachment/2237349.pdf,p197,目的別・住民観光別ではない
+SG030,佐賀関グリスロ車両状況,整備のため再開延期、当面代替車両運行,2026/10/1更新・11/4確認,現況,佐賀関地区グリスロ事業,佐賀関地域グリーンスローモビリティ案内（2026/10/1更新）,https://www.city.oita.oita.jp/o256/greslo/saganoseki.html,冒頭お知らせ,通常eCOM-10運行中・自動運転としない
+SG031,佐賀関グリスロ運行条件,平日4便、6～9月午前のみ。無料、予約不可、先着順、通常定員12名,2026/10/1更新,現況,佐賀関支所を起終点。土日祝・年末年始休み、雨天等運休、手動運転,佐賀関地域グリーンスローモビリティ案内（2026/10/1更新）,https://www.city.oita.oita.jp/o256/greslo/saganoseki.html,運行期間・定員・料金,現在代替車両。代替車両も12名と断定しない
+SG032,佐賀関グリスロ接続時刻,支所9:00/10:20/13:00/14:35発、フェリー停留所11:25/14:05,2026/10/1更新,現況,病院・住宅・スーパー・フェリー接続の掲示時刻表,佐賀関地域グリーンスローモビリティ案内（2026/10/1更新）,https://www.city.oita.oita.jp/o256/greslo/saganoseki.html,運行時刻表,フェリー停留所は2・3便だけ。実乗継率でない
+SG033,佐賀関ふれあい交通ルート,木佐上、河内、大志生木、大黒、福水、緑ヶ丘・辛幸2区の6ルート,2026/4/6更新,現況,佐賀関地区の掲載ルートを数えたもの,ふれあい交通運行事業（2026/4/6更新）,https://www.city.oita.oita.jp/o171/machizukuri/kotsu/1335326809746.html,運行ルート一覧,市全体35ルートとは別。地区内利用実績は未確認
+SG034,ふれあい交通利用条件,事前登録・前日17時まで電話予約、一般200円、長寿乗車証180円、小学生以下/対象手帳100円,2026/4/6更新,現況,市共通制度。沿線居住/日常生活者など対象,ふれあい交通運行事業（2026/4/6更新）,https://www.city.oita.oita.jp/o171/machizukuri/kotsu/1335326809746.html,利用方法・運行内容,観光客が自由に使えるとはしない。区域運行実証と別
+SG035,佐賀関ふれあい交通新設,河内2024/11/7、緑ケ丘・辛幸2区2025/10/2,2024～2025年,実績,佐賀関の新規ルート開始,大分市 計画に関連する取り組みの進捗状況（令和7年度実績）,https://www.city.oita.oita.jp/o073/kenko/fukushi/documents/r7shiryou1.pdf,p32,市全域利用者をこの2ルートの利用者にしない
+SG036,臼関線観光フィーダー移行,2026年8月協議会承認、R9計画運行2026/10/1～2027/9/30,2026年8月,計画・承認,佐賀関～臼杵駅。生活交通と観光二次交通兼用,R9年度大分市地域公共交通計画別紙（2026年8月協議会）,https://www.city.oita.oita.jp/o256/machizukuri/kotsu/kotukyougikai/documents/08_siryou1-3.pdf,PDFp6～8,補助分類変更で観光専用化ではない。別紙会議日8/17と議事概要8/14に差、議事概要優先
+SG037,国道九四フェリー供給,片道各16便/日、上下32便、所要70分,2026/11/4確認,現況,佐賀関～三崎通常ダイヤ,国道九四フェリー公式時刻表,https://www.koku94.jp/operation,通常ダイヤ,供給で利用実績でない。繁忙期臨時便あり
+SG038,国道九四フェリー通常時間帯,佐賀関7～23時毎時（12時除く）、三崎7:30～23:30（13:30除く）,2026/11/4確認,現況,佐賀関～三崎,国道九四フェリー公式時刻表,https://www.koku94.jp/operation,通常ダイヤ,臨時便と通常便を混同しない
+SG039,大分市全域人口・世帯・高齢化,"471,048人、234,660世帯、29.0%",2025年10月末,実績,大分市全域住民基本台帳。高齢化は65歳以上/市人口,国総研・建築研究所 佐賀関大規模火災被害調査報告（2025/12/9速報）,https://www.kenken.go.jp/japanese/contents/topics/2025/R7_12_9_oita.pdf,p3,佐賀関値ではない。同日同定義の地区比較可
+SG040,市全域ふれあい交通利用,"10,985人・33ルート",R6年度通期,実績,大分市全域ふれあい交通,大分市 計画に関連する取り組みの進捗状況（令和7年度実績）,https://www.city.oita.oita.jp/o073/kenko/fukushi/documents/r7shiryou1.pdf,p32,佐賀関単独でない
+SG041,市全域ふれあい交通途中利用,"7,466人・34ルート",R7年度・原則12月末,途中実績,大分市全域ふれあい交通,大分市 計画に関連する取り組みの進捗状況（令和7年度実績）,https://www.city.oita.oita.jp/o073/kenko/fukushi/documents/r7shiryou1.pdf,p32,通期でない。佐賀関単独でない
+SG042,市全域ふれあい交通現行供給,35ルート,2026/4/6,現況,大分市全域,ふれあい交通運行事業（2026/4/6更新）,https://www.city.oita.oita.jp/o171/machizukuri/kotsu/1335326809746.html,ルート一覧,過去33/34ルートと時点を区別
+SG043,鉄道乗車,"24,620人/日",R2現況,実績,大分市内16駅、竹中除く,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関値でない。佐賀関人口で割らない
+SG044,鉄道乗車目標,"33,000人/日",R9年度,目標,大分市内16駅、竹中除く,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91,佐賀関値でない。実績でない
+SG045,路線バス乗降,"7,330千人/年",R2現況,実績,大分市全域路線バス,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関値でない。佐賀関人口で割らない
+SG046,路線バス乗降目標,"9,600千人/年",R9年度,目標,大分市全域路線バス,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91,佐賀関値でない。実績でない
+SG047,タクシー利用,"2,909千人/年",R2現況,実績,大分市全域タクシー,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関値でない。佐賀関人口で割らない
+SG048,タクシー利用目標,"4,495千人/年",R9年度,目標,大分市全域タクシー,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91,佐賀関値でない。実績でない
+SG049,公的資金投入,"343,025千円/年",R2現況,実績,市全域の主な地域旅客運送サービス、国・県補助含む,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,PDFp95/冊子p91,佐賀関値でない。佐賀関人口で割らない
+SG050,公的資金投入目標,"343,000千円/年",R9年度,目標,市全域の主な地域旅客運送サービス、国・県補助含む,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91,佐賀関値でない。実績でない
+SG051,フィーダー路線バス現況,"62,354人/年",R2現況,実績,当時のフィーダー補助対象系統,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91,"R9は対象系統変更、7,017への約9割減目標と解釈しない"
+SG052,フィーダー路線バス目標,"7,017人/年",R9年度,目標,"臼関線下浦5,712+臼杵駅1,305、市内対象分",大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91・127,観光と住民利用合計。市内全バス利用でない
+SG053,対象フィーダー収支率目標,35%,R9年度,目標,臼関線2系統、国市費除く経常収益/経常費用,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,p91・133,"市内全路線収支率でない。343,000千円は市全体資金で別範囲"
+SG054,市全域観光入込,"4,227,291人",2019年,実績,大分市全域観光統計の計画基準値,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,冊子p58/PDFp62,佐賀関値ではない。宿泊と入込を割って率にしない
+SG055,市全域観光入込目標,"5,000,000人",2026年,目標,大分市全域観光戦略KPI,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,実績でない。佐賀関値でない
+SG056,市全域観光宿泊,"1,016,190人",2019年,実績,大分市全域観光統計の計画基準値,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,冊子p58/PDFp62,佐賀関値ではない。宿泊と入込を割って率にしない
+SG057,市全域観光宿泊目標,"1,070,000人",2026年,目標,大分市全域観光戦略KPI,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,実績でない。佐賀関値でない
+SG058,市全域外国人観光宿泊,"85,793人",2019年,実績,大分市全域観光統計の計画基準値,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,冊子p58/PDFp62,佐賀関値ではない。宿泊と入込を割って率にしない
+SG059,市全域外国人観光宿泊目標,"90,000人",2026年,目標,大分市全域観光戦略KPI,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,実績でない。佐賀関値でない
+SG060,市全域観光中間年目標,"2024入込4,880,000、宿泊1,050,000、外国人82,000人 / 2025入込4,940,000、宿泊1,060,000、外国人86,000人",2024・2025年,目標,大分市全域観光戦略の年次別目標,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,年が過ぎても実績に読み替えない。佐賀関値でない
+SG061,市来訪者満足,73%,2021年WEB調査,標本,大分市観光に満足・やや満足の回答割合,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,佐賀関や全市民の満足度でない
+SG062,市来訪者満足目標,85%,2026年,目標,大分市観光WEB来訪者調査満足割合,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p58,実績でない。佐賀関値でない
+SG063,市内フェリー旅客・車両,旅客232千人、車267千台,R2年,実績,大分市内事業者合計、旅客は運転手除外、車はバイク自転車含む,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,冊子p25/PDFp29,佐賀関港乗降統計とは定義・範囲異なる
+SG064,現行市交通計画,2022/4～2027/9、最新2026/8変更,2026/9/29掲載更新,計画,大分市全域地域公共交通計画,大分市地域公共交通計画（2026年8月変更）,https://www.city.oita.oita.jp/o256/shisejoho/kekakuzaise/documents/2608_oitacityptplan_full.pdf,表紙・市掲載ページ,佐賀関専用計画でない。旧2024版で代替しない
+SG065,現行市観光計画,第2次、2022～2026年度,2022年3月確定,計画,大分市全域,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,p2,第3次は策定中、確定版未確認。独立佐賀関観光計画未発見
+SG066,過疎計画,2021～2026年度、2026年度変更版,2026/5/20掲載,計画,佐賀関・野津原両地域,大分市過疎地域持続的発展計画（2026年度変更）,https://www.city.oita.oita.jp/o010/shisejoho/kekakuzaise/documents/r8_keikakuhonbun.pdf,全体,市全域でない。佐賀関だけでもない
+SG067,大分～佐賀関方面バス運行,6系統、運行回数26.5、平均乗車密度8.4、輸送量222.1,2024年度,実績,県計画方面別運行資料。原本の方面別集計,おおいた地域交通ビジョン2026,https://www.pref.oita.jp/uploaded/attachment/2277930.pdf,本編p8,年間乗客数ではない。年利用へ換算しない
+SG068,佐賀関地区全体の観光入込・宿泊・消費,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG069,佐賀関ふれあい6ルート合計利用,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG070,R7佐賀関グリスロ通期,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,佐賀関地域グリーンスローモビリティ案内（2026/10/1更新）,https://www.city.oita.oita.jp/o256/greslo/saganoseki.html,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG071,2024/2025佐賀関港旅客実績,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG072,市全域最新観光動態実績,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,第2次大分市観光戦略プラン（2022年3月）,https://www.city.oita.oita.jp/o157/shisejoho/kekakuzaise/documents/puran.pdf,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG073,満席・雨天・診察延長後帰路の定量調査,未確認,2026/11/4調査時点,未確認,指定範囲の必要データを調査したが確定できず,佐賀関地域グリーンスローモビリティ案内（2026/10/1更新）,https://www.city.oita.oita.jp/o256/greslo/saganoseki.html,該当公表値未確定,0・不存在・実施結果とみなさない。既存提言の検証課題を実績にしない
+SG074,既存提言の対象と継承,おかえり便｜暮らしの往復デスク。生活交通、通院買物、帰路変更と既存交通接続,既存資料確認2026/11/4,既存方針,大分市全域の提言。佐賀関の参考風景と、大南・野津原の実証をそれぞれ扱う。,MDL 大分市の共創提案（検討用ドラフト）,https://mobilitydlab.com/oita-mirai-mobility-consortium/dialogue/oita.html,暮らしの往復デスク／交通政策と現行施策,新規提案でない。大南・野津原実証を佐賀関実績に移さない
+SG075,県地域交通ビジョン計画期間,2026年10月～2031年9月,2026年策定,計画,大分県全域の地域公共交通計画,おおいた地域交通ビジョン2026,https://www.pref.oita.jp/uploaded/attachment/2277930.pdf,本文p2,県計画の期間。大分市計画期間とは別。

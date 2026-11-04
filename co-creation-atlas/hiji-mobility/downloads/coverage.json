@@ -1,0 +1,545 @@
+{
+  "checkedAt": "2026-11-04",
+  "scope": "調査項目の対応であり、測定条件の同等性や調査完了率ではない。",
+  "main_topics": [
+    {
+      "topic": "観光客総数・日帰り・宿泊",
+      "status": "2024年度の観光入込136.7万人・宿泊37.6万人。集計範囲が未確定のため宿泊率は算出しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "国内・外国、外国人国／地域",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "国内の発地",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "訪問理由・未訪問理由・同行者",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "月別季節性",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "地区別に泊まる場所",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "市町の観光消費総額・単価",
+      "status": "2024年度消費81.6億円と総合計画の82億円を分離。費目別・手段別の単価は未確認。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "訪日客の費目別消費",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "訪日客の直近4四半期支出",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "平均泊数・宿泊日数",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "客室稼働率・施設数",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "時間単位の市内滞在",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "観光客の交通手段",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "住民の交通手段・困りごと",
+      "status": "2023年無作為629票と2025年WEB399票。異なる標本のため単純比較しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "観光バス台数・乗客数",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "観光／高速バス便・運賃",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "鉄道・空港・港のアクセス",
+      "status": "鉄道4駅など計画基準の交通規模を確認。空港・駅からの現在の全便接続は未照合。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "GWの交通・観光",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "駅の荷物保管・宿配送",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "宿の送迎・最終到着便接続",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "地域間回遊・訪問順序",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "地点別乗降OD",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "コミュニティ交通実証",
+      "status": "地域交通計画と制度更新・一部実績を確認。すべての実証の原票・確定費用を収集済みではない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "タクシー車両・人員・実績",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "公共交通費・委託費・収支",
+      "status": "市町の計画基準値・行政評価を掲載。費用の対象と人口／利用者の分母が違うため自治体ランキングにはしない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "渋滞・待ち時間・駐車",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "夜の外出・移動断念・消費効果",
+      "status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "topic": "国・県・市町の交通計画",
+      "status": "国・県・市町の現行原典と期間を確認。計画目標と年度実績を分離。",
+      "anchor": "#policy"
+    },
+    {
+      "topic": "国・県・市町の観光計画",
+      "status": "国・県の現行観光計画、第6次町総合計画の観光章を確認。独立観光計画の有無は未確認。",
+      "anchor": "#policy"
+    }
+  ],
+  "field_records": [
+    {
+      "yufuin_record": "01",
+      "topic": "訪問を見送った理由",
+      "indicator": "混雑してゆっくりできない",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "02",
+      "topic": "訪問を見送った理由",
+      "indicator": "他の観光地を訪れたい",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "03",
+      "topic": "訪問を見送った理由",
+      "indicator": "宿泊・食事・移動費が高い",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "04",
+      "topic": "訪問を見送った理由",
+      "indicator": "アクセスが悪く移動が不便",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "05",
+      "topic": "訪問を見送った理由",
+      "indicator": "特にない",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "06",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・来訪者回答",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "07",
+      "topic": "現地の声",
+      "indicator": "観光アンケート・市民回答",
+      "regional_status": "2023年無作為629票と2025年WEB399票。異なる標本のため単純比較しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "08",
+      "topic": "団体の調査漏れ",
+      "indicator": "回答者に占める団体",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "09",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・宿泊",
+      "regional_status": "2024年度の観光入込136.7万人・宿泊37.6万人。集計範囲が未確定のため宿泊率は算出しない。 湯布院駅周辺調査と同じ標本ではない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "10",
+      "topic": "日帰り・宿泊",
+      "indicator": "駅周辺調査・日帰り",
+      "regional_status": "2024年度の観光入込136.7万人・宿泊37.6万人。集計範囲が未確定のため宿泊率は算出しない。 湯布院駅周辺調査と同じ標本ではない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "11",
+      "topic": "誰が時間を決めるか",
+      "indicator": "韓国の旅行会社聞き取り",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "12",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の2地点間でバス利用",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "13",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部と由布院の両地域に宿泊",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "14",
+      "topic": "旅行の組み合わせ",
+      "indicator": "福岡都心部のみに宿泊",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "15",
+      "topic": "旅行の組み合わせ",
+      "indicator": "由布院のみに宿泊",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "16",
+      "topic": "貸切行程",
+      "indicator": "列車到着後の自由散策予定",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "17",
+      "topic": "貸切行程",
+      "indicator": "別府経由商品での湯布院滞在予定",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "18",
+      "topic": "地域間回遊",
+      "indicator": "金鱗湖・湯の坪周辺の来街者",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "19",
+      "topic": "地域間回遊",
+      "indicator": "同日に宇佐神宮も訪問",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "20",
+      "topic": "地域間回遊",
+      "indicator": "同日に深耶馬渓も訪問",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "21",
+      "topic": "地域間回遊",
+      "indicator": "同日に昭和の町も訪問",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "22",
+      "topic": "既存の受け皿",
+      "indicator": "大型専用駐車場の収容台数",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "23",
+      "topic": "ツアー実績の取り寄せ",
+      "indicator": "助成ツアーに必要な参加者数下限",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "24",
+      "topic": "消費の測り方",
+      "indicator": "助成調査票の買物総額の階級",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "25",
+      "topic": "訪日客の市内支出",
+      "indicator": "訪問1人当たり",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "26",
+      "topic": "住民への影響",
+      "indicator": "郊外駐車場からのグリスロ利用・下限",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "27",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の利用者数",
+      "regional_status": "地域交通計画と制度更新・一部実績を確認。すべての実証の原票・確定費用を収集済みではない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "28",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の事業費",
+      "regional_status": "市町の計画基準値・行政評価を掲載。費用の対象と人口／利用者の分母が違うため自治体ランキングにはしない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "29",
+      "topic": "住民の交通供給",
+      "indicator": "地域公共交通事業の運行業務委託",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "30",
+      "topic": "住民の交通供給",
+      "indicator": "計画の対象期間",
+      "regional_status": "国・県・市町の現行原典と期間を確認。計画目標と年度実績を分離。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "31",
+      "topic": "既存観光便",
+      "indicator": "ノルク所要時間",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "32",
+      "topic": "荷物と乗継",
+      "indicator": "一時預かりの終了時刻",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "33",
+      "topic": "支出と泊数",
+      "indicator": "分析用の調査個票",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "34",
+      "topic": "交通供給",
+      "indicator": "タクシー期末車両",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "35",
+      "topic": "交通供給",
+      "indicator": "タクシー実働率",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "36",
+      "topic": "交通供給",
+      "indicator": "タクシー輸送人員",
+      "regional_status": "地域単独で対応する公表値・現行条件は今回未取得。県全体や他地域の値を代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "37",
+      "topic": "荷物と乗継",
+      "indicator": "軽貨物車",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "38",
+      "topic": "荷物と乗継",
+      "indicator": "配送対象宿の規模",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "39",
+      "topic": "荷物と乗継",
+      "indicator": "配送・回収対象宿の一覧掲載数",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "40",
+      "topic": "住民の移動",
+      "indicator": "コミュニティバス利用",
+      "regional_status": "地域交通計画と制度更新・一部実績を確認。すべての実証の原票・確定費用を収集済みではない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "41",
+      "topic": "住民の移動",
+      "indicator": "スクールバス利用",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "42",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市博多区",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "43",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：福岡市中央区",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "44",
+      "topic": "宿泊と周遊",
+      "indicator": "翌日の最初の確認先：別府市",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "45",
+      "topic": "宿泊施設の供給",
+      "indicator": "参考第12表で由布市の行を確認できない月",
+      "regional_status": "同等の地域単独調査・運行条件は今回未取得。湯布院の値を移植しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "46",
+      "topic": "無料デマンド実験",
+      "indicator": "運行日数",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "47",
+      "topic": "無料デマンド実験",
+      "indicator": "延べ乗客数",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "48",
+      "topic": "無料デマンド実験",
+      "indicator": "1日平均乗客数",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "49",
+      "topic": "無料デマンド実験",
+      "indicator": "1回の運行当たり平均乗車人数",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "50",
+      "topic": "無料デマンド実験",
+      "indicator": "由布院駅→宇奈岐日女神社",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "51",
+      "topic": "無料デマンド実験",
+      "indicator": "宇奈岐日女神社→由布院駅",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "52",
+      "topic": "無料デマンド実験",
+      "indicator": "利用者調査の回収",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "53",
+      "topic": "無料デマンド実験",
+      "indicator": "回答者のうち由布市内（湯布院町）居住",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "54",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければ徒歩と回答",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "55",
+      "topic": "無料デマンド実験",
+      "indicator": "運行がなければタクシーと回答",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    },
+    {
+      "yufuin_record": "56",
+      "topic": "無料デマンド実験",
+      "indicator": "乗車区間の適切な運賃を100円と回答",
+      "regional_status": "湯布院2020年無料デマンド実験に対応する同条件実験は未確認。地域の現行交通・別制度の実績で代用しない。",
+      "anchor": "#evidence"
+    }
+  ]
+}
