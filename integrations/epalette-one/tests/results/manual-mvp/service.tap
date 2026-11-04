@@ -1,0 +1,58 @@
+TAP version 13
+# Subtest: API-01 anonymous cannot read state, mutate, export or list workspaces
+ok 1 - API-01 anonymous cannot read state, mutate, export or list workspaces
+  ---
+  duration_ms: 12.000061
+  type: 'test'
+  ...
+# Subtest: API-02 repeated team creation key preserves existing state and old personal data
+ok 2 - API-02 repeated team creation key preserves existing state and old personal data
+  ---
+  duration_ms: 14.557096
+  type: 'test'
+  ...
+# Subtest: API-03 altered workspace cookie and export cannot cross organization boundary
+ok 3 - API-03 altered workspace cookie and export cannot cross organization boundary
+  ---
+  duration_ms: 6.01327
+  type: 'test'
+  ...
+# Subtest: API-04 invite is single-use, selected role is enforced, revocation prevents subsequent access
+ok 4 - API-04 invite is single-use, selected role is enforced, revocation prevents subsequent access
+  ---
+  duration_ms: 9.172695
+  type: 'test'
+  ...
+# Subtest: API-05 exact retry is persisted once; changed content with same key is rejected
+ok 5 - API-05 exact retry is persisted once; changed content with same key is rejected
+  ---
+  duration_ms: 10.019866
+  type: 'test'
+  ...
+# Subtest: API-06 concurrent commands use current version and keep the losing action unapplied
+ok 6 - API-06 concurrent commands use current version and keep the losing action unapplied
+  ---
+  duration_ms: 7.199342
+  type: 'test'
+  ...
+# Subtest: API-07 queued command rejects changed selected workspace before writing
+ok 7 - API-07 queued command rejects changed selected workspace before writing
+  ---
+  duration_ms: 4.278137
+  type: 'test'
+  ...
+# Subtest: API-08 current state read uses actual time; stored old verification clock cannot keep observations fresh
+ok 8 - API-08 current state read uses actual time; stored old verification clock cannot keep observations fresh
+  ---
+  duration_ms: 4.676996
+  type: 'test'
+  ...
+1..8
+# tests 8
+# suites 0
+# pass 8
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 514.069557

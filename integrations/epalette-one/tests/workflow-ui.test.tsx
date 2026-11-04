@@ -1,0 +1,14 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import React from 'react';
+import {renderToStaticMarkup} from 'react-dom/server';
+import WorkflowPanels from '../app/workflow-panels';
+import Workspace from '../app/workspace-view';
+import {seedState} from '../lib/model';
+import {newOperationalState} from '../lib/operations';
+(globalThis as any).React=React;
+const props={s:seedState('2026-10-13T05:00:00Z'),guest:true,user:{id:'guest',name:'体験担当',role:'manager' as const,workspace:'demo'},busy:false,offline:false,command:async()=>true,open:()=>{}};
+test('UX-01 first visit exposes three explicit starting actions and four primary menus',()=>{const html=renderToStaticMarkup(<Workspace state={props.s} view="today" setView={()=>{}} {...props} notice="" error="" onDismiss={()=>{}} onRefresh={()=>{}} saveState="このタブの体験データ">{null}</Workspace>);for(const text of ['利用を計画','現場を確認','次の人へ','今日','予定','車両','その他','模擬データ','操作画面へ移動'])assert.ok(html.includes(text),text);});
+test('UX-02 plan begins with purpose selection, named steps and no immediate reservation confirmation',()=>{const html=renderToStaticMarkup(<WorkflowPanels {...props} type="booking"/>);for(const text of ['何に使いますか','使い方','日時・条件','確認','利用名','日時と条件を入力'])assert.ok(html.includes(text),text);assert.ok(!html.includes('この予定を確定'));});
+test('UX-03 field inspection has accessible labels, explicit unknown selections and disabled continuation',()=>{const html=renderToStaticMarkup(<WorkflowPanels {...props} type="inspection" id="EP-01"/>);for(const text of ['停車して','残量パーセント','確認した時刻','プラグ・充電の状態','車両の異常','記録内容を確認する','disabled'])assert.ok(html.includes(text),text);assert.match(html,/step="1"/);});
+test('UX-04 operational mode shows its organization and hides synthetic clock controls',()=>{const s=newOperationalState('現場チーム','owner','担当者',1,'2026-10-13T05:00:00Z');const html=renderToStaticMarkup(<Workspace state={s} view="more" setView={()=>{}} {...props} guest={false} notice="" error="" onDismiss={()=>{}} onRefresh={()=>{}} saveState="保存済み">{null}</Workspace>);for(const text of ['現場チーム','現場入力','運用設定','チーム・保存先','日本時間'])assert.ok(html.includes(text),text);assert.match(html,/hidden=""[^>]*class="work-tile"/);});

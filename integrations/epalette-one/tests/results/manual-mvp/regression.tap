@@ -1,0 +1,73 @@
+TAP version 13
+# Subtest: GUEST-01 corrupt local storage opens a synthetic seed, never shared state
+ok 1 - GUEST-01 corrupt local storage opens a synthetic seed, never shared state
+  ---
+  duration_ms: 2.68153
+  type: 'test'
+  ...
+# Subtest: GUEST-02 guest changes remain in the tab-local envelope
+ok 2 - GUEST-02 guest changes remain in the tab-local envelope
+  ---
+  duration_ms: 4.255023
+  type: 'test'
+  ...
+# Subtest: GUEST-03 search and prepare share the same ledger; prepare is not booking
+ok 3 - GUEST-03 search and prepare share the same ledger; prepare is not booking
+  ---
+  duration_ms: 3.835564
+  type: 'test'
+  ...
+# Subtest: GUEST-04 explicit local approval commits once, including exact retry
+ok 4 - GUEST-04 explicit local approval commits once, including exact retry
+  ---
+  duration_ms: 1.346118
+  type: 'test'
+  ...
+# Subtest: GUEST-05 cancellation requires a second, content-bound confirmation
+ok 5 - GUEST-05 cancellation requires a second, content-bound confirmation
+  ---
+  duration_ms: 1.64525
+  type: 'test'
+  ...
+# Subtest: GUEST-06 altered, expired and stale confirmations fail closed
+ok 6 - GUEST-06 altered, expired and stale confirmations fail closed
+  ---
+  duration_ms: 1.492424
+  type: 'test'
+  ...
+# Subtest: GUEST-07 rejecting a proposal never creates a ticket
+ok 7 - GUEST-07 rejecting a proposal never creates a ticket
+  ---
+  duration_ms: 0.646315
+  type: 'test'
+  ...
+# Subtest: UI-01 urgent faults and unknown telemetry outrank ordinary charge plans
+ok 8 - UI-01 urgent faults and unknown telemetry outrank ordinary charge plans
+  ---
+  duration_ms: 0.515782
+  type: 'test'
+  ...
+# Subtest: UI-02 after a charge request, home asks for receipt rather than a duplicate request
+ok 9 - UI-02 after a charge request, home asks for receipt rather than a duplicate request
+  ---
+  duration_ms: 16.037272
+  type: 'test'
+  ...
+# Subtest: UI-03 apparently ready vehicles never imply human safety checks are done
+ok 10 - UI-03 apparently ready vehicles never imply human safety checks are done
+  ---
+  duration_ms: 9.185685
+  type: 'test'
+  ...
+# Subtest: UI-04 duration ranges preserve both endpoints including multi-hour AC plans
+ok 11 - UI-04 duration ranges preserve both endpoints including multi-hour AC plans
+  ---
+  duration_ms: 0.300874
+  type: 'test'
+  ...
+# Subtest: SEC-01 anonymous demo has no network writes; server identity has no dev bypass
+ok 12 - SEC-01 anonymous demo has no network writes; server identity has no dev bypass
+  ---
+  duration_ms: 0.635419
+  type: 'test'
+  ...
