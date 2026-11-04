@@ -18,3 +18,6 @@
   }
   document.querySelector('#print-page').addEventListener('click', () => window.print());
 })();
+
+// Reveal source rows inside long statistical appendices before following the link.
+document.addEventListener('click',event=>{const link=event.target.closest('a[href^="#record-"]');if(!link)return;const target=document.getElementById(link.getAttribute('href').slice(1));if(!target)return;let p=target.parentElement;while(p){if(p.tagName==='DETAILS')p.open=true;p=p.parentElement;}});

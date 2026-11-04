@@ -1,7 +1,7 @@
 {
   "region": "大分市・佐賀関",
   "checkedAt": "2026-11-04",
-  "status": "初版・調査継続",
+  "status": "追加調査版・調査継続",
   "note": "公表値、計画目標、調査標本、独自計算を区別。複合参照と分離レコードは重複を含むため集計不可。未確認を0としない。",
   "records": [
     {
@@ -903,6 +903,114 @@
       "url": "https://www.pref.oita.jp/uploaded/attachment/2277930.pdf",
       "page": "本文p2",
       "caution": "県計画の期間。大分市計画期間とは別。"
+    },
+    {
+      "id": "SGA01",
+      "label": "復興計画・実行計画の時間軸",
+      "value": "実行計画は2027年3月末までに策定、復興事業の計画期間2027～2031年度の5か年",
+      "period": "2026-08-31公表",
+      "type": "計画・目標",
+      "definition": "佐賀関大規模火災復興計画。概略計画と実行計画を区別。",
+      "source": "大分市佐賀関大規模火災復興計画",
+      "url": "https://www.city.oita.oita.jp/shisejoho/shichoshitsu/kishakaiken/r8/documents/saganosekilargescalefire-reconstructionplan.pdf",
+      "page": "本文p6／PDF11",
+      "caution": "整備完了実績ではない。年度末は暦年末と異なる。"
+    },
+    {
+      "id": "SGA02",
+      "label": "被災者意向調査の実施",
+      "value": "第1回2026/2/25～3/13、第2回4/13～5/1、第3回6/1～6/16",
+      "period": "2026-08-31公表",
+      "type": "実施実績",
+      "definition": "佐賀関大規模火災復興計画。概略計画と実行計画を区別。",
+      "source": "大分市佐賀関大規模火災復興計画",
+      "url": "https://www.city.oita.oita.jp/shisejoho/shichoshitsu/kishakaiken/r8/documents/saganosekilargescalefire-reconstructionplan.pdf",
+      "page": "本文p19／PDF24 表3-2-1",
+      "caution": "対象は土地・建物・住まいの希望等。交通OD調査ではない。回答者数・詳細集計はこの表にない。"
+    },
+    {
+      "id": "SGA03",
+      "label": "復興意見交換会の参加",
+      "value": "2026/4/12：142名、5/24：111名、7/20：122名、8/23：98名",
+      "period": "2026-08-31公表",
+      "type": "実施実績",
+      "definition": "佐賀関大規模火災復興計画。概略計画と実行計画を区別。",
+      "source": "大分市佐賀関大規模火災復興計画",
+      "url": "https://www.city.oita.oita.jp/shisejoho/shichoshitsu/kishakaiken/r8/documents/saganosekilargescalefire-reconstructionplan.pdf",
+      "page": "本文p20／PDF25 表3-2-2",
+      "caution": "各回参加者。重複参加を除いた人数ではない。住民全体の賛否比率ではない。"
+    },
+    {
+      "id": "SGA04",
+      "label": "道路と観光・生活アクセスの構造",
+      "value": "国道197号は生活・物流・緊急輸送を担い、県道佐賀関循環線は海星館・灯台アクセスと避難・支援輸送を兼ねる。一部で車両すれ違い困難",
+      "period": "2026-08-31公表",
+      "type": "計画上の現状認識",
+      "definition": "佐賀関大規模火災復興計画。概略計画と実行計画を区別。",
+      "source": "大分市佐賀関大規模火災復興計画",
+      "url": "https://www.city.oita.oita.jp/shisejoho/shichoshitsu/kishakaiken/r8/documents/saganosekilargescalefire-reconstructionplan.pdf",
+      "page": "本文p9／PDF14",
+      "caution": "全区間通行不能という意味ではない。具体的幅員・渋滞実測・通行止めの現況は未取得。"
+    },
+    {
+      "id": "SGA05",
+      "label": "復興の観光施策との接続",
+      "value": "海星館・早吸日女神社・景観資源による交流、関あじ関さば等の食による誘客と消費、県道635号の整備促進",
+      "period": "2026-08-31公表",
+      "type": "計画・方針",
+      "definition": "佐賀関大規模火災復興計画。概略計画と実行計画を区別。",
+      "source": "大分市佐賀関大規模火災復興計画",
+      "url": "https://www.city.oita.oita.jp/shisejoho/shichoshitsu/kishakaiken/r8/documents/saganosekilargescalefire-reconstructionplan.pdf",
+      "page": "本文p24／PDF29",
+      "caution": "観光需要増や道路整備の効果測定値ではない。事業主体・実施時期等は実行計画で定める。"
+    },
+    {
+      "id": "SGA06",
+      "label": "被災後の生活支援ルート変更",
+      "value": "2026/1/5から佐賀関H25・秋の江・古宮の市営住宅を結ぶルートへ見直し",
+      "period": "2025-12-26会議／2026-01-05適用",
+      "type": "運行変更方針",
+      "definition": "生活再建・移動支援に対応する経路変更。",
+      "source": "第1回生活再建支援・復興本部会議概要",
+      "url": "https://www.city.oita.oita.jp/o009/documents/fukkouhonbukaigi01.pdf",
+      "page": "PDF1 第3項",
+      "caution": "2026/10の現行表にも3住宅を確認。再開延期・代替車両告知を優先。"
+    },
+    {
+      "id": "SGA07",
+      "label": "復興住宅から病院の現行時刻例",
+      "value": "佐賀関H25住宅9:44→佐賀関病院9:54（10分）。同一循環便はH25住宅に9:06にも停車。病院10:02→支所10:06、病院から最終掲載便15:37→支所15:41",
+      "period": "2026-10-01更新時点",
+      "type": "運行条件",
+      "definition": "同一便が同一停留所を往復で再訪する循環経路。病院向きの後の停車を使用。",
+      "source": "大分市佐賀関地域グリスロ",
+      "url": "https://www.city.oita.oita.jp/o256/greslo/saganoseki.html",
+      "page": "運行時刻表",
+      "caution": "9:06乗車からの48分を通常の病院アクセス所要時間として示さない。支所から住宅への次便待ち、受診終了、雨天運休を別途検証。現在は代替車両。"
+    },
+    {
+      "id": "SGA08",
+      "label": "海星館イベント交通（過去の募集条件）",
+      "value": "2026/8/1・8/9・8/30、支所9:50→海星館10:15、海星館12:15→支所12:40。12名・事前電話申込、120分停車",
+      "period": "2026年8月指定3日",
+      "type": "運行計画（募集）",
+      "definition": "通常の生活循環便とは別のイベント運行。",
+      "source": "大分市 海星館イベント運行",
+      "url": "https://www.city.oita.oita.jp/o256/greslo/kaiseikan2026.html",
+      "page": "運行概要・時刻表・申込",
+      "caution": "募集案内であり3日間の実運行・利用人数は未確認。通常便の予約不可と混同しない。終了した運行を現在利用可能と案内しない。"
+    },
+    {
+      "id": "saganoseki_commute_missing",
+      "label": "佐賀関の同条件通勤・交通手段",
+      "value": "市町村単位表から地区単独を分離できず未取得",
+      "period": "2020年国勢調査",
+      "type": "未取得・範囲外",
+      "definition": "大分市全域を佐賀関地区へ代用しない。",
+      "source": "総務省統計局 令和2年国勢調査 表17-2・6-2・6-3",
+      "url": "https://www.e-stat.go.jp/stat-search/files?stat_infid=000032214690",
+      "page": "市区町村別集計",
+      "caution": "地区の小地域統計や別調査の有無は未確認。0人・交通不要という意味ではない。"
     }
   ]
 }
