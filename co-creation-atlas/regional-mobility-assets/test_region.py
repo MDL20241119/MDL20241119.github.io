@@ -54,4 +54,25 @@ class TestRegions(unittest.TestCase):
   for slug,words in strings.items():
    s=(ROOT/'co-creation-atlas'/f'{slug}-mobility/index.html').read_text()
    for word in words:self.assertIn(word,s)
+ def test_deepening(self):
+  from deepening import DETAILS
+  expected={'hiji':145,'usa':121,'kunisaki':166,'usuki':131,'kitsuki':665,'saganoseki':84}
+  for slug,count in expected.items():
+   data=json.loads((ROOT/'co-creation-atlas'/f'{slug}-mobility/downloads/evidence.json').read_text())['records']
+   ids={r['id'] for r in data};self.assertEqual(len(ids),len(data));self.assertEqual(count,len(data))
+   for card in DETAILS[slug]['cards']:
+    for rid in card['records']:self.assertIn(rid,ids)
+   for c in DETAILS[slug]['charts']:
+    self.assertGreater(c['maximum'],0)
+    for label,value,display in c['rows']:self.assertLessEqual(value,c['maximum']);self.assertGreaterEqual(value,0)
+   h=Parse();h.feed((ROOT/'co-creation-atlas'/f'{slug}-mobility/index.html').read_text())
+   self.assertIn('journeys',h.ids)
+   for rid in ids:self.assertIn('record-'+rid,h.ids)
+  usuki={r['id']:r for r in json.loads((ROOT/'co-creation-atlas/usuki-mobility/downloads/evidence.json').read_text())['records']}
+  self.assertIn('17:00→17:19',usuki['USA08']['value']);self.assertNotIn('17:04',usuki['USA08']['value'])
+  saga={r['id']:r for r in json.loads((ROOT/'co-creation-atlas/saganoseki-mobility/downloads/evidence.json').read_text())['records']}
+  self.assertIn('9:44',saga['SGA07']['value']);self.assertIn('代替車両',saga['SGA07']['caution'])
+  import zipfile
+  with zipfile.ZipFile(ROOT/'co-creation-atlas/regional-mobility-assets/commuting-2020.zip') as z:
+   self.assertIsNone(z.testzip());self.assertEqual(set(z.namelist()),{'README.txt','all-od-2020.csv','full-data-2020.json'})
 if __name__=='__main__':unittest.main()
