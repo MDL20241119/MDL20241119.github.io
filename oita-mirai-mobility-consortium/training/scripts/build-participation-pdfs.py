@@ -105,7 +105,7 @@ class PDF:
  def footer(self,n):
   self.rule(M,814,CW,LINE)
   self.text('トヨタカローラ大分 × MobilityDesignLab',M,821,383,12,7.5,10.5,False,MUTED)
-  self.text(f'2026.10.27   {n:02d} / 02',447,821,121,12,7.7,10.5,False,MUTED,align=2)
+  self.text(f'2026.11.06   {n:02d} / 03',447,821,121,12,7.7,10.5,False,MUTED,align=2)
  def next(self):self.c.showPage();self.page+=1
  def save(self):self.c.save()
 
@@ -202,6 +202,20 @@ def build(p):
   p.text(caption,x+5,752,lw-10,14,8.3,12,False,NAVY,link=url,align=1)
  p.text('参加無料と企業向けコンソーシアム年会費は別制度です。実際の運行・車両・保険等の費用・条件は別途協議。車両貸与・実証実施・採択・事業化を保証するものではありません。',M,784,CW,26,8.3,11.5,False,MUTED)
  p.footer(2)
+ p.next();p.header(3)
+ p.text('11月11日、Garraway0で体験。',M,58,CW,42,27,38,True,NAVY)
+ old_photo=p.epalette_photo_path
+ p.epalette_photo_path=Path(__file__).resolve().parent.parent/'assets'/'epalette-ride-20261111.webp'
+ p.vehicle_photo(M,119,CW,304)
+ p.epalette_photo_path=old_photo
+ p.text('車両は実車写真をもとにしたイメージです。',M,430,CW,18,8.5,12,False,MUTED)
+ p.text('トヨタe-Palette 乗車体験',M,474,CW,40,28,38,True,NAVY)
+ p.text('2026年11月11日（水）／ Garraway0',M,530,CW,26,16,24,True,NAVY)
+ p.text('日高洋祐氏 特別講演も同日開催。<br/>講演時間：14:00-16:00',M,575,400,52,14,23,False,INK)
+ p.text('講演会・プログラムの参加登録',M,671,390,28,17,26,True,NAVY,link=FORM)
+ p.text('参加申込フォームからお知らせください。',M,710,380,22,12,18,False,INK,link=FORM)
+ p.qr(FORM,455,665,100,'参加申込フォーム')
+ p.footer(3)
  return benefits
 
 def write_html(p,fontpaths,out):
@@ -209,7 +223,7 @@ def write_html(p,fontpaths,out):
  for name,key,weight in [('JP','JP',400),('JPB','JPB',800)]:
   css+=f"@font-face{{font-family:{name};src:url(data:font/ttf;base64,{base64.b64encode(Path(fontpaths[key]).read_bytes()).decode()}) format('truetype');font-weight:{weight}}}"
  parts=['<!doctype html><html lang="ja"><meta charset="utf-8"><title>大分未来モビリティ人材育成プログラム 編集用原稿</title><style>'+css+'</style><div class="toolbar">本文をクリックして編集できます。<button onclick="saveCopy()">編集済みHTMLを保存</button><button onclick="window.print()">印刷・PDF保存</button></div>']
- for page in (1,2):
+ for page in (1,2,3):
   parts.append('<section class="page">')
   for r in p.records:
    if r['page']!=page:continue
@@ -259,5 +273,6 @@ def main():
   write_html(p,fps,out)
   (out/'layout.json').write_text(json.dumps(p.records,ensure_ascii=False,indent=2))
   if a.qa_json:Path(a.qa_json).write_text(json.dumps([r for r in p.records if r['kind']=='text'],ensure_ascii=False,indent=2))
- print(json.dumps({'pages':2,'pdf':str(p.path),'text_boxes':sum(r['kind']=='text' for r in p.records)},ensure_ascii=False))
+ print(json.dumps({'pages':3,'pdf':str(p.path),'text_boxes':sum(r['kind']=='text' for r in p.records)},ensure_ascii=False))
 if __name__=='__main__':main()
+
