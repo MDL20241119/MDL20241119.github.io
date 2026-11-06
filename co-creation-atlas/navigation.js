@@ -1,5 +1,19 @@
 (()=>{'use strict';
   const header=document.querySelector('.atlas-topbar');if(!header)return;
+  const researchHref='/co-creation-atlas/research/';
+  header.querySelectorAll('.atlas-nav-links').forEach(menu=>{
+    if(menu.querySelector('a[href="/co-creation-atlas/learn/workbook/"]')&&!menu.querySelector('a[href="'+researchHref+'"]')){
+      const link=document.createElement('a');link.href=researchHref;
+      link.innerHTML='<strong>共創とイノベーションの研究</strong><span>動く力を掛け合わせる7つの論点</span>';
+      menu.prepend(link);
+    }
+  });
+  const entrance=document.querySelector('.step-home');
+  if(entrance&&!document.getElementById('co-creation-research-feature')){
+    const card=document.createElement('aside');card.className='frontier-entry';card.id='co-creation-research-feature';
+    card.innerHTML='<div><p class="eyebrow">CO-CREATION × RESEARCH</p><h2>共創は、動く力のかけざん。</h2><p>対等・行動・挑戦・多様性。実践思想を世界の研究と照らし合わせる。</p></div><a href="'+researchHref+'">7つの論点と論文を読む ↗</a>';
+    const grid=entrance.querySelector('.step-home-grid');entrance.insertBefore(card,grid);
+  }
   const mobile=header.querySelector('.atlas-mobile-menu');
   const groups=[...header.querySelectorAll('.atlas-nav-group')];
   const mobileToggle=mobile.querySelector('summary');
