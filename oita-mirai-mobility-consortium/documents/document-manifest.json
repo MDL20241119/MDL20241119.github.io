@@ -1,5 +1,5 @@
 {
-  "version": "20261107-clean-draft",
+  "version": "20261107-guide-design",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -11,17 +11,20 @@
       "path": "read/main/",
       "pdf": "documents/main.pdf",
       "summary": "PVMV、設立の目的、参加価値、運営の全体像。",
-      "pages": 7,
+      "pages": 8,
       "chapter_pages": {
-        "main_ch01": 1,
-        "main_ch02": 3,
-        "main_ch03": 4,
+        "main_ch01": 2,
+        "main_ch02": 4,
+        "main_ch03": 5,
         "main_ch04": 5,
-        "main_ch05": 5,
-        "main_ch06": 6,
-        "main_ch07": 7
+        "main_ch05": 6,
+        "main_ch06": 7,
+        "main_ch07": 8
       },
-      "sha256": "151b2ecaa2d1e1046c76177f52627cb583a05076077e80f231460c45d38acea7"
+      "sha256": "ec139d9a84f7f50c8521fad226447a49113e3939d1bca7e6f2d9a4ee462fac2c",
+      "print_pdf": "documents/main-print.pdf",
+      "print_pages": 8,
+      "print_sha256": "60784c7d35485f6adbed21fb7832dff8e03ab042c909dff14d56f86b9765d422"
     },
     {
       "key": "members",
@@ -31,14 +34,17 @@
       "path": "members/",
       "pdf": "documents/members.pdf",
       "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。",
-      "pages": 2,
+      "pages": 3,
       "chapter_pages": {
-        "members_ch01": 1,
-        "members_ch02": 1,
+        "members_ch01": 2,
+        "members_ch02": 2,
         "members_ch03": 2,
-        "members_ch04": 2
+        "members_ch04": 3
       },
-      "sha256": "59099fbf7d7fed18dc56fa9f9aac5f19bc72ea941e7ceb56f82afdeb0a4dfd9d"
+      "sha256": "abd9d7d8ee260d24291f3cd1de66d97c21b60eefa6c21d16aba2cff921196cce",
+      "print_pdf": "documents/members-print.pdf",
+      "print_pages": 3,
+      "print_sha256": "b5fca1cddbefa4a5b2980dd0612672f45fba014b8d2f5c7f8d08f771647b3581"
     },
     {
       "key": "rules",
@@ -48,20 +54,23 @@
       "path": "rules/",
       "pdf": "documents/rules.pdf",
       "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。",
-      "pages": 5,
+      "pages": 6,
       "chapter_pages": {
-        "rules_ch01": 1,
+        "rules_ch01": 2,
         "rules_ch02": 2,
         "rules_ch03": 3,
-        "rules_ch04": 3,
+        "rules_ch04": 4,
         "rules_ch05": 4,
-        "rules_ch06": 4,
+        "rules_ch06": 5,
         "rules_ch07": 5,
-        "rules_ch08": 5,
-        "rules_ch09": 5,
-        "rules_ch10": 5
+        "rules_ch08": 6,
+        "rules_ch09": 6,
+        "rules_ch10": 6
       },
-      "sha256": "cb42d286d1fc92e9a881eba3078d8fda5b9f6f10dc9005d9a44b9f3d29e9d6ed"
+      "sha256": "ceb0342ac67920c07df692395d583bb8999ba1a0fd9f9e93351b837d3eeea57e",
+      "print_pdf": "documents/rules-print.pdf",
+      "print_pages": 6,
+      "print_sha256": "ddf04b92f02f6181cbcc71e3e90a53991e127a124c3012ef803e59a4d91e2292"
     },
     {
       "key": "secretariat",
@@ -71,19 +80,48 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 5,
+      "pages": 8,
       "chapter_pages": {
-        "secretariat_ch01": 1,
-        "secretariat_ch02": 1,
-        "secretariat_ch03": 2,
-        "secretariat_ch04": 2,
-        "secretariat_ch05": 3,
-        "secretariat_ch06": 3,
-        "secretariat_ch07": 4,
-        "secretariat_ch08": 4,
-        "conditions": 5
+        "secretariat_ch01": 2,
+        "secretariat_ch02": 3,
+        "secretariat_ch03": 4,
+        "secretariat_ch04": 4,
+        "secretariat_ch05": 5,
+        "secretariat_ch06": 6,
+        "secretariat_ch07": 6,
+        "secretariat_ch08": 7,
+        "conditions": 8
       },
-      "sha256": "03285752b76e2b76ef289d0e3dc932aad888adb3d20cef745e75566377c73ed8"
+      "sha256": "da804740f484e54b549c4e250d7aa17365b4b653b682858873e1262fe5f80269",
+      "print_pdf": "documents/secretariat-print.pdf",
+      "print_pages": 8,
+      "print_sha256": "ed5efcbdaad29cc8cf43967a029d1b12a2d550799e1334d2083d262912b22cbd"
+    }
+  ],
+  "consent_forms": [
+    {
+      "title": "発起人承諾書",
+      "pdf": "documents/consent-founder.pdf",
+      "pages": 1,
+      "sha256": "75712ad6103d3695abd5a8dac43b1cd1fa9f632434c1ed22cffee95863e5e285"
+    },
+    {
+      "title": "代表就任承諾書",
+      "pdf": "documents/consent-representative.pdf",
+      "pages": 1,
+      "sha256": "4fe3f3348b89bf860f007bbcfcffe6d2340ef77ab8019869409406f00769d0da"
+    },
+    {
+      "title": "事務局引受承諾書",
+      "pdf": "documents/consent-secretariat.pdf",
+      "pages": 1,
+      "sha256": "90082762355309331be6dab81552751e2af232afd44389f08c63a983d74d624d"
+    },
+    {
+      "title": "事務局長就任承諾書",
+      "pdf": "documents/consent-secretariat-chief.pdf",
+      "pages": 1,
+      "sha256": "65f98ff118c9152341e9f8d90426a02b4823a3e08d307411d9bd467d040ff7ec"
     }
   ]
 }
