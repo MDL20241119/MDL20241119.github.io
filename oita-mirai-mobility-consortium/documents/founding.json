@@ -1,6 +1,6 @@
 {
-  "version": "20261028-founding5",
-  "updated": "2026-10-28",
+  "version": "20261107-clean-draft",
+  "updated": "2026-11-07",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
   "target_date": "2027-01-26",
@@ -41,28 +41,28 @@
     {
       "name": "モビリティデザインラボ",
       "status": "設立準備・正式参画の承認を確認",
-      "role": "企画・実務事務局、請求・記帳・報告。団体名義の口座・契約が難しい場合の受託管理案を協議"
+      "role": "共同事務局・契約受託・区分会計管理。大分銀行へMDL名義のコンソーシアム用口座を相談。"
     }
   ],
   "officers": [
     {
-      "position": "共同代表候補",
-      "name": "大分県の副知事クラス",
-      "status": "了承待ち"
+      "position": "A案 共同代表",
+      "name": "県副知事・TCO本田常務",
+      "status": "候補・了承待ち"
     },
     {
-      "position": "共同代表候補",
-      "name": "トヨタカローラ大分 本田常務",
-      "status": "了承待ち"
+      "position": "B案 共同代表",
+      "name": "TCO本田常務・民間1名（未定）",
+      "status": "候補・了承待ち"
     },
     {
-      "position": "事務局長候補",
-      "name": "MDL 佐藤CEO",
-      "status": "了承待ち"
+      "position": "B案 副代表",
+      "name": "MDL佐藤CEO",
+      "status": "候補・了承待ち"
     }
   ],
   "annual_fee_yen": 100000,
-  "free_members": "企業・自治体・大学・スタートアップなど",
+  "free_members": "自治体・大学・NPO等は無料。企業等は有料・無料を選択。",
   "voting_groups": [
     "有料会員団体",
     "正式に事務局を担う団体",
@@ -80,9 +80,12 @@
     "会費年度・初年度・途中入会・区分変更・未納等の具体案の承認",
     "定足数・可決条件・代理書面参加・役員任期の具体案の承認",
     "共通予算・TCO負担額上限・事務局業務と対価",
-    "団体名義の契約・口座とMDL受託管理協定",
+    "MDL契約受託・区分管理協定、大分銀行のMDL名義口座の受入条件",
     "税務・代表権限・知財等の専門家確認",
-    "最終交付決定・承認KPI・変更承認の照合"
+    "最終交付決定・承認KPI・変更承認の照合",
+    "発起人の初年度無料・次年度以降の会費",
+    "代表二案の選択・副代表と事務局長の兼務",
+    "同数時の会長および事務局長決裁への変更提案（未決）"
   ],
   "documents": [
     {
@@ -134,7 +137,7 @@
       "annual_fee_yen": 0,
       "voting": false
     },
-    "municipalities_universities": "無料参加可",
+    "municipalities_universities": "自治体・大学・NPO等は無料",
     "free_member_activities": [
       "企画提案",
       "情報交換",
@@ -145,5 +148,6 @@
     "tax_status": "未確認。税込・税別を断定しない。",
     "training_program": "無料の人材育成プログラムとコンソーシアム会費は別"
   },
-  "canonical_content": "各文書のHTML本文。shared policy metadata is validated by documents/build_founding.py."
+  "canonical_content": "各文書のHTML本文。shared policy metadata is validated by documents/build_founding.py.",
+  "founder_fee": "永年無料は未決。初年度無料を含めて相談。"
 }

@@ -1,5 +1,5 @@
 {
-  "version": "20261028-founding5",
+  "version": "20261107-clean-draft",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -11,16 +11,17 @@
       "path": "read/main/",
       "pdf": "documents/main.pdf",
       "summary": "PVMV、設立の目的、参加価値、運営の全体像。",
-      "pages": 8,
+      "pages": 7,
       "chapter_pages": {
         "main_ch01": 1,
         "main_ch02": 3,
         "main_ch03": 4,
         "main_ch04": 5,
-        "main_ch05": 6,
-        "main_ch06": 7,
-        "main_ch07": 8
-      }
+        "main_ch05": 5,
+        "main_ch06": 6,
+        "main_ch07": 7
+      },
+      "sha256": "151b2ecaa2d1e1046c76177f52627cb583a05076077e80f231460c45d38acea7"
     },
     {
       "key": "members",
@@ -36,7 +37,8 @@
         "members_ch02": 1,
         "members_ch03": 2,
         "members_ch04": 2
-      }
+      },
+      "sha256": "59099fbf7d7fed18dc56fa9f9aac5f19bc72ea941e7ceb56f82afdeb0a4dfd9d"
     },
     {
       "key": "rules",
@@ -49,16 +51,17 @@
       "pages": 5,
       "chapter_pages": {
         "rules_ch01": 1,
-        "rules_ch02": 1,
-        "rules_ch03": 2,
+        "rules_ch02": 2,
+        "rules_ch03": 3,
         "rules_ch04": 3,
-        "rules_ch05": 3,
+        "rules_ch05": 4,
         "rules_ch06": 4,
-        "rules_ch07": 4,
+        "rules_ch07": 5,
         "rules_ch08": 5,
         "rules_ch09": 5,
         "rules_ch10": 5
-      }
+      },
+      "sha256": "cb42d286d1fc92e9a881eba3078d8fda5b9f6f10dc9005d9a44b9f3d29e9d6ed"
     },
     {
       "key": "secretariat",
@@ -68,18 +71,19 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 7,
+      "pages": 5,
       "chapter_pages": {
         "secretariat_ch01": 1,
-        "secretariat_ch02": 2,
-        "secretariat_ch03": 3,
-        "secretariat_ch04": 3,
-        "secretariat_ch05": 4,
-        "secretariat_ch06": 5,
-        "secretariat_ch07": 5,
-        "secretariat_ch08": 6,
-        "conditions": 7
-      }
+        "secretariat_ch02": 1,
+        "secretariat_ch03": 2,
+        "secretariat_ch04": 2,
+        "secretariat_ch05": 3,
+        "secretariat_ch06": 3,
+        "secretariat_ch07": 4,
+        "secretariat_ch08": 4,
+        "conditions": 5
+      },
+      "sha256": "a5b1ad500353959a111c98e0f1dc357c29dd022504813970d2cdb1d4a7efc1a6"
     }
   ]
 }
