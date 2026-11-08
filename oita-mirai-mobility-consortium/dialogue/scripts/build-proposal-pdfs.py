@@ -85,7 +85,7 @@ class Brief:
         self.text(esc(region),445,22,W-M-445,20,11,15,'JPB',col,'region',2)
     def footer(self):
         self.line(M,554,W-2*M)
-        self.text('2026年度 人材育成プログラムで磨く企画例 / 2026.10.26',M,565,340,15,7.7,11.5,'JP',MUTED,'program')
+        self.text('2026年度 人材育成プログラムで磨く企画例 / '+self.d.get('updated','2026.10.26'),M,565,340,15,7.7,11.5,'JP',MUTED,'program')
         self.link('詳細・最新情報はWebへ ↗',self.url,378,564,240,17,8.2,MUTED)
         self.text(f'{self.page:02d}<font color="#9AA5AF"> / 02</font>',W-M-94,562,94,22,13,17,'Helvetica-Bold',INK,'page-number',2)
     def hero_photo(self):
