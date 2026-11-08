@@ -1,5 +1,5 @@
 {
-  "version": "20261108-consortium-concept",
+  "version": "20261108-concise-rules",
   "updated": "2026-11-08",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
@@ -67,9 +67,7 @@
   "annual_fee_yen": 100000,
   "free_members": "自治体・大学・NPO等は無料。企業等は有料・無料を選択。",
   "voting_groups": [
-    "有料会員団体",
-    "正式に事務局を担う団体",
-    "正式に参画した発起人団体"
+    "有料会員団体"
   ],
   "votes_per_organization": 1,
   "meeting_name": "運営会議",
@@ -138,13 +136,13 @@
       "annual_fee_yen": 0,
       "voting": false
     },
-    "municipalities_universities": "自治体・大学・NPO等は無料",
+    "municipalities_universities": "自治体・大学・NPO等は無料で参加できる。無料会員は議決権なし。",
     "free_member_activities": [
       "企画提案",
       "情報交換",
       "個別プロジェクト参加"
     ],
-    "exceptions": "正式な発起人団体と事務局を担う正式団体は会費の有無によらず議決権。発起人として正式参画した各自治体も対象。募集・候補段階は無票。",
+    "exceptions": "なし。無料会員は発起人・事務局団体を含め議決権を持たない。",
     "votes_per_organization": 1,
     "tax_status": "未確認。税込・税別を断定しない。",
     "training_program": "無料の人材育成プログラムとコンソーシアム会費は別"

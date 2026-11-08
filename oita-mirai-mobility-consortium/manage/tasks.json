@@ -123,7 +123,7 @@
       "title": "会費の方針を決める",
       "goal": "設立",
       "group": "設立",
-      "detail": "利用者の基本方針：企業は年会費10万円・議決権あり、または無料・議決権なしを選択。無料でも企画提案・情報交換・個別案件参加は可能。自治体・大学等も無料。正式な発起人・事務局団体は会費によらず1団体1票。団体としての正式承認は未了。",
+      "detail": "利用者の基本方針：企業は年会費10万円の有料会員又は無料会員を選択。自治体・大学・NPO等は無料で参加できる。議決権は有料会員団体のみ1団体1票。無料会員も企画提案・情報交換・個別案件に参加できる。団体としての正式承認は未了。",
       "outcome": "成果物・確認状況を既存の業務正本で管理する。",
       "ownerTeam": null,
       "owner": "未定",
@@ -142,7 +142,7 @@
       "source": "/oita-mirai-mobility-consortium/read/main/#main_ch05",
       "sourceLabel": "構想説明書 第5章（資料更新と合意は別）",
       "displayOrder": 103,
-      "nextAction": "選択制・議決権例外を規約へ反映し、会費年度・途中入会・区分変更・未納・税務等の提案を設立時に承認する。",
+      "nextAction": "選択制・無料会員の議決権なしを規約へ反映し、会費年度・途中入会・区分変更・未納・税務等の提案を設立時に承認する。",
       "number": "01-03",
       "goalId": "01",
       "collaborators": [],
@@ -176,9 +176,9 @@
         "taxTreatment": "未確認。税込・税別を断定せず税理士へ確認する。",
         "collectionMethod": "未決・提案：会費年度4/1〜3/31、請求後30日以内。詳細は規約案で確認。",
         "membershipRules": "/oita-mirai-mobility-consortium/rules/",
-        "votingRights": "年会費10万円の有料会員団体と、正式参画した発起人団体・正式に事務局を担う団体に議決権。1団体1票で重複加算なし。募集段階の自治体に票を付与しない。"
+        "votingRights": "有料会員団体のみ1団体1票。無料会員は、発起人・事務局団体を含め議決権なし。"
       },
-      "summary": "企業は10万円・議決権あり／無料・議決権なしを選択。発起人・事務局の例外あり。団体承認前。"
+      "summary": "企業は年10万円又は無料を選択。有料会員のみ1団体1票。無料会員は議決権なし。団体承認前。"
     },
     {
       "id": "01-04",
@@ -420,15 +420,7 @@
       "number": "01-08",
       "goalId": "01",
       "collaborators": [],
-      "referenceLinks": [
-        {
-          "label": "県協議用資料（10/27）",
-          "url": "https://mobilitydlab.com/oita-mirai-mobility-consortium/meeting/",
-          "verified": true,
-          "verifiedAt": "2026-10-27",
-          "verificationNote": "内容・リンク確認済み。参考資料であり、合意・完了の根拠ではありません。"
-        }
-      ],
+      "referenceLinks": [],
       "legacyIds": [
         "VIEW-PREF"
       ],
@@ -1516,7 +1508,7 @@
     {
       "id": "CHECK-04",
       "title": "会員条件・年会費",
-      "decide": "企業の選択制10万円・議決権あり／無料・議決権なし、正式発起人・事務局団体の例外を前提に、税務・徴収・入退会等の提案を承認する。",
+      "decide": "企業の年10万円又は無料の選択制、有料会員のみ議決権ありの方針に基づき、税務・徴収・入退会等の提案を承認する。",
       "prepare": "会員規程案・費用の区分表",
       "ownerTeam": null,
       "status": "利用者の基本方針・団体承認前",
@@ -1703,7 +1695,7 @@
     ],
     "policyStatus": "利用者の基本方針・団体承認前。企業は10万円・議決権あり／無料・議決権なしを選択。",
     "collectionMethod": "未決・提案：会費入金を照合し区分帳簿で管理。規約・事務局会計案を参照。",
-    "votingRights": "年会費10万円の有料会員団体と、正式参画した発起人団体・正式に事務局を担う団体に議決権。1団体1票で重複加算なし。募集段階の自治体に票を付与しない。",
+    "votingRights": "有料会員団体のみ1団体1票。無料会員は、発起人・事務局団体を含め議決権なし。",
     "programmeSeparation": "無料の人材育成プログラムとコンソーシアムの会員区分・会費は別。"
   },
   "directory": {
@@ -3122,7 +3114,7 @@
       "id": "L-08",
       "type": "決める",
       "title": "会員区分・年会費・議決権",
-      "current": "企業は年10万円・議決権あり／無料・議決権なし。自治体・大学・NPO等は無料。発起人は初年度無料の案。議決権は規約に定める。",
+      "current": "企業は年10万円又は無料を選択。自治体・大学・NPO等は無料。有料会員団体のみ1団体1票。無料会員は議決権なし。発起人の初年度無料は設立時に承認する。",
       "status": "案あり",
       "latestLink": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch02",
       "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch02",
@@ -3365,7 +3357,7 @@
       "current": "オンライン・代理・書面決議の参加者と賛否を議事録等に残す。指定様式は設けない。",
       "status": "未着手",
       "latestLink": null,
-      "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch09",
+      "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch04",
       "remaining": "記録の方法と担当を設立時に確認する。",
       "owner": null,
       "reviewer": null,
@@ -3394,7 +3386,7 @@
       "id": "L-25",
       "type": "決める",
       "title": "個人情報・秘密情報の管理",
-      "current": "規約第18条に目的・共有先の明示、必要者限定、内部台帳と公開名簿の分離の案あり。",
+      "current": "規約第18条に、秘密情報・個人情報の利用目的・共有先・取扱者の限定、承諾のない目的外利用・外部提供の禁止、退会後の秘密保持を定める。",
       "status": "案あり",
       "latestLink": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch07",
       "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch07",
@@ -3445,7 +3437,7 @@
       "current": "県後援を受ける取組みは、県とサンリオの契約に基づく利用許諾の対象として進める現案。",
       "status": "未着手",
       "latestLink": null,
-      "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch07",
+      "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/read/main/#main_ch02",
       "remaining": "該当する制作・公開前に活動・用途・表現の範囲を県と確認し、確認記録を残す。",
       "owner": null,
       "reviewer": null,

@@ -71,6 +71,10 @@ def boxed(cols,width,gap=12):
 def render(el,width):
     cls=set(el.get('class','').split())
     if el.tag in ('nav','script','style','details','summary'):return []
+    if 'rules-article' in cls:
+        flows=[]
+        for child in el:flows+=render(child,width)
+        return [KeepTogether(flows)] if len(el.findall('p'))<=3 and el.find('ol') is None else flows
     if 'pvmv-block' in cls:
         flows=[]
         for child in el:flows+=render(child,width)
