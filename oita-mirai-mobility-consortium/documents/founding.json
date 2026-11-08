@@ -1,5 +1,5 @@
 {
-  "version": "20261108-concise-rules",
+  "version": "20261108-office-led",
   "updated": "2026-11-08",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
@@ -56,12 +56,14 @@
     {
       "position": "共同代表",
       "name": "県副知事・TCO本田常務",
-      "status": "候補・了承待ち"
+      "status": "候補・了承待ち",
+      "role": "本会を代表し、必要時の相談に対応する。日常運営・契約・会計・支出は事務局が担う。"
     },
     {
       "position": "事務局長",
       "name": "MDL 佐藤CEO",
-      "status": "候補・了承待ち"
+      "status": "候補・了承待ち",
+      "role": "TCO・MDLの事務局による運営・執行、進捗・会計報告を統括する。"
     }
   ],
   "annual_fee_yen": 100000,
@@ -166,5 +168,11 @@
   ],
   "training_free_scope": "2027年2月までの人材育成プログラムは誰でも参加無料",
   "document_audience": "自治体・企業・団体等の参加検討者",
-  "document_purpose": "コンソーシアムの目的、活動、参加方法、運営体制、案件の進め方、会計を説明する"
+  "document_purpose": "コンソーシアムの目的、活動、参加方法、運営体制、案件の進め方、会計を説明する",
+  "operating_authority": {
+    "daily_execution": "TCO・MDLの事務局が、運営会議の定める方針・予算・執行権限の範囲で担う",
+    "meeting_decisions": "基本事項、事務局の業務・対価、予算・決算・執行権限、案件の採択・認定",
+    "approval_separation": "事務局内で申請と承認、記帳と確認の担当を分ける",
+    "exception_decision": "運営会議で決議に至らない場合は、事務局長が論点を整理し、共同代表及び事務局長が協議して決議する"
+  }
 }

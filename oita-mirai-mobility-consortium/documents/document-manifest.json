@@ -1,5 +1,5 @@
 {
-  "version": "20261108-concise-rules",
+  "version": "20261108-office-led",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "338ef40a1bbcba69c0067efcc8816e2562fd0716cd0ac357e7e776bb375e504e",
+      "sha256": "98bb27cf7c22a5f3c1f072e5faad0660b36945f04bcd60fe848bced471fb61b0",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "8be213fa675c37b165ca9c45e88da5964a017066573735fa10b03d0d45271bf3"
+      "print_sha256": "bd11590d2c27d1d63ca7c474bcd83e41348d9f4b9ab68af6f4d5b1bf8e15ce5b"
     },
     {
       "key": "members",
@@ -40,10 +40,10 @@
         "members_ch02": 2,
         "members_ch03": 3
       },
-      "sha256": "52215f1023208573cdc909f1f64594f5b83f4f70012313a7bd4214009ac52286",
+      "sha256": "70ccf60a4d1c0c1b6a7780efac552163aad979668d22091e16f941be96e814d5",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "c96d3b48f97d75a349ab1858a42cda3ead9cf1943f73a73beef8746f9b3c2423"
+      "print_sha256": "5f00a7dcfee13928feaa6fce0b115d679c5c4ec0479e354c4103fb099ba09487"
     },
     {
       "key": "rules",
@@ -65,10 +65,10 @@
         "rules_ch08": 5,
         "rules_ch09": 5
       },
-      "sha256": "c7db5589fcffed0d7db121281429cea508cc8d375fb393f6ec71308efa8220bd",
+      "sha256": "9bc8f5ddba185b00bc2541ce82704aae3b408a84061600dc81f4f7365d87e121",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 5,
-      "print_sha256": "7f6680dfdef6fbd4aef494ae44b71a43ffcfd528287a16fc106fdd285b2f3c28"
+      "print_sha256": "336ada9114384042d6d91a47875981d32f92e4c383bedbdbe88e87ad5ab29adc"
     },
     {
       "key": "secretariat",
@@ -90,10 +90,10 @@
         "secretariat_ch08": 5,
         "conditions": 6
       },
-      "sha256": "80dca77675de8bf345aa52ffd1401a9f7c0abccf49cb8f6ec84e98ec5b6c02a1",
+      "sha256": "75c2aec91599baa66c493adc1cfd8be06c250207f33723371b4b12dc6a026bc6",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 6,
-      "print_sha256": "f68747de9e8a147f9c34257f062fcf7d9b03756be3e057d5fed7dfc7a6f99722"
+      "print_sha256": "81d9232ddc642639e42226fcfdda8145ea72d6bf2c8184e8c51e6741f59f4331"
     }
   ],
   "consent_forms": [],
