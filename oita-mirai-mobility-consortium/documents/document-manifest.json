@@ -1,5 +1,5 @@
 {
-  "version": "20261108-source-steps",
+  "version": "20261108-consult-desk",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 6,
         "main_ch07": 7
       },
-      "sha256": "fe944270349eb53178367febc208486a8a1b92fc7ddb71e7beda3588e9db46b6",
+      "sha256": "198c8c9499338b61a30ca26422d14a51d819db04943573920886c97469c31c5f",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "084e828208b80308be0962e9eaabacd475601513eee822138f8977e6997c77d9"
+      "print_sha256": "75db6f552461ceb7fb1920c309744d02dc11a3f13434dc64a9fc1d432834a836"
     },
     {
       "key": "members",
@@ -66,10 +66,10 @@
         "rules_ch09": 6,
         "rules_ch10": 6
       },
-      "sha256": "f243a1f8fb3e2702251f316ad226b99b5eab53e47dd3df7112237aa4c637edf7",
+      "sha256": "b514882bc295c5eee36b4574b288762d0b3e1a0d4b73b51a62534a921da526bd",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "a4d2c7557afb49b4a6a91cf6334d7ec9336cb5bc780da2147039a0f79b184d5c"
+      "print_sha256": "fbaeb1b553530584630429f85699908e69e10df1dbb8a1f42fa56467ce1db27f"
     },
     {
       "key": "secretariat",
