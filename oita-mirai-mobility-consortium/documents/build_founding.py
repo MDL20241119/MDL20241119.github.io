@@ -29,7 +29,8 @@ def build():
         assert r.xpath('//meta[@name="robots"]/@content')==['noindex,nofollow,noarchive'],p
         assert r.xpath('//nav[@class="founding-doc-nav"]'),p
         text=r.xpath('//main')[0].text_content()
-        assert '未決' in s,p
+        notices=r.xpath('//*[contains(concat(" ", normalize-space(@class), " "), " notice ")]')
+        assert any('協議案' in n.text_content() and '了承' in n.text_content() for n in notices),p
         assert DATA['target_date_label'] in r.text_content(),p
         assert '県の後援≠' not in text,p
         assert '1月26日は日程候補' not in text and '1月26日は候補' not in text,p
@@ -48,6 +49,8 @@ def build_fonts(variable_path):
     paths=[ROOT/d['path']/'index.html' for d in DATA['documents']]
     paths += [ROOT/x for x in ['organization/index.html','guide/index.html','index.html','concept/index.html']]
     text=''.join(html.fromstring(p.read_text()).text_content() for p in paths)
+    forms_source=ROOT/'read/founding/build_forms.py'
+    if forms_source.exists():text += forms_source.read_text()
     for name,weight in [('regular',400),('black',900)]:
         path=ROOT/f'read/main/assets/proposal-jp-{name}.woff'
         old=TTFont(path);text += ''.join(map(chr,old.getBestCmap()));old.close()

@@ -4,7 +4,7 @@
 Run: python3 oita-mirai-mobility-consortium/read/founding/build_documents.py
 Requires lxml, fontTools[woff], reportlab.
 """
-import json
+import json,hashlib
 from pathlib import Path
 from tempfile import TemporaryDirectory
 from html import escape
@@ -12,7 +12,7 @@ from lxml import html
 from fontTools.ttLib import TTFont as Font
 from reportlab.pdfbase import pdfmetrics
 from reportlab.pdfbase.ttfonts import TTFont
-from reportlab.platypus import BaseDocTemplate,PageTemplate,Frame,Paragraph,Spacer,Table,TableStyle,PageBreak,Image,CondPageBreak
+from reportlab.platypus import BaseDocTemplate,PageTemplate,Frame,Paragraph,Spacer,Table,TableStyle,PageBreak,Image,CondPageBreak,KeepTogether
 from reportlab.lib.styles import ParagraphStyle
 from reportlab.lib.colors import HexColor
 from reportlab.lib.utils import ImageReader
@@ -20,9 +20,9 @@ from reportlab.lib.utils import ImageReader
 BASE=Path(__file__).resolve().parents[2]
 FONTDIR=BASE/'read/main/assets'
 OUTPUT=BASE/'documents'
-W,H,PAD=720,960,44
+W,H,PAD=595.276,841.89,28
 WIDTH=W-2*PAD
-PINK,INK,ACCENT,SOFT=map(HexColor,['#f7ecee','#111111','#bd3c39','#fff8fa'])
+PINK,INK,ACCENT,SOFT=map(HexColor,['#f2f5f7','#102e53','#244d78','#ffffff'])
 ORIGIN='https://mobilitydlab.com'
 ST={}
 CHAPTER_PAGES={}
@@ -39,7 +39,7 @@ def inline(el):
         c=inline(child)
         if child.tag=='br':c='<br/>'
         elif child.tag in ('b','strong'):c=f'<b>{c}</b>'
-        elif child.tag=='a':c=f'<a href="{escape(href(child.get("href","")),quote=True)}" color="#bd3c39"><u>{c}</u></a>'
+        elif child.tag=='a':c=f'<a href="{escape(href(child.get("href","")),quote=True)}" color="#244d78"><u>{c}</u></a>'
         out+=c+escape(child.tail or '')
     return out.strip()
 
@@ -51,12 +51,12 @@ def prepare_fonts(tmp):
         p=Path(tmp)/f'{weight}.ttf';f.save(p);pdfmetrics.registerFont(TTFont(label,str(p)))
     pdfmetrics.registerFontFamily('JP',normal='JP',bold='JP-Bold',italic='JP',boldItalic='JP-Bold')
     def make(name,size,leading,bold=False,**kw):return ParagraphStyle(name,fontName='JP-Bold' if bold else 'JP',fontSize=size,leading=leading,textColor=INK,wordWrap='CJK',spaceAfter=6,**kw)
-    ST.update(body=make('body',12.5,19),note=make('note',11,18),h3=make('h3',19,28,True,spaceBefore=10,keepWithNext=True),label=make('label',11,17,True,keepWithNext=True),large=make('large',22,31,True),title=make('title',35,47,True,keepWithNext=True),section=make('section',26,37,True,keepWithNext=True),number=make('number',35,40,True),lead=make('lead',15,25,True))
+    ST.update(body=make('body',10.5,16.5),note=make('note',9,14),h3=make('h3',16,23,True,spaceBefore=10,keepWithNext=True),label=make('label',10,15,True,keepWithNext=True),large=make('large',19,27,True),title=make('title',27,37,True,keepWithNext=True),section=make('section',22,31,True,keepWithNext=True),number=make('number',28,34,True),lead=make('lead',13,21,True,keepWithNext=True))
 
 def para(el,key='body'):
     c=inline(el)
     if el.tag in ('b','strong'):c=f'<b>{c}</b>'
-    if el.tag=='a':c=f'<a href="{escape(href(el.get("href","")),quote=True)}" color="#bd3c39"><u>{c}</u></a>'
+    if el.tag=='a':c=f'<a href="{escape(href(el.get("href","")),quote=True)}" color="#244d78"><u>{c}</u></a>'
     return Paragraph(c,ST[key])
 
 def boxed(cols,width,gap=12):
@@ -71,6 +71,10 @@ def boxed(cols,width,gap=12):
 def render(el,width):
     cls=set(el.get('class','').split())
     if el.tag in ('nav','script','style','details','summary'):return []
+    if 'pvmv-block' in cls:
+        flows=[]
+        for child in el:flows+=render(child,width)
+        return [KeepTogether(flows)]
     if 'permission-line' in cls:return [para(el,'h3')]
     if el.tag in ('p','h3','h4','strong','a','span','dt','dd'):
         if 'flow-arrow' in cls:return []
@@ -79,14 +83,14 @@ def render(el,width):
         if 'eyebrow' in cls or el.tag=='dt':key='label'
         if el.tag=='p' and 'fee' in cls:return [Paragraph(f'<font size="54"><b>{escape(el.find("b").text_content())}</b></font> <b>{escape(el.find("strong").text_content())}</b>',ParagraphStyle('fee',parent=ST['body'],leading=63,spaceBefore=8))]
         return [para(el,key)] if el.text_content().strip() else []
-    if el.tag=='figure':
+    if el.tag=='figure' and el.xpath('.//img'):
         img=el.xpath('.//img')[0];p=BASE.parent/img.get('src').lstrip('/');iw,ih=ImageReader(str(p)).getSize();im=LinkedImage(str(p),width=width,height=width*ih/iw);im.link=href(img.get('src'));out=[im,Spacer(1,9)]
         if el.find('figcaption') is not None:out.append(para(el.find('figcaption'),'note'))
         return out
     if el.tag=='table':
         trs=el.xpath('.//tr');n=len(trs[0]);fractions={2:[.32,.68],3:[.22,.39,.39],4:[.12,.24,.24,.40]}.get(n,[1/n]*n)
         t=Table([[para(c) for c in tr] for tr in trs],colWidths=[width*x for x in fractions],repeatRows=1,hAlign='LEFT')
-        t.setStyle(TableStyle([('GRID',(0,0),(-1,-1),.5,HexColor('#a7989c')),('BACKGROUND',(0,0),(-1,0),HexColor('#eddee2')),('BACKGROUND',(0,1),(-1,-1),SOFT),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),10),('RIGHTPADDING',(0,0),(-1,-1),10),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),3)]));return [t,Spacer(1,12)]
+        t.setStyle(TableStyle([('GRID',(0,0),(-1,-1),.5,HexColor('#afc2d8')),('BACKGROUND',(0,0),(-1,0),HexColor('#e8f0fc')),('BACKGROUND',(0,1),(-1,-1),SOFT),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),10),('RIGHTPADDING',(0,0),(-1,-1),10),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),3)]));return [t,Spacer(1,12)]
     if el.tag in ('ol','ul'):
         if 'training-flow' in cls:
             items=[Paragraph(f'<b>{i:02}</b><br/>{inline(c)}',ST['body']) for i,c in enumerate(el,1)];rows=[items[i:i+3] for i in range(0,len(items),3)];t=Table(rows,colWidths=[width/3]*3)
@@ -120,46 +124,87 @@ def render(el,width):
     return out
 
 class Document(BaseDocTemplate):
-    def __init__(self,path,title):
-        super().__init__(str(path),pagesize=(W,H),leftMargin=PAD,rightMargin=PAD,topMargin=72,bottomMargin=57,title=title,author='トヨタカローラ大分・モビリティデザインラボ');self.label=title
-        self.addPageTemplates(PageTemplate('reader',[Frame(PAD,57,WIDTH,H-130,id='body',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.page))
-    def page(self,c,d):
-        c.saveState();c.setFillColor(PINK);c.rect(0,0,W,H,fill=1,stroke=0);c.setFillColor(INK);c.setFont('JP-Bold',11);c.drawString(PAD,H-32,self.label);c.setFont('JP',10);c.drawRightString(W-PAD,H-32,'設立協議用・正式承認前 / 2026.10.28');c.setStrokeColor(INK);c.line(PAD,H-48,W-PAD,H-48);c.line(PAD,43,W-PAD,43);c.setFont('JP',9);c.drawString(PAD,27,'大分未来モビリティコンソーシアム / TCO・MDL');c.setFont('JP-Bold',11);c.drawRightString(W-PAD,26,str(d.page));c.restoreState()
+    def __init__(self,path,title,print_mode=False,total=0):
+        super().__init__(str(path),pagesize=(W,H),leftMargin=PAD,rightMargin=PAD,topMargin=55,bottomMargin=62,title=title,author='トヨタカローラ大分・モビリティデザインラボ')
+        self.label=title;self.print_mode=print_mode;self.total=total
+        self.addPageTemplates(PageTemplate('reader',[Frame(PAD,62,WIDTH,H-117,id='body',leftPadding=0,rightPadding=0,topPadding=0,bottomPadding=0)],onPage=self.paint_page))
+    def paint_page(self,c,d):
+        date=json.loads((OUTPUT/'founding.json').read_text())['updated'].replace('-', '.')
+        c.saveState();c.setFillColor(HexColor('#ffffff') if self.print_mode else PINK);c.rect(0,0,W,H,fill=1,stroke=0)
+        c.setFillColor(INK);c.setFont('JP-Bold',8);c.drawString(PAD,H-26,'大分未来モビリティコンソーシアム');c.drawRightString(W-PAD,H-26,'（ドラフト）')
+        c.bookmarkPage(f'page-{d.page}')
+        c.setFont('JP',8)
+        if d.page>1:
+            c.drawString(PAD,47,'目次へ戻る');c.linkRect('', 'contents',(PAD,44,PAD+60,56),relative=0,thickness=0)
+            c.drawString(PAD+85,47,'前のページ');c.linkRect('',f'page-{d.page-1}',(PAD+85,44,PAD+140,56),relative=0,thickness=0)
+        if self.total and d.page<self.total:
+            c.drawRightString(W-PAD,47,'次のページ');c.linkRect('',f'page-{d.page+1}',(W-PAD-60,44,W-PAD,56),relative=0,thickness=0)
+        c.setStrokeColor(HexColor('#afc2d8'));c.line(PAD,37,W-PAD,37);c.setFont('JP',7.5);c.drawString(PAD,21,self.label+' / '+date);c.drawRightString(W-PAD,21,str(d.page));c.restoreState()
     def afterFlowable(self,f):
-        if isinstance(f,Paragraph) and hasattr(f,'bookmark'):self.canv.bookmarkPage(f.bookmark);self.canv.addOutlineEntry(f.getPlainText(),f.bookmark,level=0,closed=False);CHAPTER_PAGES[f.bookmark]=self.page
+        if isinstance(f,Paragraph) and hasattr(f,'bookmark'):
+            self.canv.bookmarkPage(f.bookmark);self.canv.addOutlineEntry(f.getPlainText(),f.bookmark,level=0,closed=False);CHAPTER_PAGES[f.bookmark]=self.page
 
-def build(slug,path,title):
-    root=html.fromstring(path.read_text());sections=root.xpath('//section[contains(@class,"reader-section")]');story=[]
+def make_story(root,slug,title,known):
+    sections=root.xpath('//section[contains(@class,"reader-section")]');story=[]
+    date=json.loads((OUTPUT/'founding.json').read_text())['updated'];year,month,day=map(int,date.split('-'))
+    heading=Paragraph(escape(title),ST['title']);heading.bookmark='contents';story.append(heading)
+    story.append(Paragraph(f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
+    story.append(Paragraph('正式決定前の協議用文書です。候補者の参画・就任、条件・負担の承認を確定するものではありません。',ST['note']))
+    story.extend([Spacer(1,12),Paragraph('目次',ST['h3'])])
     for n,sec in enumerate(sections,1):
-        if slug=='main' and n>1:story.append(PageBreak())
-        elif n>1:story.append(CondPageBreak(100))
-        label=sec.xpath('./header/h2')[0];prefix=f'{n:02} / ' if slug=='main' else '';heading=Paragraph(prefix+inline(label),ST['title'] if slug=='main' else ST['section']);heading.bookmark=sec.get('id');story.append(heading)
+        dest=sec.get('id');label=sec.xpath('./header/h2')[0].text_content();num=known.get(dest,'-')
+        story.append(Paragraph(f'<a href="#{dest}" color="#102e53"><b>{n:02} {escape(label)}</b> / p. {num}</a>',ST['body']))
+    story.append(Paragraph('各項目を選ぶと本文へ移動します。',ST['note']));story.append(PageBreak())
+    for n,sec in enumerate(sections,1):
+        if n>1:story.append(CondPageBreak(125))
+        label=sec.xpath('./header/h2')[0];heading=Paragraph(inline(label),ST['section']);heading.bookmark=sec.get('id');story.append(heading)
         lead=sec.xpath('./header/p')
         if lead:story.append(para(lead[0],'lead'))
-        if n==1:
-            story.append(Paragraph('<b>設立目標：2027年1月26日。</b>正式な設立は関係者の合意を経て決めます。',ST['note']))
-            story.append(Paragraph('<b>未決・提案｜設立時の承認前。</b>候補は了承待ち。正式参画・就任・負担の承認を示すものではありません。',ST['note']))
-            links=' / '.join(f'<a href="{ORIGIN}/oita-mirai-mobility-consortium/{u}/" color="#bd3c39"><u>{t}</u></a>' for u,t in [('read/main','構想・趣意書'),('members','名簿'),('rules','規約'),('secretariat','事務局・会計')]);story.append(Paragraph(links,ST['note']));story.append(Spacer(1,12))
         body=sec.xpath('./div[contains(@class,"chapter-body")]')[0]
-        for c in body:
-            if slug=='main' and 'pvmv-block' in c.get('class',''):
-                story.append(PageBreak());story.append(Paragraph('PVMV / みんなの力で、<br/>大分の未来を動かす。',ST['title']))
-                for x in c:
-                    if x.tag=='figure':story+=render(x,WIDTH)
-                for dt,dd in zip(c.xpath('.//dt'),c.xpath('.//dd')):story.append(Paragraph(f'<b>{escape(dt.text_content())}</b>　{escape(dd.text_content())}',ST['body']))
-            else:story+=render(c,WIDTH)
-        if slug!='main':story.append(Spacer(1,14))
-    story.append(Paragraph(f'<a href="{ORIGIN}/oita-mirai-mobility-consortium/read/main/#founding-docs" color="#bd3c39"><u>設立に必要な4文書・最新版へ戻る</u></a>',ST['note']));out=OUTPUT/f'{slug}.pdf';Document(out,title).build(story);print(out);return dict(CHAPTER_PAGES)
+        for child in body:story.extend(render(child,WIDTH))
+        story.append(Spacer(1,16))
+    return story
+
+def build(slug,path,title,print_mode=False):
+    root=html.fromstring(path.read_text());known={};total=0;out=OUTPUT/(slug+('-print' if print_mode else '')+'.pdf')
+    for attempt in range(4):
+        CHAPTER_PAGES.clear();Document(out,title,print_mode,total).build(make_story(root,slug,title,known));actual={k:v for k,v in CHAPTER_PAGES.items() if k!='contents'}
+        import fitz
+        with fitz.open(out) as rendered:new_total=len(rendered)
+        if actual==known and new_total==total:break
+        known=actual;total=new_total
+    else:raise RuntimeError('Chapter pagination did not converge: '+slug)
+    print(out);return actual
+
+def sync_page_counts(records):
+    counts={r['key']:r['pages'] for r in records}
+    for path in BASE.rglob('*.html'):
+        source=path.read_text()
+        if 'data-pdf-key' not in source:continue
+        root=html.fromstring(source);changed=False
+        for el in root.xpath('//*[@data-pdf-key]'):
+            key=el.get('data-pdf-key')
+            if key in counts:
+                import re
+                current=el.text or ''
+                new=re.sub(r'\d+\s*(ページ|p)',lambda m:str(counts[key])+m.group(1),current)
+                if new!=current:el.text=new;changed=True
+        if changed:path.write_text('<!DOCTYPE html>\n'+html.tostring(root,encoding='unicode',method='html')+'\n')
 
 def main():
     OUTPUT.mkdir(exist_ok=True)
     with TemporaryDirectory() as tmp:
         prepare_fonts(tmp)
         manifest=json.loads((OUTPUT/'founding.json').read_text());records=[]
-        for slug,title in [('main','構想説明書・設立趣意書'),('members','発起人・会員・役員名簿'),('rules','規約案'),('secretariat','事務局の役割分担・会計')]:
-            path=BASE/'read/main/index.html' if slug=='main' else BASE/f'{slug}/index.html';CHAPTER_PAGES.clear();chapter_pages=build(slug,path,title)
+        previous=json.loads((OUTPUT/'document-manifest.json').read_text()) if (OUTPUT/'document-manifest.json').exists() else {}
+        for slug,title in [('main','構想説明書・設立趣意書'),('members','発起人・会員・役員名簿'),('rules','規約'),('secretariat','事務局の役割分担・会計')]:
+            path=BASE/'read/main/index.html' if slug=='main' else BASE/f'{slug}/index.html'
+            chapter_pages=build(slug,path,title);print_chapters=build(slug,path,title,True);assert print_chapters==chapter_pages
             import fitz
-            pages=len(fitz.open(OUTPUT/f'{slug}.pdf'));record=next(dict(x) for x in manifest['documents'] if x['key']==slug);record.update(pages=pages,chapter_pages=chapter_pages);records.append(record)
-        (OUTPUT/'document-manifest.json').write_text(json.dumps({'version':manifest['version'],'target_date':manifest['target_date'],'target_status':manifest['target_status'],'documents':records},ensure_ascii=False,indent=2)+'\n')
+            with fitz.open(OUTPUT/f'{slug}.pdf') as pdf:pages=len(pdf)
+            record=next(dict(x) for x in manifest['documents'] if x['key']==slug);record.update(pages=pages,chapter_pages=chapter_pages,sha256=hashlib.sha256((OUTPUT/f'{slug}.pdf').read_bytes()).hexdigest(),print_pdf=f'documents/{slug}-print.pdf',print_pages=pages,print_sha256=hashlib.sha256((OUTPUT/f'{slug}-print.pdf').read_bytes()).hexdigest());records.append(record)
+        previous.update(version=manifest['version'],target_date=manifest['target_date'],target_status=manifest['target_status'],documents=records)
+        (OUTPUT/'document-manifest.json').write_text(json.dumps(previous,ensure_ascii=False,indent=2)+'\n')
+        sync_page_counts(records)
 
 if __name__=='__main__':main()

@@ -59,7 +59,7 @@ class Brief:
         self.path.parent.mkdir(exist_ok=True)
         self.c=canvas.Canvas(str(self.path),pagesize=(W,H),pageCompression=1,invariant=1)
         self.c.setTitle(data['region']+'｜共創提案｜2ページ要点版')
-        self.c.setAuthor('モビリティデザインラボ');self.c.setSubject('地域の未来と実証に向けた設計をまとめた企画例・検討用ドラフト')
+        self.c.setAuthor('モビリティデザインラボ');self.c.setSubject('地元の未来と実証に向けた設計をまとめた企画例・検討用ドラフト')
     def rect(self,x,y,w,h,color,stroke=None):
         self.c.setFillColor(HexColor(color))
         if stroke:self.c.setStrokeColor(HexColor(stroke));self.c.setLineWidth(.7)
@@ -119,7 +119,7 @@ class Brief:
         self.text(esc(self.d['promise']),M,299,382,64,12.2,19,'JP',INK,'promise')
         self.line(M,384,W-2*M)
         widths=[237,261,237];xs=[M,293,573]
-        labels=[('01 / ISSUE','地域の課題・仮説'),('02 / SERVICE','つくるサービス'),('03 / VALUE','目指す変化')]
+        labels=[('01 / ISSUE','地元の課題・仮説'),('02 / SERVICE','つくるサービス'),('03 / VALUE','目指す変化')]
         for i,((en,jp),x,w) in enumerate(zip(labels,xs,widths)):
             if i==1:self.rect(x-12,397,w+8,139,WARM)
             self.label(en,x,404,w);self.text(jp,x,425,w,28,17,23,'JPB',INK,'card-heading')
@@ -172,7 +172,7 @@ class Brief:
             self.text(esc(self.d[key]),x,470,cw,59,10.4,15.5,'JP',INK,key)
         # Evidence and decisions are placed apart from the proposed service.
         self.label('LOCAL CONTEXT',rx,135,rw-8)
-        self.text('地域の現在地',rx,153,rw-8,25,15.3,21,'JPB',INK,'policy-heading')
+        self.text('地元の現在地',rx,153,rw-8,25,15.3,21,'JPB',INK,'policy-heading')
         self.text(esc(self.d['policy_context']),rx,183,rw-8,93,10.1,15.7,'JP',INK,'policy-context')
         self.line(rx,279,rw-8,'#CCD5DD')
         self.text('対話で決める3つの問い',rx,293,rw-8,23,12.2,18,'JPB',INK,'questions-heading')

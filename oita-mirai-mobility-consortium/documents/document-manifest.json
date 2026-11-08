@@ -1,5 +1,5 @@
 {
-  "version": "20261107-guide-design",
+  "version": "20261108-policy-clear",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -14,17 +14,17 @@
       "pages": 8,
       "chapter_pages": {
         "main_ch01": 2,
-        "main_ch02": 4,
-        "main_ch03": 5,
+        "main_ch02": 3,
+        "main_ch03": 4,
         "main_ch04": 5,
-        "main_ch05": 6,
-        "main_ch06": 7,
+        "main_ch05": 5,
+        "main_ch06": 6,
         "main_ch07": 8
       },
-      "sha256": "ec139d9a84f7f50c8521fad226447a49113e3939d1bca7e6f2d9a4ee462fac2c",
+      "sha256": "d655762d941e0311c656d497f363964c7cf8f067d5e4c6763cb6896aa54ff6bd",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "60784c7d35485f6adbed21fb7832dff8e03ab042c909dff14d56f86b9765d422"
+      "print_sha256": "bd4a7011606e62d110c1b02fdfee4d1b370a0436291319c1fa9991639561fd6b"
     },
     {
       "key": "members",
@@ -33,18 +33,18 @@
       "title": "発起人・会員・役員名簿",
       "path": "members/",
       "pdf": "documents/members.pdf",
-      "summary": "発起人5区分、役員候補、正式参画と掲載了承の確認。",
+      "summary": "発起人の依頼対象、役員候補、正式参画と掲載了承の確認。",
       "pages": 3,
       "chapter_pages": {
         "members_ch01": 2,
         "members_ch02": 2,
-        "members_ch03": 2,
+        "members_ch03": 3,
         "members_ch04": 3
       },
-      "sha256": "abd9d7d8ee260d24291f3cd1de66d97c21b60eefa6c21d16aba2cff921196cce",
+      "sha256": "a98c19834dc7dd33d930a3145369685370721e74709a01394643da8828fa6ea6",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "b5fca1cddbefa4a5b2980dd0612672f45fba014b8d2f5c7f8d08f771647b3581"
+      "print_sha256": "dba64194e4ddb6e3fa02dab757b248a27c793793392e6674241c9bbb4a249f0f"
     },
     {
       "key": "rules",
@@ -67,10 +67,10 @@
         "rules_ch09": 6,
         "rules_ch10": 6
       },
-      "sha256": "ceb0342ac67920c07df692395d583bb8999ba1a0fd9f9e93351b837d3eeea57e",
+      "sha256": "9bf31f5513e8319d9f60892526362df1310276b206533841db4501d55674c14a",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "ddf04b92f02f6181cbcc71e3e90a53991e127a124c3012ef803e59a4d91e2292"
+      "print_sha256": "df60c90d81d7eef7379c26a46fafe700867cca6471155a07598940099fc0c33f"
     },
     {
       "key": "secretariat",
@@ -80,22 +80,22 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 8,
+      "pages": 6,
       "chapter_pages": {
         "secretariat_ch01": 2,
-        "secretariat_ch02": 3,
-        "secretariat_ch03": 4,
-        "secretariat_ch04": 4,
-        "secretariat_ch05": 5,
-        "secretariat_ch06": 6,
-        "secretariat_ch07": 6,
-        "secretariat_ch08": 7,
-        "conditions": 8
+        "secretariat_ch02": 2,
+        "secretariat_ch03": 3,
+        "secretariat_ch04": 3,
+        "secretariat_ch05": 3,
+        "secretariat_ch06": 4,
+        "secretariat_ch07": 4,
+        "secretariat_ch08": 5,
+        "conditions": 6
       },
-      "sha256": "da804740f484e54b549c4e250d7aa17365b4b653b682858873e1262fe5f80269",
+      "sha256": "9da02407938f78ec6b060e530404dcd47f6a96263fc4ba5aad56b4448dcc674c",
       "print_pdf": "documents/secretariat-print.pdf",
-      "print_pages": 8,
-      "print_sha256": "ed5efcbdaad29cc8cf43967a029d1b12a2d550799e1334d2083d262912b22cbd"
+      "print_pages": 6,
+      "print_sha256": "44680eca4e2af198cea5ebb292c5d1186a55badd7d636cdb0eb9e27f15addc80"
     }
   ],
   "consent_forms": [
@@ -103,25 +103,87 @@
       "title": "発起人承諾書",
       "pdf": "documents/consent-founder.pdf",
       "pages": 1,
-      "sha256": "75712ad6103d3695abd5a8dac43b1cd1fa9f632434c1ed22cffee95863e5e285"
+      "sha256": "a8462c9376d12429915d9617f71155915e4db8106994d50bd7239adf7f80c000"
     },
     {
-      "title": "代表就任承諾書",
+      "title": "共同代表就任承諾書",
       "pdf": "documents/consent-representative.pdf",
       "pages": 1,
-      "sha256": "4fe3f3348b89bf860f007bbcfcffe6d2340ef77ab8019869409406f00769d0da"
+      "sha256": "04554e94177558b3c5cb12cd6567c0f99c485602baa6c005048ca1d87932ee96"
     },
     {
       "title": "事務局引受承諾書",
       "pdf": "documents/consent-secretariat.pdf",
       "pages": 1,
-      "sha256": "90082762355309331be6dab81552751e2af232afd44389f08c63a983d74d624d"
+      "sha256": "db9f2c0b453968e0c352323d2cb2dc6b368344770b5e01dfa9a25db78f5328cd"
     },
     {
       "title": "事務局長就任承諾書",
       "pdf": "documents/consent-secretariat-chief.pdf",
       "pages": 1,
-      "sha256": "65f98ff118c9152341e9f8d90426a02b4823a3e08d307411d9bd467d040ff7ec"
+      "sha256": "46497740a15963b9ce23387615b3819bf8927b9189ea24381d2d22ae6f75d268"
+    }
+  ],
+  "establishment_forms": [
+    {
+      "key": "membership-application",
+      "title": "入会申込と会員区分確認",
+      "pdf": "documents/membership-application.pdf",
+      "pages": 4,
+      "sha256": "3a70ce5f15a0e2da2d67a2df9efd03699b202c46e4169fee908fbfd8dc914b27",
+      "print_pdf": "documents/membership-application-print.pdf",
+      "print_pages": 4,
+      "print_sha256": "65d0406661c7eaeae668f6a7bb48d3ce214e044f9370df3f5346db692557b365"
+    },
+    {
+      "key": "project-proposal",
+      "title": "案件提案と検討着手の審議",
+      "pdf": "documents/project-proposal.pdf",
+      "pages": 4,
+      "sha256": "f9b6ab1b3419e36c7cdb04dde9dcefb8419b026d4cf6aac46db58e2c4db1b0fc",
+      "print_pdf": "documents/project-proposal-print.pdf",
+      "print_pages": 4,
+      "print_sha256": "13bcf58b157e26a58d3d7adc312eefbc277827f23718f116fbbfa352926b4075"
+    },
+    {
+      "key": "project-implementation",
+      "title": "実施計画と認定及び実施前確認",
+      "pdf": "documents/project-implementation.pdf",
+      "pages": 5,
+      "sha256": "be85834822d027dd9f1c4c0407391bef7613c435b88241dca442819d9078a41c",
+      "print_pdf": "documents/project-implementation-print.pdf",
+      "print_pages": 5,
+      "print_sha256": "92b21d272abfb2ab2d209d5fa3909d858ba4fd51d526108f73727118dceb4085"
+    },
+    {
+      "key": "founding-meeting",
+      "title": "設立会議の議案と合意記録",
+      "pdf": "documents/founding-meeting.pdf",
+      "pages": 5,
+      "sha256": "24dceb352f8826396d4b2040418d4d93c3ad748e38a8b90998daaaa341696dcb",
+      "print_pdf": "documents/founding-meeting-print.pdf",
+      "print_pages": 5,
+      "print_sha256": "2f7441d62a311552589bbb05e429182e3d13958d2452066d1c95bfb81d449622"
+    },
+    {
+      "key": "annual-plan-budget",
+      "title": "初年度事業計画と収支予算",
+      "pdf": "documents/annual-plan-budget.pdf",
+      "pages": 4,
+      "sha256": "7f7441b2a7ebd2bb2ea70d51e9ff7292b239bd72e1a2741c5bf844379c9fc964",
+      "print_pdf": "documents/annual-plan-budget-print.pdf",
+      "print_pages": 4,
+      "print_sha256": "199f308e89ea395edf497c80d284429d9d6f5ab4a9f8f02de6347e3bbbff0f64"
+    },
+    {
+      "key": "administration-agreement-review",
+      "title": "契約と会計管理の協定確認案",
+      "pdf": "documents/administration-agreement-review.pdf",
+      "pages": 5,
+      "sha256": "cd1712fd4ca4f641a53d9d49a20699784204e48febe0de7c114c9a675a9e8d2c",
+      "print_pdf": "documents/administration-agreement-review-print.pdf",
+      "print_pages": 5,
+      "print_sha256": "0253eec4453c6ed268d1de64a8d26fa052a21978c72331590fc986ab4c5e08a4"
     }
   ]
 }
