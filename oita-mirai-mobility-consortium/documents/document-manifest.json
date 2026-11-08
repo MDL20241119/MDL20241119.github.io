@@ -1,5 +1,5 @@
 {
-  "version": "20261108-single-form",
+  "version": "20261108-governance",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -19,12 +19,12 @@
         "main_ch04": 5,
         "main_ch05": 5,
         "main_ch06": 6,
-        "main_ch07": 8
+        "main_ch07": 7
       },
-      "sha256": "c92f10a259e6908a408a619d41dec920646a8724e672226076662d332b5e12b8",
+      "sha256": "b346e23c3684a8ccbd7b6e8138456bd032eca98bc85a618fbd15673d510af9e0",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "809686a5cc9bcbe9c3150ce4d407f02cd5ae73690b7c81f58ed9cf39e0a62fc0"
+      "print_sha256": "ef436015d3970de025f7151af164ca7ea135cd6d9bc0f541281c9309c561aea2"
     },
     {
       "key": "members",
@@ -33,18 +33,17 @@
       "title": "発起人・会員・役員名簿",
       "path": "members/",
       "pdf": "documents/members.pdf",
-      "summary": "発起人の依頼対象、役員候補、正式参画と掲載了承の確認。",
+      "summary": "発起人の役割、役員候補、会員と議決権。",
       "pages": 3,
       "chapter_pages": {
         "members_ch01": 2,
         "members_ch02": 2,
-        "members_ch03": 3,
-        "members_ch04": 3
+        "members_ch03": 3
       },
-      "sha256": "5b3bfc3ed5784c6977d05274f5e770dffc84c07e09232804813b64e3b9b17b4a",
+      "sha256": "3c0f809d153fb0bae69df6a669213ad8bb122a0da646f838ba4bc2a199b572fd",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "dc6035ece7323f6da9cc7fdda0128bbb196505a12c3ab57dea16eebcc1dff189"
+      "print_sha256": "3e408147d1c3f6dc2c1f271548bf0438941751791f63c28d3286253b096a5d6c"
     },
     {
       "key": "rules",
@@ -67,10 +66,10 @@
         "rules_ch09": 6,
         "rules_ch10": 6
       },
-      "sha256": "e52138259c03b7035afd17acd6e668b677f15b450fd1f4c9d39535cc903a41c8",
+      "sha256": "2024d83e8dac1e0a60fb08fda7e79e1139d21a2d2db243847e8bc03c54626ae3",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "118239dcd864da94b220ec4ce71a77a849b6eb8ac3d8c470f1a9173dade19f1c"
+      "print_sha256": "cd6257d10dfee45293678460e50fe231d6cb706b25a5ca7cd4b24884d45057ac"
     },
     {
       "key": "secretariat",
@@ -92,10 +91,10 @@
         "secretariat_ch08": 5,
         "conditions": 6
       },
-      "sha256": "335a428fe0a8815318c6eeb8129d6743869c70af02056635596c973bdeb1c73d",
+      "sha256": "bdaada0b5f2b96e67487d58bbb27291767e11ff4a652cf9c100a67120e5dd7f8",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 6,
-      "print_sha256": "0bfd341ef31fac274754a5a727f23ee79302fa75d6665356e52ee0fb6f90d48d"
+      "print_sha256": "e10e0d1ee6445de33f0c9fcefa4cfdf7b7ccd38ba5b6487711f477939d400a65"
     }
   ],
   "consent_forms": [],

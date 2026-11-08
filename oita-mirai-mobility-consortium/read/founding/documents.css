@@ -59,3 +59,4 @@
 @media(max-width:700px){.document-links ol{grid-template-columns:1fr}.pvmv-text dl{grid-template-columns:1fr;gap:3px}.pvmv-text dd{margin-bottom:14px}.founder-five ol{font-size:20px}.book-top h1{overflow-wrap:anywhere}.book-actions{grid-template-columns:1fr}.book-actions a:first-child{grid-column:auto}.eyeline{flex-wrap:wrap}}
 @media print{.document-links,.pvmv-text{display:none}.pvmv-figure{break-inside:avoid}.reader-section{page-break-before:auto}.reader-section>header{break-after:avoid}.rules-article{break-inside:auto}.rules-article h3{break-after:avoid}}
 .accounts-three{grid-template-columns:repeat(3,minmax(0,1fr))}@media(max-width:800px){.accounts-three{grid-template-columns:1fr}}
+@media(min-width:801px){.reader-section .founder-roles{table-layout:fixed}.founder-roles th:nth-child(1){width:8%}.founder-roles th:nth-child(2){width:36%}.founder-roles th:nth-child(3){width:56%}}

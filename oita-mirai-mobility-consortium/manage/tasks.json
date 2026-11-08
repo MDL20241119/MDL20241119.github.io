@@ -67,7 +67,7 @@
       "legacyIds": [
         "OMC-039"
       ],
-      "statusNote": "規約案は更新済み。定足数・可決条件等の団体承認は未確認。"
+      "statusNote": "設立目標は2027年1月26日。規約・体制・議決方法等は設立時に承認する。"
     },
     {
       "id": "01-02",
@@ -3138,11 +3138,11 @@
       "id": "L-09",
       "type": "決める",
       "title": "運営会議・議決方法",
-      "current": "月1回を基本とする一つの運営会議で、計画・予算・組織運営、案件の検討着手・実施計画の認定を決議する。",
+      "current": "オンライン参加・書面決議可。参加者（議決権者）の過半数賛成で決議し、決議に至らない場合は共同代表および事務局長で決議する。1団体1票。",
       "status": "案あり",
       "latestLink": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch04",
       "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch04",
-      "remaining": "定足数・可決条件、議長、招集・資料期限、代理・書面参加を承認",
+      "remaining": "議決方法、議長・招集・資料共有等の運用を設立時に承認する。",
       "owner": null,
       "reviewer": null,
       "due": null,
@@ -3361,12 +3361,12 @@
     {
       "id": "L-23",
       "type": "つくる",
-      "title": "出欠・委任・議決集計の様式",
-      "current": "規約案に代理・書面合意と議決結果の記録方針あり。集計票の最新版は未確認。",
+      "title": "出欠・委任・議決結果の記録",
+      "current": "オンライン・代理・書面決議の参加者と賛否を議事録等に残す。指定様式は設けない。",
       "status": "未着手",
       "latestLink": null,
       "source": "https://mobilitydlab.com/oita-mirai-mobility-consortium/rules/#rules_ch09",
-      "remaining": "議決権者・出欠・委任・賛否・留保を記録する様式と成立確認手順を作る。",
+      "remaining": "記録の方法と担当を設立時に確認する。",
       "owner": null,
       "reviewer": null,
       "due": null,

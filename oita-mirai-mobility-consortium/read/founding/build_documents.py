@@ -89,6 +89,7 @@ def render(el,width):
         return out
     if el.tag=='table':
         trs=el.xpath('.//tr');n=len(trs[0]);fractions={2:[.32,.68],3:[.22,.39,.39],4:[.12,.24,.24,.40]}.get(n,[1/n]*n)
+        if 'founder-roles' in cls:fractions=[.08,.36,.56]
         t=Table([[para(c) for c in tr] for tr in trs],colWidths=[width*x for x in fractions],repeatRows=1,hAlign='LEFT')
         t.setStyle(TableStyle([('GRID',(0,0),(-1,-1),.5,HexColor('#afc2d8')),('BACKGROUND',(0,0),(-1,0),HexColor('#e8f0fc')),('BACKGROUND',(0,1),(-1,-1),SOFT),('VALIGN',(0,0),(-1,-1),'TOP'),('LEFTPADDING',(0,0),(-1,-1),10),('RIGHTPADDING',(0,0),(-1,-1),10),('TOPPADDING',(0,0),(-1,-1),7),('BOTTOMPADDING',(0,0),(-1,-1),3)]));return [t,Spacer(1,12)]
     if el.tag in ('ol','ul'):
