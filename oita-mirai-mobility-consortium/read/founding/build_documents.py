@@ -153,8 +153,12 @@ def make_story(root,slug,title,known):
     sections=root.xpath('//section[contains(@class,"reader-section")]');story=[]
     date=json.loads((OUTPUT/'founding.json').read_text())['updated'];year,month,day=map(int,date.split('-'))
     heading=Paragraph(escape(title),ST['title']);heading.bookmark='contents';story.append(heading)
-    story.append(Paragraph(f'コンソーシアム構想 {year}年{month}月{day}日' if slug=='main' else f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
-    story.append(Paragraph('正式決定前の協議用文書です。候補者の参画・就任、条件・負担の承認を確定するものではありません。',ST['note']))
+    reference=next((r for r in json.loads((OUTPUT/'founding.json').read_text()).get('reference_documents',[]) if r['key']==slug),None)
+    if reference:
+        story.append(Paragraph(f'参考資料 / {year}年{month}月{day}日整理',ST['note']))
+    else:
+        story.append(Paragraph(f'コンソーシアム構想 {year}年{month}月{day}日' if slug=='main' else f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
+        story.append(Paragraph('正式決定前の協議用文書です。候補者の参画・就任、条件・負担の承認を確定するものではありません。',ST['note']))
     story.extend([Spacer(1,12),Paragraph('目次',ST['h3'])])
     for n,sec in enumerate(sections,1):
         dest=sec.get('id');label=sec.xpath('./header/h2')[0].text_content();num=known.get(dest,'-')
@@ -183,6 +187,16 @@ def build(slug,path,title,print_mode=False):
     else:raise RuntimeError('Chapter pagination did not converge: '+slug)
     print(out);return actual
 
+def build_reference_documents(sources):
+    import fitz
+    records=[]
+    for source in sources:
+        slug=source['key'];path=BASE/source['path']/'index.html'
+        chapters=build(slug,path,source['title']);assert build(slug,path,source['title'],True)==chapters
+        record=dict(source);record.update(pages=len(fitz.open(OUTPUT/f'{slug}.pdf')),chapter_pages=chapters,sha256=hashlib.sha256((OUTPUT/f'{slug}.pdf').read_bytes()).hexdigest(),print_pdf=f'documents/{slug}-print.pdf',print_pages=len(fitz.open(OUTPUT/f'{slug}-print.pdf')),print_sha256=hashlib.sha256((OUTPUT/f'{slug}-print.pdf').read_bytes()).hexdigest())
+        records.append(record)
+    return records
+
 def sync_page_counts(records):
     counts={r['key']:r['pages'] for r in records}
     for path in BASE.rglob('*.html'):
@@ -210,8 +224,9 @@ def main():
             import fitz
             with fitz.open(OUTPUT/f'{slug}.pdf') as pdf:pages=len(pdf)
             record=next(dict(x) for x in manifest['documents'] if x['key']==slug);record.update(pages=pages,chapter_pages=chapter_pages,sha256=hashlib.sha256((OUTPUT/f'{slug}.pdf').read_bytes()).hexdigest(),print_pdf=f'documents/{slug}-print.pdf',print_pages=pages,print_sha256=hashlib.sha256((OUTPUT/f'{slug}-print.pdf').read_bytes()).hexdigest());records.append(record)
-        previous.update(version=manifest['version'],target_date=manifest['target_date'],target_status=manifest['target_status'],documents=records)
+        references=build_reference_documents(manifest.get('reference_documents',[]))
+        previous.update(version=manifest['version'],target_date=manifest['target_date'],target_status=manifest['target_status'],documents=records,reference_documents=references)
         (OUTPUT/'document-manifest.json').write_text(json.dumps(previous,ensure_ascii=False,indent=2)+'\n')
-        sync_page_counts(records)
+        sync_page_counts(records+references)
 
 if __name__=='__main__':main()

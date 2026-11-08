@@ -1,5 +1,5 @@
 {
-  "version": "20261108-calendar-year",
+  "version": "20261108-core-and-reference",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "6fac9b04ae734cc79967e0b5e8a8802977487bfa0350caacf8389e0f33edff6e",
+      "sha256": "174370b495328904dc13f6154f81931b0f2573c27dabbb13d9f982ec43a56f95",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "797fdda60be254fbdf087c2b4e0a1bf8858c479037f013806816949c5c337456"
+      "print_sha256": "9467002ede6f9da1d9044fff3cd86828f11d000fc87288ab08be6d01df7cc8b5"
     },
     {
       "key": "members",
@@ -65,10 +65,10 @@
         "rules_ch08": 5,
         "rules_ch09": 5
       },
-      "sha256": "13b058fca3823cb718562529521e89c66bf7f7eecedccfd6eaa0eec3d7e04009",
+      "sha256": "5cb17e0441cc7513a28f9b7417e7162f23f8cbfe7afe01faa29e66290080dd99",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 5,
-      "print_sha256": "a21edf87f7ac55a5088334211e915c2ad92b2bd8f36bcf8be87211c4389b8a24"
+      "print_sha256": "f9a42dc0b71ed4462d4a5491aca266d570eb985a559e2ef4473d811d5c6ad5fb"
     },
     {
       "key": "secretariat",
@@ -78,21 +78,19 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 5,
+      "pages": 4,
       "chapter_pages": {
         "secretariat_ch01": 2,
         "secretariat_ch02": 2,
         "secretariat_ch03": 3,
         "secretariat_ch04": 3,
         "secretariat_ch05": 3,
-        "secretariat_ch06": 4,
-        "secretariat_ch08": 4,
-        "conditions": 5
+        "secretariat_ch06": 4
       },
-      "sha256": "782308f5c021021dc47de5acbad520f87629f5964e3a7b6376c1f1234569402b",
+      "sha256": "6ca0d10df00fcf85def7a28c1343c467ed9cf099417d9edb0593cc3b58b56a4f",
       "print_pdf": "documents/secretariat-print.pdf",
-      "print_pages": 5,
-      "print_sha256": "7e62173b9884df8e3d732d742f027a1f333be2156dcc03488dd917e53201ad11"
+      "print_pages": 4,
+      "print_sha256": "181fb3deaf3d8728cb9ba9335c8563f056acacb48669cb8c33893a86934824c5"
     }
   ],
   "consent_forms": [],
@@ -115,5 +113,26 @@
     "documents/consent-secretariat.pdf": "documents/participants.pdf",
     "documents/consent-secretariat-chief.pdf": "documents/participants.pdf"
   },
-  "proposal_format": "自由形式。手持ちの資料・口頭で相談可"
+  "proposal_format": "自由形式。手持ちの資料・口頭で相談可",
+  "reference_documents": [
+    {
+      "key": "administrative-checks",
+      "label": "設立準備・補助事業の参考資料",
+      "title": "設立準備・補助事業の参考資料",
+      "path": "reference/administrative-checks/",
+      "pdf": "documents/administrative-checks.pdf",
+      "grant_record_date": "2026-10-28",
+      "summary": "設立準備・年度事業・採択条件の確認。",
+      "pages": 3,
+      "chapter_pages": {
+        "preparation": 2,
+        "annual-program": 2,
+        "grant-conditions": 3
+      },
+      "sha256": "4da14408b6b4e7feefd046f62d64f05dc9bfd166fad73df4651d99955f46f578",
+      "print_pdf": "documents/administrative-checks-print.pdf",
+      "print_pages": 3,
+      "print_sha256": "aa36d181fd262a8effb99918c712ea638c5b2cd89c41d50ebf2825e2595d3fe9"
+    }
+  ]
 }

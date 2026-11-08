@@ -46,7 +46,7 @@ def build_fonts(variable_path):
     from fontTools.ttLib import TTFont
     from fontTools.varLib.instancer import instantiateVariableFont
     from fontTools import subset
-    paths=[ROOT/d['path']/'index.html' for d in DATA['documents']]
+    paths=[ROOT/d['path']/'index.html' for d in DATA['documents']+DATA.get('reference_documents',[])]
     paths += [ROOT/x for x in ['organization/index.html','guide/index.html','index.html','concept/index.html']]
     text=''.join(html.fromstring(p.read_text()).text_content() for p in paths)
     forms_source=ROOT/'read/founding/build_forms.py'

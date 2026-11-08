@@ -1,5 +1,5 @@
 {
-  "version": "20261108-calendar-year",
+  "version": "20261108-core-and-reference",
   "updated": "2026-11-08",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
@@ -182,5 +182,16 @@
     "end_day": 31,
     "first_year_start": "正式設立日",
     "first_year_end": "2027-12-31"
-  }
+  },
+  "reference_documents": [
+    {
+      "key": "administrative-checks",
+      "label": "設立準備・補助事業の参考資料",
+      "title": "設立準備・補助事業の参考資料",
+      "path": "reference/administrative-checks/",
+      "pdf": "documents/administrative-checks.pdf",
+      "grant_record_date": "2026-10-28",
+      "summary": "設立準備・年度事業・採択条件の確認。"
+    }
+  ]
 }
