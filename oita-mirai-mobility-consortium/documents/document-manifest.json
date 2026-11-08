@@ -1,5 +1,5 @@
 {
-  "version": "20261108-office-led",
+  "version": "20261108-calendar-year",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "98bb27cf7c22a5f3c1f072e5faad0660b36945f04bcd60fe848bced471fb61b0",
+      "sha256": "6fac9b04ae734cc79967e0b5e8a8802977487bfa0350caacf8389e0f33edff6e",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "bd11590d2c27d1d63ca7c474bcd83e41348d9f4b9ab68af6f4d5b1bf8e15ce5b"
+      "print_sha256": "797fdda60be254fbdf087c2b4e0a1bf8858c479037f013806816949c5c337456"
     },
     {
       "key": "members",
@@ -40,10 +40,10 @@
         "members_ch02": 2,
         "members_ch03": 3
       },
-      "sha256": "70ccf60a4d1c0c1b6a7780efac552163aad979668d22091e16f941be96e814d5",
+      "sha256": "cf777d8d770d24f114cdb75eaecfe8e1677de464d941b223cd2d200d40562122",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "5f00a7dcfee13928feaa6fce0b115d679c5c4ec0479e354c4103fb099ba09487"
+      "print_sha256": "05beb80bad356f6f9c52e9fdb8d9e6d9cb57fd979d913357f906fa5579000574"
     },
     {
       "key": "rules",
@@ -65,10 +65,10 @@
         "rules_ch08": 5,
         "rules_ch09": 5
       },
-      "sha256": "9bc8f5ddba185b00bc2541ce82704aae3b408a84061600dc81f4f7365d87e121",
+      "sha256": "13b058fca3823cb718562529521e89c66bf7f7eecedccfd6eaa0eec3d7e04009",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 5,
-      "print_sha256": "336ada9114384042d6d91a47875981d32f92e4c383bedbdbe88e87ad5ab29adc"
+      "print_sha256": "a21edf87f7ac55a5088334211e915c2ad92b2bd8f36bcf8be87211c4389b8a24"
     },
     {
       "key": "secretariat",
@@ -78,7 +78,7 @@
       "path": "secretariat/",
       "pdf": "documents/secretariat.pdf",
       "summary": "日常業務、予算、契約・口座、支出・記帳・確認の流れ。",
-      "pages": 6,
+      "pages": 5,
       "chapter_pages": {
         "secretariat_ch01": 2,
         "secretariat_ch02": 2,
@@ -86,14 +86,13 @@
         "secretariat_ch04": 3,
         "secretariat_ch05": 3,
         "secretariat_ch06": 4,
-        "secretariat_ch07": 4,
-        "secretariat_ch08": 5,
-        "conditions": 6
+        "secretariat_ch08": 4,
+        "conditions": 5
       },
-      "sha256": "75c2aec91599baa66c493adc1cfd8be06c250207f33723371b4b12dc6a026bc6",
+      "sha256": "782308f5c021021dc47de5acbad520f87629f5964e3a7b6376c1f1234569402b",
       "print_pdf": "documents/secretariat-print.pdf",
-      "print_pages": 6,
-      "print_sha256": "81d9232ddc642639e42226fcfdda8145ea72d6bf2c8184e8c51e6741f59f4331"
+      "print_pages": 5,
+      "print_sha256": "7e62173b9884df8e3d732d742f027a1f333be2156dcc03488dd917e53201ad11"
     }
   ],
   "consent_forms": [],

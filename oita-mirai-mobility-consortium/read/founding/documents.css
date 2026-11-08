@@ -25,7 +25,7 @@
 @media(max-width:520px){#main_p09 .fund-head{flex-wrap:wrap;gap:12px}#main_p09 .fund-head h3{flex:1 1 190px;min-width:0}}
 
 
-@font-face{font-family:Oita;src:url('/oita-mirai-mobility-consortium/read/main/assets/proposal-jp-regular.woff?v=20261028-founding4') format('woff');font-weight:400 600;font-display:swap}@font-face{font-family:Oita;src:url('/oita-mirai-mobility-consortium/read/main/assets/proposal-jp-black.woff?v=20261028-founding4') format('woff');font-weight:700 900;font-display:swap}
+@font-face{font-family:Oita;src:url('/oita-mirai-mobility-consortium/read/main/assets/proposal-jp-regular.woff?v=20261108-calendar-year') format('woff');font-weight:400 600;font-display:swap}@font-face{font-family:Oita;src:url('/oita-mirai-mobility-consortium/read/main/assets/proposal-jp-black.woff?v=20261108-calendar-year') format('woff');font-weight:700 900;font-display:swap}
 /* Proposal chapters use the existing reader palette, typography and navigation. */
 .reader-section{position:relative}.legacy-anchor{display:block;position:relative;scroll-margin-top:160px}
 .chapter-kicker .page-no{font-size:clamp(64px,7vw,92px);color:var(--accent)}

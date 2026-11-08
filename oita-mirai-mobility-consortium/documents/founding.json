@@ -1,5 +1,5 @@
 {
-  "version": "20261108-office-led",
+  "version": "20261108-calendar-year",
   "updated": "2026-11-08",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
@@ -174,5 +174,13 @@
     "meeting_decisions": "基本事項、事務局の業務・対価、予算・決算・執行権限、案件の採択・認定",
     "approval_separation": "事務局内で申請と承認、記帳と確認の担当を分ける",
     "exception_decision": "運営会議で決議に至らない場合は、事務局長が論点を整理し、共同代表及び事務局長が協議して決議する"
+  },
+  "financial_year": {
+    "start_month": 1,
+    "start_day": 1,
+    "end_month": 12,
+    "end_day": 31,
+    "first_year_start": "正式設立日",
+    "first_year_end": "2027-12-31"
   }
 }

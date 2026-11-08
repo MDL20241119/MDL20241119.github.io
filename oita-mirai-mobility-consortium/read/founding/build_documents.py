@@ -161,7 +161,7 @@ def make_story(root,slug,title,known):
         story.append(Paragraph(f'<a href="#{dest}" color="#102e53"><b>{n:02} {escape(label)}</b> / p. {num}</a>',ST['body']))
     story.append(Paragraph('各項目を選ぶと本文へ移動します。',ST['note']));story.append(PageBreak())
     for n,sec in enumerate(sections,1):
-        if n>1:story.append(PageBreak() if slug=='main' else CondPageBreak(125))
+        if n>1:story.append(PageBreak() if slug=='main' or sec.get('data-pdf-start')=='page' else CondPageBreak(125))
         label=sec.xpath('./header/h2')[0];heading=Paragraph(inline(label),ST['section']);heading.bookmark=sec.get('id');story.append(heading)
         lead=sec.xpath('./header/p')
         if lead:story.append(para(lead[0],'lead'))

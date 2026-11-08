@@ -174,7 +174,7 @@
         "confirmedBy": "利用者の最新指示（団体としての正式承認とは別）",
         "freeEligibility": "すべての企業が無料区分を選択可能。自治体・大学等も無料参加。",
         "taxTreatment": "未確認。税込・税別を断定せず税理士へ確認する。",
-        "collectionMethod": "未決・提案：会費年度4/1〜3/31、請求後30日以内。詳細は規約案で確認。",
+        "collectionMethod": "未決・提案：事業年度・会費年度1/1〜12/31、請求後30日以内。詳細は規約案で確認。",
         "membershipRules": "/oita-mirai-mobility-consortium/rules/",
         "votingRights": "有料会員団体のみ1団体1票。無料会員は、発起人・事務局団体を含め議決権なし。"
       },
@@ -1661,7 +1661,7 @@
     "corporateAnnualYen": 100000,
     "taxTreatment": "未確認。税理士へ確認する。",
     "freeEligibility": "すべての企業が無料区分を選択可能。自治体・大学等も無料参加。",
-    "collectionTiming": "未決・提案：会費年度4/1〜3/31、初年度は設立日〜2027/3/31、請求後30日以内。",
+    "collectionTiming": "未決・提案：事業年度・会費年度1/1〜12/31、初年度は設立日〜2027/12/31、請求後30日以内。",
     "membershipRules": "/oita-mirai-mobility-consortium/rules/",
     "value": "e-Paletteを活用するサービスと、自動運転実証の検討を分け、地元の課題・強みから共同案件をつくる。車両提供や実証実施は確約しない。",
     "commonActivities": [
