@@ -1,5 +1,5 @@
 {
-  "version": "20261108-minimal-forms",
+  "version": "20261108-single-form",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 6,
         "main_ch07": 8
       },
-      "sha256": "dcb7828b2fa560c81273412170f062883a927858d94cb773dc4e3d8f3b99c588",
+      "sha256": "c92f10a259e6908a408a619d41dec920646a8724e672226076662d332b5e12b8",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "3dcfa4d00b7696454fe920693f5903b343e930cd6eb293f378c1440d9c1262f3"
+      "print_sha256": "809686a5cc9bcbe9c3150ce4d407f02cd5ae73690b7c81f58ed9cf39e0a62fc0"
     },
     {
       "key": "members",
@@ -92,10 +92,10 @@
         "secretariat_ch08": 5,
         "conditions": 6
       },
-      "sha256": "247f30be2e64b2e664c144bc98537d23bc0cf3c56862cb6bef6f2d5863fdcda6",
+      "sha256": "335a428fe0a8815318c6eeb8129d6743869c70af02056635596c973bdeb1c73d",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 6,
-      "print_sha256": "9a393267b11d4b0a715deb109f9bd7894ca1038db3fa8ea66eaec0f65fbeb6bb"
+      "print_sha256": "0bfd341ef31fac274754a5a727f23ee79302fa75d6665356e52ee0fb6f90d48d"
     }
   ],
   "consent_forms": [],
@@ -105,43 +105,18 @@
       "title": "参加申込・承諾書",
       "pdf": "documents/participants.pdf",
       "pages": 1,
-      "sha256": "79128044e9ec64469678badacd513a58ae615b7a38b014e769f4ad87f8d8623d",
+      "sha256": "ca67369c3109a4de1e51a65294f47f6c29b33f5477e577bed64fd850633b68ac",
       "use": "参加・役割の承諾を、この1枚で確認します。該当する欄だけ記入してください。"
-    },
-    {
-      "key": "project-sheet",
-      "title": "プロジェクトシート",
-      "pdf": "documents/project-sheet.pdf",
-      "pages": 1,
-      "sha256": "28f1a2b9db431159d30950cb38eeb71b75eee59cb7518e807ae85d05792493f1",
-      "use": "提案から実施・振り返りまで、同じ1枚に追記します。"
-    },
-    {
-      "key": "operations-record",
-      "title": "運営・決定記録",
-      "pdf": "documents/operations-record.pdf",
-      "pages": 1,
-      "sha256": "a4f7aee5adf18ecea6aea145a42eef05741205663070579fac4c222eec52183f",
-      "use": "設立・運営会議の決定と、計画・予算をまとめて記録します。"
     }
   ],
-  "forms_version": "20261108-minimal-forms",
+  "forms_version": "20261108-single-form",
   "form_aliases": {
     "documents/membership-application.pdf": "documents/participants.pdf",
     "documents/membership-application-print.pdf": "documents/participants.pdf",
     "documents/consent-founder.pdf": "documents/participants.pdf",
     "documents/consent-representative.pdf": "documents/participants.pdf",
     "documents/consent-secretariat.pdf": "documents/participants.pdf",
-    "documents/consent-secretariat-chief.pdf": "documents/participants.pdf",
-    "documents/project-proposal.pdf": "documents/project-sheet.pdf",
-    "documents/project-proposal-print.pdf": "documents/project-sheet.pdf",
-    "documents/project-implementation.pdf": "documents/project-sheet.pdf",
-    "documents/project-implementation-print.pdf": "documents/project-sheet.pdf",
-    "documents/founding-meeting.pdf": "documents/operations-record.pdf",
-    "documents/founding-meeting-print.pdf": "documents/operations-record.pdf",
-    "documents/annual-plan-budget.pdf": "documents/operations-record.pdf",
-    "documents/annual-plan-budget-print.pdf": "documents/operations-record.pdf",
-    "documents/administration-agreement-review.pdf": "documents/operations-record.pdf",
-    "documents/administration-agreement-review-print.pdf": "documents/operations-record.pdf"
-  }
+    "documents/consent-secretariat-chief.pdf": "documents/participants.pdf"
+  },
+  "proposal_format": "自由形式。手持ちの資料・口頭で相談可"
 }

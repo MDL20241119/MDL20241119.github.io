@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generate three blank, one-page A4 forms and compatible legacy URL aliases."""
+"""Generate the single blank, one-page A4 participation form and compatible legacy URL aliases."""
 from __future__ import annotations
 import hashlib,json
 from html import escape
@@ -20,7 +20,7 @@ W,H,PAD=595.276,841.89,34
 WIDTH=W-PAD*2
 INK,BLUE,LINE,MUTED=map(HexColor,['#102e53','#edf2f8','#afc2d8','#526476'])
 NAME='大分未来モビリティコンソーシアム'
-VERSION='20261108-minimal-forms'
+VERSION='20261108-single-form'
 # label, writing-space height, short cue; policies remain in the shared rules.
 FORMS=[
  dict(key='participants',title='参加申込・承諾書',
@@ -38,33 +38,6 @@ FORMS=[
  ('事務局記入',60,'承認日・記録番号／区分・会費・議決権')],
  note='記入後は事務局へ提出し、非公開で保管します。個別案件の費用・契約は別途合意します。',
  aliases=['membership-application','membership-application-print','consent-founder','consent-representative','consent-secretariat','consent-secretariat-chief']),
- dict(key='project-sheet',title='プロジェクトシート',
- intro='提案から実施・振り返りまで、同じ1枚に追記します。',
- rows=[
- ('案件名・番号',44,'更新日：'),
- ('提案者・責任者',56,'提案団体／実施主体・責任者／連絡先'),
- ('課題・狙い',65,'誰の、何を変えるか'),
- ('実施計画',83,'やること・場所・時期／協力者と役割／目標・確かめ方'),
- ('費用・負担',62,'総額・財源・負担者／契約主体／運営会計・案件会計の区分'),
- ('実施条件',79,'安全・保険・許認可・権利・データの扱い／未解決事項・担当・期限'),
- ('①検討着手',48,'採択・保留・見送り／決定日・運営記録番号'),
- ('②実施計画',48,'認定・保留・見送り／決定日・運営記録番号'),
- ('結果・次の行動',65,'実績・費用・課題／継続・変更・終了／担当・期限')],
- note='提案者は自治体・企業等。採択は検討開始の判断です。認定後も実施条件を整えて実行します。',
- aliases=['project-proposal','project-proposal-print','project-implementation','project-implementation-print']),
- dict(key='operations-record',title='運営・決定記録',
- intro='設立・運営会議の決定と、計画・予算をまとめて記録します。',
- rows=[
- ('会議・記録番号',48,'日時・方法／議長・記録者'),
- ('参加・議決権',59,'参加団体・代理等／対象団体数・参加数／利益相反・除外'),
- ('議題・決定①',69,'議題・文書名／版・日付／決定内容・賛否／条件・担当・期限'),
- ('議題・決定②',69,'議題・文書名／版・日付／決定内容・賛否／条件・担当・期限'),
- ('計画・予算',89,'活動・担当・時期／運営収入（会費・TCO負担等）と支出・上限／案件別予算は区分'),
- ('契約・会計',89,'契約主体・協定名／版／MDLの受託範囲・代理権／支出承認者・上限／口座名義・資金帰属／支払・照合担当'),
- ('残る対応',65,'確認事項・担当・期限／次回の判断'),
- ('記録の確認',62,'共同代表・関係者の確認者／確認日／保管先')],
- note='設立時は規約・役員・計画・予算・正式設立日を記録します。契約・許認可は必要な手続を別途行います。',
- aliases=['founding-meeting','founding-meeting-print','annual-plan-budget','annual-plan-budget-print','administration-agreement-review','administration-agreement-review-print'])
 ]
 
 def prepare_fonts(directory):
@@ -88,7 +61,6 @@ def build(form,number,date):
  c.setTitle(form['title']);c.setAuthor('トヨタカローラ大分・モビリティデザインラボ')
  c.setFillColor(HexColor('#ffffff'));c.rect(0,0,W,H,fill=1,stroke=0)
  paragraph(c,NAME,PAD,H-27,WIDTH,9,13,True)
- c.setFillColor(INK);c.setFont('JP-Bold',10);c.drawRightString(W-PAD,H-38,f'{number:02} / 03')
  paragraph(c,form['title'],PAD,H-57,WIDTH,27,35,True)
  paragraph(c,form['intro'],PAD,H-102,WIDTH,10,15)
  top=H-132
@@ -107,6 +79,8 @@ def build(form,number,date):
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 
+RETIRED_FORMS=['project-sheet', 'project-proposal', 'project-proposal-print', 'project-implementation', 'project-implementation-print', 'operations-record', 'founding-meeting', 'founding-meeting-print', 'annual-plan-budget', 'annual-plan-budget-print', 'administration-agreement-review', 'administration-agreement-review-print']
+
 def main():
  policy=json.loads((OUTPUT/'founding.json').read_text());mp=OUTPUT/'document-manifest.json';manifest=json.loads(mp.read_text());records=[];aliases={}
  with TemporaryDirectory() as temp:
@@ -117,7 +91,8 @@ def main():
    for name in form['aliases']:
     target=OUTPUT/(name+'.pdf');target.write_bytes(p.read_bytes());aliases['documents/'+target.name]='documents/'+p.name
    print(p)
- manifest.update(forms_version=VERSION,establishment_forms=records,consent_forms=[],form_aliases=aliases)
+ for name in RETIRED_FORMS:(OUTPUT/(name+'.pdf')).unlink(missing_ok=True)
+ manifest.update(forms_version=VERSION,establishment_forms=records,consent_forms=[],form_aliases=aliases,proposal_format='自由形式。手持ちの資料・口頭で相談可')
  mp.write_text(json.dumps(manifest,ensure_ascii=False,indent=2)+'\n')
 
 if __name__=='__main__':main()
