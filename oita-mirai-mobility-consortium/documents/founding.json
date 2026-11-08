@@ -1,5 +1,5 @@
 {
-  "version": "20261108-governance",
+  "version": "20261108-source-steps",
   "updated": "2026-11-08",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
@@ -158,5 +158,13 @@
     "written_participants": "期限内に回答した議決権者。無回答は参加・賛成に含めない",
     "unresolved_decision": "共同代表及び事務局長が協議して決議",
     "votes_per_organization": 1
-  }
+  },
+  "project_steps": [
+    "相談",
+    "運営会議が検討着手を採択し、検討案件を登録",
+    "TCO・MDLと関係者で企画・具体化",
+    "同じ運営会議で認定",
+    "実施事業者を主体とする個別プロジェクトで契約・実施・結果報告"
+  ],
+  "training_free_scope": "2027年2月までの人材育成プログラムは誰でも参加無料"
 }

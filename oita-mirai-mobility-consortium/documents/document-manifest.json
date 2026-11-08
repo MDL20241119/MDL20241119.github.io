@@ -1,5 +1,5 @@
 {
-  "version": "20261108-governance",
+  "version": "20261108-source-steps",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 6,
         "main_ch07": 7
       },
-      "sha256": "b346e23c3684a8ccbd7b6e8138456bd032eca98bc85a618fbd15673d510af9e0",
+      "sha256": "fe944270349eb53178367febc208486a8a1b92fc7ddb71e7beda3588e9db46b6",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "ef436015d3970de025f7151af164ca7ea135cd6d9bc0f541281c9309c561aea2"
+      "print_sha256": "084e828208b80308be0962e9eaabacd475601513eee822138f8977e6997c77d9"
     },
     {
       "key": "members",
@@ -66,10 +66,10 @@
         "rules_ch09": 6,
         "rules_ch10": 6
       },
-      "sha256": "2024d83e8dac1e0a60fb08fda7e79e1139d21a2d2db243847e8bc03c54626ae3",
+      "sha256": "f243a1f8fb3e2702251f316ad226b99b5eab53e47dd3df7112237aa4c637edf7",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "cd6257d10dfee45293678460e50fe231d6cb706b25a5ca7cd4b24884d45057ac"
+      "print_sha256": "a4d2c7557afb49b4a6a91cf6334d7ec9336cb5bc780da2147039a0f79b184d5c"
     },
     {
       "key": "secretariat",
@@ -91,10 +91,10 @@
         "secretariat_ch08": 5,
         "conditions": 6
       },
-      "sha256": "bdaada0b5f2b96e67487d58bbb27291767e11ff4a652cf9c100a67120e5dd7f8",
+      "sha256": "014593217c8aca6f07cdb0d375dd7ffa8916e70064d40f7cf8df0b3597a4317b",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 6,
-      "print_sha256": "e10e0d1ee6445de33f0c9fcefa4cfdf7b7ccd38ba5b6487711f477939d400a65"
+      "print_sha256": "ed5463cfe8006c4a9e625c72d9f050bf4dc2c3fe475d820efd8b6c2a19f16599"
     }
   ],
   "consent_forms": [],
