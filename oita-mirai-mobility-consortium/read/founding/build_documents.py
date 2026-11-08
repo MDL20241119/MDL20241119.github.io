@@ -149,7 +149,7 @@ def make_story(root,slug,title,known):
     sections=root.xpath('//section[contains(@class,"reader-section")]');story=[]
     date=json.loads((OUTPUT/'founding.json').read_text())['updated'];year,month,day=map(int,date.split('-'))
     heading=Paragraph(escape(title),ST['title']);heading.bookmark='contents';story.append(heading)
-    story.append(Paragraph(f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
+    story.append(Paragraph(f'コンソーシアム構想 {year}年{month}月{day}日' if slug=='main' else f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
     story.append(Paragraph('正式決定前の協議用文書です。候補者の参画・就任、条件・負担の承認を確定するものではありません。',ST['note']))
     story.extend([Spacer(1,12),Paragraph('目次',ST['h3'])])
     for n,sec in enumerate(sections,1):
@@ -157,13 +157,15 @@ def make_story(root,slug,title,known):
         story.append(Paragraph(f'<a href="#{dest}" color="#102e53"><b>{n:02} {escape(label)}</b> / p. {num}</a>',ST['body']))
     story.append(Paragraph('各項目を選ぶと本文へ移動します。',ST['note']));story.append(PageBreak())
     for n,sec in enumerate(sections,1):
-        if n>1:story.append(CondPageBreak(125))
+        if n>1:story.append(PageBreak() if slug=='main' else CondPageBreak(125))
         label=sec.xpath('./header/h2')[0];heading=Paragraph(inline(label),ST['section']);heading.bookmark=sec.get('id');story.append(heading)
         lead=sec.xpath('./header/p')
         if lead:story.append(para(lead[0],'lead'))
         body=sec.xpath('./div[contains(@class,"chapter-body")]')[0]
         for child in body:story.extend(render(child,WIDTH))
-        story.append(Spacer(1,16))
+        if slug=='main':
+            while story and isinstance(story[-1],Spacer):story.pop()
+        if slug!='main':story.append(Spacer(1,16))
     return story
 
 def build(slug,path,title,print_mode=False):

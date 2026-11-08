@@ -1,5 +1,5 @@
 {
-  "version": "20261108-ceo-name",
+  "version": "20261108-consortium-concept",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -17,14 +17,14 @@
         "main_ch02": 3,
         "main_ch03": 4,
         "main_ch04": 5,
-        "main_ch05": 5,
-        "main_ch06": 6,
-        "main_ch07": 7
+        "main_ch05": 6,
+        "main_ch06": 7,
+        "main_ch07": 8
       },
-      "sha256": "604a42420ac14d9205afbd5d0c679e8bf6d78667b86369e4ebeef2644af25409",
+      "sha256": "9229c09d89ea916638f2ac46780a32e263a757dd56b0d346123b35412d7d5fec",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "13cf767d981f59a4464a9f457e8684cf9f05e4c40bb9c160e6f68d4f77e861d0"
+      "print_sha256": "81c7dacec4410f26f9f393a8dd8048f6371fb8d406f6c27c030e044000594369"
     },
     {
       "key": "members",
