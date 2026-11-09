@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "04fc8880d81245b827652a72565df1ac43b415bc44c41a9982080a9b8a71fe2b",
+      "sha256": "959708c74bab319b02c6c75cc798605a392a257952960b02e08eb3582b991a8f",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "c02db96aa283a7d7a7bcaf284fc466a2bd49556c7dfe598d764220fc88a791a5"
+      "print_sha256": "74498311393e8142da90ba2d06a6a66e0aaf67c0375ea6c63b1e3d5106cb6b5f"
     },
     {
       "key": "members",
