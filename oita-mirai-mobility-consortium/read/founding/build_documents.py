@@ -136,7 +136,7 @@ class Document(BaseDocTemplate):
     def paint_page(self,c,d):
         date=json.loads((OUTPUT/'founding.json').read_text())['updated'].replace('-', '.')
         c.saveState();c.setFillColor(HexColor('#ffffff') if self.print_mode else PINK);c.rect(0,0,W,H,fill=1,stroke=0)
-        c.setFillColor(INK);c.setFont('JP-Bold',8);c.drawString(PAD,H-26,'大分未来モビリティコンソーシアム');c.drawRightString(W-PAD,H-26,'（ドラフト）')
+        c.setFillColor(INK);c.setFont('JP-Bold',8);c.drawString(PAD,H-26,'大分未来モビリティコンソーシアム');c.drawRightString(W-PAD,H-26,'（設立準備案）')
         c.bookmarkPage(f'page-{d.page}')
         c.setFont('JP',8)
         if d.page>1:
@@ -157,13 +157,13 @@ def make_story(root,slug,title,known):
     if reference:
         story.append(Paragraph(f'参考資料 / {year}年{month}月{day}日整理',ST['note']))
     else:
-        story.append(Paragraph(f'コンソーシアム構想 {year}年{month}月{day}日' if slug=='main' else f'設立協議用清書版 {year}年{month}月{day}日',ST['note']))
-        story.append(Paragraph('正式決定前の協議用文書です。候補者の参画・就任、条件・負担の承認を確定するものではありません。',ST['note']))
+        story.append(Paragraph(f'コンソーシアム構想 {year}年{month}月{day}日' if slug=='main' else f'設立準備案 {year}年{month}月{day}日',ST['note']))
+        story.append(Paragraph('参画・就任・費用負担は、関係者の了承と設立時の決定を経て確定します。',ST['note']))
     story.extend([Spacer(1,12),Paragraph('目次',ST['h3'])])
     for n,sec in enumerate(sections,1):
         dest=sec.get('id');label=sec.xpath('./header/h2')[0].text_content();num=known.get(dest,'-')
         story.append(Paragraph(f'<a href="#{dest}" color="#102e53"><b>{n:02} {escape(label)}</b> / p. {num}</a>',ST['body']))
-    story.append(Paragraph('各項目を選ぶと本文へ移動します。',ST['note']));story.append(PageBreak())
+    story.append(PageBreak())
     for n,sec in enumerate(sections,1):
         if n>1:story.append(PageBreak() if slug=='main' or sec.get('data-pdf-start')=='page' else CondPageBreak(125))
         label=sec.xpath('./header/h2')[0];heading=Paragraph(inline(label),ST['section']);heading.bookmark=sec.get('id');story.append(heading)

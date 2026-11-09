@@ -1,5 +1,5 @@
 {
-  "version": "20261109-governance-and-fees",
+  "version": "20261110-final-draft",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "5eba459a32f34c5e957b4da63b7294a1743323e63d2ec06cff68dbf83ca28c9d",
+      "sha256": "04fc8880d81245b827652a72565df1ac43b415bc44c41a9982080a9b8a71fe2b",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "1aeaeee2331e2bf3a8a73b58938cdacda76e96c4d662297394b0755977ca5a19"
+      "print_sha256": "c02db96aa283a7d7a7bcaf284fc466a2bd49556c7dfe598d764220fc88a791a5"
     },
     {
       "key": "members",
@@ -40,10 +40,10 @@
         "members_ch02": 2,
         "members_ch03": 3
       },
-      "sha256": "974ce8814d21df1c010954cbac542955565526b4e271dcf853eaf54c7f016fb5",
+      "sha256": "5326a27d127ab3c2032bdd98abc4edc319335bb03d5db8e78bd9fe6306338964",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "47cafc6f1a8dfa9cc6ebc88ef9c3d26f55599d3bace457125b0a22c80726d0ba"
+      "print_sha256": "3b3cb15607395de615adfe6b3e50136b5a39d0c0db117eebe4a2f8e99c64c585"
     },
     {
       "key": "rules",
@@ -65,10 +65,10 @@
         "rules_ch08": 6,
         "rules_ch09": 6
       },
-      "sha256": "a90c09df9bb4de451dd4c998a8594f2b3274f2c578a54e02d674f522fdc7ab41",
+      "sha256": "49ad6d8d054564442576366d86ba93b84c6372156e5201af66b762b3469d397f",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "7d8f97e8592dc54402673b3c3fc238a720c91012aed64c776dafc72c42629a83"
+      "print_sha256": "469554722f4e19675140960ccc2689970a88381b8b28888f108022d62d298055"
     },
     {
       "key": "secretariat",
@@ -87,10 +87,10 @@
         "secretariat_ch05": 3,
         "secretariat_ch06": 4
       },
-      "sha256": "c7221df8012c44b18fe285b47273db334282b0ff4c0b76a7ee0891d88534794c",
+      "sha256": "3fe2bc8554c6387f85bd0ab60eeab2def02b4538fe8157ab3cb4cef87dbd2760",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 4,
-      "print_sha256": "b47b3afeb2ece81d94b645cbdb666289c2f66017a0cf64f3bac66875e032ecfe"
+      "print_sha256": "7102ca4b3d7ae4a39616b145e4e5aeba1a6b2928e469bf53996a5ea855853cbc"
     }
   ],
   "consent_forms": [],
@@ -100,11 +100,11 @@
       "title": "参加申込・承諾書",
       "pdf": "documents/participants.pdf",
       "pages": 1,
-      "sha256": "ca67369c3109a4de1e51a65294f47f6c29b33f5477e577bed64fd850633b68ac",
+      "sha256": "49fd9ee02bd5023aa2c2227dceb619dc8246833794ccdbdad38ca0d09f81c254",
       "use": "参加・役割の承諾を、この1枚で確認します。該当する欄だけ記入してください。"
     }
   ],
-  "forms_version": "20261108-single-form",
+  "forms_version": "20261110-final-draft",
   "form_aliases": {
     "documents/membership-application.pdf": "documents/participants.pdf",
     "documents/membership-application-print.pdf": "documents/participants.pdf",
@@ -129,10 +129,10 @@
         "annual-program": 2,
         "grant-conditions": 3
       },
-      "sha256": "74d2c0a86beb1a65782611e4f876616e285b43bff8f928dd171ef38827c7166c",
+      "sha256": "83b77f971ef28f3c81478cd7f05630bfb8613582735a2c0effb568112807f6e1",
       "print_pdf": "documents/administrative-checks-print.pdf",
       "print_pages": 3,
-      "print_sha256": "b10424a2e50bab579bcbd164430a2c846f88c48efff1fe9e1acb6c7465ddd76e"
+      "print_sha256": "86b7e9d5f9f69f85ae587cd4c971fa77aee7fadcb38c19a0a07e08bfb5a984fd"
     }
   ]
 }

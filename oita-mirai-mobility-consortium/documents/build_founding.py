@@ -17,11 +17,16 @@ def build():
     expected={'main','members','rules','secretariat'}
     assert {x['key'] for x in DATA['documents']}==expected
     assert DATA['annual_fee_yen']==100000 and DATA['votes_per_organization']==1
+    assert DATA['admission_fee_yen']==0 and DATA['admission_fee_scope']=='全参加者'
+    assert DATA['officer_decision']['minimum_attendees']==2
+    assert DATA['officer_decision']['interested_parties_may_vote'] is True
+    assert '可否同数' in DATA['decision_rule']['tie_breaker']
+    assert '本田常務' in DATA['officer_decision']['tie_breaker']
     assert DATA['plan_deadline']=='2027-02-26'
     assert len(DATA['founder_groups'])==5
     assert DATA['target_date']=='2027-01-26'
     assert DATA['target_date_label']=='2027年1月26日'
-    assert DATA['sanrio_relationship']=='県の後援＝サンリオの利用許諾'
+    assert DATA['sanrio_relationship']=='県の後援とサンリオ連携'
     assert '契約' in DATA['sanrio_scope']
     for doc in DATA['documents']:
         p=ROOT/doc['path']/'index.html';s=p.read_text();r=html.fromstring(s)
@@ -30,7 +35,7 @@ def build():
         assert r.xpath('//nav[@class="founding-doc-nav"]'),p
         text=r.xpath('//main')[0].text_content()
         notices=r.xpath('//*[contains(concat(" ", normalize-space(@class), " "), " notice ")]')
-        assert any('協議案' in n.text_content() and '了承' in n.text_content() for n in notices),p
+        assert any('設立準備案' in n.text_content() and '了承' in n.text_content() for n in notices),p
         assert DATA['target_date_label'] in r.text_content(),p
         assert '県の後援≠' not in text,p
         assert '1月26日は日程候補' not in text and '1月26日は候補' not in text,p

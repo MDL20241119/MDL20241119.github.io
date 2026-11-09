@@ -20,7 +20,7 @@ W,H,PAD=595.276,841.89,34
 WIDTH=W-PAD*2
 INK,BLUE,LINE,MUTED=map(HexColor,['#102e53','#edf2f8','#afc2d8','#526476'])
 NAME='大分未来モビリティコンソーシアム'
-VERSION='20261108-single-form'
+VERSION='20261110-final-draft'
 # label, writing-space height, short cue; policies remain in the shared rules.
 FORMS=[
  dict(key='participants',title='参加申込・承諾書',
@@ -28,7 +28,7 @@ FORMS=[
  rows=[
  ('団体・代表者',49,''),
  ('担当・連絡先',49,''),
- ('参加区分',43,'□有料（年10万円）  □無料　免除は規約・決定に従う'),
+ ('参加区分',43,'□有料（年10万円）  □無料　入会費は全参加者0円'),
  ('引き受ける役割',56,'団体：□発起人  □事務局\n本人：□共同代表  □事務局長　□上記の役割なし'),
  ('就任する本人',49,'氏名・所属／就任日・任期（役職に就く場合）'),
  ('目的・協力内容',62,'取り組みたいこと・持ち寄れる強み'),
@@ -41,7 +41,7 @@ FORMS=[
 ]
 
 def prepare_fonts(directory):
- required=str(FORMS)+NAME+'協議用様式A4・1枚0123456789 /'
+ required=str(FORMS)+NAME+'様式A4・1枚0123456789 /'
  for label,weight in [('JP','regular'),('JP-Bold','black')]:
   f=SourceFont(FONTDIR/f'proposal-jp-{weight}.woff')
   missing={c for c in set(required)-set(map(chr,f.getBestCmap())) if not c.isspace() and ord(c)>127}
@@ -74,7 +74,7 @@ def build(form,number,date):
   top=bottom
  paragraph(c,form['note'],PAD,top-13,WIDTH,8.5,13)
  c.setStrokeColor(LINE);c.line(PAD,32,W-PAD,32)
- paragraph(c,'協議用様式 / '+date.replace('-','.')+' / A4・1枚',PAD,25,WIDTH,8,11,color=MUTED)
+ paragraph(c,'様式 / '+date.replace('-','.')+' / A4・1枚',PAD,25,WIDTH,8,11,color=MUTED)
  c.showPage();c.save();return path
 
 def digest(path):return hashlib.sha256(path.read_bytes()).hexdigest()
