@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Create the two-page programme explanation. Never writes participation-flyer.pdf.
+"""Create the three-page programme explanation. Never writes participation-flyer.pdf.
 
 python3 build-program-guide.py --font-variable NotoSansJP.ttf --photo assets/hidaka-yosuke.jpg --output-dir .
 Dependencies: reportlab, fonttools, Pillow. Font: Noto Sans JP (OFL).
@@ -105,7 +105,7 @@ class PDF:
  def footer(self,n):
   self.rule(M,814,CW,LINE)
   self.text('トヨタカローラ大分 × MobilityDesignLab',M,821,383,12,7.5,10.5,False,MUTED)
-  self.text(f'2026.11.06   {n:02d} / 03',447,821,121,12,7.7,10.5,False,MUTED,align=2)
+  self.text(f'2026.11.09   {n:02d} / 03',447,821,121,12,7.7,10.5,False,MUTED,align=2)
  def next(self):self.c.showPage();self.page+=1
  def save(self):self.c.save()
 
@@ -167,16 +167,17 @@ def build(p):
  p.photo(M+13,166,84,99)
  p.text('写真：MaaS Tech Japan公式',M+9,270,100,12,6.3,9,False,MUTED)
  p.text('2026年11月11日（水）',M+116,166,CW-132,28,19,26,True,NAVY)
- p.text('14:00-16:00',M+116,201,CW-132,43,30,40,True,NAVY)
- p.text('会場 Garraway0　参加費 無料',M+116,246,CW-132,23,12.5,19,True,NAVY)
- p.text('大分市府内町1丁目1-12',M+116,272,CW-132,17,9.5,14,False,MUTED)
+ p.text('14:00-16:00',M+116,198,CW-132,40,30,40,True,NAVY)
+ p.text('受付 13:30-14:00',M+116,240,CW-132,17,10.5,15,True,NAVY)
+ p.text('講演会場 Garraway0　参加費 無料',M+116,260,CW-132,20,11.5,17,True,NAVY)
+ p.text('大分市府内町1丁目1-12',M+116,282,CW-132,14,9.0,13,False,MUTED)
  p.rule(M+12,299,CW-24,LINE)
  p.text('講師：MTJ社長 日高洋祐氏',M+13,311,CW-26,25,14,21,True,NAVY)
  p.text('株式会社MaaS Tech Japan 代表取締役CEO',M+13,338,CW-26,18,10,15,False,MUTED)
  p.text('国土交通省が目指す方向性と、地域交通・自動運転実証・データ分析／連携について、具体例を交えてお話しいただきます。<br/>当日は、コンソーシアムと人材育成プログラムの趣旨も説明します。',M+13,365,CW-26,48,10.1,15)
  p.rect(M+10,414,CW-20,35,PALE)
- p.text('後半：トークセッション・質疑応答',M+18,416,300,18,10.5,15,True,NAVY)
- p.text('進行：MobilityDesignLabの植野氏',M+18,432,CW-36,16,10.5,15,True,NAVY)
+ p.text('14:15-15:00　特別講演（日高洋祐氏）',M+18,416,CW-36,16,10.1,14,True,NAVY)
+ p.text('15:00-16:00　トーク・質疑応答（日高氏・植野氏）',M+18,432,CW-36,16,10.1,14,True,NAVY)
 
  p.text('企画書・事前資料は不要。まずは無料相談。',M,470,CW,31,22.5,30,True,NAVY)
  tw=(CW-26)/3
@@ -203,15 +204,16 @@ def build(p):
  p.text('参加無料と企業向けコンソーシアム年会費は別制度です。実際の運行・車両・保険等の費用・条件は別途協議。車両貸与・実証実施・採択・事業化を保証するものではありません。',M,784,CW,26,8.3,11.5,False,MUTED)
  p.footer(2)
  p.next();p.header(3)
- p.text('11月11日、Garraway0で体験。',M,58,CW,42,27,38,True,NAVY)
+ p.text('11月11日、祝祭の広場で体験。',M,58,CW,42,27,38,True,NAVY)
  old_photo=p.epalette_photo_path
  p.epalette_photo_path=Path(__file__).resolve().parent.parent/'assets'/'epalette-ride-20261111.webp'
  p.vehicle_photo(M,119,CW,304)
  p.epalette_photo_path=old_photo
- p.text('車両は実車写真をもとにしたイメージです。',M,430,CW,18,8.5,12,False,MUTED)
- p.text('トヨタe-Palette 乗車体験',M,474,CW,40,28,38,True,NAVY)
- p.text('2026年11月11日（水）／ Garraway0',M,530,CW,26,16,24,True,NAVY)
- p.text('日高洋祐氏 特別講演も同日開催。<br/>講演時間：14:00-16:00',M,575,400,52,14,23,False,INK)
+ p.text('展示見学 13:30-14:00 ／ 乗車体験 16:00-17:00<br/>会場：祝祭の広場（Garraway0隣接）',M,430,CW,31,10.5,14.5,True,NAVY)
+ p.text('車両は実車写真をもとにしたイメージです。',M,466,CW,14,8,11,False,MUTED)
+ p.text('トヨタe-Palette 乗車体験',M,500,CW,40,28,38,True,NAVY)
+ p.text('2026年11月11日（水）16:00-17:00',M,548,CW,26,16,24,True,NAVY)
+ p.text('日高洋祐氏 特別講演も同日開催。<br/>講演会 14:00-16:00 ／ 会場 Garraway0',M,592,CW,48,13,21,False,INK)
  p.text('講演会・プログラムの参加登録',M,671,390,28,17,26,True,NAVY,link=FORM)
  p.text('参加申込フォームからお知らせください。',M,710,380,22,12,18,False,INK,link=FORM)
  p.qr(FORM,455,665,100,'参加申込フォーム')
