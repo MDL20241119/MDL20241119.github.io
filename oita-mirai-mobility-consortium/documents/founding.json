@@ -1,6 +1,6 @@
 {
-  "version": "20261108-core-and-reference",
-  "updated": "2026-11-08",
+  "version": "20261109-governance-and-fees",
+  "updated": "2026-11-09",
   "status": "協議用の提案",
   "name": "大分未来モビリティコンソーシアム",
   "target_date": "2027-01-26",
@@ -57,24 +57,24 @@
       "position": "共同代表",
       "name": "県副知事・TCO本田常務",
       "status": "候補・了承待ち",
-      "role": "本会を代表し、必要時の相談に対応する。日常運営・契約・会計・支出は事務局が担う。"
+      "role": "本会を代表し、日常の運営状況の報告を受ける。共同代表2名と事務局長で、年次の活動報告・決算、理念・規約の変更、役員交代・解散を決議する。"
     },
     {
       "position": "事務局長",
       "name": "MDL 佐藤CEO",
       "status": "候補・了承待ち",
-      "role": "TCO・MDLの事務局による運営・執行、進捗・会計報告を統括する。"
+      "role": "事務局の運営・執行と報告を統括する。事務局運営会議の意見を調整し、共同代表との年次・重要事項の決議を準備する。"
     }
   ],
   "annual_fee_yen": 100000,
-  "free_members": "自治体・大学・NPO等は無料。企業等は有料・無料を選択。",
+  "free_members": "自治体・大学・NPO等は無料。企業は有料・無料を選択。発起人は永年無料。有料会員としての参加も選択できる。",
   "voting_groups": [
     "有料会員団体"
   ],
   "votes_per_organization": 1,
-  "meeting_name": "運営会議",
+  "meeting_name": "事務局運営会議",
   "meeting_status": "仮称",
-  "meeting_frequency": "月1回を基本",
+  "meeting_frequency": "月1回を基本。必要に応じて臨時会を開催",
   "sanrio_relationship": "県の後援＝サンリオの利用許諾",
   "sanrio_scope": "県の後援を受ける取組みを、県とサンリオの契約に基づく利用許諾の対象として進める。活動・用途・表現の具体的な範囲は県と確認する。",
   "unresolved": [
@@ -86,7 +86,9 @@
     "MDL契約受託・区分管理協定、大分銀行のMDL名義口座の受入条件",
     "税務・代表権限・知財等の専門家確認",
     "最終交付決定・承認KPI・変更承認の照合",
-    "発起人の初年度無料・次年度以降の会費"
+    "共同代表2名・事務局長の決議に必要な賛成数と欠席時の成立要件",
+    "会費変更・残余財産処理の決議先",
+    "議決権の発生時点と有料会員総数が0又は1団体になった場合の対応"
   ],
   "documents": [
     {
@@ -138,42 +140,49 @@
       "annual_fee_yen": 0,
       "voting": false
     },
-    "municipalities_universities": "自治体・大学・NPO等は無料で参加できる。無料会員は議決権なし。",
+    "municipalities_universities": "自治体・大学・NPO等は無料で参加できる。",
     "free_member_activities": [
       "企画提案",
       "情報交換",
-      "個別プロジェクト参加"
+      "個別事業参加"
     ],
-    "exceptions": "なし。無料会員は発起人・事務局団体を含め議決権を持たない。",
+    "exceptions": "事務局運営会議の議決権は有料会員のみ1団体1票。年次・重要事項の役員決議と区別する。",
     "votes_per_organization": 1,
     "tax_status": "未確認。税込・税別を断定しない。",
     "training_program": "無料の人材育成プログラムとコンソーシアム会費は別"
   },
   "canonical_content": "各文書のHTML本文。shared policy metadata is validated by documents/build_founding.py.",
-  "founder_fee": "初年度無料とする案。免除期間・次年度以降の会費は設立時に定める。",
+  "founder_fee": "発起人は永年無料。有料会員としての参加も選択できる。",
   "decision_rule": {
-    "majority": "参加者（議決権者）の過半数の賛成",
+    "majority": "参加した議決権のある有料会員団体の過半数の賛成",
     "online": true,
     "written_resolution": true,
     "written_participants": "期限内に回答した議決権者。無回答は参加・賛成に含めない",
-    "unresolved_decision": "共同代表及び事務局長が協議して決議",
-    "votes_per_organization": 1
+    "votes_per_organization": 1,
+    "chair": "事務局長が意見と論点を調整する。役職を理由とする追加票は設けない。",
+    "single_participant": "参加する議決権者が1団体の場合は、その1票の賛成で決議できる",
+    "unresolved": [
+      "棄権の扱い",
+      "参加者がいない場合の扱い",
+      "有料会員総数が0又は1団体になった場合の対応"
+    ],
+    "extraordinary_meeting": true,
+    "absence": "欠席者を賛成とはみなさない"
   },
   "project_steps": [
     "県・市町村・企業などが、コンソーシアム事務局へ相談する。",
-    "運営会議が検討着手を採択し、検討案件を登録",
+    "事務局運営会議が検討着手を採択し、検討案件を登録",
     "TCO・MDLと関係者で企画・具体化",
-    "同じ運営会議で認定",
-    "実施事業者を主体とする個別プロジェクトで契約・実施・結果報告"
+    "同じ事務局運営会議で認定",
+    "実施事業者を主体とする個別事業で契約・実施・結果報告"
   ],
   "training_free_scope": "2027年2月までの人材育成プログラムは誰でも参加無料",
   "document_audience": "自治体・企業・団体等の参加検討者",
   "document_purpose": "コンソーシアムの目的、活動、参加方法、運営体制、案件の進め方、会計を説明する",
   "operating_authority": {
-    "daily_execution": "TCO・MDLの事務局が、運営会議の定める方針・予算・執行権限の範囲で担う",
-    "meeting_decisions": "基本事項、事務局の業務・対価、予算・決算・執行権限、案件の採択・認定",
-    "approval_separation": "事務局内で申請と承認、記帳と確認の担当を分ける",
-    "exception_decision": "運営会議で決議に至らない場合は、事務局長が論点を整理し、共同代表及び事務局長が協議して決議する"
+    "daily_execution": "TCO・MDLの事務局が、事務局運営会議の定める方針・予算・執行権限の範囲で担う。共同代表には日常の運営状況を報告する。",
+    "meeting_decisions": "会員制度、事務局の業務・対価、活動計画・予算・予算変更・執行権限、案件の採択・認定。有料会員のみ1団体1票。",
+    "approval_separation": "事務局内で申請と承認、記帳と確認の担当を分ける"
   },
   "financial_year": {
     "start_month": 1,
@@ -193,5 +202,40 @@
       "grant_record_date": "2026-10-28",
       "summary": "設立準備・年度事業・採択条件の確認。"
     }
-  ]
+  ],
+  "officer_decision": {
+    "participants": [
+      "共同代表2名",
+      "事務局長1名"
+    ],
+    "frequency": "年1回を基本。必要に応じて臨時に決議",
+    "matters": [
+      "年次の活動報告",
+      "決算",
+      "理念（PVMV）の変更",
+      "規約変更",
+      "役員交代",
+      "解散"
+    ],
+    "methods": [
+      "対面",
+      "オンライン",
+      "書面"
+    ],
+    "distinct_from_member_votes": true,
+    "unresolved": [
+      "必要な賛成数",
+      "欠席時の成立要件",
+      "会費変更・残余財産処理の決議先"
+    ],
+    "absence": "欠席者を賛成とはみなさない"
+  },
+  "initial_paid_members": {
+    "organizations": [
+      "TCO",
+      "MDL"
+    ],
+    "minimum": 2,
+    "status": "設立時の予定。実際の入会承認・納付は別途確認する。"
+  }
 }

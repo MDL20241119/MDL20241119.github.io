@@ -1,5 +1,5 @@
 {
-  "version": "20261108-core-and-reference",
+  "version": "20261109-governance-and-fees",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "174370b495328904dc13f6154f81931b0f2573c27dabbb13d9f982ec43a56f95",
+      "sha256": "5eba459a32f34c5e957b4da63b7294a1743323e63d2ec06cff68dbf83ca28c9d",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "9467002ede6f9da1d9044fff3cd86828f11d000fc87288ab08be6d01df7cc8b5"
+      "print_sha256": "1aeaeee2331e2bf3a8a73b58938cdacda76e96c4d662297394b0755977ca5a19"
     },
     {
       "key": "members",
@@ -40,10 +40,10 @@
         "members_ch02": 2,
         "members_ch03": 3
       },
-      "sha256": "cf777d8d770d24f114cdb75eaecfe8e1677de464d941b223cd2d200d40562122",
+      "sha256": "974ce8814d21df1c010954cbac542955565526b4e271dcf853eaf54c7f016fb5",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "05beb80bad356f6f9c52e9fdb8d9e6d9cb57fd979d913357f906fa5579000574"
+      "print_sha256": "47cafc6f1a8dfa9cc6ebc88ef9c3d26f55599d3bace457125b0a22c80726d0ba"
     },
     {
       "key": "rules",
@@ -53,22 +53,22 @@
       "path": "rules/",
       "pdf": "documents/rules.pdf",
       "summary": "会員の権利、会費、入退会、意思決定、情報・成果の取扱い。",
-      "pages": 5,
+      "pages": 6,
       "chapter_pages": {
         "rules_ch01": 2,
         "rules_ch02": 2,
         "rules_ch03": 3,
         "rules_ch04": 3,
         "rules_ch05": 4,
-        "rules_ch06": 4,
+        "rules_ch06": 5,
         "rules_ch07": 5,
-        "rules_ch08": 5,
-        "rules_ch09": 5
+        "rules_ch08": 6,
+        "rules_ch09": 6
       },
-      "sha256": "5cb17e0441cc7513a28f9b7417e7162f23f8cbfe7afe01faa29e66290080dd99",
+      "sha256": "a90c09df9bb4de451dd4c998a8594f2b3274f2c578a54e02d674f522fdc7ab41",
       "print_pdf": "documents/rules-print.pdf",
-      "print_pages": 5,
-      "print_sha256": "f9a42dc0b71ed4462d4a5491aca266d570eb985a559e2ef4473d811d5c6ad5fb"
+      "print_pages": 6,
+      "print_sha256": "7d8f97e8592dc54402673b3c3fc238a720c91012aed64c776dafc72c42629a83"
     },
     {
       "key": "secretariat",
@@ -87,10 +87,10 @@
         "secretariat_ch05": 3,
         "secretariat_ch06": 4
       },
-      "sha256": "6ca0d10df00fcf85def7a28c1343c467ed9cf099417d9edb0593cc3b58b56a4f",
+      "sha256": "c7221df8012c44b18fe285b47273db334282b0ff4c0b76a7ee0891d88534794c",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 4,
-      "print_sha256": "181fb3deaf3d8728cb9ba9335c8563f056acacb48669cb8c33893a86934824c5"
+      "print_sha256": "b47b3afeb2ece81d94b645cbdb666289c2f66017a0cf64f3bac66875e032ecfe"
     }
   ],
   "consent_forms": [],
@@ -129,10 +129,10 @@
         "annual-program": 2,
         "grant-conditions": 3
       },
-      "sha256": "4da14408b6b4e7feefd046f62d64f05dc9bfd166fad73df4651d99955f46f578",
+      "sha256": "74d2c0a86beb1a65782611e4f876616e285b43bff8f928dd171ef38827c7166c",
       "print_pdf": "documents/administrative-checks-print.pdf",
       "print_pages": 3,
-      "print_sha256": "aa36d181fd262a8effb99918c712ea638c5b2cd89c41d50ebf2825e2595d3fe9"
+      "print_sha256": "b10424a2e50bab579bcbd164430a2c846f88c48efff1fe9e1acb6c7465ddd76e"
     }
   ]
 }
