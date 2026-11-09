@@ -7,3 +7,64 @@
 .book-top h1{text-wrap:balance}
 @media(max-width:760px){.oita-entry-inner{padding:22px}.oita-entry-mark{font-size:40px;margin-bottom:14px}.oita-entry-dialog h1{font-size:26px;margin-bottom:16px}.oita-entry-copy{margin-bottom:12px}.oita-entry-fine{margin-bottom:16px}}
 .oita-entry-password-label{display:block;font-size:14px;font-weight:800;margin:16px 0 6px}.oita-entry-password{box-sizing:border-box;display:block;width:100%;min-height:48px;border:1px solid #111;background:#fff;padding:10px 12px;font:20px/1.4 sans-serif;border-radius:0}.oita-entry-error{min-height:1.8em;font-size:13px;color:#942e2b;margin:8px 0 12px}
+
+/* A compact directory on the consortium entrance and founding-document pages. */
+.oita-entry-dialog.oita-entry-with-directory{width:min(1120px,calc(100% - 32px));max-height:calc(100dvh - 24px);background:#f7ecee}
+.oita-entry-with-directory .oita-entry-inner{padding:28px 32px 22px}
+.oita-entry-with-directory .oita-entry-directory-header{margin:0 0 22px;border:0;padding:0;background:none}
+.oita-entry-with-directory .oita-entry-eyebrow{font:800 12px/1.5 OitaEntry,sans-serif;letter-spacing:.02em;margin:0 0 6px}
+.oita-entry-with-directory h1{font-size:32px;line-height:1.35;margin:0;letter-spacing:-.035em}
+.oita-entry-directory-layout{display:grid;grid-template-columns:290px minmax(0,1fr);grid-template-areas:"auth directory";gap:32px;align-items:start}
+.oita-entry-directory{grid-area:directory;min-width:0}
+.oita-entry-auth{grid-area:auth;padding:20px;background:#fff8fa;border:1px solid #c4aeb4;min-width:0}
+.oita-entry-with-directory h2{font:900 19px/1.4 OitaEntry,sans-serif;letter-spacing:-.02em;margin:0;color:#111}
+.oita-entry-directory-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px;margin-bottom:10px}
+.oita-entry-directory-heading p{font:400 11px/1.5 OitaEntry,sans-serif;margin:0;color:#554b4e}
+.oita-entry-with-directory .oita-entry-docs{list-style:none;padding:0;margin:0;border-top:1px solid #111}
+.oita-entry-with-directory .oita-entry-docs li{display:grid;grid-template-columns:minmax(0,1fr) 66px;gap:6px;align-items:stretch;min-height:53px;border-bottom:1px solid #c4aeb4;margin:0;padding:4px 0}
+.oita-entry-doc-choice{box-sizing:border-box;display:grid;grid-template-columns:24px minmax(0,1fr) 32px;align-items:center;gap:10px;padding:8px 10px;text-align:left;border:1px solid transparent;border-radius:0;background:transparent;color:#111;font:800 15px/1.4 OitaEntry,sans-serif;cursor:pointer;min-width:0}
+.oita-entry-doc-choice[aria-pressed="true"]{background:#102e53;color:#fff;border-color:#102e53}
+.oita-entry-doc-choice:not(.oita-entry-doc-static):hover{border-color:#102e53}
+.oita-entry-doc-number{font:800 13px/1.3 Arial,sans-serif;font-variant-numeric:tabular-nums;color:#9c3b49}
+.oita-entry-doc-choice[aria-pressed="true"] .oita-entry-doc-number{color:#ffd9e0}
+.oita-entry-doc-format{font:700 11px/1.4 Arial,OitaEntry,sans-serif;text-align:center}
+.oita-entry-doc-static{cursor:default}
+.oita-entry-doc-pdf{box-sizing:border-box;display:flex;gap:4px;justify-content:center;align-items:center;min-height:44px;padding:6px;border:1px solid #102e53;text-decoration:none;background:#fff;color:#102e53;font:800 12px/1.4 Arial,sans-serif}
+.oita-entry-doc-pdf small{font-size:10px;font-weight:400}
+.oita-entry-doc-pdf:hover{background:#e8eef5}
+.oita-entry-auth-heading p{font:400 12px/1.6 OitaEntry,sans-serif;margin:7px 0 0;color:#554b4e}
+.oita-entry-auth-heading strong{font-weight:800;color:#102e53}
+.oita-entry-with-directory .oita-entry-password-label{font-size:12px;margin:16px 0 5px}
+.oita-entry-with-directory .oita-entry-password{min-height:44px;padding:8px 10px;font-size:18px}
+.oita-entry-with-directory .oita-entry-check{padding:12px 0;border:0;gap:8px;font-size:12px;line-height:1.5}
+.oita-entry-with-directory .oita-entry-check input{width:18px;height:18px;margin:0;align-self:center}
+.oita-entry-with-directory .oita-entry-submit{min-height:46px;padding:10px 12px;font-size:14px}
+.oita-entry-with-directory .oita-entry-error{min-height:0;line-height:1.5;margin:0 0 8px;font-size:12px}
+.oita-entry-with-directory .oita-entry-error:empty{display:none}
+.oita-entry-with-directory .oita-entry-fine{font-size:11px;line-height:1.6;margin:18px 0 0;color:#554b4e}
+@media(max-width:760px){
+ .oita-entry-dialog.oita-entry-with-directory{width:calc(100% - 16px);max-height:calc(100dvh - 16px)}
+ .oita-entry-with-directory .oita-entry-inner{padding:14px}
+ .oita-entry-with-directory .oita-entry-directory-header{margin-bottom:12px}
+ .oita-entry-with-directory .oita-entry-eyebrow{font-size:10px;margin-bottom:4px}
+ .oita-entry-with-directory h1{font-size:24px;line-height:1.3}
+ .oita-entry-directory-layout{grid-template-columns:minmax(0,1fr);grid-template-areas:"directory" "auth";gap:12px}
+ .oita-entry-with-directory h2{font-size:16px;line-height:1.35}
+ .oita-entry-directory-heading{display:block;margin-bottom:6px}
+ .oita-entry-directory-heading p{font-size:10px;line-height:1.4;margin-top:3px}
+ .oita-entry-with-directory .oita-entry-docs li{min-height:44px;padding:0;gap:4px;grid-template-columns:minmax(0,1fr) 58px}
+ .oita-entry-doc-choice{grid-template-columns:19px minmax(0,1fr) 27px;gap:5px;font-size:13px;padding:5px}
+ .oita-entry-doc-number{font-size:11px}
+ .oita-entry-doc-format{font-size:10px}
+ .oita-entry-doc-pdf{min-height:44px;font-size:11px;padding:4px;gap:3px;border-width:0 0 0 1px;background:transparent}
+ .oita-entry-doc-pdf small{font-size:9px}
+ .oita-entry-auth{padding:10px 12px}
+ .oita-entry-auth-heading{display:flex;align-items:baseline;justify-content:space-between;gap:8px}
+ .oita-entry-auth-heading p{font-size:10px;line-height:1.4;margin:0;text-align:right}
+ .oita-entry-with-directory .oita-entry-password-label{font-size:11px;margin:7px 0 3px}
+ .oita-entry-with-directory .oita-entry-check{padding:8px 0;font-size:11px}
+ .oita-entry-with-directory .oita-entry-submit{min-height:42px;padding:8px 12px}
+ .oita-entry-with-directory .oita-entry-fine{font-size:9px;line-height:1.5;margin-top:10px}
+}
+
+.oita-entry-with-directory #oita-entry-title:focus{outline:0}
