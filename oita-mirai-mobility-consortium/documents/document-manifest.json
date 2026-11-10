@@ -1,5 +1,5 @@
 {
-  "version": "20261110-single-representative",
+  "version": "20261110-opportunity02",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "53eb22d3b5bfb11b26f557f5b3c0fceeb1643694d2eb724121f862dbc969b6fe",
+      "sha256": "d4d3adbde8feaae9bbfbcdc78c043f2a513ae1cd2084ea93b69c2200277d2df6",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "297b72e2d69bcb8fd48db856b92bec0680ae765e649806ddb38e4bbd94033bda"
+      "print_sha256": "275d06ba9e62a8c963e6b32c910a42492e532a92649f34bad79e2c0a6380d63a"
     },
     {
       "key": "members",
