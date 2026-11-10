@@ -179,9 +179,10 @@ def build(path, event):
     p.text("会場 Garraway0", 414, 388, 180, 22, 13.8, 20, True)
     p.text(event["venue_address"], 405, 416, 198, 16, 8.4, 12)
     p.text("参加費無料 / 配信なし", 405, 435, 198, 16, 9.9, 14, True)
-    p.photo(BASE.parent/"assets/garraway0-space.webp", 625, 323, 192, 107,
-            link="https://garraway0.com/")
-    p.text("会場写真：Garraway0公式サイト", 625, 436, 192, 12, 6.8, 10)
+    p.rect(625, 323, 192, 126, YELLOW)
+    p.text("12月2日 同日開催", 637, 331, 168, 18, 10, 14, True)
+    p.text("e-Palette<br/>試乗体験も開催！", 637, 355, 168, 50, 19, 24, True)
+    p.text("時間・場所・参加方法は<br/>決まり次第ご案内します。", 637, 414, 168, 30, 8.6, 12)
 
     p.rect(25, 458, W-50, 85, INK)
     p.text("地域の課題と、やってみたいことを教えてください。", 40, 467, 619, 27, 15, 22, True, "#ffffff", form)
@@ -226,3 +227,4 @@ def main():
 
 if __name__ == "__main__":
     main()
+

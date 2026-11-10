@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-11-09",
+  "updated_at": "2026-11-10",
   "timezone": "Asia/Tokyo",
   "profile_source": "speaker-profiles.json",
   "lectures": [
@@ -116,6 +116,15 @@
       "resources": {
         "participation_flyer": "participation-flyer-20261202.pdf",
         "print_image": "assets/lecture-20261202-print.png"
+      },
+      "epalette_ride": {
+        "status": "confirmed",
+        "date": "2026-12-02",
+        "starts_at": null,
+        "ends_at": null,
+        "venue": null,
+        "participation_method": null,
+        "announcement": "e-Palette試乗体験も同日開催。時間・場所・参加方法は決まり次第ご案内します。"
       }
     }
   ]
