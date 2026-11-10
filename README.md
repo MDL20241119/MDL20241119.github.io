@@ -2,6 +2,10 @@
 
 Official site: https://mobilitydlab.com/
 
+## Consortium representative and meeting chair — 2026-11-10
+
+The current founding drafts name one representative: Honda, Executive Managing Director of Toyota Corolla Oita. The Important Matters Decision Meeting consists of the representative and the secretary-general, and is chaired by the representative. The secretary-general submits the agenda and the representative decides important matters. The former officer-majority voting, quorum and tie rules have been superseded. Ordinary member votes and the secretary-general’s ordinary-meeting tie decision are unchanged. Earlier dated entries below describe historical drafts.
+
 ## Corporate homepage — 2026-09-21
 
 The homepage is authored in `index.html`, `assets/home.css`, and `assets/home.js`.

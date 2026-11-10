@@ -18,15 +18,17 @@ def build():
     assert {x['key'] for x in DATA['documents']}==expected
     assert DATA['annual_fee_yen']==100000 and DATA['votes_per_organization']==1
     assert DATA['admission_fee_yen']==0 and DATA['admission_fee_scope']=='全参加者'
-    assert DATA['officer_decision']['minimum_attendees']==2
-    assert DATA['officer_decision']['interested_parties_may_vote'] is True
+    assert DATA['officer_decision']['participants']==['代表1名','事務局長1名']
+    assert DATA['officer_decision']['chair']=='代表（トヨタカローラ大分 本田常務）'
+    assert DATA['officer_decision']['interested_representative_may_decide'] is True
+    assert DATA['officer_decision']['decision_method']=='事務局長が議案を上程し、代表が決議する'
+    assert DATA['officer_decision']['decision_maker']=='代表（トヨタカローラ大分 本田常務）'
     assert '可否同数' in DATA['decision_rule']['tie_breaker']
-    assert '本田常務' in DATA['officer_decision']['tie_breaker']
     assert DATA['plan_deadline']=='2027-02-26'
     assert len(DATA['founder_groups'])==5
     assert DATA['target_date']=='2027-01-26'
     assert DATA['target_date_label']=='2027年1月26日'
-    assert DATA['sanrio_relationship']=='県の後援とサンリオ連携'
+    assert DATA['sanrio_relationship']=='県の企画とサンリオ連携'
     assert '契約' in DATA['sanrio_scope']
     for doc in DATA['documents']:
         p=ROOT/doc['path']/'index.html';s=p.read_text();r=html.fromstring(s)
