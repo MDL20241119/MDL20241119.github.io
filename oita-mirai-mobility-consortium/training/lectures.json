@@ -120,11 +120,19 @@
       "epalette_ride": {
         "status": "confirmed",
         "date": "2026-12-02",
-        "starts_at": null,
-        "ends_at": null,
         "venue": null,
         "participation_method": null,
-        "announcement": "e-Palette試乗体験も同日開催。時間・場所・参加方法は決まり次第ご案内します。"
+        "announcement": "e-Palette試乗体験：13:30〜15:00／17:30〜18:00。試乗場所・参加方法は決まり次第ご案内します。",
+        "sessions": [
+          {
+            "starts_at": "2026-12-02T13:30:00+09:00",
+            "ends_at": "2026-12-02T15:00:00+09:00"
+          },
+          {
+            "starts_at": "2026-12-02T17:30:00+09:00",
+            "ends_at": "2026-12-02T18:00:00+09:00"
+          }
+        ]
       }
     }
   ]
