@@ -174,6 +174,7 @@ def make_story(root,slug,title,known):
         if slug=='main':
             while story and isinstance(story[-1],Spacer):story.pop()
         if slug!='main':story.append(Spacer(1,16))
+    while story and isinstance(story[-1],Spacer):story.pop()
     return story
 
 def build(slug,path,title,print_mode=False):

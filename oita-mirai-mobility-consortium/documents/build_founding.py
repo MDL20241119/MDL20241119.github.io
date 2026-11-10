@@ -18,11 +18,14 @@ def build():
     assert {x['key'] for x in DATA['documents']}==expected
     assert DATA['annual_fee_yen']==100000 and DATA['votes_per_organization']==1
     assert DATA['admission_fee_yen']==0 and DATA['admission_fee_scope']=='全参加者'
-    assert DATA['officer_decision']['participants']==['代表1名','事務局長1名']
-    assert DATA['officer_decision']['chair']=='代表（トヨタカローラ大分 本田常務）'
+    assert DATA['officer_decision']['participants']==['共同代表2名','事務局長1名']
+    assert DATA['officer_decision']['chair']=='共同代表（トヨタカローラ大分 本田常務）'
     assert DATA['officer_decision']['interested_representative_may_decide'] is True
-    assert DATA['officer_decision']['decision_method']=='事務局長が議案を上程し、代表が決議する'
-    assert DATA['officer_decision']['decision_maker']=='代表（トヨタカローラ大分 本田常務）'
+    assert DATA['officer_decision']['decision_method']=='事務局長が議案を上程し、共同代表が決議する'
+    assert DATA['officer_decision']['decision_maker']=='共同代表2名'
+    assert len(DATA['officer_decision']['unresolved'])==3
+    assert [o['position'] for o in DATA['officers']]==['共同代表','共同代表','事務局長']
+    assert DATA['representative_nomination']['status']=='推薦・就任の了承は未確認'
     assert '可否同数' in DATA['decision_rule']['tie_breaker']
     assert DATA['plan_deadline']=='2027-02-26'
     assert len(DATA['founder_groups'])==5

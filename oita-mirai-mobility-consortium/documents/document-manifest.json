@@ -1,5 +1,5 @@
 {
-  "version": "20261110-opportunity02",
+  "version": "20261110-platt-nomination",
   "target_date": "2027-01-26",
   "target_status": "設立目標。正式な設立は関係者の合意を経て決定",
   "documents": [
@@ -21,10 +21,10 @@
         "main_ch06": 7,
         "main_ch07": 8
       },
-      "sha256": "d4d3adbde8feaae9bbfbcdc78c043f2a513ae1cd2084ea93b69c2200277d2df6",
+      "sha256": "e60762e2e7a3f3695a90b3665dd4b2e1f9b284fb26db5414b786bb1b91fee107",
       "print_pdf": "documents/main-print.pdf",
       "print_pages": 8,
-      "print_sha256": "275d06ba9e62a8c963e6b32c910a42492e532a92649f34bad79e2c0a6380d63a"
+      "print_sha256": "87015527175e70787638a46b5c66caacae0f80047a7158e7752003623f666072"
     },
     {
       "key": "members",
@@ -40,10 +40,10 @@
         "members_ch02": 3,
         "members_ch03": 3
       },
-      "sha256": "48531d5f4d2d8774ed6c9b61b9dcbe34ef6d1989eaf480c9d927bf477bfe7946",
+      "sha256": "4be8cf4c276c34f13d3be8106f789d83db444eb5cf520d66f6a612f92b41b237",
       "print_pdf": "documents/members-print.pdf",
       "print_pages": 3,
-      "print_sha256": "316e6db7a4856af101bbcace60be11d7f45d7a60ccf6cbbeaacb59366e983cc1"
+      "print_sha256": "1fa7082f90b127af5f43bdfe6ccd95db22e9891f7851a4b96fddaa424effdfa1"
     },
     {
       "key": "rules",
@@ -58,17 +58,17 @@
         "rules_ch01": 2,
         "rules_ch02": 2,
         "rules_ch03": 3,
-        "rules_ch04": 3,
-        "rules_ch05": 4,
+        "rules_ch04": 4,
+        "rules_ch05": 5,
         "rules_ch06": 5,
-        "rules_ch07": 5,
+        "rules_ch07": 6,
         "rules_ch08": 6,
         "rules_ch09": 6
       },
-      "sha256": "4bd5e7cf1a317759b6b6a60a6eb4149e8b66e00db462a63105dc18cb04681a09",
+      "sha256": "7912b13f53d3389d84388a1a946b462effcebc224d9a55c3d59e663df8b07b67",
       "print_pdf": "documents/rules-print.pdf",
       "print_pages": 6,
-      "print_sha256": "0e5487acf6b1f17450cbfd8ce37c94d8b01a1899662e1abcd3ed0c5afdb9ea4b"
+      "print_sha256": "44f1188213f8370a2cdeccb7f881fe85227fb9be43cb99c073316c88c57898bf"
     },
     {
       "key": "secretariat",
@@ -87,10 +87,10 @@
         "secretariat_ch05": 3,
         "secretariat_ch06": 4
       },
-      "sha256": "aa0259f45b33158638c672ba8bc3df0a4af85954173899ce9bf556ac43bede67",
+      "sha256": "6eca1cb21122ab4c257214eb9ed86e7f8f5be611e1d54ba85bc1444bd80d710e",
       "print_pdf": "documents/secretariat-print.pdf",
       "print_pages": 4,
-      "print_sha256": "43d0d38abd2823bbecf9d75fa380c3ab5bfc78e38962228d6bfe3cf531e8b5db"
+      "print_sha256": "5827651b8721e550faa0e01131a2c26cb36e3a1bfac162891c535601668de6f1"
     }
   ],
   "consent_forms": [],
@@ -100,11 +100,11 @@
       "title": "参加申込・承諾書",
       "pdf": "documents/participants.pdf",
       "pages": 1,
-      "sha256": "3c22a633319d5e42c6bdb3655e2619bc67f6433ed5ee0f77233dfdc8e616bfa2",
+      "sha256": "95ffc0fdc35966417573fe789788b8904a9763ce7328a6ff33947ebda3926667",
       "use": "参加・役割の承諾を、この1枚で確認します。該当する欄だけ記入してください。"
     }
   ],
-  "forms_version": "20261110-single-representative",
+  "forms_version": "20261110-platt-nomination",
   "form_aliases": {
     "documents/membership-application.pdf": "documents/participants.pdf",
     "documents/membership-application-print.pdf": "documents/participants.pdf",
