@@ -1,0 +1,59 @@
+/* Content additions inherit the existing typography, orange palette and ruled cards. */
+.hero-main-actions{display:flex;align-items:center;flex-wrap:wrap;gap:14px 24px;margin:18px 0}
+.hero-main-actions .button{min-height:54px;font-size:16px;padding:14px 22px}
+.hero-main-actions .text-link{font-size:15px}
+.body-copy{font-size:16px;line-height:1.85;max-width:76em}
+.heading-phrase{display:inline-block;max-width:100%;vertical-align:top}
+#program-proposals .program-overview-heading h2>span{display:inline-block;max-width:100%}
+.program-adoption,.program-next-year,.program-consultation{border-bottom:1px solid #111}
+.program-next-year,.program-consultation{background:#fff8f1}
+.program-adoption .split-heading h2,.program-next-year .split-heading h2,.program-consultation .split-heading h2{font-size:clamp(32px,3.4vw,46px)}
+.adoption-details{margin-top:20px;border-top:1px solid #bbb;font-size:16px;line-height:1.8}
+.adoption-details summary{padding:14px 0;min-height:44px;cursor:pointer;font-weight:900}
+.adoption-details dl{margin:10px 0 20px}
+.adoption-details dl>div{display:grid;grid-template-columns:12em 1fr;gap:16px;padding:12px 0;border-bottom:1px solid #ddd}
+.adoption-details dt{font-weight:900}
+.adoption-details dd{margin:0}
+.program-next-year .support-connection{margin:0;padding:22px 0;border-block:2px solid #e68149}
+.program-next-year .support-connection strong{font-size:clamp(23px,2.2vw,30px);font-weight:900;line-height:1.5}
+.year-distinction{margin-top:20px}
+#program-proposals .program-continuity>p:last-child{grid-column:2;font-size:15px}
+.process-parallel{margin-top:24px;font-size:16px;line-height:1.85;color:#fff}
+.consultation-flow{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;padding:0;margin:0 0 24px;list-style:none;counter-reset:consultation}
+.consultation-flow>li{min-width:0;border-top:3px solid #e68149;padding:18px 0;counter-increment:consultation}
+.consultation-flow>li:before{content:counter(consultation,decimal-leading-zero);display:block;font:900 48px/1 Arial,Helvetica,sans-serif;letter-spacing:-.06em;color:#a7451d;margin-bottom:14px}
+.consultation-flow b{display:block;font-size:24px;font-weight:900;line-height:1.5}
+.consultation-questions{margin-bottom:24px;font-size:clamp(22px,2.2vw,30px);font-weight:900;line-height:1.7}
+.consultation-questions p{font:inherit}
+.consultation-flow p{font-size:16px;line-height:1.8;margin-top:10px}
+.program-consultation .application-actions{display:flex;align-items:center;flex-wrap:wrap;gap:16px 24px}
+.program-consultation .application-actions .text-link{margin:0;font-size:15px}
+.program-consultation>.body-copy,.calendar-status{margin-top:20px}
+@media(min-width:901px){.opportunity-program .process-step h3{min-height:2.8em}.opportunity-program #benefits .benefit-keyword{min-height:5.5em}}
+@media(min-width:1101px){#program-proposals .training-value-flow>li>h3{min-height:2.8em}}
+@media(max-width:760px){
+ .hero-main-actions{display:grid;gap:14px}
+ .hero-main-actions .button{font-size:16px;line-height:1.7;text-align:left;gap:12px;padding:14px 16px}
+ .program-adoption .split-heading h2,.program-next-year .split-heading h2,.program-consultation .split-heading h2{font-size:clamp(30px,8.3vw,40px)}
+ .adoption-details dl>div{grid-template-columns:1fr;gap:4px}
+ .adoption-details dd{overflow-wrap:anywhere}
+ #program-proposals .program-continuity>p:last-child{grid-column:auto}
+ .consultation-flow{grid-template-columns:1fr;gap:0}
+ .consultation-flow b{font-size:24px}
+ .program-consultation .application-actions{display:grid}
+ .program-consultation .button{font-size:16px;line-height:1.7;gap:12px}
+}
+@media print{
+ .hero-main-actions{display:none}
+ .program-adoption,.program-next-year,.program-consultation{padding:20px 0}
+ .body-copy,.process-parallel,.adoption-details,.adoption-details p{font-size:10pt}
+ .adoption-details dl>div{grid-template-columns:11em 1fr;padding:6px 0;break-inside:avoid}
+ .program-adoption .split-heading h2,.program-next-year .split-heading h2,.program-consultation .split-heading h2{font-size:22pt}
+ .program-next-year .support-connection{break-inside:avoid}
+ .consultation-flow>li{break-inside:avoid}
+ .consultation-flow b{font-size:14pt}
+ .consultation-flow p{font-size:10pt}
+ #program-proposals .training-value-flow>li>h3{font-size:17pt}
+ #program-proposals .training-value-flow>li>p,#program-proposals .training-value-flow>li>.input-provider,#program-proposals .output-items>li{font-size:10pt}
+ .opportunity-program .process-step h3{min-height:0;font-size:17pt}
+}
