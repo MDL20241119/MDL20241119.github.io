@@ -1,0 +1,19 @@
+{
+  "date": "2026-10-13",
+  "baseline_site_commit": "993c2a4ac8aa9787eb0be29445ffd0d6226a4913",
+  "mode": "local verification only",
+  "passed": 139,
+  "failed": 0,
+  "suites": {
+    "domain": 22,
+    "integration_guest_manual_workflow_and_SSR": 105,
+    "actual_route_handlers_with_SQLite_D1_adapter": 8,
+    "SQLite_atomicity": 4
+  },
+  "typecheck": "passed",
+  "browser_visual_QA": "not executed; browser skill unavailable",
+  "hosted_D1_and_login": "not executed",
+  "real_devices": "not executed",
+  "external_connections": "not executed",
+  "AT_and_INT_all_accepted": false
+}
