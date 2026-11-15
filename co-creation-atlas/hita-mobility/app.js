@@ -1,0 +1,1 @@
+'use strict';const b=document.getElementById('motion');if(b){b.addEventListener('click',()=>{const stopped=document.body.classList.toggle('still');b.setAttribute('aria-pressed',String(stopped));b.textContent=stopped?'動きを戻す':'動きを止める';});}
