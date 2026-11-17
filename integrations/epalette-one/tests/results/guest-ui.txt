@@ -1,0 +1,20 @@
+✔ GUEST-01 corrupt local storage opens a synthetic seed, never shared state (1.744771ms)
+✔ GUEST-02 guest changes remain in the tab-local envelope (2.147719ms)
+✔ GUEST-03 search and prepare share the same ledger; prepare is not booking (2.256413ms)
+✔ GUEST-04 explicit local approval commits once, including exact retry (1.328063ms)
+✔ GUEST-05 cancellation requires a second, content-bound confirmation (1.438169ms)
+✔ GUEST-06 altered, expired and stale confirmations fail closed (1.049653ms)
+✔ GUEST-07 rejecting a proposal never creates a ticket (0.604481ms)
+✔ UI-01 urgent faults and unknown telemetry outrank ordinary charge plans (0.525262ms)
+✔ UI-02 after a charge request, home asks for receipt rather than a duplicate request (12.320291ms)
+✔ UI-03 apparently ready vehicles never imply human safety checks are done (0.467445ms)
+✔ UI-04 duration ranges preserve both endpoints including multi-hour AC plans (0.21886ms)
+✔ SEC-01 anonymous demo has no network writes; server identity has no dev bypass (0.448967ms)
+ℹ tests 12
+ℹ suites 0
+ℹ pass 12
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 193.902508

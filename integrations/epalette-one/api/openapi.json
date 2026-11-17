@@ -1,0 +1,936 @@
+{
+  "openapi": "3.1.0",
+  "info": {
+    "title": "e-Palette ONE Shared Business API",
+    "version": "1.2.0",
+    "description": "合成データによる限定公開の検証版。AIと画面が同じ予約・車両予定を使用。外部AI/OAuth接続は未検証。"
+  },
+  "servers": [
+    {
+      "url": "https://epalette-one.delpiero.chatgpt.site"
+    }
+  ],
+  "security": [
+    {
+      "delegatedKey": []
+    }
+  ],
+  "components": {
+    "securitySchemes": {
+      "delegatedKey": {
+        "type": "http",
+        "scheme": "bearer",
+        "description": "有効期限付き委任キー。公開側の本人認証ゲート設定は別途必要。"
+      }
+    }
+  },
+  "paths": {
+    "/api/v1/actions/get_service_catalog": {
+      "post": {
+        "operationId": "get_service_catalog",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/search_trips": {
+      "post": {
+        "operationId": "search_trips",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "date": {
+                    "type": "string",
+                    "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+                  },
+                  "fromStop": {
+                    "type": "string",
+                    "enum": [
+                      "oita-station",
+                      "community-hub"
+                    ]
+                  },
+                  "toStop": {
+                    "type": "string",
+                    "enum": [
+                      "oita-station",
+                      "community-hub"
+                    ]
+                  },
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8
+                  },
+                  "wheelchairs": {
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 1,
+                    "default": 0
+                  }
+                },
+                "required": [
+                  "date",
+                  "fromStop",
+                  "toStop",
+                  "count"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/get_my_reservations": {
+      "post": {
+        "operationId": "get_my_reservations",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/get_vehicle_status": {
+      "post": {
+        "operationId": "get_vehicle_status",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vehicleId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/get_charge_plan": {
+      "post": {
+        "operationId": "get_charge_plan",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vehicleId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "vehicleId"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/get_today_actions": {
+      "post": {
+        "operationId": "get_today_actions",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {},
+                "required": [],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/prepare_ride_booking": {
+      "post": {
+        "operationId": "prepare_ride_booking",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "tripId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8
+                  },
+                  "fromStop": {
+                    "type": "string",
+                    "const": "oita-station"
+                  },
+                  "toStop": {
+                    "type": "string",
+                    "const": "community-hub"
+                  }
+                },
+                "required": [
+                  "tripId",
+                  "count",
+                  "fromStop",
+                  "toStop"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/prepare_ride_cancellation": {
+      "post": {
+        "operationId": "prepare_ride_cancellation",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "reservationId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "reservationId"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/prepare_charge_request": {
+      "post": {
+        "operationId": "prepare_charge_request",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vehicleId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "bookingId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "stationId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "owner": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "vehicleId",
+                  "bookingId",
+                  "stationId",
+                  "owner"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/prepare_vehicle_booking": {
+      "post": {
+        "operationId": "prepare_vehicle_booking",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "vehicleId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "driverId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "title": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  },
+                  "purpose": {
+                    "type": "string",
+                    "enum": [
+                      "shuttle",
+                      "ondemand",
+                      "shop",
+                      "charge"
+                    ]
+                  },
+                  "start": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "end": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "route": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 200
+                  },
+                  "distance": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 500
+                  },
+                  "targetSoc": {
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 100
+                  }
+                },
+                "required": [
+                  "vehicleId",
+                  "driverId",
+                  "title",
+                  "purpose",
+                  "start",
+                  "end",
+                  "route",
+                  "distance",
+                  "targetSoc"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/prepare_on_demand_request": {
+      "post": {
+        "operationId": "prepare_on_demand_request",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "fromStop": {
+                    "type": "string",
+                    "const": "oita-station"
+                  },
+                  "toStop": {
+                    "type": "string",
+                    "const": "community-hub"
+                  },
+                  "start": {
+                    "type": "string",
+                    "format": "date-time"
+                  },
+                  "count": {
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 8
+                  }
+                },
+                "required": [
+                  "fromStop",
+                  "toStop",
+                  "start",
+                  "count"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/get_proposal": {
+      "post": {
+        "operationId": "get_proposal",
+        "parameters": [],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "proposalId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "proposalId"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    },
+    "/api/v1/actions/execute_approved": {
+      "post": {
+        "operationId": "execute_approved",
+        "parameters": [
+          {
+            "in": "header",
+            "name": "Idempotency-Key",
+            "required": true,
+            "schema": {
+              "type": "string",
+              "minLength": 8,
+              "maxLength": 100
+            }
+          }
+        ],
+        "requestBody": {
+          "required": true,
+          "content": {
+            "application/json": {
+              "schema": {
+                "type": "object",
+                "properties": {
+                  "proposalId": {
+                    "type": "string",
+                    "minLength": 1,
+                    "maxLength": 100
+                  }
+                },
+                "required": [
+                  "proposalId"
+                ],
+                "additionalProperties": false
+              }
+            }
+          }
+        },
+        "responses": {
+          "200": {
+            "description": "業務結果。prepareは承認待ちであり予約成立ではない。",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object"
+                }
+              }
+            }
+          },
+          "400": {
+            "description": "入力不正"
+          },
+          "401": {
+            "description": "認証なし"
+          },
+          "403": {
+            "description": "権限・承認なし"
+          },
+          "409": {
+            "description": "再送内容不一致または予定・空席の更新"
+          },
+          "422": {
+            "description": "業務条件を満たさない"
+          },
+          "503": {
+            "description": "未接続・処理不能。成立として扱わない"
+          }
+        }
+      }
+    }
+  }
+}

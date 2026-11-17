@@ -1,0 +1,3 @@
+import {ArrowLeft} from 'lucide-react';
+import '../connections/style.css';
+export default function DemoGuide(){return <div className="integration-shell"><main className="confirmation-main"><a href="/connections" className="back-link"><ArrowLeft/>予約と充電の確認へ</a><p className="eyebrow">検証版の利用案内</p><h1>操作を試すためのアプリです</h1><p>e-Palette ONEの操作を、架空の車両・便・残量・停留所で確認できます。</p><ul className="guide-list"><li>実際の送迎、商品提供、課金は行いません。画面の予約は検証用です。</li><li>予約・取消は、表示された日時・場所・人数を確認してから確定します。</li><li>予約の取消は乗車時刻まで操作できます。乗車時刻を過ぎた場合は担当者が状態を確認します。</li><li>車両や充電器を動かす機能はありません。実車・外部AI・交通事業者との接続は未実施です。</li><li>実際の氏名、連絡先、乗客情報を入力しないでください。</li></ul><p>これは検証環境の案内です。本番運行の利用規約・プライバシー条件・取消条件は、事業者との契約と運用を定めたうえで別途設定します。</p><small>案内ID：demo-guide-v1</small></main></div>;}

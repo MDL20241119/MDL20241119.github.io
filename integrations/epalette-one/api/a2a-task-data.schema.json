@@ -1,0 +1,457 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "e-Palette ONE A2A v1 DataPart.data",
+  "oneOf": [
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_service_catalog"
+        },
+        "args": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "search_trips"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "date": {
+              "type": "string",
+              "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+            },
+            "fromStop": {
+              "type": "string",
+              "enum": [
+                "oita-station",
+                "community-hub"
+              ]
+            },
+            "toStop": {
+              "type": "string",
+              "enum": [
+                "oita-station",
+                "community-hub"
+              ]
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            },
+            "wheelchairs": {
+              "type": "integer",
+              "minimum": 0,
+              "maximum": 1,
+              "default": 0
+            }
+          },
+          "required": [
+            "date",
+            "fromStop",
+            "toStop",
+            "count"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_my_reservations"
+        },
+        "args": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_vehicle_status"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "vehicleId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_charge_plan"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "vehicleId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "vehicleId"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_today_actions"
+        },
+        "args": {
+          "type": "object",
+          "properties": {},
+          "required": [],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "prepare_ride_booking"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "tripId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            },
+            "fromStop": {
+              "type": "string",
+              "const": "oita-station"
+            },
+            "toStop": {
+              "type": "string",
+              "const": "community-hub"
+            }
+          },
+          "required": [
+            "tripId",
+            "count",
+            "fromStop",
+            "toStop"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "prepare_ride_cancellation"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "reservationId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "reservationId"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "prepare_charge_request"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "vehicleId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "bookingId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "stationId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "owner": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "vehicleId",
+            "bookingId",
+            "stationId",
+            "owner"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "prepare_vehicle_booking"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "vehicleId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "driverId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "title": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            },
+            "purpose": {
+              "type": "string",
+              "enum": [
+                "shuttle",
+                "ondemand",
+                "shop",
+                "charge"
+              ]
+            },
+            "start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "end": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "route": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 200
+            },
+            "distance": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 500
+            },
+            "targetSoc": {
+              "type": "number",
+              "minimum": 0,
+              "maximum": 100
+            }
+          },
+          "required": [
+            "vehicleId",
+            "driverId",
+            "title",
+            "purpose",
+            "start",
+            "end",
+            "route",
+            "distance",
+            "targetSoc"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "prepare_on_demand_request"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "fromStop": {
+              "type": "string",
+              "const": "oita-station"
+            },
+            "toStop": {
+              "type": "string",
+              "const": "community-hub"
+            },
+            "start": {
+              "type": "string",
+              "format": "date-time"
+            },
+            "count": {
+              "type": "integer",
+              "minimum": 1,
+              "maximum": 8
+            }
+          },
+          "required": [
+            "fromStop",
+            "toStop",
+            "start",
+            "count"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "get_proposal"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "proposalId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "proposalId"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    },
+    {
+      "type": "object",
+      "properties": {
+        "name": {
+          "const": "execute_approved"
+        },
+        "args": {
+          "type": "object",
+          "properties": {
+            "proposalId": {
+              "type": "string",
+              "minLength": 1,
+              "maxLength": 100
+            }
+          },
+          "required": [
+            "proposalId"
+          ],
+          "additionalProperties": false
+        }
+      },
+      "required": [
+        "name",
+        "args"
+      ],
+      "additionalProperties": false
+    }
+  ]
+}
