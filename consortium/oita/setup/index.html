@@ -1,0 +1,18 @@
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'unsafe-inline'; style-src 'unsafe-inline'; connect-src 'none'; form-action 'none'; base-uri 'none'"><title>大分コンソーシアム｜初回設定</title><style>[hidden]{display:none!important}*{box-sizing:border-box}body{margin:0;background:#101313;color:#f7f8ef;font:16px/1.65 system-ui,sans-serif}main{max-width:38rem;margin:auto;padding:clamp(22px,6vw,55px)}h1{font-size:1.65rem;line-height:1.3}label{display:block;font-weight:700}input,textarea,button{font:inherit;padding:.6em;border-radius:5px}input,textarea{margin:.45rem 0;width:100%;background:#202925;color:white;border:1px solid #9aac9f}button{background:#b9ee72;border:0;font-weight:800;color:#172417;min-height:44px}small{color:#c8d5ca}textarea{height:5rem}</style></head><body><main><h1>大分コンソーシアム<br>パスワード引き継ぎ</h1><p>今の閲覧パスワードを入力してください。パスワードは送信も保存もされません。</p><form><label for="pw">今の閲覧パスワード</label><input id="pw" type="password" autocomplete="off" autocapitalize="off" spellcheck="false" required><button type="submit">設定コードを作る</button></form><p id="note" role="status"></p><section hidden id="out"><label for="code">この設定コードだけを返信</label><textarea id="code" readonly autocorrect="off" spellcheck="false"></textarea><button id="copy" type="button">コードをコピー</button></section></main><script>
+const e=new TextEncoder(),pub='MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAtLNDVOoaQrQfhZ3l46HiiUa2efFsaDXitbE7VvAxrJV25iKgxOOMjA2r0qjv740c6BrDfRj4HhMhENnFxURdy0EWAf9xQYrJcqh05BV+NjfD6uVCHiXmznHyVVMj68iX7gI/G2s8qQa68lcMIRsn5SC4Wklta+5bFpY9BNQGLa8WAbOuBYXZzBKFjYbin1/2mvEE5oCZ7aZCA0Jpm8Rs8Oa21klK2vHUC7wdSHMxr5fD1RPL5RFraS49knj7nCesr334nlN+fLegMvW4ZJ/MSR75NPXZCNsby8AxV0knCeiGvTwW2OF4ZMXJam7sjvzo3knLdOxq6WX+Q3je60onXQIDAQAB';
+const b64=v=>btoa(String.fromCharCode(...new Uint8Array(v))),dec=s=>Uint8Array.from(atob(s),x=>x.charCodeAt(0));
+const form=document.querySelector('form'),pw=document.querySelector('#pw'),note=document.querySelector('#note'),area=document.querySelector('#code'),out=document.querySelector('#out');
+let pending=false;
+form.addEventListener('submit',async ev=>{ev.preventDefault();if(pending)return;pending=true;out.hidden=true;let p=pw.value;pw.value='';
+try{
+ if([...p].length<16||p.length>256||new Set(p).size<9||/password|123456|qwerty/i.test(p)) {note.textContent='この方法の安全条件を満たしません。パスワードを変えず、そのことだけ教えてください。';return;}
+ const salt=crypto.getRandomValues(new Uint8Array(16));
+ const input=await crypto.subtle.importKey('raw',e.encode(p),'PBKDF2',false,['deriveBits']);p='';
+ const derived=new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt,iterations:600000,hash:'SHA-256'},input,256));
+ const data=new Uint8Array(49);data[0]=1;data.set(salt,1);data.set(derived,17);derived.fill(0);
+ const rsa=await crypto.subtle.importKey('spki',dec(pub),{name:'RSA-OAEP',hash:'SHA-256'},false,['encrypt']);
+ const sealed=await crypto.subtle.encrypt({name:'RSA-OAEP'},rsa,data);data.fill(0);
+ area.value='OITA1:'+b64(sealed);out.hidden=false;note.textContent='設定コードができました。コードだけを返信してください。';
+}catch{note.textContent='設定できませんでした。このページをSafariかChromeで開いて試してください。';}finally{p='';pending=false;}});
+document.querySelector('#copy').addEventListener('click',async()=>{try{await navigator.clipboard.writeText(area.value);note.textContent='設定コードをコピーしました。';}catch{area.focus();area.select();}});
+</script></body></html>
