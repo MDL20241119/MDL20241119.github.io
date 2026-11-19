@@ -768,6 +768,63 @@ window.OITA_EVENTS = [
     "sourceRow": 27
   },
   {
+    "id": "sorafes-oita-day1",
+    "start": "2026-12-05",
+    "end": "2026-12-05",
+    "date": "12.05",
+    "time": "11:00–16:00",
+    "title": "空フェスおおいた2026｜1日目",
+    "place": "大分駅前広場",
+    "description": "大分駅前で開催する次世代空モビリティのイベント。展示や体験の内容は県の公式案内をご確認ください。",
+    "sources": [
+      "https://pref.oita.jp/site/sme/sorafesoita2026-day1.html",
+      "https://pref.oita.jp/site/sme/sorafesoita2026.html"
+    ],
+    "month": "2026-12",
+    "status": "日程公表",
+    "category": "mobility",
+    "tag": "空モビリティ",
+    "photo": "airport",
+    "mobility": true,
+    "prefecture": {
+      "roles": [
+        "commission",
+        "listed"
+      ],
+      "summary": "大分県の次世代空モビリティ機運醸成事業として実施。県の公式案内に日程・会場を掲載。"
+    },
+    "asOf": "2026-11-19"
+  },
+  {
+    "id": "sorafes-oita-day2",
+    "start": "2026-12-06",
+    "end": "2026-12-06",
+    "date": "12.06",
+    "time": "10:00–15:00",
+    "title": "空フェスおおいた2026｜2日目",
+    "place": "大分県央飛行場",
+    "description": "県の公開プログラムにe-Palette試乗体験を掲載。",
+    "attention": "入場無料・事前登録制（当日登録可）。最新の実施内容は県の公式案内をご確認ください。",
+    "sources": [
+      "https://pref.oita.jp/site/sme/sorafesoita2026-day2.html",
+      "https://pref.oita.jp/site/sme/sorafesoita2026.html"
+    ],
+    "month": "2026-12",
+    "status": "日程公表",
+    "category": "mobility",
+    "tag": "空モビリティ",
+    "photo": "airport",
+    "mobility": true,
+    "prefecture": {
+      "roles": [
+        "commission",
+        "listed"
+      ],
+      "summary": "大分県の次世代空モビリティ機運醸成事業として実施。県の公式案内に日程・会場を掲載。"
+    },
+    "asOf": "2026-11-19"
+  },
+  {
     "id": "renoir-lecture",
     "start": "2026-12-12",
     "end": "2026-12-12",
@@ -1098,27 +1155,6 @@ window.OITA_RELATIONS = [
 ];
 
 window.OITA_PENDING = [
-  {
-    "id": "aam",
-    "title": "令和8年度大分県次世代空モビリティ機運醸成イベント",
-    "category": "mobility",
-    "mobility": true,
-    "status": "開催日・時刻・場所は公開資料で未確認",
-    "description": "2026/8/28公表の審査結果で、AirX・MASC共同体が最高得点者。委託の具体化が進んでいる",
-    "nextCheck": "年度内のどの日に実施するか、2027/2末までか、会場、実機展示・飛行・体験内容、e-Paletteを追加できるか",
-    "contact": "県先端技術挑戦課 航空産業振興班",
-    "phone": "097-506-2475",
-    "sources": [
-      "https://www.pref.oita.jp/soshiki/14270/sentan14290-aamdemoflight-propo-r8.html"
-    ],
-    "prefecture": {
-      "roles": [
-        "commission"
-      ],
-      "summary": "県のイベント開催委託業務。審査結果の公表段階で、開催日・会場は未確認。"
-    },
-    "asOf": "2026-09-11"
-  },
   {
     "id": "hover",
     "title": "ホーバーターミナルおおいた賑わい創出事業",
