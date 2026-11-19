@@ -1,31 +1,3 @@
 <!doctype html>
-<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-RpjmoQ/JTQIx7qmALQZ45+UFvlGQoZZ/mBxVtRmI264='; style-src 'unsafe-inline'; base-uri 'none'; form-action 'none'"><title>大分未来モビリティ・コンソーシアム｜関係者向け資料</title>
-<style>*{box-sizing:border-box}[hidden]{display:none!important}body{margin:0;background:#f4f6f0;color:#142928;font-family:system-ui,sans-serif;line-height:1.55}main{max-width:68rem;margin:0 auto;padding:clamp(22px,6vw,72px)}.over{font-size:.83rem;letter-spacing:.16em;font-weight:800;color:#146353}h1{font-size:clamp(1.65rem,5vw,3rem);line-height:1.25;margin:.55rem 0 1.5rem}h2{font-size:1.5rem;margin:.25rem 0 .65rem}form,section{background:white;border:1px solid #cdd8cc;border-radius:12px;padding:clamp(18px,4vw,30px)}label{display:block;font-weight:700;margin-bottom:8px}input,button{font:inherit;border-radius:7px;padding:10px 13px;min-height:44px}input{border:1px solid #57756a;width:min(100%,24rem)}button{cursor:pointer;background:#146353;color:#fff;border:1px solid #146353;font-weight:700}form button{margin:8px 0}a:focus-visible,input:focus-visible,button:focus-visible{outline:3px solid #ab4b09;outline-offset:2px}#status{color:#9b2908;margin:5px 0 0}ul{padding:0;list-style:none;display:grid;gap:9px;grid-template-columns:repeat(auto-fit,minmax(min(100%,230px),1fr))}li a{display:block;background:#e8f3ec;color:#134b3e;font-weight:700;padding:12px 14px;border-radius:7px}small{color:#304d45}#close{background:white;color:#146353}</style></head><body>
-<main><p class="over">OITA MIRAI MOBILITY CONSORTIUM</p><h1>大分未来モビリティ・コンソーシアム</h1>
-<form><label for="pass">閲覧パスワード</label><input id="pass" type="password" required autocomplete="current-password" autocapitalize="off" spellcheck="false"><br><button id="unlock" type="submit">資料を開く</button><p id="status" role="status"></p></form>
-<noscript>資料を見るにはJavaScriptを有効にしてください。</noscript>
-<section id="materials" hidden><h2 id="list-title" tabindex="-1">最新版の資料</h2><small>資料は別タブで開きます。</small><ul id="items"></ul><button id="close" type="button">閉じる</button></section></main>
-<script>'use strict';
-const salt='9DJgOyhgy65wKpeheWCPJQ==',iv='UzHwn0i20fH+NtR7',packet='roL7YyNF22MelLxtcNdASkLQjkc4l+rWOmtYMhAeDpr7HCImRZW6e04ULAplASDCVgpur0+MX60eYQsE00qYEqPVV8itnpTQ7w2tcKTzaWjj5pZ4bGYpXPtMIK4qg6iLVw8EEiVGoyWUAQEaFsQnfV3Ar2PDbYP1D8+h+PFag5crHnqlnP8NP29EEmGP7KkuWPRHorkMfi52DCOmUCWHVtb6xUrEue/u5WRRMFBA39rsBkJ+dJetRozgZsFIb3EvLdt1drjovshkak14ZlLEFRQ2P8DoqZIqD3priqcsnKM2UDclyUwi48aE2syU4vFboGiongXQBiR6G5DSxnf6hH8I4x0+l0Mj5aodIjs6I9qCrvoAc0zinIu1TjNh9pjxZGmavWFOR7uaOfbk0oFY/G+4dNeWac6lDUC8kmdgbTED7EmCfkd5cklU53xyEWot1TVQ30yBzcRlAdKnSnGboDV9pRdY/oAunYWveahp3ibo+pKFnpalYM25rzPfuZP5mgiZxpqqa8ZHYgm8SorzSovduv9B3gT7gkdjHAOrjtniPYygi0+VUbgimBJBcaTFqapAUgaamfg1Gc+HPNaWwU5KYGxL0mGut0+D1zdv1UpmHyDIIBtJXtvffPgMHYL7GMTQsSSG48GfLiQINAM4I3VxIj4MWHiM9vwBFHVjDwSmD9UrSkhsmTGFHE1rRVRBSerJdHBOeFO8rcAa2rIAJniwEz/DWeVT0z1u503vIQb+VQKi6oq0+Olhi4sP0maat2PIm9Yb/F0NKtfH+f+Ua9FvLaiNZQo+TTBQk6vazWQRzzljuk1yX3XPmbEjmo/MtgfTmBjXqWShQr6IIu82DPgzttE4jVwT7f7UPAK0eERBHyp5CewZz9X8otDVsxzpDQoUhzqobfobEMUBwguTjY6NWhjvlJu6vUSjJ8TrNzTWO7XG1DWKstn06I9x+c6V9l05xz4Cmsxf9s/kAnskpFZsvNYzsMcsSpsk/qVflnvjkjEyLPsgb9y5bCIJ958J2I4IDZ8Jvg==';
-const dec=s=>Uint8Array.from(atob(s),c=>c.charCodeAt(0));
-const enc=new TextEncoder(), f=document.querySelector('form'), pass=document.querySelector('#pass'), btn=document.querySelector('#unlock'), status=document.querySelector('#status'), section=document.querySelector('#materials'), list=document.querySelector('#items');
-const reset=()=>{list.replaceChildren();section.hidden=true;f.hidden=false;pass.value='';status.textContent='';};
-document.querySelector('#close').addEventListener('click',()=>{reset();pass.focus();});
-f.addEventListener('submit',async e=>{
- e.preventDefault(); if(btn.disabled)return; btn.disabled=true; status.textContent='確認中…';
- try {
-  const material=await crypto.subtle.importKey('raw',enc.encode(pass.value),'PBKDF2',false,['deriveKey']);
-  pass.value='';
-  const key=await crypto.subtle.deriveKey({name:'PBKDF2',salt:dec(salt),iterations:600000,hash:'SHA-256'},material,{name:'AES-GCM',length:256},false,['decrypt']);
-  const clear=await crypto.subtle.decrypt({name:'AES-GCM',iv:dec(iv),additionalData:enc.encode('mdl-oita-002-v1')},key,dec(packet));
-  const links=JSON.parse(new TextDecoder().decode(clear));list.replaceChildren();
-  for(const {url,label} of links){
-   const u=new URL(url);
-   if(u.protocol!=='https:'||!['docs.google.com','drive.google.com'].includes(u.hostname))throw Error('link');
-   const a=document.createElement('a');a.href=u.href;a.target='_blank';a.rel='noopener noreferrer';a.textContent=label;
-   const li=document.createElement('li');li.append(a);list.append(li);
-  }
-  status.textContent='';section.hidden=false;f.hidden=true;document.querySelector('#list-title').focus();
- } catch {reset();status.textContent='パスワードを確認してください。';pass.focus();}
- finally{btn.disabled=false;}
-});</script></body></html>
+<html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="robots" content="noindex,nofollow"><meta name="referrer" content="no-referrer"><meta http-equiv="refresh" content="0;url=https://oita-mobility-prefecture-review.delpiero.chatgpt.site/login"><title>大分未来モビリティ・コンソーシアム｜資料の入口</title></head>
+<body><main><h1>大分未来モビリティ・コンソーシアム</h1><p><a href="https://oita-mobility-prefecture-review.delpiero.chatgpt.site/login" rel="noreferrer">従来のパスワードで最新版の資料を開く</a></p></main></body></html>
