@@ -165,3 +165,7 @@
  .m-root .m-results-count b{font-size:40px}
  .m-root .m-municipality-list b,.m-root .m-pref-grid b{font-size:24px}
 }
+
+.m-root .m-topic-button[style*="--map-topic-color"]{border-inline-start:4px solid var(--map-topic-color)}
+.m-root .m-topic-button[style*="--map-topic-color"][aria-pressed="true"]{border-color:var(--map-topic-color);box-shadow:inset 0 0 0 1px var(--map-topic-color)}
+.m-root .m-topic-button[style*="--map-topic-color"] .m-topic-mark{color:var(--map-topic-color)}
