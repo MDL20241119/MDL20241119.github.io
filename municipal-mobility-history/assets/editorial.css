@@ -131,3 +131,37 @@
   .m-root.m-policy-extension{padding:20px 16px}
   .m-root.m-policy-extension .m-data-strip b{font-size:60px}
 }
+
+/* Compact archive entry and mobile rhythm. */
+.m-root .m-home-map{padding-top:12px;padding-bottom:14px}
+.m-root .m-home-map .m-map-layout{align-items:start}
+.m-root .m-map-notes,.m-root .m-pref-compact{margin-top:6px}
+.m-root .m-map-notes summary,.m-root .m-pref-compact summary{cursor:pointer;padding:8px 0;color:var(--m-accent,currentColor);font-size:14px}
+@media(max-width:600px){
+ body[data-municipal] .header nav{gap:12px}
+ .m-root .m-home-map{padding-top:4px;padding-bottom:6px}
+ .m-root .m-home-map .m-map-layout{grid-template-columns:minmax(0,1fr);gap:0}
+ .m-root .m-home-map .m-japan{display:block;width:100%;height:auto;max-height:min(42svh,340px);margin:0 auto}
+ .m-root .m-home-map details{margin-top:0}
+ .m-root .m-home-map summary{min-height:36px;padding:7px 0}
+ .m-root .m-topic-grid{gap:5px}
+ .m-root .m-topic-button{min-height:56px;padding:8px;font-size:14px;line-height:1.35}
+ .m-root .m-topic-mark{font-size:17px}
+ .m-root .m-section,.m-root .m-hero{padding-top:20px;padding-bottom:20px}
+ .m-root .m-home-map{padding-top:4px;padding-bottom:6px}
+ .m-root h1,.m-root .m-hero-grid h1{font-size:clamp(31px,9vw,45px);line-height:1.15}
+ .m-root h2{font-size:clamp(25px,7vw,37px);line-height:1.25}
+ .m-root .m-data-strip{gap:10px;margin-top:14px}
+ .m-root .m-data-strip b{font-size:clamp(36px,11vw,55px);margin-bottom:4px}
+ .m-root .m-card,.m-root .m-catalog-card,.m-root .m-filter{padding:13px 12px}
+ .m-root .m-card .m-place{margin-top:7px;font-size:14px}
+ .m-root .m-card h3{font-size:21px;line-height:1.32;margin-bottom:7px}
+ .m-root .m-card .m-card-result,.m-root .m-claim p{font-size:14px;line-height:1.6}
+ .m-root .m-figure-strip{margin:14px 0}
+ .m-root .m-figure{padding:13px 0}
+ .m-root .m-figure-value{font-size:48px}
+ .m-root .m-detail-title h1{font-size:28px;line-height:1.28}
+ .m-root .m-detail-title .m-local{font-size:21px}
+ .m-root .m-results-count b{font-size:40px}
+ .m-root .m-municipality-list b,.m-root .m-pref-grid b{font-size:24px}
+}
