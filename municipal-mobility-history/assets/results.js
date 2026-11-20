@@ -86,7 +86,7 @@
     return `<div class="m-filter-secondary"><label>目的<select name="purpose">${options(taxonomy().purposes.map(x=>[x.code,x.label]),p.purpose,'すべての目的')}</select></label><label>状況<select name="lifecycle">${options(lifecycle.map(x=>[x,lifeNames[x]||x]),p.lifecycle,'すべての記載')}</select></label><label>分類の確認度<select name="class_status">${options([['confirmed','分類確認済み'],['candidate','分類確認中'],['unclassified','未分類']],p.class_status,'候補・未判定も含む')}</select></label></div>${p.topics?`<input type="hidden" name="topics" value="${escape(p.topics)}">`:''}`;
   }
   const route = () => {
-    const [loc,query='']=(location.hash.slice(1)||'home').split('?');const [view,id='']=loc.split('/');
+    const [loc,query='']=(location.hash.slice(1)||(standalone?'prefectures':'home')).split('?');const [view,id='']=loc.split('/');
     let decoded=id;try{decoded=decodeURIComponent(id);}catch{}
     return {view,id:decoded,p:Object.fromEntries(new URLSearchParams(query))};
   };
@@ -170,7 +170,7 @@
     const rows=await discoveryIndex(true),found=sortProjects(filter(rows,p));const page=pagination(found,p,'projects');
     return pageHead('Regional results','結果から、<br>読む。','地域の取組を、利用実績・費用・その後の変化から探せます。')+`<section class="m-section"><div class="m-actions" style="margin:0 0 24px">${btn('公式の実績153原票も読む',url('records','',{layer:'review',evidence:'outcome_result'}))}</div>${viewLinks(p,found.length)}${filters(rows,p,'projects')}${discoveryCounts(found,rows)}<p class="m-small">並び順：都道府県 → 自治体 → 取組名。所在地未確定の記録は末尾に表示します。</p>${found.length?`<div class="m-grid">${page.slice.map(card).join('')}</div>`:empty('この条件の事例は未収録です。')}${page.nav}</section>`;
   }
-  async function prefectures(p={}) {const layer=selectedLayer(p),rows=await (layer==='canonical'?discoveryIndex(true):index(layer)),found=filter(rows,p);if(layer!=='canonical')return pageHead('Map / selected source layer','地図の対象を選ぶ。')+viewLinks(p,found.length);return pageHead('Prefecture → Municipality → Project','地域から、<br>その先へ。','テーマを選んで、地域の取組を地図から探せます。')+`<section class="m-section">${viewLinks(p,found.length,'prefectures')}${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${map(found,p)}</section>`;}
+  async function prefectures(p={}) {const layer=selectedLayer(p),rows=await (layer==='canonical'?discoveryIndex(true):index(layer)),found=filter(rows,p);if(layer!=='canonical')return pageHead('Map / selected source layer','地図の対象を選ぶ。')+viewLinks(p,found.length);if(standalone)return `<section class="m-section m-home-map m-map-entry" aria-labelledby="m-map-title"><h1 id="m-map-title">日本地図から、地域の事例を探す</h1><p class="m-map-instruction">都道府県を選ぶと、自治体・事例へ進めます。</p><nav class="m-actions m-map-switch" aria-label="表示を切り替え">${btn('事例一覧',url('projects','',searchState(p)))}${btn('年表',url('timeline','',searchState(p)))}</nav>${map(found,p,true,topicButtons(p,'prefectures','',rows))}<details class="m-map-filters" ${Object.keys(searchState(p)).length?'open':''}><summary>検索・絞り込み</summary>${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${viewLinks(p,found.length,'prefectures')}</details></section>`;return pageHead('Prefecture → Municipality → Project','地域から、<br>その先へ。','テーマを選んで、地域の取組を地図から探せます。')+`<section class="m-section">${viewLinks(p,found.length,'prefectures')}${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${map(found,p)}</section>`;}
   async function prefecture(name,p) {
     if(!geography.some(g=>g.name===name))return empty('都道府県が見つかりません。');
     if(selectedLayer(p)!=='canonical'){const rows=await index(selectedLayer(p)),found=filter(rows,{...p,pref:name}),pg=pagination(found,p,'prefecture',name);return pageHead('Region / '+name,escape(name)+'。')+`<section class="m-section">${viewLinks({...p,pref:name},found.length,'prefectures')}${filters(rows,{...p,pref:name},'prefectures')}${counts(found.length,rows.length,'記録')}<div class="m-grid">${pg.slice.map(card).join('')}</div>${pg.nav}</section>`;}
@@ -364,7 +364,7 @@
     } catch(err) {if(g===generation&&host.isConnected)host.innerHTML=`<div class="m-error" role="alert"><h2>読み込みを完了できませんでした。</h2><p>${escape(err.message)}</p><button class="m-btn" type="button" data-mretry>再読み込み</button></div>`;}
   }
   function saveScroll() {history.replaceState({...history.state,scrollY:window.scrollY},'');}
-  function render() {const r=route();document.querySelector('main').innerHTML=shell(r);document.title=({case:'案件の結果と変遷',record:'原票の結果と出典',records:'公募・採択等の資料',timeline:'モビリティの年表',scope:'調査状況',catalog:'公表資料を探す','catalog-record':'公表資料の出典'}[r.view]||'自治体のモビリティ｜結果と変遷')+'｜MDL';window.scrollTo(0,history.state?.scrollY||0);mount();}
+  function render() {const r=route();document.querySelector('main').innerHTML=shell(r);document.title=({case:'案件の結果と変遷',record:'原票の結果と出典',records:'公募・採択等の資料',timeline:'モビリティの年表',prefectures:'日本地図から地域の事例を探す',scope:'調査状況',catalog:'公表資料を探す','catalog-record':'公表資料の出典'}[r.view]||'自治体のモビリティ｜結果と変遷')+'｜MDL';window.scrollTo(0,history.state?.scrollY||0);mount();}
   function navigate(h,keep=false) {
     if(!standalone){location.hash=h;return;}const y=window.scrollY;saveScroll();history.pushState(keep?{scrollY:y}:{},'',h);render();
   }
