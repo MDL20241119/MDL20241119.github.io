@@ -188,3 +188,22 @@
 .m-root .m-map-entry .m-map-switch .m-btn{min-height:36px;padding:7px 12px}
 .m-root .m-map-entry .m-map-filters{margin-top:8px}
 .m-root .m-map-entry .m-map-filters>summary{cursor:pointer;font-weight:700}
+
+/* Browse the archive without forcing the map or theme controls out of view. */
+.m-root .m-contents-tree{margin:12px 0 16px;padding:12px 14px;border:1px solid var(--m-line, #344252);border-radius:12px}
+.m-root .m-contents-tree h2{font-size:clamp(18px,3vw,24px);margin:0 0 4px}
+.m-root .m-contents-tree p{margin:0 0 6px;font-size:13px}
+.m-root .m-contents-tree ul{list-style:none;margin:0;padding:0}
+.m-root .m-contents-tree li{position:relative;margin:0;padding:0}
+.m-root .m-contents-tree li>ul,.m-root .m-contents-tree details>ul{margin:0 0 2px 5px;padding-left:14px;border-left:1px solid var(--m-line, #344252)}
+.m-root .m-contents-tree li>ul>li::before,.m-root .m-contents-tree details>ul>li::before{content:"";position:absolute;top:16px;left:-14px;width:9px;border-top:1px solid var(--m-line, #344252)}
+.m-root .m-contents-tree li>a,.m-root .m-contents-tree summary,.m-root .m-contents-tree .m-tree-group{display:inline-block;min-height:34px;padding:6px 0;font-size:14px;font-weight:700}
+.m-root .m-contents-tree summary{display:list-item;cursor:pointer}
+.m-root .m-contents-tree li>a{color:var(--m-accent,currentColor);text-decoration:underline;text-underline-offset:3px}
+.m-root .m-contents-tree li>a+span{margin-left:8px;font-size:12px;color:var(--m-muted,currentColor)}
+.m-root .m-contents-tree .m-pref-compact{margin:0}
+.m-root .m-contents-tree .m-pref-grid{margin:4px 0 8px}
+@media(max-width:480px){
+  .m-root .m-contents-tree{padding:9px 11px}
+  .m-root .m-contents-tree li>a+span{display:block;margin:-3px 0 4px}
+}
