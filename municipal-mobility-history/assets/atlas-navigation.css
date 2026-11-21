@@ -1,0 +1,105 @@
+/* Navigation and responsive hierarchy for the municipal archive only. */
+body[data-municipal]{--atlas-paper:#101922;--atlas-border:#344959;--atlas-muted:#b6cbd6;--atlas-aqua:#83def6;--atlas-pink:#ffc2d6;--atlas-sun:#ffe29a;--atlas-mint:#a8efd0}
+body[data-municipal] .header nav a[aria-current=page]{color:var(--atlas-aqua);text-decoration:underline;text-underline-offset:.35em;text-decoration-thickness:2px}
+body[data-municipal] .header .edition{line-height:1.25;letter-spacing:.08em}
+body[data-municipal] .header .edition b{font-family:inherit}
+body[data-municipal] :is(a,button,input,select,summary,[tabindex]):focus-visible{outline:3px solid var(--atlas-aqua);outline-offset:3px}
+body[data-municipal] :is(#m-atlas-map,#m-atlas-results){scroll-margin-top:7rem}
+.m-atlas-intro{margin:clamp(16px,2.8vw,32px) 0 18px;padding:clamp(16px,3vw,37px);border:1px solid var(--atlas-border);border-radius:20px;background:radial-gradient(ellipse at 85% 0%,#173848 0,transparent 48%),linear-gradient(135deg,#101b27,#111c24);box-shadow:0 16px 42px #0003}
+.m-atlas-intro-top{display:flex;align-items:end;justify-content:space-between;gap:22px}
+.m-atlas-intro h1{color:#f3f9fc;margin:4px 0 10px;font-size:clamp(36px,5.05vw,68px);line-height:1.07;letter-spacing:-.05em;font-weight:900}
+.m-atlas-intro h1 em{font-style:normal;color:var(--atlas-aqua)}
+.m-atlas-intro .m-kicker,.m-atlas-map .m-kicker{color:var(--atlas-aqua);margin:0 0 8px;font-size:11px;font-weight:800;letter-spacing:.11em}
+.m-atlas-intro .m-kicker span{color:var(--atlas-muted);letter-spacing:.05em}
+.m-atlas-desc,.m-atlas-map .m-map-instruction{margin:.35rem 0 0;color:#d9e9ee;font-size:clamp(13px,1.4vw,17px);line-height:1.55}
+.m-atlas-stats{margin:0;display:flex;gap:20px;flex-shrink:0}
+.m-atlas-stats div{border-left:1px solid #506675;padding-left:14px}
+.m-atlas-stats dt{font-size:11px;color:var(--atlas-muted);font-weight:700}
+.m-atlas-stats dd{margin:0;color:#f3f9fc;font-size:33px;line-height:1.1;font-weight:850;font-variant-numeric:tabular-nums}
+.m-atlas-stats dd small{margin-left:.35em;font-size:11px;font-weight:700;color:var(--atlas-muted)}
+.m-atlas-search{margin:21px 0 15px}
+.m-atlas-search label,.m-atlas-pref label{display:block;font-weight:750;font-size:13px;margin-bottom:5px;color:#eef8fc}
+.m-atlas-search .m-search-row{margin:0;display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px}
+.m-atlas-search input,.m-atlas-pref select{box-sizing:border-box;min-width:0;width:100%;border:1px solid #587181;border-radius:9px;background:#0a121b;color:#f3f9fc;min-height:46px;padding:9px 12px;font-size:16px}
+.m-atlas-search input::placeholder{color:#b6cbd6;opacity:1}
+.m-atlas-search button,.m-atlas-pref button{margin:0;min-height:46px;white-space:nowrap;border-radius:9px;display:inline-flex;align-items:center;justify-content:center;gap:6px;padding:8px 13px}
+.m-atlas-search button svg,.m-atlas-way svg{width:19px;height:19px;flex-shrink:0}
+.m-atlas-examples{margin-top:5px;display:flex;align-items:center;flex-wrap:wrap;gap:3px 10px;font-size:12px;color:var(--atlas-muted)}
+.m-atlas-examples a{color:var(--atlas-aqua);padding:6px 0;text-underline-offset:.23em}
+.m-atlas-ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
+.m-atlas-way{--way:var(--atlas-aqua);min-width:0;display:flex;align-items:center;gap:9px;padding:10px 11px;min-height:61px;text-decoration:none;border:1px solid #405768;border-radius:10px;background:#0d1821;color:#f2f8fc}
+.m-atlas-way[data-way=projects]{--way:var(--atlas-pink)}
+.m-atlas-way[data-way=timeline]{--way:var(--atlas-sun)}
+.m-atlas-way[data-way=catalog]{--way:var(--atlas-mint)}
+.m-atlas-way:hover{border-color:var(--way);background:#172835}
+.m-atlas-way[data-way=map]{border-color:#79c9e0;background:#142c38}
+.m-atlas-way svg,.m-atlas-chevron{color:var(--way)}
+.m-atlas-way b,.m-atlas-way small{display:block;line-height:1.3}
+.m-atlas-way b{font-size:14px;color:#f2f8fc}
+.m-atlas-way small{font-size:11px;font-weight:500;color:var(--atlas-muted);margin-top:3px}
+.m-atlas-chevron{margin-left:auto;font-size:18px;line-height:1}
+.m-atlas-map.m-section{padding-top:12px}
+.m-atlas-maphead{margin:0 0 12px;display:flex;align-items:end;justify-content:space-between;gap:18px}
+.m-atlas-map h2{letter-spacing:-.035em}
+.m-atlas-maphead h2{margin:0;font-size:clamp(25px,3.1vw,38px);line-height:1.15}
+.m-atlas-pref{width:min(100%,320px);flex-shrink:0}
+.m-atlas-pref>div{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:6px}
+.m-atlas-map .m-japan{border:1px solid var(--atlas-border);border-radius:13px;max-height:min(49vh,455px)}
+.m-atlas-map .m-contents-tree{margin-top:16px}
+.m-atlas-context{display:flex;align-items:center;justify-content:space-between;gap:12px;font-size:13px;color:#d8f3fa;margin-bottom:10px}
+.m-atlas-context p{margin:0}
+.m-atlas-context a{color:var(--atlas-aqua)}
+.m-ux-topics{margin:10px 0 14px;border:1px solid var(--atlas-border);border-radius:8px;padding:8px 12px}
+.m-ux-topics>summary{color:#e7f5fa;font-weight:740;cursor:pointer;min-height:30px;line-height:30px}
+.m-ux-topics>summary small{font-weight:550;color:var(--atlas-muted);margin-left:.4em}
+.m-ux-topics .m-topic-panel{margin:4px 0 0}
+body[data-municipal] .m-root>.m-hero:not(.m-detail-title) h1{font-size:clamp(32px,5.4vw,60px)}
+body[data-municipal] .m-root>.m-hero:not(.m-detail-title){padding-block:clamp(18px,3.2vw,40px)}
+body[data-municipal] .m-municipal-search{min-width:0}
+@media(max-width:680px){
+  body[data-municipal] :is(#m-atlas-map,#m-atlas-results){scroll-margin-top:6.1rem}
+  body[data-municipal] .header nav{gap:5px}
+  body[data-municipal] .header nav a{padding:7px 6px}
+  .m-atlas-intro{padding:15px 12px;border-radius:13px;margin-top:12px;margin-bottom:9px}
+  .m-atlas-intro-top{display:block}
+  .m-atlas-intro h1{font-size:clamp(28px,8.35vw,49px);margin:5px 0 5px}
+  .m-atlas-intro .m-kicker{font-size:9px;margin-bottom:4px}
+  .m-atlas-stats{margin-top:8px;gap:13px}
+  .m-atlas-stats div{display:flex;flex-direction:row-reverse;align-items:baseline;gap:4px;padding-left:7px}
+  .m-atlas-stats dt{font-size:9px}.m-atlas-stats dd{font-size:16px}.m-atlas-stats dd small{font-size:9px;margin-left:.2em}
+  .m-atlas-search{margin:11px 0 8px}
+  .m-atlas-examples{font-size:11px}
+  .m-atlas-way{min-height:55px;padding:7px;gap:6px}
+  .m-atlas-way b{font-size:clamp(11px,3.5vw,15px)}
+  .m-atlas-way small{font-size:clamp(9px,2.8vw,12px)}
+  .m-atlas-way svg{width:16px;height:16px}
+  .m-atlas-chevron{display:none}
+  .m-atlas-ways{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+  .m-atlas-maphead{display:block}
+  .m-atlas-maphead .m-kicker{margin-bottom:5px}
+  .m-atlas-map .m-map-instruction{margin:3px 0 9px}
+  .m-atlas-pref{width:100%}
+  .m-atlas-pref select,.m-atlas-pref button{min-height:44px}
+  .m-atlas-map .m-japan{max-height:min(40svh,330px)}
+  body[data-municipal] .m-municipal-search input{min-width:0;width:100%;font-size:16px}
+}
+body[data-municipal] #m-atlas-contents{scroll-margin-top:7rem}
+.m-atlas-underlinks{display:flex;align-items:center;gap:16px;margin-top:12px;font-size:12px}
+.m-root .m-atlas-underlinks a,.m-root .m-atlas-legend{color:var(--atlas-muted)}
+.m-atlas-underlinks a{text-underline-offset:.25em}
+.m-atlas-legend{display:flex;align-items:center;flex-wrap:wrap;gap:5px 10px;padding-bottom:8px;font-size:11px}
+.m-atlas-legend span{display:inline-flex;align-items:center;gap:5px}
+.m-atlas-legend i{width:10px;height:10px;border-radius:2px;border:1px solid #9db5c7;background:var(--map-swatch)}
+.m-atlas-viewlinks{display:flex;align-items:center;flex-wrap:wrap;gap:5px;color:var(--atlas-muted);font-size:12px;margin:12px 0 7px}
+.m-atlas-viewlinks>span{margin-right:5px}
+.m-atlas-viewlinks a{border:1px solid var(--atlas-border);border-radius:6px;padding:8px 11px;text-decoration:none;font-weight:700}
+.m-atlas-viewlinks a[aria-current=page]{color:var(--atlas-aqua);border-color:#77b8c8;background:#18333f}
+@media(max-width:680px){
+  .m-atlas-underlinks{margin-top:8px}
+  .m-atlas-stats dd small{display:none}
+  .m-atlas-stats div{gap:5px}
+}
+.m-atlas-detail-nav{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0}
+.m-atlas-detail-nav a{display:inline-flex;align-items:center;min-height:44px;border:1px solid var(--atlas-border);border-radius:8px;padding:7px 12px;text-decoration:none;font-weight:740;color:var(--atlas-aqua)}
+body[data-municipal] #results,body[data-municipal] #changes,body[data-municipal] #sources{scroll-margin-top:7rem}
+@media(max-width:680px){.m-atlas-detail-nav a{font-size:13px;padding-inline:8px}}
