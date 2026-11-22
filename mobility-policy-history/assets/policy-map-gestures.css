@@ -1,0 +1,30 @@
+/* Within the existing front map only. Height and document scroll are not altered. */
+.policy-front-graphic.p-map-interactive{position:relative}
+.policy-front-graphic .p-map-tools{
+  position:absolute;left:4px;bottom:4px;display:flex;align-items:center;gap:1px;
+  border-radius:7px;background:#10232fee;border:1px solid #6c96ac;z-index:1
+}
+.policy-front-graphic .p-map-tools button{
+  appearance:none;border:0;background:none;border-radius:5px;color:#f5faff;
+  display:grid;place-items:center;min-width:40px;min-height:36px;padding:0;font:inherit;
+  font-size:21px;line-height:1;cursor:pointer
+}
+.policy-front-graphic .p-map-tools button svg{pointer-events:none}
+.policy-front-graphic .p-map-tools button:hover{background:#28485b}
+.policy-front-graphic .p-map-tools button[aria-disabled="true"]{color:#a7c2d2;opacity:.57;cursor:default}
+.policy-front-graphic .p-map-tools button:focus-visible,
+.policy-front-graphic.p-map-interactive:focus-visible{outline:2px solid #ffdd84;outline-offset:2px}
+.policy-front-graphic .p-map-sr{
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0
+}
+.policy-front-graphic.p-map-can-pan .japan-map{cursor:grab}
+.policy-front-graphic.p-map-dragging .japan-map{cursor:grabbing;user-select:none}
+.policy-front-graphic.p-map-interactive .japan-map{touch-action:none;user-select:none}
+@media (max-width:750px),(pointer:coarse),(hover:none){
+  .policy-front-graphic .p-map-tools button{min-width:39px;min-height:40px}
+}
+@media (max-width:350px){
+  .policy-front-graphic .p-map-tools button{min-width:37px;min-height:36px}
+}
+@media print{.policy-front-graphic .p-map-tools{display:none}}

@@ -24,22 +24,22 @@
 .policy-search-line input::placeholder{color:#b7cbd8;opacity:1}
 .policy-search-line button{display:flex;align-items:center;justify-content:center;gap:6px;color:#07151d;background:var(--p-ice);border-color:var(--p-ice);font-weight:850;padding-inline:14px;cursor:pointer}
 .policy-search-line button:hover{background:#c0effe}
-.policy-search-line button svg,.policy-ways svg{width:20px;height:20px;flex-shrink:0}
-.policy-examples,.policy-minilinks{display:flex;align-items:center;flex-wrap:wrap;gap:2px 13px;font-size:12px;color:var(--p-quiet)}
-.policy-examples{margin-top:4px}
-.policy-examples a,.policy-minilinks a{padding:6px 0;color:var(--p-ice);text-decoration:underline;text-underline-offset:.23em}
-.policy-minilinks{margin-top:9px}
-.policy-ways{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:8px}
-.policy-ways a{--way:var(--p-ice);min-width:0;display:flex;align-items:center;gap:9px;min-height:66px;padding:10px 11px;background:#0d1821;border:1px solid #3a5366;border-radius:10px;text-decoration:none;color:var(--p-text)}
-.policy-ways a[data-way=programs]{border-color:#7ac9df;background:#142c38}
-.policy-ways a[data-way=timeline]{--way:var(--p-sun)}
-.policy-ways a[data-way=region]{--way:var(--p-pink)}
-.policy-ways a[data-way=sources]{--way:var(--p-mint)}
-.policy-ways a:hover{border-color:var(--way);background:#182b38}
-.policy-ways :is(svg,.policy-chevron){color:var(--way)}
-.policy-ways b,.policy-ways small{display:block;line-height:1.35}
-.policy-ways b{font-size:15px;color:var(--p-text)}
-.policy-ways small{margin-top:3px;font-size:11px;color:var(--p-quiet)}
+.policy-search-line button svg{width:20px;height:20px;flex-shrink:0}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .policy-chevron{margin-left:auto;font-size:18px}
 .policy-contents{color:var(--p-quiet);border:1px solid var(--p-line);border-radius:12px;padding:11px 16px;margin:0 0 19px}
 .policy-contents summary{cursor:pointer;font-weight:850;color:var(--p-text);min-height:30px;line-height:30px}
@@ -85,13 +85,11 @@
   .policy-search-line{grid-template-columns:minmax(0,1fr) auto;gap:5px}
   .policy-search-line input{grid-column:1/-1}
   .policy-search-line :is(select,button){min-height:41px}
-  .policy-ways{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
-  .policy-ways a{min-height:56px;gap:6px;padding:7px 6px}
-  .policy-ways svg{width:16px;height:16px}
+
+
+
   .policy-chevron{display:none}
-  .policy-ways b{font-size:clamp(11px,3.35vw,15px)}
-  .policy-ways small{font-size:clamp(9px,2.65vw,12px)}
-  .policy-minilinks,.policy-examples{font-size:11px;gap:1px 9px}
+
   .policy-update-grid{grid-template-columns:1fr}
   .policy-update-grid>.section{padding:13px}
   .policy-section-nav a{font-size:12px;padding-inline:8px}
@@ -100,13 +98,12 @@
 /* Map-first shared landing: actual geography and examples, not a second giant hero. */
 .policy-entry{
   display:grid;grid-template-columns:minmax(0,1.15fr) minmax(0,1fr);
-  grid-template-areas:"intro map" "search map" "ways map" "links map";
-  grid-template-rows:auto auto auto 1fr;column-gap:clamp(15px,3vw,36px);align-items:start;
+  grid-template-areas:"intro map" "search map" "tree tree";
+  grid-template-rows:auto 1fr auto;row-gap:10px;column-gap:clamp(15px,3vw,36px);align-items:start;
 }
 .policy-hero-top{grid-area:intro;display:block}
 .policy-entry-search{grid-area:search}
-.policy-ways{grid-area:ways;grid-template-columns:repeat(2,minmax(0,1fr))}
-.policy-minilinks{grid-area:links;align-self:end}
+
 .policy-entry h1{font-size:clamp(33px,4.35vw,64px)}
 .policy-stats{margin:12px 0 0}
 .policy-stats div{display:flex;align-items:baseline;gap:6px}
@@ -133,19 +130,19 @@
 #policy-entry-pref{display:flex;gap:4px;align-items:center;min-width:0}
 #policy-entry-pref :is(select,button){min-width:0;background:#111f2c;color:var(--p-text);border:1px solid #557385;border-radius:6px;font:inherit;font-size:12px;min-height:36px;padding:4px 6px}
 #policy-entry-pref button{white-space:nowrap;cursor:pointer;font-weight:800}
-.policy-samples{margin:2px 0 16px}
-.policy-samples-heading{display:flex;align-items:baseline;flex-wrap:wrap;gap:5px 12px;margin-bottom:8px}
-.policy-samples-heading h2{margin:0;font-size:clamp(20px,2.4vw,29px);line-height:1.25}
-.policy-samples-heading p{margin:0;color:var(--p-quiet);font-size:12px}
-.policy-samples>div:last-child{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
-.policy-samples a{min-width:0;padding:9px 11px;background:#101c27;border:1px solid var(--p-line);border-radius:8px;text-decoration:none;color:var(--p-text)}
-.policy-samples a:hover{border-color:var(--p-ice)}
-.policy-samples a :is(small,b,span){display:block}
-.policy-samples a small{color:var(--p-ice);font-size:10px;font-weight:800}
-.policy-samples a b{margin:2px 0 1px;font-size:14px;line-height:1.3}
-.policy-samples a span{color:var(--p-quiet);font-size:11px}
+
+
+
+
+
+
+
+
+
+
+
 @media(max-width:750px){
-  .policy-entry{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "map" "search" "ways" "links";row-gap:8px}
+  .policy-entry{grid-template-columns:minmax(0,1fr);grid-template-areas:"intro" "map" "search" "tree";row-gap:8px}
   .policy-entry h1{font-size:clamp(27px,7.9vw,50px)}
   .policy-stats{margin-top:6px}.policy-stats dd{font-size:17px}
   .policy-front-map{padding:9px}
@@ -157,17 +154,16 @@
   #policy-entry-pref select{font-size:16px;max-width:145px}
   #policy-entry-pref :is(select,button){min-height:42px}
   .policy-entry-search{margin:1px 0}
-  .policy-minilinks{margin-top:0}
-  .policy-samples>div:last-child{grid-template-columns:repeat(2,minmax(0,1fr))}
-}
-@media(min-width:751px) and (max-width:1010px){.policy-ways a{gap:6px;padding:8px}.policy-ways b{font-size:13px}.policy-ways small{font-size:10px}.policy-chevron{display:none}.policy-front-bottom{flex-wrap:wrap}}
-.policy-map-states{display:flex;flex-wrap:wrap;gap:4px;margin-top:7px}
-.policy-map-states a{color:var(--p-quiet);font-size:11px;font-weight:700;padding:4px 7px;text-decoration:none;border:1px solid var(--p-line);border-radius:5px}
-.policy-map-states a:hover{color:var(--p-ice);border-color:var(--p-ice)}
-@media(max-width:750px){.policy-map-states a{padding-block:6px}}
 
-/* Always-visible two-level outline; on a phone it replaces duplicate large route cards. */
-.policy-outline{scroll-margin-top:12px;padding:12px 14px 14px;border:1px solid var(--p-line);border-radius:11px;background:#101b25;margin:0 0 12px}
+}
+@media(min-width:751px) and (max-width:1010px){.policy-front-bottom{flex-wrap:wrap}}
+
+
+
+
+
+/* One always-visible tree replaces duplicate headings and route menus. */
+.policy-outline{grid-area:tree;scroll-margin-top:12px;padding:12px 14px 14px;border:1px solid var(--p-line);border-radius:11px;background:#101b25;margin:0}
 .policy-outline-head{display:flex;align-items:baseline;gap:3px 12px;flex-wrap:wrap;margin-bottom:8px}
 .policy-outline-head h2{margin:0;font-size:clamp(21px,2.5vw,32px);line-height:1.2;color:var(--p-text)}
 .policy-outline-head>span{font-size:12px;color:var(--p-quiet)}
@@ -204,9 +200,9 @@
   .policy-search-line :is(input,select,button){min-height:43px;padding:5px}
   .policy-search-line button{min-width:42px}
   .policy-search-line button span{display:none}
-  .policy-examples{margin-top:1px}
-  .policy-examples a,.policy-minilinks a{padding:3px 0}
-  .policy-entry>.policy-ways{display:none}
+
+
+  
   .policy-outline{padding:8px;margin-bottom:7px}
   .policy-outline-head{margin-bottom:5px}
   .policy-outline-head h2{font-size:20px}
@@ -214,6 +210,15 @@
   .policy-outline .policy-outline-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
   .policy-outline-grid>li{padding:5px 6px}
   .policy-outline-grid h3{font-size:13px;margin-bottom:1px}
-  .policy-outline-grid a{font-size:12px;min-height:27px;padding:3px 0}
-  .policy-outline-grid li li:before{top:12px}
+  .policy-outline-grid a{font-size:12px;min-height:36px;padding:4px 0}
+  .policy-outline-grid li li:before{top:17px}
 }
+
+/* The one entry tree also serves as the return destination. */
+.policy-at-home .header .policy-return{display:none}
+.policy-return a{white-space:nowrap}
+.policy-outline a:focus-visible,.policy-return a:focus-visible{outline:2px solid var(--p-ice);outline-offset:2px}
+#policy-entry-pref select{cursor:pointer}
+@media(max-width:750px){.policy-return a{min-height:36px;display:inline-flex;align-items:center}.policy-outline{margin:0}}
+
+.policy-archive .home-content [hidden]{display:none!important}
