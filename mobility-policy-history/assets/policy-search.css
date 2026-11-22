@@ -1,0 +1,30 @@
+/* Scoped to the national history forms and their result headings. */
+.p-find-sr-only {
+  position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;
+  clip:rect(0,0,0,0);clip-path:inset(50%);white-space:nowrap;border:0;
+}
+.p-find-options {margin:.45rem 0 0;min-width:0}
+.p-find-options > summary {cursor:pointer;font-weight:750;min-height:44px;padding:.55rem 0;line-height:1.65}
+.p-find-options[open] > summary {margin-bottom:.3rem}
+.p-find-hint {color:inherit;opacity:.82;font-size:.84rem;line-height:1.55;margin:.45rem 0 0;overflow-wrap:anywhere}
+.p-find-actions {display:flex;gap:.35rem .85rem;align-items:center;flex-wrap:wrap;margin:.15rem 0 0;min-width:0}
+.p-find-actions > .p-find-tags {display:flex;flex-wrap:wrap;gap:.35rem;flex:1 0 100%;min-width:0;margin:.45rem 0 0;padding:0;list-style:none}
+.p-find-tags li {
+  color:#082039;background:#d5f1ff;border-radius:.38rem;padding:.2rem .5rem;max-width:100%;
+  overflow-wrap:anywhere;font-size:.82rem;line-height:1.45;
+}
+.p-find-actions > :is(.p-find-reset,.p-find-jump) {
+  display:inline-flex;align-items:center;appearance:none;min-height:44px;padding:0 .08rem;margin:0;
+  border:0;border-radius:.15rem;background:none;color:inherit;font:inherit;font-size:.85rem;font-weight:750;
+  text-underline-offset:.22em;text-decoration:underline;cursor:pointer;line-height:1.35;
+}
+.p-find-reset[hidden] {display:none !important}
+.p-find-results {scroll-margin-top:var(--p-find-result-gap, .65rem)}
+:is(.p-find-reset,.p-find-jump,.p-find-options > summary,.p-find-results):focus-visible {
+  outline:3px solid #1684c3;outline-offset:4px;
+}
+@media(max-width:720px){
+  :is(form#filters,form#source-search) .search-line :is(input,button) {min-height:48px}
+  :is(form#filters,form#source-search) .search-line input,.p-find-options select {font-size:16px;max-width:100%}
+  .p-find-options select {min-height:44px}
+}
