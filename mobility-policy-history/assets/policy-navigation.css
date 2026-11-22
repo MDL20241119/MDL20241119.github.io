@@ -165,3 +165,55 @@
 .policy-map-states a{color:var(--p-quiet);font-size:11px;font-weight:700;padding:4px 7px;text-decoration:none;border:1px solid var(--p-line);border-radius:5px}
 .policy-map-states a:hover{color:var(--p-ice);border-color:var(--p-ice)}
 @media(max-width:750px){.policy-map-states a{padding-block:6px}}
+
+/* Always-visible two-level outline; on a phone it replaces duplicate large route cards. */
+.policy-outline{scroll-margin-top:12px;padding:12px 14px 14px;border:1px solid var(--p-line);border-radius:11px;background:#101b25;margin:0 0 12px}
+.policy-outline-head{display:flex;align-items:baseline;gap:3px 12px;flex-wrap:wrap;margin-bottom:8px}
+.policy-outline-head h2{margin:0;font-size:clamp(21px,2.5vw,32px);line-height:1.2;color:var(--p-text)}
+.policy-outline-head>span{font-size:12px;color:var(--p-quiet)}
+.policy-outline ul{list-style:none;margin:0;padding:0}
+.policy-outline .policy-outline-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:9px}
+.policy-outline-grid>li{--branch:var(--p-ice);min-width:0;padding:7px 9px;border:1px solid #334e5f;border-radius:8px;background:#111f2a}
+.policy-outline-grid>li[data-branch=region]{--branch:var(--p-pink)}
+.policy-outline-grid>li[data-branch=timeline]{--branch:var(--p-sun)}
+.policy-outline-grid>li[data-branch=sources]{--branch:var(--p-mint)}
+.policy-outline-grid h3{display:flex;align-items:center;gap:7px;font-size:14px;color:var(--branch);margin:0 0 4px;font-weight:850;line-height:1.35}
+.policy-outline-grid svg{height:16px;width:16px;flex:none}
+.policy-outline-grid li>ul{border-left:1px solid #59717d;margin-inline-start:6px;padding-inline-start:7px}
+.policy-outline-grid li li{position:relative}
+.policy-outline-grid li li:before{content:"";position:absolute;left:-7px;top:14px;width:5px;border-top:1px solid #59717d}
+.policy-outline-grid a{display:flex;justify-content:space-between;align-items:center;gap:4px;min-height:31px;text-decoration:none;color:var(--p-text);font-size:12px;line-height:1.25;padding:4px 0}
+.policy-outline-grid a i{font-style:normal;color:var(--branch);flex:none}
+.policy-outline-grid a:hover{text-decoration:underline;text-underline-offset:.2em}
+.policy-extra{border:1px solid var(--p-line);border-radius:8px;padding:0 12px;margin:8px 0;background:#101923}
+.policy-extra>summary{min-height:39px;padding:8px 0;cursor:pointer;color:var(--p-text);font-size:13px;font-weight:750}
+.policy-extra[open]>summary{border-bottom:1px solid var(--p-line)}
+@media(max-width:750px){
+  .policy-intro{margin-block:8px}
+  .policy-entry{padding:10px;row-gap:6px}
+  .policy-entry h1{margin-bottom:4px}
+  .policy-description{line-height:1.35}
+  .policy-front-map{padding:7px 8px}
+  .policy-front-graphic{height:clamp(126px,38vw,194px)}
+  .policy-front-bottom p{font-size:9px}
+  .policy-front-scope{margin:3px 0 5px}
+  .policy-front-map .policy-map-states{margin-top:4px}
+  .policy-entry-search>label{margin-bottom:3px}
+  .policy-search-line{grid-template-columns:minmax(0,1fr) minmax(80px,.55fr) auto}
+  .policy-search-line input{grid-column:auto}
+  .policy-search-line :is(input,select,button){min-height:43px;padding:5px}
+  .policy-search-line button{min-width:42px}
+  .policy-search-line button span{display:none}
+  .policy-examples{margin-top:1px}
+  .policy-examples a,.policy-minilinks a{padding:3px 0}
+  .policy-entry>.policy-ways{display:none}
+  .policy-outline{padding:8px;margin-bottom:7px}
+  .policy-outline-head{margin-bottom:5px}
+  .policy-outline-head h2{font-size:20px}
+  .policy-outline-head>span{font-size:10px}
+  .policy-outline .policy-outline-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}
+  .policy-outline-grid>li{padding:5px 6px}
+  .policy-outline-grid h3{font-size:13px;margin-bottom:1px}
+  .policy-outline-grid a{font-size:12px;min-height:27px;padding:3px 0}
+  .policy-outline-grid li li:before{top:12px}
+}
