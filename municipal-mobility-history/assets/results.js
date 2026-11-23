@@ -183,7 +183,7 @@
       ['map','地図から',mapUrl,[
         ['日本地図',mapUrl],['都道府県一覧',url('prefectures','',{...shared,section:'m-atlas-pref-list'})]]],
       ['policy','政策から','../mobility-policy-history/#programs',[
-        ['制度別の採択',url('awards')],['公表資料',url('catalog')]]],
+        ['採択された会社別',url('award-companies')],['制度別の採択',url('awards')],['公表資料',url('catalog')]]],
       ['projects','取り組み内容から',projectUrl,[
         ['事例一覧',projectUrl],['年表',url('timeline','',shared)]]]
     ];
@@ -387,7 +387,7 @@
   }
 
   async function awards(p) {
-    const all=await data('national/official-cohorts-20261123.json');
+    const all=await data('national/official-cohorts-by-awardee-20261123.json');
     const series=all.series.find(x=>x.key===p.series)||all.series[0];
     const rows=series.records;
     const q=queryParts(p.q);
@@ -401,10 +401,42 @@
     const sourceTable=series.cohorts.length?`<details class="m-more-filters"><summary>年度・公募回ごとの件数と原典</summary><div class="m-table-wrap"><table><thead><tr><th scope="col">年度・公募回</th><th scope="col">件数</th><th scope="col">国の公表資料</th></tr></thead><tbody>${series.cohorts.map(c=>`<tr><th scope="row">${escape(c.label)}</th><td>${escape(c.count)}件</td><td>${linkOut('公式一覧',c.url)}</td></tr>`).join('')}</tbody></table></div></details>`:'';
     return crumb([['公表資料',url('catalog','',{kind:'selection'})],['採択・支援の原典一覧']])+pageHead('Official selections & reports','採択・支援の原典一覧','国の公式一覧を制度ごとにまとめました。採択・支援、実績報告の所在、運行の確認は別です。')+
       `<section class="m-section"><nav class="m-catalog-tabs" aria-label="制度別の公式一覧">${all.series.map(x=>`<a class="m-btn${x.key===series.key?' m-primary':''}" ${x.key===series.key?'aria-current="page"':''} href="${escape(url('awards','',{series:x.key,q:p.q}))}" data-mnav>${escape(x.label)}</a>`).join('')}</nav>
-      <h2>${escape(series.label)}</h2><p class="m-small">${escape(series.note)} ${linkOut('制度の公式資料',series.source)}</p>${sourceTable}
+      <div class="m-actions">${btn('採択された会社別',url('award-companies'),true)}</div><h2>${escape(series.label)}</h2><p class="m-small">${escape(series.note)} ${linkOut('制度の公式資料',series.source)}</p>${sourceTable}
       <form class="m-filter" data-mfilter data-view="awards"><input type="hidden" name="series" value="${escape(series.key)}"><div class="m-search-row"><input type="search" name="q" value="${escape(p.q||'')}" aria-label="事業名・地域・採択先で検索" placeholder="事業名・地域・採択先"><button class="m-btn m-primary" type="submit">検索</button></div><div class="m-filter-grid"><label>年度<select name="year">${options(years,p.year,'すべての年度')}</select></label>${rounds.length?`<label>公募回<select name="round">${options(rounds.map(n=>[n,'第'+n+'次']),p.round,'すべての回')}</select></label>`:''}${categories.length?`<label>区分<select name="category">${options(categories,p.category,'すべての区分')}</select></label>`:''}</div></form>
       ${counts(found.length,rows.length)}${found.length?`<div class="m-grid">${page.slice.map(x=>`<article class="m-card m-cohort-card"><div class="m-badges">${badge(x.status)}${x.category?badge(x.category):''}</div><p class="m-place">${escape([x.year+'年度',x.round?'第'+x.round+'次':'',x.region].filter(Boolean).join(' ／ '))}</p><h3>${escape(x.title)}</h3>${x.actor?`<p class="m-small">${escape(x.actor)}</p>`:''}${x.summary?`<p class="m-card-result">${numberMarkup(x.summary)}</p>`:''}<div class="m-actions">${x.originalId?`<a href="${escape(url('record',x.originalId,{layer:'selection',from:location.hash.slice(1)}))}" data-mnav>収録済み原票</a>`:''}${linkOut(x.locator||'採択・支援の原典',x.source || series.source)}${linkOut(x.reportReviewed?'実績原典（該当箇所確認）':'実績報告（原典）',x.reportUrl)}</div></article>`).join('')}</div>`:`<p>この公式一覧に該当する記録はありません。</p>`}${page.nav}
       </section>`;
+  }
+  const companyKinds={company:'会社',representative:'共同体の代表機関',other:'会社以外',unknown:'採択先の判定・名称が未確認'};
+  async function awardCompanies(p,id="") {
+    const register=await data('national/official-award-companies-20261123.json');
+    if(!Array.isArray(register?.groups))throw Error('会社別の一覧データを確認できません。');
+    const groups=register.groups.map(g=>{
+      const kind=companyKinds[g.kind]?g.kind:'unknown';
+      return {...g,kind,routeId:g.id||kind+':'+(g.name||''),items:Array.isArray(g.items)?g.items:[]};
+    });
+    const recordId=x=>x.id||[x.series,x.source_url,x.source_locator,x.title,x.year].join('|');
+    const distinctRows=(gs)=>new Set(gs.flatMap(g=>g.items.map(recordId))).size;
+    const total=distinctRows(groups);
+    const namedRows=distinctRows(groups.filter(g=>g.kind==='company').map(g=>({...g,items:g.items.filter(x=>!/(取下げ|取消)/.test(x.status||''))})));
+    const unknownRows=distinctRows(groups.filter(g=>g.kind==='unknown'));
+    const seriesNames=[...new Set(groups.flatMap(g=>g.items.map(x=>x.series).filter(Boolean)))].sort((a,b)=>a.localeCompare(b,'ja'));
+
+    const years=[...new Set(groups.flatMap(g=>g.items.map(x=>x.year).filter(Boolean)))].sort((a,b)=>Number(b)-Number(a));
+    const q=queryParts(p.q), found=groups.filter(g=>!p.kind||p.kind===g.kind).map(g=>({...g,items:g.items.filter(x=>(!p.year||String(x.year)===p.year)&&(!p.series||x.series===p.series)&&matchesQuery([g.name,x.title,x.year,x.series,x.region,x.official_name,x.note],q))})).filter(g=>g.items.length);
+    found.sort((a,b)=>Object.keys(companyKinds).indexOf(a.kind)-Object.keys(companyKinds).indexOf(b.kind)||String(a.name).localeCompare(String(b.name),'ja'));
+    const group=id?found.find(g=>g.routeId===id):null;
+    const page=pagination(group?group.items:found,p,'award-companies',group?.routeId||'',group?25:15);
+    const item=(x)=>`<li><p class="m-small">${escape([x.year?x.year+'年度':'',x.series,x.region,x.status,x.role].filter(Boolean).join(' ／ '))}</p><strong>${escape(x.title||'原典で事業名を確認')}</strong>${x.official_name?`<p>原典の名義：${escape(x.official_name)}</p>`:''}${x.note?`<p class="m-small">${escape(x.note)}</p>`:''}${/^https:\/\//i.test(x.source_url||'')?`<a href="${escape(x.source_url)}" target="_blank" rel="noopener noreferrer">原典${x.source_locator?'（'+escape(x.source_locator)+'）':''} ↗</a>`:''}${/^https:\/\//i.test(x.report_url||'')?`<a class="m-company-report" href="${escape(x.report_url)}" target="_blank" rel="noopener noreferrer">報告資料 ↗</a>`:''}</li>`;
+    return crumb([['制度別の採択',url('awards')],['採択された会社別']])+pageHead('OFFICIAL AWARDS BY RECIPIENT','採択された会社別','公式の採択資料に社名が明記された事業を、会社別に探せます。')+`
+    <section class="m-section m-award-companies">
+      <div class="m-actions">${btn('制度別の採択',url('awards'))}${btn('公表資料',url('catalog'))}</div>
+      <p class="m-small">対象の公式資料：${total.toLocaleString('ja-JP')}記録${register.as_of?'（'+escape(register.as_of)+'時点）':''}。会社名義の確認：<b>${namedRows.toLocaleString('ja-JP')}記録</b>（取下げ・取消を除く）。採択名義の未確認：<b>${unknownRows.toLocaleString('ja-JP')}記録</b>。共同体の代表機関は会社名義の採択と別に表示します。</p>
+      ${(register.coverage?.scope||register.scope_note)?`<p class="m-small">${escape(register.coverage?.scope||register.scope_note)}</p>`:''}
+      ${register.coverage?.series?.length?`<details><summary>対象系列と収録件数</summary><ul>${register.coverage.series.map(x=>`<li>${escape(x.name)}：${escape(x.rows)}件</li>`).join('')}</ul></details>`:''}
+      <form class="m-filter" data-mfilter data-view="award-companies" data-id="${escape(group?.routeId||'')}"><div class="m-search-row"><input type="search" name="q" value="${escape(p.q||'')}" aria-label="会社名・事業名・地域から検索" placeholder="会社名・事業名・地域"><button class="m-btn m-primary" type="submit">検索</button></div><div class="m-filter-grid"><label>採択先の区分<select name="kind">${options(Object.entries(companyKinds),p.kind,'すべて（未確認を含む）')}</select></label><label>年度<select name="year">${options(years,p.year,'すべての年度')}</select></label><label>制度<select name="series">${options(seriesNames,p.series,'すべての制度')}</select></label></div></form>
+      <p class="m-company-count"><strong>${found.filter(x=>x.kind==='company').length.toLocaleString('ja-JP')}</strong> 社 ／ <strong>${found.filter(x=>x.kind!=='company').length.toLocaleString('ja-JP')}</strong> 区分・団体</p>
+      ${page.nav}<div class="m-company-list">${group?`<div class="m-company-group"><h2>${escape(group.name||companyKinds[group.kind])}</h2><ol>${page.slice.map(item).join('')}</ol>${btn('会社別の一覧に戻る',url('award-companies','',{...p,page:''}))}</div>`:page.slice.map(g=>`<details ${p.q||found.length===1?'open':''}><summary><span>${escape(g.name||companyKinds[g.kind])}</span><span class="m-company-kind">${companyKinds[g.kind]}</span><b>${g.items.length}件</b></summary><ol>${g.items.slice(0,4).map(item).join('')}</ol>${g.items.length>4?`<a class="m-btn m-company-more" data-mnav href="${escape(url('award-companies',g.routeId,{...p,page:''}))}">この採択先の全${g.items.length}件を見る</a>`:''}</details>`).join('')||'<p>この条件に一致する採択記録はありません。</p>'}</div>${page.nav}
+    </section>`;
   }
   async function scope() {
     return pageHead('Research coverage','調査状況。','掲載済みの事例と、調査・確認が残っている範囲を分けて表示します。')+`<section class="m-section"><h2>現在の収録範囲</h2><p>事例を掲載しているのは全国1,741自治体のうち<strong>${countText('canonical_municipalities')}自治体</strong>です。残りは「事例一覧に未収録」で、未調査や取組なしとは限りません。</p><div class="m-actions">${btn('採択・支援の原典一覧',url('awards'),true)}${btn('原票を検索',url('records'))}</div><div class="m-table-wrap"><table><thead><tr><th>対象</th><th>収録数</th><th>数え方</th></tr></thead><tbody><tr><th>事例</th><td>${countText('canonical')}件</td><td>同一性を確認した事業を一度だけ計上。同じ自治体でも別事業は分けます。</td></tr><tr><th>事例の出来事</th><td>${countText('canonical_events')}記録</td><td>年月・年度・期間の記載を保持。事例数や運行期間を意味しません。</td></tr><tr><th>全国自治体名簿</th><td>1,741自治体</td><td>調査対象の名簿。調査完了数ではありません。</td></tr><tr><th>地域の評価・資料の結果</th><td>${countText('observations')}記録</td><td>自治体全体の評価や対象範囲の異なる観測。取組件数には合算しません。</td></tr><tr><th>公表資料索引</th><td>${countText('national_documents')}資料</td><td>公開資料の所在を確認。本文の精読完了数ではありません。</td></tr><tr><th>調査対象年度</th><td>2017–2026年度</td><td>10年度を本体とし、2016年度を補足。全自治体・全年度の網羅調査は継続中です。</td></tr><tr><th>採択・支援の資料</th><td>2,120原票</td><td>年度別の採択は、独立した実証数に合算しません。</td></tr><tr><th>運行等の参照</th><td>497原票</td><td>参照資料の数。事業数への加算はしません。</td></tr></tbody></table></div></section><section class="m-section"><h2>事実と未確認を、分ける。</h2><p>結果資料の充足度は事例ごとに異なります。資料のみの事例も、結果資料の確認フィルターで区別しながら、同じ一覧・地図・年表から参照できます。</p><p>計画・採択・実施・成果・現在の継続は別の事実です。予定日を過ぎただけでは、実施済みと判断しません。原典間の相違は消さず、異説として表示します。</p><p>8テーマの分類確認は、運行・許認可・成功の確認ではありません。主・副テーマと候補を検索対象とし、未判定の事例も全体表示から到達できます。</p><p>全国1,741自治体の全年度・全事業を調査したものではありません。未調査・未取得は、取組がないことを意味しません。</p></section><section class="m-section"><details><summary>原記録・IDと照合データ</summary><p>統合前の原ID、原研究項目、出典と訂正履歴を保持しています。表示の統合は、根拠のない数値の合算や事実の上書きではありません。</p><div class="m-actions">${btn('事例IDの表示先対応',base+'data/canonical-aliases.json')}${btn('政策・制度の年月を読む','../mobility-policy-history/')}</div></details></section>`;
@@ -421,7 +453,7 @@
   async function content(r) {
     r=await canonicalRoute(r);
     switch(r.view) {
-      case 'home':return home(r.p);case 'projects':case 'results':return projects(r.p);case 'prefectures':return prefectures(r.p);case 'prefecture':return prefecture(r.id,r.p);case 'municipality':return municipality(r.id,r.p);case 'case':return caseDetail(r.id,r.p);case 'records':return records(r.p);case 'record':return recordDetail(r.id,r.p);case 'timeline':return timeline(r.p);case 'scope':return scope();case 'awards':return awards(r.p);case 'observation':return observationDetail(r.id,r.p);case 'catalog':return catalog(r.p);case 'catalog-source':return catalogSource(r.id,r.p);case 'catalog-record':return catalogDetail(r.id,r.p);default:return empty('ページが見つかりません。');
+      case 'home':return home(r.p);case 'projects':case 'results':return projects(r.p);case 'prefectures':return prefectures(r.p);case 'prefecture':return prefecture(r.id,r.p);case 'municipality':return municipality(r.id,r.p);case 'case':return caseDetail(r.id,r.p);case 'records':return records(r.p);case 'record':return recordDetail(r.id,r.p);case 'timeline':return timeline(r.p);case 'scope':return scope();case 'awards':return awards(r.p);case 'award-companies':return awardCompanies(r.p,r.id);case 'observation':return observationDetail(r.id,r.p);case 'catalog':return catalog(r.p);case 'catalog-source':return catalogSource(r.id,r.p);case 'catalog-record':return catalogDetail(r.id,r.p);default:return empty('ページが見つかりません。');
     }
   }
   async function mountTeasers() {
@@ -444,7 +476,7 @@
     } catch(err) {if(g===generation&&host.isConnected)host.innerHTML=`<div class="m-error" role="alert"><h2>読み込みを完了できませんでした。</h2><p>${escape(err.message)}</p><button class="m-btn" type="button" data-mretry>再読み込み</button></div>`;}
   }
   function saveScroll() {history.replaceState({...history.state,scrollY:window.scrollY},'');}
-  function render() {const r=route();document.querySelector('main').innerHTML=shell(r);document.title=({case:'案件の結果と変遷',record:'原票の結果と出典',records:'公募・採択等の資料',timeline:'モビリティの年表',prefectures:'日本地図から地域の事例を探す',scope:'調査状況',awards:'採択・支援の原典一覧',catalog:'公表資料を探す','catalog-record':'公表資料の出典'}[r.view]||'自治体のモビリティ｜結果と変遷')+'｜MDL';window.scrollTo(0,history.state?.scrollY||0);mount();}
+  function render() {const r=route();document.querySelector('main').innerHTML=shell(r);document.title=({case:'案件の結果と変遷',record:'原票の結果と出典',records:'公募・採択等の資料',timeline:'モビリティの年表',prefectures:'日本地図から地域の事例を探す',scope:'調査状況',awards:'採択・支援の原典一覧','award-companies':'採択された会社別',catalog:'公表資料を探す','catalog-record':'公表資料の出典'}[r.view]||'自治体のモビリティ｜結果と変遷')+'｜MDL';window.scrollTo(0,history.state?.scrollY||0);mount();}
   function navigate(h,keep=false) {
     if(!standalone){location.hash=h;return;}const y=window.scrollY;saveScroll();history.pushState(keep?{scrollY:y}:{},'',h);nextFocus=!keep;render();
   }
