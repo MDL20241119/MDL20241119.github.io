@@ -165,40 +165,30 @@
     return `<div class="m-map-layout"><div><svg class="m-japan" viewBox="0 0 640 660" role="group" aria-label="都道府県から事例を探す地図">${defs?`<defs>${defs}</defs>`:''}<g>${geography.map((g,i)=>`<a${standalone&&withTree?' tabindex="-1"':''} href="${escape(url('prefecture',g.name,{...searchState(p),pref:g.name,municipality:''}))}" data-mnav aria-label="${g.name} ${label}${ct[g.name]}${unit}" data-count="${ct[g.name]===0?0:ct[g.name]===1?1:ct[g.name]<4?2:3}"><path d="${g.d}"${colors[i]?` style="fill:${colors[i]}"`:selected.length?' style="fill:#263645"':''}></path><title>${g.name} ${label}${ct[g.name]}${unit}${themed[i].length?`｜${escape(themed[i].map(topicLabel).join())}`:''}</title></a>`).join('')}</g><text x="30" y="55" fill="#b7b9c4" font-size="15">南西諸島</text></svg>${withTree?contentsTree(p,prefGrid):''}${themePanel}${compact?`<details class="m-map-notes"><summary>地図の見方</summary><p class="m-taxonomy-note">地図上の所在地未確定：${rows.filter(r=>!geography.some(g=>r.prefectures?.includes(g.name))).length}${unit}。所在地を推定せず、同じ条件の一覧に残しています。</p><p class="m-small">都道府県単位の${label}収録数。0は取組なしを意味しません。現在の運行や実施を示す分布ではありません。広域の記録は複数県に表示されるため、県別件数を合算しないでください。<br>地図：Natural Earth。南西諸島は別枠、一部島しょを省略。</p></details>`:`<p class="m-taxonomy-note">地図上の所在地未確定：${rows.filter(r=>!geography.some(g=>r.prefectures?.includes(g.name))).length}${unit}。所在地を推定せず、同じ条件の一覧に残しています。</p><p class="m-small">都道府県単位の${label}収録数。0は取組なしを意味しません。現在の運行や実施を示す分布ではありません。広域の記録は複数県に表示されるため、県別件数を合算しないでください。<br>地図：Natural Earth。南西諸島は別枠、一部島しょを省略。</p>`}</div>${withTree?'':`${compact?`<details class="m-pref-compact"><summary>都道府県一覧</summary>`:'<div><h3>都道府県から、<br>自治体へ。</h3>'}${prefGrid}${compact?'</details>':'</div>'}`}</div>`;
   }
   function contentsTree(p,prefGrid) {
-    const shared=searchState(p);
-    const link=(label,href)=>`<a data-mnav href="${escape(href)}">${escape(label)}</a>`;
-    return `<nav class="m-contents-tree" id="m-atlas-contents" tabindex="-1" aria-labelledby="m-contents-title"><h2 id="m-contents-title">サイトの目次</h2><p>「地域の事例」と「国の制度・資料」は、別の入口から探せます。</p>
-      <ul><li><span class="m-tree-group">地域で何が起きたか</span><ul>
-        <li><details class="m-pref-compact"><summary>地域から探す（都道府県一覧）</summary><p>都道府県 → 自治体 → 事例の結果・その後・原典</p>${prefGrid}</details></li>
-        <li>${link('事例一覧',url('projects','',shared))}<span>地域・テーマを横断して探す</span></li>
-        <li>${link('年表',url('timeline','',shared))}<span>開始・変更・終了を年ごとに追う</span></li>
-      </ul></li>
-      <li><span class="m-tree-group">制度・根拠資料を調べる</span><ul>
-        <li><details><summary>公表資料の目次</summary><ul>
-          <li>${link('採択資料',url('catalog','',{kind:'selection'}))}<span>どの事業が採択されたか</span></li>
-          <li>${link('公表原典を探す',url('catalog'))}<span>自治体や省庁などの資料</span></li>
-        </ul></details></li>
-        <li><a href="../mobility-policy-history/">国の制度</a><span>政策・支援の変遷を読む</span></li>
-      </ul></li>
-      <li>${link('調査状況',url('scope'))}<span>収録範囲と資料の確認状況</span></li></ul>
-    </nav>`;
+    return `<details class="m-pref-compact m-directory" id="m-atlas-pref-list" ${p.section==='m-atlas-pref-list'?'open':''}><summary>都道府県一覧</summary>${prefGrid}</details>`;
   }
   const entryIcons = {
     map:'<path d="M4 6l5-2 6 2 5-2v14l-5 2-6-2-5 2zM9 4v14m6-12v14"/>',
     projects:'<circle cx="10.5" cy="10.5" r="5.5"/><path d="M15 15l5 5"/>',
+    policy:'<path d="M4 10l8-5 8 5M6 11h12M8 12v6m4-6v6m4-6v6M5 19h14"/>',
     timeline:'<path d="M12 6v6l4 2"/><circle cx="12" cy="12" r="8"/>',
     catalog:'<path d="M6 3h8l4 4v14H6zM14 3v5h4M9 12h6m-6 4h6"/>'
   };
   const entryIcon = name => `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${entryIcons[name]}</svg>`;
   function atlasEntrance(p) {
     const shared=searchState(p);
-    const ways=[
-      ['map','地域から探す','都道府県 → 自治体',url('prefectures','',{...shared,section:'m-atlas-map'})],
-      ['projects','事例を探す','テーマ・実績・その後',url('projects','',shared)],
-      ['timeline','年表を見る','開始・変更・終了',url('timeline','',shared)],
-      ['catalog','公表資料を探す','採択・報告書・原典',url('catalog')]
+    const mapUrl=url('prefectures','',{...shared,section:'m-atlas-map'});
+    const projectUrl=url('projects','',shared);
+    const branches=[
+      ['map','地図から',mapUrl,[
+        ['日本地図',mapUrl],['都道府県一覧',url('prefectures','',{...shared,section:'m-atlas-pref-list'})]]],
+      ['policy','政策から','../mobility-policy-history/#programs',[
+        ['制度別の採択',url('awards')],['公表資料',url('catalog')]]],
+      ['projects','取り組み内容から',projectUrl,[
+        ['事例一覧',projectUrl],['年表',url('timeline','',shared)]]]
     ];
-    return `<section class="m-atlas-intro" aria-labelledby="m-atlas-title"><div class="m-atlas-intro-top"><div><p class="m-kicker">MDL RESEARCH ARCHIVE <span>／ 自治体モビリティ</span></p><h1 id="m-atlas-title">地域の交通、<wbr><em>その後まで。</em></h1><p class="m-atlas-desc">全国の取組を、実績・変化・公表原典からたどる。</p></div><dl class="m-atlas-stats"><div><dt>収録した取組</dt><dd>${countText('canonical')}<small>件</small></dd></div><div><dt>事例の自治体</dt><dd>${countText('canonical_municipalities')}<small>自治体</small></dd></div></dl></div><form class="m-atlas-search" role="search" aria-label="地域の取組を探す" data-mintro><label for="m-atlas-query">キーワードから探す</label><div class="m-search-row"><input type="search" id="m-atlas-query" name="q" placeholder="自治体名・取組名・キーワード" value="${escape(p.q||'')}" enterkeyhint="search"><button class="m-btn m-primary" type="submit">${entryIcon('projects')}<span>検索</span></button></div><div class="m-atlas-examples"><span>検索例</span>${['たどつmobi','福岡 自動運転'].map(q=>`<a data-mnav href="${escape(url('projects','',{q,section:'m-atlas-results'}))}">${escape(q)}</a>`).join('')}</div></form><nav aria-label="目的別に探す" class="m-atlas-ways">${ways.map(([key,label,desc,href])=>`<a class="m-atlas-way" data-way="${key}" data-mnav href="${escape(href)}">${entryIcon(key)}<span><b>${label}</b><small>${desc}</small></span><span class="m-atlas-chevron" aria-hidden="true">›</span></a>`).join('')}</nav><div class="m-atlas-underlinks"><a data-mnav href="${escape(url('prefectures','',{...shared,section:'m-atlas-contents'}))}">サイトの目次 ↓</a><a href="../mobility-policy-history/">国の制度 ↗</a></div></section>`;
+    const branchLink=(label,href)=>`<a ${href.startsWith('#')?'data-mnav ':''}href="${escape(href)}">${escape(label)}</a>`;
+    return `<section class="m-atlas-intro m-tree-entrance" aria-labelledby="m-atlas-title"><div class="m-atlas-intro-top"><div><h1 id="m-atlas-title">自治体の交通<br class="m-tree-phone-break"> <em>取組と結果</em></h1></div><dl class="m-atlas-stats"><div><dt>収録した取組</dt><dd>${countText('canonical')}<small>件</small></dd></div><div><dt>事例の自治体</dt><dd>${countText('canonical_municipalities')}<small>自治体</small></dd></div></dl></div><nav class="m-entry-tree" id="m-atlas-contents" tabindex="-1" aria-label="サイトの目次"><ul>${branches.map(([key,label,href,children])=>`<li class="m-entry-branch" data-branch="${key}"><a class="m-entry-root" ${href.startsWith('#')?'data-mnav ':''}href="${escape(href)}">${entryIcon(key)}<strong>${label}</strong><span aria-hidden="true">›</span></a><ul>${children.map(([name,destination])=>`<li>${branchLink(name,destination)}</li>`).join('')}</ul></li>`).join('')}</ul></nav><form class="m-atlas-search" role="search" aria-label="地域の取組を探す" data-mintro><label for="m-atlas-query" class="m-tree-sr">キーワードから探す</label><div class="m-search-row"><input type="search" id="m-atlas-query" name="q" placeholder="自治体名・取組名・キーワード" value="${escape(p.q||'')}" enterkeyhint="search"><button class="m-btn m-primary" type="submit">${entryIcon('projects')}<span>検索</span></button></div></form></section>`;
   }
   async function home(p={}) {
     if(standalone)return prefectures(p,true);
@@ -230,7 +220,7 @@
       const active=Object.keys(searchState(p)).length>0;
       const featuredIds=['NORTH-R-01','central_toyono_ai','central_tottori_torimobi','west-44211-15'];
       const featured=showFeatured?featuredIds.map(id=>rows.find(r=>r.id===id||r.aliases?.includes('deep:'+id))).filter(Boolean):[];
-      return atlasEntrance(p)+`<section class="m-section m-home-map m-map-entry m-atlas-map" id="m-atlas-map" tabindex="-1" aria-labelledby="m-map-title"><div class="m-atlas-maphead"><div><p class="m-kicker">01 ／ 地域から探す</p><h2 id="m-map-title">日本地図から探す</h2><p class="m-map-instruction">都道府県を選ぶと、自治体と事例へ進めます。</p></div><form data-mpref class="m-atlas-pref" aria-label="都道府県を選ぶ">${hiddenState({...p,pref:'',municipality:''})}${p.q?`<input type="hidden" name="q" value="${escape(p.q)}">`:''}<label for="m-atlas-pref">都道府県名から選ぶ</label><div><select id="m-atlas-pref" name="region" required>${options(geography.map(g=>g.name),p.pref,'都道府県を選択')}</select><button type="submit" class="m-btn">開く</button></div></form></div>${active?`<div class="m-atlas-context"><p>${escape(kindCountText(found))}を表示中</p><a data-mnav href="${escape(url('prefectures','',{section:'m-atlas-map'}))}">地図の条件を解除</a></div>`:''}${!topicCodes(p).length?`<div class="m-atlas-legend" aria-label="地図の色は収録記録数"><span>地図の色：収録記録数</span>${[['#263645','0'],['#306579','1'],['#77dcf6','2–3'],['#ffe29a','4以上']].map(([c,l])=>`<span><i style="--map-swatch:${c}"></i>${l}</span>`).join('')}</div>`:''}${map(found,p,true,'',true)}<details class="m-map-filters" ${active?'open':''}><summary>地図の表示を絞り込む</summary>${topicButtons(p,'prefectures','',rows)}${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${viewLinks(p,found.length,'prefectures')}</details></section>${featured.length?`<section class="m-section m-atlas-featured"><h2>事例を読んでみる</h2><div class="m-grid">${featured.map(card).join('')}</div></section>`:''}`;
+      return atlasEntrance(p)+`<section class="m-section m-home-map m-map-entry m-atlas-map" id="m-atlas-map" tabindex="-1" aria-labelledby="m-map-title"><div class="m-atlas-maphead"><div><h2 id="m-map-title">日本地図</h2></div><form data-mpref class="m-atlas-pref" aria-label="都道府県を選ぶ">${hiddenState({...p,pref:'',municipality:''})}${p.q?`<input type="hidden" name="q" value="${escape(p.q)}">`:''}<label for="m-atlas-pref">都道府県名から選ぶ</label><div><select id="m-atlas-pref" name="region" required>${options(geography.map(g=>g.name),p.pref,'都道府県を選択')}</select><button type="submit" class="m-btn">開く</button></div></form></div>${active?`<div class="m-atlas-context"><p>${escape(kindCountText(found))}を表示中</p><a data-mnav href="${escape(url('prefectures','',{section:'m-atlas-map'}))}">地図の条件を解除</a></div>`:''}${!topicCodes(p).length?`<div class="m-atlas-legend" aria-label="地図の色は収録記録数"><span>地図の色：収録記録数</span>${[['#263645','0'],['#306579','1'],['#77dcf6','2–3'],['#ffe29a','4以上']].map(([c,l])=>`<span><i style="--map-swatch:${c}"></i>${l}</span>`).join('')}</div>`:''}<p class="m-map-zero">0件＝${active?'この条件では未収録':'未収録'}（取組がないという意味ではありません）</p>${map(found,p,true,'',true)}<details class="m-map-filters" ${active?'open':''}><summary>地図の表示を絞り込む</summary>${topicButtons(p,'prefectures','',rows)}${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${viewLinks(p,found.length,'prefectures')}</details></section>${featured.length?`<section class="m-section m-atlas-featured"><h2>事例を読んでみる</h2><div class="m-grid">${featured.map(card).join('')}</div></section>`:''}`;
     }
     return pageHead('Prefecture → Municipality → Project','地域から、<br>その先へ。','テーマを選んで、地域の取組を地図から探せます。')+`<section class="m-section">${viewLinks(p,found.length,'prefectures')}${filters(rows,p,'prefectures')}${discoveryCounts(found,rows)}${map(found,p)}</section>`;}
   async function prefecture(name,p) {
