@@ -70,3 +70,18 @@
 .m-company-group{border:1px solid #496477;border-radius:9px;background:#142330;padding:10px}
 .m-company-group h2{margin:0 0 8px}
 .m-company-report{margin-inline-start:12px}
+.m-tree-entrance>.m-atlas-map{margin:9px 0 11px;padding:9px 0 0;border:0;border-top:1px solid #557083;border-radius:0;background:transparent;box-shadow:none}
+.m-tree-entrance .m-atlas-maphead{margin:0 0 5px}
+.m-tree-entrance .m-atlas-maphead h2{margin:0;font-size:clamp(21px,3vw,33px)}
+.m-tree-entrance .m-atlas-pref label{position:absolute;width:1px;height:1px;clip-path:inset(50%);overflow:hidden}
+.m-map-mode{display:flex;gap:5px;flex-wrap:wrap;margin:0 0 5px}
+.m-map-mode a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;border:1px solid #52758a;border-radius:8px;padding:5px 9px;white-space:nowrap;color:#e7f5ff;text-decoration:none;font-size:clamp(12px,2vw,15px);font-weight:780}
+.m-map-mode a[aria-current]{background:#a1ebff;color:#14232b}
+.m-map-choice{margin:3px 0 6px}
+.m-map-choice label{display:block;font-size:.8rem;margin-bottom:3px;color:#e7f5ff}
+.m-map-choice>div{display:flex;align-items:center;gap:5px}
+.m-map-choice select{min-height:44px;width:min(100%,530px);min-width:0;font:inherit;color:#f3f9fc;background:#0a121b;border:1px solid #587181;border-radius:8px;padding:5px}
+.m-map-choice button{min-height:44px;white-space:nowrap}
+.m-pref-cases>.m-grid{margin-top:7px}
+.m-pref-cases h2{margin-bottom:3px}
+@media(max-width:620px){.m-tree-entrance>.m-atlas-map{padding-top:6px}.m-map-mode a{padding-inline:6px}.m-tree-entrance .m-atlas-pref .m-btn{padding-inline:7px}.m-tree-entrance .m-atlas-pref select{padding-inline:6px}}
