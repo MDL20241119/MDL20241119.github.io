@@ -13,7 +13,7 @@
   const stageLabel = c => c.stageLabel || (stage(c)==='予定' ? '実施予定' : stage(c)==='実装' ? '実装 / 公開時点' : stage(c)==='未確認' ? '実施状況未確認' : '実証');
   const yearOf = c => c.ID==='EP-033' ? '2027' : (c['年'].match(/20\d\d/) || ['時期未確認'])[0];
   const regionOf = c => c['地域'].match(/^.{2,3}?[都道府県]/)?.[0] || c['地域'].split('・')[0];
-  const state = {q:'',cat:'',year:'',stage:'',region:'',sort:'oldest'};
+  const state = {q:'',cat:'',year:'',stage:'',region:'',sort:'newest'};
   let singleId = '';
   const opened = new Set();
   const yearOptions = [...new Set(cases.map(yearOf))].sort();
