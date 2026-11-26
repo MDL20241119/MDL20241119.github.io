@@ -93,7 +93,7 @@ tourism_access = read('../oita-tourism/data/access.json')
 municipalities = [f['properties'] for f in boundaries['features']]
 
 for f in gtfs:
-    meta = next((m for m in transport['feeds'] if m['sha256'] == f['sha256']), None)
+    meta = next((m for m in transport['feeds'] if m['sha256'] == f['sha256'] or f['file'].startswith('440001_gtfs01_oitabus__' + m['id'] + '-')), None)
     if not meta:
         raise ValueError('GTFS and map metadata disagree: ' + f['file'])
     i = transport['feeds'].index(meta)
@@ -107,10 +107,10 @@ for f in gtfs:
         licenseCheckedAt=f.get('licenseCheckedAt'), dataClass='OPEN', status='USED', analysisReady='PARTIAL',
         coverage='この配布GTFSの対象路線。県外区間を含み、県内全交通を網羅しません。',
         format='GTFS ZIP → JSON', processing=f.get('processing'), sha256=f['sha256'],
-        validFrom=meta.get('validFrom'), validTo=meta.get('validTo'),
+        validFrom=f.get('validFrom', meta.get('validFrom')), validTo=f.get('validTo', meta.get('validTo')),
         validityNote='配信データの有効期間。データ作成日・現況確認日ではありません。',
-        records=sum(s['feedIndex'] == i for s in transport['stops']), recordUnit='停留所ID',
-        shapeCount=sum(s['feedIndex'] == i for s in transport['shapes']),
+        records=f.get('stopCount', sum(s['feedIndex'] == i for s in transport['stops'])), recordUnit='停留所ID',
+        shapeCount=f.get('shapeCount', sum(s['feedIndex'] == i for s in transport['shapes'])),
         valueType='時刻表（予定値）', layerIds=['bus-stops', 'bus-routes'],
         usedFor=[usage('バス停・路線・運行頻度', 'index.html#map'), usage('選択時：目的地への往復', 'accessibility.html'), usage('選択時：交通空白候補', 'transport-gaps.html'), usage('時刻表編集・シナリオ比較', 'lab.html#design')],
         limitations=['リアルタイム遅延・満員情報は含みません。', '停留所は事業者別のID数。同名・同座標でも別のIDを維持しています。', '未収録交通・鉄道・タクシー・施設送迎はこの時刻表に含みません。', '原GTFSの線形のみ表示。欠けた区間の線形を創作しません。', '分析日と選択した事業者により利用範囲が変わります。'],

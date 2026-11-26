@@ -3,7 +3,7 @@
   "title": "大分県交通空白を見つけて解消を考えるアクセシビリティマップ",
   "generator": "scripts/build-data-catalog.py",
   "sourceHashes": {
-    "data/gtfs/catalog.json": "e9a86683995dd20f2ecce20c83113421c3f008186740f1be1e22646cbf2540af",
+    "data/gtfs/catalog.json": "c5ee5975e1c7136bb0a5cbab0077747d8ddb87884a1af3d7a04cb091bc8456ef",
     "data/map-data.json": "d0a07d45d05937bd775110e3a7269ff3a6dac4cf528deaec5ca80e96a9b52fba",
     "access/destinations.json": "c99c298757dd1357fadbffe92128730d13ec5fd8528591b7b870c7a7989fb450",
     "gaps/resources.json": "1cebff61ff2416f0c470a83ab15f9fa5a63416f68a3eaa47f006cd015f504469",
@@ -22,7 +22,7 @@
     "data/gtfs/440001_gtfs04_oitakotsu__899d5ccc.zip": "2267cd27cf825ab0c1688b774099f3fd7290b7ffd7bf96c9436a3ef8f5c73f75",
     "data/gtfs/440001_gtfs09_hitabus__e37c6f56.zip": "96b72f9f6d2c546284d58913af14b293eb2cf55af047f830a2c5b8a5c9fb87d5",
     "data/gtfs/440001_gtfs08_kamenoibus__8d18cbd7.zip": "88901ba3c27b8aa8a7b63905292846c8ca8427bbdc1ed285413910d74b78e292",
-    "data/gtfs/440001_gtfs01_oitabus__9c3c2dbb.zip": "310b12e5f7503bf180934080247a002d4a276532c74df3f0ee4d60e426bd034d",
+    "data/gtfs/440001_gtfs01_oitabus__9c3c2dbb-20261001.zip": "b4cd3030e3323f5e5385ece829c7c5c8b484dc886f1c1c2df07016adfbf66098",
     "data/gtfs/440001_gtfs06_kusukanko__d99bc99a.zip": "b7d09da6c2ae241796bf9ef9cf84ddbcf6e85ca10b73ead37a0e89a57c2bd217",
     "data/gtfs/440001_gtfs05_kunisakikanko__5469eca7.zip": "f23eab71c23ecda9829508c7ef8463c40c83836367d3c983917fa9826dd505bf",
     "data/gtfs/440001_gtfs03_kyushinkotsu__76e548c5.zip": "df4b96c08c2043153a561240171676cf361d3f2e24ba5161b28fc89295248ef2",
@@ -1144,7 +1144,7 @@
         }
       ],
       "dataAsOf": null,
-      "retrievedAt": "2026-09-08T02:21:08.395385+00:00",
+      "retrievedAt": "2026-11-26T22:20:33.050257+00:00",
       "checkedAt": null,
       "sourceUpdatedAt": null,
       "updateFrequency": null,
@@ -1182,11 +1182,11 @@
         }
       ],
       "localFiles": [
-        "data/gtfs/440001_gtfs01_oitabus__9c3c2dbb.zip",
+        "data/gtfs/440001_gtfs01_oitabus__9c3c2dbb-20261001.zip",
         "data/gtfs/catalog.json",
         "data/map-data.json"
       ],
-      "records": 1609,
+      "records": 1599,
       "recordUnit": "停留所ID",
       "valueType": "時刻表（予定値）",
       "layerIds": [
@@ -1194,12 +1194,12 @@
         "bus-routes"
       ],
       "scope": "バス時刻表",
-      "licenseCheckedAt": "2026-09-09",
-      "sha256": "310b12e5f7503bf180934080247a002d4a276532c74df3f0ee4d60e426bd034d",
-      "validFrom": "20260401",
-      "validTo": "20270401",
+      "licenseCheckedAt": "2026-11-27",
+      "sha256": "b4cd3030e3323f5e5385ece829c7c5c8b484dc886f1c1c2df07016adfbf66098",
+      "validFrom": "20261001",
+      "validTo": "20271001",
       "validityNote": "配信データの有効期間。データ作成日・現況確認日ではありません。",
-      "shapeCount": 354,
+      "shapeCount": 352,
       "quality": {
         "freshness": {
           "state": "UNKNOWN",
@@ -5655,7 +5655,7 @@
     "destinations": 333,
     "resources": 15,
     "locatedResources": 12,
-    "lastRetrieved": "2026-09-09"
+    "lastRetrieved": "2026-11-26"
   },
   "gap": {
     "columns": [
@@ -8272,6 +8272,14 @@
   ],
   "history": [
     {
+      "date": "2026-11-26",
+      "kind": "取得記録",
+      "label": "元データに記録された取得日",
+      "datasetIds": [
+        "gtfs-9c3c2dbb"
+      ]
+    },
+    {
       "date": "2026-09-13",
       "kind": "機能追加",
       "label": "観光専用ページ・観光地へのアクセスを共通データに接続",
@@ -8309,7 +8317,6 @@
         "gtfs-899d5ccc",
         "gtfs-e37c6f56",
         "gtfs-8d18cbd7",
-        "gtfs-9c3c2dbb",
         "gtfs-d99bc99a",
         "gtfs-5469eca7",
         "gtfs-76e548c5",
