@@ -12,3 +12,41 @@
 .area-entry{border:1px solid #111;background:#fff;padding:28px 30px;margin-bottom:28px}.area-entry h2{font-size:25px;line-height:1.5;margin:8px 0 20px}.area-choices{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.4fr);gap:24px;align-items:end;max-width:850px}.area-choices label{display:flex;flex-direction:column;gap:7px;font-size:14px;font-weight:700;min-width:0}.area-choices .primary{font-size:18px;min-height:52px;background:var(--pink);color:#111;justify-content:space-between}.area-entry #area-status{font-size:14px;margin:14px 0 0;color:var(--muted)}.cross-city{font-size:13px!important;flex-direction:row!important;align-items:center;font-weight:500!important;gap:8px!important}.area-choices select{min-height:52px}@media(max-width:760px){.area-entry{padding:23px 20px}.area-entry h2{font-size:23px}.area-choices{grid-template-columns:minmax(0,1fr);gap:20px}.area-choices .primary{font-size:17px}.area-entry #area-status:empty{display:none}}
 
 .people-work{display:flex;flex-direction:column}.people-work .map-column{display:block;order:0}.people-work .search-panel{border-right:0;border-top:1px solid var(--line);padding:28px 30px}.people-work #result{order:0;border-top:1px solid var(--line)}.people-work #journey-form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 34px}.journey-submit{grid-column:1/-1;display:flex;align-items:center;gap:12px}.journey-submit .search-submit{max-width:440px;margin-top:0}.people-work .main-map{height:430px}@media(max-width:760px){.people-work #journey-form{grid-template-columns:minmax(0,1fr);gap:18px}.people-work .search-panel{padding:22px 20px}.people-work .main-map{height:340px}.journey-submit{display:block}.journey-submit .search-submit{max-width:none}}
+
+/* Four analysis workspaces, with the same navigation on each main screen. */
+.main-nav.main-nav-four{grid-template-columns:repeat(4,minmax(0,1fr))}
+.main-nav-four>a{min-width:0;flex-wrap:wrap;align-content:center;column-gap:9px;row-gap:2px}
+.main-nav-four b{font-size:clamp(15px,1.65vw,20px)}
+.main-nav-four small{white-space:normal}
+@media(max-width:760px){
+ .main-nav.main-nav-four{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .main-nav-four>a{min-height:55px;padding:8px 12px;border-right:0}
+ .main-nav-four>a:nth-child(odd){border-right:1px solid #111}
+ .main-nav-four>a:nth-child(-n+2){border-bottom:1px solid #111}
+ .main-nav-four small{margin-top:1px}
+}
+
+/* Cover directory: real destinations, with the same labels as the main nav. */
+.atlas-toc{margin:0 0 24px;scroll-margin-top:12px}
+.atlas-tree,.atlas-tree ul{list-style:none;margin:0;padding:0}
+.atlas-tree{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:0;border:1px solid #111}
+.atlas-tree>li{min-width:0;border-right:1px solid #111}
+.atlas-tree>li:last-child{border-right:0}
+.atlas-tree .tree-head{display:flex;align-items:center;gap:8px;min-height:44px;padding:9px 12px;background:#fff4fa;border-bottom:1px solid #111;text-decoration:none}
+.atlas-tree .tree-head span{background:var(--pink);padding:1px 5px;font-size:12px;font-weight:800}
+.atlas-tree .tree-head strong{font-size:15px;line-height:1.35}
+.atlas-tree ul{padding:5px 10px 8px 16px}
+.atlas-tree ul li{position:relative;border-left:1px solid var(--line);padding-left:12px}
+.atlas-tree ul li::before{position:absolute;left:0;top:50%;width:8px;border-top:1px solid var(--line);content:""}
+.atlas-tree ul a{display:flex;align-items:center;padding:5px 0;min-height:42px;font-size:13px;line-height:1.42;text-underline-offset:2px;overflow-wrap:anywhere}
+.atlas-tree a:hover{background:#fff4fa}
+.atlas-tree-reference{display:flex;gap:5px 16px;align-items:center;flex-wrap:wrap;margin:12px 0 0;font-size:14px}
+.atlas-tree-reference a{padding:5px 0}
+.top-right a{white-space:nowrap}
+@media(max-width:1000px){
+ .atlas-tree{grid-template-columns:repeat(2,minmax(0,1fr))}
+ .atlas-tree>li:nth-child(even){border-right:0}
+ .atlas-tree>li:nth-child(-n+2){border-bottom:1px solid #111}
+}
+@media(max-width:760px){.top-right{gap:7px;flex-wrap:wrap;justify-content:flex-end}.top-right a{font-size:11px}.atlas-toc{padding:16px}.atlas-tree .tree-head{padding-inline:7px;gap:5px}.atlas-tree ul{padding-inline:7px}.atlas-tree .tree-head strong{font-size:14px}.atlas-tree ul a{min-height:44px}}
+@media(max-width:355px){.atlas-toc{padding:12px}.atlas-tree .tree-head strong{font-size:13px}.atlas-tree ul a{font-size:12px}}

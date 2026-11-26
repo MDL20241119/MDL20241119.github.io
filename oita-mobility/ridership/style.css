@@ -1,1 +1,29 @@
-:root{color:#152538;background:#f4f7f9;font:16px/1.55 system-ui,sans-serif;accent-color:#2048ce}*{box-sizing:border-box}body{margin:0}header,main,footer{margin:auto;max-width:1100px;padding:16px}header{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;border-bottom:1px solid #c7d1dd}nav,.buttons,.filters,.metrics{display:flex;gap:10px;flex-wrap:wrap}nav a,.brand{font-weight:800;text-decoration:none}nav a{padding:5px}nav a[aria-current]{border-bottom:2px solid #2048ce}.intro{padding:24px 0}.eyebrow{font-weight:800;color:#1540a8;letter-spacing:.09em}h1{font-size:clamp(2.1rem,7vw,4.8rem);line-height:.99;margin:.25em 0}.card{background:white;border:1px solid #c7d1dd;border-radius:12px;padding:clamp(12px,3vw,26px);margin-bottom:18px}h2{margin:.15em 0 .5em}.filters label{flex:1 1 180px;min-width:0}label{font-weight:700}input,button,select{font:inherit;min-height:44px;max-width:100%;padding:6px 10px}input,select{display:block;width:100%;border:1px solid #8b9aac;border-radius:6px}input[type=file]{margin:6px 0 12px}button{border:1px solid #2048ce;background:#f1f5ff;color:#18348f;border-radius:6px;font-weight:700;cursor:pointer}button:disabled{opacity:.55;cursor:default}a{color:#153ba4}:focus-visible{outline:3px solid #2455e8;outline-offset:2px}.metrics div{border-left:4px solid #2455e8;padding:4px 12px;background:#f1f5ff;min-width:100px}.metrics strong{display:block;font-size:clamp(1.3rem,6vw,2.4rem)}.tablebox{overflow-x:auto;max-width:100%;margin:10px 0}.tablebox th,.tablebox td{border-bottom:1px solid #d9e0e9;padding:8px;text-align:left;overflow-wrap:anywhere}table{width:100%;border-collapse:collapse}.bars p{display:flex;gap:8px;margin:5px 0}.bars p span{flex:1;min-width:0;overflow-wrap:anywhere}.bars meter{width:34%;min-width:55px}.small,footer{font-size:.88rem}.skip{position:absolute;left:-10000px}.skip:focus{left:12px;top:10px;background:white;padding:8px}#err{color:#9b182c;font-weight:750}
+/* Only the controls and result formats unique to this workspace. */
+.ridership-page .ridership-panel{margin:0 0 20px;min-width:0}
+.ridership-panel label{display:block;font-size:14px;font-weight:700;min-width:0}
+.ridership-panel label>input,.ridership-panel label>select,.ridership-panel input[type=file]{display:block;margin-top:6px}
+.ridership-panel input[type=file]{max-width:100%;border-color:var(--line);background:#fffdfd}
+.ridership-panel input[type=file]::file-selector-button{font:inherit;color:inherit;background:white;padding:4px 10px;border:1px solid #111;margin-right:8px}
+.ridership-panel .button-row{margin-bottom:8px}
+.ridership-panel .button-row>button{width:auto}
+.ridership-panel .filters{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.ridership-panel .metrics{grid-template-columns:repeat(auto-fit,minmax(min(100%,130px),1fr));border:1px solid #111;background:#fff4fa}
+.ridership-panel .metrics>div:last-child{grid-column:auto;border-top:0}
+.ridership-panel .metrics strong{display:block;font-size:clamp(26px,4vw,36px);font-weight:800;font-variant-numeric:tabular-nums}
+.ridership-panel .tablebox{overflow:auto;max-width:100%;margin:12px 0 18px}
+.ridership-panel table{width:100%;border-collapse:collapse}
+.ridership-panel caption{text-align:left;padding:6px 0;color:var(--muted);font-size:14px}
+.ridership-panel th,.ridership-panel td{text-align:left;padding:8px;border-bottom:1px solid var(--line);overflow-wrap:anywhere}
+.ridership-panel thead{background:#fff4fa;border-top:1px solid #111}
+.ridership-panel .bars p{display:grid;grid-template-columns:minmax(0,1fr) minmax(46px,32%) auto;align-items:center;gap:8px;margin:6px 0;overflow-wrap:anywhere}
+.ridership-panel meter{width:100%;height:11px}
+.ridership-panel meter::-webkit-meter-bar{background:#eee4e9;border:0;border-radius:0}
+.ridership-panel meter::-webkit-meter-optimum-value{background:var(--pink)}
+.ridership-panel meter::-moz-meter-bar{background:var(--pink)}
+#err{color:#9f2142;font-weight:700}
+@media(max-width:760px){
+ .ridership-page .ridership-panel{padding:16px}
+ .ridership-panel .filters{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+ .ridership-panel input[type=date]{padding-inline:6px;font-size:14px}
+ .ridership-panel th,.ridership-panel td{font-size:14px;padding:7px 5px}
+}
