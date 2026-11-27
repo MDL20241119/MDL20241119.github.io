@@ -45,3 +45,16 @@ test('rail proximity is not mistaken for rail service or all-mode transport blan
  assert.equal(s.name,'near');
  assert.ok(s.meters>0&&s.meters<110);
 });
+
+import {gapHour,gapWindow,hourKey} from '../oita-mobility/gaps/time-bands.mjs';
+test('hourly frames reflect independent, disjoint timetable windows',()=>{
+ const p=profile(),ctx=prepareGapNetwork([fixture()],p.date);
+ assert.equal(gapHour(hourKey(6)),6);
+ assert.equal(gapHour(hourKey(21)),21);
+ assert.equal(gapHour(hourKey(22)),null);
+ assert.equal(gapWindow(hourKey(21)).end,'22:00');
+ const early=dayBandProfile(p,hourKey(8),500),atNine=dayBandProfile(p,hourKey(9),500);
+ assert.equal(timeBandKey(atNine),'h09');
+ assert.equal(timeGapState(measureSupply(ctx,home,early)),'noTrips');
+ assert.equal(timeGapState(measureSupply(ctx,home,atNine)),'pass');
+});

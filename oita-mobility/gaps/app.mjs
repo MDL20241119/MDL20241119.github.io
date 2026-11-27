@@ -1,10 +1,11 @@
 import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=20261001';
 import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
-import {TIME_BANDS,timeBandKey,dayBandProfile,nearestRailStation,combinedBandState,RAIL_REFERENCE_M} from './time-bands.mjs?v=20261128-rail';
+import {timeBandKey,dayBandProfile,nearestRailStation,combinedBandState,RAIL_REFERENCE_M,FIRST_GAP_HOUR,LAST_GAP_HOUR,gapHour,gapWindow,hourKey} from './time-bands.mjs?v=20261128-map-first';
 import {csvText} from '../lab/io.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
+if(new URLSearchParams(location.search).get('embed')==='atlas')document.body.classList.add('atlas-embedded');
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(v,d=0)=>Number.isFinite(v)?v.toLocaleString('ja-JP',{maximumFractionDigits:d}):'未確認';
 const clock=v=>Number.isFinite(v)?`${String(Math.floor(v/3600)).padStart(2,'0')}:${String(Math.floor(v/60)%60).padStart(2,'0')}`:'—';
@@ -13,6 +14,7 @@ const bandTitles={far:'バス停・駅とも圏外',noTrips:'駅は圏外・バ�
 const originalLegend=$('#gap-legend').innerHTML;
 const activeBand=()=>timeBandKey(applied?.profile);
 const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0):r?.status??'unknown';
+let playing=false,playTimer=null,slideTimer=null,animateToken=0,selectMarker=null;
 const kinds={school:'学校・大学・教習所',medical:'病院送迎',welfare:'福祉・介護',commercial:'商業・企業',tourism:'観光・ホテル',community:'地域交通'};
 const marks={school:'学',medical:'医',welfare:'福',commercial:'商',tourism:'宿',community:'地'};
 const useText={yes:'一般利用の案内あり',conditional:'条件付き・利用者限定',restricted:'利用者限定',unknown:'一般利用は未確認'};
@@ -39,37 +41,93 @@ function fillProfile(p){for(const [k,id]of Object.entries(ids)){const el=$('#'+i
 function validateFiles(p){p.files=currentFeedFiles(p.files,catalog);if(p.files.some(x=>!catalog.some(f=>f.file===x)))throw Error('収録外の交通データが設定されています');if(p.destinations.some(x=>!places.some(f=>f.id===x)))throw Error('収録外の目的地が設定されています');if(!boundaries.features.some(f=>f.properties.code===p.cityCode))throw Error('対象外の自治体です');return validateProfile(p);}
 function setBusy(v){busy=v;$('#run').disabled=v;$('#cancel').hidden=!v;$('#progress').hidden=!v;if(v)$('#progress').value=0;}
 function cancel(keep=true){job++;worker?.terminate();worker=null;setBusy(false);if(keep){$('#status').textContent='計算を中止しました。未計算の区域は灰色です。';refresh();}}
-function invalidate(){if(busy)cancel(false);$('#quick-date').value=$('#date').value;dirty=true;applied=null;results.clear();health=[];excluded=0;activityCount=0;for(const l of layers.values())l.setStyle(cellStyle('unknown'));$('#saved-label').textContent='変更あり';$('#profile-state').textContent='条件を変更しました。「この条件で地図を更新」を押してください。';$('#status').textContent='条件を変更しました。再計算してください。';$('.scope-note').classList.add('stale');refresh();}
+function invalidate(){stopPlayback();animateToken++;if(busy)cancel(false);$('#quick-date').value=$('#date').value;dirty=true;applied=null;results.clear();health=[];excluded=0;activityCount=0;for(const l of layers.values())l.setStyle(cellStyle('unknown'));$('#saved-label').textContent='変更あり';$('#profile-state').textContent='条件を変更しました。「この条件で地図を更新」を押してください。';$('#status').textContent='条件を変更しました。再計算してください。';$('.scope-note').classList.add('stale');refresh();}
 function cellStyle(state){return {color:colors[state],weight:.7,fillColor:colors[state],fillOpacity:['fail','far','noTrips','railPending'].includes(state) ? .56 : state==='pass' ? .28 : .2};}
 function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));for(const f of cells){const l=L.geoJSON(f,{style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',()=>{if(!picking)selectCell(f.id);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
 async function loadCells(p){const key=cityCode+'-'+p.resolution;const epoch=++loadJob;if(!gridCache.has(key))gridCache.set(key,await json('gaps/data/'+key+'.geojson'));if(epoch!==loadJob)return false;cells=gridCache.get(key).features.filter(f=>!p.populatedOnly||f.properties.populated2020);drawGrid();return true;}
 function mapBounds(){const b=map.getBounds();return {south:b.getSouth(),north:b.getNorth(),west:b.getWest(),east:b.getEast()};}
 function fitCity(){if(boundaryLayer.getLayers().length)map.fitBounds(boundaryLayer.getBounds(),{padding:[18,18]});}
 async function switchCity(code,auto=true,override=null){
-  if(busy)cancel(false);try{drafts[cityCode]=readProfile();}catch{}
+  stopPlayback();animateToken++;if(busy)cancel(false);try{drafts[cityCode]=readProfile();}catch{}
   cityCode=code;picking=false;pickPoint=null;pickLayer?.clearLayers();$('#resource-position').textContent='位置：未指定';$('#municipality').value=code;const p=override??drafts[code]??saved[code]??initialProfile(code);validateFiles(p);fillProfile(p);
-  selectedCell=null;results.clear();applied=null;dirty=true;health=[];activityCount=0;boundaryLayer.clearLayers();boundaryLayer.addData(city());fitCity();renderResources();renderStops();renderRail();renderPois();
+  selectedCell=null;selectMarker?.clearLayers();$('#map-tip').textContent='地図の区域を押すと、その場所の状況を確認できます。';results.clear();applied=null;dirty=true;health=[];activityCount=0;boundaryLayer.clearLayers();boundaryLayer.addData(city());fitCity();renderResources();renderStops();renderRail();renderPois();
   if(!await loadCells(p))return;
   if(auto&&!p.activityOn)await run();else $('#status').textContent='条件を確認して「この条件で地図を更新」を押してください。';
 }
+function setWindowLabel(b){
+ if(!b)return;
+ $('#gap-hour-value').textContent=b.start+'–'+b.end;
+ $('#gap-hour').setAttribute('aria-valuetext',b.start+'から'+b.end);
+}
+function stopPlayback(){playing=false;clearTimeout(playTimer);clearTimeout(slideTimer);playTimer=null;slideTimer=null;const b=$('#gap-play');b.textContent='▶ 1時間ずつ再生';b.setAttribute('aria-pressed','false');}
+async function chooseFrame(key){
+ if(busy)cancel(false);
+ const old=readProfile(), p=dayBandProfile(old,key,Number($('#quick-walk').value));fillProfile(p);
+ if(!$('#show-gaps').checked){$('#show-gaps').checked=true;map.addLayer(gridLayer);}
+ await run();
+}
+function advancePlayback(){
+ if(!playing)return;
+ clearTimeout(playTimer);
+ playTimer=setTimeout(guard(async()=>{
+  if(!playing)return;
+  const h=gapHour(activeBand());
+  if(h===LAST_GAP_HOUR){stopPlayback();return;}
+  await chooseFrame(hourKey(h===null?FIRST_GAP_HOUR:h+1));
+ }),900);
+}
+const rgb=h=>[1,3,5].map(i=>parseInt(h.slice(i,i+2),16));
+const mix=(a,b,t)=>'rgb('+a.map((v,i)=>Math.round(v+(b[i]-v)*t)).join(',')+')';
+function repaint(previous){
+ const id=++animateToken,target=results,changes=[];
+ const motion=!matchMedia('(prefers-reduced-motion: reduce)').matches;
+ for(const [key,l] of layers){
+   const a=mapState(previous.get(key),key),b=mapState(target.get(key),key);
+   if(!motion||a===b){l.setStyle(cellStyle(b));continue;}
+   const before=cellStyle(a),after=cellStyle(b);
+   changes.push({l,before,after,x:rgb(before.color),y:rgb(after.color)});
+ }
+ if(!changes.length)return;
+ let started=null;
+ function step(now){
+  if(id!==animateToken)return;
+  started??=now;const t=Math.min(1,(now-started)/280);
+  for(const {l,before,after,x,y} of changes){const c=mix(x,y,t);l.setStyle(t===1?after:{...after,color:c,fillColor:c,fillOpacity:before.fillOpacity+(after.fillOpacity-before.fillOpacity)*t});}
+  if(t<1)requestAnimationFrame(step);
+ }
+ requestAnimationFrame(step);
+}
 async function run(){
-  if(busy)return;clearError();const p=validateFiles(readProfile());setBusy(true);const myJob=++job;
-  try{
-    if(!await loadCells(p)||myJob!==job)return;
-    applied={profile:structuredClone(p),bounds:p.activityOn&&p.activityScope==='view'?mapBounds():null,startedAt:new Date().toISOString(),finishedAt:null,complete:false};dirty=false;results.clear();health=[];activityCount=0;drawGrid();$('.scope-note').classList.remove('stale');$('#status').textContent='交通データを準備しています…';$('#profile-state').textContent=p.name+' · '+cityName();
-    if(!cells.length){setBusy(false);applied.complete=true;applied.finishedAt=new Date().toISOString();$('#status').textContent='この絞り込みに該当する区域はありません。';refresh();return;}
-    if(!worker)worker=new Worker(new URL('./worker.mjs',import.meta.url),{type:'module'});
-    worker.onerror=()=>{if(myJob===job){cancel(false);error(Error('計算を完了できませんでした。範囲を絞って再実行してください。'));}};
-    worker.onmessage=({data})=>{
-      if(data.id!==job)return;
-      if(data.error){cancel(false);error(Error(data.error));refresh();return;}
-      if(data.health){health=data.health;excluded=data.excluded;renderHealth();}
-      if(data.progress){$('#status').textContent=data.progress;$('#progress').value=data.percent;}
-      if(data.batch){for(const r of data.batch){results.set(r.id,r);layers.get(r.id)?.setStyle(cellStyle(mapState(r,r.id)));}activityCount=data.activityCount;if(!refreshTimer)refreshTimer=setTimeout(()=>{refreshTimer=null;refresh();},250);}
-      if(data.done){setBusy(false);applied.complete=true;applied.finishedAt=new Date().toISOString();activityCount=data.activityCount;$('#status').textContent=fmt(data.total)+'区域の判定が完了しました。'+(p.activityOn?' 往復は'+fmt(activityCount)+'区域を計算。':'');refresh();}
-    };
-    worker.postMessage({id:myJob,profile:p,files:catalog.filter(f=>p.files.includes(f.file)),cells:cells.map(f=>f.properties),facilities:places.filter(f=>p.destinations.includes(f.id)),activityBounds:applied.bounds});
-  }catch(e){if(myJob===job){cancel(false);throw e;}}
+ if(busy)return;clearError();const p=validateFiles(readProfile()),prev=applied?.profile;
+ const retain=Boolean(!dirty&&applied?.complete&&timeBandKey(prev)&&timeBandKey(p)&&prev.cityCode===p.cityCode&&prev.resolution===p.resolution&&prev.populatedOnly===p.populatedOnly);
+ setBusy(true);const myJob=++job;const next=new Map(), record={profile:structuredClone(p),bounds:p.activityOn&&p.activityScope==='view'?mapBounds():null,startedAt:new Date().toISOString(),finishedAt:null,complete:false};
+ try{
+  if(!retain){
+   if(!await loadCells(p)||myJob!==job)return;
+   animateToken++;applied=record;dirty=false;results.clear();health=[];activityCount=0;drawGrid();
+  }
+  $('.scope-note').classList.remove('stale');$('#status').textContent='交通データを準備しています…';$('#profile-state').textContent=p.name+' · '+cityName();
+  if(!cells.length){setBusy(false);applied=record;applied.complete=true;applied.finishedAt=new Date().toISOString();$('#status').textContent='この絞り込みに該当する区域はありません。';stopPlayback();refresh();return;}
+  if(!worker)worker=new Worker(new URL('./worker.mjs',import.meta.url),{type:'module'});
+  worker.onerror=()=>{if(myJob===job){stopPlayback();cancel(false);error(Error('計算を完了できませんでした。範囲を絞って再実行してください。'));}};
+  let nextHealth=health,nextExcluded=excluded;
+  worker.onmessage=({data})=>{
+   if(data.id!==job)return;
+   if(data.error){stopPlayback();cancel(false);error(Error(data.error));refresh();return;}
+   if(data.health){nextHealth=data.health;nextExcluded=data.excluded;if(!retain){health=nextHealth;excluded=nextExcluded;renderHealth();}}
+   if(data.progress){$('#status').textContent=data.progress;$('#progress').value=data.percent;}
+   if(data.batch){
+    for(const r of data.batch){if(retain)next.set(r.id,r);else{results.set(r.id,r);layers.get(r.id)?.setStyle(cellStyle(mapState(r,r.id)));}}
+    if(!retain){activityCount=data.activityCount;if(!refreshTimer)refreshTimer=setTimeout(()=>{refreshTimer=null;refresh();},250);}
+   }
+   if(data.done){
+    setBusy(false);const prior=results;
+    if(retain){results=next;applied=record;health=nextHealth;excluded=nextExcluded;repaint(prior);renderHealth();}
+    applied.complete=true;applied.finishedAt=new Date().toISOString();activityCount=data.activityCount;$('#status').textContent=fmt(data.total)+'区域の判定が完了しました。'+(p.activityOn?' 往復は'+fmt(activityCount)+'区域を計算。':'');refresh();advancePlayback();
+   }
+  };
+  worker.postMessage({id:myJob,profile:p,files:catalog.filter(f=>p.files.includes(f.file)),cells:cells.map(f=>f.properties),facilities:places.filter(f=>p.destinations.includes(f.id)),activityBounds:record.bounds});
+ }catch(e){if(myJob===job){stopPlayback();cancel(false);throw e;}}
 }
 function updateDataUsed(){const p=applied?.profile;renderDataUsed('#gap-data-used',{kind:'gaps',mode:p&&health.length?'result':'selection',sources:health.length?health:catalog.filter(f=>(p?.files??selectedFeeds()).includes(f.file)),facilityIds:p?.activityOn?p.destinations:[],includeBoundary:true,includePopulation:p?.populatedOnly??$('#populated-only').checked,date:p?.date??$('#date').value,health,complete:applied?.complete??false});}
 function statistics(){const out={fail:{count:0,area:0},pass:{count:0,area:0},unknown:{count:0,area:0}};for(const f of cells){const g=out[results.get(f.id)?.status??'unknown'];g.count++;g.area+=f.properties.areaKm2;}return out;}
@@ -80,9 +138,10 @@ function refresh(){
   for(const button of $$('[data-gap-band]'))button.setAttribute('aria-pressed',String(!dirty&&button.dataset.gapBand===band));
   $('#metrics').classList.toggle('by-time-band',Boolean(band&&!dirty));
   if(band&&!dirty){
-    const p=applied.profile,b=TIME_BANDS[band],counts={far:0,noTrips:0,railPending:0,pass:0,unknown:0};
+    const p=applied.profile,b=gapWindow(band),counts={far:0,noTrips:0,railPending:0,pass:0,unknown:0};
     for(const f of cells)counts[mapState(results.get(f.id),f.id)]++;
     if([250,500,750].includes(p.distanceM))quick.value=String(p.distanceM);
+    $('#gap-hour').value=String(Number(b.start.slice(0,2)));setWindowLabel(b);
     $('#metrics').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<div style="--band-color:${colors[key]}"><span>${label}</span><b>${fmt(counts[key])}<span class="metric-unit">区域</span></b></div>`).join('');
     $('#gap-legend').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span><i style="--dot:#c38918"></i>輸送資源の拠点</span>':'');
     $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end} · バス停直線${p.distanceM}m・鉄道駅直線1km。列車の時刻は未算定です。`;
@@ -101,6 +160,11 @@ function criterionHTML(c){return `<div class="criterion-result"><b>${esc(c.label
 function selectCell(id,move=false){
   const f=cells.find(x=>x.id===id);if(!f)return;selectedCell=id;const p=f.properties,r=results.get(id),state=r?.status??'unknown',band=activeBand();
   $('#cell-detail').innerHTML=`<h2>${esc(cityName())} · 区域 ${esc(p.meshCode)}</h2><span class="status-badge ${state}">${band?bandTitles[mapState(r,id)]:STATES[state]}</span><p>区域内代表点 ${p.lat.toFixed(5)}, ${p.lon.toFixed(5)} ／ 面積 ${fmt(p.areaKm2,3)} km²</p><div class="detail-grid"><div><span>最寄りの収録バス停</span><b>${r?.nearest?fmt(r.nearest.meters)+' m':'未確認'}</b><span>${esc(r?.nearest?.name??'未計算・有効データなし')}</span></div><div><span>時間帯内の乗車便数</span><b>${r?fmt(r.departures)+' 便':'未計算'}</b><span>データ内の同一便は1回集計</span></div></div>${band?railDetail(id):''}${r?r.criteria.map(criterionHTML).join(''):'<p>この区域はまだ判定していません。</p>'}<p>2020年基準人口（国交省調整値）：${p.population2020===null?'境界またぎ・収録外等のため未集計':fmt(p.population2020,1)+'人'}。区域全員が交通空白とは限りません。</p>${r?.nearby?.length?`<details><summary>乗車便がある近隣のバス停</summary>${r.nearby.map(s=>`<p>${esc(s.name)}：${fmt(s.meters)}m、乗車時刻 ${fmt(s.departures)}件</p>`).join('')}<p>上の件数は各停留所の時刻数。区域全体の便数は同一データ内で重複を除いています。</p></details>`:''}<a class="button" href="accessibility.html">目的地マップで用事の条件も確認</a>`;
+  if(selectMarker){
+   selectMarker.clearLayers();
+   L.geoJSON(f,{interactive:false,style:{color:'#111',weight:2.6,opacity:.96,fill:false}}).addTo(selectMarker).bringToFront();
+  }
+  $('#map-tip').innerHTML=`<span class="chosen-area">区域 ${esc(p.meshCode)}：${esc(band?bandTitles[mapState(r,id)]:STATES[state])}</span> <a href="#cell-detail">判定の理由を見る</a>`;
   if(move)map.setView([p.lat,p.lon],Math.max(14,map.getZoom()));
 }
 function railDetail(id){
@@ -157,21 +221,28 @@ async function init(){
   try{const parsed=JSON.parse(localStorage.getItem(STORAGE)??'{}');for(const [code,p]of Object.entries(parsed)){try{if(code!==p.cityCode)continue;validateFiles(p);saved[code]=p;}catch{}}}catch{}
   let shared=null;try{const hash=new URLSearchParams(location.hash.slice(1));if(hash.has('conditions')){shared=validateFiles(decode(hash.get('conditions')));cityCode=shared.cityCode;}}catch(e){error(Error('共有条件を読み込めないため初期条件を表示します。'+e.message));}
   map=L.map('map',{preferCanvas:true}).setView([33.28,131.49],10);L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxZoom:18,attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html">国土地理院</a>'}).addTo(map);
-  boundaryLayer=L.geoJSON(null,{style:{color:'#173b50',weight:2,fillOpacity:0,interactive:false}}).addTo(map);gridLayer=L.layerGroup().addTo(map);stopLayer=L.layerGroup();railLayer=L.layerGroup().addTo(map);resourceLayer=L.layerGroup().addTo(map);poiLayer=L.layerGroup();pickLayer=L.layerGroup().addTo(map);
+  boundaryLayer=L.geoJSON(null,{style:{color:'#173b50',weight:2,fillOpacity:0,interactive:false}}).addTo(map);gridLayer=L.layerGroup().addTo(map);stopLayer=L.layerGroup();railLayer=L.layerGroup().addTo(map);resourceLayer=L.layerGroup().addTo(map);poiLayer=L.layerGroup();pickLayer=L.layerGroup().addTo(map);selectMarker=L.layerGroup().addTo(map);
   map.on('click',e=>{if(!picking)return;pickPoint={lat:e.latlng.lat,lon:e.latlng.lng};picking=false;pickLayer.clearLayers();L.circleMarker(e.latlng,{radius:7,color:'#173b50',fillOpacity:1}).addTo(pickLayer);$('#resource-position').textContent=`登録位置：${pickPoint.lat.toFixed(5)}, ${pickPoint.lon.toFixed(5)}`;$('#map-tip').textContent='施設・乗降拠点を指定しました。資源の情報を入力して登録してください。';});
   for(const [id,layer]of [['show-gaps',gridLayer],['show-stops',stopLayer],['show-rail',railLayer],['show-resources',resourceLayer],['show-pois',poiLayer]])on('#'+id,'change',()=>$( '#'+id).checked?map.addLayer(layer):map.removeLayer(layer));
   for(const e of $$('[data-tab]'))e.addEventListener('click',()=>setTab(e.dataset.tab));
   for(const id of [...Object.values(ids),'destination'])on('#'+id,'change',invalidate);on('#feed-list','change',()=>{invalidate();renderStops();});
-  on('#municipality','change',e=>switchCity(e.target.value));on('#fit-city','click',fitCity);on('#run','click',run);on('#cancel','click',()=>cancel());on('#save-profile','click',saveProfile);on('#reset-profile','click',async()=>{const p=initialProfile(cityCode);fillProfile(p);drafts[cityCode]=p;invalidate();await loadCells(p);});
+  on('#municipality','change',e=>switchCity(e.target.value));on('#fit-city','click',fitCity);on('#run','click',run);on('#cancel','click',()=>{stopPlayback();cancel();});on('#save-profile','click',saveProfile);on('#reset-profile','click',async()=>{const p=initialProfile(cityCode);fillProfile(p);drafts[cityCode]=p;invalidate();await loadCells(p);});
   on('#resource-type','change',renderResources);on('#resource-use','change',renderResources);on('#resource-form','submit',addResource);on('#pick-resource','click',()=>{picking=true;$('#map-tip').textContent='地図上の施設・乗降拠点を押してください。';$('#map').scrollIntoView({block:'center',behavior:'smooth'});});$('#resource-date').value=new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'});
   on('#share','click',share);on('#export-csv','click',exportCSV);on('#export-geo','click',exportGeo);on('#export-report','click',exportReport);on('#export-settings','click',()=>download('oita-gaps-settings.json',JSON.stringify(settings(),null,2),'application/json'));on('#import-settings','change',async e=>{try{await importSettings(e.target.files[0]);}finally{e.target.value='';}});
-  const selectBand=async key=>{
-    const old=readProfile(); if(busy)cancel(false);
-    const p=dayBandProfile(old,key,Number($('#quick-walk').value)); fillProfile(p); if(!$('#show-gaps').checked){$('#show-gaps').checked=true;map.addLayer(gridLayer);} await run();
-  };
-  for(const button of $$('[data-gap-band]')){button.disabled=false;button.addEventListener('click',guard(()=>selectBand(button.dataset.gapBand)));}
-  on('#quick-walk','change',()=>{const key=activeBand();if(key)return selectBand(key);});
-  on('#quick-date','change',e=>{if(!e.target.value)return;const key=activeBand();$('#date').value=e.target.value;return key?selectBand(key):invalidate();});
+  for(const button of $$('[data-gap-band]')){button.disabled=false;button.addEventListener('click',guard(()=>{stopPlayback();return chooseFrame(button.dataset.gapBand);}));}
+  $('#gap-play').disabled=false;$('#gap-hour').disabled=false;
+  on('#gap-play','click',()=>{
+   if(playing){stopPlayback();return;}
+   playing=true;$('#gap-play').textContent='❚❚ 一時停止';$('#gap-play').setAttribute('aria-pressed','true');
+   const old=gapHour(activeBand());
+   return chooseFrame(hourKey(old!==null&&old<LAST_GAP_HOUR?old:FIRST_GAP_HOUR));
+  });
+  on('#gap-hour','input',e=>{
+   stopPlayback();const key=hourKey(Number(e.target.value));setWindowLabel(gapWindow(key));
+   slideTimer=setTimeout(guard(()=>chooseFrame(key)),160);
+  });
+  on('#quick-walk','change',()=>{stopPlayback();const key=activeBand();if(key)return chooseFrame(key);});
+  on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=activeBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();

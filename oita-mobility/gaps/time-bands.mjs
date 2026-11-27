@@ -6,13 +6,21 @@ export const TIME_BANDS=Object.freeze({
  evening:Object.freeze({label:'夕方',start:'16:00',end:'19:00'}),
  night:Object.freeze({label:'夜',start:'19:00',end:'22:00'}),
 });
+export const FIRST_GAP_HOUR=6, LAST_GAP_HOUR=21;
+const hh=h=>String(h).padStart(2,'0')+':00';
+export function gapHour(key){const m=/^h(\d{2})$/.exec(key??'');const h=m?Number(m[1]):NaN;return h>=FIRST_GAP_HOUR&&h<=LAST_GAP_HOUR?h:null;}
+export function gapWindow(key){const h=gapHour(key);return h===null?TIME_BANDS[key]:{label:'1時間',start:hh(h),end:hh(h+1)};}
+export function hourKey(h){return 'h'+String(h).padStart(2,'0');}
 export function timeBandKey(p){
  if(!p?.distanceOn||!p.frequencyOn||p.activityOn||p.combine!=='any'||p.distanceM!==p.frequencyRadius||p.minimumTrips!==1)return null;
- return Object.keys(TIME_BANDS).find(key=>TIME_BANDS[key].start===p.serviceStart&&TIME_BANDS[key].end===p.serviceEnd)??null;
+ const broad=Object.keys(TIME_BANDS).find(key=>TIME_BANDS[key].start===p.serviceStart&&TIME_BANDS[key].end===p.serviceEnd);
+ if(broad)return broad;
+ const h=Number(p.serviceStart?.slice(0,2));
+ return h>=FIRST_GAP_HOUR&&h<=LAST_GAP_HOUR&&p.serviceStart===hh(h)&&p.serviceEnd===hh(h+1)?hourKey(h):null;
 }
 export function dayBandProfile(p,key,distance){
- if(!Object.hasOwn(TIME_BANDS,key)||![250,500,750].includes(distance))throw Error('時間帯または徒歩圏の条件を確認してください');
- const b=TIME_BANDS[key];
+ if((!Object.hasOwn(TIME_BANDS,key)&&gapHour(key)===null)||![250,500,750].includes(distance))throw Error('時間帯または徒歩圏の条件を確認してください');
+ const b=gapWindow(key);
  return {...p,distanceOn:true,distanceM:distance,frequencyOn:true,frequencyRadius:distance,minimumTrips:1,serviceStart:b.start,serviceEnd:b.end,activityOn:false,combine:'any'};
 }
 export function timeGapState(record){
