@@ -1,3 +1,4 @@
+import {distance} from '../lab/gtfs.mjs';
 // Starting points for local discussion, not national or municipal designations.
 export const TIME_BANDS=Object.freeze({
  morning:Object.freeze({label:'朝',start:'06:00',end:'09:00'}),
@@ -20,4 +21,20 @@ export function timeGapState(record){
  if(d==='fail')return 'far';
  if(d!=='pass')return 'unknown';
  return t==='fail'?'noTrips':t==='pass'?'pass':'unknown';
+}
+
+export const RAIL_REFERENCE_M=1000;
+export function nearestRailStation(point,stations){
+ let best=null;
+ for(const station of stations){
+  const meters=distance(point,station);
+  if(Number.isFinite(meters)&&(!best||meters<best.meters))best={...station,meters};
+ }
+ return best;
+}
+export function combinedBandState(record,station,railReady=true){
+ const bus=timeGapState(record);
+ if(bus==='pass'||bus==='unknown')return bus;
+ if(!railReady||!station)return 'unknown';
+ return station.meters<=RAIL_REFERENCE_M+1e-6?'railPending':bus;
 }

@@ -32,3 +32,16 @@ test('same mesh changes from no boarding trip in the morning to available at the
  assert.throws(()=>dayBandProfile(base,'unknown',500));
  assert.equal(timeBandKey({...day,minimumTrips:2}),null);
 });
+
+import {combinedBandState, nearestRailStation, RAIL_REFERENCE_M} from '../oita-mobility/gaps/time-bands.mjs';
+test('rail proximity is not mistaken for rail service or all-mode transport blank',()=>{
+ const base=profile(),ctx=prepareGapNetwork([fixture()],base.date),morning=dayBandProfile(base,'morning',500);
+ const bus=measureSupply(ctx,home,morning);
+ assert.equal(combinedBandState(bus,{meters:RAIL_REFERENCE_M}),'railPending');
+ assert.equal(combinedBandState(bus,{meters:RAIL_REFERENCE_M+10}),'noTrips');
+ assert.equal(combinedBandState(bus,null,false),'unknown');
+ assert.equal(combinedBandState(undefined,{meters:0}),'unknown');
+ const s=nearestRailStation(home,[{lat:33.1,lon:131,name:'far'},{lat:33,lon:131.001,name:'near'}]);
+ assert.equal(s.name,'near');
+ assert.ok(s.meters>0&&s.meters<110);
+});

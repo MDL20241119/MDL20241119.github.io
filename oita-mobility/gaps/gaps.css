@@ -23,3 +23,7 @@
 @media(max-width:720px){.metric-row.by-time-band{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.metric-row.by-time-band>div{padding:7px 9px}.metric-row.by-time-band b{font-size:20px}.time-gap-panel{padding:10px}}
 .time-gap-filters{display:flex;gap:8px;flex-wrap:wrap;max-width:100%}
 .time-gap-filters label{min-width:0}.time-gap-filters input,.time-gap-filters select{max-width:100%;min-width:0;min-height:42px}
+.metric-row.by-time-band{grid-template-columns:repeat(5,minmax(0,1fr))}
+.metric-row.by-time-band>div span{word-break:normal;overflow-wrap:anywhere}
+@media(max-width:920px){.metric-row.by-time-band{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:530px){.metric-row.by-time-band{grid-template-columns:repeat(2,minmax(0,1fr))}}
