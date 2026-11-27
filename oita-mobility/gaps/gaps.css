@@ -5,3 +5,21 @@
 @media print{.control-panel,.context-bar,.map-toolbar,.bottom-actions,header{display:none!important}.workspace{display:block}.metric-row b{font-size:22px}.map-column #map{height:400px}.detail-panel{break-inside:avoid}}
 
 .metric-row b .metric-unit{display:inline;font-size:14px;font-weight:400;margin-left:7px}.context-bar .populated-switch{font-weight:400;font-size:14px;min-width:0;max-width:250px}.resource-pin{line-height:1}.map-tip{overflow-wrap:anywhere}
+
+.time-gap-panel{border:1px solid #111;padding:14px 16px;background:#f8f7f3;margin:0 0 12px;color:#111}
+.time-gap-head{display:flex;justify-content:space-between;align-items:end;gap:10px;flex-wrap:wrap}
+.time-gap-head h2{font-size:clamp(1.15rem,3vw,1.6rem);margin:.15rem 0 .2rem;color:#111}
+.time-gap-head label{font-size:.78rem;font-weight:800;margin:0;color:#111}
+.time-gap-head select{display:block;max-width:100%;margin-top:3px;color:#111}
+.time-gap-tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px;margin:12px 0 8px}
+.time-gap-tabs button{font:inherit;font-weight:850;font-size:1rem;background:white;color:#111;border:1px solid #111;min-height:48px;padding:2px;cursor:pointer}
+.time-gap-tabs button span{display:block;font-size:.68rem;font-weight:650;white-space:nowrap}
+.time-gap-tabs button[aria-pressed="true"]{background:#ffb12c;color:#111;outline:1px solid #111;outline-offset:-3px}
+.time-gap-tabs button:focus-visible{outline:3px solid #105276;outline-offset:2px}
+.time-gap-panel p,.time-gap-panel summary{font-size:.78rem;line-height:1.5}
+.time-gap-panel p{margin:6px 0}.time-gap-panel summary{cursor:pointer;font-weight:800}
+.metric-row.by-time-band{grid-template-columns:repeat(4,minmax(0,1fr))}
+.metric-row.by-time-band div b,.metric-row.by-time-band div span{color:var(--band-color)}
+@media(max-width:720px){.metric-row.by-time-band{grid-template-columns:repeat(2,minmax(0,1fr));gap:5px}.metric-row.by-time-band>div{padding:7px 9px}.metric-row.by-time-band b{font-size:20px}.time-gap-panel{padding:10px}}
+.time-gap-filters{display:flex;gap:8px;flex-wrap:wrap;max-width:100%}
+.time-gap-filters label{min-width:0}.time-gap-filters input,.time-gap-filters select{max-width:100%;min-width:0;min-height:42px}

@@ -13,3 +13,22 @@ test('activity needs a return after the stay, not just an outbound trip',()=>{co
 test('unparseable trip times are not interpreted as a lack of service',()=>{const f=fixture(),p=profile();f.tables.stop_times[0].arrival_time='';const c=prepareGapNetwork([f],p.date);assert.equal(measureSupply(c,home,p).criteria[1].state,'unknown');assert.equal(activityCriterion(c,home,[facility],p).state,'unknown');});
 test('previous day 25h departure appears at 01h on analysis day',()=>{const f=fixture(),p={...profile(),serviceStart:'00:00',serviceEnd:'04:00',departure:'01:00',deadline:'04:00',activityFrom:'01:30',activityTo:'02:00',dwell:30};for(const c of f.tables.stop_times)c.arrival_time=c.departure_time=String(+c.departure_time.slice(0,2)+16)+c.departure_time.slice(2);const n=prepareGapNetwork([f],p.date);assert.equal(measureSupply(n,home,p).departures,1);assert.equal(activityCriterion(n,home,[facility],p).state,'pass');});
 test('invalid profiles and empty criteria cannot be saved as usable rules',()=>{const p=profile();validateProfile(p);assert.throws(()=>validateProfile({...p,distanceOn:false,frequencyOn:false,activityOn:false}));assert.throws(()=>validateProfile({...p,serviceEnd:p.serviceStart}));assert.throws(()=>validateProfile({...p,destinations:[]}));assert.throws(()=>validateProfile({...p,minimumTrips:1.5}));assert.throws(()=>validateProfile({...p,date:'2026-02-30'}));});
+
+import {TIME_BANDS,timeBandKey,dayBandProfile,timeGapState} from '../oita-mobility/gaps/time-bands.mjs';
+test('same mesh changes from no boarding trip in the morning to available at the daytime boundary',()=>{
+ const base=profile(),ctx=prepareGapNetwork([fixture()],base.date);
+ const morning=dayBandProfile(base,'morning',500), day=dayBandProfile(base,'daytime',500);
+ assert.equal(TIME_BANDS.morning.end,TIME_BANDS.daytime.start);
+ assert.equal(timeBandKey(morning),'morning');
+ assert.equal(timeBandKey(day),'daytime');
+ assert.equal(morning.distanceM,500);
+ assert.equal(morning.frequencyRadius,500);
+ assert.equal(morning.minimumTrips,1);
+ assert.equal(timeGapState(measureSupply(ctx,home,morning)),'noTrips');
+ assert.equal(timeGapState(measureSupply(ctx,home,day)),'pass');
+ assert.equal(timeGapState(measureSupply(ctx,{lat:33.1,lon:131},day)),'far');
+ assert.equal(timeGapState(measureSupply(prepareGapNetwork([fixture()],'2027-02-01'),home,day)),'unknown');
+ assert.equal(timeGapState(undefined),'unknown');
+ assert.throws(()=>dayBandProfile(base,'unknown',500));
+ assert.equal(timeBandKey({...day,minimumTrips:2}),null);
+});

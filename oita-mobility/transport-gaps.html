@@ -5,8 +5,8 @@
   <meta name="theme-color" content="#F8F7F3">
   <meta name="description" content="大分の交通データを使った公開デモ。本番開発のご相談はモビリティデザインラボへ。自治体ごとに停留所距離・運行本数・目的地への往復条件を設定し、大分県の交通空白候補と地域の輸送資源を地図で確認。">
   <title>公開デモ｜交通空白と地域の輸送資源｜大分 交通データ</title>
-  <link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="access/map.css"><link rel="stylesheet" href="gaps/gaps.css">
-  <script defer src="assets/leaflet.js"></script><script type="module" src="gaps/app.mjs?v=20261127-oitabus"></script>
+  <link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="access/map.css"><link rel="stylesheet" href="gaps/gaps.css?v=20261128-time-gaps">
+  <script defer src="assets/leaflet.js"></script><script type="module" src="gaps/app.mjs?v=20261128-time-gaps"></script>
 <link rel="stylesheet" href="assets/atlas-design.css?v=9"><script type="module" src="assets/atlas-ui.mjs?v=7"></script><link rel="stylesheet" href="assets/neo-swiss.css?v=10"><link rel="stylesheet" href="catalog/integration.css?v=1"></head>
 <body class="atlas page-gaps">
 <a class="skip" href="#main">地図と条件へ</a>
@@ -16,11 +16,22 @@
   <div class="data-entry"><span>交通空白候補と、データ不足は区別して判断します。</span><a href="#gap-data-used" data-open-data-used>DATA USED / 使用データを確認 ↓</a></div><div class="context-bar"><label>調べる自治体<select id="municipality" aria-label="調べる自治体"><option>行政界を読み込み中…</option></select></label><label>区域の細かさ<select id="resolution"><option value="1000">約1km四方</option><option value="500" selected>約500m四方</option></select></label><label class="check populated-switch"><input id="populated-only" type="checkbox" checked>2020年基準人口のある区域に絞る</label></div>
   <div class="screen-jumps"><button data-ui-jump="#gap-controls" data-ui-tab="criteria" disabled>判定条件を変える</button><button data-ui-jump="#gap-controls" data-ui-tab="resources" disabled>地域の送迎を見る</button></div><div class="workspace">
     <section class="map-column" aria-label="交通空白マップ">
+      <div class="time-gap-panel" id="time-gaps" aria-label="時間帯別の交通空白">
+        <div class="time-gap-head"><div><span class="eyebrow">TIME OF DAY</span><h2>時間帯で見る交通空白</h2></div><div class="time-gap-filters"><label>判定日<input id="quick-date" type="date"></label><label>バス停までの目安<select id="quick-walk"><option value="250">5分相当（直線250m）</option><option value="500" selected>10分相当（直線500m）</option><option value="750">15分相当（直線750m）</option></select></label></div></div>
+        <div class="time-gap-tabs" role="group" aria-label="地図を時間帯で切り替える">
+          <button type="button" data-gap-band="morning" aria-pressed="false" disabled>朝<span>06–09時</span></button>
+          <button type="button" data-gap-band="daytime" aria-pressed="false" disabled>昼<span>09–16時</span></button>
+          <button type="button" data-gap-band="evening" aria-pressed="false" disabled>夕方<span>16–19時</span></button>
+          <button type="button" data-gap-band="night" aria-pressed="false" disabled>夜<span>19–22時</span></button>
+        </div>
+        <p id="time-gap-note">選んだ日のバス時刻表で、圏内に停留所がない場所と、停留所はあるがその時間に乗れる便がない場所を分けます。</p>
+        <details><summary>基準とデータの読み方</summary><p>直線500mは大分市の立地適正化計画のバス停徒歩圏（徒歩10分の目安）。5分・15分相当は同じ換算で比較するための仮の条件です。実際の道路・坂・横断歩道は未反映で、市の正式な交通空白の指定ではありません。便ありは、目的地への到着・帰宅を保証しません。鉄道・タクシー・未収録の乗合交通は含みません。<a href="https://www.city.oita.oita.jp/o169/documents/ooitasirittitekiseikakeikaku.pdf">大分市の計画</a> ／ <a href="https://www.mlit.go.jp/sogoseisaku/transport/content/001890122.pdf">国交省の考え方</a></p></details>
+      </div>
       <div class="metric-row" id="metrics"><div><span>交通空白候補</span><b>—</b></div><div><span>条件を満たす</span><b>—</b></div><div><span>判定できない</span><b>—</b></div></div>
       <div class="map-work">
         <div class="map-toolbar"><strong id="map-title">自治体を読み込んでいます</strong><button id="fit-city" class="button compact">全体を見る</button><div class="layers"><label><input id="show-gaps" type="checkbox" checked>区域の判定</label><label><input id="show-stops" type="checkbox">路線バス停</label><label><input id="show-resources" type="checkbox" checked>地域の送迎</label><label><input id="show-pois" type="checkbox">目的地</label></div></div>
         <div id="map" role="region" aria-label="区域別の判定と地域の輸送資源"></div>
-        <div class="legend"><span><i style="--dot:#c53635"></i>空白候補：設定条件に該当</span><span><i style="--dot:#237b92"></i>空白条件に非該当</span><span><i style="--dot:#788491"></i>データ不足・未計算</span><span><i style="--dot:#c38918"></i>輸送資源の拠点</span></div>
+        <div id="gap-legend" class="legend"><span><i style="--dot:#c53635"></i>空白候補：設定条件に該当</span><span><i style="--dot:#237b92"></i>空白条件に非該当</span><span><i style="--dot:#788491"></i>データ不足・未計算</span><span><i style="--dot:#c38918"></i>輸送資源の拠点</span></div>
         <div id="map-tip" class="map-tip">区域を押すと、距離・便数と該当した理由が確認できます。</div>
       </div>
       <div class="scope-note"><strong id="result-summary">公表されたバスデータによる一次診断</strong><p id="scope-caption">赤い区域は自治体が確認する候補です。鉄道・タクシー・未収録交通を含む、正式な交通空白の指定ではありません。</p></div>
