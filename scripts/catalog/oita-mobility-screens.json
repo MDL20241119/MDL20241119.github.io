@@ -29,11 +29,11 @@
   {
     "file": "oita-mobility/guide/screens/atlas.jpg",
     "url": "https://mobilitydlab.com/oita-mobility/atlas.html",
-    "captured": "2026-09-24",
-    "type": "live-browser-screenshot",
-    "width": 1276,
-    "height": 930,
-    "sha256": "d7a7c738e727b742a96c394b7cd473b3ba619a7a54433f446cc2708d996f823b"
+    "captured": "2026-11-27",
+    "type": "browser-screenshot-from-published-source",
+    "width": 1298,
+    "height": 1326,
+    "sha256": "3c06aca8cabf16195abb1fc6ec5b2b598bb5a36ae624d325d805dd61f3c7a1c3"
   },
   {
     "file": "oita-mobility/guide/screens/resources.jpg",
@@ -106,5 +106,23 @@
     "width": 1348,
     "height": 926,
     "sha256": "ac491fc2c86eeda1971378ab1bc0f61443cf7fade4a6787c377a8266ef5e2102"
+  },
+  {
+    "file": "oita-mobility/guide/screens/atlas-purpose.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/atlas.html",
+    "captured": "2026-11-27",
+    "type": "browser-screenshot-from-published-source",
+    "width": 1298,
+    "height": 1326,
+    "sha256": "83c4c1eef687920ec3f34ff1fdbd6109e731ec1ed551319942cce1430e7ea4a7"
+  },
+  {
+    "file": "oita-mobility/guide/screens/ridership.jpg",
+    "url": "https://mobilitydlab.com/oita-mobility/ridership.html",
+    "captured": "2026-11-27",
+    "type": "browser-screenshot-from-published-source",
+    "width": 1370,
+    "height": 1010,
+    "sha256": "e44c556a258c2b93aaeebf4f805f4acb001402a9d71ec8131cecb046a8ac48c7"
   }
 ]

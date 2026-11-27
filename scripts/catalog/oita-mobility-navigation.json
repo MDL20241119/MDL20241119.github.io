@@ -1,7 +1,7 @@
 {
-  "edition": "2026.09.26",
-  "edition_ja": "2026年9月26日",
-  "captured": "2026.09.24",
+  "edition": "2026.11.27",
+  "edition_ja": "2026年11月27日",
+  "captured": "2026.09.24 / 2026.11.27",
   "routes": [
     {
       "id": "resident",
@@ -13,7 +13,20 @@
       "pages": "04-06",
       "start": "people-conditions",
       "more": "まず条件を入れ、往復と生活機会を確認。",
-      "steps": [["条件を入れる", "people-conditions"], ["往復を見る", "people-result"], ["行ける施設", "opportunities"]],
+      "steps": [
+        [
+          "条件を入れる",
+          "people-conditions"
+        ],
+        [
+          "往復を見る",
+          "people-result"
+        ],
+        [
+          "行ける施設",
+          "opportunities"
+        ]
+      ],
       "app_label": "PEOPLE｜往復を調べる",
       "url": "index.html"
     },
@@ -22,12 +35,25 @@
       "who": "自治体・まちづくり担当",
       "short": "自治体",
       "goal": "行きにくい地域と改善策を考えたい",
-      "learn": "区域ごとの差・人口の目安・改善案と費用",
+      "learn": "徒歩圏と用事に合う往復を別々に分析",
       "group": "ATLAS",
       "pages": "07-12",
       "start": "atlas-area",
-      "more": "地域を比較 → 改善案へ。根拠はP14-16。",
-      "steps": [["地域を比べる", "atlas-area"], ["改善案を試す", "lab-baseline"], ["根拠を確認", "data-catalog"]],
+      "more": "①歩ける範囲 → ②往復 → 改善案。出典はP14-16。",
+      "steps": [
+        [
+          "徒歩圏",
+          "atlas-area"
+        ],
+        [
+          "用事に合う往復",
+          "atlas-reading"
+        ],
+        [
+          "改善案を試す",
+          "lab-baseline"
+        ]
+      ],
       "app_label": "ATLAS｜地域を比べる",
       "url": "atlas.html"
     },
@@ -36,12 +62,25 @@
       "who": "交通事業者・企画担当",
       "short": "交通事業者",
       "goal": "運行やサービスの改善案を比べたい",
-      "learn": "時刻変更・改善候補人口・費用・詳細分析",
+      "learn": "時刻変更・改善候補人口・費用・乗降実績",
       "group": "LAB",
       "pages": "10-13",
       "start": "lab-baseline",
       "more": "比較の基準はP07。条件をそろえて試算。",
-      "steps": [["基準をそろえる", "atlas-area"], ["費用と改善", "lab-comparison"], ["詳細分析", "advanced"]],
+      "steps": [
+        [
+          "基準をそろえる",
+          "atlas-area"
+        ],
+        [
+          "費用と改善",
+          "lab-comparison"
+        ],
+        [
+          "乗降・OD実績",
+          "advanced"
+        ]
+      ],
       "app_label": "LAB｜改善案を試す",
       "url": "policy.html"
     },
@@ -55,7 +94,20 @@
       "pages": "09",
       "start": "resources",
       "more": "送迎の条件を確認。地域の比較はP07-08。",
-      "steps": [["送迎を確認", "resources"], ["地域を比べる", "atlas-area"], ["結果の読み方", "atlas-reading"]],
+      "steps": [
+        [
+          "送迎を確認",
+          "resources"
+        ],
+        [
+          "地域を比べる",
+          "atlas-area"
+        ],
+        [
+          "結果の読み方",
+          "atlas-reading"
+        ]
+      ],
       "app_label": "ATLAS｜送迎の公表事例",
       "url": "atlas.html#resource-list"
     },
@@ -69,25 +121,103 @@
       "pages": "14-16",
       "start": "data-catalog",
       "more": "原典と未収録を確認。詳細分析はP13。",
-      "steps": [["データの一覧", "data-catalog"], ["足りない情報", "data-gap"], ["出典と時点", "provenance"]],
+      "steps": [
+        [
+          "データの一覧",
+          "data-catalog"
+        ],
+        [
+          "足りない情報",
+          "data-gap"
+        ],
+        [
+          "出典と時点",
+          "provenance"
+        ]
+      ],
       "app_label": "DATA｜データ・出典",
       "url": "data-catalog.html"
     }
   ],
   "highlights": {
-    "people-conditions": ["3", "つの条件", "場所 × 用事の時刻 × 帰宅期限", "まず、自分の予定に合う条件をそろえる。"],
-    "people-result": ["往復", "", "行きと帰りを、セットで確認", "乗る便・帰宅時刻・徒歩の目安がわかる。"],
-    "opportunities": ["30 / 60", "分", "行ける施設の数と種類", "行きのみの目安。帰り・受付は別途確認。"],
-    "atlas-area": ["約1", "km", "地域の代表点を同じ条件で比較", "区域内全員の移動実態を示すものではない。"],
-    "atlas-reading": ["3", "つの状態", "候補あり・見つからない・判定保留", "判定保留と、交通の不存在を混同しない。"],
-    "resources": ["送迎", "", "対象者・予約・利用条件を見る", "公表事例であり、共同利用の合意ではない。"],
-    "lab-baseline": ["同条件", "", "まず現状、次に改善案", "ATLASの地域・目的地・日時を引き継ぐ。"],
-    "lab-comparison": ["円／人・年", "", "改善候補人口1人あたりの年間費用", "実利用者数でも、1回の移動単価でもない。"],
-    "learning": ["実測", "", "必要な移動が、実際にできたか", "検索件数ではなく、成立した移動を測る。"],
-    "advanced": ["4", "つの詳細分析", "ダイヤ・乗降OD・需要・費用便益", "入力した条件と根拠を添えて比べる。"],
-    "data-catalog": ["出典", "", "提供元までたどれる", "利用中・一部利用・導入候補を区別する。"],
-    "data-gap": ["未収録", "", "「ない」と「わからない」を分ける", "情報がないだけで、交通がないとは限らない。"],
-    "provenance": ["時点", "", "基準日・取得日・有効期間", "新しい取得日でも現況を保証しない。"]
+    "people-conditions": [
+      "3",
+      "つの条件",
+      "場所 × 用事の時刻 × 帰宅期限",
+      "まず、自分の予定に合う条件をそろえる。"
+    ],
+    "people-result": [
+      "往復",
+      "",
+      "行きと帰りを、セットで確認",
+      "乗る便・帰宅時刻・徒歩の目安がわかる。"
+    ],
+    "opportunities": [
+      "30 / 60",
+      "分",
+      "行ける施設の数と種類",
+      "行きのみの目安。帰り・受付は別途確認。"
+    ],
+    "atlas-area": [
+      "01",
+      "停留所まで",
+      "徒歩圏内・圏外・未判定を分ける",
+      "上限5・10・15・20・30分。徒歩の速さも選べます。"
+    ],
+    "atlas-reading": [
+      "02",
+      "目的に合う往復",
+      "停留所が近くても、行けるとは限らない",
+      "分母は①で徒歩圏内と判定した人口の目安。"
+    ],
+    "resources": [
+      "送迎",
+      "",
+      "対象者・予約・利用条件を見る",
+      "公表事例であり、共同利用の合意ではない。"
+    ],
+    "lab-baseline": [
+      "同条件",
+      "",
+      "まず現状、次に改善案",
+      "ATLASの地域・目的地・日時を引き継ぐ。"
+    ],
+    "lab-comparison": [
+      "円／人・年",
+      "",
+      "改善候補人口1人あたりの年間費用",
+      "実利用者数でも、1回の移動単価でもない。"
+    ],
+    "learning": [
+      "実測",
+      "",
+      "必要な移動が、実際にできたか",
+      "検索件数ではなく、成立した移動を測る。"
+    ],
+    "advanced": [
+      "実績",
+      "集計CSV",
+      "乗降・ODの実績を手元のデータで見る",
+      "個人が分かるデータは入れません。"
+    ],
+    "data-catalog": [
+      "出典",
+      "",
+      "提供元までたどれる",
+      "利用中・一部利用・導入候補を区別する。"
+    ],
+    "data-gap": [
+      "未収録",
+      "",
+      "「ない」と「わからない」を分ける",
+      "情報がないだけで、交通がないとは限らない。"
+    ],
+    "provenance": [
+      "時点",
+      "",
+      "公開日・取得日・使える期間",
+      "大分バスは2026年10月1日公開の時刻表を収録。"
+    ]
   },
   "open_labels": {
     "purpose": "アプリの入口を開く",
@@ -95,13 +225,13 @@
     "people-conditions": "PEOPLE｜条件を入れる",
     "people-result": "PEOPLE｜往復を調べる",
     "opportunities": "PEOPLE｜生活機会を調べる",
-    "atlas-area": "ATLAS｜地域を比べる",
-    "atlas-reading": "ATLAS｜結果を確かめる",
+    "atlas-area": "ATLAS｜停留所までの徒歩圏",
+    "atlas-reading": "ATLAS｜用事に合う往復",
     "resources": "ATLAS｜送迎の公表事例",
     "lab-baseline": "LAB｜改善案を試す",
     "lab-comparison": "LAB｜費用と改善を比べる",
     "learning": "LAB｜実証・評価を考える",
-    "advanced": "詳細分析｜操作例を試す",
+    "advanced": "RIDERSHIP｜乗降・OD実績を見る",
     "data-catalog": "DATA｜データ・出典",
     "data-gap": "DATA｜足りない情報",
     "provenance": "DATA｜出典と時点を確認",

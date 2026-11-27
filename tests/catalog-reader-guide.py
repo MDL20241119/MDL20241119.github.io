@@ -59,6 +59,9 @@ for r in nav['routes']:
 for n,p in enumerate(pages,2):
     if p['id'] in nav['highlights']:
         assert nav['highlights'][p['id']][0] in pdf.pages[n-1].extract_text()
-assert '2026.09.24' in pdf.pages[-1].extract_text(), 'Keep actual capture date'
+assert '9月24日・11月27日' in pdf.pages[-1].extract_text(), 'Keep actual capture dates'
+assert len(soup.select('.flow-card')) == 4
+assert '徒歩圏外は②の母数に入りません' in pdf.pages[7].extract_text().replace('\n','')
+assert '架空OD' in pdf.pages[12].extract_text()
 assert nav['edition'] in pdf.pages[-1].extract_text(), 'Separate revision date'
 print('PASS: 18 pages, 5 reader routes, 13 key panels, internal/external links, unchanged caveats')

@@ -17,7 +17,7 @@
   <nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a></nav>
 </header>
 <main id="main">
-  <div class="usage-heading"><span class="usage-kicker">PUBLIC DEMO GUIDE</span><h1>安心して試すために。</h1><p>このデモでわかることと、データを扱うときの約束。</p><small>対象：大分モビリティ・アトラス（/oita-mobility/） · 更新：2026年9月22日</small></div>
+  <div class="usage-heading"><span class="usage-kicker">PUBLIC DEMO GUIDE</span><h1>安心して試すために。</h1><p>このデモでわかることと、データを扱うときの約束。</p><small>対象：大分モビリティ・アトラス（/oita-mobility/） · 更新：2026年11月27日</small></div>
   <div class="usage-cards">
     <a class="usage-card blue" href="#demo"><span>01 · 結果の見方</span><h2>検討の入口に使う</h2><p>実績・推計・仮定と、まだ確認できていないことを確かめます。</p><b>デモの範囲を見る →</b></a>
     <a class="usage-card teal" href="#privacy"><span>02 · 入力と共有</span><h2>公開できる情報で試す</h2><p>氏名や個人の移動履歴、非公開の費用は、この公開デモに入力しないでください。</p><b>保存・共有の扱いを見る →</b></a>
@@ -28,7 +28,7 @@
     <span class="section-number">01</span><h2>公開デモの位置付け</h2>
     <p>モビリティデザインラボが公開資料をもとに作成した、交通計画を検討するための無料デモです。自治体、データ提供機関、交通事業者による公式サービス・認定・監修を示すものではありません。</p>
     <ul>
-      <li><strong>乗降・OD・費用：</strong>収録値は公表資料の集計値です。事業者の非公開IC個票や、最新の全便実績を取得したものではありません。資料年・対象範囲・単位を併せて確認してください。</li>
+      <li><strong>乗降・OD・費用：</strong>収録値は公表資料の集計値です。事業者の非公開IC個票や、最新の全便実績を取得したものではありません。資料年・対象範囲・単位を併せて確認してください。別画面の<a href="ridership.html">乗降・OD実績</a>では、使用を許可された集計CSVを端末内で処理するか、架空のサンプルで試せます。大分市の実績はあらかじめ入っていません。</li>
       <li><strong>需要予測・B/C：</strong>入力と仮定に基づく試算です。将来の利用者数、収益、施策効果を保証しません。公的な事業評価・採択資料に使う際は、対象事業の評価手法、費用範囲、二重計上、感度を別途検証してください。</li>
       <li><strong>交通空白・アクセシビリティ：</strong>設定条件と収録データに基づく確認候補です。公式な交通空白地の認定、移動困難な住民数、実際の通行可能性を示しません。未収録の鉄道・タクシー等も確認してください。</li>
       <li><strong>施設・送迎：</strong>営業・診療・予約・対象者・運行日は提供元への確認が必要です。学校や病院の送迎車を表示しても、一般利用や他目的での共用が許可されたことにはなりません。</li>
@@ -61,8 +61,8 @@
     <p>提供元の資料から必要な項目を抽出し、形式変換・集計・地図表示を行っています。以下のライセンスは、それぞれの対象データに適用されます。提供元による本デモの推奨や保証を意味しません。</p>
     <p>2026年9月22日の買物候補拡充：スーパー・食品店83件、ドラッグストア73件、ホームセンター1件の計157件を収録。17市町村に位置を確認できた候補があり、九重町は未収録です。各店舗の公式案内に基づく部分的な収集で、全店舗・当日の営業を保証しません。既存店舗の確認日は個別の記載を参照してください。</p>
     <p>地図の往復ルートは、選択した日の収録時刻表による候補です。バスは利用区間と対応するGTFS路線形状を表示し、徒歩は概略線で表示し、バスの形状を確認できない区間は乗降地点だけを表示します。徒歩の線は道路・歩道の経路案内ではありません。運賃・鉄道・運休・遅延は未統合です。</p>
-    <div class="usage-table-wrap"><table><caption>主なデータと利用条件（2026年9月9日確認）</caption><thead><tr><th scope="col">対象</th><th scope="col">出典・時点・加工</th><th scope="col">利用条件</th></tr></thead><tbody>
-      <tr><th scope="row">バス時刻表・バス停・路線</th><td>大分県公開GTFS 16ファイル。2026年9月8日取得。停留所・路線の抽出、日別集計とシナリオ計算。<a href="data/gtfs/catalog.json">個別出典・取得日・ハッシュ</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。<a href="https://odcs.bodik.jp/440001/tos/">大分県の利用規約</a></td></tr>
+    <div class="usage-table-wrap"><table><caption>主なデータと利用条件（取得・確認日は各データの詳細を参照）</caption><thead><tr><th scope="col">対象</th><th scope="col">出典・時点・加工</th><th scope="col">利用条件</th></tr></thead><tbody>
+      <tr><th scope="row">バス時刻表・バス停・路線</th><td>大分県公開GTFS 16ファイル。大分バスは2026年10月1日公開版（11月27日取得）、その他は2026年9月8日取得（分析保存版は各画面の時点表示を参照）。停留所・路線の抽出、日別集計とシナリオ計算。<a href="data/gtfs/catalog.json">個別出典・取得日・ハッシュ</a></td><td><a href="https://creativecommons.org/licenses/by/4.0/deed.ja">CC BY 4.0</a>。<a href="https://odcs.bodik.jp/440001/tos/">大分県の利用規約</a></td></tr>
       <tr><th scope="row">病院</th><td><a href="https://www.mhlw.go.jp/stf/seisakunitsuite/bunya/kenkou_iryou/iryou/newpage_43373.html">厚生労働省 医療情報ネット</a>。2026年6月1日時点。大分県の病院147施設を抽出・加工。</td><td><a href="https://www.digital.go.jp/resources/open_data/public_data_license_v1.0">PDL1.0</a></td></tr>
       <tr><th scope="row">公共施設等</th><td><a href="https://data.bodik.jp/dataset/442020_public">別府市</a>、<a href="https://data.bodik.jp/dataset/442046_public_facility">日田市</a>、<a href="https://data.bodik.jp/dataset/443417_public">日出町</a>、<a href="https://data.bodik.jp/dataset/444626_public">玖珠町</a>の公開施設一覧から29施設を抜粋・加工。時点は各施設に記載。</td><td>CC BY 4.0。各データセットの個別条件を参照。</td></tr>
       <tr><th scope="row">行政区域・人口メッシュ</th><td>国土交通省 <a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-N03-2026.html">行政区域 N03（2026年1月1日）</a>を統合・簡略化し区域を作成。<a href="https://nlftp.mlit.go.jp/ksj/gml/datalist/KsjTmplt-mesh500r6.html">R6国政局推計</a>から2020年基準人口を抽出。<a href="gaps/data/sources.json">加工方法と注意点</a></td><td>CC BY 4.0。<a href="https://nlftp.mlit.go.jp/ksj/other/agreement_01.html">国土数値情報の利用規約</a>。行政区域は測量法上の手続も確認が必要。</td></tr>

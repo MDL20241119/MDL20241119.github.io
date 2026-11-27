@@ -18,7 +18,7 @@ navigation = json.loads((ROOT / 'scripts/catalog/oita-mobility-navigation.json')
 DATE = navigation['edition']
 W, H = 720, 960
 PAPER, INK, MUTED = '#F8F7F3', '#111111', '#535353'
-COLORS = {'START':'#FF4FC3','PEOPLE':'#FF4FC3','ATLAS':'#72D7FF','LAB':'#E7FF38','DETAIL':'#E7FF38','DATA':'#72D7FF','ACTION':'#FF4FC3'}
+COLORS = {'START':'#FF4FC3','PEOPLE':'#FF4FC3','ATLAS':'#72D7FF','LAB':'#E7FF38','DETAIL':'#E7FF38','RIDERSHIP':'#FFD683','DATA':'#72D7FF','ACTION':'#FF4FC3'}
 pages = json.loads((ROOT / 'scripts/catalog/oita-mobility-content.json').read_text())
 assert len(pages) == 16 and len({p['id'] for p in pages}) == 16
 page_numbers = {p['id']: n for n,p in enumerate(pages,2)}
@@ -141,7 +141,7 @@ txt('P02',574,769,30,'ENB','#E7FF38')
 c.linkRect('','purpose',(32,H-818,688,H-760),relative=0,thickness=0)
 rect(32,837,656,53,COLORS['START'])
 txt('暮らしの往復 → 地域の課題 → 改善案',49,850,22,'JPB')
-txt('全18ページ / '+navigation['edition_ja']+' 読者別ガイド改訂 / 画面撮影 9月24日',32,901,11)
+txt('全18ページ / '+navigation['edition_ja']+' 読者別ガイド改訂 / 画面撮影 9月24日・11月27日',32,901,11)
 footer(1,APP);c.showPage()
 
 for n,p in enumerate(pages,2):
@@ -166,18 +166,18 @@ for n,p in enumerate(pages,2):
         c.linkRect('','first-use',(391,H-891,688,H-864),relative=0,thickness=0)
         block(p['note'],32,901,656,10.5,color=MUTED,max_lines=1)
     elif p['kind']=='flow':
-        y=295
+        y=276
         for i,(num,en,question,answer,img,url) in enumerate(p['rows']):
             color=COLORS[en]
-            rect(32,y,656,176,'#FFFFFF',INK)
-            rect(32,y,8,176,color)
-            txt(en+' / P'+['04-06','07-09','10-12'][i],51,y+12,17,'ENB')
-            block(question,51,y+43,365,23,'JPB',max_lines=1)
-            block(answer,51,y+85,359,15,leading=24,max_lines=2)
-            photo(img,441,y+18,228,142)
-            internal_link('説明を読む →',['people-conditions','atlas-area','lab-baseline'][i],51,y+143,150,11)
-            link('機能を開く →',APP+url,244,y+143,157,11)
-            y+=187
+            rect(32,y,656,137,'#FFFFFF',INK)
+            rect(32,y,8,137,color)
+            txt(en+' / P'+['04-06','07-09','10-12','13'][i],51,y+9,16,'ENB')
+            block(question,51,y+35,374,21,'JPB',max_lines=1)
+            block(answer,51,y+70,368,13,leading=20,max_lines=2)
+            photo(img,441,y+12,228,110)
+            internal_link('説明を読む →',['people-conditions','atlas-area','lab-baseline','advanced'][i],51,y+110,150,11)
+            link('機能を開く →',APP+url,244,y+110,157,11)
+            y+=144
         block(p['takeaway'],32,864,656,15,'JPB',max_lines=1)
         block(p['note'],32,894,656,10.5,color=MUTED,max_lines=2)
     elif p['kind']=='action':
@@ -214,9 +214,9 @@ header('ACTION / START HERE')
 c.bookmarkPage('start')
 block('行きたいところへ、\n行ける地域を。',32,89,656,43,'JPB',58,max_lines=2)
 block('調べる道具から、地域で使える仕組みへ。\nまずは、一つの用事を選んで試してください。',32,232,656,20,leading=31,max_lines=2)
-for i,(en,jp,img,url) in enumerate([('PEOPLE','往復を調べる','people.jpg','index.html'),('ATLAS','地域を比べる','atlas.jpg','atlas.html'),('LAB','改善案を試す','lab.jpg','policy.html')]):
-    x=32+i*223;photo(img,x,335,210,150);rect(x,497,210,34,COLORS[en]);txt(en,x+12,505,15,'ENB')
-    link(jp+' →',APP+url,x+12,545,190,16)
+for i,(en,jp,img,url) in enumerate([('PEOPLE','往復を調べる','people.jpg','index.html'),('ATLAS','地域を比べる','atlas.jpg','atlas.html'),('LAB','改善案を試す','lab.jpg','policy.html'),('RIDERSHIP','乗降実績を見る','ridership.jpg','ridership.html')]):
+    x=32+i*167;photo(img,x,335,155,150);rect(x,497,155,34,COLORS[en]);txt(en,x+10,505,13,'ENB')
+    link(jp+' →',APP+url,x+10,545,143,14)
 rect(32,600,656,145,COLORS['START'])
 txt('アプリを開いて、地域と目的地を選ぶ。',50,618,21,'JPB')
 txt('mobilitydlab.com/oita-mobility/',50,665,18,'ENB')
@@ -225,7 +225,7 @@ q=qr.QrCodeWidget(APP);b=q.getBounds();d=Drawing(105,105,transform=[105/(b[2]-b[
 rect(561,620,110,110,'#FFFFFF');renderPDF.draw(d,c,563,H-727)
 txt('本番開発・データ連携・地域での活用のご相談',32,777,16,'JPB')
 link('info@mobilitydlab.com','mailto:info@mobilitydlab.com',32,811,400,18)
-block('制作：株式会社モビリティデザインラボ / 読者別案内改訂：'+DATE+' / 画面撮影：2026.09.24\n出典：公開アプリ・各データの原典。地図：地理院タイル。画面内の出典表示を保持。\n写真内の数値は操作例。データの基準日・取得日・有効期間は、アプリの出典で確認できます。',32,858,656,10.2,leading=17,max_lines=3)
+block('制作：株式会社モビリティデザインラボ / 読者別案内改訂：'+DATE+' / 画面撮影：9月24日・11月27日\n出典：公開アプリ・各データの原典。地図：地理院タイル。画面内の出典表示を保持。\n写真内の数値は操作例。データの基準日・取得日・有効期間は、アプリの出典で確認できます。',32,858,656,10.2,leading=17,max_lines=3)
 footer(18,APP);c.save()
 
 # Web guide: same exact copy, semantic text, responsive layout and original screenshot links.
@@ -255,8 +255,8 @@ for n,p in enumerate(pages,2):
     elif p['kind']=='flow':
         body='<div class="flow-list">'
         for i,(num,en,q,a,img,url) in enumerate(p['rows']):
-            target=['people-conditions','atlas-area','lab-baseline'][i]
-            span=['04-06','07-09','10-12'][i]
+            target=['people-conditions','atlas-area','lab-baseline','advanced'][i]
+            span=['04-06','07-09','10-12','13'][i]
             body+=f'<article class="flow-card" style="--accent:{COLORS[en]}"><b>{en}</b><h3>{e(q)}</h3><p>{br(a)}</p><img src="screens/{img}" alt="{en}の実画面" loading="lazy"><a class="flow-pages" href="#{target}">P<span>{span}</span> 説明を読む →</a><a href="{APP+url}">{en}を開く ↗</a></article>'
         body+='</div>'
         body+=f'<p class="takeaway">{e(p["takeaway"])}</p>'
@@ -277,17 +277,17 @@ for n,p in enumerate(pages,2):
 html='''<!doctype html>
 <html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="theme-color" content="#F8F7F3">
 <title>実画面でわかるビジュアルカタログ｜大分モビリティ・アトラス 2.0</title>
-<meta name="description" content="誰が使うとよいか、何がわかるか。大分の移動を暮らしから調べるPEOPLE・ATLAS・LABを、現在の実画面で紹介。18ページのPDFも保存できます。">
+<meta name="description" content="誰が使うとよいか、何がわかるか。大分の移動を暮らしから調べるPEOPLE・ATLAS・LAB・RIDERSHIPを、実画面で紹介。18ページのPDFも保存できます。">
 <link rel="canonical" href="https://mobilitydlab.com/oita-mobility/guide/"><link rel="icon" href="../assets/favicon.svg"><link rel="stylesheet" href="guide.css?v=20260924">
 <meta property="og:title" content="その用事、行って帰れる？｜大分モビリティ・アトラス 2.0"><meta property="og:description" content="目的・使う人・わかることを、実画面で。更新版ビジュアルカタログ。"><meta property="og:image" content="https://mobilitydlab.com/oita-mobility/guide/screens/people.jpg"><meta property="og:type" content="website"></head>
-<body><a class="skip" href="#main">本文へ移動</a><header class="site-head"><a href="../../">MOBILITY DESIGN LAB</a><nav aria-label="カタログのメニュー"><a href="#purpose">読む人別ガイド</a><a href="../">アプリを開く ↗</a><a class="pdf-link" href="oita-mobility-catalog.pdf">PDF・18ページ ↓</a></nav></header>
-<main id="main"><section class="cover"><div><p class="eyebrow">OITA MOBILITY ATLAS <span class="version">2.0</span></p><h1>その用事、<br>行って帰れる？</h1><p class="cover-lead">大分の暮らしの移動を、公開データで確かめる。<br><strong>あなたの立場から、必要なページと機能へ。</strong></p><p class="edition">ビジュアルカタログ / 2026年9月24日更新</p><div class="hero-actions"><a class="button" href="#purpose">自分が読むページを選ぶ ↓</a><a href="oita-mobility-catalog.pdf">PDF・18ページを保存 ↗</a></div></div>'''
+<body><a class="skip" href="#main">本文へ移動</a><header class="site-head"><a href="../../">MOBILITY DESIGN LAB</a><nav aria-label="カタログのメニュー"><a href="#purpose">読む人別ガイド</a><a href="#atlas-area">2つの移動課題</a><a href="../">アプリを開く ↗</a><a class="pdf-link" href="oita-mobility-catalog.pdf">PDF・18ページ ↓</a></nav></header>
+<main id="main"><section class="cover"><div><p class="eyebrow">OITA MOBILITY ATLAS <span class="version">2.0</span></p><h1>その用事、<br>行って帰れる？</h1><p class="cover-lead">大分の暮らしの移動を、公開データで確かめる。<br><strong>停留所まで歩けるか。用事を済ませて帰れるか。</strong></p><p class="edition">ビジュアルカタログ / 2026年9月24日更新</p><div class="hero-actions"><a class="button" href="#purpose">自分が読むページを選ぶ ↓</a><a href="oita-mobility-catalog.pdf">PDF・18ページを保存 ↗</a></div></div>'''
 html+=webphoto('people.jpg','PEOPLE / 大分駅前から買い物先への往復を調べた実画面','hero-photo')
 html+='</section><nav class="reader-shortcuts" aria-label="読む人別の入口">'+''.join(f'<a href="#route-{r["id"]}"><span>{e(r["short"])}</span><small>P{r["pages"]} →</small></a>' for r in navigation['routes'])+'</nav>'
 html+=''.join(sections)
 html+='''<section class="closing" id="start"><p class="eyebrow">P18　 ACTION / START HERE</p><h2>行きたいところへ、<br>行ける地域を。</h2><p>調べる道具から、地域で使える仕組みへ。<br>まずは、一つの用事を選んで試してください。</p><div class="hero-actions"><a class="button" href="../">地域と目的地を選ぶ →</a><a href="oita-mobility-catalog.pdf">PDF・18ページを開く ↗</a><a href="#purpose">読む人別ガイドに戻る ↑</a></div><p class="consult">本番開発・データ連携・地域での活用のご相談<br><a href="mailto:info@mobilitydlab.com">info@mobilitydlab.com ↗</a></p></section></main>
-<footer class="site-foot"><p>MOBILITY DESIGN LAB / OITA MOBILITY ATLAS 2.0</p><p>制作：株式会社モビリティデザインラボ。画面撮影・内容確認：2026年9月24日。<br>出典：公開アプリ・各データの原典。地図：地理院タイル。画面内の出典表示を保持しています。<br>写真内の数値は操作例です。データの基準日・取得日・有効期間は、アプリの出典で確認できます。</p><nav><a href="../usage.html">利用条件・データの扱い</a><a href="../data-catalog.html">データ・出典</a><a href="../../">MDLサイト</a></nav></footer></body></html>'''
-html=html.replace('2026年9月24日更新',navigation['edition_ja']+' 読者別ガイド改訂').replace('guide.css?v=20260924','guide.css?v=20260926.2')
-html=html.replace('画面撮影・内容確認：2026年9月24日。','画面撮影・内容確認：2026年9月24日。読者別案内改訂：'+navigation['edition_ja']+'。')
+<footer class="site-foot"><p>MOBILITY DESIGN LAB / OITA MOBILITY ATLAS 2.0</p><p>制作：株式会社モビリティデザインラボ。画面撮影：2026年9月24日・11月27日。<br>出典：公開アプリ・各データの原典。地図：地理院タイル。画面内の出典表示を保持しています。<br>写真内の数値は操作例です。データの基準日・取得日・有効期間は、アプリの出典で確認できます。</p><nav><a href="../usage.html">利用条件・データの扱い</a><a href="../data-catalog.html">データ・出典</a><a href="../../">MDLサイト</a></nav></footer></body></html>'''
+html=html.replace('2026年9月24日更新',navigation['edition_ja']+' 読者別ガイド改訂').replace('guide.css?v=20260924','guide.css?v=20261127.1')
+html=html.replace('画面撮影：2026年9月24日・11月27日。','画面撮影：2026年9月24日・11月27日。読者別案内改訂：'+navigation['edition_ja']+'。')
 (OUT/'index.html').write_text(html)
 print(json.dumps({'pdf':str(pdf),'pages':18,'web':str(OUT/'index.html'),'screens':len(list((OUT/'screens').glob('*.jpg')))},ensure_ascii=False))

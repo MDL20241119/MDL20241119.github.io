@@ -4,13 +4,13 @@
 <title>OPEN DATA｜大分県交通空白を見つけて解消を考えるアクセシビリティマップ</title>
 <meta name="description" content="大分の移動をデータから見る。出典、基準日、取得日、利用条件と未収録データを確認し、アクセシビリティと交通空白の理由を考える公開データカタログ。">
 <link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="assets/atlas-design.css?v=9"><link rel="stylesheet" href="assets/neo-swiss.css?v=11"><link rel="stylesheet" href="catalog/catalog.css?v=2">
-<script defer src="assets/leaflet.js"></script><script type="module" src="catalog/app.mjs?v=2"></script><link rel="stylesheet" href="catalog/integration.css?v=1"></head>
+<script defer src="assets/leaflet.js"></script><script type="module" src="catalog/app.mjs?v=3"></script><link rel="stylesheet" href="catalog/integration.css?v=1"></head>
 <body class="atlas page-data"><a class="skip" href="#main">データカタログへ移動</a>
 <header class="atlas-header"><a class="atlas-brand" href="index.html"><span class="atlas-monogram" aria-hidden="true">OITA</span><span>大分 交通データ<small>OITA TRANSPORT ATLAS</small></span></a><nav class="atlas-nav" aria-label="サイト全体のメニュー"><a href="index.html"><span class="nav-index" aria-hidden="true">01</span><span>ホーム</span></a><a href="accessibility.html"><span class="nav-index" aria-hidden="true">02</span><span>目的地</span></a><a href="data-catalog.html" aria-current="page"><span class="nav-index" aria-hidden="true">03</span><span>DATA</span></a><a href="transport-gaps.html"><span class="nav-index" aria-hidden="true">04</span><span>交通空白・送迎</span></a><a href="lab.html#design"><span class="nav-index" aria-hidden="true">05</span><span>分析・試算</span></a></nav><div class="atlas-header-actions"><button class="button" id="share-catalog">表示を共有 ↗</button></div></header>
 <main id="main" class="catalog-main">
 <section class="data-hero" aria-labelledby="page-title"><div><span class="data-kicker">OITA MOBILITY ATLAS / OPEN DATA</span><h1 id="page-title"><span>DATA</span><span>CATALOG.</span></h1><p>大分の移動を、データから見る。</p></div><div class="hero-aside"><strong>何が分かり、<br>何がまだ分からないか。</strong><p>病院へ行けるか。買物をして帰れるか。<br>その判断のもとになるデータと、まだ足りない情報を確かめる場所です。</p><p>大分県交通空白を見つけて解消を考える<br>アクセシビリティマップ</p></div></section>
 <dl class="data-overview" id="data-overview" aria-label="データ全体の収録状況"><div><dt>OPEN DATASETS</dt><dd>—</dd><small>読み込み中</small></div><div><dt>TRANSPORT DATASETS</dt><dd>—</dd></div><div><dt>DESTINATIONS</dt><dd>—</dd></div><div><dt>MUNICIPALITIES</dt><dd>—</dd></div><div><dt>LAST RETRIEVED</dt><dd class="date-value">—</dd><small>元データに記録された取得日</small></div></dl>
-<p class="overview-note" id="overview-note">件数は同梱データから集計します。データ基準日とMDL取得日は別々に表示します。</p>
+<p class="overview-note" id="overview-note">件数は同梱データから集計します。データ基準日とMDL取得日は別々に表示します。表示する時点はレイヤーや分析画面ごとに確認してください。</p>
 <div class="catalog-error" id="catalog-error" role="alert" hidden></div><p id="catalog-status" role="status">カタログを読み込んでいます…</p>
 <div class="data-tabs" role="tablist" aria-label="データの見方">
 <button id="tab-catalog" role="tab" aria-selected="true" aria-controls="panel-catalog" data-panel="catalog"><small>01 / CATALOG</small>データを探す</button>
@@ -38,7 +38,7 @@
 <p id="map-dataset-filter" hidden></p><div class="data-map-layout"><div id="layer-list" class="layer-list" aria-label="表示レイヤーと出典"></div><div class="data-map-surface"><div id="data-map-canvas" role="region" aria-label="収録データの地図" tabindex="0"></div><div id="map-data-legend" class="map-data-legend"></div></div></div>
 <p id="map-status" class="map-data-note" role="status">地図を準備しています…</p><div id="layer-metadata" class="data-note" aria-live="polite"><strong>各レイヤーの「情報」を押す</strong>出典・基準日・取得日・件数を確認できます。</div>
 <details class="map-feature-list"><summary>地図に表示中の施設・送迎を一覧で確認する</summary><p>地図を操作しづらい場合は、こちらから情報を確認できます。</p><ul id="map-record-list"></ul><button class="button" id="map-record-more" hidden>続きを表示</button></details>
-<p class="map-data-note">未収録レイヤーは COMING と表示し、操作を無効にしています。背景：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">国土地理院 地理院タイル</a>。背景地図の記号は本サイトの分析入力ではありません。</p>
+<p class="map-data-note">この地図のバス停・路線は2026年9月8日取得の保存版です。現行の往復検索では、大分バスは2026年10月1日公開版（11月27日取得）を使用します。未収録レイヤーは COMING と表示し、操作を無効にしています。背景：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener noreferrer">国土地理院 地理院タイル</a>。背景地図の記号は本サイトの分析入力ではありません。</p>
 </section>
 <section id="panel-data-gap" role="tabpanel" aria-labelledby="tab-data-gap" hidden>
 <div class="data-section-heading"><div><h2>交通空白と、データ空白を分ける。</h2><p>市町村ごとに「このサイトに何が収録されているか」を確認します。</p></div></div>
