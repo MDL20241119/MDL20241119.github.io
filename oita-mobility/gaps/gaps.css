@@ -55,3 +55,26 @@ body.atlas-embedded #main{padding:8px}
 body.atlas-embedded .workspace{display:block}
 body.atlas-embedded .context-bar{margin-bottom:7px}
 body.atlas-embedded .map-column #map{min-height:340px}
+
+/* Overview keeps the time controls but moves diagnostic settings and totals out of the way. */
+body.atlas-embedded :is(.context-bar label:not(:first-child),.scope-note,.gap-metrics,.data-used-section){display:none!important}
+body.atlas-embedded .context-bar{display:block;padding:0;border:0;background:none}
+body.atlas-embedded .context-bar>label{display:flex;align-items:center;gap:8px}
+body.atlas-embedded .context-bar select{min-width:0;width:min(70%,240px);min-height:44px;margin:0}
+body.atlas-embedded .time-gap-head h2{display:none}
+body.atlas-embedded .map-column #map{height:460px;min-height:0}
+body.atlas-embedded .time-gap-panel{margin-bottom:5px}
+.layer-labels{font-weight:650}
+.map-toolbar .layers{display:flex;flex-wrap:wrap;gap:2px 12px}
+.map-toolbar .layers>label{display:inline-flex;align-items:center;gap:4px;min-height:38px;margin:0;white-space:nowrap}
+.overlay-notice:empty{display:none}.overlay-notice{padding:5px 9px;font-size:.83rem;font-weight:700}
+@media(max-width:620px){
+ body.atlas-embedded #main{padding:5px}
+ body.atlas-embedded .map-column #map{height:360px}
+ .map-toolbar .layers{gap:1px 8px}
+ .map-toolbar .layers>label{font-size:.75rem;min-height:37px}
+}
+body.atlas-embedded :is(#gap-data-used,#method){display:none!important}
+.map-toolbar .key-bus::before,.map-toolbar .key-rail::before,.map-toolbar .key-poi::before{content:"";display:inline-block;width:.8em;margin-inline-end:4px;vertical-align:.23em;border-top:2px solid #006283}
+.map-toolbar .key-rail::before{border-color:#523388;border-top-style:dashed}
+.map-toolbar .key-poi::before{width:.48em;height:.48em;border:none;background:#197457;border-radius:50%;vertical-align:.08em}

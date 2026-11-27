@@ -1,0 +1,13 @@
+html:not(.atlas-detail-mode) .atlas-detail-content,.atlas-detail-mode .atlas-overview{display:none}
+.atlas-overview{max-width:1400px;margin:0 auto}
+.overview-head{padding:26px 0 12px}
+.overview-head h1{font-size:clamp(1.65rem,5vw,3.65rem);line-height:1.14;margin:.22em 0;letter-spacing:-.055em;text-wrap:balance}
+.overview-head p{font-size:clamp(.86rem,2.3vw,1.04rem);margin:.4em 0;line-height:1.55}
+#overview-frame{display:block;box-sizing:border-box;width:100%;background:#f8f7f3;border:1px solid #111}
+.overview-links{margin:22px 0;padding:16px 0;border-top:2px solid #111}
+.overview-links h2{font-size:clamp(1.2rem,4vw,1.7rem);margin:0 0 .7em}
+.overview-link-list{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}
+.overview-link-list a{display:grid;gap:3px;padding:12px;text-decoration:none;background:#fff;border:1px solid #111;color:#111}
+.overview-link-list a:hover,.overview-link-list a:focus-visible{background:#ffe1ee}
+.overview-link-list span,.overview-links p{font-size:.85rem;line-height:1.45}
+@media(max-width:680px){.overview-head{padding-top:14px}.overview-link-list{grid-template-columns:1fr}.overview-link-list a{padding:10px}}
