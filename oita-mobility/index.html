@@ -41,7 +41,7 @@ function watchFrame(){
  observer?.disconnect();
  const doc=frame.contentDocument, main=doc?.querySelector('#main');
  if(!main)return;
- if(doc!==observedDoc){observedDoc=doc;doc.addEventListener('change',e=>{if(e.target.id==='quick-date')updateLinks();});doc.addEventListener('atlas:city',e=>{frameCity=e.detail.code;if(mode==='map')syncCity(e.detail.code);});}
+ if(doc!==observedDoc){observedDoc=doc;doc.addEventListener('change',e=>{if(e.target.id==='quick-date')updateLinks();});doc.addEventListener('atlas:ready',()=>{if(mode==='map'){doc.dispatchEvent(new CustomEvent('atlas:tourism',{detail:{enabled:page().u.searchParams.get('points')==='tourism'}}));updateLinks();}});doc.addEventListener('atlas:city',e=>{frameCity=e.detail.code;if(mode==='map')syncCity(e.detail.code);});}
  const resize=()=>{if(mode!=='map')return;const h=Math.ceil(main.getBoundingClientRect().bottom+doc.defaultView.scrollY+4);if(h>30)frame.height=String(h);};
  observer=new ResizeObserver(resize);observer.observe(main);resize();updateLinks();
 }
@@ -57,7 +57,7 @@ function render(initial=false){
  $('#tourism').hidden=mode!=='trip'&&state.hash!=='tourism';
  if(mode==='map'){
   const tourMode=state.u.searchParams.get('points')==='tourism';
-  if(frameCity!==city){frameCity=city;const q=new URLSearchParams({embed:'atlas',layout:'3',v:'atlas-nav1',city});if(tourMode)q.set('points','tourism');const d=state.u.searchParams.get('journeyDate');if(d)q.set('journeyDate',d);frame.src='transport-gaps.html?'+q;}
+  if(frameCity!==city){frameCity=city;const q=new URLSearchParams({embed:'atlas',layout:'3',v:'atlas-nav2',city});if(tourMode)q.set('points','tourism');const d=state.u.searchParams.get('journeyDate');if(d)q.set('journeyDate',d);frame.src='transport-gaps.html?'+q;}
   else if(frame.contentDocument?.querySelector('#main')){const doc=frame.contentDocument;doc.dispatchEvent(new CustomEvent('atlas:tourism',{detail:{enabled:tourMode}}));watchFrame();}
  }else{
   if(state.hash==='opportunity-section')$('.trip-extras').open=true;

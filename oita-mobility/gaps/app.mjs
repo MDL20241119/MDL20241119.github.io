@@ -271,16 +271,18 @@ function renderBusLines(){
  const lines=busCorridors.filter(r=>hashes.has(r.hash)&&r.bounds.intersects(bounds)).map(r=>r.points);
  if(lines.length)L.polyline(lines,{pane:'network',color:'#006283',opacity:.38,weight:1.25,interactive:false}).addTo(busLayer);
 }
-let tourismLayer, tourismRows;
+let tourismLayer,tourismRows,tourismWanted=urlParams.get('points')==='tourism';
 async function showTourism(enabled){
- if(!layout3||!map)return;
+ if(!layout3)return;
+ tourismWanted=enabled;
+ if(!map)return;
  if(!enabled){tourismLayer?.remove();$('#atlas-tourism-note')?.remove();return;}
  const note=$('#atlas-tourism-note')??Object.assign(document.createElement('p'),{id:'atlas-tourism-note',className:'atlas-tourism-note'});
  if(!note.isConnected)$('#map').before(note);
  note.textContent='観光の地点を読み込み中…';
  try{
   tourismRows??=(await json('../oita-tourism/data/tourism.json')).anchors;
-  if(!note.isConnected)return;
+  if(!note.isConnected||!tourismWanted)return;
   tourismLayer??=L.layerGroup();
   tourismLayer.clearLayers();
   for(const place of tourismRows){
@@ -380,10 +382,9 @@ async function init(){
   for(const id of ['show-rail','show-resources'])on('#'+id,'change',refresh);
   on('#quick-rail','change',()=>{animateToken++;renderRail();for(const [id,layer] of layers)layer.setStyle(cellStyle(mapState(results.get(id),id)));refresh();});
   on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=requestedBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
-  $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);
+  $('#sources').innerHTML=sourceHTML();const firstRun=switchCity(cityCode,true,shared);if(layout3&&tourismWanted)showTourism(true);await firstRun;
   const sharedDate=urlParams.get('journeyDate');
   if(layout3&&/^\d{4}-\d{2}-\d{2}$/.test(sharedDate||'')&&$('#quick-date').value!==sharedDate){$('#quick-date').value=sharedDate;$('#quick-date').dispatchEvent(new Event('change'));}
-  if(layout3&&urlParams.get('points')==='tourism')showTourism(true);
   if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
