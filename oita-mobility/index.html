@@ -50,7 +50,7 @@ function render(initial=false){
  if(state.hash==='atlas-toc')$('#atlas-toc').open=true;
  $('#tourism').hidden=mode!=='trip'&&state.hash!=='tourism';
  if(mode==='map'){
-  if(frameCity!==city){frameCity=city;frame.src='transport-gaps.html?embed=atlas&layout=3&v=oita800&city='+city;}else if(frame.contentDocument?.querySelector('#main'))watchFrame();
+  if(frameCity!==city){frameCity=city;frame.src='transport-gaps.html?embed=atlas&layout=3&v=oita800b&city='+city;}else if(frame.contentDocument?.querySelector('#main'))watchFrame();
  }else{
   if(state.hash==='opportunity-section')$('.trip-extras').open=true;
   if(state.hash==='jr-check')$('#jr-check').open=true;
