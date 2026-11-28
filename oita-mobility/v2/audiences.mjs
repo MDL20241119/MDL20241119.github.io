@@ -1,4 +1,4 @@
-import {cityAt,normalizeCategory,validPoint} from './model.mjs';
+import {cityAt,normalizeCategory,pointInGeometry,validPoint} from './model.mjs';
 import {distance} from '../lab/gtfs.mjs';
 
 export const DEFAULT_CITY='44201';
@@ -57,10 +57,16 @@ async function start(){
   const map=L.map('audience-map',{preferCanvas:true,scrollWheelZoom:false,zoomSnap:.5}).setView([33.223,131.623],11);
   L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxZoom:18,attribution:'<a href="https://maps.gsi.go.jp/development/ichiran.html">地理院タイル</a>'}).addTo(map);
   const boundaries=L.layerGroup().addTo(map), lines=L.layerGroup().addTo(map), markers=L.layerGroup().addTo(map), focus=L.layerGroup().addTo(map);
-  const areaCode=p=>String(p.municipalityCode??p.areaCode??cityAt(p,features)?.code??'');
+  const cityBounds=new Map();
+  const areaCode=p=>String(p.municipalityCode??p.areaCode??cityAt(p,features.filter(f=>cityBounds.get(f.properties.code)?.contains([p.lat,p.lon])))?.code??'');
   const cross=()=>$('#cross').checked;
   const cityName=()=>features.find(f=>f.properties.code===city)?.properties.name??'大分市';
-  const allowed=p=>cross()||areaCode(p)===city;
+  const allowed=p=>{
+    if(cross())return true;
+    if(p.municipalityCode!=null||p.areaCode!=null)return areaCode(p)===city;
+    const area=features.find(f=>f.properties.code===city);
+    return !!area&&cityBounds.get(city)?.contains([p.lat,p.lon])&&pointInGeometry(p,area.geometry);
+  };
   const toView=p=>L.latLng(p.lat,p.lon);
   function paintBounds(){
     boundaries.clearLayers();
@@ -71,9 +77,9 @@ async function start(){
   function fit(){
     const f=features.find(x=>x.properties.code===city);
     if(!f)return;
-    const bounds=L.geoJSON(f).getBounds();
+    const bounds=L.latLngBounds(cityBounds.get(city).getSouthWest(),cityBounds.get(city).getNorthEast());
     if(cross()){
-      if(city===DEFAULT_CITY){for(const c of features.filter(g=>nearbyCodes.has(g.properties.code)))bounds.extend(L.geoJSON(c).getBounds());}
+      if(city===DEFAULT_CITY){for(const c of features.filter(g=>nearbyCodes.has(g.properties.code)))bounds.extend(cityBounds.get(c.properties.code));}
     }
     map.fitBounds(cross()&&city!==DEFAULT_CITY?bounds.pad(.25):bounds,{padding:[10,10],animate:false,maxZoom:13});
   }
@@ -104,11 +110,16 @@ async function start(){
     if(!p){$('#point-picker').value='';describe();renderCopy();return;}
     $('#point-picker').value=p.key??'';
     if(recenter)map.setView(toView(p),Math.max(map.getZoom(),13),{animate:false});
-    if(popup){
-      const t=document.createElement('span');t.textContent=p.name;
-      L.circleMarker(toView(p),{radius:9,color:'#135243',weight:3,fill:false,interactive:false}).addTo(focus).bindPopup(t).openPopup();
-    }
     describe();renderCopy();
+    if(popup){
+      const tip=document.createElement('div');tip.className='map-pop';
+      for(const child of $('#selection').children)tip.append(child.cloneNode(true));
+      if(p.mode==='facility'||p.mode==='tourist'){
+        const action=document.createElement('a');action.className='map-pop-link';
+        link(action,...roleLinks(role,city,cross(),p)[0],'→');tip.append(action);
+      }
+      L.circleMarker(toView(p),{radius:9,color:'#135243',weight:3,fill:false,interactive:false}).addTo(focus).bindPopup(tip,{maxWidth:230}).openPopup();
+    }
   }
   function points(){
     if(role==='resident')return facilities.filter(allowed).filter(p=>filter==='all'||normalizeCategory(p.category)===filter).map(p=>({...p,mode:'facility',key:'facility:'+p.id}));
@@ -116,7 +127,8 @@ async function start(){
     if(role==='operator'){
       const inView=stops.filter(allowed).filter(p=>p.name.includes(filter==='all'?'':filter));
       const core=[...new Map(inView.map(p=>[p.name,p])).values()];
-      const top=core.filter(p=>/(大分駅|鶴崎駅|大在駅|坂ノ市駅|賀来駅|中判田駅|西大分|中央通り)/.test(p.name)).slice(0,18);
+      const hubs=core.filter(p=>/(駅前|大分駅|鶴崎駅|大在駅|坂ノ市駅|賀来駅|中判田駅|西大分|中央通り|バスセンター|ターミナル)/.test(p.name));
+      const top=(hubs.length?hubs:core).slice(0,24);
       return top.map(p=>({...p,mode:null,key:'bus:'+p.id+':'+p.operator}));
     }
     return stations.filter(allowed).map(p=>({...p,mode:'rail',key:'station:'+p.id}));
@@ -134,6 +146,7 @@ async function start(){
     for(const p of mapRows){
       const marker=L.marker(toView(p),{icon:L.divIcon({className:'marker-dot',iconSize:[10,10]}),keyboard:true,title:p.name,alt:p.name,riseOnHover:true});
       marker.on('click',()=>choose(p,{popup:true})).addTo(markers);
+      marker.getElement()?.setAttribute('aria-label',p.name);
     }
     $('#picks').hidden=false;
     $('#pick-legend').textContent=role==='resident'?'用事の種類で絞る':role==='tourist'?'観光のアクセス地点':role==='operator'?'主な乗降拠点':'主な鉄道駅';
@@ -174,6 +187,7 @@ async function start(){
   degraded=request.slice(0,6).some(x=>x.status==='rejected');
   const v=(i)=>request[i].value;
   features=v(0)?.features??[];
+  for(const f of features)cityBounds.set(f.properties.code,L.geoJSON(f).getBounds());
   city=features.some(f=>f.properties.code===q.get('city'))?q.get('city'):DEFAULT_CITY;
   if(features.length)$('#area').replaceChildren(...features.map(f=>new Option(f.properties.name,f.properties.code)));
   $('#area').value=city;
