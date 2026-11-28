@@ -1,0 +1,60 @@
+/* Atlas 3.0: one compact entry, maps before forms. */
+.atlas30 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.atlas30 .top:has(.start-guide){padding-block:7px}
+.atlas30 .start-head{padding:5px 0 7px!important}
+.atlas30 .start-tabs{max-width:none}
+.atlas30 .start-guide{min-height:44px;display:flex;align-items:center}
+.atlas30 .start-tool-grid{padding-bottom:10px}
+.atlas30 #trip-view .area-entry{margin:0 0 6px;padding:0;border:0;background:none}
+.atlas30 #trip-view .area-choices{display:flex;flex-wrap:wrap;flex-direction:row;gap:6px;align-items:center}
+.atlas30 #trip-view .area-choices label{display:flex;flex-direction:row;align-items:center;gap:6px;margin:0}
+.atlas30 #trip-view .area-choices :is(select,button){min-height:44px;margin:0;padding-block:4px}
+.atlas30 #trip-view .area-choices select{min-width:7rem}
+.atlas30 #area-status{margin:0;font-size:.8rem}
+.atlas30:where(:root[data-atlas-ready]) #area-status:not(:focus){margin-bottom:0}
+.atlas30 #trip-view .people-work{display:grid;grid-template-columns:minmax(0,1fr);gap:8px;margin-top:0}
+.atlas30 #trip-view .people-work>.map-column{order:-1}
+.atlas30 #trip-view .main-map{height:clamp(430px,62svh,650px)!important;margin:0}
+.atlas30 #trip-view .map-route-controls{padding:6px}
+.atlas30 #trip-view .map-route-endpoints small{font-size:.72rem}
+.atlas30 #trip-view .map-route-endpoints b{overflow-wrap:anywhere}
+.atlas30 #trip-view .map-heading{display:none}
+.atlas30 #trip-view #map-note{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.atlas30 #trip-view .map-route-actions{margin:0;padding:6px;background:#fff;border:1px solid #151515}
+.atlas30 #trip-view .map-route-actions #map-search{min-height:46px;white-space:nowrap}
+.atlas30 #trip-view .map-planning-note{margin:0;font-size:.8rem;padding:0 6px}
+.atlas30 #trip-view :is(#jr-jump,#map-edit-conditions){min-height:44px}
+.atlas30 #trip-view #map-route-status{margin:3px 0 0;font-size:.82rem}
+.atlas30 #trip-view #map-route-status:empty,.atlas30 #trip-view .map-route-display:not(:has(#map-route-result:not([hidden]))),.atlas30 #trip-view #result:has(.empty-result){display:none}
+.atlas30 #trip-options>summary,.atlas30 #jr-check>summary{min-height:44px;display:flex;align-items:center;cursor:pointer;font-weight:750}
+.atlas30 #trip-options>summary::before,.atlas30 #jr-check>summary::before{content:'＋';margin-right:.4rem}
+.atlas30 #trip-options[open]>summary::before,.atlas30 #jr-check[open]>summary::before{content:'−'}
+.atlas30 #trip-view .search-panel{padding:8px 10px}
+.atlas30 #trip-view .map-route-display{padding:6px 0}
+.atlas30 #trip-view #map-conditions-summary{font-size:.82rem;overflow-wrap:anywhere}
+.atlas30 #trip-view .area-entry p:empty{display:none}
+.atlas30 .leaflet-control-zoom a{width:44px;height:44px;line-height:44px}
+body.atlas-layout3 #main{padding:4px!important}
+body.atlas-layout3 .context-bar{margin:0 0 4px;padding:0 2px}
+body.atlas-layout3 .context-bar>label{font-size:.84rem}
+body.atlas-layout3 .context-bar select{width:clamp(7rem,48%,14rem)}
+body.atlas-layout3 .map-toolbar{min-height:0}
+body.atlas-layout3 .map-toolbar #map-title{font-size:.86rem}
+body.atlas-layout3 .map-toolbar #fit-city{min-height:44px}
+body.atlas-layout3 .map-column #map{height:clamp(390px,42vw,594px)}
+body.atlas-layout3 #time-gaps{margin:0;border-radius:0;padding:4px}
+body.atlas-layout3 #time-gaps .time-gap-tabs{gap:4px}
+body.atlas-layout3 #time-gaps .time-gap-tabs button{min-height:44px;padding:3px;font-size:.85rem}
+body.atlas-layout3 #time-gaps .time-play{gap:5px}
+body.atlas-layout3 #time-gaps #gap-play{min-height:44px;white-space:nowrap}
+body.atlas-layout3 :is(.basic-map-layers,.time-gap-settings,.time-gap-meta>details)>summary{min-height:44px;padding:7px 3px}
+body.atlas-layout3 #cell-detail:not(:has(.status-badge)){display:none}
+body.atlas-layout3 .leaflet-popup-content a{display:flex;min-height:44px;align-items:center}
+@media(max-width:600px){
+ .atlas30 .atlas-start{padding-inline:7px}
+ .atlas30 #trip-view .main-map{height:clamp(310px,47svh,430px)!important}
+ .atlas30 #trip-view .map-route-actions{grid-template-columns:minmax(0,1fr) auto}
+ body.atlas-layout3 .map-column #map{height:clamp(335px,94vw,425px)}
+}
+.atlas30 .trip-map-wrap{position:relative;isolation:isolate}
+.atlas30 .trip-map-wrap>#fit{position:absolute;z-index:900;right:8px;top:8px;min-height:44px;background:#fff;box-shadow:0 1px 3px #0003}

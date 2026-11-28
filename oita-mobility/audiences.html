@@ -1,49 +1,8 @@
-<!doctype html>
-<html lang="ja">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="referrer" content="no-referrer">
-<meta name="theme-color" content="#f7f5ef">
-<meta name="description" content="自治体、交通事業者、地元住民、観光客の4つの立場から大分の移動を調べる。">
-<title>大分の移動を地図から｜大分モビリティ・アトラス</title>
-<link rel="icon" href="assets/favicon.svg">
-<link rel="stylesheet" href="assets/leaflet.css">
-<link rel="stylesheet" href="v2/audiences.css?v=20261128-audience2">
-<script defer src="assets/leaflet.js"></script>
-<script type="module" src="v2/audiences.mjs?v=20261128-audience2"></script>
-</head>
-<body class="audiences">
-<a class="skip" href="#experience">地図へ移動</a>
-<header class="mast"><a class="mast-brand" href="index.html"><b>OITA</b><span>大分モビリティ・アトラス<small>MOBILITY ATLAS</small></span></a><a href="data-catalog.html">データ・出典 <span aria-hidden="true">↗</span></a></header>
-<main id="experience">
-<section class="stage" aria-labelledby="purpose-title">
-  <div class="title-bar"><div><p class="kicker">大分市から、周辺地域まで</p><h1 id="purpose-title">大分の移動を、地図から。</h1></div><span class="demo">検討用デモ</span></div>
-  <div class="roles" role="group" aria-label="使う立場を選ぶ">
-    <button type="button" data-role="city" aria-pressed="true"><span>自治体</span><small>地区の課題を探す</small></button>
-    <button type="button" data-role="operator" aria-pressed="false"><span>交通事業者</span><small>便の見直しを考える</small></button>
-    <button type="button" data-role="resident" aria-pressed="false"><span>地元住民</span><small>用事を済ませて帰る</small></button>
-    <button type="button" data-role="tourist" aria-pressed="false"><span>観光客</span><small>クルマなしで巡る</small></button>
-  </div>
-  <div class="experience">
-    <div class="map-wrap">
-      <div class="map-tools"><label><span class="sr-only">表示する市町村</span><select id="area"><option value="44201">大分市</option></select></label><label class="cross"><input type="checkbox" id="cross">市町村をまたぐ</label><button type="button" id="fit" aria-label="表示エリア全体に戻す">全体<span aria-hidden="true"> ⌂</span></button></div>
-      <div id="audience-map" role="region" aria-label="大分市の交通地図"></div>
-      <div class="key" aria-label="地図の凡例"><span><i class="bus"></i>大分バスの一部路線</span><span><i class="rail"></i>鉄道路線</span><span><i class="pin"></i><span id="key-pin">主な駅</span></span></div>
-      <p class="map-status" id="map-status" role="status">地図を読み込んでいます。</p><p class="map-status"><a href="journey.html?city=44201#jr-check">JR＋バスの往復を確認 ↗</a></p>
-    </div>
-    <div class="action" id="action" aria-labelledby="action-title">
-      <div class="action-head"><p class="kicker" id="role-kicker">自治体の方へ</p><h2 id="action-title">移動に困る地区を探す</h2><p id="role-intro">気になる場所を地図で押して、駅やバス停への距離を確認します。</p></div>
-      <div id="selection" hidden aria-live="polite"></div>
-      <fieldset id="picks" hidden><legend id="pick-legend">地図に表示する場所</legend><div id="filters"></div><label id="point-picker-label">場所を選ぶ<select id="point-picker"></select></label></fieldset>
-      <div class="explore-links"><a id="primary-link" class="primary" href="atlas.html?city=44201#atlas-time-gaps">時間帯別の交通空白を見る <span aria-hidden="true">→</span></a><a id="secondary-link" class="secondary" href="atlas.html?view=detail&amp;city=44201#city-form">目的地まで行ける地区を比べる <span aria-hidden="true">↗</span></a></div>
-      <p class="scope" id="role-scope">駅や停留所までの概算距離を表示。鉄道の時刻・乗継はこの地図では判定しません。</p>
-    </div>
-  </div>
-</section>
-<details class="advanced"><summary>分析を深める · データの根拠を確認する</summary><p>地図の位置や路線は収録範囲内の参考情報です。停留所までの距離は直線で、坂道・横断歩道や乗降の可否を示しません。交通空白候補は自治体の正式指定ではありません。</p><p><a href="transport-gaps.html?city=44201#method">空白の判定条件</a>　<a href="data-catalog.html">公開データの出典・有効期間</a>　<a href="usage.html">利用条件</a></p></details>
-</main>
-<footer class="foot"><strong>OITA MOBILITY ATLAS</strong><span>モビリティデザインラボの検討用デモ。自治体・交通事業者の公式案内ではありません。</span></footer>
-<noscript>地図の操作にはJavaScriptが必要です。<a href="atlas.html">地域の課題</a>／<a href="ridership.html">乗降実績</a>／<a href="journey.html#area-entry">往復候補</a>／<a href="../oita-tourism/">観光・周遊</a></noscript>
-</body>
-</html>
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><link rel="canonical" href="https://mobilitydlab.com/oita-mobility/"><title>大分モビリティ・アトラス</title><script>
+const from=new URL(location.href),to=new URL('./',from);
+to.search=from.search;to.hash=from.hash;const role=to.searchParams.get('role');to.searchParams.delete('role');
+if("map"==='trip'||role==='resident'){to.searchParams.set('view','trip');}
+else if(!to.hash&&role==='operator'){to.hash='atlas-toc';}
+else if(!to.hash&&role==='tourist'){to.hash='tourism';}
+location.replace(to.href);
+</script></head><body><a href="./">大分モビリティ・アトラスへ</a></body></html>

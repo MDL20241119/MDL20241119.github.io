@@ -7,6 +7,7 @@ import {pointInGeometry} from '../v2/model.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const urlParams=new URLSearchParams(location.search), embedded=urlParams.get('embed')==='atlas';
+const layout3=embedded&&urlParams.get('layout')==='3';
 if(embedded){
   document.body.classList.add('atlas-embedded');
   const layers=$('.map-toolbar .layers'), settings=$('.time-gap-settings');
@@ -16,6 +17,15 @@ if(embedded){
   summary.textContent='地図に重ねる情報';
   options.append(summary,layers);
   $('#time-gap-note').before(options,settings);
+  if(layout3){
+    document.body.classList.add('atlas-layout3');
+    $('#map').after($('#time-gaps'));
+    $('#map-toolbar-caption')?.remove();
+    $('#fit-city').textContent='全体';
+    $('#gap-play').textContent='▶ 再生';
+    $('#time-gap-note').textContent='色はバスの便と停留所・駅までの距離。列車の時刻は未判定。';
+    $('#map-tip').textContent='地図を押すと、この場所の状況がわかります。';
+  }
 }
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(v,d=0)=>Number.isFinite(v)?v.toLocaleString('ja-JP',{maximumFractionDigits:d}):'未確認';
@@ -25,7 +35,7 @@ const bandTitles={far:'バス停・駅とも圏外',noTrips:'駅は圏外・バ�
 const originalLegend=$('#gap-legend').innerHTML;
 const activeBand=()=>timeBandKey(applied?.profile);
 const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0):r?.status??'unknown';
-let quickPopup=null;
+let quickPopup=null, quickPoint=null;
 let playing=false,playTimer=null,slideTimer=null,animateToken=0,selectMarker=null;
 const kinds={school:'学校・大学・教習所',medical:'病院送迎',welfare:'福祉・介護',commercial:'商業・企業',tourism:'観光・ホテル',community:'地域交通'};
 const marks={school:'学',medical:'医',welfare:'福',commercial:'商',tourism:'宿',community:'地'};
@@ -72,7 +82,7 @@ function setWindowLabel(b){
  $('#gap-hour-value').textContent=b.start+'–'+b.end;
  $('#gap-hour').setAttribute('aria-valuetext',b.start+'から'+b.end);
 }
-function stopPlayback(){playing=false;clearTimeout(playTimer);clearTimeout(slideTimer);playTimer=null;slideTimer=null;const b=$('#gap-play');b.textContent='▶ 1時間ずつ再生';b.setAttribute('aria-pressed','false');}
+function stopPlayback(){playing=false;clearTimeout(playTimer);clearTimeout(slideTimer);playTimer=null;slideTimer=null;const b=$('#gap-play');b.textContent=layout3?'▶ 再生':'▶ 1時間ずつ再生';b.setAttribute('aria-pressed','false');}
 async function chooseFrame(key){
  if(busy)cancel(false);
  const old=readProfile(), p=dayBandProfile(old,key,Number($('#quick-walk').value));fillProfile(p);
@@ -178,11 +188,12 @@ function selectCell(id,move=false,clickPoint=null){
   }
   $('#map-tip').innerHTML=`<span class="chosen-area">区域 ${esc(p.meshCode)}：${esc(band?bandTitles[mapState(r,id)]:STATES[state])}</span> <a href="#cell-detail">判定の理由を見る</a>`;
   if(embedded&&(clickPoint||quickPopup?.isOpen())){
-    const region=r?.nearest?esc(r.nearest.name)+'まで約'+fmt(r.nearest.meters)+'m':'近くのバス停：未確認';
+    const region=r?.nearest?(layout3?'バス停':esc(r.nearest.name))+'まで約'+fmt(r.nearest.meters)+'m':'バス停：未確認';
     const trips=Number.isFinite(r?.departures)?fmt(r.departures)+'便':'未確認';
     const stateLabel=band?bandTitles[mapState(r,id)]:STATES[state];
-    const tripQuery=new URLSearchParams({view:'trip',city:cityCode,lat:p.lat.toFixed(5),lon:p.lon.toFixed(5)});
-    const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜乗車できる便：${trips}</span><a href="index.html?${esc(tripQuery.toString())}" target="_top">この付近から行って帰れるか調べる →</a><a class="quick-gap-detail" href="#cell-detail">この区域の詳しい判定 ↓</a></div>`;
+    if(clickPoint)quickPoint=clickPoint;
+    const tripQuery=new URLSearchParams({view:'trip',city:cityCode,lat:(layout3&&quickPoint?quickPoint.lat:p.lat).toFixed(5),lon:(layout3&&quickPoint?quickPoint.lng:p.lon).toFixed(5)});
+    const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜この時間帯：${trips}</span><a href="./?${esc(tripQuery.toString())}" target="_top">ここから行って帰れる？ →</a><a class="quick-gap-detail" href="#cell-detail">この区域の詳しい判定 ↓</a></div>`;
     if(clickPoint){
       quickPopup??=L.popup({className:'quick-gap-popup',maxWidth:254,minWidth:160,autoPanPadding:[16,22]});
       quickPopup.setLatLng(clickPoint).setContent(popupContent).openOn(map);
@@ -294,3 +305,4 @@ async function init(){
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
+
