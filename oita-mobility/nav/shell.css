@@ -47,3 +47,6 @@ body.atlas30 .start-tabs a{min-width:0;min-height:44px;padding:6px 3px;text-alig
 body:has(>.atlas-shell) .sidebar:has(>.app-nav){top:var(--atlas-shell-h)}
 body:has(>.atlas-shell) .sidebar>.app-nav{top:var(--atlas-shell-h)}
 @media(max-width:640px){body:has(>.atlas-shell) .sidebar>.app-nav{top:0}}
+.atlas-page-tool{justify-content:flex-end;padding-inline:clamp(12px,3vw,30px)}
+.atlas-page-tool button{min-height:44px}
+.atlas-embedded .atlas-page-tool,html.atlas-frame .atlas-page-tool{display:none!important}

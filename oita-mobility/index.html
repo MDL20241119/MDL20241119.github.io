@@ -57,7 +57,7 @@ function render(initial=false){
  $('#tourism').hidden=mode!=='trip'&&state.hash!=='tourism';
  if(mode==='map'){
   const tourMode=state.u.searchParams.get('points')==='tourism';
-  if(frameCity!==city){frameCity=city;const q=new URLSearchParams({embed:'atlas',layout:'3',v:'atlas-nav2',city});if(tourMode)q.set('points','tourism');const d=state.u.searchParams.get('journeyDate');if(d)q.set('journeyDate',d);frame.src='transport-gaps.html?'+q;}
+  if(frameCity!==city){frameCity=city;const q=new URLSearchParams({embed:'atlas',layout:'3',v:'atlas-nav3',city});if(tourMode)q.set('points','tourism');const d=state.u.searchParams.get('journeyDate');if(d)q.set('journeyDate',d);frame.src='transport-gaps.html?'+q;}
   else if(frame.contentDocument?.querySelector('#main')){const doc=frame.contentDocument;doc.dispatchEvent(new CustomEvent('atlas:tourism',{detail:{enabled:tourMode}}));watchFrame();}
  }else{
   if(state.hash==='opportunity-section')$('.trip-extras').open=true;
