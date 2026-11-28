@@ -69,7 +69,11 @@ function render(initial=false){
   if(state.hash==='jr-web-check')$('#jr-web-check').open=true;
   if(state.hash==='regional-transport')$('#regional-transport').open=true;
   if(!people)people=import('./v2/people.mjs?v=atlas-nav1').catch(()=>{people=null;const box=$('#error');box.hidden=false;box.textContent='往復検索を読み込めません。再読み込みしてください。';});
-  else{const select=$('#area-city');if(!select.disabled&&select.value!==city&&[...select.options].some(x=>x.value===city)){select.value=city;select.dispatchEvent(new Event('change',{bubbles:true}));}}
+  else{
+   const select=$('#area-city');if(!select.disabled&&select.value!==city&&[...select.options].some(x=>x.value===city)){select.value=city;select.dispatchEvent(new Event('change',{bubbles:true}));}
+   const d=state.u.searchParams.get('journeyDate'),input=$('#date');
+   if(/^\d{4}-\d{2}-\d{2}$/.test(d||'')&&input.value!==d){input.value=d;input.dispatchEvent(new Event('input',{bubbles:true}));}
+  }
   requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
  }
  updateLinks();
@@ -100,9 +104,9 @@ $('#tab-tour').addEventListener('click',e=>{
 window.addEventListener('hashchange',()=>render());
 window.addEventListener('popstate',()=>render());
 render(true);
-</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=neo-font6"><script defer src="/oita-mobility/nav/shell.js?v=analysis-guide8"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="行って帰れる？" data-atlas-label-url=""><div class="atlas-shell__row">
+</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=neo-font6"><script defer src="/oita-mobility/nav/shell.js?v=action9"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="行って帰れる？" data-atlas-label-url=""><div class="atlas-shell__row">
 <a class="atlas-shell__brand" href="/oita-mobility/" aria-label="大分市の交通空白マップの入口">交通空白マップ</a>
-<nav class="atlas-shell__tabs" aria-label="アトラスの大項目"><a href="/oita-mobility/" data-atlas-tab="map" aria-current="true">地図</a><a href="/oita-mobility/overview.html" data-atlas-tab="data">交通を考える</a></nav>
+<nav class="atlas-shell__tabs" aria-label="アトラスの大項目"><a href="/oita-mobility/" data-atlas-tab="map" aria-current="true">地図</a><a href="/oita-mobility/overview.html" data-atlas-tab="data">改善を考える</a></nav>
 <details class="atlas-shell__directory"><summary>全体<span class="atlas-shell__arrow" aria-hidden="true">⌄</span></summary>
 <div class="atlas-shell__panel" aria-label="アトラス全体の構成"><noscript><a href="/oita-mobility/tools.html">全体の目次・資料</a></noscript></div></details>
 </div><nav class="atlas-shell__crumb" aria-label="現在地"><a href="/oita-mobility/">大分市</a><span aria-hidden="true">›</span><a href="/oita-mobility/" data-atlas-parent>地図</a><span aria-hidden="true" data-atlas-separator>›</span><b aria-current="location" data-atlas-current>行って帰れる？</b></nav></header>
@@ -181,7 +185,7 @@ render(true);
 <details class="start-advanced trip-extras"><summary>この場所から行ける施設も見る <span>片道30分・60分</span></summary><section class="opportunity section-block" id="opportunity-section" hidden><div class="section-heading"><div><span class="eyebrow">LIFE OPPORTUNITIES</span><h2>この場所から、どんな用事に行ける？</h2><p>収録施設への、30分・60分以内の行きの候補。</p></div><button id="opportunity-run" class="secondary">生活機会を調べる →</button></div><p class="note">出発地と出発時刻は上の条件を使用。帰り・受付は別途確認。県内の施設を網羅していません。</p><div id="opportunity-results" class="opportunity-results"><p>出発地を指定して、ボタンを押してください。</p></div></section></details><div id="error" class="error" role="alert" hidden></div></section>
 <a class="start-companion" id="tourism" href="../oita-tourism/#mobility" hidden><b>観光地の周りを調べる</b><span>近くの乗り場・周遊 ↗</span></a>
 <details class="start-advanced" id="atlas-toc">
-  <summary>地域の交通を考える</summary>
+  <summary>改善を考える</summary>
   <div class="start-tool-grid">
     <a href="overview.html" data-city-link><b>現状分析</b><span>大分市で確認した結果と、これまでの交通分析を読む。</span></a>
     <a href="atlas.html?view=detail&amp;city=44201#city-form" data-city-link><b>地域ごとに通院・買物の往復を調べる</b><span>停留所まで歩けるかと、用事を済ませて帰れるかを別々に確認。</span></a>
@@ -189,7 +193,7 @@ render(true);
     <a href="policy.html?city=44201" data-city-link><b>改善案を比べる</b><span>バスの増便・時刻変更を試算。ほかの手段は仮定と費用を入力して比較。</span></a>
     <a href="ridership.html"><b>実際の乗降データを確認する</b><span>集計CSVを読み込み、停留所・便ごとの利用や出発地と到着地の組を分析。</span></a>
   </div>
-  <p class="start-references"><a href="tools.html">全体の目次 →</a><a href="accessibility.html">施設別の詳細</a><a href="lab.html">ダイヤ・需要・費用</a><a href="analysis.html">旧版 1.0</a><a href="guide/manual-3.pdf">マニュアルPDF</a></p>
+  <p class="start-references"><a href="tools.html">全体の目次 →</a><a href="accessibility.html">施設別の詳細</a><a href="lab.html">ダイヤ・需要・費用</a><a href="analysis.html">旧版 1.0</a><a href="guide/manual-current.pdf">マニュアルPDF</a></p>
 </details></main><footer><div><b>OITA MOBILITY ATLAS</b><p>行きたいところへ、行ける大分へ。</p><small>モビリティデザインラボによる公開デモ。大分県・大分市など自治体の公式サービスではありません。</small></div><div class="footer-links"><a href="guide/">使い方マニュアル</a><a href="data-catalog.html">データ・出典</a><a href="usage.html#coverage">判定に使うデータ</a><a href="usage.html">利用条件</a></div></footer><noscript>検索・地図・試算にはJavaScriptが必要です。データと利用条件はリンク先で確認できます。</noscript></body></html>
 
 

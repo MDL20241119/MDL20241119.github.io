@@ -11,9 +11,9 @@
   const groups={
     map:['地図',A,[
       ['行って帰れる？',A+'?view=trip'],['時間帯別に乗れる場所',A+'?view=map'],['観光地を探す',A+'?points=tourism']]],
-    data:['交通を考える',A+'overview.html',[
+    data:['改善を考える',A+'overview.html',[
       ['現状分析',A+'overview.html'],
-      ['地域の移動の課題',A+'atlas.html?view=detail#city-form'],['増便などの効果を比べる',A+'policy.html'],['実際の乗り降り',A+'ridership.html'],['観光客の動き',T+'#overview']]],
+      ['地域の移動の課題',A+'atlas.html?view=detail#city-form'],['改善を試す',A+'policy.html'],['乗り降り実績',A+'ridership.html'],['観光客の動き',T+'#overview']]],
     docs:['資料・出典',A+'tools.html#references',[
       ['データ・出典',A+'data-catalog.html'],['使い方マニュアル',A+'guide/'],['旧版アーカイブ',A+'analysis.html']]]
   };

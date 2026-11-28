@@ -27,3 +27,15 @@
 .oa-analytical-tabs a[aria-current]{background:#142d38;border-color:#142d38;color:#fff}
 .oa-mobile-only{display:none}
 @media(max-width:600px){.oa-mobile-only{display:initial}.oa-analytical-tabs{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}.oa-grid article{padding:8px}.oa-grid p{font-size:.86rem}}
+.oa-pane [hidden]{display:none!important}
+.oa-region-tabs{margin:15px 0 5px;width:100%}
+.oa-curve{border:1px solid #8da5ad;background:#fff;margin:18px 0;padding:12px;min-width:0}
+.oa-curve-input{display:grid;gap:3px;margin:8px 0}
+.oa-curve-input input{width:100%;min-height:32px}
+.oa-curve-read b{font-size:clamp(30px,7vw,54px);font-variant-numeric:tabular-nums;letter-spacing:-.065em}
+.oa-curve-read span{display:block;color:#375565;font-size:.88rem}
+.oa-hour-bars{display:grid;grid-template-columns:repeat(16,minmax(0,1fr));gap:2px;height:100px;margin-top:7px}
+.oa-hour-bars button{border:0;border-radius:0;background:none;padding:0 1px;display:grid;grid-template-rows:minmax(0,1fr) auto;align-items:end;justify-items:center;font:inherit;font-size:clamp(9px,2.5vw,12px);min-width:0;color:#183d4d;cursor:pointer}
+.oa-hour-bar{display:block;background:#a1cbd1;width:90%;max-width:24px}
+.oa-hour-bars button[aria-pressed=true] .oa-hour-bar{background:#247568}
+.oa-hour-bars button[aria-pressed=true]{font-weight:900;border-bottom:2px solid #247568}
