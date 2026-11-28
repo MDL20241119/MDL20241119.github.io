@@ -59,6 +59,9 @@ async function start(){dateInputs();[facilities,catalog,transport,boundaries,res
  const requested=params.get('city');
  const code=boundaries.features.some(f=>f.properties.code===requested)?requested:'44201';
  setupArea(boundaries,chooseArea,code);
+ if(params.get('cross')==='1'){$('#other-cities').checked=true;renderAreaFacilities(true);}
+ const picked=facilities.find(f=>f.id===params.get('destination'));
+ if(picked&&areaFacilities().some(f=>f.id===picked.id))setTarget(picked);
  if(params.has('lat')&&params.has('lon')){
    const point={lat:Number(params.get('lat')),lon:Number(params.get('lon')),name:'地図で選んだ区域の代表地点'};
    if(validPoint(point)&&cityAt(point,boundaries.features)?.code===code)setHome(point);
