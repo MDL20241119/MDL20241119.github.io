@@ -11,10 +11,11 @@
   const groups={
     map:['地図',A,[
       ['行って帰れる？',A+'?view=trip'],['時間帯別に乗れる場所',A+'?view=map'],['観光地を探す',A+'?points=tourism']]],
-    data:['地域データ',A+'tools.html#area',[
+    data:['交通を考える',A+'overview.html',[
+      ['現状分析',A+'overview.html'],
       ['地域の移動の課題',A+'atlas.html?view=detail#city-form'],['増便などの効果を比べる',A+'policy.html'],['実際の乗り降り',A+'ridership.html'],['観光客の動き',T+'#overview']]],
     docs:['資料・出典',A+'tools.html#references',[
-      ['データ・出典',A+'data-catalog.html'],['使い方ガイド',A+'guide/'],['旧版アーカイブ',A+'analysis.html']]]
+      ['データ・出典',A+'data-catalog.html'],['使い方マニュアル',A+'guide/'],['旧版アーカイブ',A+'analysis.html']]]
   };
   const link=(href,label)=>Object.assign(document.createElement('a'),{href,textContent:label});
   const dir=shell.querySelector('details'),panel=dir.querySelector('.atlas-shell__panel');
@@ -79,6 +80,7 @@
     for(const m of menu){m.el.href=scoped(m.href,city);
       if(m.href===s.key&&m.key===s.group)m.el.setAttribute('aria-current','location');else m.el.removeAttribute('aria-current');
     }
+    for(const tab of document.querySelectorAll('.oa-analytical-tabs a'))tab.href=scoped(tab.href,city);
     if(p===A+'tools.html')for(const card of document.querySelectorAll('.start-tool-grid a')){
       const target=new URL(card.href,url);
       if(target.origin===url.origin&&target.pathname.startsWith(A))card.href=scoped(target.href,city);
