@@ -2,7 +2,7 @@
 const $=s=>document.querySelector(s);
 const frame=$('#start-map-frame'), tripView=$('#trip-view'), mapView=$('.start-map');
 const technical=new Set(['map','ridership','od','forecast','cost','bc','sources']);
-const tripAnchors=new Set(['area-entry','people-work','journey-form','journey-when','result','opportunity-section','people-map','trip-view','jr-check','regional-transport']);
+const tripAnchors=new Set(['area-entry','people-work','journey-form','journey-when','result','opportunity-section','people-map','trip-view','jr-check','jr-web-check','regional-transport']);
 let city='44201',	mode='map', frameCity='', observer, people, observedDoc;
 function page(){
  const u=new URL(location.href);
@@ -50,10 +50,11 @@ function render(initial=false){
  if(state.hash==='atlas-toc')$('#atlas-toc').open=true;
  $('#tourism').hidden=mode!=='trip'&&state.hash!=='tourism';
  if(mode==='map'){
-  if(frameCity!==city){frameCity=city;frame.src='transport-gaps.html?embed=atlas&layout=3&v=oita800c&city='+city;}else if(frame.contentDocument?.querySelector('#main'))watchFrame();
+  if(frameCity!==city){frameCity=city;frame.src='transport-gaps.html?embed=atlas&layout=3&v=rail-check1&city='+city;}else if(frame.contentDocument?.querySelector('#main'))watchFrame();
  }else{
   if(state.hash==='opportunity-section')$('.trip-extras').open=true;
-  if(state.hash==='jr-check')$('#jr-check').open=true;
+  if(state.hash==='jr-check'||state.hash==='jr-web-check')$('#jr-check').open=true;
+  if(state.hash==='jr-web-check')$('#jr-web-check').open=true;
   if(state.hash==='regional-transport')$('#regional-transport').open=true;
   if(!people)people=import('./v2/people.mjs?v=rail-atlas3').catch(()=>{people=null;const box=$('#error');box.hidden=false;box.textContent='往復検索を読み込めません。再読み込みしてください。';});
   else{const select=$('#area-city');if(!select.disabled&&select.value!==city&&[...select.options].some(x=>x.value===city)){select.value=city;select.dispatchEvent(new Event('change',{bubbles:true}));}}
@@ -62,7 +63,7 @@ function render(initial=false){
  updateLinks();
  if(initial&&mode==='trip'&&state.hash){
   const move=()=>document.getElementById(state.hash)?.scrollIntoView({block:'start'});
-  if(state.hash==='jr-check'){const observer=new MutationObserver(()=>{if(document.documentElement.dataset.atlasReady==='true'){observer.disconnect();move();}});observer.observe(document.documentElement,{attributes:true,attributeFilter:['data-atlas-ready']});}
+  if(['jr-check','jr-web-check'].includes(state.hash)){const observer=new MutationObserver(()=>{if(document.documentElement.dataset.atlasReady==='true'){observer.disconnect();move();}});observer.observe(document.documentElement,{attributes:true,attributeFilter:['data-atlas-ready']});}
   else requestAnimationFrame(move);
  }
 }
@@ -77,6 +78,8 @@ let local;
 const regional=$('#regional-transport');
 regional.addEventListener('toggle',()=>{if(regional.open&&!local)local=import('./v2/local-service.mjs?v=regional1').then(m=>m.mountRegional()).catch(()=>{$('#regional-result').textContent='地域交通データを読めませんでした。ページを再読み込みしてください。';local=null;});});
 $('#regional-jump').addEventListener('click',()=>{regional.open=true;regional.scrollIntoView({block:'start'});regional.querySelector('summary').focus({preventScroll:true});});
+const jrProof=$('#jr-web-check');let proof;
+jrProof.addEventListener('toggle',()=>{if(jrProof.open&&!proof)proof=import('./v2/jr-public-check.mjs?v=1').then(m=>m.mount()).catch(()=>{$('#jr-proof-result').textContent='確認事例を読み込めませんでした。';proof=null;});});
 $('#jr-jump').addEventListener('click',()=>{const box=$('#jr-check');box.open=true;box.scrollIntoView({block:'start'});box.querySelector('summary').focus({preventScroll:true});});
 $('.start-guide').addEventListener('click',()=>{$('#atlas-toc').open=true;});
 window.addEventListener('popstate',()=>render());
@@ -102,6 +105,17 @@ render(true);
 <p id="map-route-status" role="status">地図で出発地を選ぶ</p></div>
 <div class="trip-map-wrap"><button class="quiet" id="fit" type="button">県全体</button><div id="people-map" class="main-map" aria-label="大分県の目的地・ルート検索マップ"></div></div><div class="map-route-actions"><div><p id="map-conditions-summary"></p><button type="button" class="quiet" id="map-edit-conditions">日時を変える</button></div><button class="primary" type="button" id="map-search" disabled>往復を調べる</button><button class="quiet" type="button" id="map-cancel" hidden>中止</button><button class="quiet" type="button" id="map-pick-cancel" hidden>地点選択をやめる</button></div><p class="map-planning-note">通常検索：バス · <button type="button" class="quiet" id="regional-jump">グリスロ・ふれあい交通</button> <button type="button" class="quiet" id="jr-jump">JRの判定・対応状況</button></p><p id="map-note" class="map-note" role="status">施設の丸や地図の地点から出発地・目的地を選べます。ピンクは出発地、青は目的地。</p><div class="map-route-display"><div id="map-route-directions" class="map-route-directions" hidden><div role="group" aria-label="表示する経路"><button type="button" data-route-direction="both" aria-pressed="true">往復</button><button type="button" data-route-direction="outbound" aria-pressed="false">行き</button><button type="button" data-route-direction="inbound" aria-pressed="false">帰り</button></div><button type="button" class="quiet" id="map-route-fit">経路全体</button><button type="button" class="quiet" id="map-clear">経路を消す</button></div><p class="route-legend"><span class="legend-out">行き</span><span class="legend-back">帰り</span><span>バス：公開走行経路 ／ 徒歩：概略線</span></p><div id="map-route-result" hidden aria-live="polite"></div><p id="automatic-rail-result" class="note" role="status" hidden></p></div>
 <div class="map-data-strip"><div><b id="facility-count">—</b><span id="facility-scope">この地域の収録施設</span></div><div><b>18</b><span>市町村</span></div><div><b id="resource-count">—</b><span>送迎の公表事例</span></div><div><b id="feed-count">—</b><span>公開時刻表</span></div></div></div><div class="search-panel"><details id="trip-options"><summary>場所を入力・日時や条件を変更</summary><form id="journey-form"><div class="journey-places"><div class="number-label"><span>1</span>どこから、どこへ？</div><label>出発地<input id="origin" list="origin-list" placeholder="施設・バス停名、または地図から" autocomplete="off" required><datalist id="origin-list"></datalist></label><div class="button-row compact"><button type="button" class="quiet" id="current-location">現在地を使う</button><button type="button" class="quiet" id="pick-origin">地図から選ぶ</button></div><label>行きたい場所<input id="destination" list="destination-list" placeholder="店名・施設名・住所で絞り込み" aria-describedby="destination-count" autocomplete="off" required><datalist id="destination-list"></datalist></label><label class="check cross-city"><input type="checkbox" id="other-cities" checked>市外の目的地も探す</label><div class="purpose-chips" id="purpose-chips" aria-label="目的地の種類"><button type="button" data-purpose="all" aria-pressed="true">すべて</button><button type="button" data-purpose="shopping" aria-pressed="false">買物</button><button type="button" data-purpose="hospital" aria-pressed="false">病院</button><button type="button" data-purpose="school" aria-pressed="false">学校</button><button type="button" data-purpose="civic" aria-pressed="false">公共施設</button><button type="button" id="pick-destination">地図で目的地</button></div><div class="destination-picker"><label id="shop-filter" hidden>買物のお店の種類<select id="shop-kind"><option value="all">買物のお店すべて</option></select></label><p id="destination-count" role="status"></p><div id="destination-options"></div><div class="button-row"><button id="destination-more" class="quiet" type="button" hidden>次の12件を表示</button><button id="destination-reset" class="quiet" type="button" hidden>絞り込みを解除</button></div><p class="note">全店舗を網羅していません。候補にない場所は地図で指定できます。近い店でも、交通・営業時間の条件は別途確認が必要です。</p><div id="destination-selected" class="destination-selected" aria-live="polite" hidden></div></div></div><div class="journey-when" id="journey-when"><div class="number-label"><span>2</span>いつ、どのくらい？</div><div class="quick-times"><button type="button" id="now">今から</button><button type="button" id="tomorrow">明日</button></div><div class="form-grid"><label>日付<input type="date" id="date" data-today required></label><label>家を出られる時刻<input type="time" id="departure" value="09:00" required></label><label>用事を始めたい時刻<input type="time" id="activity-time" value="10:00" required></label><label>用事の時間（分）<input id="dwell" type="number" min="1" max="720" value="60" required></label><label class="span2">家に戻りたい時刻<input type="time" id="deadline" value="18:00" required></label></div><details class="advanced"><summary>徒歩・乗換と利用条件</summary><div class="form-grid"><label>歩く条件<select id="profile"><option value="standard">標準：時速4km</option><option value="slow">ゆっくり：時速2.5km</option><option value="wheelchair">車いす対応を確認</option></select></label><label>片道の乗換<select id="transfers"><option value="0">乗換なし</option><option value="1" selected>1回まで</option><option value="2">2回まで</option></select></label><label>1区間の徒歩上限（m）<input id="max-walk" type="number" min="0" max="2000" value="500" required></label><label>往復の徒歩合計上限（m）<input id="total-walk" type="number" min="0" max="12000" value="2000" required></label><label>片道の上限（分）<input id="leg-minutes" type="number" min="1" max="240" value="90" required></label><label>予約が必要な交通<select id="reservation"><option value="no">利用しない</option><option value="unknown">利用条件も確認</option></select></label></div><p class="note">徒歩は直線距離×1.3の概算。歩道・坂・信号は未確認です。普通の乗換には3分を見込みます。</p></details><details class="advanced"><summary>使う時刻表を確認する</summary><p class="note">出発地・目的地近くの事業者を自動選択。遠回りの乗換は追加してください。</p><div id="feeds" class="feed-list"></div></details></div><div class="journey-submit"><button class="primary search-submit" id="search-button" type="submit">行って帰れるか調べる <span>→</span></button><button class="quiet" id="cancel" type="button" hidden>計算を中止</button></div></form></details><p id="progress" role="status"></p><p class="scope-note">公開時刻表：2026年11月28日に配布中の16ファイルを照合し、13ファイルを更新。通常検索はバスのみ。JRの判定・市をまたぐ検証例は下にあります。運賃・運休・遅延・施設送迎は未統合。実際の運行と受付は出発前に確認してください。</p><details id="jr-check" class="advanced"><summary>JRを含めた往復を判定する</summary>
+<details id="jr-web-check" class="advanced"><summary>ファイルなしで判定する：公開ダイヤの確認事例</summary>
+<p>2026年11月28日（土）にJR＋大分きゃんバスで大分市美術館停留所へ。11:00〜11:05から用事を始める想定です。</p>
+<form id="jr-proof-form"><div class="form-grid"><label>出発する駅<select id="jr-proof-origin" required></select></label>
+<label>出発できる時刻<input id="jr-proof-depart" type="time" value="08:40" required></label>
+<label>最低滞在（分）<input id="jr-proof-stay" type="number" min="1" max="720" value="170" required></label>
+<label>駅に戻りたい時刻<input id="jr-proof-deadline" type="time" value="17:30" required></label></div>
+<button type="submit" class="secondary">JR＋バスの往復候補を判定</button></form>
+<p id="jr-proof-result" role="status"></p>
+<p class="note">市内16駅・隣接市5駅の確認事例です。他の日や目的地は未確認。徒歩は概算、片道乗換1回、施設の開館・実際の運行は保証しません。</p>
+<p><a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の駅別時刻表</a> ／ <a href="https://www.city.oita.oita.jp/o171/machizukuri/kotsu/1505442959092.html">大分きゃんバス</a></p>
+</details>
 <p>利用できる時刻データを読み込むと、JR＋バスで往復候補を計算します。公開版に自動判定用のJR時刻データは入っていません。列車の時刻は表示しません。</p>
 <label>利用できるJR時刻データ（GTFS ZIP、20MB以下）<input id="rail-file" type="file" accept=".zip,application/zip"></label>
 <label class="check"><input id="rail-permission" type="checkbox">判定に使えるファイルであることを確認した</label>
@@ -150,5 +164,6 @@ render(true);
   </div>
   <p class="start-references"><a href="tools.html">すべての機能・データ →</a><a href="accessibility.html">施設別の詳細</a><a href="lab.html">ダイヤ・需要・費用</a><a href="analysis.html">旧版 1.0</a><a href="guide/oita-mobility-catalog.pdf">カタログPDF</a></p>
 </details></main><footer><div><b>OITA MOBILITY ATLAS</b><p>行きたいところへ、行ける大分へ。</p><small>モビリティデザインラボによる公開デモ。大分県・大分市など自治体の公式サービスではありません。</small></div><div class="footer-links"><a href="guide/">使い方</a><a href="data-catalog.html">データ・出典</a><a href="usage.html#coverage">判定に使うデータ</a><a href="usage.html">利用条件</a></div></footer><noscript>検索・地図・試算にはJavaScriptが必要です。データと利用条件はリンク先で確認できます。</noscript></body></html>
+
 
 
