@@ -72,3 +72,18 @@ body:has(>.atlas-shell):not(.atlas30,.atlas-embedded) main :is(.section-head,.se
 .atlas-editorial-context{margin:2px 0 0!important;font-size:clamp(12px,2.9vw,14px);line-height:1.4;color:#334955;font-weight:650}
 .atlas-shell__brand{font-size:clamp(13px,3.9vw,20px)}
 @media(max-width:420px){.atlas30 .atlas-editorial-title h1{font-size:clamp(30px,9.15vw,39px)}}
+
+/* Same type family as the Oita tourism Neo Swiss edition. Palette and layout stay local. */
+html:has(body>.atlas-shell){
+  --atlas-font:"Helvetica Neue",Helvetica,Arial,"Hiragino Kaku Gothic ProN","Noto Sans JP",sans-serif;
+  font-family:var(--atlas-font)
+}
+body:has(>.atlas-shell),
+body:has(>.atlas-shell) .atlas-shell,
+body:has(>.atlas-shell) .atlas-shell__panel h2,
+body:has(>.atlas-shell) :is(h1,h2,h3,h4,h5,h6,button,input,select,textarea,summary,.eyebrow,.metric-value,.city-number,.start-kicker){
+  font-family:var(--atlas-font)
+}
+body:has(>.atlas-shell) :is(.metric-value,.city-number,.atlas-editorial-kicker,time){
+  font-variant-numeric:tabular-nums
+}
