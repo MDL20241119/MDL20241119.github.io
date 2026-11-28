@@ -45,7 +45,18 @@ const mapState=(r,id)=>{
 };
 
 let quickPopup=null, quickPoint=null;
-let playing=false,playTimer=null,slideTimer=null,animateToken=0,selectMarker=null;
+let playing=false,playTimer=null,animateToken=0,selectMarker=null;
+let activeRun=null, queuedFrame=null;
+const requestedBand=()=>timeBandKey(queuedFrame??activeRun??applied?.profile);
+function refreshTimeControls(message){
+ const profile=queuedFrame??activeRun??applied?.profile;
+ const band=requestedBand(), b=gapWindow(band);
+ if(b){$('#gap-hour').value=String(Number(b.start.slice(0,2)));setWindowLabel(b);}
+ for(const button of $$('[data-gap-band]'))button.setAttribute('aria-pressed',String((busy||!dirty)&&button.dataset.gapBand===band));
+ const status=$('#quick-status'), condition=b?b.label+' '+b.start+'–'+b.end:'';
+ status.textContent=message??(busy&&profile?`${profile.date} ${condition} を判定中…`:'');
+ status.hidden=!status.textContent;
+}
 const kinds={school:'学校・大学・教習所',medical:'病院送迎',welfare:'福祉・介護',commercial:'商業・企業',tourism:'観光・ホテル',community:'地域交通'};
 const marks={school:'学',medical:'医',welfare:'福',commercial:'商',tourism:'宿',community:'地'};
 const useText={yes:'一般利用の案内あり',conditional:'条件付き・利用者限定',restricted:'利用者限定',unknown:'一般利用は未確認'};
@@ -62,7 +73,7 @@ const cityName=()=>city()?.properties.name??'';
 const standardFiles=()=>catalog.filter(f=>!f.name.startsWith('高速')).map(f=>f.file);
 const initialProfile=code=>{const p=defaultProfile(code,standardFiles());return (embedded||code==='44201')?dayBandProfile({...p,date:new Date().toLocaleDateString('sv-SE',{timeZone:'Asia/Tokyo'})},'daytime',500):p;};
 async function json(url){const r=await fetch(url);if(!r.ok)throw Error('データを読み込めません：'+url);return r.json();}
-function error(e){const message=e.message??String(e);$('#error').hidden=false;$('#error').textContent=message;$('#status').textContent='確認が必要です：'+message;}
+function error(e){const message=e.message??String(e);refreshTimeControls('判定できませんでした。時間帯を選び直すか、ページを再読み込みしてください。');$('#error').hidden=false;$('#error').textContent=message;$('#status').textContent='確認が必要です：'+message;}
 function clearError(){$('#error').hidden=true;}
 function guard(fn){return (...args)=>Promise.resolve().then(()=>fn(...args)).catch(e=>{if(busy)cancel(false);error(e);});}
 function on(s,event,fn){$(s).addEventListener(event,guard(fn));}
@@ -71,8 +82,8 @@ function selectedFeeds(){return $$('#feed-list input:checked').map(e=>e.value);}
 function readProfile(){const p=defaultProfile(cityCode,selectedFeeds());for(const [k,id]of Object.entries(ids)){const el=$('#'+id);if(el.type==='checkbox')p[k]=el.checked;else if(numbers.has(k)){if(el.value==='')throw Error('数値の空欄を確認してください');p[k]=Number(el.value);}else p[k]=el.value;}p.destinations=[...$('#destination').selectedOptions].map(x=>x.value);p.files=selectedFeeds();return validateProfile(p);}
 function fillProfile(p){for(const [k,id]of Object.entries(ids)){const el=$('#'+id);if(el.type==='checkbox')el.checked=p[k];else el.value=p[k];}for(const el of $$('#feed-list input'))el.checked=p.files.includes(el.value);for(const o of $('#destination').options)o.selected=p.destinations.includes(o.value);$('#quick-date').value=p.date;$('#saved-label').textContent=saved[cityCode]?'この端末に保存済み':'未保存';$('#profile-state').textContent=p.name+' · '+cityName();}
 function validateFiles(p){p.files=currentFeedFiles(p.files,catalog);if(p.files.some(x=>!catalog.some(f=>f.file===x)))throw Error('収録外の交通データが設定されています');if(p.destinations.some(x=>!places.some(f=>f.id===x)))throw Error('収録外の目的地が設定されています');if(!boundaries.features.some(f=>f.properties.code===p.cityCode))throw Error('対象外の自治体です');return validateProfile(p);}
-function setBusy(v){busy=v;$('#run').disabled=v;$('#cancel').hidden=!v;$('#progress').hidden=!v;if(v)$('#progress').value=0;}
-function cancel(keep=true){job++;worker?.terminate();worker=null;setBusy(false);if(keep){$('#status').textContent='計算を中止しました。未計算の区域は灰色です。';refresh();}}
+function setBusy(v){busy=v;if(!v)activeRun=null;$('#run').disabled=v;$('#cancel').hidden=!v;$('#progress').hidden=!v;if(v)$('#progress').value=0;}
+function cancel(keep=true){queuedFrame=null;job++;worker?.terminate();worker=null;setBusy(false);if(keep){$('#status').textContent='計算を中止しました。未計算の区域は灰色です。';refresh();refreshTimeControls('判定を中止しました。');}}
 function invalidate(){stopPlayback();animateToken++;if(busy)cancel(false);$('#quick-date').value=$('#date').value;dirty=true;applied=null;results.clear();health=[];excluded=0;activityCount=0;for(const l of layers.values())l.setStyle(cellStyle('unknown'));$('#saved-label').textContent='変更あり';$('#profile-state').textContent='条件を変更しました。「この条件で地図を更新」を押してください。';$('#status').textContent='条件を変更しました。再計算してください。';$('.scope-note').classList.add('stale');refresh();}
 function cellStyle(state){return {color:colors[state],weight:.7,fillColor:colors[state],fillOpacity:['fail','far','noTrips','railPending','railConfirmed'].includes(state) ? .56 : state==='pass' ? .28 : .2};}
 function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));for(const f of cells){const l=L.geoJSON(f,{bubblingMouseEvents:!embedded,style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',e=>{if(!picking)selectCell(f.id,false,e.latlng);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
@@ -92,11 +103,17 @@ function setWindowLabel(b){
  $('#gap-hour-value').textContent=b.start+'–'+b.end;
  $('#gap-hour').setAttribute('aria-valuetext',b.start+'から'+b.end);
 }
-function stopPlayback(){playing=false;clearTimeout(playTimer);clearTimeout(slideTimer);playTimer=null;slideTimer=null;const b=$('#gap-play');b.textContent=layout3?'▶ 再生':'▶ 1時間ずつ再生';b.setAttribute('aria-pressed','false');}
+function stopPlayback(){playing=false;clearTimeout(playTimer);playTimer=null;const b=$('#gap-play');b.textContent=layout3?'▶ 再生':'▶ 1時間ずつ再生';b.setAttribute('aria-pressed','false');}
 async function chooseFrame(key){
- if(busy)cancel(false);
  const old=readProfile(), p=dayBandProfile(old,key,Number($('#quick-walk').value));fillProfile(p);
+ if(busy){queuedFrame=p;refreshTimeControls();return;}
  await run();
+}
+function nextFrame(){
+ if(!queuedFrame)return false;
+ const p=queuedFrame;queuedFrame=null;
+ fillProfile(p);guard(run)();
+ return true;
 }
 function advancePlayback(){
  if(!playing)return;
@@ -132,20 +149,20 @@ function repaint(previous){
 async function run(){
  if(busy)return;clearError();const p=validateFiles(readProfile()),prev=applied?.profile;
  const retain=Boolean(!dirty&&applied?.complete&&timeBandKey(prev)&&timeBandKey(p)&&prev.cityCode===p.cityCode&&prev.resolution===p.resolution&&prev.populatedOnly===p.populatedOnly);
- setBusy(true);const myJob=++job;const next=new Map(), record={profile:structuredClone(p),bounds:p.activityOn&&p.activityScope==='view'?mapBounds():null,startedAt:new Date().toISOString(),finishedAt:null,complete:false};
+ activeRun=p;setBusy(true);refreshTimeControls();const myJob=++job;const next=new Map(), record={profile:structuredClone(p),bounds:p.activityOn&&p.activityScope==='view'?mapBounds():null,startedAt:new Date().toISOString(),finishedAt:null,complete:false};
  try{
   if(!retain){
    if(!await loadCells(p)||myJob!==job)return;
    animateToken++;applied=record;dirty=false;results.clear();health=[];activityCount=0;drawGrid();
   }
   $('.scope-note').classList.remove('stale');$('#status').textContent='交通データを準備しています…';$('#profile-state').textContent=p.name+' · '+cityName();
-  if(!cells.length){setBusy(false);applied=record;applied.complete=true;applied.finishedAt=new Date().toISOString();$('#status').textContent='この絞り込みに該当する区域はありません。';stopPlayback();refresh();return;}
+  if(!cells.length){setBusy(false);applied=record;applied.complete=true;applied.finishedAt=new Date().toISOString();$('#status').textContent='この絞り込みに該当する区域はありません。';if(!nextFrame()){stopPlayback();refresh();}return;}
   if(!worker)worker=new Worker(new URL('./worker.mjs',import.meta.url),{type:'module'});
   worker.onerror=()=>{if(myJob===job){stopPlayback();cancel(false);error(Error('計算を完了できませんでした。範囲を絞って再実行してください。'));}};
   let nextHealth=health,nextExcluded=excluded;
   worker.onmessage=({data})=>{
    if(data.id!==job)return;
-   if(data.error){stopPlayback();cancel(false);error(Error(data.error));refresh();return;}
+   if(data.error){stopPlayback();cancel(false);refresh();error(Error(data.error));return;}
    if(data.health){nextHealth=data.health;nextExcluded=data.excluded;if(!retain){health=nextHealth;excluded=nextExcluded;renderHealth();}}
    if(data.progress){$('#status').textContent=data.progress;$('#progress').value=data.percent;}
    if(data.batch){
@@ -155,7 +172,7 @@ async function run(){
    if(data.done){
     setBusy(false);const prior=results;
     if(retain){results=next;applied=record;health=nextHealth;excluded=nextExcluded;repaint(prior);renderHealth();}
-    applied.complete=true;applied.finishedAt=new Date().toISOString();activityCount=data.activityCount;$('#status').textContent=fmt(data.total)+'区域の判定が完了しました。'+(p.activityOn?' 往復は'+fmt(activityCount)+'区域を計算。':'');refresh();advancePlayback();
+    applied.complete=true;applied.finishedAt=new Date().toISOString();activityCount=data.activityCount;$('#status').textContent=fmt(data.total)+'区域の判定が完了しました。'+(p.activityOn?' 往復は'+fmt(activityCount)+'区域を計算。':'');refresh();if(!nextFrame())advancePlayback();
    }
   };
   worker.postMessage({id:myJob,profile:p,files:catalog.filter(f=>p.files.includes(f.file)),cells:cells.map(f=>f.properties),facilities:places.filter(f=>p.destinations.includes(f.id)),activityBounds:record.bounds});
@@ -175,13 +192,12 @@ function refresh(){
   }
   const stats=statistics();$('#metrics').innerHTML=['fail','pass','unknown'].map(s=>`<div><span>${STATES[s]}</span><b>${dirty?'—':fmt(stats[s].count)}<span class="metric-unit">区域</span></b><small>区域面積 ${dirty?'—':fmt(stats[s].area,2)} km²</small></div>`).join('');
   const band=activeBand(), quick=$('#quick-walk');
-  for(const button of $$('[data-gap-band]'))button.setAttribute('aria-pressed',String(!dirty&&button.dataset.gapBand===band));
+  refreshTimeControls();
   $('#metrics').classList.toggle('by-time-band',Boolean(band&&!dirty));
   if(band&&!dirty){
     const p=applied.profile,b=gapWindow(band),counts={far:0,noTrips:0,railPending:0,railConfirmed:0,pass:0,unknown:0};
     for(const f of cells)counts[mapState(results.get(f.id),f.id)]++;
-    if([250,500,750].includes(p.distanceM))quick.value=String(p.distanceM);
-    $('#gap-hour').value=String(Number(b.start.slice(0,2)));setWindowLabel(b);
+    if(!busy&&!queuedFrame&&[250,500,750].includes(p.distanceM))quick.value=String(p.distanceM);
     $('#metrics').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<div style="--band-color:${colors[key]}"><span>${label}</span><b>${fmt(counts[key])}<span class="metric-unit">区域</span></b></div>`).join('');
     $('#gap-legend').innerHTML=Object.entries(bandTitles).filter(([key])=>key!=='railConfirmed'||(counts.railConfirmed>0||marked>0)).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span class="legend-extra"><i style="--dot:#c38918"></i>地図の印：送迎などの拠点</span>':'');
     $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅${railRange()===1000?'1km':'800m'}（直線）。`;
@@ -317,12 +333,12 @@ async function init(){
    return chooseFrame(hourKey(old!==null&&old<LAST_GAP_HOUR?old:FIRST_GAP_HOUR));
   });
   on('#gap-hour','input',e=>{
-   stopPlayback();const key=hourKey(Number(e.target.value));setWindowLabel(gapWindow(key));
-   slideTimer=setTimeout(guard(()=>chooseFrame(key)),160);
+   stopPlayback();return chooseFrame(hourKey(Number(e.target.value)));
   });
-  on('#quick-walk','change',()=>{stopPlayback();const key=activeBand();if(key)return chooseFrame(key);});
-  on('#quick-rail','change',()=>{renderRail();for(const [id,layer] of layers)layer.setStyle(cellStyle(mapState(results.get(id),id)));refresh();});
-  on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=activeBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
+  on('#quick-walk','change',()=>{stopPlayback();const key=requestedBand();if(key)return chooseFrame(key);});
+  for(const id of ['show-rail','show-resources'])on('#'+id,'change',refresh);
+  on('#quick-rail','change',()=>{animateToken++;renderRail();for(const [id,layer] of layers)layer.setStyle(cellStyle(mapState(results.get(id),id)));refresh();});
+  on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=requestedBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
