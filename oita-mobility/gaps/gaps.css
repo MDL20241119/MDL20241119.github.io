@@ -78,3 +78,15 @@ body.atlas-embedded :is(#gap-data-used,#method){display:none!important}
 .map-toolbar .key-bus::before,.map-toolbar .key-rail::before,.map-toolbar .key-poi::before{content:"";display:inline-block;width:.8em;margin-inline-end:4px;vertical-align:.23em;border-top:2px solid #006283}
 .map-toolbar .key-rail::before{border-color:#523388;border-top-style:dashed}
 .map-toolbar .key-poi::before{width:.48em;height:.48em;border:none;background:#197457;border-radius:50%;vertical-align:.08em}
+body.atlas-embedded .time-gap-head{display:none}
+body.atlas-embedded .context-bar>label{flex-direction:row;justify-content:flex-start;flex-wrap:nowrap}
+body.atlas-embedded .context-bar{padding:5px 2px}
+body.atlas-embedded .context-bar select{width:clamp(8rem,46%,15rem)}
+body.atlas-embedded .time-gap-panel{padding:6px 8px}
+body.atlas-embedded .time-gap-tabs{margin:0 0 6px}
+body.atlas-embedded .map-toolbar{padding:6px 8px}
+body.atlas-embedded .basic-map-layers .layers{display:flex;flex-wrap:wrap;gap:6px 12px}
+body.atlas-embedded .basic-map-layers .layers label{display:inline-flex;gap:3px;align-items:center;margin:0;min-height:36px}
+body.atlas-embedded .time-gap-settings{padding:3px 0}
+body.atlas-embedded .map-toolbar{min-height:0;padding:3px 8px}
+body.atlas-embedded .map-toolbar .button.compact{min-height:40px;padding-block:4px}

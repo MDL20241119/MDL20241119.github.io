@@ -6,7 +6,16 @@ import {csvText} from '../lab/io.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const urlParams=new URLSearchParams(location.search), embedded=urlParams.get('embed')==='atlas';
-if(embedded)document.body.classList.add('atlas-embedded');
+if(embedded){
+  document.body.classList.add('atlas-embedded');
+  const layers=$('.map-toolbar .layers'), settings=$('.time-gap-settings');
+  const options=document.createElement('details');
+  options.className='basic-map-layers';
+  const summary=document.createElement('summary');
+  summary.textContent='地図に重ねる情報';
+  options.append(summary,layers);
+  $('#time-gap-note').before(options,settings);
+}
 const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=(v,d=0)=>Number.isFinite(v)?v.toLocaleString('ja-JP',{maximumFractionDigits:d}):'未確認';
 const clock=v=>Number.isFinite(v)?`${String(Math.floor(v/3600)).padStart(2,'0')}:${String(Math.floor(v/60)%60).padStart(2,'0')}`:'—';

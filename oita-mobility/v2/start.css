@@ -1,0 +1,38 @@
+.atlas-start{max-width:1240px}
+.start-guide{font-size:.9rem;font-weight:700}
+.start-head{padding:clamp(15px,4vw,38px) 0 12px}
+.start-kicker{font-weight:800;color:#62585f;font-size:.82rem;margin:0 0 .25rem}
+.start-head h1{font-size:clamp(1.9rem,5.8vw,4.2rem);line-height:1.12;letter-spacing:-.055em;margin:0}
+.start-head>p:not(.start-kicker){margin:.55rem 0 .85rem}
+.start-tabs{display:grid;grid-template-columns:1fr 1fr;gap:6px;max-width:570px}
+.start-tabs a{min-width:0;min-height:46px;display:grid;place-items:center;text-align:center;padding:6px;font-size:clamp(.78rem,3.6vw,1.05rem);font-weight:800;border:1px solid #151515;text-decoration:none;background:#fff}
+.start-tabs a[aria-current=page]{background:#151515;color:white}
+.start-tabs a:focus-visible,.start-advanced a:focus-visible,.start-advanced summary:focus-visible{outline:3px solid #a31967;outline-offset:2px}
+.start-map h2,#trip-title{font-size:clamp(1.2rem,3.3vw,1.7rem);letter-spacing:-.03em;margin:0}
+.start-map>p,#trip-view>p{margin:.18rem 0 .55rem;font-size:.88rem;line-height:1.55}
+#start-map-frame{display:block;border:1px solid #151515;background:#f8f7f3}
+.start-advanced{border:1px solid #151515;background:#fff;margin:16px 0 0}
+.start-advanced summary{padding:11px 13px;cursor:pointer;font-weight:800}
+.start-advanced summary span{display:inline-block;margin-left:6px;color:#62585f;font-size:.77rem;font-weight:600}
+.start-tool-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;padding:0 12px}
+.start-tool-grid a{display:grid;gap:4px;padding:10px 12px;background:#fff3f9;border:1px solid #d6cbd0;text-decoration:none}
+.start-tool-grid a span,.start-references{font-size:.8rem}
+.start-references{display:flex;flex-wrap:wrap;gap:8px 14px;padding:0 12px}
+.start-note{color:#62585f}
+#trip-view .area-entry{margin:12px 0;padding:12px}
+#trip-view .area-entry h2{font-size:1.15rem}
+#trip-view .area-entry .eyebrow,#trip-view .map-data-strip{display:none}
+#trip-view .people-work>.search-panel{order:0}
+#trip-view .people-work>#result{order:1}
+#trip-view .people-work>.map-column{order:2}
+#trip-view .trip-extras .section-block{margin:0}
+@media(max-width:600px){
+ .atlas-start{padding:0 12px 24px}
+ .start-tool-grid{grid-template-columns:minmax(0,1fr)}
+ .start-head>p:not(.start-kicker){font-size:.86rem}
+ #trip-view .people-work>.search-panel{padding:13px}
+}
+.policy-method-note{padding:0 12px}#assumption-strategies{padding:0 12px 12px}#bus-strategy{grid-template-columns:minmax(0,1fr);max-width:25rem}
+.top:has(.start-guide){padding-block:13px}
+.atlas-start .start-head{padding-top:clamp(8px,2.5vw,24px)}
+.atlas-start .start-head>p:not(.start-kicker){margin-bottom:.65rem}
