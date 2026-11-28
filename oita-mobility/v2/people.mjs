@@ -89,12 +89,19 @@ async function start(){dateInputs();[facilities,catalog,transport,boundaries,res
  $('#journey-form').addEventListener('submit',e=>{e.preventDefault();searchJourney(false);});
  $('#opportunity-run').onclick=guard(()=>{resolvePlaces(false);const o=options(),files=chosenFeeds(catalog);if(!files.length)throw Error('使う時刻表を確認してください');const request={mode:'opportunities',home:{...home},facilities,date:$('#date').value,options:o,files};startJob(request,d=>{const cats=Object.entries(PURPOSES).filter(([k])=>k!=='other');$('#opportunity-results').innerHTML=`<table><thead><tr><th>生活機会</th><th>30分以内</th><th>60分以内</th><th>収録施設</th></tr></thead><tbody>${cats.map(([k,name])=>{const rows=d.results.filter(r=>normalizeCategory(r.category)===k);return `<tr><th>${name}</th><td><b>${opportunitySummary(rows,30).label}</b>${opportunitySummary(rows,30).unknown?'<small> ／ '+opportunitySummary(rows,30).unknown+'施設は判定保留</small>':''}</td><td><b>${opportunitySummary(rows,60).label}</b>${opportunitySummary(rows,60).unknown?'<small> ／ '+opportunitySummary(rows,60).unknown+'施設は判定保留</small>':''}</td><td>${rows.length}</td></tr>`;}).join('')}</tbody></table><p class="note">${esc(request.date)} ${time(o.departure)}出発。徒歩・待ち時間・最大${o.maxTransfers}回の乗換を含む行きの候補。帰り・受付・運賃は未評価。0件は施設や交通の不存在を意味しません。</p><details class="evidence"><summary>使用時刻表と候補施設</summary><p>${d.evidence.feeds.map(f=>esc(f.name)+'（'+esc(f.coverage==='known'?'有効期間内':f.coverage==='outside'?'有効期間外・計算対象外':'有効期間不明・計算対象外')+'）').join(' / ')}</p><ul>${d.results.filter(r=>r.minutes!==null).sort((a,b)=>a.minutes-b.minutes).map(r=>`<li><button class="quiet" data-target="${esc(r.id)}">${esc(r.name)}：約${fmt(r.minutes)}分 → 往復を確認</button></li>`).join('')||'<li>収録条件内の候補は見つかりませんでした。</li>'}</ul></details>`;$('#opportunity-results').scrollIntoView({behavior:'smooth',block:'center'});});});
  const params=new URLSearchParams(location.search);
+ const journeyDate=params.get('journeyDate');if(/^\d{4}-\d{2}-\d{2}$/.test(journeyDate||''))$('#date').value=journeyDate;
  const requested=params.get('city');
  const code=boundaries.features.some(f=>f.properties.code===requested)?requested:'44201';
  setupArea(boundaries,chooseArea,code);
  if(params.get('cross')==='1'){$('#other-cities').checked=true;renderAreaFacilities(true);}
  const picked=facilities.find(f=>f.id===params.get('destination'));
  if(picked&&areaFacilities().some(f=>f.id===picked.id))setTarget(picked);
+ const tour=params.get('tour');
+ if(tour&&/^[a-z0-9-]{1,40}$/.test(tour)){
+  try{const place=(await json('../oita-tourism/data/tourism.json')).anchors.find(a=>a.id===tour);
+   if(place&&validPoint(place))setTarget({...place,id:'map-destination',category:'other'});
+  }catch{ $('#map-note').textContent='観光地を読み込めませんでした。地図から行き先を選んでください。'; }
+ }
  if(params.has('lat')&&params.has('lon')){
    const point={lat:Number(params.get('lat')),lon:Number(params.get('lon')),name:mapFirst?'地図で選んだ出発地':'地図で選んだ区域の代表地点'};
    if(validPoint(point)&&cityAt(point,boundaries.features))setHome(point);

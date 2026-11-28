@@ -235,6 +235,7 @@ function selectCell(id,move=false,clickPoint=null){
     const stateLabel=band?bandTitles[mapState(r,id)]:STATES[state];
     if(clickPoint)quickPoint=clickPoint;
     const tripQuery=new URLSearchParams({view:'trip',city:cityCode,lat:(layout3&&quickPoint?quickPoint.lat:p.lat).toFixed(5),lon:(layout3&&quickPoint?quickPoint.lng:p.lon).toFixed(5)});
+    const date=$('#quick-date').value;if(date)tripQuery.set('journeyDate',date);
     const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜この時間帯：${trips}</span><a href="./?${esc(tripQuery.toString())}" target="_top">ここから行って帰れる？ →</a><a class="quick-gap-detail" href="#cell-detail">判定の理由 ↓</a></div>`;
     if(clickPoint){
       quickPopup??=L.popup({className:'quick-gap-popup',maxWidth:254,minWidth:160,autoPanPadding:[16,22]});
@@ -270,6 +271,37 @@ function renderBusLines(){
  const lines=busCorridors.filter(r=>hashes.has(r.hash)&&r.bounds.intersects(bounds)).map(r=>r.points);
  if(lines.length)L.polyline(lines,{pane:'network',color:'#006283',opacity:.38,weight:1.25,interactive:false}).addTo(busLayer);
 }
+let tourismLayer, tourismRows;
+async function showTourism(enabled){
+ if(!layout3||!map)return;
+ if(!enabled){tourismLayer?.remove();$('#atlas-tourism-note')?.remove();return;}
+ const note=$('#atlas-tourism-note')??Object.assign(document.createElement('p'),{id:'atlas-tourism-note',className:'atlas-tourism-note'});
+ if(!note.isConnected)$('#map').before(note);
+ note.textContent='観光の地点を読み込み中…';
+ try{
+  tourismRows??=(await json('../oita-tourism/data/tourism.json')).anchors;
+  if(!note.isConnected)return;
+  tourismLayer??=L.layerGroup();
+  tourismLayer.clearLayers();
+  for(const place of tourismRows){
+   const query=new URLSearchParams({view:'trip',city:cityCode,tour:place.id,cross:'1'});
+   const date=$('#quick-date').value;
+   if(/^\d{4}-\d{2}-\d{2}$/.test(date))query.set('journeyDate',date);
+   const icon=L.divIcon({className:'',html:'<span class="atlas-tourism-pin" aria-hidden="true">★</span>',iconSize:[34,34],iconAnchor:[17,17]});
+   L.marker([place.lat,place.lon],{icon,title:place.name,alt:place.name,zIndexOffset:500})
+    .bindPopup(()=>{
+      query.set('city',cityCode);
+      const d=$('#quick-date').value;if(d)query.set('journeyDate',d);
+      return `<strong>${esc(place.name)}</strong><p>観光・周遊の基準地点</p><a href="./?${esc(query.toString())}" target="_top">${esc(place.name)}へ行って帰れる？ →</a>`;
+    })
+    .addTo(tourismLayer);
+  }
+  tourismLayer.addTo(map);
+  note.textContent='★ 観光・周遊の主な地点（県内'+tourismRows.length+'地点）';
+  const more=document.createElement('a');more.href='../oita-tourism/#mobility';more.target='_top';more.textContent='近くの乗り場・周遊も見る →';note.append('　',more);
+ }catch{note.textContent='観光の地点を読み込めません。';}
+}
+document.addEventListener('atlas:tourism',e=>showTourism(e.detail.enabled));
 function renderStops(){stopLayer.clearLayers();if(!transport||map.getZoom()<13)return;const b=boundaryLayer.getBounds().pad(.12),chosen=new Set(catalog.filter(f=>selectedFeeds().includes(f.file)).map(f=>f.sha256));for(const s of transport.stops){if(!chosen.has(transport.feeds[s.feedIndex]?.sha256))continue;const lat=s.lat??s.latitude??s.p?.[0],lon=s.lon??s.lng??s.longitude??s.p?.[1];if(!Number.isFinite(lat)||!Number.isFinite(lon)||!b.contains([lat,lon]))continue;L.circleMarker([lat,lon],{pane:'poi',radius:3,bubblingMouseEvents:!embedded,color:'#1e576e',weight:1,fillOpacity:.8}).bindPopup(`<b>${esc(s.name)}</b><br>収録されたバス停の位置。日別の運行・乗車条件は判定で確認。`).addTo(stopLayer);}}
 function renderPois(){poiLayer.clearLayers();const b=boundaryLayer.getBounds().pad(.05);for(const p of places)if(b.contains([p.lat,p.lon]))L.circleMarker([p.lat,p.lon],{pane:'poi',radius:5,bubblingMouseEvents:!embedded,color:'#fff',fillColor:p.category==='hospital'?'#9c334e':'#197457',fillOpacity:.94,weight:1.2}).bindPopup(`<b>${esc(p.name)}</b><br>${esc(p.address)}<br>${safeLink(p.sourceUrl,'所在地の出典')}`).addTo(poiLayer);}
 function allResources(){return [...resources,...custom];}
@@ -348,7 +380,11 @@ async function init(){
   for(const id of ['show-rail','show-resources'])on('#'+id,'change',refresh);
   on('#quick-rail','change',()=>{animateToken++;renderRail();for(const [id,layer] of layers)layer.setStyle(cellStyle(mapState(results.get(id),id)));refresh();});
   on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=requestedBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
-  $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
+  $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);
+  const sharedDate=urlParams.get('journeyDate');
+  if(layout3&&/^\d{4}-\d{2}-\d{2}$/.test(sharedDate||'')&&$('#quick-date').value!==sharedDate){$('#quick-date').value=sharedDate;$('#quick-date').dispatchEvent(new Event('change'));}
+  if(layout3&&urlParams.get('points')==='tourism')showTourism(true);
+  if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
 

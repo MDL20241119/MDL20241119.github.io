@@ -9,8 +9,8 @@ function page(){
  return {u,hash:u.hash.slice(1),city:/^44\d{3}$/.test(u.searchParams.get('city')||'')?u.searchParams.get('city'):'44201'};
 }
 function href(view, hash=''){
- const u=new URL(location.href);u.pathname=u.pathname.replace(/index\.html$/,'');
- if(view==='trip')u.searchParams.set('view','trip');else {u.searchParams.delete('view');for(const k of ['destination','lat','lon','cross'])u.searchParams.delete(k);}
+ const u=new URL(location.href);u.searchParams.delete('points');u.pathname=u.pathname.replace(/index\.html$/,'');
+ if(view==='trip')u.searchParams.set('view','trip');else {u.searchParams.delete('view');for(const k of ['destination','lat','lon','cross','tour'])u.searchParams.delete(k);}
  u.searchParams.set('city',city);u.hash=hash;
  return u.pathname+u.search+u.hash;
 }
@@ -20,6 +20,12 @@ function updateLinks(){
  const name=(mode==='trip'?home:region)?.textContent?.trim();
  $('#start-city').textContent=name&&!name.includes('…')?name:city==='44201'?'大分市':'選んだ地域';
  $('#tab-map').href=href('map');$('#tab-trip').href=href('trip');
+ const travelDate=frame.contentDocument?.querySelector('#quick-date')?.value;
+ if(mode==='map'&&travelDate){const trip=new URL($('#tab-trip').href);trip.searchParams.set('journeyDate',travelDate);$('#tab-trip').href=trip.href;}
+ const tour=new URL(href('map'),location.href);tour.searchParams.set('points','tourism');$('#tab-tour').href=tour.pathname+tour.search;
+ const showTour=mode==='map'&&page().u.searchParams.get('points')==='tourism';
+ for(const [v,current] of [['map',mode==='map'&&!showTour],['trip',mode==='trip'],['tour',showTour]]){const el=$('#tab-'+v);if(current)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}
+ document.dispatchEvent(new Event('atlas:navigation'));
  for(const a of document.querySelectorAll('[data-city-link]')){
   const u=new URL(a.href);u.searchParams.set('city',city);a.href=u.href;
  }
@@ -35,7 +41,7 @@ function watchFrame(){
  observer?.disconnect();
  const doc=frame.contentDocument, main=doc?.querySelector('#main');
  if(!main)return;
- if(doc!==observedDoc){observedDoc=doc;doc.addEventListener('atlas:city',e=>{frameCity=e.detail.code;if(mode==='map')syncCity(frameCity);});}
+ if(doc!==observedDoc){observedDoc=doc;doc.addEventListener('change',e=>{if(e.target.id==='quick-date')updateLinks();});doc.addEventListener('atlas:city',e=>{frameCity=e.detail.code;if(mode==='map')syncCity(e.detail.code);});}
  const resize=()=>{if(mode!=='map')return;const h=Math.ceil(main.getBoundingClientRect().bottom+doc.defaultView.scrollY+4);if(h>30)frame.height=String(h);};
  observer=new ResizeObserver(resize);observer.observe(main);resize();updateLinks();
 }
@@ -50,13 +56,15 @@ function render(initial=false){
  if(state.hash==='atlas-toc')$('#atlas-toc').open=true;
  $('#tourism').hidden=mode!=='trip'&&state.hash!=='tourism';
  if(mode==='map'){
-  if(frameCity!==city){frameCity=city;frame.src='transport-gaps.html?embed=atlas&layout=3&v=jr-check17&city='+city;}else if(frame.contentDocument?.querySelector('#main'))watchFrame();
+  const tourMode=state.u.searchParams.get('points')==='tourism';
+  if(frameCity!==city){frameCity=city;const q=new URLSearchParams({embed:'atlas',layout:'3',v:'atlas-nav1',city});if(tourMode)q.set('points','tourism');const d=state.u.searchParams.get('journeyDate');if(d)q.set('journeyDate',d);frame.src='transport-gaps.html?'+q;}
+  else if(frame.contentDocument?.querySelector('#main')){const doc=frame.contentDocument;doc.dispatchEvent(new CustomEvent('atlas:tourism',{detail:{enabled:tourMode}}));watchFrame();}
  }else{
   if(state.hash==='opportunity-section')$('.trip-extras').open=true;
   if(state.hash==='jr-check'||state.hash==='jr-web-check')$('#jr-check').open=true;
   if(state.hash==='jr-web-check')$('#jr-web-check').open=true;
   if(state.hash==='regional-transport')$('#regional-transport').open=true;
-  if(!people)people=import('./v2/people.mjs?v=rail-atlas3').catch(()=>{people=null;const box=$('#error');box.hidden=false;box.textContent='往復検索を読み込めません。再読み込みしてください。';});
+  if(!people)people=import('./v2/people.mjs?v=atlas-nav1').catch(()=>{people=null;const box=$('#error');box.hidden=false;box.textContent='往復検索を読み込めません。再読み込みしてください。';});
   else{const select=$('#area-city');if(!select.disabled&&select.value!==city&&[...select.options].some(x=>x.value===city)){select.value=city;select.dispatchEvent(new Event('change',{bubbles:true}));}}
   requestAnimationFrame(()=>window.dispatchEvent(new Event('resize')));
  }
@@ -69,8 +77,8 @@ function render(initial=false){
 }
 for(const v of ['map','trip'])$('#tab-'+v).addEventListener('click',e=>{
  if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
- e.preventDefault();if(v===mode)return;
- history.pushState(null,'',href(v));
+ e.preventDefault();if(v===mode&&!page().u.searchParams.has('points'))return;
+ history.pushState(null,'',v==='trip'?e.currentTarget.href:href(v));
  render();window.scrollTo(0,0);
 });
 $('#map-edit-conditions').addEventListener('click',()=>{$('#trip-options').open=true;},{capture:true});
@@ -81,16 +89,26 @@ $('#regional-jump').addEventListener('click',()=>{regional.open=true;regional.sc
 const jrProof=$('#jr-web-check');let proof;
 jrProof.addEventListener('toggle',()=>{if(jrProof.open&&!proof)proof=import('./v2/jr-public-check.mjs?v=1').then(m=>m.mount()).catch(()=>{$('#jr-proof-result').textContent='確認事例を読み込めませんでした。';proof=null;});});
 $('#jr-jump').addEventListener('click',()=>{const box=$('#jr-check');box.open=true;box.scrollIntoView({block:'start'});box.querySelector('summary').focus({preventScroll:true});});
-$('.start-guide').addEventListener('click',()=>{$('#atlas-toc').open=true;});
+$('#tab-tour').addEventListener('click',e=>{
+ if(e.button||e.ctrlKey||e.metaKey||e.shiftKey||e.altKey)return;
+ e.preventDefault();history.pushState(null,'',e.currentTarget.href);render();
+});
+window.addEventListener('hashchange',()=>render());
 window.addEventListener('popstate',()=>render());
 render(true);
-</script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="top"><a class="brand" href="index.html"><span class="brand-mark">OITA<span>3.0</span></span><span>MOBILITY<br>ATLAS</span></a><a class="start-guide" href="#atlas-toc">詳細分析</a></header>
+</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=1"><script defer src="/oita-mobility/nav/shell.js?v=1"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="この時間の交通" data-atlas-label-url=""><div class="atlas-shell__row">
+<a class="atlas-shell__brand" href="/oita-mobility/" aria-label="大分モビリティ・アトラスの地図">大分アトラス</a>
+<nav class="atlas-shell__tabs" aria-label="アトラスの大項目"><a href="/oita-mobility/" data-atlas-tab="map" aria-current="true">地図</a><a href="/oita-mobility/tools.html#area" data-atlas-tab="data">地域データ</a></nav>
+<details class="atlas-shell__directory"><summary>全体<span class="atlas-shell__arrow" aria-hidden="true">⌄</span></summary>
+<div class="atlas-shell__panel" aria-label="アトラス全体の構成"><noscript><a href="/oita-mobility/tools.html">全体の目次・資料</a></noscript></div></details>
+</div><nav class="atlas-shell__crumb" aria-label="現在地"><a href="/oita-mobility/">アトラス</a><span aria-hidden="true">›</span><a href="/oita-mobility/" data-atlas-parent>地図</a><span aria-hidden="true" data-atlas-separator>›</span><b aria-current="location" data-atlas-current>この時間の交通</b></nav></header>
 <main id="main" class="atlas-start">
 <section class="start-head" aria-labelledby="start-title">
   <h1 class="visually-hidden" id="start-title"><span id="start-city">大分市</span>の移動を調べる</h1>
   <nav class="start-tabs" aria-label="まずできること">
-    <a id="tab-map" href="./" aria-current="page">交通空白を見る</a>
+    <a id="tab-map" href="./" aria-current="page">この時間の交通</a>
     <a id="tab-trip" href="?view=trip">行って帰れる？</a>
+    <a id="tab-tour" href="?points=tourism">観光地を探す</a>
   </nav>
 </section>
 <section class="start-map" id="atlas-time-gaps" aria-labelledby="start-map-title">
@@ -153,16 +171,16 @@ render(true);
 <small>停留所間の判定です。停留所までの徒歩、バス・JRとの乗換、フリー乗降は未判定。</small>
 </details>
 <details class="start-advanced trip-extras"><summary>この場所から行ける施設も見る <span>片道30分・60分</span></summary><section class="opportunity section-block" id="opportunity-section" hidden><div class="section-heading"><div><span class="eyebrow">LIFE OPPORTUNITIES</span><h2>この場所から、どんな用事に行ける？</h2><p>収録施設への、30分・60分以内の行きの候補。</p></div><button id="opportunity-run" class="secondary">生活機会を調べる →</button></div><p class="note">出発地と出発時刻は上の条件を使用。帰り・受付は別途確認。県内の施設を網羅していません。</p><div id="opportunity-results" class="opportunity-results"><p>出発地を指定して、ボタンを押してください。</p></div></section></details><div id="error" class="error" role="alert" hidden></div></section>
-<a class="start-companion" id="tourism" href="../oita-tourism/" hidden><b>観光・周遊</b><span>観光マップ ↗</span></a>
+<a class="start-companion" id="tourism" href="../oita-tourism/#mobility" hidden><b>観光地の周りを調べる</b><span>近くの乗り場・周遊 ↗</span></a>
 <details class="start-advanced" id="atlas-toc">
-  <summary>詳しく調べる <span>自治体・交通事業者向け</span></summary>
+  <summary>地域データへの入口</summary>
   <div class="start-tool-grid">
     <a href="atlas.html?view=detail&amp;city=44201#city-form" data-city-link><b>地域ごとに通院・買物の往復を調べる</b><span>停留所まで歩けるかと、用事を済ませて帰れるかを別々に確認。</span></a>
     <a href="transport-gaps.html?city=44201#time-gaps" data-city-link><b>交通空白の判定を詳しく見る</b><span>距離や便数を変え、送迎など地域にある移動手段を確認。</span></a>
     <a href="policy.html?city=44201" data-city-link><b>改善案を比べる</b><span>バスの増便・時刻変更を試算。ほかの手段は仮定と費用を入力して比較。</span></a>
     <a href="ridership.html"><b>実際の乗降データを確認する</b><span>集計CSVを読み込み、停留所・便ごとの利用や出発地と到着地の組を分析。</span></a>
   </div>
-  <p class="start-references"><a href="tools.html">すべての機能・データ →</a><a href="accessibility.html">施設別の詳細</a><a href="lab.html">ダイヤ・需要・費用</a><a href="analysis.html">旧版 1.0</a><a href="guide/oita-mobility-catalog.pdf">カタログPDF</a></p>
+  <p class="start-references"><a href="tools.html">全体の目次 →</a><a href="accessibility.html">施設別の詳細</a><a href="lab.html">ダイヤ・需要・費用</a><a href="analysis.html">旧版 1.0</a><a href="guide/oita-mobility-catalog.pdf">カタログPDF</a></p>
 </details></main><footer><div><b>OITA MOBILITY ATLAS</b><p>行きたいところへ、行ける大分へ。</p><small>モビリティデザインラボによる公開デモ。大分県・大分市など自治体の公式サービスではありません。</small></div><div class="footer-links"><a href="guide/">使い方</a><a href="data-catalog.html">データ・出典</a><a href="usage.html#coverage">判定に使うデータ</a><a href="usage.html">利用条件</a></div></footer><noscript>検索・地図・試算にはJavaScriptが必要です。データと利用条件はリンク先で確認できます。</noscript></body></html>
 
 
