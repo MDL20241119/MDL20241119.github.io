@@ -1,6 +1,6 @@
 // Independent verification results only. No timetable rows, train IDs or exact train times.
 export const CHECK_DATE='2026-11-28';
-const sources=[['中判田','28782'],['南大分','28809'],['西大分','28784']];
+const sources=[['中判田','28782'],['南大分','28809'],['西大分','28784'],['大分','28742'],['鶴崎','28776'],['幸崎','28759'],['古国府','28793']];
 export const STATION_CHECKS=Object.freeze(sources.flatMap(([station,code])=>[8,10,16,20].map(h=>({date:CHECK_DATE,station,from:String(h).padStart(2,'0')+':00',to:String(h+1).padStart(2,'0')+':00',source:'https://www.jrkyushu-timetable.jp/cgi-bin/jr-k_time/tt_dep.cgi?c='+code}))));
 export const CITY_STATIONS=Object.freeze(['西大分','牧','高城','鶴崎','大在','坂ノ市','幸崎','古国府','南大分','賀来','豊後国分','滝尾','敷戸','大分大学前','中判田','竹中']);
 export const NEAR_STATIONS=Object.freeze(['東別府','向之原','佐志生','犬飼','豊後竹田']);

@@ -1,4 +1,4 @@
-import {stationCheck} from '../data/rail/public-checks.mjs?v=verified3';
+import {stationCheck} from '../data/rail/public-checks.mjs?v=verified7';
 import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=atlas301128';
 import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
