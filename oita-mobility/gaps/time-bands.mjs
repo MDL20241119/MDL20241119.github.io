@@ -31,7 +31,7 @@ export function timeGapState(record){
  return t==='fail'?'noTrips':t==='pass'?'pass':'unknown';
 }
 
-export const RAIL_REFERENCE_M=1000;
+export const RAIL_REFERENCE_M=800;
 export function nearestRailStation(point,stations){
  let best=null;
  for(const station of stations){
@@ -40,9 +40,10 @@ export function nearestRailStation(point,stations){
  }
  return best;
 }
-export function combinedBandState(record,station,railReady=true){
+export function combinedBandState(record,station,railReady=true,threshold=RAIL_REFERENCE_M){
  const bus=timeGapState(record);
  if(bus==='pass'||bus==='unknown')return bus;
  if(!railReady||!station)return 'unknown';
- return station.meters<=RAIL_REFERENCE_M+1e-6?'railPending':bus;
+ return station.meters<=threshold+1e-6?'railPending':bus;
 }
+

@@ -1,7 +1,7 @@
 import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=atlas301128';
 import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
-import {timeBandKey,dayBandProfile,nearestRailStation,combinedBandState,RAIL_REFERENCE_M,FIRST_GAP_HOUR,LAST_GAP_HOUR,gapHour,gapWindow,hourKey} from './time-bands.mjs?v=20261128-map-first';
+import {timeBandKey,dayBandProfile,nearestRailStation,combinedBandState,RAIL_REFERENCE_M,FIRST_GAP_HOUR,LAST_GAP_HOUR,gapHour,gapWindow,hourKey} from './time-bands.mjs?v=oita800';
 import {csvText} from '../lab/io.mjs';
 import {pointInGeometry} from '../v2/model.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
@@ -33,8 +33,9 @@ const clock=v=>Number.isFinite(v)?`${String(Math.floor(v/3600)).padStart(2,'0')}
 const colors={fail:'#c53635',far:'#92531b',noTrips:'#ad2457',railPending:'#64449a',pass:'#237b92',unknown:'#788491'};
 const bandTitles={pass:'この時間に乗れるバスあり',railPending:'駅は近い・列車は未判定',noTrips:'バス停は近い・この時間の便なし',far:'バス停も駅も遠い',unknown:'この場所は未判定'};
 const originalLegend=$('#gap-legend').innerHTML;
+const railRange=()=>$('#quick-rail')?.value==='1000'?1000:RAIL_REFERENCE_M;
 const activeBand=()=>timeBandKey(applied?.profile);
-const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0):r?.status??'unknown';
+const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0,railRange()):r?.status??'unknown';
 let quickPopup=null, quickPoint=null;
 let playing=false,playTimer=null,slideTimer=null,animateToken=0,selectMarker=null;
 const kinds={school:'学校・大学・教習所',medical:'病院送迎',welfare:'福祉・介護',commercial:'商業・企業',tourism:'観光・ホテル',community:'地域交通'};
@@ -166,10 +167,10 @@ function refresh(){
     $('#gap-hour').value=String(Number(b.start.slice(0,2)));setWindowLabel(b);
     $('#metrics').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<div style="--band-color:${colors[key]}"><span>${label}</span><b>${fmt(counts[key])}<span class="metric-unit">区域</span></b></div>`).join('');
     $('#gap-legend').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span class="legend-extra"><i style="--dot:#c38918"></i>地図の印：送迎などの拠点</span>':'');
-    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅1km（直線）。`;
+    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅${railRange()===1000?'1km':'800m'}（直線）。`;
   }else{
     $('#gap-legend').innerHTML=originalLegend;
-    $('#time-gap-note').textContent='バス時刻表と鉄道駅1km圏を重ねます。駅が近くバスが不足する区域は、鉄道ダイヤ未算定として区別します。';
+    $('#time-gap-note').textContent='バス時刻表と鉄道駅の徒歩圏を重ねます。駅が近くバスが不足する区域は、鉄道ダイヤ未算定として区別します。';
   }
   $('#map-title').textContent=embedded?cityName():cityName()+' · '+fmt(cells.length)+'区域';
   const p=applied?.profile;$('#result-summary').textContent=p?`${p.date} ／ ${p.name} ／ ${p.combine==='any'?'どれか1つが不足':'すべてが不足'}`:'条件を確認して、地図に反映してください';
@@ -204,8 +205,8 @@ function selectCell(id,move=false,clickPoint=null){
 function railDetail(id){
  const r=railByCell.get(id);
  if(!r)return '<p>鉄道駅の位置データを読み込めていません。</p>';
- const within=r.meters<=RAIL_REFERENCE_M+1e-6;
- return `<div class="criterion-result"><b>最寄りの鉄道駅：${esc(r.name)}駅 ／ 直線 ${fmt(r.meters)}m</b>${esc(r.lines.join('・'))} ／ 市の1km目安の${within?'内':'外'}。時刻と乗継は未算定。 <a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の駅別時刻表</a></div>`;
+ const within=r.meters<=railRange()+1e-6;
+ return `<div class="criterion-result"><b>最寄りの鉄道駅：${esc(r.name)}駅 ／ 直線 ${fmt(r.meters)}m</b>${esc(r.lines.join('・'))} ／ 駅${railRange()}m目安の${within?'内':'外'}。時刻と乗継は未算定。 <a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の駅別時刻表</a></div>`;
 }
 function renderRail(){
  railLayer.clearLayers();
@@ -214,8 +215,8 @@ function renderRail(){
  const bounds=boundaryLayer.getBounds().pad(.10);
  for(const r of railStations){
   if(!bounds.contains([r.lat,r.lon]))continue;
-  L.circle([r.lat,r.lon],{radius:RAIL_REFERENCE_M,color:'#64449a',dashArray:'4 4',weight:1,fill:false,interactive:false}).addTo(railLayer);
-  L.circleMarker([r.lat,r.lon],{radius:5,bubblingMouseEvents:!embedded,color:'#fff',fillColor:'#64449a',fillOpacity:1,weight:1.5}).bindPopup(`<b>${esc(r.name)}駅</b><br>${esc(r.lines.join('・'))}<br>駅の代表点から直線1km。列車の時刻は未算定。<br><a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の時刻表</a>`).addTo(railLayer);
+  L.circle([r.lat,r.lon],{radius:railRange(),color:'#64449a',dashArray:'4 4',weight:1,fill:false,interactive:false}).addTo(railLayer);
+  L.circleMarker([r.lat,r.lon],{radius:5,bubblingMouseEvents:!embedded,color:'#fff',fillColor:'#64449a',fillOpacity:1,weight:1.5}).bindPopup(`<b>${esc(r.name)}駅</b><br>${esc(r.lines.join('・'))}<br>駅の代表点から直線${railRange()}m。列車の時刻は未算定。<br><a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の時刻表</a>`).addTo(railLayer);
  }
 }
 function renderBusLines(){
@@ -301,9 +302,11 @@ async function init(){
    slideTimer=setTimeout(guard(()=>chooseFrame(key)),160);
   });
   on('#quick-walk','change',()=>{stopPlayback();const key=activeBand();if(key)return chooseFrame(key);});
+  on('#quick-rail','change',()=>{renderRail();refresh();});
   on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=activeBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
+
 
 

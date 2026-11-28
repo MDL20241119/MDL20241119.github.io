@@ -1,3 +1,4 @@
+import {automaticRailResult} from './automatic-rail.mjs';
 import {importGTFS,scenarioFeeds} from '../lab/gtfs.mjs';
 import {prepareAccess,evaluateActivity,pointJourneys,validateOptions} from '../access/engine.mjs?v=20260922.7';
 import {feedCoverage} from '../gaps/engine.mjs';
@@ -19,5 +20,11 @@ self.onmessage=async({data:d})=>{const send=r=>self.postMessage({id:d.id,...r});
  const incompleteStops=evidence.feeds.some(f=>f.coverage!=='known');
  const cases=d.cases??d.facilities.map(f=>({id:f.id,home:d.home,facility:f}));
  for(let i=0;i<cases.length;i++){const c=cases[i];const result={...evaluateActivity(n,c.home,c.facility,d.options,d.conditions??{}),dataEvidence:evidence};if(shapes)attachRouteGeometry(result,n,shapes);result.state=classify(result);if(stops)result.stopAccess=walkAccess(c.home,stops,d.options,incompleteStops);results.push({id:c.id,result});send({batch:[{id:c.id,result}],progress:(i+1)+' / '+cases.length+'件を確認',percent:Math.round((i+1)/cases.length*100)});}
- send({done:true,results,evidence});
+ let rail=null;
+ if(d.mode==='journey'&&cases.length===1){
+  const c=cases[0];
+  rail=await automaticRailResult({busFeeds:usable,date:d.date,home:c.home,target:c.facility,options:d.options,conditions:d.conditions??{}});
+ }
+ send({done:true,results,evidence,rail});
 }catch(e){send({error:e.message??String(e)});}};
+
