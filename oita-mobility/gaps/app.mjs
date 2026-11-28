@@ -302,7 +302,7 @@ async function init(){
    slideTimer=setTimeout(guard(()=>chooseFrame(key)),160);
   });
   on('#quick-walk','change',()=>{stopPlayback();const key=activeBand();if(key)return chooseFrame(key);});
-  on('#quick-rail','change',()=>{renderRail();refresh();});
+  on('#quick-rail','change',()=>{renderRail();for(const [id,layer] of layers)layer.setStyle(cellStyle(mapState(results.get(id),id)));refresh();});
   on('#quick-date','change',e=>{stopPlayback();if(!e.target.value)return;const key=activeBand();$('#date').value=e.target.value;return key?chooseFrame(key):invalidate();});
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
