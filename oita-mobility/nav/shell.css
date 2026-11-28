@@ -50,3 +50,22 @@ body:has(>.atlas-shell) .sidebar>.app-nav{top:var(--atlas-shell-h)}
 .atlas-page-tool{justify-content:flex-end;padding-inline:clamp(12px,3vw,30px)}
 .atlas-page-tool button{min-height:44px}
 .atlas-embedded .atlas-page-tool,html.atlas-frame .atlas-page-tool{display:none!important}
+
+/* Editorial hierarchy with a compact sticky utility bar. */
+.atlas-shell__brand{font-size:clamp(15px,4.15vw,21px);line-height:1.12;color:#112b39}
+.atlas-editorial-title{display:grid;gap:4px;padding:6px 3px 9px;margin:0}
+.atlas-editorial-kicker{margin:0!important;display:flex;gap:8px;align-items:center;color:#254b5d;font-size:11px;font-weight:850;line-height:1.35}
+.atlas-editorial-kicker>span:first-child{background:#d9f5ef;color:#113e38;border:1px solid #214e46;padding:3px 6px;letter-spacing:.08em}
+.atlas-editorial-kicker #start-city{font-size:12px;color:#334955}
+.atlas30 .atlas-editorial-title h1{margin:0;max-width:100%;color:#121e24;font-family:inherit;font-weight:950;font-size:clamp(34px,9.15vw,86px);line-height:1.01;letter-spacing:-.065em;text-wrap:balance}
+.atlas30 .atlas-editorial-title h1::after{content:"";display:inline-block;width:.15em;height:.15em;margin-left:.1em;background:#278474;vertical-align:.06em}
+body.atlas30 .start-tabs a[aria-current=page]{background:#142d38;color:#fff;border-color:#142d38}
+.atlas-directory-title{padding:clamp(14px,3vw,29px) 0 clamp(6px,1.5vw,16px);border-top:3px solid #152e3a}
+.atlas-directory-title>span{font-size:12px;letter-spacing:.13em;color:#365d70;font-weight:850}
+.atlas-directory-index .atlas-directory-title h1{color:#152e3a;font-size:clamp(34px,8.5vw,84px);font-weight:950;letter-spacing:-.06em;line-height:1.02;margin:6px 0;text-wrap:balance}
+.atlas-directory-title>p{margin:.3em 0;color:#365565}
+.atlas-directory-index section>h2{font-size:clamp(26px,6vw,45px);line-height:1.08;letter-spacing:-.05em;font-weight:900}
+.atlas-directory-index .start-tool-grid a b{font-size:clamp(17px,3vw,23px);line-height:1.18;letter-spacing:-.035em}
+body:has(>.atlas-shell):not(.atlas30,.atlas-embedded) main h1{font-size:clamp(36px,8.5vw,84px);font-weight:920;line-height:1.04;letter-spacing:-.055em;overflow-wrap:anywhere;text-wrap:balance}
+body:has(>.atlas-shell):not(.atlas30,.atlas-embedded) main :is(.section-head,.section-heading,.page-head)>h2{font-size:clamp(25px,5.8vw,46px);font-weight:880;line-height:1.11;letter-spacing:-.045em;text-wrap:balance}
+@media(max-width:420px){.atlas-editorial-title{padding-block:4px 8px}.atlas30 .atlas-editorial-title h1{font-size:clamp(31px,9.5vw,40px)}}

@@ -24,6 +24,7 @@ function updateLinks(){
  if(mode==='map'&&travelDate){const trip=new URL($('#tab-trip').href);trip.searchParams.set('journeyDate',travelDate);$('#tab-trip').href=trip.href;}
  const tour=new URL(href('map'),location.href);tour.searchParams.set('points','tourism');$('#tab-tour').href=tour.pathname+tour.search;
  const showTour=mode==='map'&&page().u.searchParams.get('points')==='tourism';
+ $('#start-task-title').textContent=showTour?'観光地を探す':mode==='trip'?'行って帰れる？':'この時間の交通';
  for(const [v,current] of [['map',mode==='map'&&!showTour],['trip',mode==='trip'],['tour',showTour]]){const el=$('#tab-'+v);if(current)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}
  document.dispatchEvent(new Event('atlas:navigation'));
  for(const a of document.querySelectorAll('[data-city-link]')){
@@ -96,7 +97,7 @@ $('#tab-tour').addEventListener('click',e=>{
 window.addEventListener('hashchange',()=>render());
 window.addEventListener('popstate',()=>render());
 render(true);
-</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=1"><script defer src="/oita-mobility/nav/shell.js?v=1"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="この時間の交通" data-atlas-label-url=""><div class="atlas-shell__row">
+</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=type4"><script defer src="/oita-mobility/nav/shell.js?v=1"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="この時間の交通" data-atlas-label-url=""><div class="atlas-shell__row">
 <a class="atlas-shell__brand" href="/oita-mobility/" aria-label="大分モビリティ・アトラスの地図">大分アトラス</a>
 <nav class="atlas-shell__tabs" aria-label="アトラスの大項目"><a href="/oita-mobility/" data-atlas-tab="map" aria-current="true">地図</a><a href="/oita-mobility/tools.html#area" data-atlas-tab="data">地域データ</a></nav>
 <details class="atlas-shell__directory"><summary>全体<span class="atlas-shell__arrow" aria-hidden="true">⌄</span></summary>
@@ -104,7 +105,10 @@ render(true);
 </div><nav class="atlas-shell__crumb" aria-label="現在地"><a href="/oita-mobility/">アトラス</a><span aria-hidden="true">›</span><a href="/oita-mobility/" data-atlas-parent>地図</a><span aria-hidden="true" data-atlas-separator>›</span><b aria-current="location" data-atlas-current>この時間の交通</b></nav></header>
 <main id="main" class="atlas-start">
 <section class="start-head" aria-labelledby="start-title">
-  <h1 class="visually-hidden" id="start-title"><span id="start-city">大分市</span>の移動を調べる</h1>
+  <div class="atlas-editorial-title">
+    <p class="atlas-editorial-kicker"><span>OITA ATLAS</span><span id="start-city">大分市</span></p>
+    <h1 id="start-title"><span id="start-task-title">この時間の交通</span></h1>
+  </div>
   <nav class="start-tabs" aria-label="まずできること">
     <a id="tab-map" href="./" aria-current="page">この時間の交通</a>
     <a id="tab-trip" href="?view=trip">行って帰れる？</a>
