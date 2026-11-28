@@ -1,4 +1,4 @@
-import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=20261001';
+import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=atlas301128';
 import {OUTCOMES,outcome,outcomeLabel} from '../catalog/model.mjs?v=2';
 import {renderDataUsed,outcomeGuide} from '../catalog/data-used.mjs?v=2';
 import {accessShareUrl} from '../assets/share-state.mjs';
@@ -84,7 +84,7 @@ function exportReport(){const records=[...results.values()];const html=`<!doctyp
 async function start(){
   if(!window.L)throw Error('地図を読み込めませんでした');map=L.map('map',{preferCanvas:true,scrollWheelZoom:false}).setView([33.28,131.45],9);const tiles=L.tileLayer('https://cyberjapandata.gsi.go.jp/xyz/pale/{z}/{x}/{y}.png',{maxZoom:18,attribution:'背景：<a href="https://maps.gsi.go.jp/development/ichiran.html" target="_blank" rel="noopener">地理院タイル</a>｜施設：厚生労働省・各自治体・各店舗公式'}).addTo(map);tiles.on('tileerror',()=>{$('#map-tip').textContent='背景地図を取得できない場合も、施設の位置と一覧は確認できます。';});
   stopLayer=L.layerGroup().addTo(map);routeLayer=L.layerGroup().addTo(map);placeLayer=L.layerGroup().addTo(map);voiceLayer=L.layerGroup().addTo(map);homeLayer=L.layerGroup().addTo(map);
-  const [pr,cr]=await Promise.all([fetch('access/destinations.json'),fetch('data/gtfs/catalog.json?v=20261127-oitabus')]);if(!pr.ok||!cr.ok)throw Error('施設・時刻表一覧を読み込めませんでした');places=await pr.json();catalog=await cr.json();
+  const [pr,cr]=await Promise.all([fetch('access/destinations.json'),fetch('data/gtfs/catalog.json?v=atlas301128')]);if(!pr.ok||!cr.ok)throw Error('施設・時刻表一覧を読み込めませんでした');places=await pr.json();catalog=await cr.json();
   $('#city').innerHTML='<option value="all">大分県全体</option>'+[...new Set(places.map(p=>p.city))].sort((a,b)=>a.localeCompare(b,'ja')).map(c=>`<option>${esc(c)}</option>`).join('');
   $('#feed-options').innerHTML=catalog.map(f=>`<label><input type="checkbox" value="${esc(f.file)}">${esc(f.name)}</label>`).join('');$('#source-list').innerHTML=sourceHTML();const query=new URLSearchParams(location.search);category=categories[query.get('category')]?query.get('category'):'all';$('#city').value=query.get('city')??'all';if(!$('#city').value)$('#city').value='all';$('#search').value=query.get('q')??'';
   renderCategories();renderList();renderMap();fitPlaces();
@@ -104,3 +104,4 @@ async function start(){
   updateDataUsed();$('#outcome-guide').innerHTML=outcomeGuide();document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(start)();
+

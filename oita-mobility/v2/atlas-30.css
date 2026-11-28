@@ -59,3 +59,5 @@ body.atlas-layout3 .leaflet-popup-content a{display:flex;min-height:44px;align-i
 .atlas30 .trip-map-wrap{position:relative;isolation:isolate}
 .atlas30 .trip-map-wrap>#fit{position:absolute;z-index:900;right:8px;top:8px;min-height:44px;background:#fff;box-shadow:0 1px 3px #0003}
 html[data-atlas-ready=true] .atlas30 #area-status:not(:focus){position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%)}
+.atlas30 #trip-view .area-choices label{white-space:nowrap}
+.atlas30 #trip-view .area-choices select{width:auto;max-width:min(47vw,14rem)}

@@ -3,7 +3,7 @@ const city = /^44\d{3}$/.test(q.get('city') ?? '') ? q.get('city') : '44201';
 const mapURL = code => 'atlas.html?city='+encodeURIComponent(code)+'#atlas-time-gaps';
 if(document.documentElement.classList.contains('atlas-detail-mode')){
   document.querySelector('#detail-back').href=mapURL(city);
-  import('./atlas.mjs?v=two-gaps1');
+  import('./atlas.mjs?v=atlas301128');
 }else{
   const frame=document.querySelector('#overview-frame');
   const setLinks=code=>{
@@ -29,3 +29,4 @@ if(document.documentElement.classList.contains('atlas-detail-mode')){
   setLinks(city);
   frame.src='transport-gaps.html?embed=atlas&city='+encodeURIComponent(city);
 }
+
