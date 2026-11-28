@@ -1,0 +1,12 @@
+#regional-transport{padding:0 10px 12px}
+#regional-transport>summary{min-height:44px}
+#regional-transport form{display:grid;gap:8px;max-width:42rem}
+#regional-transport form label{display:grid;gap:3px;min-width:0;margin:0;font-size:.88rem}
+#regional-transport :is(input,select,button){min-height:44px;margin:0}
+#regional-transport :is(input,select){width:100%;min-width:0;padding:6px}
+#regional-transport form .regional-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;align-items:end}
+#regional-transport p{margin:6px 0}
+#regional-note,#regional-transport small{font-size:.82rem}
+#regional-result:not(:empty){border-left:3px solid #121212;background:#ffebf4;padding:8px;margin-top:8px}
+#regional-jump{min-height:44px}
+.atlas30 #trip-view .map-planning-note{display:flex;align-items:center;flex-wrap:wrap;gap:2px 5px}

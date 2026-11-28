@@ -23,7 +23,7 @@ if(embedded){
     $('#map-toolbar-caption')?.remove();
     $('#fit-city').textContent='全体';
     $('#gap-play').textContent='▶ 再生';
-    $('#time-gap-note').textContent='色はバスの便と停留所・駅までの距離。列車の時刻は未判定。';
+    $('#time-gap-note').textContent='時間帯を選ぶと、近くに乗れるバスがあるか変わります。';
     $('#map-tip').textContent='地図を押すと、この場所の状況がわかります。';
   }
 }
@@ -31,7 +31,7 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const fmt=(v,d=0)=>Number.isFinite(v)?v.toLocaleString('ja-JP',{maximumFractionDigits:d}):'未確認';
 const clock=v=>Number.isFinite(v)?`${String(Math.floor(v/3600)).padStart(2,'0')}:${String(Math.floor(v/60)%60).padStart(2,'0')}`:'—';
 const colors={fail:'#c53635',far:'#92531b',noTrips:'#ad2457',railPending:'#64449a',pass:'#237b92',unknown:'#788491'};
-const bandTitles={far:'バス停・駅とも圏外',noTrips:'駅は圏外・バス便なし',railPending:'駅1km圏・鉄道を要確認',pass:'時間内に乗れる便あり',unknown:'データ不足・未計算'};
+const bandTitles={pass:'この時間に乗れるバスあり',railPending:'駅は近い・列車は未判定',noTrips:'バス停は近い・この時間の便なし',far:'バス停も駅も遠い',unknown:'この場所は未判定'};
 const originalLegend=$('#gap-legend').innerHTML;
 const activeBand=()=>timeBandKey(applied?.profile);
 const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0):r?.status??'unknown';
@@ -165,8 +165,8 @@ function refresh(){
     if([250,500,750].includes(p.distanceM))quick.value=String(p.distanceM);
     $('#gap-hour').value=String(Number(b.start.slice(0,2)));setWindowLabel(b);
     $('#metrics').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<div style="--band-color:${colors[key]}"><span>${label}</span><b>${fmt(counts[key])}<span class="metric-unit">区域</span></b></div>`).join('');
-    $('#gap-legend').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span><i style="--dot:#c38918"></i>輸送資源の拠点</span>':'');
-    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end} · バス停直線${p.distanceM}m・鉄道駅直線1km。列車の時刻は未算定です。`;
+    $('#gap-legend').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span class="legend-extra"><i style="--dot:#c38918"></i>地図の印：送迎などの拠点</span>':'');
+    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅1km（直線）。`;
   }else{
     $('#gap-legend').innerHTML=originalLegend;
     $('#time-gap-note').textContent='バス時刻表と鉄道駅1km圏を重ねます。駅が近くバスが不足する区域は、鉄道ダイヤ未算定として区別します。';
@@ -193,7 +193,7 @@ function selectCell(id,move=false,clickPoint=null){
     const stateLabel=band?bandTitles[mapState(r,id)]:STATES[state];
     if(clickPoint)quickPoint=clickPoint;
     const tripQuery=new URLSearchParams({view:'trip',city:cityCode,lat:(layout3&&quickPoint?quickPoint.lat:p.lat).toFixed(5),lon:(layout3&&quickPoint?quickPoint.lng:p.lon).toFixed(5)});
-    const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜この時間帯：${trips}</span><a href="./?${esc(tripQuery.toString())}" target="_top">ここから行って帰れる？ →</a><a class="quick-gap-detail" href="#cell-detail">この区域の詳しい判定 ↓</a></div>`;
+    const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜この時間帯：${trips}</span><a href="./?${esc(tripQuery.toString())}" target="_top">ここから行って帰れる？ →</a><a class="quick-gap-detail" href="#cell-detail">判定の理由 ↓</a></div>`;
     if(clickPoint){
       quickPopup??=L.popup({className:'quick-gap-popup',maxWidth:254,minWidth:160,autoPanPadding:[16,22]});
       quickPopup.setLatLng(clickPoint).setContent(popupContent).openOn(map);
@@ -305,4 +305,5 @@ async function init(){
   $('#sources').innerHTML=sourceHTML();await switchCity(cityCode,true,shared);if(location.hash==='#resources')setTab('resources');document.documentElement.dataset.atlasReady='true';document.dispatchEvent(new Event('atlas:ready'));
 }
 guard(init)();
+
 
