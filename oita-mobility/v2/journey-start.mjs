@@ -26,7 +26,7 @@ if(location.hash==='#atlas-toc')document.querySelector('#atlas-toc').open=true;
   document.querySelector('#tab-map').removeAttribute('aria-current');
   document.querySelector('#tab-trip').setAttribute('aria-current','page');
   document.addEventListener('atlas:start-city',e=>refresh(e.detail.code));
-  import('./people.mjs?v=aud1').catch(()=>{
+  import('./people.mjs?v=jr1').catch(()=>{
     const box=document.querySelector('#error');box.hidden=false;box.textContent='検索を読み込めませんでした。再読み込みしてください。';
   });
 }
