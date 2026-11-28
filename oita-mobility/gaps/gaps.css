@@ -103,3 +103,4 @@ body.atlas-embedded .map-column #map .leaflet-control-zoom a{width:42px;height:4
  body.atlas-embedded .map-work{border-radius:4px}
  body.atlas-embedded .map-toolbar{flex-direction:row;justify-content:space-between;align-items:center}
 }
+body.atlas-embedded #map:has(.quick-gap-popup) .leaflet-control-container .leaflet-top{z-index:650}
