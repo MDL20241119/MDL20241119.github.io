@@ -69,3 +69,6 @@ body.atlas30 .start-tabs a[aria-current=page]{background:#142d38;color:#fff;bord
 body:has(>.atlas-shell):not(.atlas30,.atlas-embedded) main h1{font-size:clamp(36px,8.5vw,84px);font-weight:920;line-height:1.04;letter-spacing:-.055em;overflow-wrap:anywhere;text-wrap:balance}
 body:has(>.atlas-shell):not(.atlas30,.atlas-embedded) main :is(.section-head,.section-heading,.page-head)>h2{font-size:clamp(25px,5.8vw,46px);font-weight:880;line-height:1.11;letter-spacing:-.045em;text-wrap:balance}
 @media(max-width:420px){.atlas-editorial-title{padding-block:4px 8px}.atlas30 .atlas-editorial-title h1{font-size:clamp(31px,9.5vw,40px)}}
+.atlas-editorial-context{margin:2px 0 0!important;font-size:clamp(12px,2.9vw,14px);line-height:1.4;color:#334955;font-weight:650}
+.atlas-shell__brand{font-size:clamp(13px,3.9vw,20px)}
+@media(max-width:420px){.atlas30 .atlas-editorial-title h1{font-size:clamp(30px,9.15vw,39px)}}

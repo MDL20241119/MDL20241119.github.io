@@ -10,9 +10,9 @@
   const p=location.pathname.replace(/index\.html$/,'');
   const groups={
     map:['地図',A,[
-      ['この時間の交通',A],['行って帰れる？',A+'?view=trip'],['観光地を探す',A+'?points=tourism']]],
+      ['時間帯別に乗れる場所',A],['行って帰れる？',A+'?view=trip'],['観光地を探す',A+'?points=tourism']]],
     data:['地域データ',A+'tools.html#area',[
-      ['交通の現状',A+'atlas.html?view=detail#city-form'],['改善案を比べる',A+'policy.html'],['実際の使われ方',A+'ridership.html'],['観光統計',T+'#overview']]],
+      ['地域の移動の課題',A+'atlas.html?view=detail#city-form'],['増便などの効果を比べる',A+'policy.html'],['実際の乗り降り',A+'ridership.html'],['観光客の動き',T+'#overview']]],
     docs:['資料・出典',A+'tools.html#references',[
       ['データ・出典',A+'data-catalog.html'],['使い方ガイド',A+'guide/'],['旧版アーカイブ',A+'analysis.html']]]
   };

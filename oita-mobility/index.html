@@ -1,4 +1,4 @@
-<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#ffeef5"><link rel="canonical" href="https://mobilitydlab.com/oita-mobility/"><title>大分モビリティ・アトラス 3.0</title><meta name="description" content="大分県で、必要な場所へ行って帰れるか。公開時刻表による往復候補、地域の移動課題、改善案の費用と効果を調べるモビリティデザインラボの公開デモ。"><link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="v2/style.css?v=ridership2"><script defer src="assets/leaflet.js"></script><link rel="stylesheet" href="v2/start.css?v=3"><link rel="stylesheet" href="v2/atlas-30.css?v=2"><link rel="stylesheet" href="v2/local-service.css?v=1"><style>.atlas-start [hidden],.atlas-start #start-map-frame[hidden]{display:none!important}.atlas-start a.start-guide{white-space:nowrap}.start-tabs{max-width:35rem}.start-grid-hint{padding:0 12px;margin:.15rem 0 .65rem;color:#62585f;font-size:.84rem}@media(max-width:600px){#trip-view .people-work>.map-column{order:-1}#trip-view .people-work .main-map{height:clamp(270px,47svh,410px)}.atlas-start .start-tabs a{line-height:1.25}}</style><script type="module">
+<!doctype html><html lang="ja"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="referrer" content="no-referrer"><meta name="theme-color" content="#ffeef5"><link rel="canonical" href="https://mobilitydlab.com/oita-mobility/"><title>大分市の交通空白マップ</title><meta name="description" content="大分県で、必要な場所へ行って帰れるか。公開時刻表による往復候補、地域の移動課題、改善案の費用と効果を調べるモビリティデザインラボの公開デモ。"><link rel="icon" href="assets/favicon.svg?v=10"><link rel="stylesheet" href="assets/leaflet.css"><link rel="stylesheet" href="v2/style.css?v=ridership2"><script defer src="assets/leaflet.js"></script><link rel="stylesheet" href="v2/start.css?v=3"><link rel="stylesheet" href="v2/atlas-30.css?v=2"><link rel="stylesheet" href="v2/local-service.css?v=1"><style>.atlas-start [hidden],.atlas-start #start-map-frame[hidden]{display:none!important}.atlas-start a.start-guide{white-space:nowrap}.start-tabs{max-width:35rem}.start-grid-hint{padding:0 12px;margin:.15rem 0 .65rem;color:#62585f;font-size:.84rem}@media(max-width:600px){#trip-view .people-work>.map-column{order:-1}#trip-view .people-work .main-map{height:clamp(270px,47svh,410px)}.atlas-start .start-tabs a{line-height:1.25}}</style><script type="module">
 const $=s=>document.querySelector(s);
 const frame=$('#start-map-frame'), tripView=$('#trip-view'), mapView=$('.start-map');
 const technical=new Set(['map','ridership','od','forecast','cost','bc','sources']);
@@ -24,7 +24,8 @@ function updateLinks(){
  if(mode==='map'&&travelDate){const trip=new URL($('#tab-trip').href);trip.searchParams.set('journeyDate',travelDate);$('#tab-trip').href=trip.href;}
  const tour=new URL(href('map'),location.href);tour.searchParams.set('points','tourism');$('#tab-tour').href=tour.pathname+tour.search;
  const showTour=mode==='map'&&page().u.searchParams.get('points')==='tourism';
- $('#start-task-title').textContent=showTour?'観光地を探す':mode==='trip'?'行って帰れる？':'この時間の交通';
+ $('#start-task-title').textContent=showTour?'観光地にどう行く？':mode==='trip'?'行って帰れる？':'どこで乗れる？';
+ $('#start-task-context').textContent=showTour?'地図で観光地を選んで、行き帰りを調べる。':mode==='trip'?'目的地に着けるか、用事のあとに帰れるかを調べる。':'乗り場までの距離と、時間帯ごとの便を地図で確認。';
  for(const [v,current] of [['map',mode==='map'&&!showTour],['trip',mode==='trip'],['tour',showTour]]){const el=$('#tab-'+v);if(current)el.setAttribute('aria-current','page');else el.removeAttribute('aria-current');}
  document.dispatchEvent(new Event('atlas:navigation'));
  for(const a of document.querySelectorAll('[data-city-link]')){
@@ -97,20 +98,21 @@ $('#tab-tour').addEventListener('click',e=>{
 window.addEventListener('hashchange',()=>render());
 window.addEventListener('popstate',()=>render());
 render(true);
-</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=type4"><script defer src="/oita-mobility/nav/shell.js?v=1"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="この時間の交通" data-atlas-label-url=""><div class="atlas-shell__row">
-<a class="atlas-shell__brand" href="/oita-mobility/" aria-label="大分モビリティ・アトラスの地図">大分アトラス</a>
+</script><link rel="stylesheet" href="/oita-mobility/nav/shell.css?v=plain5"><script defer src="/oita-mobility/nav/shell.js?v=plain5"></script></head><body class="atlas30"><a class="skip" href="#main">本文へ移動</a><header class="atlas-shell" data-atlas-group="map" data-atlas-label="時間帯別に乗れる場所" data-atlas-label-url=""><div class="atlas-shell__row">
+<a class="atlas-shell__brand" href="/oita-mobility/" aria-label="大分市の交通空白マップの入口">交通空白マップ</a>
 <nav class="atlas-shell__tabs" aria-label="アトラスの大項目"><a href="/oita-mobility/" data-atlas-tab="map" aria-current="true">地図</a><a href="/oita-mobility/tools.html#area" data-atlas-tab="data">地域データ</a></nav>
 <details class="atlas-shell__directory"><summary>全体<span class="atlas-shell__arrow" aria-hidden="true">⌄</span></summary>
 <div class="atlas-shell__panel" aria-label="アトラス全体の構成"><noscript><a href="/oita-mobility/tools.html">全体の目次・資料</a></noscript></div></details>
-</div><nav class="atlas-shell__crumb" aria-label="現在地"><a href="/oita-mobility/">アトラス</a><span aria-hidden="true">›</span><a href="/oita-mobility/" data-atlas-parent>地図</a><span aria-hidden="true" data-atlas-separator>›</span><b aria-current="location" data-atlas-current>この時間の交通</b></nav></header>
+</div><nav class="atlas-shell__crumb" aria-label="現在地"><a href="/oita-mobility/">大分市</a><span aria-hidden="true">›</span><a href="/oita-mobility/" data-atlas-parent>地図</a><span aria-hidden="true" data-atlas-separator>›</span><b aria-current="location" data-atlas-current>時間帯別に乗れる場所</b></nav></header>
 <main id="main" class="atlas-start">
 <section class="start-head" aria-labelledby="start-title">
   <div class="atlas-editorial-title">
-    <p class="atlas-editorial-kicker"><span>OITA ATLAS</span><span id="start-city">大分市</span></p>
-    <h1 id="start-title"><span id="start-task-title">この時間の交通</span></h1>
+    <p class="atlas-editorial-kicker"><span>交通空白マップ</span><span id="start-city">大分市</span></p>
+    <h1 id="start-title"><span id="start-task-title">どこで乗れる？</span></h1>
+    <p class="atlas-editorial-context" id="start-task-context">乗り場までの距離と、時間帯ごとの便を地図で確認。</p>
   </div>
   <nav class="start-tabs" aria-label="まずできること">
-    <a id="tab-map" href="./" aria-current="page">この時間の交通</a>
+    <a id="tab-map" href="./" aria-current="page">乗れる場所</a>
     <a id="tab-trip" href="?view=trip">行って帰れる？</a>
     <a id="tab-tour" href="?points=tourism">観光地を探す</a>
   </nav>
