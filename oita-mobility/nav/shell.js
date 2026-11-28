@@ -10,7 +10,7 @@
   const p=location.pathname.replace(/index\.html$/,'');
   const groups={
     map:['地図',A,[
-      ['時間帯別に乗れる場所',A],['行って帰れる？',A+'?view=trip'],['観光地を探す',A+'?points=tourism']]],
+      ['行って帰れる？',A+'?view=trip'],['時間帯別に乗れる場所',A+'?view=map'],['観光地を探す',A+'?points=tourism']]],
     data:['地域データ',A+'tools.html#area',[
       ['地域の移動の課題',A+'atlas.html?view=detail#city-form'],['増便などの効果を比べる',A+'policy.html'],['実際の乗り降り',A+'ridership.html'],['観光客の動き',T+'#overview']]],
     docs:['資料・出典',A+'tools.html#references',[
@@ -43,12 +43,14 @@
     let group=shell.dataset.atlasGroup,label=shell.dataset.atlasLabel,key=shell.dataset.atlasLabelUrl,detail='';
     const hash=url.hash.slice(1);
     if(isHome){
-      const selected=document.querySelector('.start-tabs a[aria-current]')?.id;
-      if(selected==='tab-trip'||url.searchParams.get('view')==='trip'||['jr-check','regional-transport','opportunity-section'].includes(hash)){
+      const view=url.searchParams.get('view'),selected=document.querySelector('.start-tabs a[aria-current]')?.id;
+      const tour=view!=='trip'&&url.searchParams.get('points')==='tourism';
+      const map=view==='map'||selected==='tab-map'||['atlas-time-gaps','tourism'].includes(hash);
+      if(view==='trip'||['jr-check','jr-web-check','regional-transport','opportunity-section'].includes(hash)||(!tour&&!map)){
         label='行って帰れる？';key=A+'?view=trip';
         detail={ 'jr-check':'JRを含む判定','jr-web-check':'公開ダイヤでの確認例','regional-transport':'グリスロ・ふれあい交通','opportunity-section':'片道で行ける施設' }[hash]||'';
-      } else if(url.searchParams.get('points')==='tourism'){label='観光地を探す';key=A+'?points=tourism';}
-      else key=A;
+      } else if(tour){label='観光地を探す';key=A+'?points=tourism';}
+      else {label='時間帯別に乗れる場所';key=A+'?view=map';}
     }
     if(p===T){
       const view=document.body.dataset.view||hash.split(/[?&]/)[0]||'overview';
