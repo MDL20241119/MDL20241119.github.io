@@ -90,3 +90,16 @@ body.atlas-embedded .basic-map-layers .layers label{display:inline-flex;gap:3px;
 body.atlas-embedded .time-gap-settings{padding:3px 0}
 body.atlas-embedded .map-toolbar{min-height:0;padding:3px 8px}
 body.atlas-embedded .map-toolbar .button.compact{min-height:40px;padding-block:4px}
+body.atlas-embedded .map-column #map{height:clamp(480px,57vw,680px)}
+body.atlas-embedded .map-column #map .leaflet-control-zoom a{width:42px;height:42px;line-height:42px}
+.quick-gap-popup .leaflet-popup-content{margin:11px 19px 10px 11px}
+.quick-gap-card{display:grid;gap:5px;line-height:1.45}
+.quick-gap-card>b{font-size:.98rem}
+.quick-gap-card>span{font-size:.77rem}
+.quick-gap-card>a{display:flex;align-items:center;min-height:40px;padding:4px 7px;background:#fff0f8;border:1px solid #151515;color:#151515;font-weight:750;font-size:.8rem;text-decoration:none}
+.quick-gap-card>a.quick-gap-detail{padding:0;border:0;background:none;min-height:30px;text-decoration:underline;font-weight:650}
+@media(max-width:620px){
+ body.atlas-embedded .map-column #map{height:480px}
+ body.atlas-embedded .map-work{border-radius:4px}
+ body.atlas-embedded .map-toolbar{flex-direction:row;justify-content:space-between;align-items:center}
+}

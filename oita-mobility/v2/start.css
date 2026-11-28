@@ -36,3 +36,16 @@
 .top:has(.start-guide){padding-block:13px}
 .atlas-start .start-head{padding-top:clamp(8px,2.5vw,24px)}
 .atlas-start .start-head>p:not(.start-kicker){margin-bottom:.65rem}
+.start-companion{display:flex;flex-wrap:wrap;align-items:center;gap:3px 12px;margin-top:12px;padding:9px 12px;border:1px solid #151515;background:#fff;text-decoration:none}
+.start-companion span{font-size:.8rem;color:#62585f}
+.start-companion:hover,.start-tool-grid a:hover{background:#ffe1ee}
+.tool-directory .start-references{padding:0}
+.tool-directory>section:not(.start-head){border-top:1px solid #151515;margin:0 0 16px}
+.tool-directory h2{font-size:clamp(1rem,3vw,1.45rem);margin:12px 0 7px}
+.tool-directory .start-tool-grid{padding:0}
+@media(max-width:600px){
+ .start-map>p{margin:.12rem 0 .35rem}
+ .atlas-start .start-head{padding-bottom:8px}
+ .atlas-start .start-head h1{font-size:clamp(1.55rem,7.4vw,2.1rem)}
+ #trip-view .people-work .main-map{height:clamp(400px,70svh,560px)}
+}

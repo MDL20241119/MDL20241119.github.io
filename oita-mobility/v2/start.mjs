@@ -20,13 +20,14 @@ function refresh(code){
 refresh(city);
 if(location.hash==='#atlas-toc')document.querySelector('#atlas-toc').open=true;
 if(trip){
+  if(location.hash==='#opportunity-section')document.querySelector('.trip-extras').open=true;
   mapView.hidden=true;
   frame.remove();
   tripView.hidden=false;
   document.querySelector('#tab-map').removeAttribute('aria-current');
   document.querySelector('#tab-trip').setAttribute('aria-current','page');
   document.addEventListener('atlas:start-city',e=>refresh(e.detail.code));
-  import('./people.mjs?v=two-level1').catch(()=>{
+  import('./people.mjs?v=map-touch').catch(()=>{
     const box=document.querySelector('#error');box.hidden=false;box.textContent='検索を読み込めませんでした。再読み込みしてください。';
   });
 }else{
@@ -45,6 +46,3 @@ if(trip){
   if(city!=='44201')frame.src='transport-gaps.html?embed=atlas&city='+city;
   else connect();
 }
-document.querySelector('.start-guide').addEventListener('click',()=>{
-  document.querySelector('#atlas-toc').open=true;
-});

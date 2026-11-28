@@ -3,6 +3,7 @@ import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
 import {timeBandKey,dayBandProfile,nearestRailStation,combinedBandState,RAIL_REFERENCE_M,FIRST_GAP_HOUR,LAST_GAP_HOUR,gapHour,gapWindow,hourKey} from './time-bands.mjs?v=20261128-map-first';
 import {csvText} from '../lab/io.mjs';
+import {pointInGeometry} from '../v2/model.mjs';
 import {publicGapProfile} from '../assets/share-state.mjs';
 const $=s=>document.querySelector(s),$$=s=>[...document.querySelectorAll(s)];
 const urlParams=new URLSearchParams(location.search), embedded=urlParams.get('embed')==='atlas';
@@ -24,6 +25,7 @@ const bandTitles={far:'バス停・駅とも圏外',noTrips:'駅は圏外・バ�
 const originalLegend=$('#gap-legend').innerHTML;
 const activeBand=()=>timeBandKey(applied?.profile);
 const mapState=(r,id)=>activeBand()?combinedBandState(r,railByCell.get(id),railStations.length>0):r?.status??'unknown';
+let quickPopup=null;
 let playing=false,playTimer=null,slideTimer=null,animateToken=0,selectMarker=null;
 const kinds={school:'学校・大学・教習所',medical:'病院送迎',welfare:'福祉・介護',commercial:'商業・企業',tourism:'観光・ホテル',community:'地域交通'};
 const marks={school:'学',medical:'医',welfare:'福',commercial:'商',tourism:'宿',community:'地'};
@@ -53,14 +55,14 @@ function setBusy(v){busy=v;$('#run').disabled=v;$('#cancel').hidden=!v;$('#progr
 function cancel(keep=true){job++;worker?.terminate();worker=null;setBusy(false);if(keep){$('#status').textContent='計算を中止しました。未計算の区域は灰色です。';refresh();}}
 function invalidate(){stopPlayback();animateToken++;if(busy)cancel(false);$('#quick-date').value=$('#date').value;dirty=true;applied=null;results.clear();health=[];excluded=0;activityCount=0;for(const l of layers.values())l.setStyle(cellStyle('unknown'));$('#saved-label').textContent='変更あり';$('#profile-state').textContent='条件を変更しました。「この条件で地図を更新」を押してください。';$('#status').textContent='条件を変更しました。再計算してください。';$('.scope-note').classList.add('stale');refresh();}
 function cellStyle(state){return {color:colors[state],weight:.7,fillColor:colors[state],fillOpacity:['fail','far','noTrips','railPending'].includes(state) ? .56 : state==='pass' ? .28 : .2};}
-function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));for(const f of cells){const l=L.geoJSON(f,{style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',()=>{if(!picking)selectCell(f.id);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
+function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));for(const f of cells){const l=L.geoJSON(f,{bubblingMouseEvents:!embedded,style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',e=>{if(!picking)selectCell(f.id,false,e.latlng);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
 async function loadCells(p){const key=cityCode+'-'+p.resolution;const epoch=++loadJob;if(!gridCache.has(key))gridCache.set(key,await json('gaps/data/'+key+'.geojson'));if(epoch!==loadJob)return false;cells=gridCache.get(key).features.filter(f=>!p.populatedOnly||f.properties.populated2020);drawGrid();return true;}
 function mapBounds(){const b=map.getBounds();return {south:b.getSouth(),north:b.getNorth(),west:b.getWest(),east:b.getEast()};}
 function fitCity(){if(boundaryLayer.getLayers().length)map.fitBounds(boundaryLayer.getBounds(),{padding:[18,18]});}
 async function switchCity(code,auto=true,override=null){
   stopPlayback();animateToken++;if(busy)cancel(false);try{drafts[cityCode]=readProfile();}catch{}
   cityCode=code;picking=false;pickPoint=null;pickLayer?.clearLayers();$('#resource-position').textContent='位置：未指定';$('#municipality').value=code;const p=override??drafts[code]??saved[code]??initialProfile(code);validateFiles(p);fillProfile(p);
-  selectedCell=null;selectMarker?.clearLayers();$('#map-tip').textContent='地図の区域を押すと、その場所の状況を確認できます。';results.clear();applied=null;dirty=true;health=[];activityCount=0;boundaryLayer.clearLayers();boundaryLayer.addData(city());fitCity();renderResources();renderBusLines();renderStops();renderRail();renderPois();
+  selectedCell=null;if(quickPopup?.isOpen())quickPopup.remove();selectMarker?.clearLayers();$('#map-tip').textContent='地図の区域を押すと、その場所の状況を確認できます。';results.clear();applied=null;dirty=true;health=[];activityCount=0;boundaryLayer.clearLayers();boundaryLayer.addData(city());fitCity();renderResources();renderBusLines();renderStops();renderRail();renderPois();
   document.dispatchEvent(new CustomEvent('atlas:city',{detail:{code}}));
   if(!await loadCells(p))return;
   if(auto&&!p.activityOn)await run();else $('#status').textContent='条件を確認して「この条件で地図を更新」を押してください。';
@@ -159,7 +161,7 @@ function refresh(){
     $('#gap-legend').innerHTML=originalLegend;
     $('#time-gap-note').textContent='バス時刻表と鉄道駅1km圏を重ねます。駅が近くバスが不足する区域は、鉄道ダイヤ未算定として区別します。';
   }
-  $('#map-title').textContent=cityName()+' · '+fmt(cells.length)+'区域';
+  $('#map-title').textContent=embedded?cityName():cityName()+' · '+fmt(cells.length)+'区域';
   const p=applied?.profile;$('#result-summary').textContent=p?`${p.date} ／ ${p.name} ／ ${p.combine==='any'?'どれか1つが不足':'すべてが不足'}`:'条件を確認して、地図に反映してください';
   $('#scope-caption').textContent=dirty?'条件を変更しました。「この条件で地図を更新」を押すと、区域数・面積・判定を再計算します。':(p?.populatedOnly?'2020年基準人口のあるメッシュに限定。':'行政界内全域（山林等を含む）。')+'区域内代表点の判定です。赤は収録バスデータで条件に該当する確認候補、灰はデータ不足・未計算。面積は困っている住民数を表しません。'+(p?.activityOn?` 往復を調べた区域：${fmt(activityCount)} / ${fmt(cells.length)}。`:'')+(applied&&!applied.complete&&!busy?' 計算は未完了です。':'');
   if(band&&!dirty)$('#scope-caption').textContent='区域内代表点と収録バス時刻表で判定。駅位置は国土数値情報（2024年）から反映。鉄道の時刻表は未算定です。色は正式指定ではなく、目的地への往復や実際の歩きやすさは別途確認が必要です。';
@@ -167,7 +169,7 @@ function refresh(){
 }
 function renderHealth(){updateDataUsed();$('#data-health').innerHTML=health.map(h=>`<p>${esc(h.name)}：${h.coverage==='known'?'対象日は有効期間内':h.coverage==='outside'?'対象日は有効期間外':'有効期間を確認できない'}</p>`).join('')+(excluded?`<p>時刻等の理由で算定対象外の便：${fmt(excluded)}件。不足の判定には未確認を残します。</p>`:'');}
 function criterionHTML(c){return `<div class="criterion-result"><b>${esc(c.label)} <span class="status-badge ${c.state}">${c.state==='fail'?'不足候補':c.state==='pass'?'条件内':'判定できない'}</span></b>${esc(c.reason)}${c.id==='distance'?`<br>最短 ${c.value===null?'未確認':fmt(c.value)+'m'} ／ 上限 ${fmt(c.threshold)}m`:c.id==='frequency'?`<br>${fmt(c.value)}便 ／ 必要 ${fmt(c.threshold)}便`:''}${c.details?c.details.map(d=>`<p>${esc(d.name)}：${d.state==='pass'?'往復候補あり・帰宅 '+clock(d.homeAt):d.state==='fail'?'設定条件で候補なし':'確認不足'}<br><small>${esc(d.reasons.join(' / ')||d.unknowns.join(' / '))}</small></p>`).join(''):''}</div>`;}
-function selectCell(id,move=false){
+function selectCell(id,move=false,clickPoint=null){
   const f=cells.find(x=>x.id===id);if(!f)return;selectedCell=id;const p=f.properties,r=results.get(id),state=r?.status??'unknown',band=activeBand();
   $('#cell-detail').innerHTML=`<h2>${esc(cityName())} · 区域 ${esc(p.meshCode)}</h2><span class="status-badge ${state}">${band?bandTitles[mapState(r,id)]:STATES[state]}</span><p>区域内代表点 ${p.lat.toFixed(5)}, ${p.lon.toFixed(5)} ／ 面積 ${fmt(p.areaKm2,3)} km²</p><div class="detail-grid"><div><span>最寄りの収録バス停</span><b>${r?.nearest?fmt(r.nearest.meters)+' m':'未確認'}</b><span>${esc(r?.nearest?.name??'未計算・有効データなし')}</span></div><div><span>時間帯内の乗車便数</span><b>${r?fmt(r.departures)+' 便':'未計算'}</b><span>データ内の同一便は1回集計</span></div></div>${band?railDetail(id):''}${r?r.criteria.map(criterionHTML).join(''):'<p>この区域はまだ判定していません。</p>'}<p>2020年基準人口（国交省調整値）：${p.population2020===null?'境界またぎ・収録外等のため未集計':fmt(p.population2020,1)+'人'}。区域全員が交通空白とは限りません。</p>${r?.nearby?.length?`<details><summary>乗車便がある近隣のバス停</summary>${r.nearby.map(s=>`<p>${esc(s.name)}：${fmt(s.meters)}m、乗車時刻 ${fmt(s.departures)}件</p>`).join('')}<p>上の件数は各停留所の時刻数。区域全体の便数は同一データ内で重複を除いています。</p></details>`:''}<a class="button" href="accessibility.html" target="_top">目的地マップで用事の条件も確認</a>`;
   if(selectMarker){
@@ -175,6 +177,17 @@ function selectCell(id,move=false){
    L.geoJSON(f,{interactive:false,style:{color:'#111',weight:2.6,opacity:.96,fill:false}}).addTo(selectMarker).bringToFront();
   }
   $('#map-tip').innerHTML=`<span class="chosen-area">区域 ${esc(p.meshCode)}：${esc(band?bandTitles[mapState(r,id)]:STATES[state])}</span> <a href="#cell-detail">判定の理由を見る</a>`;
+  if(embedded&&(clickPoint||quickPopup?.isOpen())){
+    const region=r?.nearest?esc(r.nearest.name)+'まで約'+fmt(r.nearest.meters)+'m':'近くのバス停：未確認';
+    const trips=Number.isFinite(r?.departures)?fmt(r.departures)+'便':'未確認';
+    const stateLabel=band?bandTitles[mapState(r,id)]:STATES[state];
+    const tripQuery=new URLSearchParams({view:'trip',city:cityCode,lat:p.lat.toFixed(5),lon:p.lon.toFixed(5)});
+    const popupContent=`<div class="quick-gap-card" aria-live="polite"><b>${esc(stateLabel)}</b><span>${region}（直線）｜乗車できる便：${trips}</span><a href="index.html?${esc(tripQuery.toString())}" target="_top">この付近から行って帰れるか調べる →</a><a class="quick-gap-detail" href="#cell-detail">この区域の詳しい判定 ↓</a></div>`;
+    if(clickPoint){
+      quickPopup??=L.popup({className:'quick-gap-popup',maxWidth:254,minWidth:160,autoPanPadding:[16,22]});
+      quickPopup.setLatLng(clickPoint).setContent(popupContent).openOn(map);
+    }else quickPopup.setContent(popupContent);
+  }
   if(move)map.setView([p.lat,p.lon],Math.max(14,map.getZoom()));
 }
 function railDetail(id){
@@ -191,7 +204,7 @@ function renderRail(){
  for(const r of railStations){
   if(!bounds.contains([r.lat,r.lon]))continue;
   L.circle([r.lat,r.lon],{radius:RAIL_REFERENCE_M,color:'#64449a',dashArray:'4 4',weight:1,fill:false,interactive:false}).addTo(railLayer);
-  L.circleMarker([r.lat,r.lon],{radius:5,color:'#fff',fillColor:'#64449a',fillOpacity:1,weight:1.5}).bindPopup(`<b>${esc(r.name)}駅</b><br>${esc(r.lines.join('・'))}<br>駅の代表点から直線1km。列車の時刻は未算定。<br><a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の時刻表</a>`).addTo(railLayer);
+  L.circleMarker([r.lat,r.lon],{radius:5,bubblingMouseEvents:!embedded,color:'#fff',fillColor:'#64449a',fillOpacity:1,weight:1.5}).bindPopup(`<b>${esc(r.name)}駅</b><br>${esc(r.lines.join('・'))}<br>駅の代表点から直線1km。列車の時刻は未算定。<br><a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の時刻表</a>`).addTo(railLayer);
  }
 }
 function renderBusLines(){
@@ -201,8 +214,8 @@ function renderBusLines(){
  const lines=busCorridors.filter(r=>hashes.has(r.hash)&&r.bounds.intersects(bounds)).map(r=>r.points);
  if(lines.length)L.polyline(lines,{pane:'network',color:'#006283',opacity:.38,weight:1.25,interactive:false}).addTo(busLayer);
 }
-function renderStops(){stopLayer.clearLayers();if(!transport||map.getZoom()<13)return;const b=boundaryLayer.getBounds().pad(.12),chosen=new Set(catalog.filter(f=>selectedFeeds().includes(f.file)).map(f=>f.sha256));for(const s of transport.stops){if(!chosen.has(transport.feeds[s.feedIndex]?.sha256))continue;const lat=s.lat??s.latitude??s.p?.[0],lon=s.lon??s.lng??s.longitude??s.p?.[1];if(!Number.isFinite(lat)||!Number.isFinite(lon)||!b.contains([lat,lon]))continue;L.circleMarker([lat,lon],{pane:'poi',radius:3,color:'#1e576e',weight:1,fillOpacity:.8}).bindPopup(`<b>${esc(s.name)}</b><br>収録されたバス停の位置。日別の運行・乗車条件は判定で確認。`).addTo(stopLayer);}}
-function renderPois(){poiLayer.clearLayers();const b=boundaryLayer.getBounds().pad(.05);for(const p of places)if(b.contains([p.lat,p.lon]))L.circleMarker([p.lat,p.lon],{pane:'poi',radius:5,color:'#fff',fillColor:p.category==='hospital'?'#9c334e':'#197457',fillOpacity:.94,weight:1.2}).bindPopup(`<b>${esc(p.name)}</b><br>${esc(p.address)}<br>${safeLink(p.sourceUrl,'所在地の出典')}`).addTo(poiLayer);}
+function renderStops(){stopLayer.clearLayers();if(!transport||map.getZoom()<13)return;const b=boundaryLayer.getBounds().pad(.12),chosen=new Set(catalog.filter(f=>selectedFeeds().includes(f.file)).map(f=>f.sha256));for(const s of transport.stops){if(!chosen.has(transport.feeds[s.feedIndex]?.sha256))continue;const lat=s.lat??s.latitude??s.p?.[0],lon=s.lon??s.lng??s.longitude??s.p?.[1];if(!Number.isFinite(lat)||!Number.isFinite(lon)||!b.contains([lat,lon]))continue;L.circleMarker([lat,lon],{pane:'poi',radius:3,bubblingMouseEvents:!embedded,color:'#1e576e',weight:1,fillOpacity:.8}).bindPopup(`<b>${esc(s.name)}</b><br>収録されたバス停の位置。日別の運行・乗車条件は判定で確認。`).addTo(stopLayer);}}
+function renderPois(){poiLayer.clearLayers();const b=boundaryLayer.getBounds().pad(.05);for(const p of places)if(b.contains([p.lat,p.lon]))L.circleMarker([p.lat,p.lon],{pane:'poi',radius:5,bubblingMouseEvents:!embedded,color:'#fff',fillColor:p.category==='hospital'?'#9c334e':'#197457',fillOpacity:.94,weight:1.2}).bindPopup(`<b>${esc(p.name)}</b><br>${esc(p.address)}<br>${safeLink(p.sourceUrl,'所在地の出典')}`).addTo(poiLayer);}
 function allResources(){return [...resources,...custom];}
 function filteredResources(){return allResources().filter(r=>r.city===cityName()&&($('#resource-type').value==='all'||r.category===$('#resource-type').value)&&($('#resource-use').value==='all'||(r.generalUse==='restricted'?'conditional':r.generalUse)===$('#resource-use').value));}
 function hasPosition(r){return Number.isFinite(r.lat)&&Number.isFinite(r.lon);}
@@ -256,7 +269,7 @@ async function init(){
   boundaryLayer=L.geoJSON(null,{style:{color:'#173b50',weight:2,fillOpacity:0,interactive:false}}).addTo(map);gridLayer=L.layerGroup().addTo(map);map.createPane('network').style.zIndex=410;map.createPane('poi').style.zIndex=430;busLayer=L.layerGroup();stopLayer=L.layerGroup().addTo(map);railLayer=L.layerGroup().addTo(map);resourceLayer=L.layerGroup().addTo(map);poiLayer=L.layerGroup().addTo(map);pickLayer=L.layerGroup().addTo(map);selectMarker=L.layerGroup().addTo(map);
   if($('#show-stops').checked)busLayer.addTo(map);
   map.on('zoomend',renderStops);
-  map.on('click',e=>{if(!picking)return;pickPoint={lat:e.latlng.lat,lon:e.latlng.lng};picking=false;pickLayer.clearLayers();L.circleMarker(e.latlng,{radius:7,color:'#173b50',fillOpacity:1}).addTo(pickLayer);$('#resource-position').textContent=`登録位置：${pickPoint.lat.toFixed(5)}, ${pickPoint.lon.toFixed(5)}`;$('#map-tip').textContent='施設・乗降拠点を指定しました。資源の情報を入力して登録してください。';});
+  map.on('click',e=>{if(!picking){if(embedded&&$('#show-gaps').checked){const point={lat:e.latlng.lat,lon:e.latlng.lng};const cell=cells.find(f=>layers.get(f.id)?.getBounds().contains(e.latlng)&&pointInGeometry(point,f.geometry));if(cell)selectCell(cell.id,false,e.latlng);}return;}pickPoint={lat:e.latlng.lat,lon:e.latlng.lng};picking=false;pickLayer.clearLayers();L.circleMarker(e.latlng,{radius:7,color:'#173b50',fillOpacity:1}).addTo(pickLayer);$('#resource-position').textContent=`登録位置：${pickPoint.lat.toFixed(5)}, ${pickPoint.lon.toFixed(5)}`;$('#map-tip').textContent='施設・乗降拠点を指定しました。資源の情報を入力して登録してください。';});
   on('#show-stops','change',()=>{for(const l of [busLayer,stopLayer])if($('#show-stops').checked)map.addLayer(l);else map.removeLayer(l);});
   for(const [id,layer]of [['show-gaps',gridLayer],['show-rail',railLayer],['show-resources',resourceLayer],['show-pois',poiLayer]])on('#'+id,'change',()=>$( '#'+id).checked?map.addLayer(layer):map.removeLayer(layer));
   for(const e of $$('[data-tab]'))e.addEventListener('click',()=>setTab(e.dataset.tab));
