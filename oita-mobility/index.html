@@ -76,7 +76,7 @@ for(const v of ['map','trip'])$('#tab-'+v).addEventListener('click',e=>{
 $('#map-edit-conditions').addEventListener('click',()=>{$('#trip-options').open=true;},{capture:true});
 let local;
 const regional=$('#regional-transport');
-regional.addEventListener('toggle',()=>{if(regional.open&&!local)local=import('./v2/local-service.mjs?v=regional1').then(m=>m.mountRegional()).catch(()=>{$('#regional-result').textContent='地域交通データを読めませんでした。ページを再読み込みしてください。';local=null;});});
+regional.addEventListener('toggle',()=>{if(regional.open&&!local)local=import('./v2/local-service.mjs?v=regional2').then(m=>m.mountRegional()).catch(()=>{$('#regional-result').textContent='地域交通データを読めませんでした。ページを再読み込みしてください。';local=null;});});
 $('#regional-jump').addEventListener('click',()=>{regional.open=true;regional.scrollIntoView({block:'start'});regional.querySelector('summary').focus({preventScroll:true});});
 const jrProof=$('#jr-web-check');let proof;
 jrProof.addEventListener('toggle',()=>{if(jrProof.open&&!proof)proof=import('./v2/jr-public-check.mjs?v=1').then(m=>m.mount()).catch(()=>{$('#jr-proof-result').textContent='確認事例を読み込めませんでした。';proof=null;});});

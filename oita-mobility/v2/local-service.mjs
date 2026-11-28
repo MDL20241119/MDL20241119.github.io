@@ -39,11 +39,11 @@ export function regionalRoundtrip(data,service,q){
   if(!from||!to||from===to||![depart,activity,duration,deadline].every(Number.isFinite)||depart>activity||activity+duration>deadline||duration<1||duration>720)return {status:'input',reason:'停留所・時刻・滞在時間を見直してください。'};
   const s=scheduleFor(data,service,date);
   if(s.status!=='published')return s;
-  const limit=Number.isFinite(q.legLimit)?q.legLimit:180;
+  const limit=Number.isFinite(q.legLimit)?q.legLimit:Infinity;
   const there=move(s.trips,from,to,depart,Math.min(activity,depart+limit),1)[0];
   if(!there)return {status:'no_candidate',reason:'用事の開始時刻までに着く収録便がありません。'};
   const back=move(s.trips,to,from,activity+duration,Math.min(deadline,activity+duration+limit),1)[0];
-  if(!back)return {status:'no_candidate',reason:'用事の後、指定時刻までに戻る収録便がありません。',there};
+  if(!back)return {status:'no_candidate',reason:'用事の後、指定した帰宅時刻までに戻れる収録便がありません。',there};
   return {status:service.kind==='reservation'?'conditional':'candidate',there,back};
 }
 export async function mountRegional(){
