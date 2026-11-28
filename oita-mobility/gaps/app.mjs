@@ -1,4 +1,5 @@
-import {stationCheck} from '../data/rail/public-checks.mjs?v=verified7';
+import {stationCheck,stationAvailability,CHECKED_CITY_STATIONS} from '../data/rail/public-checks.mjs?v=verified17';
+import {distance} from '../lab/gtfs.mjs';
 import {currentTransport,currentFeedFiles} from '../data/gtfs/current-stops.mjs?v=atlas301128';
 import {renderDataUsed} from '../catalog/data-used.mjs?v=2';
 import {GAP_VERSION,STATES,defaultProfile,validateProfile} from './engine.mjs';
@@ -32,16 +33,21 @@ const esc=v=>String(v??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&
 const fmt=(v,d=0)=>Number.isFinite(v)?v.toLocaleString('ja-JP',{maximumFractionDigits:d}):'未確認';
 const clock=v=>Number.isFinite(v)?`${String(Math.floor(v/3600)).padStart(2,'0')}:${String(Math.floor(v/60)%60).padStart(2,'0')}`:'—';
 const colors={railConfirmed:'#20734e',fail:'#c53635',far:'#92531b',noTrips:'#ad2457',railPending:'#64449a',pass:'#237b92',unknown:'#788491'};
-const bandTitles={pass:'この時間に乗れるバスあり',railConfirmed:'この時間に列車あり（個別確認）',railPending:'駅は近い・列車は未判定',noTrips:'バス停は近い・この時間の便なし',far:'バス停も駅も遠い',unknown:'この場所は未判定'};
+const bandTitles={pass:'この時間に乗れるバスあり',railConfirmed:'この時間に列車あり（個別確認）',railPending:'駅は近い・列車は未判定',noTrips:'近くに乗り場あり・この時間の収録便なし',far:'バス停も駅も遠い',unknown:'この場所は未判定'};
 const originalLegend=$('#gap-legend').innerHTML;
 const railRange=()=>$('#quick-rail')?.value==='1000'?1000:RAIL_REFERENCE_M;
 const activeBand=()=>timeBandKey(applied?.profile);
-const railWitness=station=>station&&station.meters<=railRange()+1e-6?stationCheck(applied?.profile?.date,station.name,gapWindow(activeBand())):null;
+const nearbyStations=id=>(nearRailByCell.get(id)??[]).filter(s=>s.meters<=railRange()+1e-6);
+const railState=(s,p=applied?.profile,w=gapWindow(activeBand()))=>stationAvailability(p?.date,s.name,w);
+const usableStation=id=>nearbyStations(id).find(s=>railState(s)==='yes');
 const mapState=(r,id)=>{
  if(!activeBand())return r?.status??'unknown';
- const station=railByCell.get(id);
- const bus=combinedBandState(r,station,railStations.length>0,railRange());
- return bus!=='pass'&&railWitness(station)?'railConfirmed':bus;
+ const station=railByCell.get(id), bus=combinedBandState(r,station,railStations.length>0,railRange());
+ if(bus==='pass')return bus;
+ if(usableStation(id))return 'railConfirmed';
+ const near=nearbyStations(id);
+ if(bus==='railPending'&&near.length&&near.every(s=>railState(s)==='none'))return 'noTrips';
+ return bus;
 };
 
 let quickPopup=null, quickPoint=null;
@@ -65,7 +71,7 @@ const STORAGE='oita-gaps-profiles-v1';
 const ids={name:'profile-name',date:'date',note:'profile-note',combine:'combine',resolution:'resolution',populatedOnly:'populated-only',distanceOn:'distance-on',distanceM:'distance-m',frequencyOn:'frequency-on',frequencyRadius:'frequency-radius',minimumTrips:'minimum-trips',serviceStart:'service-start',serviceEnd:'service-end',activityOn:'activity-on',destinationRule:'destination-rule',departure:'departure',deadline:'deadline',activityFrom:'activity-from',activityTo:'activity-to',dwell:'dwell',legMinutes:'leg-minutes',maxWalk:'max-walk',totalWalk:'total-walk',walkSpeed:'walk-speed',walkFactor:'walk-factor',transfers:'transfers',activityScope:'activity-scope'};
 const numbers=new Set(['resolution','distanceM','frequencyRadius','minimumTrips','dwell','legMinutes','maxWalk','totalWalk','walkSpeed','walkFactor','transfers']);
 let railWitnessMarkers=[];
-let railStations=[],railByCell=new Map(),railLayer,railCorridors=[],busCorridors=[],busLayer;
+let railStations=[],railByCell=new Map(),nearRailByCell=new Map(),railLayer,railCorridors=[],busCorridors=[],busLayer;
 let catalog=[],boundaries,places=[],resources=[],custom=[],transport,geoSources,cityCode='44201',drafts={},saved={},map,boundaryLayer,gridLayer,stopLayer,resourceLayer,poiLayer,pickLayer;
 let cells=[],gridCache=new Map(),layers=new Map(),results=new Map(),worker=null,job=0,loadJob=0,busy=false,dirty=true,applied=null,health=[],excluded=0,activityCount=0,selectedCell=null,pickPoint=null,picking=false,refreshTimer=null;
 const city=()=>boundaries?.features.find(f=>f.properties.code===cityCode);
@@ -86,7 +92,7 @@ function setBusy(v){busy=v;if(!v)activeRun=null;$('#run').disabled=v;$('#cancel'
 function cancel(keep=true){queuedFrame=null;job++;worker?.terminate();worker=null;setBusy(false);if(keep){$('#status').textContent='計算を中止しました。未計算の区域は灰色です。';refresh();refreshTimeControls('判定を中止しました。');}}
 function invalidate(){stopPlayback();animateToken++;if(busy)cancel(false);$('#quick-date').value=$('#date').value;dirty=true;applied=null;results.clear();health=[];excluded=0;activityCount=0;for(const l of layers.values())l.setStyle(cellStyle('unknown'));$('#saved-label').textContent='変更あり';$('#profile-state').textContent='条件を変更しました。「この条件で地図を更新」を押してください。';$('#status').textContent='条件を変更しました。再計算してください。';$('.scope-note').classList.add('stale');refresh();}
 function cellStyle(state){return {color:colors[state],weight:.7,fillColor:colors[state],fillOpacity:['fail','far','noTrips','railPending','railConfirmed'].includes(state) ? .56 : state==='pass' ? .28 : .2};}
-function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));for(const f of cells){const l=L.geoJSON(f,{bubblingMouseEvents:!embedded,style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',e=>{if(!picking)selectCell(f.id,false,e.latlng);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
+function drawGrid(){gridLayer.clearLayers();layers.clear();railByCell=new Map(cells.map(f=>[f.id,nearestRailStation(f.properties,railStations)]));nearRailByCell=new Map(cells.map(f=>[f.id,railStations.map(s=>({...s,meters:distance(f.properties,s)})).filter(s=>s.meters<=1000+1e-6).sort((a,b)=>a.meters-b.meters)]));for(const f of cells){const l=L.geoJSON(f,{bubblingMouseEvents:!embedded,style:cellStyle(mapState(results.get(f.id),f.id)),onEachFeature:(_,layer)=>layer.on('click',e=>{if(!picking)selectCell(f.id,false,e.latlng);})}).addTo(gridLayer);layers.set(f.id,l);}refresh();}
 async function loadCells(p){const key=cityCode+'-'+p.resolution;const epoch=++loadJob;if(!gridCache.has(key))gridCache.set(key,await json('gaps/data/'+key+'.geojson'));if(epoch!==loadJob)return false;cells=gridCache.get(key).features.filter(f=>!p.populatedOnly||f.properties.populated2020);drawGrid();return true;}
 function mapBounds(){const b=map.getBounds();return {south:b.getSouth(),north:b.getNorth(),west:b.getWest(),east:b.getEast()};}
 function fitCity(){if(boundaryLayer.getLayers().length)map.fitBounds(boundaryLayer.getBounds(),{padding:[18,18]});}
@@ -185,7 +191,9 @@ function refresh(){
   const currentWindow=gapWindow(activeBand()),currentDate=applied?.profile?.date;
   let marked=0;
   for(const {station,marker} of railWitnessMarkers){
-   const verified=Boolean(!dirty&&stationCheck(currentDate,station.name,currentWindow));
+   const fact=dirty?'unknown':stationAvailability(currentDate,station.name,currentWindow);
+   const verified=fact==='yes';
+   marker.setPopupContent(`<b>${esc(station.name)}駅</b><br>${esc(station.lines.join('・'))}<br>${fact==='yes'?'この時間に列車あり（公式時刻表で確認）':fact==='none'?'この時間に発車する列車なし（公式時刻表で確認）':'選んだ日・時間の列車は未確認'}。<br>${safeLink(stationCheck(currentDate,station.name,currentWindow)?.source??'https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html','JR九州の時刻表')}`);
    marker.setStyle({fillColor:verified?'#20734e':'#64449a',color:verified?'#125c3a':'#fff'});
    marker.setRadius(verified?8:5);
    if(verified&&$('#show-rail').checked)marked++;
@@ -200,7 +208,7 @@ function refresh(){
     if(!busy&&!queuedFrame&&[250,500,750].includes(p.distanceM))quick.value=String(p.distanceM);
     $('#metrics').innerHTML=Object.entries(bandTitles).map(([key,label])=>`<div style="--band-color:${colors[key]}"><span>${label}</span><b>${fmt(counts[key])}<span class="metric-unit">区域</span></b></div>`).join('');
     $('#gap-legend').innerHTML=Object.entries(bandTitles).filter(([key])=>key!=='railConfirmed'||(counts.railConfirmed>0||marked>0)).map(([key,label])=>`<span><i style="--dot:${colors[key]}"></i>${label}</span>`).join('')+( $('#show-resources').checked?'<span class="legend-extra"><i style="--dot:#c38918"></i>地図の印：送迎などの拠点</span>':'');
-    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅${railRange()===1000?'1km':'800m'}（直線）。`;
+    $('#time-gap-note').textContent=`${cityName()} · ${p.date} · ${b.label} ${b.start}–${b.end}｜近さの目安：バス停${p.distanceM}m／駅${railRange()===1000?'1km':'800m'}（直線）。${cityCode==='44201'?' JRの確認：'+CHECKED_CITY_STATIONS.filter(s=>stationAvailability(p.date,s,b)!=='unknown').length+' / '+CHECKED_CITY_STATIONS.length+'駅。':''}`;
   }else{
     $('#gap-legend').innerHTML=originalLegend;
     $('#time-gap-note').textContent='バス時刻表と鉄道駅の徒歩圏を重ねます。駅が近くバスが不足する区域は、鉄道ダイヤ未算定として区別します。';
@@ -239,7 +247,8 @@ function railDetail(id){
  const r=railByCell.get(id);
  if(!r)return '<p>鉄道駅の位置データを読み込めていません。</p>';
  const within=r.meters<=railRange()+1e-6;
- return `<div class="criterion-result"><b>最寄りの鉄道駅：${esc(r.name)}駅 ／ 直線 ${fmt(r.meters)}m</b>${esc(r.lines.join('・'))} ／ 駅${railRange()}m目安の${within?'内':'外'}。${railWitness(r)?'この時間に発車する列車を公式ダイヤで個別確認。目的地・帰りは別判定。':'列車の運行・乗継は未判定。'} <a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の駅別時刻表</a></div>`;
+ const candidate=usableStation(id), near=nearbyStations(id), next=near.length&&near.every(s=>railState(s)==='none')?'none':'unknown';
+ return `<div class="criterion-result"><b>最寄りの鉄道駅：${esc(r.name)}駅 ／ 直線 ${fmt(r.meters)}m</b>${esc(r.lines.join('・'))} ／ 駅${railRange()}m目安の${within?'内':'外'}。${candidate?esc(candidate.name)+'駅で、この時間に発車する列車を公式ダイヤで個別確認。目的地・帰りは別判定。':next==='none'?'徒歩圏の対象駅は、この時間に発車する列車なし（確認日の時刻表）。':'列車の有無はこの条件では未確認。'} <a href="https://www.jrkyushu-timetable.jp/jr-k_time/ken_oita.html">JR九州の駅別時刻表</a></div>`;
 }
 function renderRail(){
  railWitnessMarkers=[];

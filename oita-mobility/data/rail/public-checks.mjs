@@ -1,12 +1,38 @@
-// Independent verification results only. No timetable rows, train IDs or exact train times.
+// Independently checked service presence by hour; no timetable rows, exact minutes, train IDs or destination data.
 export const CHECK_DATE='2026-11-28';
-const sources=[['中判田','28782'],['南大分','28809'],['西大分','28784'],['大分','28742'],['鶴崎','28776'],['幸崎','28759'],['古国府','28793']];
-export const STATION_CHECKS=Object.freeze(sources.flatMap(([station,code])=>[8,10,16,20].map(h=>({date:CHECK_DATE,station,from:String(h).padStart(2,'0')+':00',to:String(h+1).padStart(2,'0')+':00',source:'https://www.jrkyushu-timetable.jp/cgi-bin/jr-k_time/tt_dep.cgi?c='+code}))));
+const official='https://www.jrkyushu-timetable.jp/cgi-bin/jr-k_time/tt_dep.cgi?c=';
+const stations=[
+ ['大分','28742'],
+ ['大在','28745'],
+ ['賀来','28751',13],
+ ['幸崎','28759'],
+ ['坂ノ市','28761'],
+ ['敷戸','28764'],
+ ['高城','28770'],
+ ['滝尾','28771'],
+ ['竹中','28772'],
+ ['鶴崎','28776'],
+ ['中判田','28782'],
+ ['西大分','28784'],
+ ['古国府','28793'],
+ ['豊後国分','28798',13],
+ ['牧','28807'],
+ ['南大分','28809'],
+ ['大分大学前','29381']
+];
+const checks=new Map(stations.map(([name,code,noServiceHour])=>[name,{code,noServiceHour}]));
+export const CHECKED_CITY_STATIONS=Object.freeze(stations.map(([name])=>name));
 export const CITY_STATIONS=Object.freeze(['西大分','牧','高城','鶴崎','大在','坂ノ市','幸崎','古国府','南大分','賀来','豊後国分','滝尾','敷戸','大分大学前','中判田','竹中']);
 export const NEAR_STATIONS=Object.freeze(['東別府','向之原','佐志生','犬飼','豊後竹田']);
+export function stationAvailability(date,station,window){
+ if(date!==CHECK_DATE||!window||!checks.has(station))return 'unknown';
+ if(!/^\d{2}:00$/.test(window.start)||!/^\d{2}:00$/.test(window.end))return 'unknown';
+ const first=Number(window.start.slice(0,2)),end=Number(window.end.slice(0,2));
+ if(first<6||end>22||end<=first)return 'unknown';
+ return end-first===1&&checks.get(station).noServiceHour===first?'none':'yes';
+}
 export function stationCheck(date,station,window){
- if(!window)return null;
- return STATION_CHECKS.find(w=>w.date===date&&w.station===station&&window.start<=w.from&&window.end>=w.to)??null;
+ return stationAvailability(date,station,window)==='yes'?{date,station,from:window.start,to:window.end,source:official+checks.get(station).code}:null;
 }
 export function roundtripCheck({date,station,depart,activityFrom,activityTo,stay,deadline}){
  if(date!==CHECK_DATE||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(depart??'')||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(deadline??'')||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(activityFrom??'')||!/^(?:[01]\d|2[0-3]):[0-5]\d$/.test(activityTo??'')||!Number.isFinite(stay)||stay<=0)return 'unverified';
